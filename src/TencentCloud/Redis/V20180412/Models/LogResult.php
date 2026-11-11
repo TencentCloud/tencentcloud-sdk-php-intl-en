@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommandDetail(string $CommandDetail) Set <p>Command details</p>
  * @method string getErrMsg() Obtain <p>Error information</p>
  * @method void setErrMsg(string $ErrMsg) Set <p>Error information</p>
+ * @method string getNode() Obtain <p>Node ID of the proxy</p>
+ * @method void setNode(string $Node) Set <p>Node ID of the proxy</p>
  */
 class LogResult extends AbstractModel
 {
@@ -87,6 +89,11 @@ class LogResult extends AbstractModel
     public $ErrMsg;
 
     /**
+     * @var string <p>Node ID of the proxy</p>
+     */
+    public $Node;
+
+    /**
      * @param integer $DBId <p>Database ID</p>
      * @param integer $CommandLatency <p>Command delay (ms)</p>
      * @param string $Timestamp <p>Creation time (Format: 2006-01-02 15:04:05.000)</p>
@@ -96,6 +103,7 @@ class LogResult extends AbstractModel
      * @param string $CacheCode <p>Cache code, backend redis node</p>
      * @param string $CommandDetail <p>Command details</p>
      * @param string $ErrMsg <p>Error information</p>
+     * @param string $Node <p>Node ID of the proxy</p>
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class LogResult extends AbstractModel
 
         if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
             $this->ErrMsg = $param["ErrMsg"];
+        }
+
+        if (array_key_exists("Node",$param) and $param["Node"] !== null) {
+            $this->Node = $param["Node"];
         }
     }
 }

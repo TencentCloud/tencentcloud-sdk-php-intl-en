@@ -62,6 +62,7 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\ExpandInstanceResponse ExpandInstance(Models\ExpandInstanceRequest $req) This API is used to horizontally scale out instances.
  * @method Models\IsolateDBInstanceResponse IsolateDBInstance(Models\IsolateDBInstanceRequest $req) This API is used to batch isolate instances.
  * @method Models\ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(Models\ModifyAutoRenewFlagRequest $req) This API is used to modify the auto-renewal flag.
+ * @method Models\ModifyDBInstanceResponse ModifyDBInstance(Models\ModifyDBInstanceRequest $req) This API is used to modify instance configurations. It combines the ability to vertically and horizontally modify instances, and supports composite modifications of CPU, memory, disk, number of nodes, availability zone, and storage type. It supports DryRun precheck mode, allowing you to obtain the modification plan without actual execution.
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) This API is used to modify cloud database security groups.
  * @method Models\ModifyDBInstanceVPortResponse ModifyDBInstanceVPort(Models\ModifyDBInstanceVPortRequest $req) This API is used to modify the VPC port of an instance.
  * @method Models\ModifyDBParametersResponse ModifyDBParameters(Models\ModifyDBParametersRequest $req) This API is used to modify instance parameters.

@@ -18,14 +18,14 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Filter criteria. Multiple Values under the same Name are OR-related, while different Names are AND-related. Supported Name: Status (execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING)
+ * Filter criteria. Multiple Values under the same Name are in an OR relationship. Different Names are in an AND relationship with each other. Supported Name: Status (execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING)
  *
  * @method string getName() Obtain Filter criterion name. Parameter value: Status (Execution result. Values: SUCCESS/FAILED/USER_CANCELED/CHECKING)
  * @method void setName(string $Name) Set Filter criterion name. Parameter value: Status (Execution result. Values: SUCCESS/FAILED/USER_CANCELED/CHECKING)
- * @method array getValues() Obtain List of filter condition values
- * @method void setValues(array $Values) Set List of filter condition values
- * @method string getExactMatch() Obtain Exact match: 1 for exact match; fuzzy match by default
- * @method void setExactMatch(string $ExactMatch) Set Exact match: 1 for exact match; fuzzy match by default
+ * @method array getValues() Obtain Filter condition value list
+ * @method void setValues(array $Values) Set Filter condition value list
+ * @method string getExactMatch() Obtain Exact match: 1 - exact match; fuzzy match by default
+ * @method void setExactMatch(string $ExactMatch) Set Exact match: 1 - exact match; fuzzy match by default
  */
 class Filters extends AbstractModel
 {
@@ -35,19 +35,19 @@ class Filters extends AbstractModel
     public $Name;
 
     /**
-     * @var array List of filter condition values
+     * @var array Filter condition value list
      */
     public $Values;
 
     /**
-     * @var string Exact match: 1 for exact match; fuzzy match by default
+     * @var string Exact match: 1 - exact match; fuzzy match by default
      */
     public $ExactMatch;
 
     /**
      * @param string $Name Filter criterion name. Parameter value: Status (Execution result. Values: SUCCESS/FAILED/USER_CANCELED/CHECKING)
-     * @param array $Values List of filter condition values
-     * @param string $ExactMatch Exact match: 1 for exact match; fuzzy match by default
+     * @param array $Values Filter condition value list
+     * @param string $ExactMatch Exact match: 1 - exact match; fuzzy match by default
      */
     function __construct()
     {

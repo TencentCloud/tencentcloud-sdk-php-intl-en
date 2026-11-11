@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SignByAsymmetricKey request structure.
  *
- * @method string getAlgorithm() Obtain Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
- * @method void setAlgorithm(string $Algorithm) Set Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
- * @method string getMessage() Obtain Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
- * @method void setMessage(string $Message) Set Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
- * @method string getKeyId() Obtain Unique ID of a key
- * @method void setKeyId(string $KeyId) Set Unique ID of a key
- * @method string getMessageType() Obtain Message type. Valid values: `RAW` (indicating an original message; used by default if the parameter is not passed in) and `DIGEST`.
- * @method void setMessageType(string $MessageType) Set Message type. Valid values: `RAW` (indicating an original message; used by default if the parameter is not passed in) and `DIGEST`.
+ * @method string getAlgorithm() Obtain <p>Signature algorithm. Supported algorithms: SM2DSA, ECC_P256_R1, ECDSA384_SHA384, RSA_PSS_SHA_256, RSA_PKCS1_SHA_256, RSA_PSS_SHA_384, RSA_PKCS1_SHA_384, RSA_PSS_SHA_512, RSA_PKCS1_SHA_512, etc. For more supported algorithms, query them through the ListAlgorithms API.</p>
+ * @method void setAlgorithm(string $Algorithm) Set <p>Signature algorithm. Supported algorithms: SM2DSA, ECC_P256_R1, ECDSA384_SHA384, RSA_PSS_SHA_256, RSA_PKCS1_SHA_256, RSA_PSS_SHA_384, RSA_PKCS1_SHA_384, RSA_PSS_SHA_512, RSA_PKCS1_SHA_512, etc. For more supported algorithms, query them through the ListAlgorithms API.</p>
+ * @method string getMessage() Obtain <p>Message original text or message digest. If the message original text is provided, its length (before Base64 encoding) cannot exceed 4096 bytes. If the message digest is provided, its length (before Base64 encoding) must be 32 bytes.</p>
+ * @method void setMessage(string $Message) Set <p>Message original text or message digest. If the message original text is provided, its length (before Base64 encoding) cannot exceed 4096 bytes. If the message digest is provided, its length (before Base64 encoding) must be 32 bytes.</p>
+ * @method string getKeyId() Obtain <p>Unique identifier of the key</p>
+ * @method void setKeyId(string $KeyId) Set <p>Unique identifier of the key</p>
+ * @method string getMessageType() Obtain <p>Message type: RAW or DIGEST. If not specified, RAW is used by default, indicating the message original text.</p>
+ * @method void setMessageType(string $MessageType) Set <p>Message type: RAW or DIGEST. If not specified, RAW is used by default, indicating the message original text.</p>
  */
 class SignByAsymmetricKeyRequest extends AbstractModel
 {
     /**
-     * @var string Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
+     * @var string <p>Signature algorithm. Supported algorithms: SM2DSA, ECC_P256_R1, ECDSA384_SHA384, RSA_PSS_SHA_256, RSA_PKCS1_SHA_256, RSA_PSS_SHA_384, RSA_PKCS1_SHA_384, RSA_PSS_SHA_512, RSA_PKCS1_SHA_512, etc. For more supported algorithms, query them through the ListAlgorithms API.</p>
      */
     public $Algorithm;
 
     /**
-     * @var string Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
+     * @var string <p>Message original text or message digest. If the message original text is provided, its length (before Base64 encoding) cannot exceed 4096 bytes. If the message digest is provided, its length (before Base64 encoding) must be 32 bytes.</p>
      */
     public $Message;
 
     /**
-     * @var string Unique ID of a key
+     * @var string <p>Unique identifier of the key</p>
      */
     public $KeyId;
 
     /**
-     * @var string Message type. Valid values: `RAW` (indicating an original message; used by default if the parameter is not passed in) and `DIGEST`.
+     * @var string <p>Message type: RAW or DIGEST. If not specified, RAW is used by default, indicating the message original text.</p>
      */
     public $MessageType;
 
     /**
-     * @param string $Algorithm Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
-     * @param string $Message Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
-     * @param string $KeyId Unique ID of a key
-     * @param string $MessageType Message type. Valid values: `RAW` (indicating an original message; used by default if the parameter is not passed in) and `DIGEST`.
+     * @param string $Algorithm <p>Signature algorithm. Supported algorithms: SM2DSA, ECC_P256_R1, ECDSA384_SHA384, RSA_PSS_SHA_256, RSA_PKCS1_SHA_256, RSA_PSS_SHA_384, RSA_PKCS1_SHA_384, RSA_PSS_SHA_512, RSA_PKCS1_SHA_512, etc. For more supported algorithms, query them through the ListAlgorithms API.</p>
+     * @param string $Message <p>Message original text or message digest. If the message original text is provided, its length (before Base64 encoding) cannot exceed 4096 bytes. If the message digest is provided, its length (before Base64 encoding) must be 32 bytes.</p>
+     * @param string $KeyId <p>Unique identifier of the key</p>
+     * @param string $MessageType <p>Message type: RAW or DIGEST. If not specified, RAW is used by default, indicating the message original text.</p>
      */
     function __construct()
     {

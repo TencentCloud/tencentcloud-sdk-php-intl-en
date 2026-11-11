@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Watermark template ID.
  * @method void setDefinition(integer $Definition) Set Watermark template ID.
- * @method string getTextContent() Obtain Text content, up to 100 characters. This field is required only when the watermark type is text.
+ * @method string getTextContent() Obtain Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
 Text watermarks do not support watermarking screenshots.
- * @method void setTextContent(string $TextContent) Set Text content, up to 100 characters. This field is required only when the watermark type is text.
+ * @method void setTextContent(string $TextContent) Set Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
 Text watermarks do not support watermarking screenshots.
  * @method string getSvgContent() Obtain SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support watermarking screenshots.
+SVG watermark does not support screenshot watermarking.
  * @method void setSvgContent(string $SvgContent) Set SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support watermarking screenshots.
+SVG watermark does not support screenshot watermarking.
  * @method float getStartTimeOffset() Obtain Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
 <li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
@@ -41,11 +41,11 @@ SVG watermark does not support watermarking screenshots.
  * @method float getEndTimeOffset() Obtain End time offset of a watermark, in seconds.
 <li>If not set or set to 0, a watermark will last until the end of a video.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of a video.</li>
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a watermark, in seconds.
 <li>If not set or set to 0, a watermark will last until the end of a video.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of a video.</li>
  */
 class WatermarkInput extends AbstractModel
 {
@@ -55,14 +55,14 @@ class WatermarkInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var string Text content, up to 100 characters. This field is required only when the watermark type is text.
+     * @var string Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
 Text watermarks do not support watermarking screenshots.
      */
     public $TextContent;
 
     /**
      * @var string SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support watermarking screenshots.
+SVG watermark does not support screenshot watermarking.
      */
     public $SvgContent;
 
@@ -78,16 +78,16 @@ SVG watermark does not support watermarking screenshots.
      * @var float End time offset of a watermark, in seconds.
 <li>If not set or set to 0, a watermark will last until the end of a video.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of a video.</li>
      */
     public $EndTimeOffset;
 
     /**
      * @param integer $Definition Watermark template ID.
-     * @param string $TextContent Text content, up to 100 characters. This field is required only when the watermark type is text.
+     * @param string $TextContent Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
 Text watermarks do not support watermarking screenshots.
      * @param string $SvgContent SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support watermarking screenshots.
+SVG watermark does not support screenshot watermarking.
      * @param float $StartTimeOffset Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
 <li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
@@ -95,7 +95,7 @@ SVG watermark does not support watermarking screenshots.
      * @param float $EndTimeOffset End time offset of a watermark, in seconds.
 <li>If not set or set to 0, a watermark will last until the end of a video.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of a video.</li>
      */
     function __construct()
     {

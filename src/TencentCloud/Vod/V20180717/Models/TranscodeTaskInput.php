@@ -32,16 +32,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set <p>Digital watermark.</p>
  * @method array getMosaicSet() Obtain <p>Mosaic list. Up to 10 images are supported.</p>
  * @method void setMosaicSet(array $MosaicSet) Set <p>Mosaic list. Up to 10 images are supported.</p>
- * @method array getHeadTailSet() Obtain <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
- * @method void setHeadTailSet(array $HeadTailSet) Set <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
- * @method float getStartTimeOffset() Obtain <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
- * @method void setStartTimeOffset(float $StartTimeOffset) Set <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
+ * @method array getHeadTailSet() Obtain <p>Opening and ending content list. Up to 10 supported.</p>
+ * @method void setHeadTailSet(array $HeadTailSet) Set <p>Opening and ending content list. Up to 10 supported.</p>
+ * @method float getStartTimeOffset() Obtain <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
  * @method float getEndTimeOffset() Obtain <p>End time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video lasts until the end of the original video.</li><li>If the value is greater than 0 (assuming n), the transcoded video lasts until the nth second of the original video.</li><li>If the value is less than 0 (assuming -n), the transcoded video lasts until n seconds before the end of the original video.</li>
  * @method void setEndTimeOffset(float $EndTimeOffset) Set <p>End time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video lasts until the end of the original video.</li><li>If the value is greater than 0 (assuming n), the transcoded video lasts until the nth second of the original video.</li><li>If the value is less than 0 (assuming -n), the transcoded video lasts until n seconds before the end of the original video.</li>
  * @method OverrideTranscodeParameter getOverrideParameter() Obtain <p>Custom video transcoding parameters.</p>
  * @method void setOverrideParameter(OverrideTranscodeParameter $OverrideParameter) Set <p>Custom video transcoding parameters.</p>
- * @method array getSubtitleInfoSet() Obtain <p>Subtitle suppression information list. Up to 2 are supported.</p>
- * @method void setSubtitleInfoSet(array $SubtitleInfoSet) Set <p>Subtitle suppression information list. Up to 2 are supported.</p>
+ * @method array getSubtitleInfoSet() Obtain <p>Subtitle suppression information list. Up to 2 supported.</p>
+ * @method void setSubtitleInfoSet(array $SubtitleInfoSet) Set <p>Subtitle suppression information list. Up to 2 supported.</p>
  */
 class TranscodeTaskInput extends AbstractModel
 {
@@ -76,12 +76,12 @@ class TranscodeTaskInput extends AbstractModel
     public $MosaicSet;
 
     /**
-     * @var array <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
+     * @var array <p>Opening and ending content list. Up to 10 supported.</p>
      */
     public $HeadTailSet;
 
     /**
-     * @var float <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
+     * @var float <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
      */
     public $StartTimeOffset;
 
@@ -96,7 +96,7 @@ class TranscodeTaskInput extends AbstractModel
     public $OverrideParameter;
 
     /**
-     * @var array <p>Subtitle suppression information list. Up to 2 are supported.</p>
+     * @var array <p>Subtitle suppression information list. Up to 2 supported.</p>
      */
     public $SubtitleInfoSet;
 
@@ -107,11 +107,11 @@ class TranscodeTaskInput extends AbstractModel
      * @param CopyRightWatermarkInput $CopyRightWatermark <p>Copyright watermark.</p>
      * @param BlindWatermarkInput $BlindWatermark <p>Digital watermark.</p>
      * @param array $MosaicSet <p>Mosaic list. Up to 10 images are supported.</p>
-     * @param array $HeadTailSet <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
-     * @param float $StartTimeOffset <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
+     * @param array $HeadTailSet <p>Opening and ending content list. Up to 10 supported.</p>
+     * @param float $StartTimeOffset <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
      * @param float $EndTimeOffset <p>End time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video lasts until the end of the original video.</li><li>If the value is greater than 0 (assuming n), the transcoded video lasts until the nth second of the original video.</li><li>If the value is less than 0 (assuming -n), the transcoded video lasts until n seconds before the end of the original video.</li>
      * @param OverrideTranscodeParameter $OverrideParameter <p>Custom video transcoding parameters.</p>
-     * @param array $SubtitleInfoSet <p>Subtitle suppression information list. Up to 2 are supported.</p>
+     * @param array $SubtitleInfoSet <p>Subtitle suppression information list. Up to 2 supported.</p>
      */
     function __construct()
     {

@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
  * @method string getPassword() Obtain A parameter used to configure the access password for a specified instance. If password-free authentication is enabled, this parameter will not be required. Required password strength. - It must contains 8-30 characters. We recommend that you use a password of more than 12 characters. - It must contain at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
  * @method void setPassword(string $Password) Set A parameter used to configure the access password for a specified instance. If password-free authentication is enabled, this parameter will not be required. Required password strength. - It must contains 8-30 characters. We recommend that you use a password of more than 12 characters. - It must contain at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
- * @method array getShardIds() Obtain Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
- **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
- * @method void setShardIds(array $ShardIds) Set Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
- **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
+ * @method array getShardIds() Obtain Shard ID. Obtain it from the **ClusterId** field in the **Redis** response parameter through the [DescribeInstanceNodeInfo](https://www.tencentcloud.com/document/product/239/48603?from_cn_redirect=1) API.
+ * @method void setShardIds(array $ShardIds) Set Shard ID. Obtain it from the **ClusterId** field in the **Redis** response parameter through the [DescribeInstanceNodeInfo](https://www.tencentcloud.com/document/product/239/48603?from_cn_redirect=1) API.
  */
 class KillMasterGroupRequest extends AbstractModel
 {
@@ -42,16 +40,14 @@ class KillMasterGroupRequest extends AbstractModel
     public $Password;
 
     /**
-     * @var array Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
- **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
+     * @var array Shard ID. Obtain it from the **ClusterId** field in the **Redis** response parameter through the [DescribeInstanceNodeInfo](https://www.tencentcloud.com/document/product/239/48603?from_cn_redirect=1) API.
      */
     public $ShardIds;
 
     /**
      * @param string $InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      * @param string $Password A parameter used to configure the access password for a specified instance. If password-free authentication is enabled, this parameter will not be required. Required password strength. - It must contains 8-30 characters. We recommend that you use a password of more than 12 characters. - It must contain at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
-     * @param array $ShardIds Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
- **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
+     * @param array $ShardIds Shard ID. Obtain it from the **ClusterId** field in the **Redis** response parameter through the [DescribeInstanceNodeInfo](https://www.tencentcloud.com/document/product/239/48603?from_cn_redirect=1) API.
      */
     function __construct()
     {

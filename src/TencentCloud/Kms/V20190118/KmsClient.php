@@ -31,6 +31,7 @@ use TencentCloud\Kms\V20190118\Models as Models;
  * @method Models\CancelKeyArchiveResponse CancelKeyArchive(Models\CancelKeyArchiveRequest $req) This API is used to unarchive keys. If a key is unarchived, its status will be `Enabled`.
  * @method Models\CancelKeyDeletionResponse CancelKeyDeletion(Models\CancelKeyDeletionRequest $req) Cancel the scheduled deletion of CMK
  * @method Models\CreateKeyResponse CreateKey(Models\CreateKeyRequest $req) Create a master key CMK (Custom Master Key) for user management data keys
+ * @method Models\CreateKmsInstanceResponse CreateKmsInstance(Models\CreateKmsInstanceRequest $req) This API is used to purchase and activate the KMS service.
  * @method Models\CreateWhiteBoxKeyResponse CreateWhiteBoxKey(Models\CreateWhiteBoxKeyRequest $req) This API is used to create a white-box key. Up to 50 ones can be created.
  * @method Models\DecryptResponse Decrypt(Models\DecryptRequest $req) This API is used to decrypt the ciphertext and obtain the plaintext data.
  * @method Models\DeleteImportedKeyMaterialResponse DeleteImportedKeyMaterial(Models\DeleteImportedKeyMaterialRequest $req) This API is used to delete the imported key material. It is only valid for EXTERNAL CMKs. Specifically, it puts a CMK into `PendingImport` status instead of deleting the CMK, so that the CMK can be used again after key material is reimported. To delete the CMK completely, please call the `ScheduleKeyDeletion` API.

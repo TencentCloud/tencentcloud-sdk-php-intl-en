@@ -18,256 +18,180 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Package information.
+ * Plan information
  *
- * @method string getPlanType() Obtain Package type. valid values:.
-<Li>`Plan-Trial`: trial plan</li>.
-<Li>`Plan-Personal`: personal plan</li>.
-<Li>`Plan-Basic`: basic plan</li>.
-<Li>`Plan-Standard`: standard edition plan</li>.
-<li>plan-enterprise-v2: enterprise plan;</li>.
-<li>plan-enterprise-model-a: enterprise edition model a package.</li>.
-<Li>Plan-Enterprise: legacy enterprise plan.</li>.
- * @method void setPlanType(string $PlanType) Set Package type. valid values:.
-<Li>`Plan-Trial`: trial plan</li>.
-<Li>`Plan-Personal`: personal plan</li>.
-<Li>`Plan-Basic`: basic plan</li>.
-<Li>`Plan-Standard`: standard edition plan</li>.
-<li>plan-enterprise-v2: enterprise plan;</li>.
-<li>plan-enterprise-model-a: enterprise edition model a package.</li>.
-<Li>Plan-Enterprise: legacy enterprise plan.</li>.
- * @method string getPlanId() Obtain Package ID. such as edgeone-2y041pblwaxe.
- * @method void setPlanId(string $PlanId) Set Package ID. such as edgeone-2y041pblwaxe.
- * @method string getArea() Obtain Service area. valid values:.
-<Li>`Mainland`: chinese mainland</li>.
-<li>`overseas`: global (chinese mainland not included)</li>.
-<Li>`Global`: global (chinese mainland included)</li>.
- * @method void setArea(string $Area) Set Service area. valid values:.
-<Li>`Mainland`: chinese mainland</li>.
-<li>`overseas`: global (chinese mainland not included)</li>.
-<Li>`Global`: global (chinese mainland included)</li>.
- * @method boolean getAutoRenewal() Obtain Auto-Renew switch. valid values:.
-<li>true: automatic renewal is enabled.</li>.
-<li>false: automatic renewal is not enabled.</li>.
- * @method void setAutoRenewal(boolean $AutoRenewal) Set Auto-Renew switch. valid values:.
-<li>true: automatic renewal is enabled.</li>.
-<li>false: automatic renewal is not enabled.</li>.
- * @method string getStatus() Obtain Package status. valid values:.
-<Li>Normal: indicates the normal status.</li>.
-<li>`expiring-soon`: will expire soon;</li>.
-<li>`expired`: expiration status;</li>.
-<Li>`Isolated`: isolated state</li>.
-<li>`overdue-isolated`: arrears isolated state.</li>.
- * @method void setStatus(string $Status) Set Package status. valid values:.
-<Li>Normal: indicates the normal status.</li>.
-<li>`expiring-soon`: will expire soon;</li>.
-<li>`expired`: expiration status;</li>.
-<Li>`Isolated`: isolated state</li>.
-<li>`overdue-isolated`: arrears isolated state.</li>.
- * @method integer getPayMode() Obtain Payment type. valid values:.
-<Li>0: postpaid;</li>.
-<Li>1: prepaid.</li>.
- * @method void setPayMode(integer $PayMode) Set Payment type. valid values:.
-<Li>0: postpaid;</li>.
-<Li>1: prepaid.</li>.
- * @method array getZonesInfo() Obtain Describes the site information bound to the package, including the site id, site name, and site status.
- * @method void setZonesInfo(array $ZonesInfo) Set Describes the site information bound to the package, including the site id, site name, and site status.
- * @method integer getSmartRequestCapacity() Obtain Smart acceleration request quantity in the package, unit: times.
- * @method void setSmartRequestCapacity(integer $SmartRequestCapacity) Set Smart acceleration request quantity in the package, unit: times.
- * @method integer getVAUCapacity() Obtain Specifies the VAU specification in the package. measurement unit: unit.
- * @method void setVAUCapacity(integer $VAUCapacity) Set Specifies the VAU specification in the package. measurement unit: unit.
- * @method integer getAccTrafficCapacity() Obtain Specifies the content acceleration traffic specification in the package, measurement unit: byte.
- * @method void setAccTrafficCapacity(integer $AccTrafficCapacity) Set Specifies the content acceleration traffic specification in the package, measurement unit: byte.
- * @method integer getSmartTrafficCapacity() Obtain Specifies the smart acceleration traffic specification in the package. measurement unit: byte.
- * @method void setSmartTrafficCapacity(integer $SmartTrafficCapacity) Set Specifies the smart acceleration traffic specification in the package. measurement unit: byte.
- * @method integer getDDoSTrafficCapacity() Obtain Specifies the DDoS protection traffic specification in the package, measurement unit: byte.
- * @method void setDDoSTrafficCapacity(integer $DDoSTrafficCapacity) Set Specifies the DDoS protection traffic specification in the package, measurement unit: byte.
- * @method integer getSecTrafficCapacity() Obtain Security traffic specification in the package. measurement unit: byte.
- * @method void setSecTrafficCapacity(integer $SecTrafficCapacity) Set Security traffic specification in the package. measurement unit: byte.
- * @method integer getSecRequestCapacity() Obtain Security requests in the package, unit: times.
- * @method void setSecRequestCapacity(integer $SecRequestCapacity) Set Security requests in the package, unit: times.
- * @method integer getL4TrafficCapacity() Obtain Specifies the layer 4 acceleration traffic specification in the package, measurement unit: byte.
- * @method void setL4TrafficCapacity(integer $L4TrafficCapacity) Set Specifies the layer 4 acceleration traffic specification in the package, measurement unit: byte.
- * @method integer getCrossMLCTrafficCapacity() Obtain Specifies the network optimization traffic specification in the package for the chinese mainland, measurement unit: byte.
- * @method void setCrossMLCTrafficCapacity(integer $CrossMLCTrafficCapacity) Set Specifies the network optimization traffic specification in the package for the chinese mainland, measurement unit: byte.
- * @method string getBindable() Obtain Specifies whether the package allows binding to new sites. valid values:.
-<li>true: allows binding a new site.</li>.
-<li>`false`: cannot bind new sites.</li>.
- * @method void setBindable(string $Bindable) Set Specifies whether the package allows binding to new sites. valid values:.
-<li>true: allows binding a new site.</li>.
-<li>`false`: cannot bind new sites.</li>.
- * @method string getEnabledTime() Obtain Package activation time.
- * @method void setEnabledTime(string $EnabledTime) Set Package activation time.
- * @method string getExpiredTime() Obtain Plan expiration time.
- * @method void setExpiredTime(string $ExpiredTime) Set Plan expiration time.
- * @method array getFeatures() Obtain Supported features of the package include: <li>ContentAcceleration: content acceleration feature;</li> <li>SmartAcceleration: intelligent acceleration feature;</li> <li>L4: L4 acceleration feature;</li> <li>Waf: advanced Web protection;</li> <li>QUIC: QUIC feature;</li> <li>CrossMLC: network optimization in the chinese mainland;</li> <li>ProcessMedia: media processing feature;</li> <li>L4DDoS: L4 DDoS protection feature;</li> L7DDoS feature will only appear in one of the following specifications: <li>L7DDoS.CM30G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM60G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM100G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.Anycast300G; layer-7 DDoS protection feature - 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.AnycastUnlimited; layer-7 DDoS protection feature - unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM30G_Anycast300G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM60G_Anycast300G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM100G_Anycast300G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM30G_AnycastUnlimited; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM60G_AnycastUnlimited; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM100G_AnycastUnlimited; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li>.
- * @method void setFeatures(array $Features) Set Supported features of the package include: <li>ContentAcceleration: content acceleration feature;</li> <li>SmartAcceleration: intelligent acceleration feature;</li> <li>L4: L4 acceleration feature;</li> <li>Waf: advanced Web protection;</li> <li>QUIC: QUIC feature;</li> <li>CrossMLC: network optimization in the chinese mainland;</li> <li>ProcessMedia: media processing feature;</li> <li>L4DDoS: L4 DDoS protection feature;</li> L7DDoS feature will only appear in one of the following specifications: <li>L7DDoS.CM30G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM60G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM100G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.Anycast300G; layer-7 DDoS protection feature - 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.AnycastUnlimited; layer-7 DDoS protection feature - unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM30G_Anycast300G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM60G_Anycast300G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM100G_Anycast300G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM30G_AnycastUnlimited; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM60G_AnycastUnlimited; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM100G_AnycastUnlimited; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li>.
+ * @method string getPlanType() Obtain <p>Plan type. Valid values:</p><li>plan-trial: Trial Edition plan;</li><li>plan-personal: Personal Edition plan;</li><li>plan-basic: Basic Edition plan;</li><li>plan-standard: Standard Edition plan;</li><li>plan-enterprise-v2: Enterprise Edition plan;</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan;</li><li>plan-enterprise: Legacy Enterprise Edition plan;</li><li>plan-makers-pro: Makers Pro Edition plan;</li><li>plan-makers-business: Makers Business Edition plan;</li><p>Valid values:</p><ul><li>plan-trial: Trial Edition plan</li><li>plan-personal: Personal Edition plan</li><li>plan-basic: Basic Edition plan</li><li>plan-standard: Standard Edition plan</li><li>plan-enterprise-v2: Enterprise Edition plan</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan</li><li>plan-enterprise: Legacy Enterprise Edition plan</li><li>plan-makers-pro: Makers Pro Edition plan</li><li>plan-makers-business: Makers Business Edition plan</li></ul>
+ * @method void setPlanType(string $PlanType) Set <p>Plan type. Valid values:</p><li>plan-trial: Trial Edition plan;</li><li>plan-personal: Personal Edition plan;</li><li>plan-basic: Basic Edition plan;</li><li>plan-standard: Standard Edition plan;</li><li>plan-enterprise-v2: Enterprise Edition plan;</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan;</li><li>plan-enterprise: Legacy Enterprise Edition plan;</li><li>plan-makers-pro: Makers Pro Edition plan;</li><li>plan-makers-business: Makers Business Edition plan;</li><p>Valid values:</p><ul><li>plan-trial: Trial Edition plan</li><li>plan-personal: Personal Edition plan</li><li>plan-basic: Basic Edition plan</li><li>plan-standard: Standard Edition plan</li><li>plan-enterprise-v2: Enterprise Edition plan</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan</li><li>plan-enterprise: Legacy Enterprise Edition plan</li><li>plan-makers-pro: Makers Pro Edition plan</li><li>plan-makers-business: Makers Business Edition plan</li></ul>
+ * @method string getPlanId() Obtain <p>Plan ID, in the format of edgeone-2y041pblwaxe.</p>
+ * @method void setPlanId(string $PlanId) Set <p>Plan ID, in the format of edgeone-2y041pblwaxe.</p>
+ * @method string getArea() Obtain <p>Service region. Valid values:</p><li>mainland: Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland);</li><li>global: Global (including the Chinese mainland).</li>
+ * @method void setArea(string $Area) Set <p>Service region. Valid values:</p><li>mainland: Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland);</li><li>global: Global (including the Chinese mainland).</li>
+ * @method boolean getAutoRenewal() Obtain <p>Auto-renewal switch. Valid values:</p><li>true: Auto-renewal enabled;</li><li>false: Auto-renewal disabled.</li>
+ * @method void setAutoRenewal(boolean $AutoRenewal) Set <p>Auto-renewal switch. Valid values:</p><li>true: Auto-renewal enabled;</li><li>false: Auto-renewal disabled.</li>
+ * @method string getStatus() Obtain <p>Plan status. Valid values:</p><li>normal: Normal;</li><li>expiring-soon: Expiring soon;</li><li>expired: Expired;</li><li>isolated: Isolated;</li><li>overdue-isolated: Isolated due to overdue payment.</li>
+ * @method void setStatus(string $Status) Set <p>Plan status. Valid values:</p><li>normal: Normal;</li><li>expiring-soon: Expiring soon;</li><li>expired: Expired;</li><li>isolated: Isolated;</li><li>overdue-isolated: Isolated due to overdue payment.</li>
+ * @method integer getPayMode() Obtain <p>Billing type. Valid values:</p><li>0: Postpaid;</li><li>1: Prepaid.</li>
+ * @method void setPayMode(integer $PayMode) Set <p>Billing type. Valid values:</p><li>0: Postpaid;</li><li>1: Prepaid.</li>
+ * @method array getZonesInfo() Obtain <p>Information of the sites bound to the plan, including site id, site name, and site status.</p>
+ * @method void setZonesInfo(array $ZonesInfo) Set <p>Information of the sites bound to the plan, including site id, site name, and site status.</p>
+ * @method integer getSmartRequestCapacity() Obtain <p>Quota of smart acceleration requests in the plan, in the unit of requests.</p>
+ * @method void setSmartRequestCapacity(integer $SmartRequestCapacity) Set <p>Quota of smart acceleration requests in the plan, in the unit of requests.</p>
+ * @method integer getVAUCapacity() Obtain <p>VAU quota in the plan, in the unit of VAUs.</p>
+ * @method void setVAUCapacity(integer $VAUCapacity) Set <p>VAU quota in the plan, in the unit of VAUs.</p>
+ * @method integer getAccTrafficCapacity() Obtain <p>Quota of content acceleration traffic in the plan, in the unit of bytes.</p>
+ * @method void setAccTrafficCapacity(integer $AccTrafficCapacity) Set <p>Quota of content acceleration traffic in the plan, in the unit of bytes.</p>
+ * @method integer getClientAuthTrafficCapacity() Obtain <p>Quota of client authentication traffic in the plan, in the unit of bytes.</p>
+ * @method void setClientAuthTrafficCapacity(integer $ClientAuthTrafficCapacity) Set <p>Quota of client authentication traffic in the plan, in the unit of bytes.</p>
+ * @method integer getSmartTrafficCapacity() Obtain <p>Quota of smart acceleration traffic in the plan, in the unit of bytes.</p>
+ * @method void setSmartTrafficCapacity(integer $SmartTrafficCapacity) Set <p>Quota of smart acceleration traffic in the plan, in the unit of bytes.</p>
+ * @method integer getDDoSTrafficCapacity() Obtain <p>Quota of DDoS protection traffic in the plan, in the unit of bytes.</p>
+ * @method void setDDoSTrafficCapacity(integer $DDoSTrafficCapacity) Set <p>Quota of DDoS protection traffic in the plan, in the unit of bytes.</p>
+ * @method integer getSecTrafficCapacity() Obtain <p>Quota of security traffic in the plan, in the unit of bytes.</p>
+ * @method void setSecTrafficCapacity(integer $SecTrafficCapacity) Set <p>Quota of security traffic in the plan, in the unit of bytes.</p>
+ * @method integer getSecRequestCapacity() Obtain <p>Quota of security requests in the plan, in the unit of requests.</p>
+ * @method void setSecRequestCapacity(integer $SecRequestCapacity) Set <p>Quota of security requests in the plan, in the unit of requests.</p>
+ * @method integer getL4TrafficCapacity() Obtain <p>Quota of L4 acceleration traffic in the plan, in the unit of bytes.</p>
+ * @method void setL4TrafficCapacity(integer $L4TrafficCapacity) Set <p>Quota of L4 acceleration traffic in the plan, in the unit of bytes.</p>
+ * @method integer getCrossMLCTrafficCapacity() Obtain <p>Quota of network optimization traffic for the Chinese mainland in the plan, in the unit of bytes.</p>
+ * @method void setCrossMLCTrafficCapacity(integer $CrossMLCTrafficCapacity) Set <p>Quota of network optimization traffic for the Chinese mainland in the plan, in the unit of bytes.</p>
+ * @method string getBindable() Obtain <p>Whether the plan allows binding new sites. Valid values:</p><li>true: Allows binding new sites;</li><li>false: Does not allow binding new sites.</li>
+ * @method void setBindable(string $Bindable) Set <p>Whether the plan allows binding new sites. Valid values:</p><li>true: Allows binding new sites;</li><li>false: Does not allow binding new sites.</li>
+ * @method string getEnabledTime() Obtain <p>Time when the plan takes effect.</p>
+ * @method void setEnabledTime(string $EnabledTime) Set <p>Time when the plan takes effect.</p>
+ * @method string getExpiredTime() Obtain <p>Expiration time of the plan.</p>
+ * @method void setExpiredTime(string $ExpiredTime) Set <p>Expiration time of the plan.</p>
+ * @method array getFeatures() Obtain <p>Features supported by the plan. Valid values: <li>ContentAcceleration: content acceleration;</li><li>SmartAcceleration: smart acceleration;</li><li>L4: L4 acceleration;</li><li>Waf: advanced Web protection;</li><li>QUIC: QUIC;</li><li>CrossMLC: network optimization for the Chinese mainland;</li><li>ProcessMedia: media processing;</li><li>L4DDoS: L4 DDoS protection.</li>Only one of the following L7DDoS specifications can appear: <li>L7DDoS.CM30G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM60G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM100G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.Anycast300G: L7 DDoS protection - 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.AnycastUnlimited: L7 DDoS protection - unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM30G_Anycast300G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM60G_Anycast300G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM100G_Anycast300G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM30G_AnycastUnlimited: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM60G_AnycastUnlimited: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM100G_AnycastUnlimited: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland.</li></p>
+ * @method void setFeatures(array $Features) Set <p>Features supported by the plan. Valid values: <li>ContentAcceleration: content acceleration;</li><li>SmartAcceleration: smart acceleration;</li><li>L4: L4 acceleration;</li><li>Waf: advanced Web protection;</li><li>QUIC: QUIC;</li><li>CrossMLC: network optimization for the Chinese mainland;</li><li>ProcessMedia: media processing;</li><li>L4DDoS: L4 DDoS protection.</li>Only one of the following L7DDoS specifications can appear: <li>L7DDoS.CM30G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM60G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM100G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.Anycast300G: L7 DDoS protection - 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.AnycastUnlimited: L7 DDoS protection - unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM30G_Anycast300G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM60G_Anycast300G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM100G_Anycast300G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM30G_AnycastUnlimited: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM60G_AnycastUnlimited: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM100G_AnycastUnlimited: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland.</li></p>
  */
 class Plan extends AbstractModel
 {
     /**
-     * @var string Package type. valid values:.
-<Li>`Plan-Trial`: trial plan</li>.
-<Li>`Plan-Personal`: personal plan</li>.
-<Li>`Plan-Basic`: basic plan</li>.
-<Li>`Plan-Standard`: standard edition plan</li>.
-<li>plan-enterprise-v2: enterprise plan;</li>.
-<li>plan-enterprise-model-a: enterprise edition model a package.</li>.
-<Li>Plan-Enterprise: legacy enterprise plan.</li>.
+     * @var string <p>Plan type. Valid values:</p><li>plan-trial: Trial Edition plan;</li><li>plan-personal: Personal Edition plan;</li><li>plan-basic: Basic Edition plan;</li><li>plan-standard: Standard Edition plan;</li><li>plan-enterprise-v2: Enterprise Edition plan;</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan;</li><li>plan-enterprise: Legacy Enterprise Edition plan;</li><li>plan-makers-pro: Makers Pro Edition plan;</li><li>plan-makers-business: Makers Business Edition plan;</li><p>Valid values:</p><ul><li>plan-trial: Trial Edition plan</li><li>plan-personal: Personal Edition plan</li><li>plan-basic: Basic Edition plan</li><li>plan-standard: Standard Edition plan</li><li>plan-enterprise-v2: Enterprise Edition plan</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan</li><li>plan-enterprise: Legacy Enterprise Edition plan</li><li>plan-makers-pro: Makers Pro Edition plan</li><li>plan-makers-business: Makers Business Edition plan</li></ul>
      */
     public $PlanType;
 
     /**
-     * @var string Package ID. such as edgeone-2y041pblwaxe.
+     * @var string <p>Plan ID, in the format of edgeone-2y041pblwaxe.</p>
      */
     public $PlanId;
 
     /**
-     * @var string Service area. valid values:.
-<Li>`Mainland`: chinese mainland</li>.
-<li>`overseas`: global (chinese mainland not included)</li>.
-<Li>`Global`: global (chinese mainland included)</li>.
+     * @var string <p>Service region. Valid values:</p><li>mainland: Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland);</li><li>global: Global (including the Chinese mainland).</li>
      */
     public $Area;
 
     /**
-     * @var boolean Auto-Renew switch. valid values:.
-<li>true: automatic renewal is enabled.</li>.
-<li>false: automatic renewal is not enabled.</li>.
+     * @var boolean <p>Auto-renewal switch. Valid values:</p><li>true: Auto-renewal enabled;</li><li>false: Auto-renewal disabled.</li>
      */
     public $AutoRenewal;
 
     /**
-     * @var string Package status. valid values:.
-<Li>Normal: indicates the normal status.</li>.
-<li>`expiring-soon`: will expire soon;</li>.
-<li>`expired`: expiration status;</li>.
-<Li>`Isolated`: isolated state</li>.
-<li>`overdue-isolated`: arrears isolated state.</li>.
+     * @var string <p>Plan status. Valid values:</p><li>normal: Normal;</li><li>expiring-soon: Expiring soon;</li><li>expired: Expired;</li><li>isolated: Isolated;</li><li>overdue-isolated: Isolated due to overdue payment.</li>
      */
     public $Status;
 
     /**
-     * @var integer Payment type. valid values:.
-<Li>0: postpaid;</li>.
-<Li>1: prepaid.</li>.
+     * @var integer <p>Billing type. Valid values:</p><li>0: Postpaid;</li><li>1: Prepaid.</li>
      */
     public $PayMode;
 
     /**
-     * @var array Describes the site information bound to the package, including the site id, site name, and site status.
+     * @var array <p>Information of the sites bound to the plan, including site id, site name, and site status.</p>
      */
     public $ZonesInfo;
 
     /**
-     * @var integer Smart acceleration request quantity in the package, unit: times.
+     * @var integer <p>Quota of smart acceleration requests in the plan, in the unit of requests.</p>
      */
     public $SmartRequestCapacity;
 
     /**
-     * @var integer Specifies the VAU specification in the package. measurement unit: unit.
+     * @var integer <p>VAU quota in the plan, in the unit of VAUs.</p>
      */
     public $VAUCapacity;
 
     /**
-     * @var integer Specifies the content acceleration traffic specification in the package, measurement unit: byte.
+     * @var integer <p>Quota of content acceleration traffic in the plan, in the unit of bytes.</p>
      */
     public $AccTrafficCapacity;
 
     /**
-     * @var integer Specifies the smart acceleration traffic specification in the package. measurement unit: byte.
+     * @var integer <p>Quota of client authentication traffic in the plan, in the unit of bytes.</p>
+     */
+    public $ClientAuthTrafficCapacity;
+
+    /**
+     * @var integer <p>Quota of smart acceleration traffic in the plan, in the unit of bytes.</p>
      */
     public $SmartTrafficCapacity;
 
     /**
-     * @var integer Specifies the DDoS protection traffic specification in the package, measurement unit: byte.
+     * @var integer <p>Quota of DDoS protection traffic in the plan, in the unit of bytes.</p>
      */
     public $DDoSTrafficCapacity;
 
     /**
-     * @var integer Security traffic specification in the package. measurement unit: byte.
+     * @var integer <p>Quota of security traffic in the plan, in the unit of bytes.</p>
      */
     public $SecTrafficCapacity;
 
     /**
-     * @var integer Security requests in the package, unit: times.
+     * @var integer <p>Quota of security requests in the plan, in the unit of requests.</p>
      */
     public $SecRequestCapacity;
 
     /**
-     * @var integer Specifies the layer 4 acceleration traffic specification in the package, measurement unit: byte.
+     * @var integer <p>Quota of L4 acceleration traffic in the plan, in the unit of bytes.</p>
      */
     public $L4TrafficCapacity;
 
     /**
-     * @var integer Specifies the network optimization traffic specification in the package for the chinese mainland, measurement unit: byte.
+     * @var integer <p>Quota of network optimization traffic for the Chinese mainland in the plan, in the unit of bytes.</p>
      */
     public $CrossMLCTrafficCapacity;
 
     /**
-     * @var string Specifies whether the package allows binding to new sites. valid values:.
-<li>true: allows binding a new site.</li>.
-<li>`false`: cannot bind new sites.</li>.
+     * @var string <p>Whether the plan allows binding new sites. Valid values:</p><li>true: Allows binding new sites;</li><li>false: Does not allow binding new sites.</li>
      */
     public $Bindable;
 
     /**
-     * @var string Package activation time.
+     * @var string <p>Time when the plan takes effect.</p>
      */
     public $EnabledTime;
 
     /**
-     * @var string Plan expiration time.
+     * @var string <p>Expiration time of the plan.</p>
      */
     public $ExpiredTime;
 
     /**
-     * @var array Supported features of the package include: <li>ContentAcceleration: content acceleration feature;</li> <li>SmartAcceleration: intelligent acceleration feature;</li> <li>L4: L4 acceleration feature;</li> <li>Waf: advanced Web protection;</li> <li>QUIC: QUIC feature;</li> <li>CrossMLC: network optimization in the chinese mainland;</li> <li>ProcessMedia: media processing feature;</li> <li>L4DDoS: L4 DDoS protection feature;</li> L7DDoS feature will only appear in one of the following specifications: <li>L7DDoS.CM30G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM60G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM100G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.Anycast300G; layer-7 DDoS protection feature - 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.AnycastUnlimited; layer-7 DDoS protection feature - unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM30G_Anycast300G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM60G_Anycast300G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM100G_Anycast300G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM30G_AnycastUnlimited; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM60G_AnycastUnlimited; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM100G_AnycastUnlimited; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li>.
+     * @var array <p>Features supported by the plan. Valid values: <li>ContentAcceleration: content acceleration;</li><li>SmartAcceleration: smart acceleration;</li><li>L4: L4 acceleration;</li><li>Waf: advanced Web protection;</li><li>QUIC: QUIC;</li><li>CrossMLC: network optimization for the Chinese mainland;</li><li>ProcessMedia: media processing;</li><li>L4DDoS: L4 DDoS protection.</li>Only one of the following L7DDoS specifications can appear: <li>L7DDoS.CM30G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM60G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM100G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.Anycast300G: L7 DDoS protection - 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.AnycastUnlimited: L7 DDoS protection - unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM30G_Anycast300G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM60G_Anycast300G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM100G_Anycast300G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM30G_AnycastUnlimited: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM60G_AnycastUnlimited: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM100G_AnycastUnlimited: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland.</li></p>
      */
     public $Features;
 
     /**
-     * @param string $PlanType Package type. valid values:.
-<Li>`Plan-Trial`: trial plan</li>.
-<Li>`Plan-Personal`: personal plan</li>.
-<Li>`Plan-Basic`: basic plan</li>.
-<Li>`Plan-Standard`: standard edition plan</li>.
-<li>plan-enterprise-v2: enterprise plan;</li>.
-<li>plan-enterprise-model-a: enterprise edition model a package.</li>.
-<Li>Plan-Enterprise: legacy enterprise plan.</li>.
-     * @param string $PlanId Package ID. such as edgeone-2y041pblwaxe.
-     * @param string $Area Service area. valid values:.
-<Li>`Mainland`: chinese mainland</li>.
-<li>`overseas`: global (chinese mainland not included)</li>.
-<Li>`Global`: global (chinese mainland included)</li>.
-     * @param boolean $AutoRenewal Auto-Renew switch. valid values:.
-<li>true: automatic renewal is enabled.</li>.
-<li>false: automatic renewal is not enabled.</li>.
-     * @param string $Status Package status. valid values:.
-<Li>Normal: indicates the normal status.</li>.
-<li>`expiring-soon`: will expire soon;</li>.
-<li>`expired`: expiration status;</li>.
-<Li>`Isolated`: isolated state</li>.
-<li>`overdue-isolated`: arrears isolated state.</li>.
-     * @param integer $PayMode Payment type. valid values:.
-<Li>0: postpaid;</li>.
-<Li>1: prepaid.</li>.
-     * @param array $ZonesInfo Describes the site information bound to the package, including the site id, site name, and site status.
-     * @param integer $SmartRequestCapacity Smart acceleration request quantity in the package, unit: times.
-     * @param integer $VAUCapacity Specifies the VAU specification in the package. measurement unit: unit.
-     * @param integer $AccTrafficCapacity Specifies the content acceleration traffic specification in the package, measurement unit: byte.
-     * @param integer $SmartTrafficCapacity Specifies the smart acceleration traffic specification in the package. measurement unit: byte.
-     * @param integer $DDoSTrafficCapacity Specifies the DDoS protection traffic specification in the package, measurement unit: byte.
-     * @param integer $SecTrafficCapacity Security traffic specification in the package. measurement unit: byte.
-     * @param integer $SecRequestCapacity Security requests in the package, unit: times.
-     * @param integer $L4TrafficCapacity Specifies the layer 4 acceleration traffic specification in the package, measurement unit: byte.
-     * @param integer $CrossMLCTrafficCapacity Specifies the network optimization traffic specification in the package for the chinese mainland, measurement unit: byte.
-     * @param string $Bindable Specifies whether the package allows binding to new sites. valid values:.
-<li>true: allows binding a new site.</li>.
-<li>`false`: cannot bind new sites.</li>.
-     * @param string $EnabledTime Package activation time.
-     * @param string $ExpiredTime Plan expiration time.
-     * @param array $Features Supported features of the package include: <li>ContentAcceleration: content acceleration feature;</li> <li>SmartAcceleration: intelligent acceleration feature;</li> <li>L4: L4 acceleration feature;</li> <li>Waf: advanced Web protection;</li> <li>QUIC: QUIC feature;</li> <li>CrossMLC: network optimization in the chinese mainland;</li> <li>ProcessMedia: media processing feature;</li> <li>L4DDoS: L4 DDoS protection feature;</li> L7DDoS feature will only appear in one of the following specifications: <li>L7DDoS.CM30G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM60G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM100G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.Anycast300G; layer-7 DDoS protection feature - 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.AnycastUnlimited; layer-7 DDoS protection feature - unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM30G_Anycast300G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM60G_Anycast300G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM100G_Anycast300G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM30G_AnycastUnlimited; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM60G_AnycastUnlimited; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM100G_AnycastUnlimited; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li>.
+     * @param string $PlanType <p>Plan type. Valid values:</p><li>plan-trial: Trial Edition plan;</li><li>plan-personal: Personal Edition plan;</li><li>plan-basic: Basic Edition plan;</li><li>plan-standard: Standard Edition plan;</li><li>plan-enterprise-v2: Enterprise Edition plan;</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan;</li><li>plan-enterprise: Legacy Enterprise Edition plan;</li><li>plan-makers-pro: Makers Pro Edition plan;</li><li>plan-makers-business: Makers Business Edition plan;</li><p>Valid values:</p><ul><li>plan-trial: Trial Edition plan</li><li>plan-personal: Personal Edition plan</li><li>plan-basic: Basic Edition plan</li><li>plan-standard: Standard Edition plan</li><li>plan-enterprise-v2: Enterprise Edition plan</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan</li><li>plan-enterprise: Legacy Enterprise Edition plan</li><li>plan-makers-pro: Makers Pro Edition plan</li><li>plan-makers-business: Makers Business Edition plan</li></ul>
+     * @param string $PlanId <p>Plan ID, in the format of edgeone-2y041pblwaxe.</p>
+     * @param string $Area <p>Service region. Valid values:</p><li>mainland: Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland);</li><li>global: Global (including the Chinese mainland).</li>
+     * @param boolean $AutoRenewal <p>Auto-renewal switch. Valid values:</p><li>true: Auto-renewal enabled;</li><li>false: Auto-renewal disabled.</li>
+     * @param string $Status <p>Plan status. Valid values:</p><li>normal: Normal;</li><li>expiring-soon: Expiring soon;</li><li>expired: Expired;</li><li>isolated: Isolated;</li><li>overdue-isolated: Isolated due to overdue payment.</li>
+     * @param integer $PayMode <p>Billing type. Valid values:</p><li>0: Postpaid;</li><li>1: Prepaid.</li>
+     * @param array $ZonesInfo <p>Information of the sites bound to the plan, including site id, site name, and site status.</p>
+     * @param integer $SmartRequestCapacity <p>Quota of smart acceleration requests in the plan, in the unit of requests.</p>
+     * @param integer $VAUCapacity <p>VAU quota in the plan, in the unit of VAUs.</p>
+     * @param integer $AccTrafficCapacity <p>Quota of content acceleration traffic in the plan, in the unit of bytes.</p>
+     * @param integer $ClientAuthTrafficCapacity <p>Quota of client authentication traffic in the plan, in the unit of bytes.</p>
+     * @param integer $SmartTrafficCapacity <p>Quota of smart acceleration traffic in the plan, in the unit of bytes.</p>
+     * @param integer $DDoSTrafficCapacity <p>Quota of DDoS protection traffic in the plan, in the unit of bytes.</p>
+     * @param integer $SecTrafficCapacity <p>Quota of security traffic in the plan, in the unit of bytes.</p>
+     * @param integer $SecRequestCapacity <p>Quota of security requests in the plan, in the unit of requests.</p>
+     * @param integer $L4TrafficCapacity <p>Quota of L4 acceleration traffic in the plan, in the unit of bytes.</p>
+     * @param integer $CrossMLCTrafficCapacity <p>Quota of network optimization traffic for the Chinese mainland in the plan, in the unit of bytes.</p>
+     * @param string $Bindable <p>Whether the plan allows binding new sites. Valid values:</p><li>true: Allows binding new sites;</li><li>false: Does not allow binding new sites.</li>
+     * @param string $EnabledTime <p>Time when the plan takes effect.</p>
+     * @param string $ExpiredTime <p>Expiration time of the plan.</p>
+     * @param array $Features <p>Features supported by the plan. Valid values: <li>ContentAcceleration: content acceleration;</li><li>SmartAcceleration: smart acceleration;</li><li>L4: L4 acceleration;</li><li>Waf: advanced Web protection;</li><li>QUIC: QUIC;</li><li>CrossMLC: network optimization for the Chinese mainland;</li><li>ProcessMedia: media processing;</li><li>L4DDoS: L4 DDoS protection.</li>Only one of the following L7DDoS specifications can appear: <li>L7DDoS.CM30G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM60G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM100G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.Anycast300G: L7 DDoS protection - 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.AnycastUnlimited: L7 DDoS protection - unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM30G_Anycast300G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM60G_Anycast300G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM100G_Anycast300G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM30G_AnycastUnlimited: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM60G_AnycastUnlimited: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM100G_AnycastUnlimited: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland.</li></p>
      */
     function __construct()
     {
@@ -325,6 +249,10 @@ class Plan extends AbstractModel
 
         if (array_key_exists("AccTrafficCapacity",$param) and $param["AccTrafficCapacity"] !== null) {
             $this->AccTrafficCapacity = $param["AccTrafficCapacity"];
+        }
+
+        if (array_key_exists("ClientAuthTrafficCapacity",$param) and $param["ClientAuthTrafficCapacity"] !== null) {
+            $this->ClientAuthTrafficCapacity = $param["ClientAuthTrafficCapacity"];
         }
 
         if (array_key_exists("SmartTrafficCapacity",$param) and $param["SmartTrafficCapacity"] !== null) {

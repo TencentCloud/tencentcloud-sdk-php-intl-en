@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskInfo request structure.
  *
- * @method integer getTaskId() Obtain Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://intl.cloud.tencent.com/document/product/239/39374?from_cn_redirect=1).
- * @method void setTaskId(integer $TaskId) Set Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://intl.cloud.tencent.com/document/product/239/39374?from_cn_redirect=1).
+ * @method integer getTaskId() Obtain Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://www.tencentcloud.com/document/product/239/39374?from_cn_redirect=1).
+ * @method void setTaskId(integer $TaskId) Set Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://www.tencentcloud.com/document/product/239/39374?from_cn_redirect=1).
  */
 class DescribeTaskInfoRequest extends AbstractModel
 {
     /**
-     * @var integer Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://intl.cloud.tencent.com/document/product/239/39374?from_cn_redirect=1).
+     * @var integer Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://www.tencentcloud.com/document/product/239/39374?from_cn_redirect=1).
      */
     public $TaskId;
 
     /**
-     * @param integer $TaskId Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://intl.cloud.tencent.com/document/product/239/39374?from_cn_redirect=1).
+     * @param integer $TaskId Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://www.tencentcloud.com/document/product/239/39374?from_cn_redirect=1).
      */
     function __construct()
     {

@@ -18,16 +18,16 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Describes the returned site information.
+ * Back to site information
  *
  * @method string getZoneId() Obtain Site id.
  * @method void setZoneId(string $ZoneId) Set Site id.
  * @method string getZoneName() Obtain Site name.
  * @method void setZoneName(string $ZoneName) Set Site name.
- * @method boolean getPaused() Obtain Whether to disable the site. valid values: <li>false: not disabled;</li>.
-<li>true: disabled.</li>.
- * @method void setPaused(boolean $Paused) Set Whether to disable the site. valid values: <li>false: not disabled;</li>.
-<li>true: disabled.</li>.
+ * @method boolean getPaused() Obtain Whether to disable the site. Valid values: <li>false: not disabled;</li>
+<li>true: Disable.</li>
+ * @method void setPaused(boolean $Paused) Set Whether to disable the site. Valid values: <li>false: not disabled;</li>
+<li>true: Disable.</li>
  */
 class ZoneInfo extends AbstractModel
 {
@@ -42,16 +42,16 @@ class ZoneInfo extends AbstractModel
     public $ZoneName;
 
     /**
-     * @var boolean Whether to disable the site. valid values: <li>false: not disabled;</li>.
-<li>true: disabled.</li>.
+     * @var boolean Whether to disable the site. Valid values: <li>false: not disabled;</li>
+<li>true: Disable.</li>
      */
     public $Paused;
 
     /**
      * @param string $ZoneId Site id.
      * @param string $ZoneName Site name.
-     * @param boolean $Paused Whether to disable the site. valid values: <li>false: not disabled;</li>.
-<li>true: disabled.</li>.
+     * @param boolean $Paused Whether to disable the site. Valid values: <li>false: not disabled;</li>
+<li>true: Disable.</li>
      */
     function __construct()
     {

@@ -18,17 +18,17 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Host instance location information
+ * Location information of the host instance
  *
- * @method integer getAppId() Obtain AppId of the machine ownership
- * @method void setAppId(integer $AppId) Set AppId of the machine ownership
+ * @method integer getAppId() Obtain AppId of the machine
+ * @method void setAppId(integer $AppId) Set AppId of the machine
  * @method string getInstanceID() Obtain Machine instance ID.
  * @method void setInstanceID(string $InstanceID) Set Machine instance ID.
  */
 class InstanceIDWithAppIdItem extends AbstractModel
 {
     /**
-     * @var integer AppId of the machine ownership
+     * @var integer AppId of the machine
      */
     public $AppId;
 
@@ -38,7 +38,7 @@ class InstanceIDWithAppIdItem extends AbstractModel
     public $InstanceID;
 
     /**
-     * @param integer $AppId AppId of the machine ownership
+     * @param integer $AppId AppId of the machine
      * @param string $InstanceID Machine instance ID.
      */
     function __construct()

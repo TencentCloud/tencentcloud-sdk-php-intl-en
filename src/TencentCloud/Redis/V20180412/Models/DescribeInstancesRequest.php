@@ -20,366 +20,226 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances request structure.
  *
- * @method integer getLimit() Obtain Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
- * @method void setLimit(integer $Limit) Set Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
- * @method integer getOffset() Obtain Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
- * @method void setOffset(integer $Offset) Set Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
- * @method string getInstanceId() Obtain ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-
-
- * @method void setInstanceId(string $InstanceId) Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-
-
- * @method string getOrderBy() Obtain The instance list is sorted according to the following enumeration valid values:
-- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
- * @method void setOrderBy(string $OrderBy) Set The instance list is sorted according to the following enumeration valid values:
-- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
- * @method integer getOrderType() Obtain For instance sorting order, the default is descending order.
-- 1: Descending order.
-- 0: Ascending order.
- * @method void setOrderType(integer $OrderType) Set For instance sorting order, the default is descending order.
-- 1: Descending order.
-- 0: Ascending order.
- * @method array getVpcIds() Obtain Array of VPC IDs such as 47525. If this parameter is not passed in or the array is empty, the classic network will be selected by default. This parameter is retained and can be ignored. It is set based on `UniqVpcIds` parameter format.
- * @method void setVpcIds(array $VpcIds) Set Array of VPC IDs such as 47525. If this parameter is not passed in or the array is empty, the classic network will be selected by default. This parameter is retained and can be ignored. It is set based on `UniqVpcIds` parameter format.
- * @method array getSubnetIds() Obtain Array of VPC subnet IDs such as 56854. This parameter is retained and can be ignored. It is set based on `UniqSubnetIds` parameter format.
- * @method void setSubnetIds(array $SubnetIds) Set Array of VPC subnet IDs such as 56854. This parameter is retained and can be ignored. It is set based on `UniqSubnetIds` parameter format.
- * @method string getSearchKey() Obtain Setting keywords field for fuzzy query, only instance names support fuzzy query.
- * @method void setSearchKey(string $SearchKey) Set Setting keywords field for fuzzy query, only instance names support fuzzy query.
- * @method array getProjectIds() Obtain Array of project IDs
- * @method void setProjectIds(array $ProjectIds) Set Array of project IDs
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method array getUniqVpcIds() Obtain Array of VPC IDs such as vpc-sad23jfdfk. If this parameter is not passed in or or the array is empty, the classic network will be selected by default.
- * @method void setUniqVpcIds(array $UniqVpcIds) Set Array of VPC IDs such as vpc-sad23jfdfk. If this parameter is not passed in or or the array is empty, the classic network will be selected by default.
- * @method array getUniqSubnetIds() Obtain Array of VPC subnet IDs such as subnet-fdj24n34j2
- * @method void setUniqSubnetIds(array $UniqSubnetIds) Set Array of VPC subnet IDs such as subnet-fdj24n34j2
- * @method array getRegionIds() Obtain Array of region IDs (disused). The corresponding region can be queried through the common parameter `Region`.
- * @method void setRegionIds(array $RegionIds) Set Array of region IDs (disused). The corresponding region can be queried through the common parameter `Region`.
- * @method array getStatus() Obtain Instance status.
-- 0: To be initialized.
-- 1: In process.
-- 2: Running.
-- -2: Isolated.
-- -3: Pending Delete.
- * @method void setStatus(array $Status) Set Instance status.
-- 0: To be initialized.
-- 1: In process.
-- 2: Running.
-- -2: Isolated.
-- -3: Pending Delete.
- * @method integer getTypeVersion() Obtain Instance architecture version.
-- 1: Single-node edition.
-- 2: Master-replica edition.- 3: Cluster edition.
- * @method void setTypeVersion(integer $TypeVersion) Set Instance architecture version.
-- 1: Single-node edition.
-- 2: Master-replica edition.- 3: Cluster edition.
- * @method string getEngineName() Obtain Storage engine information. Valid values: `Redis-2.8`, `Redis-4.0`, `Redis-5.0`, `Redis-6.0` or `CKV`.
- * @method void setEngineName(string $EngineName) Set Storage engine information. Valid values: `Redis-2.8`, `Redis-4.0`, `Redis-5.0`, `Redis-6.0` or `CKV`.
- * @method array getAutoRenew() Obtain Renewal pattern.
-- 0: Manual renewal.
-- 1: Automatic renewal.
-- 2: No renewal after expiry.
- * @method void setAutoRenew(array $AutoRenew) Set Renewal pattern.
-- 0: Manual renewal.
-- 1: Automatic renewal.
-- 2: No renewal after expiry.
- * @method string getBillingMode() Obtain Billing mode.
-- postpaid: pay-as-you-go.
-- prepaid: monthly subscription.
- * @method void setBillingMode(string $BillingMode) Set Billing mode.
-- postpaid: pay-as-you-go.
-- prepaid: monthly subscription.
- * @method integer getType() Obtain Instance type.
-
-- 2: Redis 2.8 memory edition (standard architecture).
-- 3: CKV 3.2 memory edition (standard architecture).
-- 4: CKV 3.2 memory edition (cluster architecture).
-- 5: Redis 2.8 memory edition (standalone).
-- 6: Redis 4.0 memory edition (standard architecture).
-- 7: Redis 4.0 memory edition (cluster architecture).
-- 8: Redis 5.0 memory edition (standard architecture).
-- 9: Redis 5.0 memory edition (cluster architecture).
-- 15: Redis 6.2 memory edition (standard architecture).
-- 16: Redis 6.2 memory edition (cluster architecture).
-- 17: Redis 7.0 memory edition (standard architecture).
-- 18: Redis 7.0 memory edition (cluster architecture).
-- 200: Memcached 1.6 memory edition (cluster architecture).
- * @method void setType(integer $Type) Set Instance type.
-
-- 2: Redis 2.8 memory edition (standard architecture).
-- 3: CKV 3.2 memory edition (standard architecture).
-- 4: CKV 3.2 memory edition (cluster architecture).
-- 5: Redis 2.8 memory edition (standalone).
-- 6: Redis 4.0 memory edition (standard architecture).
-- 7: Redis 4.0 memory edition (cluster architecture).
-- 8: Redis 5.0 memory edition (standard architecture).
-- 9: Redis 5.0 memory edition (cluster architecture).
-- 15: Redis 6.2 memory edition (standard architecture).
-- 16: Redis 6.2 memory edition (cluster architecture).
-- 17: Redis 7.0 memory edition (standard architecture).
-- 18: Redis 7.0 memory edition (cluster architecture).
-- 200: Memcached 1.6 memory edition (cluster architecture).
- * @method array getSearchKeys() Obtain This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
-- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
- * @method void setSearchKeys(array $SearchKeys) Set This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
-- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
- * @method array getTypeList() Obtain Internal parameter, which can be ignored.
- * @method void setTypeList(array $TypeList) Set Internal parameter, which can be ignored.
- * @method string getMonitorVersion() Obtain Internal parameter, which can be ignored.
- * @method void setMonitorVersion(string $MonitorVersion) Set Internal parameter, which can be ignored.
- * @method array getInstanceTags() Obtain Resources filter by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
- * @method void setInstanceTags(array $InstanceTags) Set Resources filter by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
- * @method array getTagKeys() Obtain Resources filter by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
- * @method void setTagKeys(array $TagKeys) Set Resources filter by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
- * @method array getProductVersions() Obtain The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
-- local: local Disk Edition.- cdc: Cluster dedicated edition.
-
- * @method void setProductVersions(array $ProductVersions) Set The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
-- local: local Disk Edition.- cdc: Cluster dedicated edition.
-
- * @method array getInstanceIds() Obtain Batch query of the specified instances ID. The number of results returned is based on `Limit`.
- * @method void setInstanceIds(array $InstanceIds) Set Batch query of the specified instances ID. The number of results returned is based on `Limit`.
- * @method string getAzMode() Obtain Availability zone mode.
-- singleaz: Single availability zone.- multiaz: Multiple availability zones.
- * @method void setAzMode(string $AzMode) Set Availability zone mode.
-- singleaz: Single availability zone.- multiaz: Multiple availability zones.
+ * @method integer getLimit() Obtain <p>Number of instances output per page. Default parameter value: 20. Maximum value: 1000.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of instances output per page. Default parameter value: 20. Maximum value: 1000.</p>
+ * @method integer getOffset() Obtain <p>Pagination offset, which is an integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
+ * @method void setOffset(integer $Offset) Set <p>Pagination offset, which is an integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
+ * @method string getInstanceId() Obtain <p>Specifies the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Specifies the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
+ * @method string getOrderBy() Obtain <p>Instance list sorting criteria. Enumeration values are as follows:</p><ul><li>projectId: by project ID.</li><li>createtime: sort by instance creation time.</li><li>instancename: by instance name sorting.</li><li>type: by instance type.</li><li>curDeadline: by instance expiration time.</li></ul>
+ * @method void setOrderBy(string $OrderBy) Set <p>Instance list sorting criteria. Enumeration values are as follows:</p><ul><li>projectId: by project ID.</li><li>createtime: sort by instance creation time.</li><li>instancename: by instance name sorting.</li><li>type: by instance type.</li><li>curDeadline: by instance expiration time.</li></ul>
+ * @method integer getOrderType() Obtain <p>Instance sorting order, with a default value of reverse sorting.</p><ul><li>1: Reverse order.</li><li>0: Sequential order.</li></ul>
+ * @method void setOrderType(integer $OrderType) Set <p>Instance sorting order, with a default value of reverse sorting.</p><ul><li>1: Reverse order.</li><li>0: Sequential order.</li></ul>
+ * @method array getVpcIds() Obtain <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default. For example: 47525. This parameter is temporarily reserved and can be ignored. Set the VPC ID array according to the format of the UniqVpcIds parameter.</p>
+ * @method void setVpcIds(array $VpcIds) Set <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default. For example: 47525. This parameter is temporarily reserved and can be ignored. Set the VPC ID array according to the format of the UniqVpcIds parameter.</p>
+ * @method array getSubnetIds() Obtain <p>Array of subnet IDs belonging to the private network, for example: 56854. This parameter is temporarily reserved and can be ignored. Set the private network subnet ID array according to the format of the UniqSubnetIds parameter.</p>
+ * @method void setSubnetIds(array $SubnetIds) Set <p>Array of subnet IDs belonging to the private network, for example: 56854. This parameter is temporarily reserved and can be ignored. Set the private network subnet ID array according to the format of the UniqSubnetIds parameter.</p>
+ * @method string getSearchKey() Obtain <p>Set the key field for fuzzy query. Only instance names support fuzzy query.</p>
+ * @method void setSearchKey(string $SearchKey) Set <p>Set the key field for fuzzy query. Only instance names support fuzzy query.</p>
+ * @method array getProjectIds() Obtain <p>Array of project IDs.</p>
+ * @method void setProjectIds(array $ProjectIds) Set <p>Array of project IDs.</p>
+ * @method string getInstanceName() Obtain <p>Instance name.</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name.</p>
+ * @method array getUniqVpcIds() Obtain <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default, for example: vpc-sad23jfdfk.</p>
+ * @method void setUniqVpcIds(array $UniqVpcIds) Set <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default, for example: vpc-sad23jfdfk.</p>
+ * @method array getUniqSubnetIds() Obtain <p>Subnet ID array belonging to the private network, for example: subnet-fdj24n34j2.</p>
+ * @method void setUniqSubnetIds(array $UniqSubnetIds) Set <p>Subnet ID array belonging to the private network, for example: subnet-fdj24n34j2.</p>
+ * @method array getRegionIds() Obtain <p>Region ID array. This parameter has been deprecated. Use the common parameter Region to query the corresponding region.</p>
+ * @method void setRegionIds(array $RegionIds) Set <p>Region ID array. This parameter has been deprecated. Use the common parameter Region to query the corresponding region.</p>
+ * @method array getStatus() Obtain <p>Instance status.</p><ul><li>0: pending initialization.</li><li>1: in process.</li><li>2: running.</li><li>-2: isolated.</li><li>-3: pending deletion.</li></ul>
+ * @method void setStatus(array $Status) Set <p>Instance status.</p><ul><li>0: pending initialization.</li><li>1: in process.</li><li>2: running.</li><li>-2: isolated.</li><li>-3: pending deletion.</li></ul>
+ * @method integer getTypeVersion() Obtain <p>Instance architecture version.</p><ul><li>1: standalone edition.</li><li>2: primary/secondary edition.</li><li>3: cluster version.</li></ul>
+ * @method void setTypeVersion(integer $TypeVersion) Set <p>Instance architecture version.</p><ul><li>1: standalone edition.</li><li>2: primary/secondary edition.</li><li>3: cluster version.</li></ul>
+ * @method string getEngineName() Obtain <p>Storage engine info. It can be set to Redis-2.8, Redis-4.0, Redis-5.0, Redis-6.0, or CKV.</p>
+ * @method void setEngineName(string $EngineName) Set <p>Storage engine info. It can be set to Redis-2.8, Redis-4.0, Redis-5.0, Redis-6.0, or CKV.</p>
+ * @method array getAutoRenew() Obtain <p>Renewal mode.</p><ul><li>0: Manual renewal.</li><li>1: Automatic renewal.</li><li>2: No renewal after expiry.</li></ul>
+ * @method void setAutoRenew(array $AutoRenew) Set <p>Renewal mode.</p><ul><li>0: Manual renewal.</li><li>1: Automatic renewal.</li><li>2: No renewal after expiry.</li></ul>
+ * @method string getBillingMode() Obtain <p>Billing mode.</p><ul><li>postpaid: pay-as-you-go billing.</li><li>prepaid: annual/monthly subscription.</li></ul>
+ * @method void setBillingMode(string $BillingMode) Set <p>Billing mode.</p><ul><li>postpaid: pay-as-you-go billing.</li><li>prepaid: annual/monthly subscription.</li></ul>
+ * @method integer getType() Obtain <p>Instance type.</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>5: Redis 2.8 memory edition (standalone).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li></ul>
+ * @method void setType(integer $Type) Set <p>Instance type.</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>5: Redis 2.8 memory edition (standalone).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li></ul>
+ * @method array getSearchKeys() Obtain <p>This parameter is an array type and supports configuring instance name, instance ID, and IP address. Among them, instance name uses fuzzy matching, while instance ID and IP address use exact matching.</p><ul><li>Each element in the array uses union for match query.</li><li>If <strong>InstanceId</strong> and <strong>SearchKeys</strong> are configured concurrently, their intersection is used for matching query.</li></ul>
+ * @method void setSearchKeys(array $SearchKeys) Set <p>This parameter is an array type and supports configuring instance name, instance ID, and IP address. Among them, instance name uses fuzzy matching, while instance ID and IP address use exact matching.</p><ul><li>Each element in the array uses union for match query.</li><li>If <strong>InstanceId</strong> and <strong>SearchKeys</strong> are configured concurrently, their intersection is used for matching query.</li></ul>
+ * @method array getTypeList() Obtain <p>Internal parameter, which can be ignored.</p>
+ * @method void setTypeList(array $TypeList) Set <p>Internal parameter, which can be ignored.</p>
+ * @method string getMonitorVersion() Obtain <p>Internal parameter, which can be ignored.</p>
+ * @method void setMonitorVersion(string $MonitorVersion) Set <p>Internal parameter, which can be ignored.</p>
+ * @method array getInstanceTags() Obtain <p>Filter resources by tag Key and Value. If this parameter is not configured or the array is set to empty, no tag-based filtering is applied.</p>
+ * @method void setInstanceTags(array $InstanceTags) Set <p>Filter resources by tag Key and Value. If this parameter is not configured or the array is set to empty, no tag-based filtering is applied.</p>
+ * @method array getTagKeys() Obtain <p>Filter resources by tag Key. If this parameter is not configured or the array is set to empty, no filtering by tag Key is performed.</p>
+ * @method void setTagKeys(array $TagKeys) Set <p>Filter resources by tag Key. If this parameter is not configured or the array is set to empty, no filtering by tag Key is performed.</p>
+ * @method array getProductVersions() Obtain <p>Deployment type of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.</p><p>Enumeration values:</p><ul><li>local: Common I.</li><li>localv2: Common II.</li><li>cdc: Dedicated cluster.</li></ul>
+ * @method void setProductVersions(array $ProductVersions) Set <p>Deployment type of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.</p><p>Enumeration values:</p><ul><li>local: Common I.</li><li>localv2: Common II.</li><li>cdc: Dedicated cluster.</li></ul>
+ * @method array getInstanceIds() Obtain <p>Batch query the specified instance IDs. The returned results are mainly limited by Limit.</p>
+ * @method void setInstanceIds(array $InstanceIds) Set <p>Batch query the specified instance IDs. The returned results are mainly limited by Limit.</p>
+ * @method string getAzMode() Obtain <p>Availability zone mode.</p><ul><li>singleaz: single availability zone.</li><li>multiaz: multi-availability zone.</li></ul>
+ * @method void setAzMode(string $AzMode) Set <p>Availability zone mode.</p><ul><li>singleaz: single availability zone.</li><li>multiaz: multi-availability zone.</li></ul>
  */
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
+     * @var integer <p>Number of instances output per page. Default parameter value: 20. Maximum value: 1000.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+     * @var integer <p>Pagination offset, which is an integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
      */
     public $Offset;
 
     /**
-     * @var string ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-
-
+     * @var string <p>Specifies the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string The instance list is sorted according to the following enumeration valid values:
-- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
+     * @var string <p>Instance list sorting criteria. Enumeration values are as follows:</p><ul><li>projectId: by project ID.</li><li>createtime: sort by instance creation time.</li><li>instancename: by instance name sorting.</li><li>type: by instance type.</li><li>curDeadline: by instance expiration time.</li></ul>
      */
     public $OrderBy;
 
     /**
-     * @var integer For instance sorting order, the default is descending order.
-- 1: Descending order.
-- 0: Ascending order.
+     * @var integer <p>Instance sorting order, with a default value of reverse sorting.</p><ul><li>1: Reverse order.</li><li>0: Sequential order.</li></ul>
      */
     public $OrderType;
 
     /**
-     * @var array Array of VPC IDs such as 47525. If this parameter is not passed in or the array is empty, the classic network will be selected by default. This parameter is retained and can be ignored. It is set based on `UniqVpcIds` parameter format.
+     * @var array <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default. For example: 47525. This parameter is temporarily reserved and can be ignored. Set the VPC ID array according to the format of the UniqVpcIds parameter.</p>
      */
     public $VpcIds;
 
     /**
-     * @var array Array of VPC subnet IDs such as 56854. This parameter is retained and can be ignored. It is set based on `UniqSubnetIds` parameter format.
+     * @var array <p>Array of subnet IDs belonging to the private network, for example: 56854. This parameter is temporarily reserved and can be ignored. Set the private network subnet ID array according to the format of the UniqSubnetIds parameter.</p>
      */
     public $SubnetIds;
 
     /**
-     * @var string Setting keywords field for fuzzy query, only instance names support fuzzy query.
+     * @var string <p>Set the key field for fuzzy query. Only instance names support fuzzy query.</p>
      */
     public $SearchKey;
 
     /**
-     * @var array Array of project IDs
+     * @var array <p>Array of project IDs.</p>
      */
     public $ProjectIds;
 
     /**
-     * @var string Instance name
+     * @var string <p>Instance name.</p>
      */
     public $InstanceName;
 
     /**
-     * @var array Array of VPC IDs such as vpc-sad23jfdfk. If this parameter is not passed in or or the array is empty, the classic network will be selected by default.
+     * @var array <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default, for example: vpc-sad23jfdfk.</p>
      */
     public $UniqVpcIds;
 
     /**
-     * @var array Array of VPC subnet IDs such as subnet-fdj24n34j2
+     * @var array <p>Subnet ID array belonging to the private network, for example: subnet-fdj24n34j2.</p>
      */
     public $UniqSubnetIds;
 
     /**
-     * @var array Array of region IDs (disused). The corresponding region can be queried through the common parameter `Region`.
+     * @var array <p>Region ID array. This parameter has been deprecated. Use the common parameter Region to query the corresponding region.</p>
      */
     public $RegionIds;
 
     /**
-     * @var array Instance status.
-- 0: To be initialized.
-- 1: In process.
-- 2: Running.
-- -2: Isolated.
-- -3: Pending Delete.
+     * @var array <p>Instance status.</p><ul><li>0: pending initialization.</li><li>1: in process.</li><li>2: running.</li><li>-2: isolated.</li><li>-3: pending deletion.</li></ul>
      */
     public $Status;
 
     /**
-     * @var integer Instance architecture version.
-- 1: Single-node edition.
-- 2: Master-replica edition.- 3: Cluster edition.
+     * @var integer <p>Instance architecture version.</p><ul><li>1: standalone edition.</li><li>2: primary/secondary edition.</li><li>3: cluster version.</li></ul>
      */
     public $TypeVersion;
 
     /**
-     * @var string Storage engine information. Valid values: `Redis-2.8`, `Redis-4.0`, `Redis-5.0`, `Redis-6.0` or `CKV`.
+     * @var string <p>Storage engine info. It can be set to Redis-2.8, Redis-4.0, Redis-5.0, Redis-6.0, or CKV.</p>
      */
     public $EngineName;
 
     /**
-     * @var array Renewal pattern.
-- 0: Manual renewal.
-- 1: Automatic renewal.
-- 2: No renewal after expiry.
+     * @var array <p>Renewal mode.</p><ul><li>0: Manual renewal.</li><li>1: Automatic renewal.</li><li>2: No renewal after expiry.</li></ul>
      */
     public $AutoRenew;
 
     /**
-     * @var string Billing mode.
-- postpaid: pay-as-you-go.
-- prepaid: monthly subscription.
+     * @var string <p>Billing mode.</p><ul><li>postpaid: pay-as-you-go billing.</li><li>prepaid: annual/monthly subscription.</li></ul>
      */
     public $BillingMode;
 
     /**
-     * @var integer Instance type.
-
-- 2: Redis 2.8 memory edition (standard architecture).
-- 3: CKV 3.2 memory edition (standard architecture).
-- 4: CKV 3.2 memory edition (cluster architecture).
-- 5: Redis 2.8 memory edition (standalone).
-- 6: Redis 4.0 memory edition (standard architecture).
-- 7: Redis 4.0 memory edition (cluster architecture).
-- 8: Redis 5.0 memory edition (standard architecture).
-- 9: Redis 5.0 memory edition (cluster architecture).
-- 15: Redis 6.2 memory edition (standard architecture).
-- 16: Redis 6.2 memory edition (cluster architecture).
-- 17: Redis 7.0 memory edition (standard architecture).
-- 18: Redis 7.0 memory edition (cluster architecture).
-- 200: Memcached 1.6 memory edition (cluster architecture).
+     * @var integer <p>Instance type.</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>5: Redis 2.8 memory edition (standalone).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li></ul>
      */
     public $Type;
 
     /**
-     * @var array This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
-- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
+     * @var array <p>This parameter is an array type and supports configuring instance name, instance ID, and IP address. Among them, instance name uses fuzzy matching, while instance ID and IP address use exact matching.</p><ul><li>Each element in the array uses union for match query.</li><li>If <strong>InstanceId</strong> and <strong>SearchKeys</strong> are configured concurrently, their intersection is used for matching query.</li></ul>
      */
     public $SearchKeys;
 
     /**
-     * @var array Internal parameter, which can be ignored.
+     * @var array <p>Internal parameter, which can be ignored.</p>
      */
     public $TypeList;
 
     /**
-     * @var string Internal parameter, which can be ignored.
+     * @var string <p>Internal parameter, which can be ignored.</p>
      */
     public $MonitorVersion;
 
     /**
-     * @var array Resources filter by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
+     * @var array <p>Filter resources by tag Key and Value. If this parameter is not configured or the array is set to empty, no tag-based filtering is applied.</p>
      */
     public $InstanceTags;
 
     /**
-     * @var array Resources filter by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+     * @var array <p>Filter resources by tag Key. If this parameter is not configured or the array is set to empty, no filtering by tag Key is performed.</p>
      */
     public $TagKeys;
 
     /**
-     * @var array The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
-- local: local Disk Edition.- cdc: Cluster dedicated edition.
-
+     * @var array <p>Deployment type of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.</p><p>Enumeration values:</p><ul><li>local: Common I.</li><li>localv2: Common II.</li><li>cdc: Dedicated cluster.</li></ul>
      */
     public $ProductVersions;
 
     /**
-     * @var array Batch query of the specified instances ID. The number of results returned is based on `Limit`.
+     * @var array <p>Batch query the specified instance IDs. The returned results are mainly limited by Limit.</p>
      */
     public $InstanceIds;
 
     /**
-     * @var string Availability zone mode.
-- singleaz: Single availability zone.- multiaz: Multiple availability zones.
+     * @var string <p>Availability zone mode.</p><ul><li>singleaz: single availability zone.</li><li>multiaz: multi-availability zone.</li></ul>
      */
     public $AzMode;
 
     /**
-     * @param integer $Limit Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
-     * @param integer $Offset Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
-     * @param string $InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-
-
-     * @param string $OrderBy The instance list is sorted according to the following enumeration valid values:
-- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
-     * @param integer $OrderType For instance sorting order, the default is descending order.
-- 1: Descending order.
-- 0: Ascending order.
-     * @param array $VpcIds Array of VPC IDs such as 47525. If this parameter is not passed in or the array is empty, the classic network will be selected by default. This parameter is retained and can be ignored. It is set based on `UniqVpcIds` parameter format.
-     * @param array $SubnetIds Array of VPC subnet IDs such as 56854. This parameter is retained and can be ignored. It is set based on `UniqSubnetIds` parameter format.
-     * @param string $SearchKey Setting keywords field for fuzzy query, only instance names support fuzzy query.
-     * @param array $ProjectIds Array of project IDs
-     * @param string $InstanceName Instance name
-     * @param array $UniqVpcIds Array of VPC IDs such as vpc-sad23jfdfk. If this parameter is not passed in or or the array is empty, the classic network will be selected by default.
-     * @param array $UniqSubnetIds Array of VPC subnet IDs such as subnet-fdj24n34j2
-     * @param array $RegionIds Array of region IDs (disused). The corresponding region can be queried through the common parameter `Region`.
-     * @param array $Status Instance status.
-- 0: To be initialized.
-- 1: In process.
-- 2: Running.
-- -2: Isolated.
-- -3: Pending Delete.
-     * @param integer $TypeVersion Instance architecture version.
-- 1: Single-node edition.
-- 2: Master-replica edition.- 3: Cluster edition.
-     * @param string $EngineName Storage engine information. Valid values: `Redis-2.8`, `Redis-4.0`, `Redis-5.0`, `Redis-6.0` or `CKV`.
-     * @param array $AutoRenew Renewal pattern.
-- 0: Manual renewal.
-- 1: Automatic renewal.
-- 2: No renewal after expiry.
-     * @param string $BillingMode Billing mode.
-- postpaid: pay-as-you-go.
-- prepaid: monthly subscription.
-     * @param integer $Type Instance type.
-
-- 2: Redis 2.8 memory edition (standard architecture).
-- 3: CKV 3.2 memory edition (standard architecture).
-- 4: CKV 3.2 memory edition (cluster architecture).
-- 5: Redis 2.8 memory edition (standalone).
-- 6: Redis 4.0 memory edition (standard architecture).
-- 7: Redis 4.0 memory edition (cluster architecture).
-- 8: Redis 5.0 memory edition (standard architecture).
-- 9: Redis 5.0 memory edition (cluster architecture).
-- 15: Redis 6.2 memory edition (standard architecture).
-- 16: Redis 6.2 memory edition (cluster architecture).
-- 17: Redis 7.0 memory edition (standard architecture).
-- 18: Redis 7.0 memory edition (cluster architecture).
-- 200: Memcached 1.6 memory edition (cluster architecture).
-     * @param array $SearchKeys This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
-- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
-     * @param array $TypeList Internal parameter, which can be ignored.
-     * @param string $MonitorVersion Internal parameter, which can be ignored.
-     * @param array $InstanceTags Resources filter by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
-     * @param array $TagKeys Resources filter by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
-     * @param array $ProductVersions The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
-- local: local Disk Edition.- cdc: Cluster dedicated edition.
-
-     * @param array $InstanceIds Batch query of the specified instances ID. The number of results returned is based on `Limit`.
-     * @param string $AzMode Availability zone mode.
-- singleaz: Single availability zone.- multiaz: Multiple availability zones.
+     * @param integer $Limit <p>Number of instances output per page. Default parameter value: 20. Maximum value: 1000.</p>
+     * @param integer $Offset <p>Pagination offset, which is an integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
+     * @param string $InstanceId <p>Specifies the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
+     * @param string $OrderBy <p>Instance list sorting criteria. Enumeration values are as follows:</p><ul><li>projectId: by project ID.</li><li>createtime: sort by instance creation time.</li><li>instancename: by instance name sorting.</li><li>type: by instance type.</li><li>curDeadline: by instance expiration time.</li></ul>
+     * @param integer $OrderType <p>Instance sorting order, with a default value of reverse sorting.</p><ul><li>1: Reverse order.</li><li>0: Sequential order.</li></ul>
+     * @param array $VpcIds <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default. For example: 47525. This parameter is temporarily reserved and can be ignored. Set the VPC ID array according to the format of the UniqVpcIds parameter.</p>
+     * @param array $SubnetIds <p>Array of subnet IDs belonging to the private network, for example: 56854. This parameter is temporarily reserved and can be ignored. Set the private network subnet ID array according to the format of the UniqSubnetIds parameter.</p>
+     * @param string $SearchKey <p>Set the key field for fuzzy query. Only instance names support fuzzy query.</p>
+     * @param array $ProjectIds <p>Array of project IDs.</p>
+     * @param string $InstanceName <p>Instance name.</p>
+     * @param array $UniqVpcIds <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default, for example: vpc-sad23jfdfk.</p>
+     * @param array $UniqSubnetIds <p>Subnet ID array belonging to the private network, for example: subnet-fdj24n34j2.</p>
+     * @param array $RegionIds <p>Region ID array. This parameter has been deprecated. Use the common parameter Region to query the corresponding region.</p>
+     * @param array $Status <p>Instance status.</p><ul><li>0: pending initialization.</li><li>1: in process.</li><li>2: running.</li><li>-2: isolated.</li><li>-3: pending deletion.</li></ul>
+     * @param integer $TypeVersion <p>Instance architecture version.</p><ul><li>1: standalone edition.</li><li>2: primary/secondary edition.</li><li>3: cluster version.</li></ul>
+     * @param string $EngineName <p>Storage engine info. It can be set to Redis-2.8, Redis-4.0, Redis-5.0, Redis-6.0, or CKV.</p>
+     * @param array $AutoRenew <p>Renewal mode.</p><ul><li>0: Manual renewal.</li><li>1: Automatic renewal.</li><li>2: No renewal after expiry.</li></ul>
+     * @param string $BillingMode <p>Billing mode.</p><ul><li>postpaid: pay-as-you-go billing.</li><li>prepaid: annual/monthly subscription.</li></ul>
+     * @param integer $Type <p>Instance type.</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>5: Redis 2.8 memory edition (standalone).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li></ul>
+     * @param array $SearchKeys <p>This parameter is an array type and supports configuring instance name, instance ID, and IP address. Among them, instance name uses fuzzy matching, while instance ID and IP address use exact matching.</p><ul><li>Each element in the array uses union for match query.</li><li>If <strong>InstanceId</strong> and <strong>SearchKeys</strong> are configured concurrently, their intersection is used for matching query.</li></ul>
+     * @param array $TypeList <p>Internal parameter, which can be ignored.</p>
+     * @param string $MonitorVersion <p>Internal parameter, which can be ignored.</p>
+     * @param array $InstanceTags <p>Filter resources by tag Key and Value. If this parameter is not configured or the array is set to empty, no tag-based filtering is applied.</p>
+     * @param array $TagKeys <p>Filter resources by tag Key. If this parameter is not configured or the array is set to empty, no filtering by tag Key is performed.</p>
+     * @param array $ProductVersions <p>Deployment type of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.</p><p>Enumeration values:</p><ul><li>local: Common I.</li><li>localv2: Common II.</li><li>cdc: Dedicated cluster.</li></ul>
+     * @param array $InstanceIds <p>Batch query the specified instance IDs. The returned results are mainly limited by Limit.</p>
+     * @param string $AzMode <p>Availability zone mode.</p><ul><li>singleaz: single availability zone.</li><li>multiaz: multi-availability zone.</li></ul>
      */
     function __construct()
     {

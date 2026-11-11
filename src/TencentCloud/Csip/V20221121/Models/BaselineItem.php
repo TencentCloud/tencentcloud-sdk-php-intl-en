@@ -24,36 +24,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setID(integer $ID) Set <p>Baseline detection item ID.</p>
  * @method integer getRuleID() Obtain <p>Built-in rule ID.</p>
  * @method void setRuleID(integer $RuleID) Set <p>Built-in rule ID.</p>
- * @method array getCheckObject() Obtain <p>Detection object description, such as configuration file path, kernel parameter, and Kubernetes Resources.</p>
- * @method void setCheckObject(array $CheckObject) Set <p>Detection object description, such as configuration file path, kernel parameter, and Kubernetes Resources.</p>
+ * @method array getCheckObject() Obtain <p>Detection target description, such as configuration file path, kernel parameter, Kubernetes Resources.</p>
+ * @method void setCheckObject(array $CheckObject) Set <p>Detection target description, such as configuration file path, kernel parameter, Kubernetes Resources.</p>
  * @method string getRiskLevel() Obtain <p>Risk level. Value:</p><ul><li>LOW: Low risk</li><li>MEDIUM: Medium risk</li><li>HIGH: High risk</li><li>CRITICAL: Critical</li></ul>
  * @method void setRiskLevel(string $RiskLevel) Set <p>Risk level. Value:</p><ul><li>LOW: Low risk</li><li>MEDIUM: Medium risk</li><li>HIGH: High risk</li><li>CRITICAL: Critical</li></ul>
  * @method string getName() Obtain <p>Detection item name (Chinese).</p>
  * @method void setName(string $Name) Set <p>Detection item name (Chinese).</p>
  * @method string getDescription() Obtain <p>Detection item description (Chinese, explaining the detection background and determination logic).</p>
  * @method void setDescription(string $Description) Set <p>Detection item description (Chinese, explaining the detection background and determination logic).</p>
- * @method string getFixSuggestion() Obtain <p>Detection item repair advice (Chinese, including recommended configuration reference values or hardening commands).</p>
- * @method void setFixSuggestion(string $FixSuggestion) Set <p>Detection item repair advice (Chinese, including recommended configuration reference values or hardening commands).</p>
- * @method string getReferenceLink() Obtain <p>Reference link list of detection items.</p>
- * @method void setReferenceLink(string $ReferenceLink) Set <p>Reference link list of detection items.</p>
- * @method BaselineCategory getSystemCategory() Obtain <p>Classification information of the parent category in the associated system.</p>
- * @method void setSystemCategory(BaselineCategory $SystemCategory) Set <p>Classification information of the parent category in the associated system.</p>
- * @method BaselineCategory getCategory() Obtain <p>Classification information of the subcategory it belongs to.</p>
- * @method void setCategory(BaselineCategory $Category) Set <p>Classification information of the subcategory it belongs to.</p>
- * @method boolean getSupportFix() Obtain <p>Whether one-click repair is supported. true: supported, false: unsupported.</p>
- * @method void setSupportFix(boolean $SupportFix) Set <p>Whether one-click repair is supported. true: supported, false: unsupported.</p>
- * @method boolean getSupportCustomValue() Obtain <p>Whether user-defined judgment values are supported. true: supported; false: not supported.</p>
- * @method void setSupportCustomValue(boolean $SupportCustomValue) Set <p>Whether user-defined judgment values are supported. true: supported; false: not supported.</p>
- * @method array getAffectedVersionList() Obtain <p>Operating system/component version list applicable to this detection item.</p>
- * @method void setAffectedVersionList(array $AffectedVersionList) Set <p>Operating system/component version list applicable to this detection item.</p>
- * @method string getWebEditParam() Obtain <p>Parameter definition when editing a custom judgment value (for example, permissible range, control type).</p>
- * @method void setWebEditParam(string $WebEditParam) Set <p>Parameter definition when editing a custom judgment value (for example, permissible range, control type).</p>
- * @method array getDefaultValueList() Obtain <p>Default detection item judgment value list.</p>
- * @method void setDefaultValueList(array $DefaultValueList) Set <p>Default detection item judgment value list.</p>
- * @method boolean getIsCustomConf() Obtain <p>Whether customized by the user. true: customized; false: use default values.</p>
- * @method void setIsCustomConf(boolean $IsCustomConf) Set <p>Whether customized by the user. true: customized; false: use default values.</p>
- * @method integer getCustomItemID() Obtain <p>User-customized configuration record ID. The value is 0 if not customized.</p>
- * @method void setCustomItemID(integer $CustomItemID) Set <p>User-customized configuration record ID. The value is 0 if not customized.</p>
+ * @method string getFixSuggestion() Obtain <p>Detection item repair advice (in Chinese, including recommended configuration reference values or hardening commands).</p>
+ * @method void setFixSuggestion(string $FixSuggestion) Set <p>Detection item repair advice (in Chinese, including recommended configuration reference values or hardening commands).</p>
+ * @method string getReferenceLink() Obtain <p>Detection item reference link list.</p>
+ * @method void setReferenceLink(string $ReferenceLink) Set <p>Detection item reference link list.</p>
+ * @method BaselineCategory getSystemCategory() Obtain <p>Parent classification information of the associated system.</p>
+ * @method void setSystemCategory(BaselineCategory $SystemCategory) Set <p>Parent classification information of the associated system.</p>
+ * @method BaselineCategory getCategory() Obtain <p>Belonging subcategory information.</p>
+ * @method void setCategory(BaselineCategory $Category) Set <p>Belonging subcategory information.</p>
+ * @method boolean getSupportFix() Obtain <p>Whether one-click repair is supported. true: support, false: no support.</p>
+ * @method void setSupportFix(boolean $SupportFix) Set <p>Whether one-click repair is supported. true: support, false: no support.</p>
+ * @method boolean getSupportCustomValue() Obtain <p>Whether to support user customization of judgment values. true: support, false: no support.</p>
+ * @method void setSupportCustomValue(boolean $SupportCustomValue) Set <p>Whether to support user customization of judgment values. true: support, false: no support.</p>
+ * @method array getAffectedVersionList() Obtain <p>Applicable operating system/component version list for this detection item.</p>
+ * @method void setAffectedVersionList(array $AffectedVersionList) Set <p>Applicable operating system/component version list for this detection item.</p>
+ * @method string getWebEditParam() Obtain <p>Parameter definition when editing custom judgment values (such as value range, control type, etc.).</p>
+ * @method void setWebEditParam(string $WebEditParam) Set <p>Parameter definition when editing custom judgment values (such as value range, control type, etc.).</p>
+ * @method array getDefaultValueList() Obtain <p>Default judgment value list of the detection item.</p>
+ * @method void setDefaultValueList(array $DefaultValueList) Set <p>Default judgment value list of the detection item.</p>
+ * @method boolean getIsCustomConf() Obtain <p>Whether it has been customized by the user. true: customized, false: still use default values.</p>
+ * @method void setIsCustomConf(boolean $IsCustomConf) Set <p>Whether it has been customized by the user. true: customized, false: still use default values.</p>
+ * @method integer getCustomItemID() Obtain <p>User-customized configuration record ID. 0 if not customized.</p>
+ * @method void setCustomItemID(integer $CustomItemID) Set <p>User-customized configuration record ID. 0 if not customized.</p>
  */
 class BaselineItem extends AbstractModel
 {
@@ -68,7 +68,7 @@ class BaselineItem extends AbstractModel
     public $RuleID;
 
     /**
-     * @var array <p>Detection object description, such as configuration file path, kernel parameter, and Kubernetes Resources.</p>
+     * @var array <p>Detection target description, such as configuration file path, kernel parameter, Kubernetes Resources.</p>
      */
     public $CheckObject;
 
@@ -88,78 +88,78 @@ class BaselineItem extends AbstractModel
     public $Description;
 
     /**
-     * @var string <p>Detection item repair advice (Chinese, including recommended configuration reference values or hardening commands).</p>
+     * @var string <p>Detection item repair advice (in Chinese, including recommended configuration reference values or hardening commands).</p>
      */
     public $FixSuggestion;
 
     /**
-     * @var string <p>Reference link list of detection items.</p>
+     * @var string <p>Detection item reference link list.</p>
      */
     public $ReferenceLink;
 
     /**
-     * @var BaselineCategory <p>Classification information of the parent category in the associated system.</p>
+     * @var BaselineCategory <p>Parent classification information of the associated system.</p>
      */
     public $SystemCategory;
 
     /**
-     * @var BaselineCategory <p>Classification information of the subcategory it belongs to.</p>
+     * @var BaselineCategory <p>Belonging subcategory information.</p>
      */
     public $Category;
 
     /**
-     * @var boolean <p>Whether one-click repair is supported. true: supported, false: unsupported.</p>
+     * @var boolean <p>Whether one-click repair is supported. true: support, false: no support.</p>
      */
     public $SupportFix;
 
     /**
-     * @var boolean <p>Whether user-defined judgment values are supported. true: supported; false: not supported.</p>
+     * @var boolean <p>Whether to support user customization of judgment values. true: support, false: no support.</p>
      */
     public $SupportCustomValue;
 
     /**
-     * @var array <p>Operating system/component version list applicable to this detection item.</p>
+     * @var array <p>Applicable operating system/component version list for this detection item.</p>
      */
     public $AffectedVersionList;
 
     /**
-     * @var string <p>Parameter definition when editing a custom judgment value (for example, permissible range, control type).</p>
+     * @var string <p>Parameter definition when editing custom judgment values (such as value range, control type, etc.).</p>
      */
     public $WebEditParam;
 
     /**
-     * @var array <p>Default detection item judgment value list.</p>
+     * @var array <p>Default judgment value list of the detection item.</p>
      */
     public $DefaultValueList;
 
     /**
-     * @var boolean <p>Whether customized by the user. true: customized; false: use default values.</p>
+     * @var boolean <p>Whether it has been customized by the user. true: customized, false: still use default values.</p>
      */
     public $IsCustomConf;
 
     /**
-     * @var integer <p>User-customized configuration record ID. The value is 0 if not customized.</p>
+     * @var integer <p>User-customized configuration record ID. 0 if not customized.</p>
      */
     public $CustomItemID;
 
     /**
      * @param integer $ID <p>Baseline detection item ID.</p>
      * @param integer $RuleID <p>Built-in rule ID.</p>
-     * @param array $CheckObject <p>Detection object description, such as configuration file path, kernel parameter, and Kubernetes Resources.</p>
+     * @param array $CheckObject <p>Detection target description, such as configuration file path, kernel parameter, Kubernetes Resources.</p>
      * @param string $RiskLevel <p>Risk level. Value:</p><ul><li>LOW: Low risk</li><li>MEDIUM: Medium risk</li><li>HIGH: High risk</li><li>CRITICAL: Critical</li></ul>
      * @param string $Name <p>Detection item name (Chinese).</p>
      * @param string $Description <p>Detection item description (Chinese, explaining the detection background and determination logic).</p>
-     * @param string $FixSuggestion <p>Detection item repair advice (Chinese, including recommended configuration reference values or hardening commands).</p>
-     * @param string $ReferenceLink <p>Reference link list of detection items.</p>
-     * @param BaselineCategory $SystemCategory <p>Classification information of the parent category in the associated system.</p>
-     * @param BaselineCategory $Category <p>Classification information of the subcategory it belongs to.</p>
-     * @param boolean $SupportFix <p>Whether one-click repair is supported. true: supported, false: unsupported.</p>
-     * @param boolean $SupportCustomValue <p>Whether user-defined judgment values are supported. true: supported; false: not supported.</p>
-     * @param array $AffectedVersionList <p>Operating system/component version list applicable to this detection item.</p>
-     * @param string $WebEditParam <p>Parameter definition when editing a custom judgment value (for example, permissible range, control type).</p>
-     * @param array $DefaultValueList <p>Default detection item judgment value list.</p>
-     * @param boolean $IsCustomConf <p>Whether customized by the user. true: customized; false: use default values.</p>
-     * @param integer $CustomItemID <p>User-customized configuration record ID. The value is 0 if not customized.</p>
+     * @param string $FixSuggestion <p>Detection item repair advice (in Chinese, including recommended configuration reference values or hardening commands).</p>
+     * @param string $ReferenceLink <p>Detection item reference link list.</p>
+     * @param BaselineCategory $SystemCategory <p>Parent classification information of the associated system.</p>
+     * @param BaselineCategory $Category <p>Belonging subcategory information.</p>
+     * @param boolean $SupportFix <p>Whether one-click repair is supported. true: support, false: no support.</p>
+     * @param boolean $SupportCustomValue <p>Whether to support user customization of judgment values. true: support, false: no support.</p>
+     * @param array $AffectedVersionList <p>Applicable operating system/component version list for this detection item.</p>
+     * @param string $WebEditParam <p>Parameter definition when editing custom judgment values (such as value range, control type, etc.).</p>
+     * @param array $DefaultValueList <p>Default judgment value list of the detection item.</p>
+     * @param boolean $IsCustomConf <p>Whether it has been customized by the user. true: customized, false: still use default values.</p>
+     * @param integer $CustomItemID <p>User-customized configuration record ID. 0 if not customized.</p>
      */
     function __construct()
     {

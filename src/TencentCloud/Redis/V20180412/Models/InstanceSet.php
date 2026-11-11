@@ -110,8 +110,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) Set <p>Internal parameter, which can be ignored.</p>
  * @method integer getDiskSize() Obtain <p>For Redis instances, ignore this parameter.</p>
  * @method void setDiskSize(integer $DiskSize) Set <p>For Redis instances, ignore this parameter.</p>
- * @method string getMonitorVersion() Obtain <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
- * @method void setMonitorVersion(string $MonitorVersion) Set <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
+ * @method string getMonitorVersion() Obtain <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-Minute Granularity Deprecation Notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
+ * @method void setMonitorVersion(string $MonitorVersion) Set <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-Minute Granularity Deprecation Notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
  * @method integer getClientLimitMin() Obtain <p>Minimum value that can be set for the maximum number of client connections.</p>
  * @method void setClientLimitMin(integer $ClientLimitMin) Set <p>Minimum value that can be set for the maximum number of client connections.</p>
  * @method integer getClientLimitMax() Obtain <p>Maximum value that can be set for the maximum number of client connections.</p>
@@ -372,7 +372,7 @@ class InstanceSet extends AbstractModel
     public $DiskSize;
 
     /**
-     * @var string <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
+     * @var string <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-Minute Granularity Deprecation Notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
      */
     public $MonitorVersion;
 
@@ -497,7 +497,7 @@ class InstanceSet extends AbstractModel
      * @param integer $ReadOnly <p>Instance read-only flag (internal parameter, which can be ignored).</p>
      * @param string $RemainBandwidthDuration <p>Internal parameter, which can be ignored.</p>
      * @param integer $DiskSize <p>For Redis instances, ignore this parameter.</p>
-     * @param string $MonitorVersion <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
+     * @param string $MonitorVersion <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-Minute Granularity Deprecation Notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
      * @param integer $ClientLimitMin <p>Minimum value that can be set for the maximum number of client connections.</p>
      * @param integer $ClientLimitMax <p>Maximum value that can be set for the maximum number of client connections.</p>
      * @param array $NodeSet <p>Detailed node information of the instance.<br>Only multi-AZ instances will be returned.</p>

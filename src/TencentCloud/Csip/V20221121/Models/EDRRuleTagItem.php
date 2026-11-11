@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKeyEn(string $TagKeyEn) Set <p>Tag English key</p>
  * @method string getTagValue() Obtain <p>Tag Chinese value</p>
  * @method void setTagValue(string $TagValue) Set <p>Tag Chinese value</p>
- * @method string getTagValueEn() Obtain <p>Tag value in English.</p>
- * @method void setTagValueEn(string $TagValueEn) Set <p>Tag value in English.</p>
- * @method string getDescription() Obtain <p>Tag description</p>
- * @method void setDescription(string $Description) Set <p>Tag description</p>
- * @method string getColor() Obtain <p>Tag color</p>
- * @method void setColor(string $Color) Set <p>Tag color</p>
+ * @method string getTagValueEn() Obtain <p>Tag value in English</p>
+ * @method void setTagValueEn(string $TagValueEn) Set <p>Tag value in English</p>
+ * @method string getDescription() Obtain <p>Tag description.</p>
+ * @method void setDescription(string $Description) Set <p>Tag description.</p>
+ * @method string getColor() Obtain <p>Tag color.</p>
+ * @method void setColor(string $Color) Set <p>Tag color.</p>
  */
 class EDRRuleTagItem extends AbstractModel
 {
@@ -58,17 +58,17 @@ class EDRRuleTagItem extends AbstractModel
     public $TagValue;
 
     /**
-     * @var string <p>Tag value in English.</p>
+     * @var string <p>Tag value in English</p>
      */
     public $TagValueEn;
 
     /**
-     * @var string <p>Tag description</p>
+     * @var string <p>Tag description.</p>
      */
     public $Description;
 
     /**
-     * @var string <p>Tag color</p>
+     * @var string <p>Tag color.</p>
      */
     public $Color;
 
@@ -77,9 +77,9 @@ class EDRRuleTagItem extends AbstractModel
      * @param string $TagKey <p>Tag Key in Chinese</p>
      * @param string $TagKeyEn <p>Tag English key</p>
      * @param string $TagValue <p>Tag Chinese value</p>
-     * @param string $TagValueEn <p>Tag value in English.</p>
-     * @param string $Description <p>Tag description</p>
-     * @param string $Color <p>Tag color</p>
+     * @param string $TagValueEn <p>Tag value in English</p>
+     * @param string $Description <p>Tag description.</p>
+     * @param string $Color <p>Tag color.</p>
      */
     function __construct()
     {

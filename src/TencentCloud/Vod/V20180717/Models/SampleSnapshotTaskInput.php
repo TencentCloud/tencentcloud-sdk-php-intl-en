@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task input parameter type for sampling screenshot taking of a video
+ * Task input parameter type for sampling screenshot taking in a video
  *
  * @method integer getDefinition() Obtain Sampled screenshot template ID.
  * @method void setDefinition(integer $Definition) Set Sampled screenshot template ID.

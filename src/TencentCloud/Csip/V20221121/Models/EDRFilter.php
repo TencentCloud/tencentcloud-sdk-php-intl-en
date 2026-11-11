@@ -27,8 +27,8 @@ If there are multiple Values in the same Filter, the logical relationship betwee
 * If multiple Values exist for the same Filter, the number of Values cannot exceed 5.
 
  *
- * @method string getName() Obtain <p>Name of filter key</p>
- * @method void setName(string $Name) Set <p>Name of filter key</p>
+ * @method string getName() Obtain <p>Name of filter key.</p>
+ * @method void setName(string $Name) Set <p>Name of filter key.</p>
  * @method array getValues() Obtain <p>One or more filter values.</p>
  * @method void setValues(array $Values) Set <p>One or more filter values.</p>
  * @method boolean getExactMatch() Obtain <p>Fuzzy search</p>
@@ -37,7 +37,7 @@ If there are multiple Values in the same Filter, the logical relationship betwee
 class EDRFilter extends AbstractModel
 {
     /**
-     * @var string <p>Name of filter key</p>
+     * @var string <p>Name of filter key.</p>
      */
     public $Name;
 
@@ -52,7 +52,7 @@ class EDRFilter extends AbstractModel
     public $ExactMatch;
 
     /**
-     * @param string $Name <p>Name of filter key</p>
+     * @param string $Name <p>Name of filter key.</p>
      * @param array $Values <p>One or more filter values.</p>
      * @param boolean $ExactMatch <p>Fuzzy search</p>
      */

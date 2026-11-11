@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitchOption(integer $SwitchOption) Set Switch time.
 - 1: Switch during the maintenance window.
 - 2: Switch immediately.
- * @method array getNodeSet() Obtain Instance node information includes the node ID, node type, and node availability zone ID, and so on. For specific information, please see [RedisNodeInfo ](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1).
-For instances in a single availability zone, there is no need to configure the NodeId. For instances in multiple availability zones, the NodeId is required to configure.
- * @method void setNodeSet(array $NodeSet) Set Instance node information includes the node ID, node type, and node availability zone ID, and so on. For specific information, please see [RedisNodeInfo ](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1).
-For instances in a single availability zone, there is no need to configure the NodeId. For instances in multiple availability zones, the NodeId is required to configure.
+ * @method array getNodeSet() Obtain Node information of the instance, including node ID, node type, and node availability zone ID. For details, see [RedisNodeInfo](https://www.tencentcloud.com/document/product/239/20022?from_cn_redirect=1).
+For a single-AZ instance, no need to pass in NodeId. For a multi-AZ instance, NodeId is required.
+ * @method void setNodeSet(array $NodeSet) Set Node information of the instance, including node ID, node type, and node availability zone ID. For details, see [RedisNodeInfo](https://www.tencentcloud.com/document/product/239/20022?from_cn_redirect=1).
+For a single-AZ instance, no need to pass in NodeId. For a multi-AZ instance, NodeId is required.
  */
 class ModifyInstanceAvailabilityZonesRequest extends AbstractModel
 {
@@ -51,8 +51,8 @@ class ModifyInstanceAvailabilityZonesRequest extends AbstractModel
     public $SwitchOption;
 
     /**
-     * @var array Instance node information includes the node ID, node type, and node availability zone ID, and so on. For specific information, please see [RedisNodeInfo ](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1).
-For instances in a single availability zone, there is no need to configure the NodeId. For instances in multiple availability zones, the NodeId is required to configure.
+     * @var array Node information of the instance, including node ID, node type, and node availability zone ID. For details, see [RedisNodeInfo](https://www.tencentcloud.com/document/product/239/20022?from_cn_redirect=1).
+For a single-AZ instance, no need to pass in NodeId. For a multi-AZ instance, NodeId is required.
      */
     public $NodeSet;
 
@@ -62,8 +62,8 @@ For instances in a single availability zone, there is no need to configure the N
      * @param integer $SwitchOption Switch time.
 - 1: Switch during the maintenance window.
 - 2: Switch immediately.
-     * @param array $NodeSet Instance node information includes the node ID, node type, and node availability zone ID, and so on. For specific information, please see [RedisNodeInfo ](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1).
-For instances in a single availability zone, there is no need to configure the NodeId. For instances in multiple availability zones, the NodeId is required to configure.
+     * @param array $NodeSet Node information of the instance, including node ID, node type, and node availability zone ID. For details, see [RedisNodeInfo](https://www.tencentcloud.com/document/product/239/20022?from_cn_redirect=1).
+For a single-AZ instance, no need to pass in NodeId. For a multi-AZ instance, NodeId is required.
      */
     function __construct()
     {

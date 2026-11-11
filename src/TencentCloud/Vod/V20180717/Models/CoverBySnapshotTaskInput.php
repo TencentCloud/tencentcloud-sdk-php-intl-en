@@ -18,22 +18,22 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task input parameter type for screencapturing for cover image of a video
+ * Task input parameter type for screencapturing for cover image in a video
  *
  * @method integer getDefinition() Obtain Time point screenshot template ID.
  * @method void setDefinition(integer $Definition) Set Time point screenshot template ID.
  * @method string getPositionType() Obtain Screenshot type. Valid values:
-<li>Time: time point screencapturing</li>
+<li>Time: screenshot by time point</li>
 <li>Percent: screenshot by percentage</li>
  * @method void setPositionType(string $PositionType) Set Screenshot type. Valid values:
-<li>Time: time point screencapturing</li>
+<li>Time: screenshot by time point</li>
 <li>Percent: screenshot by percentage</li>
  * @method float getPositionValue() Obtain Screenshot position:
-<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
-<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+<li>For time point screenshots, this value indicates the second of the specified video to use as the cover</li>
+<li>For screenshot by percentage, this value indicates the percentage of the video used as the cover.</li>
  * @method void setPositionValue(float $PositionValue) Set Screenshot position:
-<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
-<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+<li>For time point screenshots, this value indicates the second of the specified video to use as the cover</li>
+<li>For screenshot by percentage, this value indicates the percentage of the video used as the cover.</li>
  * @method array getWatermarkSet() Obtain Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
  * @method void setWatermarkSet(array $WatermarkSet) Set Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
  */
@@ -46,15 +46,15 @@ class CoverBySnapshotTaskInput extends AbstractModel
 
     /**
      * @var string Screenshot type. Valid values:
-<li>Time: time point screencapturing</li>
+<li>Time: screenshot by time point</li>
 <li>Percent: screenshot by percentage</li>
      */
     public $PositionType;
 
     /**
      * @var float Screenshot position:
-<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
-<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+<li>For time point screenshots, this value indicates the second of the specified video to use as the cover</li>
+<li>For screenshot by percentage, this value indicates the percentage of the video used as the cover.</li>
      */
     public $PositionValue;
 
@@ -66,11 +66,11 @@ class CoverBySnapshotTaskInput extends AbstractModel
     /**
      * @param integer $Definition Time point screenshot template ID.
      * @param string $PositionType Screenshot type. Valid values:
-<li>Time: time point screencapturing</li>
+<li>Time: screenshot by time point</li>
 <li>Percent: screenshot by percentage</li>
      * @param float $PositionValue Screenshot position:
-<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
-<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+<li>For time point screenshots, this value indicates the second of the specified video to use as the cover</li>
+<li>For screenshot by percentage, this value indicates the percentage of the video used as the cover.</li>
      * @param array $WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      */
     function __construct()

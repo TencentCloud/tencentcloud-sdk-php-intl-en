@@ -36,43 +36,43 @@ Default value: 0px.
 Default value: 0px.
  * @method string getYPos() Obtain Vertical position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `YPos` of a mosaic is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the mosaic YPos is specified in pixels. For example, 100px means the YPos is 100 pixels.</li>
+<li>If a string ends with px, it means the mosaic YPos is specified in pixels. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
  * @method void setYPos(string $YPos) Set Vertical position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `YPos` of a mosaic is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the mosaic YPos is specified in pixels. For example, 100px means the YPos is 100 pixels.</li>
+<li>If a string ends with px, it means the mosaic YPos is specified in pixels. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
- * @method string getWidth() Obtain Width of the mosaic, supporting two formats: % and px.
+ * @method string getWidth() Obtain Width of a mosaic, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a mosaic is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the mosaic Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
 Default value: 10%.
- * @method void setWidth(string $Width) Set Width of the mosaic, supporting two formats: % and px.
+ * @method void setWidth(string $Width) Set Width of a mosaic, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a mosaic is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the mosaic Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
 Default value: 10%.
- * @method string getHeight() Obtain Height of a mosaic, supporting two formats: % and px.
+ * @method string getHeight() Obtain Height of the mosaic, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a mosaic is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the mosaic Height unit is pixel. For example, 100px means the Height is 100 pixels.</li>
 Default value: 10%.
- * @method void setHeight(string $Height) Set Height of a mosaic, supporting two formats: % and px.
+ * @method void setHeight(string $Height) Set Height of the mosaic, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a mosaic is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the mosaic Height unit is pixel. For example, 100px means the Height is 100 pixels.</li>
 Default value: 10%.
  * @method float getStartTimeOffset() Obtain Start time offset of a mosaic, in seconds. If not set or set to 0, a mosaic starts appearing when a video starts.
-<li>If not set or set to 0, a mosaic appears when a video starts.</li>
-<li>If the value is greater than 0 (for example, n), a mosaic will appear at second n of a frame.</li>
+<li>If not set or set to 0, a mosaic starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a mosaic will appear at second n of a video.</li>
 <li>When the value is less than 0 (assuming -n), it means the mosaic appears n seconds before the end of a video.</li>
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a mosaic, in seconds. If not set or set to 0, a mosaic starts appearing when a video starts.
-<li>If not set or set to 0, a mosaic appears when a video starts.</li>
-<li>If the value is greater than 0 (for example, n), a mosaic will appear at second n of a frame.</li>
+<li>If not set or set to 0, a mosaic starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a mosaic will appear at second n of a video.</li>
 <li>When the value is less than 0 (assuming -n), it means the mosaic appears n seconds before the end of a video.</li>
  * @method float getEndTimeOffset() Obtain End time offset of a mosaic, in seconds.
-<li>If not set or set to 0, mosaic will last until the end of a frame.</li>
-<li>If the value is greater than 0 (for example, n), a mosaic will disappear at second n.</li>
+<li>If not set or set to 0, a mosaic will last until the end of a frame.</li>
+<li>If the value is greater than 0 (for example, n), the mosaic will disappear at second n.</li>
 <li>When the value is less than 0 (assuming -n), it means the mosaic lasts until n seconds before the end of a video.</li>
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a mosaic, in seconds.
-<li>If not set or set to 0, mosaic will last until the end of a frame.</li>
-<li>If the value is greater than 0 (for example, n), a mosaic will disappear at second n.</li>
+<li>If not set or set to 0, a mosaic will last until the end of a frame.</li>
+<li>If the value is greater than 0 (for example, n), the mosaic will disappear at second n.</li>
 <li>When the value is less than 0 (assuming -n), it means the mosaic lasts until n seconds before the end of a video.</li>
  */
 class MosaicInput extends AbstractModel
@@ -95,13 +95,13 @@ Default value: 0px.
     /**
      * @var string Vertical position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `YPos` of a mosaic is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the mosaic YPos is specified in pixels. For example, 100px means the YPos is 100 pixels.</li>
+<li>If a string ends with px, it means the mosaic YPos is specified in pixels. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
      */
     public $YPos;
 
     /**
-     * @var string Width of the mosaic, supporting two formats: % and px.
+     * @var string Width of a mosaic, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a mosaic is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the mosaic Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
 Default value: 10%.
@@ -109,7 +109,7 @@ Default value: 10%.
     public $Width;
 
     /**
-     * @var string Height of a mosaic, supporting two formats: % and px.
+     * @var string Height of the mosaic, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a mosaic is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the mosaic Height unit is pixel. For example, 100px means the Height is 100 pixels.</li>
 Default value: 10%.
@@ -118,16 +118,16 @@ Default value: 10%.
 
     /**
      * @var float Start time offset of a mosaic, in seconds. If not set or set to 0, a mosaic starts appearing when a video starts.
-<li>If not set or set to 0, a mosaic appears when a video starts.</li>
-<li>If the value is greater than 0 (for example, n), a mosaic will appear at second n of a frame.</li>
+<li>If not set or set to 0, a mosaic starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a mosaic will appear at second n of a video.</li>
 <li>When the value is less than 0 (assuming -n), it means the mosaic appears n seconds before the end of a video.</li>
      */
     public $StartTimeOffset;
 
     /**
      * @var float End time offset of a mosaic, in seconds.
-<li>If not set or set to 0, mosaic will last until the end of a frame.</li>
-<li>If the value is greater than 0 (for example, n), a mosaic will disappear at second n.</li>
+<li>If not set or set to 0, a mosaic will last until the end of a frame.</li>
+<li>If the value is greater than 0 (for example, n), the mosaic will disappear at second n.</li>
 <li>When the value is less than 0 (assuming -n), it means the mosaic lasts until n seconds before the end of a video.</li>
      */
     public $EndTimeOffset;
@@ -142,23 +142,23 @@ Default value: TopLeft.
 Default value: 0px.
      * @param string $YPos Vertical position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `YPos` of a mosaic is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the mosaic YPos is specified in pixels. For example, 100px means the YPos is 100 pixels.</li>
+<li>If a string ends with px, it means the mosaic YPos is specified in pixels. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
-     * @param string $Width Width of the mosaic, supporting two formats: % and px.
+     * @param string $Width Width of a mosaic, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a mosaic is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the mosaic Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
 Default value: 10%.
-     * @param string $Height Height of a mosaic, supporting two formats: % and px.
+     * @param string $Height Height of the mosaic, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a mosaic is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the mosaic Height unit is pixel. For example, 100px means the Height is 100 pixels.</li>
 Default value: 10%.
      * @param float $StartTimeOffset Start time offset of a mosaic, in seconds. If not set or set to 0, a mosaic starts appearing when a video starts.
-<li>If not set or set to 0, a mosaic appears when a video starts.</li>
-<li>If the value is greater than 0 (for example, n), a mosaic will appear at second n of a frame.</li>
+<li>If not set or set to 0, a mosaic starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a mosaic will appear at second n of a video.</li>
 <li>When the value is less than 0 (assuming -n), it means the mosaic appears n seconds before the end of a video.</li>
      * @param float $EndTimeOffset End time offset of a mosaic, in seconds.
-<li>If not set or set to 0, mosaic will last until the end of a frame.</li>
-<li>If the value is greater than 0 (for example, n), a mosaic will disappear at second n.</li>
+<li>If not set or set to 0, a mosaic will last until the end of a frame.</li>
+<li>If the value is greater than 0 (for example, n), the mosaic will disappear at second n.</li>
 <li>When the value is less than 0 (assuming -n), it means the mosaic lasts until n seconds before the end of a video.</li>
      */
     function __construct()

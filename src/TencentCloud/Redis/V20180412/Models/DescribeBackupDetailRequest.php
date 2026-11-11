@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy it from the instance list.</p>
  * @method void setInstanceId(string $InstanceId) Set <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy it from the instance list.</p>
- * @method string getBackupId() Obtain <p>Backup ID, which can be obtained through the response parameter <strong>RedisBackupSet</strong> of the API <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
- * @method void setBackupId(string $BackupId) Set <p>Backup ID, which can be obtained through the response parameter <strong>RedisBackupSet</strong> of the API <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
+ * @method string getBackupId() Obtain <p>Backup ID, which can be obtained through the <strong>RedisBackupSet</strong> parameter in the API response of <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
+ * @method void setBackupId(string $BackupId) Set <p>Backup ID, which can be obtained through the <strong>RedisBackupSet</strong> parameter in the API response of <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
  */
 class DescribeBackupDetailRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeBackupDetailRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string <p>Backup ID, which can be obtained through the response parameter <strong>RedisBackupSet</strong> of the API <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
+     * @var string <p>Backup ID, which can be obtained through the <strong>RedisBackupSet</strong> parameter in the API response of <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
      */
     public $BackupId;
 
     /**
      * @param string $InstanceId <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy it from the instance list.</p>
-     * @param string $BackupId <p>Backup ID, which can be obtained through the response parameter <strong>RedisBackupSet</strong> of the API <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
+     * @param string $BackupId <p>Backup ID, which can be obtained through the <strong>RedisBackupSet</strong> parameter in the API response of <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Top Speed Codec parameter configuration.
+ * Parameter configuration for top speed Codec.
  *
- * @method string getType() Obtain Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
- * @method void setType(string $Type) Set Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
- * @method integer getMaxVideoBitrate() Obtain Maximum video bitrate. If not specified, no modification is made.
- * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set Maximum video bitrate. If not specified, no modification is made.
+ * @method string getType() Obtain Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, no modification is made.
+ * @method void setType(string $Type) Set Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, no modification is made.
+ * @method integer getMaxVideoBitrate() Obtain Maximum video bitrate. If this parameter is not specified, no modification is made.
+ * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set Maximum video bitrate. If this parameter is not specified, no modification is made.
  */
 class TEHDConfigForUpdate extends AbstractModel
 {
     /**
-     * @var string Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
+     * @var string Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, no modification is made.
      */
     public $Type;
 
     /**
-     * @var integer Maximum video bitrate. If not specified, no modification is made.
+     * @var integer Maximum video bitrate. If this parameter is not specified, no modification is made.
      */
     public $MaxVideoBitrate;
 
     /**
-     * @param string $Type Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
-     * @param integer $MaxVideoBitrate Maximum video bitrate. If not specified, no modification is made.
+     * @param string $Type Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, no modification is made.
+     * @param integer $MaxVideoBitrate Maximum video bitrate. If this parameter is not specified, no modification is made.
      */
     function __construct()
     {

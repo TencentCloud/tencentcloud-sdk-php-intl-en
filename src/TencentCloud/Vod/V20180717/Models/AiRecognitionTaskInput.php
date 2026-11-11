@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input parameter type for video content recognition
  *
- * @method integer getDefinition() Obtain Video intelligent identification template ID.
- * @method void setDefinition(integer $Definition) Set Video intelligent identification template ID.
+ * @method integer getDefinition() Obtain Intelligent video identification template ID.
+ * @method void setDefinition(integer $Definition) Set Intelligent video identification template ID.
  */
 class AiRecognitionTaskInput extends AbstractModel
 {
     /**
-     * @var integer Video intelligent identification template ID.
+     * @var integer Intelligent video identification template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Video intelligent identification template ID.
+     * @param integer $Definition Intelligent video identification template ID.
      */
     function __construct()
     {

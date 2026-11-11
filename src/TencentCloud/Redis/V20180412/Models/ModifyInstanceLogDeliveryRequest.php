@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnabled(boolean $Enabled) Set Whether log shopping is enabled.
 - true: enabled.
 - false: disabled.
- * @method string getLogsetId() Obtain ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
- * @method void setLogsetId(string $LogsetId) Set ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
- * @method string getTopicId() Obtain ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
- * @method void setTopicId(string $TopicId) Set ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
+ * @method string getLogsetId() Obtain ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://www.tencentcloud.com/document/api/614/58624?from_cn_redirect=1).
+ * @method void setLogsetId(string $LogsetId) Set ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://www.tencentcloud.com/document/api/614/58624?from_cn_redirect=1).
+ * @method string getTopicId() Obtain ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
  * @method string getLogsetName() Obtain Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
  * @method void setLogsetName(string $LogsetName) Set Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
  * @method string getTopicName() Obtain Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs.
@@ -65,12 +65,12 @@ class ModifyInstanceLogDeliveryRequest extends AbstractModel
     public $Enabled;
 
     /**
-     * @var string ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
+     * @var string ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://www.tencentcloud.com/document/api/614/58624?from_cn_redirect=1).
      */
     public $LogsetId;
 
     /**
-     * @var string ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
+     * @var string ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
@@ -105,8 +105,8 @@ class ModifyInstanceLogDeliveryRequest extends AbstractModel
      * @param boolean $Enabled Whether log shopping is enabled.
 - true: enabled.
 - false: disabled.
-     * @param string $LogsetId ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
-     * @param string $TopicId ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
+     * @param string $LogsetId ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://www.tencentcloud.com/document/api/614/58624?from_cn_redirect=1).
+     * @param string $TopicId ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
      * @param string $LogsetName Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
      * @param string $TopicName Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs.
      * @param string $LogRegion Region where the logset is located. If it is not provided, the region where the instance is located will be used by default.

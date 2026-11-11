@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Baseline classification basic information, covering both parent and subcategory layers.
+ * Basic information of baseline categories, covering two layers: parent categories and subcategories.
  *
  * @method integer getID() Obtain <p>Baseline classification ID.</p>
  * @method void setID(integer $ID) Set <p>Baseline classification ID.</p>
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set <p>Baseline classification name (Chinese).</p>
  * @method string getDescription() Obtain <p>Baseline category description (Chinese).</p>
  * @method void setDescription(string $Description) Set <p>Baseline category description (Chinese).</p>
- * @method string getCheckAssetType() Obtain <p>Detect the asset major category and distinguish between host baseline and container cluster baseline. Parameter Value:</p><ul><li>HOST: Host</li><li>CLUSTER: Container cluster</li></ul>
- * @method void setCheckAssetType(string $CheckAssetType) Set <p>Detect the asset major category and distinguish between host baseline and container cluster baseline. Parameter Value:</p><ul><li>HOST: Host</li><li>CLUSTER: Container cluster</li></ul>
+ * @method string getCheckAssetType() Obtain <p>Detect asset major category, case-sensitive between host baseline and container cluster baseline. Parameter Value:</p><ul><li>HOST: Host</li><li>CLUSTER: Container cluster</li></ul>
+ * @method void setCheckAssetType(string $CheckAssetType) Set <p>Detect asset major category, case-sensitive between host baseline and container cluster baseline. Parameter Value:</p><ul><li>HOST: Host</li><li>CLUSTER: Container cluster</li></ul>
  */
 class BaselineCategory extends AbstractModel
 {
@@ -47,7 +47,7 @@ class BaselineCategory extends AbstractModel
     public $Description;
 
     /**
-     * @var string <p>Detect the asset major category and distinguish between host baseline and container cluster baseline. Parameter Value:</p><ul><li>HOST: Host</li><li>CLUSTER: Container cluster</li></ul>
+     * @var string <p>Detect asset major category, case-sensitive between host baseline and container cluster baseline. Parameter Value:</p><ul><li>HOST: Host</li><li>CLUSTER: Container cluster</li></ul>
      */
     public $CheckAssetType;
 
@@ -55,7 +55,7 @@ class BaselineCategory extends AbstractModel
      * @param integer $ID <p>Baseline classification ID.</p>
      * @param string $Name <p>Baseline classification name (Chinese).</p>
      * @param string $Description <p>Baseline category description (Chinese).</p>
-     * @param string $CheckAssetType <p>Detect the asset major category and distinguish between host baseline and container cluster baseline. Parameter Value:</p><ul><li>HOST: Host</li><li>CLUSTER: Container cluster</li></ul>
+     * @param string $CheckAssetType <p>Detect asset major category, case-sensitive between host baseline and container cluster baseline. Parameter Value:</p><ul><li>HOST: Host</li><li>CLUSTER: Container cluster</li></ul>
      */
     function __construct()
     {

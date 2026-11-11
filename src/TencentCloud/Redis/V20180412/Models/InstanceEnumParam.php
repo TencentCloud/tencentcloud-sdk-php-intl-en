@@ -20,74 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Description of the instance parameter in Enum type
  *
- * @method string getParamName() Obtain Parameter name
- * @method void setParamName(string $ParamName) Set Parameter name
- * @method string getValueType() Obtain Parameter type, such as `Enum`.
- * @method void setValueType(string $ValueType) Set Parameter type, such as `Enum`.
- * @method string getNeedRestart() Obtain Whether to restart the database after modifying the parameters. Valid values: - `true` (required) - `false` (not required)
- * @method void setNeedRestart(string $NeedRestart) Set Whether to restart the database after modifying the parameters. Valid values: - `true` (required) - `false` (not required)
- * @method string getDefaultValue() Obtain Default value of the parameter
- * @method void setDefaultValue(string $DefaultValue) Set Default value of the parameter
- * @method string getCurrentValue() Obtain Current value
- * @method void setCurrentValue(string $CurrentValue) Set Current value
- * @method string getTips() Obtain Description
- * @method void setTips(string $Tips) Set Description
- * @method array getEnumValue() Obtain Acceptable values for the parameter
- * @method void setEnumValue(array $EnumValue) Set Acceptable values for the parameter
- * @method integer getStatus() Obtain Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
- * @method void setStatus(integer $Status) Set Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
+ * @method string getParamName() Obtain <p>Parameter name.</p>
+ * @method void setParamName(string $ParamName) Set <p>Parameter name.</p>
+ * @method string getValueType() Obtain <p>Parameter type. For example: Enum.</p>
+ * @method void setValueType(string $ValueType) Set <p>Parameter type. For example: Enum.</p>
+ * @method string getNeedRestart() Obtain <p>Whether restart is required after parameter values are modified.</p><ul><li>true: required.</li><li>false: not required.</li></ul>
+ * @method void setNeedRestart(string $NeedRestart) Set <p>Whether restart is required after parameter values are modified.</p><ul><li>true: required.</li><li>false: not required.</li></ul>
+ * @method string getDefaultValue() Obtain <p>Default parameter value.</p>
+ * @method void setDefaultValue(string $DefaultValue) Set <p>Default parameter value.</p>
+ * @method string getCurrentValue() Obtain <p>Current value of the parameter.</p>
+ * @method void setCurrentValue(string $CurrentValue) Set <p>Current value of the parameter.</p>
+ * @method string getTips() Obtain <p>Parameter description.</p>
+ * @method void setTips(string $Tips) Set <p>Parameter description.</p>
+ * @method array getEnumValue() Obtain <p>Available values of the parameter.</p>
+ * @method void setEnumValue(array $EnumValue) Set <p>Available values of the parameter.</p>
+ * @method integer getStatus() Obtain <p>Parameter modification status.</p><ul><li>1: Modifying.</li><li>2: Modified.</li></ul>
+ * @method void setStatus(integer $Status) Set <p>Parameter modification status.</p><ul><li>1: Modifying.</li><li>2: Modified.</li></ul>
+ * @method string getParamType() Obtain <p>Parameter type</p><p>Enumeration values:</p><ul><li>redis: parameters supported by cache nodes</li><li>redis-interface: parameters supported by proxy</li><li>tendis: parameters supported by tendis</li></ul>
+ * @method void setParamType(string $ParamType) Set <p>Parameter type</p><p>Enumeration values:</p><ul><li>redis: parameters supported by cache nodes</li><li>redis-interface: parameters supported by proxy</li><li>tendis: parameters supported by tendis</li></ul>
+ * @method boolean getFeatureSupported() Obtain <p>Whether the current instance supports this feature</p>
+ * @method void setFeatureSupported(boolean $FeatureSupported) Set <p>Whether the current instance supports this feature</p>
+ * @method string getNewFeatureOnlineTime() Obtain <p>New feature launch date</p><p>Parameter format: time format YYYY-MM-DD</p>
+ * @method void setNewFeatureOnlineTime(string $NewFeatureOnlineTime) Set <p>New feature launch date</p><p>Parameter format: time format YYYY-MM-DD</p>
+ * @method string getPattern() Obtain <p>Regular expression validation rule</p>
+ * @method void setPattern(string $Pattern) Set <p>Regular expression validation rule</p>
+ * @method string getInputDescription() Obtain <p>Input format description</p>
+ * @method void setInputDescription(string $InputDescription) Set <p>Input format description</p>
  */
 class InstanceEnumParam extends AbstractModel
 {
     /**
-     * @var string Parameter name
+     * @var string <p>Parameter name.</p>
      */
     public $ParamName;
 
     /**
-     * @var string Parameter type, such as `Enum`.
+     * @var string <p>Parameter type. For example: Enum.</p>
      */
     public $ValueType;
 
     /**
-     * @var string Whether to restart the database after modifying the parameters. Valid values: - `true` (required) - `false` (not required)
+     * @var string <p>Whether restart is required after parameter values are modified.</p><ul><li>true: required.</li><li>false: not required.</li></ul>
      */
     public $NeedRestart;
 
     /**
-     * @var string Default value of the parameter
+     * @var string <p>Default parameter value.</p>
      */
     public $DefaultValue;
 
     /**
-     * @var string Current value
+     * @var string <p>Current value of the parameter.</p>
      */
     public $CurrentValue;
 
     /**
-     * @var string Description
+     * @var string <p>Parameter description.</p>
      */
     public $Tips;
 
     /**
-     * @var array Acceptable values for the parameter
+     * @var array <p>Available values of the parameter.</p>
      */
     public $EnumValue;
 
     /**
-     * @var integer Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
+     * @var integer <p>Parameter modification status.</p><ul><li>1: Modifying.</li><li>2: Modified.</li></ul>
      */
     public $Status;
 
     /**
-     * @param string $ParamName Parameter name
-     * @param string $ValueType Parameter type, such as `Enum`.
-     * @param string $NeedRestart Whether to restart the database after modifying the parameters. Valid values: - `true` (required) - `false` (not required)
-     * @param string $DefaultValue Default value of the parameter
-     * @param string $CurrentValue Current value
-     * @param string $Tips Description
-     * @param array $EnumValue Acceptable values for the parameter
-     * @param integer $Status Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
+     * @var string <p>Parameter type</p><p>Enumeration values:</p><ul><li>redis: parameters supported by cache nodes</li><li>redis-interface: parameters supported by proxy</li><li>tendis: parameters supported by tendis</li></ul>
+     */
+    public $ParamType;
+
+    /**
+     * @var boolean <p>Whether the current instance supports this feature</p>
+     */
+    public $FeatureSupported;
+
+    /**
+     * @var string <p>New feature launch date</p><p>Parameter format: time format YYYY-MM-DD</p>
+     */
+    public $NewFeatureOnlineTime;
+
+    /**
+     * @var string <p>Regular expression validation rule</p>
+     */
+    public $Pattern;
+
+    /**
+     * @var string <p>Input format description</p>
+     */
+    public $InputDescription;
+
+    /**
+     * @param string $ParamName <p>Parameter name.</p>
+     * @param string $ValueType <p>Parameter type. For example: Enum.</p>
+     * @param string $NeedRestart <p>Whether restart is required after parameter values are modified.</p><ul><li>true: required.</li><li>false: not required.</li></ul>
+     * @param string $DefaultValue <p>Default parameter value.</p>
+     * @param string $CurrentValue <p>Current value of the parameter.</p>
+     * @param string $Tips <p>Parameter description.</p>
+     * @param array $EnumValue <p>Available values of the parameter.</p>
+     * @param integer $Status <p>Parameter modification status.</p><ul><li>1: Modifying.</li><li>2: Modified.</li></ul>
+     * @param string $ParamType <p>Parameter type</p><p>Enumeration values:</p><ul><li>redis: parameters supported by cache nodes</li><li>redis-interface: parameters supported by proxy</li><li>tendis: parameters supported by tendis</li></ul>
+     * @param boolean $FeatureSupported <p>Whether the current instance supports this feature</p>
+     * @param string $NewFeatureOnlineTime <p>New feature launch date</p><p>Parameter format: time format YYYY-MM-DD</p>
+     * @param string $Pattern <p>Regular expression validation rule</p>
+     * @param string $InputDescription <p>Input format description</p>
      */
     function __construct()
     {
@@ -132,6 +172,26 @@ class InstanceEnumParam extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ParamType",$param) and $param["ParamType"] !== null) {
+            $this->ParamType = $param["ParamType"];
+        }
+
+        if (array_key_exists("FeatureSupported",$param) and $param["FeatureSupported"] !== null) {
+            $this->FeatureSupported = $param["FeatureSupported"];
+        }
+
+        if (array_key_exists("NewFeatureOnlineTime",$param) and $param["NewFeatureOnlineTime"] !== null) {
+            $this->NewFeatureOnlineTime = $param["NewFeatureOnlineTime"];
+        }
+
+        if (array_key_exists("Pattern",$param) and $param["Pattern"] !== null) {
+            $this->Pattern = $param["Pattern"];
+        }
+
+        if (array_key_exists("InputDescription",$param) and $param["InputDescription"] !== null) {
+            $this->InputDescription = $param["InputDescription"];
         }
     }
 }

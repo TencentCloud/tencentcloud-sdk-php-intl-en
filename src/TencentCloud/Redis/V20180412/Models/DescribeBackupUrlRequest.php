@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
  * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
- * @method string getBackupId() Obtain Backup ID, which can be obtained through the `RedisBackupSet` parameter returned by the [DescribeInstanceBackups](https://intl.cloud.tencent.com/document/product/239/20011?from_cn_redirect=1) API.
- * @method void setBackupId(string $BackupId) Set Backup ID, which can be obtained through the `RedisBackupSet` parameter returned by the [DescribeInstanceBackups](https://intl.cloud.tencent.com/document/product/239/20011?from_cn_redirect=1) API.
+ * @method string getBackupId() Obtain Backup ID, which can be obtained through the RedisBackupSet parameter in the API response of [DescribeInstanceBackups](https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1).
+ * @method void setBackupId(string $BackupId) Set Backup ID, which can be obtained through the RedisBackupSet parameter in the API response of [DescribeInstanceBackups](https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1).
  * @method string getLimitType() Obtain Limit type of the network from which you can download backup files. If this parameter is not configured, the user-defined configuration will be used.
 - NoLimit: There is no limit. Backup files can be downloaded from both Tencent Cloud private and public networks.
 - LimitOnlyIntranet: Backup files can be downloaded 
@@ -55,7 +55,7 @@ class DescribeBackupUrlRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Backup ID, which can be obtained through the `RedisBackupSet` parameter returned by the [DescribeInstanceBackups](https://intl.cloud.tencent.com/document/product/239/20011?from_cn_redirect=1) API.
+     * @var string Backup ID, which can be obtained through the RedisBackupSet parameter in the API response of [DescribeInstanceBackups](https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1).
      */
     public $BackupId;
 
@@ -92,7 +92,7 @@ class DescribeBackupUrlRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
-     * @param string $BackupId Backup ID, which can be obtained through the `RedisBackupSet` parameter returned by the [DescribeInstanceBackups](https://intl.cloud.tencent.com/document/product/239/20011?from_cn_redirect=1) API.
+     * @param string $BackupId Backup ID, which can be obtained through the RedisBackupSet parameter in the API response of [DescribeInstanceBackups](https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1).
      * @param string $LimitType Limit type of the network from which you can download backup files. If this parameter is not configured, the user-defined configuration will be used.
 - NoLimit: There is no limit. Backup files can be downloaded from both Tencent Cloud private and public networks.
 - LimitOnlyIntranet: Backup files can be downloaded 
