@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Detailed description of conflict processing
  *
- * @method string getConditionColumn() Obtain Conditionally overwritten column
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConditionColumn(string $ConditionColumn) Set Conditionally overwritten column
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getConditionOperator() Obtain Conditional overwrite operation
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConditionOperator(string $ConditionOperator) Set Conditional overwrite operation
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getConditionOrderInSrcAndDst() Obtain Conditional overwrite priority configuration
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConditionOrderInSrcAndDst(string $ConditionOrderInSrcAndDst) Set Conditional overwrite priority configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getConditionColumn() Obtain Columns for conditional overwrite.
+ * @method void setConditionColumn(string $ConditionColumn) Set Columns for conditional overwrite.
+ * @method string getConditionOperator() Obtain Condition coverage operation. Currently, only > is supported.
+ * @method void setConditionOperator(string $ConditionOperator) Set Condition coverage operation. Currently, only > is supported.
+ * @method string getConditionOrderInSrcAndDst() Obtain Condition coverage priority processing. Supported types are >, <, and =.
+ * @method void setConditionOrderInSrcAndDst(string $ConditionOrderInSrcAndDst) Set Condition coverage priority processing. Supported types are >, <, and =.
  */
 class ConflictHandleOption extends AbstractModel
 {
     /**
-     * @var string Conditionally overwritten column
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Columns for conditional overwrite.
      */
     public $ConditionColumn;
 
     /**
-     * @var string Conditional overwrite operation
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Condition coverage operation. Currently, only > is supported.
      */
     public $ConditionOperator;
 
     /**
-     * @var string Conditional overwrite priority configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Condition coverage priority processing. Supported types are >, <, and =.
      */
     public $ConditionOrderInSrcAndDst;
 
     /**
-     * @param string $ConditionColumn Conditionally overwritten column
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ConditionOperator Conditional overwrite operation
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ConditionOrderInSrcAndDst Conditional overwrite priority configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ConditionColumn Columns for conditional overwrite.
+     * @param string $ConditionOperator Condition coverage operation. Currently, only > is supported.
+     * @param string $ConditionOrderInSrcAndDst Condition coverage priority processing. Supported types are >, <, and =.
      */
     function __construct()
     {

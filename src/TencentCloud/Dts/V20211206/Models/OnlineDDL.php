@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Online DDL type
  *
- * @method string getStatus() Obtain Status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Status
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStatus() Obtain Status. Valid values: ON (enable) and OFF (disable).
+ * @method void setStatus(string $Status) Set Status. Valid values: ON (enable) and OFF (disable).
  */
 class OnlineDDL extends AbstractModel
 {
     /**
-     * @var string Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Status. Valid values: ON (enable) and OFF (disable).
      */
     public $Status;
 
     /**
-     * @param string $Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Status Status. Valid values: ON (enable) and OFF (disable).
      */
     function __construct()
     {

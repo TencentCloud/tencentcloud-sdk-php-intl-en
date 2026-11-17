@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VRP rating stage
  *
- * @method string getStage() Obtain Stage name (for example: threat activity level, exploitability, vulnerability severity)
- * @method void setStage(string $Stage) Set Stage name (for example: threat activity level, exploitability, vulnerability severity)
- * @method string getResult() Obtain Rating result of this stage
- * @method void setResult(string $Result) Set Rating result of this stage
+ * @method string getStage() Obtain Stage name (for example, threat activity, exploitability, vulnerability severity)
+ * @method void setStage(string $Stage) Set Stage name (for example, threat activity, exploitability, vulnerability severity)
+ * @method string getResult() Obtain Rating result of this stage.
+ * @method void setResult(string $Result) Set Rating result of this stage.
  */
 class VPRRatingStage extends AbstractModel
 {
     /**
-     * @var string Stage name (for example: threat activity level, exploitability, vulnerability severity)
+     * @var string Stage name (for example, threat activity, exploitability, vulnerability severity)
      */
     public $Stage;
 
     /**
-     * @var string Rating result of this stage
+     * @var string Rating result of this stage.
      */
     public $Result;
 
     /**
-     * @param string $Stage Stage name (for example: threat activity level, exploitability, vulnerability severity)
-     * @param string $Result Rating result of this stage
+     * @param string $Stage Stage name (for example, threat activity, exploitability, vulnerability severity)
+     * @param string $Result Rating result of this stage.
      */
     function __construct()
     {

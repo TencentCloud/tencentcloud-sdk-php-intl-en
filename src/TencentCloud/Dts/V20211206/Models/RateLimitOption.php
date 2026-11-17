@@ -20,102 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Speed limit details of migration and sync tasks
  *
- * @method integer getCurrentDumpThread() Obtain The number of full export threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCurrentDumpThread(integer $CurrentDumpThread) Set The number of full export threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDefaultDumpThread() Obtain The default number of full export threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefaultDumpThread(integer $DefaultDumpThread) Set The default number of full export threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCurrentDumpRps() Obtain The full export Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCurrentDumpRps(integer $CurrentDumpRps) Set The full export Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDefaultDumpRps() Obtain The default full export Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefaultDumpRps(integer $DefaultDumpRps) Set The default full export Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCurrentLoadThread() Obtain The number of full import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCurrentLoadThread(integer $CurrentLoadThread) Set The number of full import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDefaultLoadThread() Obtain The default number of full import threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefaultLoadThread(integer $DefaultLoadThread) Set The default number of full import threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCurrentLoadRps() Obtain The full import Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCurrentLoadRps(integer $CurrentLoadRps) Set The full import Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDefaultLoadRps() Obtain The default full import Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefaultLoadRps(integer $DefaultLoadRps) Set The default full import Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCurrentSinkerThread() Obtain The number of incremental import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 128.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCurrentSinkerThread(integer $CurrentSinkerThread) Set The number of incremental import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 128.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDefaultSinkerThread() Obtain The default number of incremental import threads. This field is only meaningful in the output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefaultSinkerThread(integer $DefaultSinkerThread) Set The default number of incremental import threads. This field is only meaningful in the output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHasUserSetRateLimit() Obtain enum:"no"/"yes", no: the user has not set a speed limit; yes: a speed limit has been set. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHasUserSetRateLimit(string $HasUserSetRateLimit) Set enum:"no"/"yes", no: the user has not set a speed limit; yes: a speed limit has been set. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getCurrentDumpThread() Obtain Currently effective number of threads for full export. You can adjust this field value when the task is configured. Note: If it is not set or set to 0, the current value is kept. The maximum value is 16.
+ * @method void setCurrentDumpThread(integer $CurrentDumpThread) Set Currently effective number of threads for full export. You can adjust this field value when the task is configured. Note: If it is not set or set to 0, the current value is kept. The maximum value is 16.
+ * @method integer getDefaultDumpThread() Obtain The default number of threads for full export. This field is only meaningful in the output parameters.
+ * @method void setDefaultDumpThread(integer $DefaultDumpThread) Set The default number of threads for full export. This field is only meaningful in the output parameters.
+ * @method integer getCurrentDumpRps() Obtain The currently effective Rps for full export. You can adjust this field value when configuring the task. Note: If not set or set to 0, it indicates to keep the current value. The maximum value is 50000000.
+ * @method void setCurrentDumpRps(integer $CurrentDumpRps) Set The currently effective Rps for full export. You can adjust this field value when configuring the task. Note: If not set or set to 0, it indicates to keep the current value. The maximum value is 50000000.
+ * @method integer getDefaultDumpRps() Obtain The default Rps for full export. This field is only meaningful in the output parameters.
+ * @method void setDefaultDumpRps(integer $DefaultDumpRps) Set The default Rps for full export. This field is only meaningful in the output parameters.
+ * @method integer getCurrentLoadThread() Obtain Currently effective number of threads for full import. You can adjust this field value when the task is configured. Note: If it is not set or set to 0, the current value is kept. The maximum value is 16.
+ * @method void setCurrentLoadThread(integer $CurrentLoadThread) Set Currently effective number of threads for full import. You can adjust this field value when the task is configured. Note: If it is not set or set to 0, the current value is kept. The maximum value is 16.
+ * @method integer getDefaultLoadThread() Obtain The default number of threads for full import. This field is only meaningful in the output parameters.
+ * @method void setDefaultLoadThread(integer $DefaultLoadThread) Set The default number of threads for full import. This field is only meaningful in the output parameters.
+ * @method integer getCurrentLoadRps() Obtain The currently effective Rps for full import. You can adjust this field value when configuring the task. Note: If not set or set to 0, it indicates to keep the current value. The maximum value is 50000000.	
+ * @method void setCurrentLoadRps(integer $CurrentLoadRps) Set The currently effective Rps for full import. You can adjust this field value when configuring the task. Note: If not set or set to 0, it indicates to keep the current value. The maximum value is 50000000.	
+ * @method integer getDefaultLoadRps() Obtain Default full import Rps. This field is only meaningful in the output parameter.	
+ * @method void setDefaultLoadRps(integer $DefaultLoadRps) Set Default full import Rps. This field is only meaningful in the output parameter.	
+ * @method integer getCurrentSinkerThread() Obtain The currently effective number of threads for incremental import. You can adjust this field value when configuring the task. Note: If not set or set to 0, it indicates to keep the current value. The maximum value is 128.
+ * @method void setCurrentSinkerThread(integer $CurrentSinkerThread) Set The currently effective number of threads for incremental import. You can adjust this field value when configuring the task. Note: If not set or set to 0, it indicates to keep the current value. The maximum value is 128.
+ * @method integer getDefaultSinkerThread() Obtain The default number of threads for incremental import. This field is only meaningful in the output parameters.
+ * @method void setDefaultSinkerThread(integer $DefaultSinkerThread) Set The default number of threads for incremental import. This field is only meaningful in the output parameters.
+ * @method string getHasUserSetRateLimit() Obtain enum: "no"/"yes". no indicates that the user has not set a speed limit, while yes indicates that a speed limit has been set. This field is only meaningful in the output parameters.
+ * @method void setHasUserSetRateLimit(string $HasUserSetRateLimit) Set enum: "no"/"yes". no indicates that the user has not set a speed limit, while yes indicates that a speed limit has been set. This field is only meaningful in the output parameters.
+ * @method integer getDefaultDumpBps() Obtain Default full export BPS, currently supported only for MongoDB links.
+ * @method void setDefaultDumpBps(integer $DefaultDumpBps) Set Default full export BPS, currently supported only for MongoDB links.
+ * @method integer getCurrentSinkerRps() Obtain Incremental import RPS, currently supported only for MongoDB links.
+ * @method void setCurrentSinkerRps(integer $CurrentSinkerRps) Set Incremental import RPS, currently supported only for MongoDB links.
+ * @method integer getDefaultSinkerRps() Obtain Default incremental import RPS, currently supported only for MongoDB links.
+ * @method void setDefaultSinkerRps(integer $DefaultSinkerRps) Set Default incremental import RPS, currently supported only for MongoDB links.
+ * @method integer getCurrentLoadBps() Obtain Current import BPS. Currently, it is only used for Redis.
+ * @method void setCurrentLoadBps(integer $CurrentLoadBps) Set Current import BPS. Currently, it is only used for Redis.
+ * @method integer getCurrentDstShardCount() Obtain Number of shards in the target database. Currently, only used for Redis.
+ * @method void setCurrentDstShardCount(integer $CurrentDstShardCount) Set Number of shards in the target database. Currently, only used for Redis.
+ * @method integer getCurrentDumpBps() Obtain Full export BPS, currently supported only for MongoDB links.
+ * @method void setCurrentDumpBps(integer $CurrentDumpBps) Set Full export BPS, currently supported only for MongoDB links.
+ * @method integer getCurrentSinkerBps() Obtain Incremental import BPS, currently supported only for MongoDB links.
+ * @method void setCurrentSinkerBps(integer $CurrentSinkerBps) Set Incremental import BPS, currently supported only for MongoDB links.
+ * @method integer getDefaultSinkerBps() Obtain Default incremental import BPS, currently supported only for MongoDB links.
+ * @method void setDefaultSinkerBps(integer $DefaultSinkerBps) Set Default incremental import BPS, currently supported only for MongoDB links.
  */
 class RateLimitOption extends AbstractModel
 {
     /**
-     * @var integer The number of full export threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Currently effective number of threads for full export. You can adjust this field value when the task is configured. Note: If it is not set or set to 0, the current value is kept. The maximum value is 16.
      */
     public $CurrentDumpThread;
 
     /**
-     * @var integer The default number of full export threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The default number of threads for full export. This field is only meaningful in the output parameters.
      */
     public $DefaultDumpThread;
 
     /**
-     * @var integer The full export Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The currently effective Rps for full export. You can adjust this field value when configuring the task. Note: If not set or set to 0, it indicates to keep the current value. The maximum value is 50000000.
      */
     public $CurrentDumpRps;
 
     /**
-     * @var integer The default full export Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The default Rps for full export. This field is only meaningful in the output parameters.
      */
     public $DefaultDumpRps;
 
     /**
-     * @var integer The number of full import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Currently effective number of threads for full import. You can adjust this field value when the task is configured. Note: If it is not set or set to 0, the current value is kept. The maximum value is 16.
      */
     public $CurrentLoadThread;
 
     /**
-     * @var integer The default number of full import threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The default number of threads for full import. This field is only meaningful in the output parameters.
      */
     public $DefaultLoadThread;
 
     /**
-     * @var integer The full import Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The currently effective Rps for full import. You can adjust this field value when configuring the task. Note: If not set or set to 0, it indicates to keep the current value. The maximum value is 50000000.	
      */
     public $CurrentLoadRps;
 
     /**
-     * @var integer The default full import Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Default full import Rps. This field is only meaningful in the output parameter.	
      */
     public $DefaultLoadRps;
 
     /**
-     * @var integer The number of incremental import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 128.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The currently effective number of threads for incremental import. You can adjust this field value when configuring the task. Note: If not set or set to 0, it indicates to keep the current value. The maximum value is 128.
      */
     public $CurrentSinkerThread;
 
     /**
-     * @var integer The default number of incremental import threads. This field is only meaningful in the output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The default number of threads for incremental import. This field is only meaningful in the output parameters.
      */
     public $DefaultSinkerThread;
 
     /**
-     * @var string enum:"no"/"yes", no: the user has not set a speed limit; yes: a speed limit has been set. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string enum: "no"/"yes". no indicates that the user has not set a speed limit, while yes indicates that a speed limit has been set. This field is only meaningful in the output parameters.
      */
     public $HasUserSetRateLimit;
 
     /**
-     * @param integer $CurrentDumpThread The number of full export threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DefaultDumpThread The default number of full export threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CurrentDumpRps The full export Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DefaultDumpRps The default full export Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CurrentLoadThread The number of full import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DefaultLoadThread The default number of full import threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CurrentLoadRps The full import Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DefaultLoadRps The default full import Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CurrentSinkerThread The number of incremental import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 128.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DefaultSinkerThread The default number of incremental import threads. This field is only meaningful in the output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HasUserSetRateLimit enum:"no"/"yes", no: the user has not set a speed limit; yes: a speed limit has been set. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Default full export BPS, currently supported only for MongoDB links.
+     */
+    public $DefaultDumpBps;
+
+    /**
+     * @var integer Incremental import RPS, currently supported only for MongoDB links.
+     */
+    public $CurrentSinkerRps;
+
+    /**
+     * @var integer Default incremental import RPS, currently supported only for MongoDB links.
+     */
+    public $DefaultSinkerRps;
+
+    /**
+     * @var integer Current import BPS. Currently, it is only used for Redis.
+     */
+    public $CurrentLoadBps;
+
+    /**
+     * @var integer Number of shards in the target database. Currently, only used for Redis.
+     */
+    public $CurrentDstShardCount;
+
+    /**
+     * @var integer Full export BPS, currently supported only for MongoDB links.
+     */
+    public $CurrentDumpBps;
+
+    /**
+     * @var integer Incremental import BPS, currently supported only for MongoDB links.
+     */
+    public $CurrentSinkerBps;
+
+    /**
+     * @var integer Default incremental import BPS, currently supported only for MongoDB links.
+     */
+    public $DefaultSinkerBps;
+
+    /**
+     * @param integer $CurrentDumpThread Currently effective number of threads for full export. You can adjust this field value when the task is configured. Note: If it is not set or set to 0, the current value is kept. The maximum value is 16.
+     * @param integer $DefaultDumpThread The default number of threads for full export. This field is only meaningful in the output parameters.
+     * @param integer $CurrentDumpRps The currently effective Rps for full export. You can adjust this field value when configuring the task. Note: If not set or set to 0, it indicates to keep the current value. The maximum value is 50000000.
+     * @param integer $DefaultDumpRps The default Rps for full export. This field is only meaningful in the output parameters.
+     * @param integer $CurrentLoadThread Currently effective number of threads for full import. You can adjust this field value when the task is configured. Note: If it is not set or set to 0, the current value is kept. The maximum value is 16.
+     * @param integer $DefaultLoadThread The default number of threads for full import. This field is only meaningful in the output parameters.
+     * @param integer $CurrentLoadRps The currently effective Rps for full import. You can adjust this field value when configuring the task. Note: If not set or set to 0, it indicates to keep the current value. The maximum value is 50000000.	
+     * @param integer $DefaultLoadRps Default full import Rps. This field is only meaningful in the output parameter.	
+     * @param integer $CurrentSinkerThread The currently effective number of threads for incremental import. You can adjust this field value when configuring the task. Note: If not set or set to 0, it indicates to keep the current value. The maximum value is 128.
+     * @param integer $DefaultSinkerThread The default number of threads for incremental import. This field is only meaningful in the output parameters.
+     * @param string $HasUserSetRateLimit enum: "no"/"yes". no indicates that the user has not set a speed limit, while yes indicates that a speed limit has been set. This field is only meaningful in the output parameters.
+     * @param integer $DefaultDumpBps Default full export BPS, currently supported only for MongoDB links.
+     * @param integer $CurrentSinkerRps Incremental import RPS, currently supported only for MongoDB links.
+     * @param integer $DefaultSinkerRps Default incremental import RPS, currently supported only for MongoDB links.
+     * @param integer $CurrentLoadBps Current import BPS. Currently, it is only used for Redis.
+     * @param integer $CurrentDstShardCount Number of shards in the target database. Currently, only used for Redis.
+     * @param integer $CurrentDumpBps Full export BPS, currently supported only for MongoDB links.
+     * @param integer $CurrentSinkerBps Incremental import BPS, currently supported only for MongoDB links.
+     * @param integer $DefaultSinkerBps Default incremental import BPS, currently supported only for MongoDB links.
      */
     function __construct()
     {
@@ -172,6 +232,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("HasUserSetRateLimit",$param) and $param["HasUserSetRateLimit"] !== null) {
             $this->HasUserSetRateLimit = $param["HasUserSetRateLimit"];
+        }
+
+        if (array_key_exists("DefaultDumpBps",$param) and $param["DefaultDumpBps"] !== null) {
+            $this->DefaultDumpBps = $param["DefaultDumpBps"];
+        }
+
+        if (array_key_exists("CurrentSinkerRps",$param) and $param["CurrentSinkerRps"] !== null) {
+            $this->CurrentSinkerRps = $param["CurrentSinkerRps"];
+        }
+
+        if (array_key_exists("DefaultSinkerRps",$param) and $param["DefaultSinkerRps"] !== null) {
+            $this->DefaultSinkerRps = $param["DefaultSinkerRps"];
+        }
+
+        if (array_key_exists("CurrentLoadBps",$param) and $param["CurrentLoadBps"] !== null) {
+            $this->CurrentLoadBps = $param["CurrentLoadBps"];
+        }
+
+        if (array_key_exists("CurrentDstShardCount",$param) and $param["CurrentDstShardCount"] !== null) {
+            $this->CurrentDstShardCount = $param["CurrentDstShardCount"];
+        }
+
+        if (array_key_exists("CurrentDumpBps",$param) and $param["CurrentDumpBps"] !== null) {
+            $this->CurrentDumpBps = $param["CurrentDumpBps"];
+        }
+
+        if (array_key_exists("CurrentSinkerBps",$param) and $param["CurrentSinkerBps"] !== null) {
+            $this->CurrentSinkerBps = $param["CurrentSinkerBps"];
+        }
+
+        if (array_key_exists("DefaultSinkerBps",$param) and $param["DefaultSinkerBps"] !== null) {
+            $this->DefaultSinkerBps = $param["DefaultSinkerBps"];
         }
     }
 }

@@ -18,12 +18,12 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Data items of the statistical curve
+ * Statistical curve data item
  *
  * @method integer getTimestamp() Obtain Time point for returning data, in the format of Unix timestamp in seconds.
  * @method void setTimestamp(integer $Timestamp) Set Time point for returning data, in the format of Unix timestamp in seconds.
- * @method integer getValue() Obtain The value.
- * @method void setValue(integer $Value) Set The value.
+ * @method integer getValue() Obtain Specific values.
+ * @method void setValue(integer $Value) Set Specific values.
  */
 class TimingDataItem extends AbstractModel
 {
@@ -33,13 +33,13 @@ class TimingDataItem extends AbstractModel
     public $Timestamp;
 
     /**
-     * @var integer The value.
+     * @var integer Specific values.
      */
     public $Value;
 
     /**
      * @param integer $Timestamp Time point for returning data, in the format of Unix timestamp in seconds.
-     * @param integer $Value The value.
+     * @param integer $Value Specific values.
      */
     function __construct()
     {

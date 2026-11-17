@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) Set <p>Sorting method (case insensitive): ASC for ascending order; DESC for descending order</p>
  * @method string getBy() Obtain <p>Sort column: ModifyTime</p>
  * @method void setBy(string $By) Set <p>Sort column: ModifyTime</p>
+ * @method RuleContentFileOperation getFileOperationRules() Obtain <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+ * @method void setFileOperationRules(RuleContentFileOperation $FileOperationRules) Set <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
  */
 class ExportEDRRulesRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ExportEDRRulesRequest extends AbstractModel
     public $By;
 
     /**
+     * @var RuleContentFileOperation <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+     */
+    public $FileOperationRules;
+
+    /**
      * @param array $MemberId <p>Group account member id</p>
      * @param array $Filters <p>Filter criteria: Name, RuleContent, RuleType, ContentType, Action, Level, DetectMode, DetectType, AttackStage, Status</p>
      * @param string $Order <p>Sorting method (case insensitive): ASC for ascending order; DESC for descending order</p>
      * @param string $By <p>Sort column: ModifyTime</p>
+     * @param RuleContentFileOperation $FileOperationRules <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
      */
     function __construct()
     {
@@ -89,6 +97,11 @@ class ExportEDRRulesRequest extends AbstractModel
 
         if (array_key_exists("By",$param) and $param["By"] !== null) {
             $this->By = $param["By"];
+        }
+
+        if (array_key_exists("FileOperationRules",$param) and $param["FileOperationRules"] !== null) {
+            $this->FileOperationRules = new RuleContentFileOperation();
+            $this->FileOperationRules->deserialize($param["FileOperationRules"]);
         }
     }
 }

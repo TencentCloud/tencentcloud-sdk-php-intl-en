@@ -20,110 +20,110 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Vulnerability repair task list item
  *
- * @method integer getId() Obtain Primary key ID of the fix task
- * @method void setId(integer $Id) Set Primary key ID of the fix task
- * @method integer getTaskId() Obtain Task ID, hash flag for interactive
- * @method void setTaskId(integer $TaskId) Set Task ID, hash flag for interactive
- * @method string getJobId() Obtain JobId, corresponding to the Task ID of the task system.
- * @method void setJobId(string $JobId) Set JobId, corresponding to the Task ID of the task system.
- * @method array getVulIds() Obtain List of vulnerability IDs to be fixed
- * @method void setVulIds(array $VulIds) Set List of vulnerability IDs to be fixed
- * @method array getKBIds() Obtain List of fixed KB patch IDs
- * @method void setKBIds(array $KBIds) Set List of fixed KB patch IDs
- * @method integer getAssetCount() Obtain Repair the total number of assets
- * @method void setAssetCount(integer $AssetCount) Set Repair the total number of assets
+ * @method integer getId() Obtain Primary key ID of the repair task
+ * @method void setId(integer $Id) Set Primary key ID of the repair task
+ * @method integer getTaskId() Obtain Task ID, a hash flag for interaction.
+ * @method void setTaskId(integer $TaskId) Set Task ID, a hash flag for interaction.
+ * @method string getJobId() Obtain Task JobId, corresponding to the task ID in the task system.
+ * @method void setJobId(string $JobId) Set Task JobId, corresponding to the task ID in the task system.
+ * @method array getVulIds() Obtain List of fixed vulnerability IDs
+ * @method void setVulIds(array $VulIds) Set List of fixed vulnerability IDs
+ * @method array getKBIds() Obtain List of repaired KB patch IDs
+ * @method void setKBIds(array $KBIds) Set List of repaired KB patch IDs
+ * @method integer getAssetCount() Obtain Total number of repaired assets
+ * @method void setAssetCount(integer $AssetCount) Set Total number of repaired assets
  * @method integer getSuccessCount() Obtain Number of successfully fixed hosts
  * @method void setSuccessCount(integer $SuccessCount) Set Number of successfully fixed hosts
  * @method integer getFailCount() Obtain Number of hosts failed to be fixed
  * @method void setFailCount(integer $FailCount) Set Number of hosts failed to be fixed
- * @method integer getProgress() Obtain Progress percentage of the repair
-Valid values: [0, 100]
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
- * @method void setProgress(integer $Progress) Set Progress percentage of the repair
-Valid values: [0, 100]
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
- * @method integer getTargetAppIdsCount() Obtain Number of users in the fix task
- * @method void setTargetAppIdsCount(integer $TargetAppIdsCount) Set Number of users in the fix task
+ * @method integer getProgress() Obtain Repair progress percentage
+Valid values: [0, 100].
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
+ * @method void setProgress(integer $Progress) Set Repair progress percentage
+Valid values: [0, 100].
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
+ * @method integer getTargetAppIdsCount() Obtain Number of users for fix tasks
+ * @method void setTargetAppIdsCount(integer $TargetAppIdsCount) Set Number of users for fix tasks
  * @method integer getFixStatus() Obtain Remediation status
-Enumeration value:
+Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partial fix failure
 4: All fix failures
 5: Stop repair
  * @method void setFixStatus(integer $FixStatus) Set Remediation status
-Enumeration value:
+Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partial fix failure
 4: All fix failures
 5: Stop repair
  * @method integer getTimeout() Obtain Maximum repair time
 Unit: seconds.
  * @method void setTimeout(integer $Timeout) Set Maximum repair time
 Unit: seconds.
- * @method string getStartTime() Obtain Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
- * @method void setStartTime(string $StartTime) Set Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
- * @method string getEndTime() Obtain Fix end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
- * @method void setEndTime(string $EndTime) Set Fix end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+ * @method string getStartTime() Obtain Repair startup time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+ * @method void setStartTime(string $StartTime) Set Repair startup time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+ * @method string getEndTime() Obtain Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+ * @method void setEndTime(string $EndTime) Set Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
  * @method string getCreateTime() Obtain Record creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
  * @method void setCreateTime(string $CreateTime) Set Record creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
- * @method array getVulNames() Obtain List of vulnerability names to be fixed, making it easy to show directly on the list page
- * @method void setVulNames(array $VulNames) Set List of vulnerability names to be fixed, making it easy to show directly on the list page
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+ * @method array getVulNames() Obtain List of names of repaired vulnerabilities, making it easy to show directly on the list page
+ * @method void setVulNames(array $VulNames) Set List of names of repaired vulnerabilities, making it easy to show directly on the list page
  * @method array getVulCategory() Obtain Vulnerability Type List
-Enumeration values:
+Enumeration value:
 LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
+WINDOWS: WINDOWS system patch vulnerabilities
+WEB_CMS: Web-CMS vulnerability
 APPLICATION: Application vulnerability
 EMERGENCY: Urgent vulnerability
  * @method void setVulCategory(array $VulCategory) Set Vulnerability Type List
-Enumeration values:
+Enumeration value:
 LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
+WINDOWS: WINDOWS system patch vulnerabilities
+WEB_CMS: Web-CMS vulnerability
 APPLICATION: Application vulnerability
 EMERGENCY: Urgent vulnerability
- * @method integer getAppId() Obtain Creator AppId
- * @method void setAppId(integer $AppId) Set Creator AppId
+ * @method integer getAppId() Obtain Creator `AppId`
+ * @method void setAppId(integer $AppId) Set Creator `AppId`
  */
 class VulFixTaskItem extends AbstractModel
 {
     /**
-     * @var integer Primary key ID of the fix task
+     * @var integer Primary key ID of the repair task
      */
     public $Id;
 
     /**
-     * @var integer Task ID, hash flag for interactive
+     * @var integer Task ID, a hash flag for interaction.
      */
     public $TaskId;
 
     /**
-     * @var string JobId, corresponding to the Task ID of the task system.
+     * @var string Task JobId, corresponding to the task ID in the task system.
      */
     public $JobId;
 
     /**
-     * @var array List of vulnerability IDs to be fixed
+     * @var array List of fixed vulnerability IDs
      */
     public $VulIds;
 
     /**
-     * @var array List of fixed KB patch IDs
+     * @var array List of repaired KB patch IDs
      */
     public $KBIds;
 
     /**
-     * @var integer Repair the total number of assets
+     * @var integer Total number of repaired assets
      */
     public $AssetCount;
 
@@ -138,24 +138,24 @@ class VulFixTaskItem extends AbstractModel
     public $FailCount;
 
     /**
-     * @var integer Progress percentage of the repair
-Valid values: [0, 100]
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
+     * @var integer Repair progress percentage
+Valid values: [0, 100].
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
      */
     public $Progress;
 
     /**
-     * @var integer Number of users in the fix task
+     * @var integer Number of users for fix tasks
      */
     public $TargetAppIdsCount;
 
     /**
      * @var integer Remediation status
-Enumeration value:
+Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partial fix failure
 4: All fix failures
 5: Stop repair
      */
@@ -168,82 +168,82 @@ Unit: seconds.
     public $Timeout;
 
     /**
-     * @var string Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * @var string Repair startup time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public $StartTime;
 
     /**
-     * @var string Fix end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * @var string Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public $EndTime;
 
     /**
      * @var string Record creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public $CreateTime;
 
     /**
-     * @var array List of vulnerability names to be fixed, making it easy to show directly on the list page
+     * @var array List of names of repaired vulnerabilities, making it easy to show directly on the list page
      */
     public $VulNames;
 
     /**
      * @var array Vulnerability Type List
-Enumeration values:
+Enumeration value:
 LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
+WINDOWS: WINDOWS system patch vulnerabilities
+WEB_CMS: Web-CMS vulnerability
 APPLICATION: Application vulnerability
 EMERGENCY: Urgent vulnerability
      */
     public $VulCategory;
 
     /**
-     * @var integer Creator AppId
+     * @var integer Creator `AppId`
      */
     public $AppId;
 
     /**
-     * @param integer $Id Primary key ID of the fix task
-     * @param integer $TaskId Task ID, hash flag for interactive
-     * @param string $JobId JobId, corresponding to the Task ID of the task system.
-     * @param array $VulIds List of vulnerability IDs to be fixed
-     * @param array $KBIds List of fixed KB patch IDs
-     * @param integer $AssetCount Repair the total number of assets
+     * @param integer $Id Primary key ID of the repair task
+     * @param integer $TaskId Task ID, a hash flag for interaction.
+     * @param string $JobId Task JobId, corresponding to the task ID in the task system.
+     * @param array $VulIds List of fixed vulnerability IDs
+     * @param array $KBIds List of repaired KB patch IDs
+     * @param integer $AssetCount Total number of repaired assets
      * @param integer $SuccessCount Number of successfully fixed hosts
      * @param integer $FailCount Number of hosts failed to be fixed
-     * @param integer $Progress Progress percentage of the repair
-Valid values: [0, 100]
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
-     * @param integer $TargetAppIdsCount Number of users in the fix task
+     * @param integer $Progress Repair progress percentage
+Valid values: [0, 100].
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
+     * @param integer $TargetAppIdsCount Number of users for fix tasks
      * @param integer $FixStatus Remediation status
-Enumeration value:
+Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partial fix failure
 4: All fix failures
 5: Stop repair
      * @param integer $Timeout Maximum repair time
 Unit: seconds.
-     * @param string $StartTime Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-     * @param string $EndTime Fix end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * @param string $StartTime Repair startup time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+     * @param string $EndTime Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      * @param string $CreateTime Record creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-     * @param array $VulNames List of vulnerability names to be fixed, making it easy to show directly on the list page
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+     * @param array $VulNames List of names of repaired vulnerabilities, making it easy to show directly on the list page
      * @param array $VulCategory Vulnerability Type List
-Enumeration values:
+Enumeration value:
 LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
+WINDOWS: WINDOWS system patch vulnerabilities
+WEB_CMS: Web-CMS vulnerability
 APPLICATION: Application vulnerability
 EMERGENCY: Urgent vulnerability
-     * @param integer $AppId Creator AppId
+     * @param integer $AppId Creator `AppId`
      */
     function __construct()
     {

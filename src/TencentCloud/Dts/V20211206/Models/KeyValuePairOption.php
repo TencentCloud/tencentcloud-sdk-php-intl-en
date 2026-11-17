@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Additional configuration information
  *
- * @method string getKey() Obtain Option key
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setKey(string $Key) Set Option key
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getValue() Obtain Option value
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setValue(string $Value) Set Option value
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getKey() Obtain Option key.
+ * @method void setKey(string $Key) Set Option key.
+ * @method string getValue() Obtain Option value.
+ * @method void setValue(string $Value) Set Option value.
  */
 class KeyValuePairOption extends AbstractModel
 {
     /**
-     * @var string Option key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Option key.
      */
     public $Key;
 
     /**
-     * @var string Option value
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Option value.
      */
     public $Value;
 
     /**
-     * @param string $Key Option key
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Value Option value
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Key Option key.
+     * @param string $Value Option value.
      */
     function __construct()
     {

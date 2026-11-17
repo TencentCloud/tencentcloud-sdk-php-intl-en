@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Filter array
  *
- * @method string getName() Obtain Field name, used for filtering
+ * @method string getName() Obtain Field name; Filter
 Filter the sub-order number (value) by DealName.
- * @method void setName(string $Name) Set Field name, used for filtering
+ * @method void setName(string $Name) Set Field name; Filter
 Filter the sub-order number (value) by DealName.
  * @method array getValues() Obtain Values after filtering
  * @method void setValues(array $Values) Set Values after filtering
@@ -32,7 +32,7 @@ Filter the sub-order number (value) by DealName.
 class FiltersItemNew extends AbstractModel
 {
     /**
-     * @var string Field name, used for filtering
+     * @var string Field name; Filter
 Filter the sub-order number (value) by DealName.
      */
     public $Name;
@@ -48,7 +48,7 @@ Filter the sub-order number (value) by DealName.
     public $ExactMatch;
 
     /**
-     * @param string $Name Field name, used for filtering
+     * @param string $Name Field name; Filter
 Filter the sub-order number (value) by DealName.
      * @param array $Values Values after filtering
      * @param boolean $ExactMatch Exact search or not

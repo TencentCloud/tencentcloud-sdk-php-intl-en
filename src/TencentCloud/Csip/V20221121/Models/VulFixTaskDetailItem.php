@@ -18,16 +18,16 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Vulnerability repair task details
+ * Vulnerability repair task details item
  *
  * @method integer getId() Obtain <p>Detailed record ID</p>
  * @method void setId(integer $Id) Set <p>Detailed record ID</p>
  * @method integer getTaskId() Obtain <p>Associated repair task ID</p>
  * @method void setTaskId(integer $TaskId) Set <p>Associated repair task ID</p>
- * @method integer getVulId() Obtain <p>Vulnerability ID to be repaired</p>
- * @method void setVulId(integer $VulId) Set <p>Vulnerability ID to be repaired</p>
- * @method integer getKBId() Obtain <p>Patch ID of the fixed KB</p>
- * @method void setKBId(integer $KBId) Set <p>Patch ID of the fixed KB</p>
+ * @method integer getVulId() Obtain <p>ID of the repaired vulnerability</p>
+ * @method void setVulId(integer $VulId) Set <p>ID of the repaired vulnerability</p>
+ * @method integer getKBId() Obtain <p>KB patch ID repaired</p>
+ * @method void setKBId(integer $KBId) Set <p>KB patch ID repaired</p>
  * @method string getInstanceId() Obtain <p>Host instance ID.</p>
  * @method void setInstanceId(string $InstanceId) Set <p>Host instance ID.</p>
  * @method string getMachineName() Obtain <p>Host name.</p>
@@ -36,24 +36,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineIp(string $MachineIp) Set <p>Host private IP address.</p>
  * @method string getVulName() Obtain <p>Vulnerability name</p>
  * @method void setVulName(string $VulName) Set <p>Vulnerability name</p>
- * @method integer getStatus() Obtain <p>Execution status<br>Enumeration value:<br>0: Initial state<br>1: Task issued<br>11: Client confirmed<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failure<br>6: Unsupported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
- * @method void setStatus(integer $Status) Set <p>Execution status<br>Enumeration value:<br>0: Initial state<br>1: Task issued<br>11: Client confirmed<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failure<br>6: Unsupported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
- * @method integer getFixStatus() Obtain <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial state</li><li>1: repair successful</li><li>2: fix failure</li><li>3: fix</li></ul>
- * @method void setFixStatus(integer $FixStatus) Set <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial state</li><li>1: repair successful</li><li>2: fix failure</li><li>3: fix</li></ul>
- * @method integer getSnapshotStatus() Obtain <p>Snapshot status<br>Enumeration value:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
- * @method void setSnapshotStatus(integer $SnapshotStatus) Set <p>Snapshot status<br>Enumeration value:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
+ * @method integer getStatus() Obtain <p>Execution status<br>Enumeration values:<br>0: Initial status<br>1: Task issued<br>11: Confirmed by client<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failed<br>6: Not supported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
+ * @method void setStatus(integer $Status) Set <p>Execution status<br>Enumeration values:<br>0: Initial status<br>1: Task issued<br>11: Confirmed by client<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failed<br>6: Not supported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
+ * @method integer getFixStatus() Obtain <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial status</li><li>1: successful fix</li><li>2: fix failure</li><li>3: in remediation</li></ul>
+ * @method void setFixStatus(integer $FixStatus) Set <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial status</li><li>1: successful fix</li><li>2: fix failure</li><li>3: in remediation</li></ul>
+ * @method integer getSnapshotStatus() Obtain <p>Snapshot status<br>Enumeration values:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
+ * @method void setSnapshotStatus(integer $SnapshotStatus) Set <p>Snapshot status<br>Enumeration values:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
  * @method string getExceptionMessage() Obtain <p>Exception prompt message</p>
  * @method void setExceptionMessage(string $ExceptionMessage) Set <p>Exception prompt message</p>
- * @method string getStartTime() Obtain <p>Repair startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
- * @method void setStartTime(string $StartTime) Set <p>Repair startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+ * @method string getStartTime() Obtain <p>Recovery startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+ * @method void setStartTime(string $StartTime) Set <p>Recovery startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
  * @method string getEndTime() Obtain <p>Repair end time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
  * @method void setEndTime(string $EndTime) Set <p>Repair end time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
  * @method string getSnapshotCreateTime() Obtain <p>Snapshot creation time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
  * @method void setSnapshotCreateTime(string $SnapshotCreateTime) Set <p>Snapshot creation time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
  * @method string getSnapshotExpireTime() Obtain <p>Snapshot expiration time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
  * @method void setSnapshotExpireTime(string $SnapshotExpireTime) Set <p>Snapshot expiration time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
- * @method string getSnapshotFailReason() Obtain <p>Snapshot creation failure reason (available when SnapshotStatus=3)</p>
- * @method void setSnapshotFailReason(string $SnapshotFailReason) Set <p>Snapshot creation failure reason (available when SnapshotStatus=3)</p>
+ * @method string getSnapshotFailReason() Obtain <p>Snapshot creation failure reason (valid when SnapshotStatus=3)</p>
+ * @method void setSnapshotFailReason(string $SnapshotFailReason) Set <p>Snapshot creation failure reason (valid when SnapshotStatus=3)</p>
  */
 class VulFixTaskDetailItem extends AbstractModel
 {
@@ -68,12 +68,12 @@ class VulFixTaskDetailItem extends AbstractModel
     public $TaskId;
 
     /**
-     * @var integer <p>Vulnerability ID to be repaired</p>
+     * @var integer <p>ID of the repaired vulnerability</p>
      */
     public $VulId;
 
     /**
-     * @var integer <p>Patch ID of the fixed KB</p>
+     * @var integer <p>KB patch ID repaired</p>
      */
     public $KBId;
 
@@ -98,17 +98,17 @@ class VulFixTaskDetailItem extends AbstractModel
     public $VulName;
 
     /**
-     * @var integer <p>Execution status<br>Enumeration value:<br>0: Initial state<br>1: Task issued<br>11: Client confirmed<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failure<br>6: Unsupported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
+     * @var integer <p>Execution status<br>Enumeration values:<br>0: Initial status<br>1: Task issued<br>11: Confirmed by client<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failed<br>6: Not supported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
      */
     public $Status;
 
     /**
-     * @var integer <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial state</li><li>1: repair successful</li><li>2: fix failure</li><li>3: fix</li></ul>
+     * @var integer <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial status</li><li>1: successful fix</li><li>2: fix failure</li><li>3: in remediation</li></ul>
      */
     public $FixStatus;
 
     /**
-     * @var integer <p>Snapshot status<br>Enumeration value:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
+     * @var integer <p>Snapshot status<br>Enumeration values:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
      */
     public $SnapshotStatus;
 
@@ -118,7 +118,7 @@ class VulFixTaskDetailItem extends AbstractModel
     public $ExceptionMessage;
 
     /**
-     * @var string <p>Repair startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+     * @var string <p>Recovery startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
      */
     public $StartTime;
 
@@ -138,28 +138,28 @@ class VulFixTaskDetailItem extends AbstractModel
     public $SnapshotExpireTime;
 
     /**
-     * @var string <p>Snapshot creation failure reason (available when SnapshotStatus=3)</p>
+     * @var string <p>Snapshot creation failure reason (valid when SnapshotStatus=3)</p>
      */
     public $SnapshotFailReason;
 
     /**
      * @param integer $Id <p>Detailed record ID</p>
      * @param integer $TaskId <p>Associated repair task ID</p>
-     * @param integer $VulId <p>Vulnerability ID to be repaired</p>
-     * @param integer $KBId <p>Patch ID of the fixed KB</p>
+     * @param integer $VulId <p>ID of the repaired vulnerability</p>
+     * @param integer $KBId <p>KB patch ID repaired</p>
      * @param string $InstanceId <p>Host instance ID.</p>
      * @param string $MachineName <p>Host name.</p>
      * @param string $MachineIp <p>Host private IP address.</p>
      * @param string $VulName <p>Vulnerability name</p>
-     * @param integer $Status <p>Execution status<br>Enumeration value:<br>0: Initial state<br>1: Task issued<br>11: Client confirmed<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failure<br>6: Unsupported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
-     * @param integer $FixStatus <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial state</li><li>1: repair successful</li><li>2: fix failure</li><li>3: fix</li></ul>
-     * @param integer $SnapshotStatus <p>Snapshot status<br>Enumeration value:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
+     * @param integer $Status <p>Execution status<br>Enumeration values:<br>0: Initial status<br>1: Task issued<br>11: Confirmed by client<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failed<br>6: Not supported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
+     * @param integer $FixStatus <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial status</li><li>1: successful fix</li><li>2: fix failure</li><li>3: in remediation</li></ul>
+     * @param integer $SnapshotStatus <p>Snapshot status<br>Enumeration values:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
      * @param string $ExceptionMessage <p>Exception prompt message</p>
-     * @param string $StartTime <p>Repair startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+     * @param string $StartTime <p>Recovery startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
      * @param string $EndTime <p>Repair end time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
      * @param string $SnapshotCreateTime <p>Snapshot creation time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
      * @param string $SnapshotExpireTime <p>Snapshot expiration time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
-     * @param string $SnapshotFailReason <p>Snapshot creation failure reason (available when SnapshotStatus=3)</p>
+     * @param string $SnapshotFailReason <p>Snapshot creation failure reason (valid when SnapshotStatus=3)</p>
      */
     function __construct()
     {

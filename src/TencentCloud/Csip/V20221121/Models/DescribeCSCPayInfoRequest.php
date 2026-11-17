@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCSCPayInfo request structure.
  *
-
+ * @method array getMemberId() Obtain 
+ * @method void setMemberId(array $MemberId) Set 
+ * @method boolean getNeedQuotaUsed() Obtain 
+ * @method void setNeedQuotaUsed(boolean $NeedQuotaUsed) Set 
  */
 class DescribeCSCPayInfoRequest extends AbstractModel
 {
-
+    /**
+     * @var array 
+     */
+    public $MemberId;
 
     /**
+     * @var boolean 
+     */
+    public $NeedQuotaUsed;
 
+    /**
+     * @param array $MemberId 
+     * @param boolean $NeedQuotaUsed 
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeCSCPayInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
+        }
 
+        if (array_key_exists("NeedQuotaUsed",$param) and $param["NeedQuotaUsed"] !== null) {
+            $this->NeedQuotaUsed = $param["NeedQuotaUsed"];
+        }
     }
 }

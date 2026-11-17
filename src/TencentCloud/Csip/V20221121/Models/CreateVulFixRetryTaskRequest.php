@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVulFixRetryTask request structure.
  *
- * @method integer getTaskId() Obtain <p>Repair task ID that needs to be retried</p>
- * @method void setTaskId(integer $TaskId) Set <p>Repair task ID that needs to be retried</p>
- * @method array getInstanceIds() Obtain <p>Specify the list of host instance IDs that need to retry. If not passed, retry all failed hosts.</p>
- * @method void setInstanceIds(array $InstanceIds) Set <p>Specify the list of host instance IDs that need to retry. If not passed, retry all failed hosts.</p>
+ * @method integer getTaskId() Obtain <p>Repair task ID that needs to retry</p>
+ * @method void setTaskId(integer $TaskId) Set <p>Repair task ID that needs to retry</p>
+ * @method array getInstanceIds() Obtain <p>Specify the instance ID list of the host that needs to retry. If not passed, retry all failed hosts.</p>
+ * @method void setInstanceIds(array $InstanceIds) Set <p>Specify the instance ID list of the host that needs to retry. If not passed, retry all failed hosts.</p>
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  */
 class CreateVulFixRetryTaskRequest extends AbstractModel
 {
     /**
-     * @var integer <p>Repair task ID that needs to be retried</p>
+     * @var integer <p>Repair task ID that needs to retry</p>
      */
     public $TaskId;
 
     /**
-     * @var array <p>Specify the list of host instance IDs that need to retry. If not passed, retry all failed hosts.</p>
+     * @var array <p>Specify the instance ID list of the host that needs to retry. If not passed, retry all failed hosts.</p>
      */
     public $InstanceIds;
 
@@ -45,8 +45,8 @@ class CreateVulFixRetryTaskRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @param integer $TaskId <p>Repair task ID that needs to be retried</p>
-     * @param array $InstanceIds <p>Specify the list of host instance IDs that need to retry. If not passed, retry all failed hosts.</p>
+     * @param integer $TaskId <p>Repair task ID that needs to retry</p>
+     * @param array $InstanceIds <p>Specify the instance ID list of the host that needs to retry. If not passed, retry all failed hosts.</p>
      * @param array $MemberId Group Account Member ID
      */
     function __construct()

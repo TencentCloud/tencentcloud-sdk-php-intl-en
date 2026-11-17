@@ -20,63 +20,65 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVulScanPeriodic response structure.
  *
- * @method integer getStatus() Obtain <p>Period scanning switch (0-off, 1-on)</p>
- * @method void setStatus(integer $Status) Set <p>Period scanning switch (0-off, 1-on)</p>
- * @method array getVulCategory() Obtain <p>Vulnerability type</p><p>Enumeration value:</p><ul><li>LINUX: Linux software vulnerability</li><li>WINDOWS: Windows system patch</li><li>WEB_CMS: Web-CMS vulnerability</li><li>APPLICATION: Application vulnerability</li><li>EMERGENCY: Emergency vulnerability</li></ul>
- * @method void setVulCategory(array $VulCategory) Set <p>Vulnerability type</p><p>Enumeration value:</p><ul><li>LINUX: Linux software vulnerability</li><li>WINDOWS: Windows system patch</li><li>WEB_CMS: Web-CMS vulnerability</li><li>APPLICATION: Application vulnerability</li><li>EMERGENCY: Emergency vulnerability</li></ul>
- * @method array getLevel() Obtain <p>Vulnerability level (INVALID: Invalid, INFO: Notification, LOW: Low risk, MEDIUM: Medium risk, HIGH: High risk, CRITICAL: Critical)</p>
- * @method void setLevel(array $Level) Set <p>Vulnerability level (INVALID: Invalid, INFO: Notification, LOW: Low risk, MEDIUM: Medium risk, HIGH: High risk, CRITICAL: Critical)</p>
- * @method string getMethod() Obtain <p>Scanning method (VersionCompare: version comparison, POC: POC detection, VersionComparePOC: version p comparison+POC detection)</p>
- * @method void setMethod(string $Method) Set <p>Scanning method (VersionCompare: version comparison, POC: POC detection, VersionComparePOC: version p comparison+POC detection)</p>
- * @method integer getCycleType() Obtain <p>Period scanning type</p><p>Enumeration value:</p><ul><li>1: Daily</li><li>2: Weekly</li><li>3: Per month</li></ul>
- * @method void setCycleType(integer $CycleType) Set <p>Period scanning type</p><p>Enumeration value:</p><ul><li>1: Daily</li><li>2: Weekly</li><li>3: Per month</li></ul>
+ * @method integer getStatus() Obtain <p>Periodic scan switch (0-Disable, 1-Enable)</p>
+ * @method void setStatus(integer $Status) Set <p>Periodic scan switch (0-Disable, 1-Enable)</p>
+ * @method array getVulCategory() Obtain <p>Vulnerability type</p><p>Enumeration values:</p><ul><li>LINUX: Linux software vulnerability</li><li>WINDOWS: Windows system patch</li><li>WEB_CMS: Web-CMS vulnerability</li><li>APPLICATION: Application vulnerability</li><li>EMERGENCY: Emergency vulnerability</li></ul>
+ * @method void setVulCategory(array $VulCategory) Set <p>Vulnerability type</p><p>Enumeration values:</p><ul><li>LINUX: Linux software vulnerability</li><li>WINDOWS: Windows system patch</li><li>WEB_CMS: Web-CMS vulnerability</li><li>APPLICATION: Application vulnerability</li><li>EMERGENCY: Emergency vulnerability</li></ul>
+ * @method array getLevel() Obtain <p>Vulnerability level (INVALID: invalid, INFO: notification, LOW: low risk, MEDIUM: medium risk, HIGH: high risk, CRITICAL: critical)</p>
+ * @method void setLevel(array $Level) Set <p>Vulnerability level (INVALID: invalid, INFO: notification, LOW: low risk, MEDIUM: medium risk, HIGH: high risk, CRITICAL: critical)</p>
+ * @method string getMethod() Obtain <p>Scan mode (VersionCompare: version comparison, POC: POC detection, VersionComparePOC: version comparison + POC detection)</p>
+ * @method void setMethod(string $Method) Set <p>Scan mode (VersionCompare: version comparison, POC: POC detection, VersionComparePOC: version comparison + POC detection)</p>
+ * @method integer getCycleType() Obtain <p>Periodic scan type</p><p>Enumeration values:</p><ul><li>1: Daily</li><li>2: Weekly</li><li>3: Per month</li></ul>
+ * @method void setCycleType(integer $CycleType) Set <p>Periodic scan type</p><p>Enumeration values:</p><ul><li>1: Daily</li><li>2: Weekly</li><li>3: Per month</li></ul>
  * @method string getStartTime() Obtain <p>Start time (09:00:00)</p>
  * @method void setStartTime(string $StartTime) Set <p>Start time (09:00:00)</p>
  * @method string getEndTime() Obtain <p>End time (18:00:00)</p>
  * @method void setEndTime(string $EndTime) Set <p>End time (18:00:00)</p>
- * @method integer getAssetRange() Obtain <p>Asset scope (0-All assets, 1-Custom assets, 2-Remove asset)</p>
- * @method void setAssetRange(integer $AssetRange) Set <p>Asset scope (0-All assets, 1-Custom assets, 2-Remove asset)</p>
+ * @method integer getAssetRange() Obtain <p>Asset scope (0 - all assets, 1 - custom asset, 2 - remove asset)</p>
+ * @method void setAssetRange(integer $AssetRange) Set <p>Asset scope (0 - all assets, 1 - custom asset, 2 - remove asset)</p>
  * @method array getAssetList() Obtain <p>Asset list (instance_id list)</p>
  * @method void setAssetList(array $AssetList) Set <p>Asset list (instance_id list)</p>
- * @method array getCycleValue() Obtain <p>Period value</p><p>Unit: Day of the week or day of the month</p>
- * @method void setCycleValue(array $CycleValue) Set <p>Period value</p><p>Unit: Day of the week or day of the month</p>
- * @method integer getTimeout() Obtain <p>Timeout duration</p><p>Unit: second</p>
- * @method void setTimeout(integer $Timeout) Set <p>Timeout duration</p><p>Unit: second</p>
- * @method integer getAllowSync() Obtain <p>Whether to synchronize configuration 0-cannot, 1-permission</p>
- * @method void setAllowSync(integer $AllowSync) Set <p>Whether to synchronize configuration 0-cannot, 1-permission</p>
- * @method integer getEnableSync() Obtain <p>Whether the admin account has the automated configuration synchronization switch enabled 0-Off, 1-On</p>
- * @method void setEnableSync(integer $EnableSync) Set <p>Whether the admin account has the automated configuration synchronization switch enabled 0-Off, 1-On</p>
- * @method AccountBriefInfo getAdminInfo() Obtain <p>Which account the configuration message comes from. Being empty indicates set by oneself.</p>
- * @method void setAdminInfo(AccountBriefInfo $AdminInfo) Set <p>Which account the configuration message comes from. Being empty indicates set by oneself.</p>
- * @method array getTagIds() Obtain <p>tag id</p>
- * @method void setTagIds(array $TagIds) Set <p>tag id</p>
+ * @method array getCycleValue() Obtain <p>Cycle value</p><p>Unit: day of the week or day per month</p>
+ * @method void setCycleValue(array $CycleValue) Set <p>Cycle value</p><p>Unit: day of the week or day per month</p>
+ * @method integer getTimeout() Obtain <p>Timeout duration</p><p>Unit: seconds</p>
+ * @method void setTimeout(integer $Timeout) Set <p>Timeout duration</p><p>Unit: seconds</p>
+ * @method integer getAllowSync() Obtain <p>Whether to run the synchronized configuration. 0: not allowed, 1: allowed</p>
+ * @method void setAllowSync(integer $AllowSync) Set <p>Whether to run the synchronized configuration. 0: not allowed, 1: allowed</p>
+ * @method integer getEnableSync() Obtain <p>Whether automatic synchronization is enabled for the admin account. 0: disabled, 1: enabled</p>
+ * @method void setEnableSync(integer $EnableSync) Set <p>Whether automatic synchronization is enabled for the admin account. 0: disabled, 1: enabled</p>
+ * @method AccountBriefInfo getAdminInfo() Obtain <p>Which account the configuration message comes from. Being empty indicates it is set by oneself.</p>
+ * @method void setAdminInfo(AccountBriefInfo $AdminInfo) Set <p>Which account the configuration message comes from. Being empty indicates it is set by oneself.</p>
+ * @method array getTagIds() Obtain <p>Tag id</p>
+ * @method void setTagIds(array $TagIds) Set <p>Tag id</p>
+ * @method boolean getPreferCloudSource() Obtain <p>Whether to prefer Tencent Cloud software sources</p>
+ * @method void setPreferCloudSource(boolean $PreferCloudSource) Set <p>Whether to prefer Tencent Cloud software sources</p>
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class DescribeVulScanPeriodicResponse extends AbstractModel
 {
     /**
-     * @var integer <p>Period scanning switch (0-off, 1-on)</p>
+     * @var integer <p>Periodic scan switch (0-Disable, 1-Enable)</p>
      */
     public $Status;
 
     /**
-     * @var array <p>Vulnerability type</p><p>Enumeration value:</p><ul><li>LINUX: Linux software vulnerability</li><li>WINDOWS: Windows system patch</li><li>WEB_CMS: Web-CMS vulnerability</li><li>APPLICATION: Application vulnerability</li><li>EMERGENCY: Emergency vulnerability</li></ul>
+     * @var array <p>Vulnerability type</p><p>Enumeration values:</p><ul><li>LINUX: Linux software vulnerability</li><li>WINDOWS: Windows system patch</li><li>WEB_CMS: Web-CMS vulnerability</li><li>APPLICATION: Application vulnerability</li><li>EMERGENCY: Emergency vulnerability</li></ul>
      */
     public $VulCategory;
 
     /**
-     * @var array <p>Vulnerability level (INVALID: Invalid, INFO: Notification, LOW: Low risk, MEDIUM: Medium risk, HIGH: High risk, CRITICAL: Critical)</p>
+     * @var array <p>Vulnerability level (INVALID: invalid, INFO: notification, LOW: low risk, MEDIUM: medium risk, HIGH: high risk, CRITICAL: critical)</p>
      */
     public $Level;
 
     /**
-     * @var string <p>Scanning method (VersionCompare: version comparison, POC: POC detection, VersionComparePOC: version p comparison+POC detection)</p>
+     * @var string <p>Scan mode (VersionCompare: version comparison, POC: POC detection, VersionComparePOC: version comparison + POC detection)</p>
      */
     public $Method;
 
     /**
-     * @var integer <p>Period scanning type</p><p>Enumeration value:</p><ul><li>1: Daily</li><li>2: Weekly</li><li>3: Per month</li></ul>
+     * @var integer <p>Periodic scan type</p><p>Enumeration values:</p><ul><li>1: Daily</li><li>2: Weekly</li><li>3: Per month</li></ul>
      */
     public $CycleType;
 
@@ -91,7 +93,7 @@ class DescribeVulScanPeriodicResponse extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer <p>Asset scope (0-All assets, 1-Custom assets, 2-Remove asset)</p>
+     * @var integer <p>Asset scope (0 - all assets, 1 - custom asset, 2 - remove asset)</p>
      */
     public $AssetRange;
 
@@ -101,34 +103,39 @@ class DescribeVulScanPeriodicResponse extends AbstractModel
     public $AssetList;
 
     /**
-     * @var array <p>Period value</p><p>Unit: Day of the week or day of the month</p>
+     * @var array <p>Cycle value</p><p>Unit: day of the week or day per month</p>
      */
     public $CycleValue;
 
     /**
-     * @var integer <p>Timeout duration</p><p>Unit: second</p>
+     * @var integer <p>Timeout duration</p><p>Unit: seconds</p>
      */
     public $Timeout;
 
     /**
-     * @var integer <p>Whether to synchronize configuration 0-cannot, 1-permission</p>
+     * @var integer <p>Whether to run the synchronized configuration. 0: not allowed, 1: allowed</p>
      */
     public $AllowSync;
 
     /**
-     * @var integer <p>Whether the admin account has the automated configuration synchronization switch enabled 0-Off, 1-On</p>
+     * @var integer <p>Whether automatic synchronization is enabled for the admin account. 0: disabled, 1: enabled</p>
      */
     public $EnableSync;
 
     /**
-     * @var AccountBriefInfo <p>Which account the configuration message comes from. Being empty indicates set by oneself.</p>
+     * @var AccountBriefInfo <p>Which account the configuration message comes from. Being empty indicates it is set by oneself.</p>
      */
     public $AdminInfo;
 
     /**
-     * @var array <p>tag id</p>
+     * @var array <p>Tag id</p>
      */
     public $TagIds;
+
+    /**
+     * @var boolean <p>Whether to prefer Tencent Cloud software sources</p>
+     */
+    public $PreferCloudSource;
 
     /**
      * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -136,21 +143,22 @@ class DescribeVulScanPeriodicResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status <p>Period scanning switch (0-off, 1-on)</p>
-     * @param array $VulCategory <p>Vulnerability type</p><p>Enumeration value:</p><ul><li>LINUX: Linux software vulnerability</li><li>WINDOWS: Windows system patch</li><li>WEB_CMS: Web-CMS vulnerability</li><li>APPLICATION: Application vulnerability</li><li>EMERGENCY: Emergency vulnerability</li></ul>
-     * @param array $Level <p>Vulnerability level (INVALID: Invalid, INFO: Notification, LOW: Low risk, MEDIUM: Medium risk, HIGH: High risk, CRITICAL: Critical)</p>
-     * @param string $Method <p>Scanning method (VersionCompare: version comparison, POC: POC detection, VersionComparePOC: version p comparison+POC detection)</p>
-     * @param integer $CycleType <p>Period scanning type</p><p>Enumeration value:</p><ul><li>1: Daily</li><li>2: Weekly</li><li>3: Per month</li></ul>
+     * @param integer $Status <p>Periodic scan switch (0-Disable, 1-Enable)</p>
+     * @param array $VulCategory <p>Vulnerability type</p><p>Enumeration values:</p><ul><li>LINUX: Linux software vulnerability</li><li>WINDOWS: Windows system patch</li><li>WEB_CMS: Web-CMS vulnerability</li><li>APPLICATION: Application vulnerability</li><li>EMERGENCY: Emergency vulnerability</li></ul>
+     * @param array $Level <p>Vulnerability level (INVALID: invalid, INFO: notification, LOW: low risk, MEDIUM: medium risk, HIGH: high risk, CRITICAL: critical)</p>
+     * @param string $Method <p>Scan mode (VersionCompare: version comparison, POC: POC detection, VersionComparePOC: version comparison + POC detection)</p>
+     * @param integer $CycleType <p>Periodic scan type</p><p>Enumeration values:</p><ul><li>1: Daily</li><li>2: Weekly</li><li>3: Per month</li></ul>
      * @param string $StartTime <p>Start time (09:00:00)</p>
      * @param string $EndTime <p>End time (18:00:00)</p>
-     * @param integer $AssetRange <p>Asset scope (0-All assets, 1-Custom assets, 2-Remove asset)</p>
+     * @param integer $AssetRange <p>Asset scope (0 - all assets, 1 - custom asset, 2 - remove asset)</p>
      * @param array $AssetList <p>Asset list (instance_id list)</p>
-     * @param array $CycleValue <p>Period value</p><p>Unit: Day of the week or day of the month</p>
-     * @param integer $Timeout <p>Timeout duration</p><p>Unit: second</p>
-     * @param integer $AllowSync <p>Whether to synchronize configuration 0-cannot, 1-permission</p>
-     * @param integer $EnableSync <p>Whether the admin account has the automated configuration synchronization switch enabled 0-Off, 1-On</p>
-     * @param AccountBriefInfo $AdminInfo <p>Which account the configuration message comes from. Being empty indicates set by oneself.</p>
-     * @param array $TagIds <p>tag id</p>
+     * @param array $CycleValue <p>Cycle value</p><p>Unit: day of the week or day per month</p>
+     * @param integer $Timeout <p>Timeout duration</p><p>Unit: seconds</p>
+     * @param integer $AllowSync <p>Whether to run the synchronized configuration. 0: not allowed, 1: allowed</p>
+     * @param integer $EnableSync <p>Whether automatic synchronization is enabled for the admin account. 0: disabled, 1: enabled</p>
+     * @param AccountBriefInfo $AdminInfo <p>Which account the configuration message comes from. Being empty indicates it is set by oneself.</p>
+     * @param array $TagIds <p>Tag id</p>
+     * @param boolean $PreferCloudSource <p>Whether to prefer Tencent Cloud software sources</p>
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
@@ -225,6 +233,10 @@ class DescribeVulScanPeriodicResponse extends AbstractModel
 
         if (array_key_exists("TagIds",$param) and $param["TagIds"] !== null) {
             $this->TagIds = $param["TagIds"];
+        }
+
+        if (array_key_exists("PreferCloudSource",$param) and $param["PreferCloudSource"] !== null) {
+            $this->PreferCloudSource = $param["PreferCloudSource"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

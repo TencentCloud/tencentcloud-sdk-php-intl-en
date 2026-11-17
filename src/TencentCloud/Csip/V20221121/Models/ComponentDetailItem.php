@@ -18,12 +18,12 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Associated component & path description
+ * Associated component & path details
  *
  * @method string getName() Obtain Component name
  * @method void setName(string $Name) Set Component name
- * @method string getVersion() Obtain cache hit version
- * @method void setVersion(string $Version) Set cache hit version
+ * @method string getVersion() Obtain Hit version
+ * @method void setVersion(string $Version) Set Hit version
  * @method string getPath() Obtain Association path
  * @method void setPath(string $Path) Set Association path
  * @method string getFixCommand() Obtain Fix Command
@@ -37,7 +37,7 @@ class ComponentDetailItem extends AbstractModel
     public $Name;
 
     /**
-     * @var string cache hit version
+     * @var string Hit version
      */
     public $Version;
 
@@ -53,7 +53,7 @@ class ComponentDetailItem extends AbstractModel
 
     /**
      * @param string $Name Component name
-     * @param string $Version cache hit version
+     * @param string $Version Hit version
      * @param string $Path Association path
      * @param string $FixCommand Fix Command
      */

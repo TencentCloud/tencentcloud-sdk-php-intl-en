@@ -18,20 +18,20 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Additional details
+ * Additional detailed information
  *
- * @method array getRetrievalLivenessExtraInfo() Obtain Detailed information of the hit template, return only the template information with the highest similarity.
- * @method void setRetrievalLivenessExtraInfo(array $RetrievalLivenessExtraInfo) Set Detailed information of the hit template, return only the template information with the highest similarity.
+ * @method array getRetrievalLivenessExtraInfo() Obtain Detailed information of the matched template. Only the template with the highest similarity is returned.
+ * @method void setRetrievalLivenessExtraInfo(array $RetrievalLivenessExtraInfo) Set Detailed information of the matched template. Only the template with the highest similarity is returned.
  */
 class ExtraInfo extends AbstractModel
 {
     /**
-     * @var array Detailed information of the hit template, return only the template information with the highest similarity.
+     * @var array Detailed information of the matched template. Only the template with the highest similarity is returned.
      */
     public $RetrievalLivenessExtraInfo;
 
     /**
-     * @param array $RetrievalLivenessExtraInfo Detailed information of the hit template, return only the template information with the highest similarity.
+     * @param array $RetrievalLivenessExtraInfo Detailed information of the matched template. Only the template with the highest similarity is returned.
      */
     function __construct()
     {

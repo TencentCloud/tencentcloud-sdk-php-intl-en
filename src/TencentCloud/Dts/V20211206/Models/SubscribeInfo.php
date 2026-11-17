@@ -34,8 +34,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setInstanceId(string $InstanceId) Set The subscribed database instance ID (if the subscription is a cloud database). If the instance is not on Tencent Cloud, this value is empty.Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInstanceStatus() Obtain Cloud database status: running, isolated, offline. If it is not on the cloud, this value is empty.Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceStatus(string $InstanceStatus) Set Cloud database status: running, isolated, offline. If it is not on the cloud, this value is empty.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to monthly subscription).
- * @method void setStatus(string $Status) Set Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to monthly subscription).
+ * @method string getStatus() Obtain Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to yearly/monthly subscription).
+ * @method void setStatus(string $Status) Set Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to yearly/monthly subscription).
  * @method string getSubsStatus() Obtain Data subscription status. Valid values: notStarted, checking, checkNotPass, checkPass, starting, running, error.
  * @method void setSubsStatus(string $SubsStatus) Set Data subscription status. Valid values: notStarted, checking, checkNotPass, checkPass, starting, running, error.
  * @method string getModifyTime() Obtain Last modification time, the format is: Y-m-d h:m:s.Note: This field may return null, indicating that no valid values can be obtained.
@@ -44,8 +44,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setCreateTime(string $CreateTime) Set Creation time, the format is: Y-m-d h:m:s.Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getIsolateTime() Obtain Isolation time, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsolateTime(string $IsolateTime) Set Isolation time, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExpireTime() Obtain Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpireTime(string $ExpireTime) Set Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getExpireTime() Obtain Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExpireTime(string $ExpireTime) Set Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getOfflineTime() Obtain Offline time, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOfflineTime(string $OfflineTime) Set Offline time, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getPayType() Obtain Billing mode. 1: pay-as-you-go
@@ -66,6 +66,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setTags(array $Tags) Set TagNote: This field may return null, indicating that no valid values can be obtained.
  * @method array getErrors() Obtain Task error messageNote: This field may return null, indicating that no valid values can be obtained.
  * @method void setErrors(array $Errors) Set Task error messageNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceClass() Obtain Subscribe to instance specifications
+ * @method void setInstanceClass(string $InstanceClass) Set Subscribe to instance specifications
+ * @method string getConsumerRoutePhase() Obtain Routing Phase for the New Version of Subscription Consumption
+ * @method void setConsumerRoutePhase(string $ConsumerRoutePhase) Set Routing Phase for the New Version of Subscription Consumption
  */
 class SubscribeInfo extends AbstractModel
 {
@@ -101,7 +105,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $InstanceStatus;
 
     /**
-     * @var string Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to monthly subscription).
+     * @var string Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to yearly/monthly subscription).
      */
     public $Status;
 
@@ -126,7 +130,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsolateTime;
 
     /**
-     * @var string Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExpireTime;
 
@@ -177,6 +181,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Errors;
 
     /**
+     * @var string Subscribe to instance specifications
+     */
+    public $InstanceClass;
+
+    /**
+     * @var string Routing Phase for the New Version of Subscription Consumption
+     */
+    public $ConsumerRoutePhase;
+
+    /**
      * @param string $SubscribeId Data subscription instance ID
      * @param string $SubscribeName Data subscription instance name
      * @param string $Topic Kafka topic for data sent by the subscription instance
@@ -184,12 +198,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Product Subscription instance type. Currently, cynosdbmysql, mariadb, mongodb, mysql, percona, tdpg, tdsqlpercona are supported.
      * @param string $InstanceId The subscribed database instance ID (if the subscription is a cloud database). If the instance is not on Tencent Cloud, this value is empty.Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceStatus Cloud database status: running, isolated, offline. If it is not on the cloud, this value is empty.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to monthly subscription).
+     * @param string $Status Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to yearly/monthly subscription).
      * @param string $SubsStatus Data subscription status. Valid values: notStarted, checking, checkNotPass, checkPass, starting, running, error.
      * @param string $ModifyTime Last modification time, the format is: Y-m-d h:m:s.Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time, the format is: Y-m-d h:m:s.Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $IsolateTime Isolation time, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExpireTime Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ExpireTime Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OfflineTime Offline time, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $PayType Billing mode. 1: pay-as-you-go
      * @param integer $AutoRenewFlag Auto-renewal flag. It is meaningful only when PayType=0. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled).
@@ -200,6 +214,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $SubscribeVersion Data subscription version, only Kafka version is currently supported.Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Tags TagNote: This field may return null, indicating that no valid values can be obtained.
      * @param array $Errors Task error messageNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceClass Subscribe to instance specifications
+     * @param string $ConsumerRoutePhase Routing Phase for the New Version of Subscription Consumption
      */
     function __construct()
     {
@@ -311,6 +327,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->Errors, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceClass",$param) and $param["InstanceClass"] !== null) {
+            $this->InstanceClass = $param["InstanceClass"];
+        }
+
+        if (array_key_exists("ConsumerRoutePhase",$param) and $param["ConsumerRoutePhase"] !== null) {
+            $this->ConsumerRoutePhase = $param["ConsumerRoutePhase"];
         }
     }
 }

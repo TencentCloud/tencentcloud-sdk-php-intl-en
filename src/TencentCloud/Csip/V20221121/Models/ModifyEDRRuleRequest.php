@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageIDsWithAppId(array $ImageIDsWithAppId) Set <p>Directly select images (each item contains AppId + ImageID, and filter further on the basis of the cluster). In multi-account scenarios, each account only stores its own images. The input parameter set capacity limit is 3000 (truncate and retain the first 3000 items if exceeded)</p>
  * @method array getConditionMatches() Obtain <p>Container condition matching</p>
  * @method void setConditionMatches(array $ConditionMatches) Set <p>Container condition matching</p>
+ * @method RuleContentFileOperation getFileOperationRules() Obtain <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+ * @method void setFileOperationRules(RuleContentFileOperation $FileOperationRules) Set <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+ * @method RuleContentK8sAPI getK8sApiRule() Obtain <p>K8s API rule passed when ContentType=k8s_api. Values of all non-empty fields must be Base64-encoded, and k8s_api rules apply only per cluster.</p>
+ * @method void setK8sApiRule(RuleContentK8sAPI $K8sApiRule) Set <p>K8s API rule passed when ContentType=k8s_api. Values of all non-empty fields must be Base64-encoded, and k8s_api rules apply only per cluster.</p>
  */
 class ModifyEDRRuleRequest extends AbstractModel
 {
@@ -248,6 +252,16 @@ class ModifyEDRRuleRequest extends AbstractModel
     public $ConditionMatches;
 
     /**
+     * @var RuleContentFileOperation <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+     */
+    public $FileOperationRules;
+
+    /**
+     * @var RuleContentK8sAPI <p>K8s API rule passed when ContentType=k8s_api. Values of all non-empty fields must be Base64-encoded, and k8s_api rules apply only per cluster.</p>
+     */
+    public $K8sApiRule;
+
+    /**
      * @param integer $RuleType <p>Policy type / Rule Type: 0-System policy/System Rule, 1-Custom policy/Custom Rule</p>
      * @param integer $AlertAction <p>Execution action / Action: 0-Alert, 1-Allow, 2-Alert and Block</p>
      * @param integer $CWPScope <p>Effective Scope: 0-Specified Hosts, 1-All Hosts, 2-Professional, 3-Flagship, 4-Professional+Flagship     QUUIDS        []string json:&quot;QUUIDS&quot;                                      // Host QUUIDS (when Scope=0)</p>
@@ -280,6 +294,8 @@ class ModifyEDRRuleRequest extends AbstractModel
      * @param array $ExcludeClusterIDsWithAppId <p>Cluster exclusion list (each item contains AppId + ClusterID); input parameter set capacity limit: 3000 (truncate and retain the first 3000 items if exceeded)</p>
      * @param array $ImageIDsWithAppId <p>Directly select images (each item contains AppId + ImageID, and filter further on the basis of the cluster). In multi-account scenarios, each account only stores its own images. The input parameter set capacity limit is 3000 (truncate and retain the first 3000 items if exceeded)</p>
      * @param array $ConditionMatches <p>Container condition matching</p>
+     * @param RuleContentFileOperation $FileOperationRules <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+     * @param RuleContentK8sAPI $K8sApiRule <p>K8s API rule passed when ContentType=k8s_api. Values of all non-empty fields must be Base64-encoded, and k8s_api rules apply only per cluster.</p>
      */
     function __construct()
     {
@@ -453,6 +469,16 @@ class ModifyEDRRuleRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ConditionMatches, $obj);
             }
+        }
+
+        if (array_key_exists("FileOperationRules",$param) and $param["FileOperationRules"] !== null) {
+            $this->FileOperationRules = new RuleContentFileOperation();
+            $this->FileOperationRules->deserialize($param["FileOperationRules"]);
+        }
+
+        if (array_key_exists("K8sApiRule",$param) and $param["K8sApiRule"] !== null) {
+            $this->K8sApiRule = new RuleContentK8sAPI();
+            $this->K8sApiRule->deserialize($param["K8sApiRule"]);
         }
     }
 }

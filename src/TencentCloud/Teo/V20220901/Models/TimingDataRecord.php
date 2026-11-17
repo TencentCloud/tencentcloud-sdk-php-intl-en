@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The time-series data
+ * Data information of time series
  *
- * @method string getTypeKey() Obtain The query dimension value.
- * @method void setTypeKey(string $TypeKey) Set The query dimension value.
- * @method array getTypeValue() Obtain Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
- * @method void setTypeValue(array $TypeValue) Set Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
- * @method array getFloatTypeValue() Obtain Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
- * @method void setFloatTypeValue(array $FloatTypeValue) Set Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+ * @method string getTypeKey() Obtain Query the dimension value.
+ * @method void setTypeKey(string $TypeKey) Set Query the dimension value.
+ * @method array getTypeValue() Obtain Detailed time series data of the <code>Integer</code> type. If the value type of the query metric is <code>Integer</code>, the corresponding time series data will be returned in this field.<br> **Note**: If the value type of the query metric is unclear, data will be returned in this field by default.
+ * @method void setTypeValue(array $TypeValue) Set Detailed time series data of the <code>Integer</code> type. If the value type of the query metric is <code>Integer</code>, the corresponding time series data will be returned in this field.<br> **Note**: If the value type of the query metric is unclear, data will be returned in this field by default.
+ * @method array getFloatTypeValue() Obtain Detailed time series data of <code>Float</code> type. For metrics whose query metric value type is <code>Float</code>, the corresponding time series data is returned in this field.
+ * @method void setFloatTypeValue(array $FloatTypeValue) Set Detailed time series data of <code>Float</code> type. For metrics whose query metric value type is <code>Float</code>, the corresponding time series data is returned in this field.
  */
 class TimingDataRecord extends AbstractModel
 {
     /**
-     * @var string The query dimension value.
+     * @var string Query the dimension value.
      */
     public $TypeKey;
 
     /**
-     * @var array Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
+     * @var array Detailed time series data of the <code>Integer</code> type. If the value type of the query metric is <code>Integer</code>, the corresponding time series data will be returned in this field.<br> **Note**: If the value type of the query metric is unclear, data will be returned in this field by default.
      */
     public $TypeValue;
 
     /**
-     * @var array Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+     * @var array Detailed time series data of <code>Float</code> type. For metrics whose query metric value type is <code>Float</code>, the corresponding time series data is returned in this field.
      */
     public $FloatTypeValue;
 
     /**
-     * @param string $TypeKey The query dimension value.
-     * @param array $TypeValue Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
-     * @param array $FloatTypeValue Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+     * @param string $TypeKey Query the dimension value.
+     * @param array $TypeValue Detailed time series data of the <code>Integer</code> type. If the value type of the query metric is <code>Integer</code>, the corresponding time series data will be returned in this field.<br> **Note**: If the value type of the query metric is unclear, data will be returned in this field by default.
+     * @param array $FloatTypeValue Detailed time series data of <code>Float</code> type. For metrics whose query metric value type is <code>Float</code>, the corresponding time series data is returned in this field.
      */
     function __construct()
     {

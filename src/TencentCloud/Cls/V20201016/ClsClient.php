@@ -144,7 +144,7 @@ Note:
  * @method Models\DescribeExportsResponse DescribeExports(Models\DescribeExportsRequest $req) This API is used to get the list of log download tasks.
  * @method Models\DescribeHostMetricConfigsResponse DescribeHostMetricConfigs(Models\DescribeHostMetricConfigsRequest $req) This API is used to obtain metric subscription configurations.
  * @method Models\DescribeIndexResponse DescribeIndex(Models\DescribeIndexRequest $req) This API is used to get the index configuration information.
- * @method Models\DescribeKafkaConsumerResponse DescribeKafkaConsumer(Models\DescribeKafkaConsumerRequest $req) This API is used to access Kafka protocol consumption information.
+ * @method Models\DescribeKafkaConsumerResponse DescribeKafkaConsumer(Models\DescribeKafkaConsumerRequest $req) Accesses Kafka protocol consumption information
  * @method Models\DescribeKafkaConsumerGroupDetailResponse DescribeKafkaConsumerGroupDetail(Models\DescribeKafkaConsumerGroupDetailRequest $req) Retrieve Kafka protocol consumption group details
  * @method Models\DescribeKafkaConsumerGroupListResponse DescribeKafkaConsumerGroupList(Models\DescribeKafkaConsumerGroupListRequest $req) Retrieve the information list of Kafka protocol consumption groups
  * @method Models\DescribeKafkaConsumerPreviewResponse DescribeKafkaConsumerPreview(Models\DescribeKafkaConsumerPreviewRequest $req) This API is used to preview the Kafka consumption.

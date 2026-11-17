@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMiddleName(string $MiddleName) Set <p>Middle name</p>
  * @method string getMiddleNameLocal() Obtain <p>Localized middle name</p>
  * @method void setMiddleNameLocal(string $MiddleNameLocal) Set <p>Localized middle name</p>
- * @method string getLastName() Obtain <p>Last name</p>
- * @method void setLastName(string $LastName) Set <p>Last name</p>
+ * @method string getLastName() Obtain <p>Surname</p>
+ * @method void setLastName(string $LastName) Set <p>Surname</p>
  * @method string getLastNameLocal() Obtain <p>Localized last name</p>
  * @method void setLastNameLocal(string $LastNameLocal) Set <p>Localized last name</p>
- * @method string getSex() Obtain <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
- * @method void setSex(string $Sex) Set <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
+ * @method string getSex() Obtain <p>Gender on the document</p><ul><li>M: Man</li><li>F: Woman</li><li>X: Other gender identity</li></ul>
+ * @method void setSex(string $Sex) Set <p>Gender on the document</p><ul><li>M: Man</li><li>F: Woman</li><li>X: Other gender identity</li></ul>
  * @method string getBirthday() Obtain <p>Date of birth</p>
  * @method void setBirthday(string $Birthday) Set <p>Date of birth</p>
  * @method string getBirthPlace() Obtain <p>Birth place</p>
@@ -50,22 +50,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIssuedDate(string $IssuedDate) Set <p>Issue date, in YYYY-MM-DD format</p>
  * @method string getIssuedAuthority() Obtain <p>Issuing authority</p>
  * @method void setIssuedAuthority(string $IssuedAuthority) Set <p>Issuing authority</p>
- * @method string getIssuedPlace() Obtain <p>Place where the specified file is issued</p>
- * @method void setIssuedPlace(string $IssuedPlace) Set <p>Place where the specified file is issued</p>
+ * @method string getIssuedPlace() Obtain <p>Place where the file is issued.</p>
+ * @method void setIssuedPlace(string $IssuedPlace) Set <p>Place where the file is issued.</p>
  * @method string getIssuedCountry() Obtain <p>Issuing country</p>
  * @method void setIssuedCountry(string $IssuedCountry) Set <p>Issuing country</p>
  * @method string getIssuedCountryCode() Obtain <p>Country code of the country that issued the file, ISO ALPHA-3 country/region code</p>
  * @method void setIssuedCountryCode(string $IssuedCountryCode) Set <p>Country code of the country that issued the file, ISO ALPHA-3 country/region code</p>
  * @method string getExpirationDate() Obtain <p>Expiration date, in YYYY-MM-DD format</p>
  * @method void setExpirationDate(string $ExpirationDate) Set <p>Expiration date, in YYYY-MM-DD format</p>
- * @method string getMRZLine1() Obtain <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
- * @method void setMRZLine1(string $MRZLine1) Set <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
+ * @method string getMRZLine1() Obtain <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
+ * @method void setMRZLine1(string $MRZLine1) Set <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
  * @method string getMRZLine2() Obtain <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
  * @method void setMRZLine2(string $MRZLine2) Set <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
  * @method string getNationality() Obtain <p>Document nationality, returned following the ISO 3166 country coding specification</p>
  * @method void setNationality(string $Nationality) Set <p>Document nationality, returned following the ISO 3166 country coding specification</p>
- * @method AddressInfo getAddress() Obtain <p>Address information on the document</p>
- * @method void setAddress(AddressInfo $Address) Set <p>Address information on the document</p>
+ * @method AddressInfo getAddress() Obtain <p>Document address information</p>
+ * @method void setAddress(AddressInfo $Address) Set <p>Document address information</p>
  * @method string getReligion() Obtain <p>Religious belief</p>
  * @method void setReligion(string $Religion) Set <p>Religious belief</p>
  * @method string getType() Obtain <p>Document type</p>
@@ -74,26 +74,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBloodType(string $BloodType) Set <p>Blood type</p>
  * @method string getHeight() Obtain <p>Height</p>
  * @method void setHeight(string $Height) Set <p>Height</p>
- * @method string getWeight() Obtain <p>Weight</p>
- * @method void setWeight(string $Weight) Set <p>Weight</p>
+ * @method string getWeight() Obtain <p>Weight.</p>
+ * @method void setWeight(string $Weight) Set <p>Weight.</p>
  * @method string getVehicleClass() Obtain <p>Driver's license vehicle type (for example, A/B/C)</p>
  * @method void setVehicleClass(string $VehicleClass) Set <p>Driver's license vehicle type (for example, A/B/C)</p>
- * @method string getRestrictions() Obtain <p>Driver's license restriction condition</p>
- * @method void setRestrictions(string $Restrictions) Set <p>Driver's license restriction condition</p>
- * @method string getEndorsement() Obtain <p>Driver's license extra records</p>
- * @method void setEndorsement(string $Endorsement) Set <p>Driver's license extra records</p>
+ * @method string getRestrictions() Obtain <p>Driver's license restrictions</p>
+ * @method void setRestrictions(string $Restrictions) Set <p>Driver's license restrictions</p>
+ * @method string getEndorsement() Obtain <p>Additional driver's license records</p>
+ * @method void setEndorsement(string $Endorsement) Set <p>Additional driver's license records</p>
  * @method string getOthers() Obtain <p>Additional field</p>
  * @method void setOthers(string $Others) Set <p>Additional field</p>
  * @method string getPassportCodeFirst() Obtain <p>MRZ line 1 of the passport</p>
  * @method void setPassportCodeFirst(string $PassportCodeFirst) Set <p>MRZ line 1 of the passport</p>
  * @method string getPassportCodeSecond() Obtain <p>MRZ line 2 of the passport</p>
  * @method void setPassportCodeSecond(string $PassportCodeSecond) Set <p>MRZ line 2 of the passport</p>
- * @method string getDueDate() Obtain <p>Validity date, in YYYY-MM-DD format</p>
- * @method void setDueDate(string $DueDate) Set <p>Validity date, in YYYY-MM-DD format</p>
+ * @method string getDueDate() Obtain <p>Validity period, in YYYY-MM-DD format</p>
+ * @method void setDueDate(string $DueDate) Set <p>Validity period, in YYYY-MM-DD format</p>
  * @method string getAge() Obtain <p>Age. 0 means no valid info is obtained</p>
  * @method void setAge(string $Age) Set <p>Age. 0 means no valid info is obtained</p>
  * @method string getRegistrationNumber() Obtain <p>Registration number</p>
  * @method void setRegistrationNumber(string $RegistrationNumber) Set <p>Registration number</p>
+ * @method string getDetectedCardType() Obtain <p>Complete enumeration of specific card types confirmed by server-side classification (for example, THA_ID_CARD). Wildcards are not returned.</p>
+ * @method void setDetectedCardType(string $DetectedCardType) Set <p>Complete enumeration of specific card types confirmed by server-side classification (for example, THA_ID_CARD). Wildcards are not returned.</p>
  */
 class GeneralCard extends AbstractModel
 {
@@ -138,7 +140,7 @@ class GeneralCard extends AbstractModel
     public $MiddleNameLocal;
 
     /**
-     * @var string <p>Last name</p>
+     * @var string <p>Surname</p>
      */
     public $LastName;
 
@@ -148,7 +150,7 @@ class GeneralCard extends AbstractModel
     public $LastNameLocal;
 
     /**
-     * @var string <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
+     * @var string <p>Gender on the document</p><ul><li>M: Man</li><li>F: Woman</li><li>X: Other gender identity</li></ul>
      */
     public $Sex;
 
@@ -173,7 +175,7 @@ class GeneralCard extends AbstractModel
     public $IssuedAuthority;
 
     /**
-     * @var string <p>Place where the specified file is issued</p>
+     * @var string <p>Place where the file is issued.</p>
      */
     public $IssuedPlace;
 
@@ -193,7 +195,7 @@ class GeneralCard extends AbstractModel
     public $ExpirationDate;
 
     /**
-     * @var string <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
+     * @var string <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
      */
     public $MRZLine1;
 
@@ -208,7 +210,7 @@ class GeneralCard extends AbstractModel
     public $Nationality;
 
     /**
-     * @var AddressInfo <p>Address information on the document</p>
+     * @var AddressInfo <p>Document address information</p>
      */
     public $Address;
 
@@ -233,7 +235,7 @@ class GeneralCard extends AbstractModel
     public $Height;
 
     /**
-     * @var string <p>Weight</p>
+     * @var string <p>Weight.</p>
      */
     public $Weight;
 
@@ -243,12 +245,12 @@ class GeneralCard extends AbstractModel
     public $VehicleClass;
 
     /**
-     * @var string <p>Driver's license restriction condition</p>
+     * @var string <p>Driver's license restrictions</p>
      */
     public $Restrictions;
 
     /**
-     * @var string <p>Driver's license extra records</p>
+     * @var string <p>Additional driver's license records</p>
      */
     public $Endorsement;
 
@@ -270,7 +272,7 @@ class GeneralCard extends AbstractModel
     public $PassportCodeSecond;
 
     /**
-     * @var string <p>Validity date, in YYYY-MM-DD format</p>
+     * @var string <p>Validity period, in YYYY-MM-DD format</p>
      * @deprecated
      */
     public $DueDate;
@@ -288,6 +290,11 @@ class GeneralCard extends AbstractModel
     public $RegistrationNumber;
 
     /**
+     * @var string <p>Complete enumeration of specific card types confirmed by server-side classification (for example, THA_ID_CARD). Wildcards are not returned.</p>
+     */
+    public $DetectedCardType;
+
+    /**
      * @param string $LicenseNumber <p>ID number</p>
      * @param string $PersonalNumber <p>Personal number, returned when the identity document type is passport</p>
      * @param string $FullName <p>Name</p>
@@ -296,35 +303,36 @@ class GeneralCard extends AbstractModel
      * @param string $FirstNameLocal <p>Localized name</p>
      * @param string $MiddleName <p>Middle name</p>
      * @param string $MiddleNameLocal <p>Localized middle name</p>
-     * @param string $LastName <p>Last name</p>
+     * @param string $LastName <p>Surname</p>
      * @param string $LastNameLocal <p>Localized last name</p>
-     * @param string $Sex <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
+     * @param string $Sex <p>Gender on the document</p><ul><li>M: Man</li><li>F: Woman</li><li>X: Other gender identity</li></ul>
      * @param string $Birthday <p>Date of birth</p>
      * @param string $BirthPlace <p>Birth place</p>
      * @param string $IssuedDate <p>Issue date, in YYYY-MM-DD format</p>
      * @param string $IssuedAuthority <p>Issuing authority</p>
-     * @param string $IssuedPlace <p>Place where the specified file is issued</p>
+     * @param string $IssuedPlace <p>Place where the file is issued.</p>
      * @param string $IssuedCountry <p>Issuing country</p>
      * @param string $IssuedCountryCode <p>Country code of the country that issued the file, ISO ALPHA-3 country/region code</p>
      * @param string $ExpirationDate <p>Expiration date, in YYYY-MM-DD format</p>
-     * @param string $MRZLine1 <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
+     * @param string $MRZLine1 <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
      * @param string $MRZLine2 <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
      * @param string $Nationality <p>Document nationality, returned following the ISO 3166 country coding specification</p>
-     * @param AddressInfo $Address <p>Address information on the document</p>
+     * @param AddressInfo $Address <p>Document address information</p>
      * @param string $Religion <p>Religious belief</p>
      * @param string $Type <p>Document type</p>
      * @param string $BloodType <p>Blood type</p>
      * @param string $Height <p>Height</p>
-     * @param string $Weight <p>Weight</p>
+     * @param string $Weight <p>Weight.</p>
      * @param string $VehicleClass <p>Driver's license vehicle type (for example, A/B/C)</p>
-     * @param string $Restrictions <p>Driver's license restriction condition</p>
-     * @param string $Endorsement <p>Driver's license extra records</p>
+     * @param string $Restrictions <p>Driver's license restrictions</p>
+     * @param string $Endorsement <p>Additional driver's license records</p>
      * @param string $Others <p>Additional field</p>
      * @param string $PassportCodeFirst <p>MRZ line 1 of the passport</p>
      * @param string $PassportCodeSecond <p>MRZ line 2 of the passport</p>
-     * @param string $DueDate <p>Validity date, in YYYY-MM-DD format</p>
+     * @param string $DueDate <p>Validity period, in YYYY-MM-DD format</p>
      * @param string $Age <p>Age. 0 means no valid info is obtained</p>
      * @param string $RegistrationNumber <p>Registration number</p>
+     * @param string $DetectedCardType <p>Complete enumeration of specific card types confirmed by server-side classification (for example, THA_ID_CARD). Wildcards are not returned.</p>
      */
     function __construct()
     {
@@ -486,6 +494,10 @@ class GeneralCard extends AbstractModel
 
         if (array_key_exists("RegistrationNumber",$param) and $param["RegistrationNumber"] !== null) {
             $this->RegistrationNumber = $param["RegistrationNumber"];
+        }
+
+        if (array_key_exists("DetectedCardType",$param) and $param["DetectedCardType"] !== null) {
+            $this->DetectedCardType = $param["DetectedCardType"];
         }
     }
 }

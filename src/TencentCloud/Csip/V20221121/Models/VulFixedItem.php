@@ -18,148 +18,108 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Fixed vulnerability information
+ * Information of fixed vulnerabilities
  *
- * @method integer getVulId() Obtain Vulnerability ID
- * @method void setVulId(integer $VulId) Set Vulnerability ID
- * @method string getVulName() Obtain Vulnerability name
- * @method void setVulName(string $VulName) Set Vulnerability name
- * @method string getLevel() Obtain Vulnerability level
-Enumeration values:
-LOW: low-risk
-MEDIUM: Medium risk
-HIGH: High risk
-CRITICAL
- * @method void setLevel(string $Level) Set Vulnerability level
-Enumeration values:
-LOW: low-risk
-MEDIUM: Medium risk
-HIGH: High risk
-CRITICAL
- * @method VPRRatingInfo getVRPRatingInfo() Obtain VPR rating information (including rating result, description, and phased score), consistent with DescribeHostVulRiskList
- * @method void setVRPRatingInfo(VPRRatingInfo $VRPRatingInfo) Set VPR rating information (including rating result, description, and phased score), consistent with DescribeHostVulRiskList
- * @method string getVulCategory() Obtain Vulnerability Type
-Enumeration values:
-LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
-APPLICATION: Application vulnerability
-EMERGENCY: Urgent vulnerability
- * @method void setVulCategory(string $VulCategory) Set Vulnerability Type
-Enumeration values:
-LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
-APPLICATION: Application vulnerability
-EMERGENCY: Urgent vulnerability
- * @method string getCveId() Obtain CVE id
- * @method void setCveId(string $CveId) Set CVE id
- * @method string getMachineName() Obtain Repair the host name
- * @method void setMachineName(string $MachineName) Set Repair the host name
- * @method string getInstanceId() Obtain Repair the host instance ID
- * @method void setInstanceId(string $InstanceId) Set Repair the host instance ID
- * @method integer getComponentCount() Obtain Associated component & number of paths
- * @method void setComponentCount(integer $ComponentCount) Set Associated component & number of paths
- * @method array getComponents() Obtain Associated component & path list
- * @method void setComponents(array $Components) Set Associated component & path list
- * @method string getLatestFixTime() Obtain Last repair time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
- * @method void setLatestFixTime(string $LatestFixTime) Set Last repair time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+ * @method integer getVulId() Obtain <p>Vulnerability ID</p>
+ * @method void setVulId(integer $VulId) Set <p>Vulnerability ID</p>
+ * @method string getVulName() Obtain <p>Vulnerability name</p>
+ * @method void setVulName(string $VulName) Set <p>Vulnerability name</p>
+ * @method string getLevel() Obtain <p>Vulnerability level<br>Enumeration values:<br>LOW: Low risk<br>MEDIUM: Medium risk<br>HIGH: High risk<br>CRITICAL: Critical</p>
+ * @method void setLevel(string $Level) Set <p>Vulnerability level<br>Enumeration values:<br>LOW: Low risk<br>MEDIUM: Medium risk<br>HIGH: High risk<br>CRITICAL: Critical</p>
+ * @method VPRRatingInfo getVRPRatingInfo() Obtain <p>VPR rating information (including rating result, description, and staged score), consistent with DescribeHostVulRiskList</p>
+ * @method void setVRPRatingInfo(VPRRatingInfo $VRPRatingInfo) Set <p>VPR rating information (including rating result, description, and staged score), consistent with DescribeHostVulRiskList</p>
+ * @method string getVulCategory() Obtain <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability<br>EMERGENCY: Urgent vulnerability</p>
+ * @method void setVulCategory(string $VulCategory) Set <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability<br>EMERGENCY: Urgent vulnerability</p>
+ * @method string getCveId() Obtain <p>CVE id</p>
+ * @method void setCveId(string $CveId) Set <p>CVE id</p>
+ * @method string getMachineName() Obtain <p>Repair host name</p>
+ * @method void setMachineName(string $MachineName) Set <p>Repair host name</p>
+ * @method string getInstanceId() Obtain <p>Repair host instance ID</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Repair host instance ID</p>
+ * @method integer getComponentCount() Obtain <p>Associated component &amp; number of paths</p>
+ * @method void setComponentCount(integer $ComponentCount) Set <p>Associated component &amp; number of paths</p>
+ * @method array getComponents() Obtain <p>Associated component &amp; path list</p>
+ * @method void setComponents(array $Components) Set <p>Associated component &amp; path list</p>
+ * @method string getLatestFixTime() Obtain <p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+ * @method void setLatestFixTime(string $LatestFixTime) Set <p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+ * @method VPRExplainInfo getVPRExplainInfo() Obtain <p>VPR rating basis</p>
+ * @method void setVPRExplainInfo(VPRExplainInfo $VPRExplainInfo) Set <p>VPR rating basis</p>
  */
 class VulFixedItem extends AbstractModel
 {
     /**
-     * @var integer Vulnerability ID
+     * @var integer <p>Vulnerability ID</p>
      */
     public $VulId;
 
     /**
-     * @var string Vulnerability name
+     * @var string <p>Vulnerability name</p>
      */
     public $VulName;
 
     /**
-     * @var string Vulnerability level
-Enumeration values:
-LOW: low-risk
-MEDIUM: Medium risk
-HIGH: High risk
-CRITICAL
+     * @var string <p>Vulnerability level<br>Enumeration values:<br>LOW: Low risk<br>MEDIUM: Medium risk<br>HIGH: High risk<br>CRITICAL: Critical</p>
      */
     public $Level;
 
     /**
-     * @var VPRRatingInfo VPR rating information (including rating result, description, and phased score), consistent with DescribeHostVulRiskList
+     * @var VPRRatingInfo <p>VPR rating information (including rating result, description, and staged score), consistent with DescribeHostVulRiskList</p>
      */
     public $VRPRatingInfo;
 
     /**
-     * @var string Vulnerability Type
-Enumeration values:
-LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
-APPLICATION: Application vulnerability
-EMERGENCY: Urgent vulnerability
+     * @var string <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability<br>EMERGENCY: Urgent vulnerability</p>
      */
     public $VulCategory;
 
     /**
-     * @var string CVE id
+     * @var string <p>CVE id</p>
      */
     public $CveId;
 
     /**
-     * @var string Repair the host name
+     * @var string <p>Repair host name</p>
      */
     public $MachineName;
 
     /**
-     * @var string Repair the host instance ID
+     * @var string <p>Repair host instance ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer Associated component & number of paths
+     * @var integer <p>Associated component &amp; number of paths</p>
      */
     public $ComponentCount;
 
     /**
-     * @var array Associated component & path list
+     * @var array <p>Associated component &amp; path list</p>
      */
     public $Components;
 
     /**
-     * @var string Last repair time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * @var string <p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
      */
     public $LatestFixTime;
 
     /**
-     * @param integer $VulId Vulnerability ID
-     * @param string $VulName Vulnerability name
-     * @param string $Level Vulnerability level
-Enumeration values:
-LOW: low-risk
-MEDIUM: Medium risk
-HIGH: High risk
-CRITICAL
-     * @param VPRRatingInfo $VRPRatingInfo VPR rating information (including rating result, description, and phased score), consistent with DescribeHostVulRiskList
-     * @param string $VulCategory Vulnerability Type
-Enumeration values:
-LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
-APPLICATION: Application vulnerability
-EMERGENCY: Urgent vulnerability
-     * @param string $CveId CVE id
-     * @param string $MachineName Repair the host name
-     * @param string $InstanceId Repair the host instance ID
-     * @param integer $ComponentCount Associated component & number of paths
-     * @param array $Components Associated component & path list
-     * @param string $LatestFixTime Last repair time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * @var VPRExplainInfo <p>VPR rating basis</p>
+     */
+    public $VPRExplainInfo;
+
+    /**
+     * @param integer $VulId <p>Vulnerability ID</p>
+     * @param string $VulName <p>Vulnerability name</p>
+     * @param string $Level <p>Vulnerability level<br>Enumeration values:<br>LOW: Low risk<br>MEDIUM: Medium risk<br>HIGH: High risk<br>CRITICAL: Critical</p>
+     * @param VPRRatingInfo $VRPRatingInfo <p>VPR rating information (including rating result, description, and staged score), consistent with DescribeHostVulRiskList</p>
+     * @param string $VulCategory <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability<br>EMERGENCY: Urgent vulnerability</p>
+     * @param string $CveId <p>CVE id</p>
+     * @param string $MachineName <p>Repair host name</p>
+     * @param string $InstanceId <p>Repair host instance ID</p>
+     * @param integer $ComponentCount <p>Associated component &amp; number of paths</p>
+     * @param array $Components <p>Associated component &amp; path list</p>
+     * @param string $LatestFixTime <p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+     * @param VPRExplainInfo $VPRExplainInfo <p>VPR rating basis</p>
      */
     function __construct()
     {
@@ -217,6 +177,11 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
         if (array_key_exists("LatestFixTime",$param) and $param["LatestFixTime"] !== null) {
             $this->LatestFixTime = $param["LatestFixTime"];
+        }
+
+        if (array_key_exists("VPRExplainInfo",$param) and $param["VPRExplainInfo"] !== null) {
+            $this->VPRExplainInfo = new VPRExplainInfo();
+            $this->VPRExplainInfo->deserialize($param["VPRExplainInfo"]);
         }
     }
 }

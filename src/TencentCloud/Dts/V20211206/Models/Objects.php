@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Description of synced database objects
  *
- * @method string getMode() Obtain Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMode(string $Mode) Set Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDatabases() Obtain Sync object, which is required if `Mode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDatabases(array $Databases) Set Sync object, which is required if `Mode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getAdvancedObjects() Obtain Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAdvancedObjects(array $AdvancedObjects) Set Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
- * @method OnlineDDL getOnlineDDL() Obtain A redundant field that specifies the online DDL type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOnlineDDL(OnlineDDL $OnlineDDL) Set A redundant field that specifies the online DDL type
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMode() Obtain <p>Sync object type Partial (partial objects)</p>
+ * @method void setMode(string $Mode) Set <p>Sync object type Partial (partial objects)</p>
+ * @method array getDatabases() Obtain <p>Sync object, not empty when Mode is Partial</p>
+ * @method void setDatabases(array $Databases) Set <p>Sync object, not empty when Mode is Partial</p>
+ * @method array getAdvancedObjects() Obtain <p>Advanced object types, such as function and procedure. Note: If you need to migrate and synchronize advanced objects, this configuration should contain the corresponding advanced object type. When synchronization of advanced objects is required, the initialization type must contain the structure initialization type, that is, the field value of task Options.InitType must be Structure or Full.</p>
+ * @method void setAdvancedObjects(array $AdvancedObjects) Set <p>Advanced object types, such as function and procedure. Note: If you need to migrate and synchronize advanced objects, this configuration should contain the corresponding advanced object type. When synchronization of advanced objects is required, the initialization type must contain the structure initialization type, that is, the field value of task Options.InitType must be Structure or Full.</p>
+ * @method OnlineDDL getOnlineDDL() Obtain <p>This field is deprecated. For temporary table synchronization, use Objects.Databases[n].Tables[n].TmpTables to import.</p>
+ * @method void setOnlineDDL(OnlineDDL $OnlineDDL) Set <p>This field is deprecated. For temporary table synchronization, use Objects.Databases[n].Tables[n].TmpTables to import.</p>
+ * @method array getDatabasesOpFilter() Obtain <p>Database/Table/View-level DML/DDL allowlist</p>
+ * @method void setDatabasesOpFilter(array $DatabasesOpFilter) Set <p>Database/Table/View-level DML/DDL allowlist</p>
  */
 class Objects extends AbstractModel
 {
     /**
-     * @var string Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Sync object type Partial (partial objects)</p>
      */
     public $Mode;
 
     /**
-     * @var array Sync object, which is required if `Mode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Sync object, not empty when Mode is Partial</p>
      */
     public $Databases;
 
     /**
-     * @var array Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Advanced object types, such as function and procedure. Note: If you need to migrate and synchronize advanced objects, this configuration should contain the corresponding advanced object type. When synchronization of advanced objects is required, the initialization type must contain the structure initialization type, that is, the field value of task Options.InitType must be Structure or Full.</p>
      */
     public $AdvancedObjects;
 
     /**
-     * @var OnlineDDL A redundant field that specifies the online DDL type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var OnlineDDL <p>This field is deprecated. For temporary table synchronization, use Objects.Databases[n].Tables[n].TmpTables to import.</p>
      */
     public $OnlineDDL;
 
     /**
-     * @param string $Mode Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Databases Sync object, which is required if `Mode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $AdvancedObjects Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OnlineDDL $OnlineDDL A redundant field that specifies the online DDL type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Database/Table/View-level DML/DDL allowlist</p>
+     */
+    public $DatabasesOpFilter;
+
+    /**
+     * @param string $Mode <p>Sync object type Partial (partial objects)</p>
+     * @param array $Databases <p>Sync object, not empty when Mode is Partial</p>
+     * @param array $AdvancedObjects <p>Advanced object types, such as function and procedure. Note: If you need to migrate and synchronize advanced objects, this configuration should contain the corresponding advanced object type. When synchronization of advanced objects is required, the initialization type must contain the structure initialization type, that is, the field value of task Options.InitType must be Structure or Full.</p>
+     * @param OnlineDDL $OnlineDDL <p>This field is deprecated. For temporary table synchronization, use Objects.Databases[n].Tables[n].TmpTables to import.</p>
+     * @param array $DatabasesOpFilter <p>Database/Table/View-level DML/DDL allowlist</p>
      */
     function __construct()
     {
@@ -98,6 +98,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("OnlineDDL",$param) and $param["OnlineDDL"] !== null) {
             $this->OnlineDDL = new OnlineDDL();
             $this->OnlineDDL->deserialize($param["OnlineDDL"]);
+        }
+
+        if (array_key_exists("DatabasesOpFilter",$param) and $param["DatabasesOpFilter"] !== null) {
+            $this->DatabasesOpFilter = [];
+            foreach ($param["DatabasesOpFilter"] as $key => $value){
+                $obj = new DBOpFilter();
+                $obj->deserialize($value);
+                array_push($this->DatabasesOpFilter, $obj);
+            }
         }
     }
 }

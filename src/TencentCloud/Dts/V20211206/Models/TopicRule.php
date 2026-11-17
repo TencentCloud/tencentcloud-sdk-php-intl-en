@@ -18,60 +18,68 @@ namespace TencentCloud\Dts\V20211206\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Topic description
+ * Description of single and custom topics. During shipping to a single topic, the last item in this array will be treated as the default partition strategy. All unmatched data will be shipped according to this strategy. The default strategy only supports three options: shipping to partition 0, by table name, or by table name+primary key.
  *
- * @method string getTopicName() Obtain Topic name
- * @method void setTopicName(string $TopicName) Set Topic name
- * @method string getPartitionType() Obtain Topic partitioning policy. If the topic sync policy is delivering data to multiple custom topics (`TopicType` = `Multi`), the value of this parameter is `Random` (deliver to a random partition). If the topic sync policy is delivering all data to a single topic (`TopicType` = `Single`), this parameter has three valid values: `AllInPartitionZero` (deliver all data to partition0), `PartitionByTable` (partition by table name), `PartitionByTableAndKey` (partition by table name and primary key).
- * @method void setPartitionType(string $PartitionType) Set Topic partitioning policy. If the topic sync policy is delivering data to multiple custom topics (`TopicType` = `Multi`), the value of this parameter is `Random` (deliver to a random partition). If the topic sync policy is delivering all data to a single topic (`TopicType` = `Single`), this parameter has three valid values: `AllInPartitionZero` (deliver all data to partition0), `PartitionByTable` (partition by table name), `PartitionByTableAndKey` (partition by table name and primary key).
- * @method string getDbMatchMode() Obtain Database name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
- * @method void setDbMatchMode(string $DbMatchMode) Set Database name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
- * @method string getDbName() Obtain Database name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
- * @method void setDbName(string $DbName) Set Database name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
- * @method string getTableMatchMode() Obtain Table name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
- * @method void setTableMatchMode(string $TableMatchMode) Set Table name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
- * @method string getTableName() Obtain Table name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
- * @method void setTableName(string $TableName) Set Table name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
+ * @method string getTopicName() Obtain Topic name. For single-topic scenarios, all TopicNames should be the same.
+ * @method void setTopicName(string $TopicName) Set Topic name. For single-topic scenarios, all TopicNames should be the same.
+ * @method string getPartitionType() Obtain Topic partition policy. When a topic is customized, the valid value is Random (random shipping); when centralizing shipping to a single topic is adopted, the valid values are AllInPartitionZero (ship all to partition 0), PartitionByTable (partition by table name), PartitionByTableAndKey (partition by table name and primary key), and PartitionByCols (partition by column).
+ * @method void setPartitionType(string $PartitionType) Set Topic partition policy. When a topic is customized, the valid value is Random (random shipping); when centralizing shipping to a single topic is adopted, the valid values are AllInPartitionZero (ship all to partition 0), PartitionByTable (partition by table name), PartitionByTableAndKey (partition by table name and primary key), and PartitionByCols (partition by column).
+ * @method string getDbMatchMode() Obtain Database name matching rule. For example: Regular (regular expression matching) and Default (remaining databases that do not meet any rule). The last item in the array should be Default.
+ * @method void setDbMatchMode(string $DbMatchMode) Set Database name matching rule. For example: Regular (regular expression matching) and Default (remaining databases that do not meet any rule). The last item in the array should be Default.
+ * @method string getDbName() Obtain Database name. It is valid when DbMatchMode=Regular.
+ * @method void setDbName(string $DbName) Set Database name. It is valid when DbMatchMode=Regular.
+ * @method string getTableMatchMode() Obtain Table name matching rule. For example: Regular (regular expression matching) and Default (remaining tables that do not meet any rule). The last item in the array should be Default.
+ * @method void setTableMatchMode(string $TableMatchMode) Set Table name matching rule. For example: Regular (regular expression matching) and Default (remaining tables that do not meet any rule). The last item in the array should be Default.
+ * @method string getTableName() Obtain Table name. It is valid when TableMatchMode is Regular.
+ * @method void setTableName(string $TableName) Set Table name. It is valid when TableMatchMode is Regular.
+ * @method array getColumns() Obtain When partitioning by column, you need to select and configure column names. Multi-column selection is supported.
+ * @method void setColumns(array $Columns) Set When partitioning by column, you need to select and configure column names. Multi-column selection is supported.
  */
 class TopicRule extends AbstractModel
 {
     /**
-     * @var string Topic name
+     * @var string Topic name. For single-topic scenarios, all TopicNames should be the same.
      */
     public $TopicName;
 
     /**
-     * @var string Topic partitioning policy. If the topic sync policy is delivering data to multiple custom topics (`TopicType` = `Multi`), the value of this parameter is `Random` (deliver to a random partition). If the topic sync policy is delivering all data to a single topic (`TopicType` = `Single`), this parameter has three valid values: `AllInPartitionZero` (deliver all data to partition0), `PartitionByTable` (partition by table name), `PartitionByTableAndKey` (partition by table name and primary key).
+     * @var string Topic partition policy. When a topic is customized, the valid value is Random (random shipping); when centralizing shipping to a single topic is adopted, the valid values are AllInPartitionZero (ship all to partition 0), PartitionByTable (partition by table name), PartitionByTableAndKey (partition by table name and primary key), and PartitionByCols (partition by column).
      */
     public $PartitionType;
 
     /**
-     * @var string Database name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
+     * @var string Database name matching rule. For example: Regular (regular expression matching) and Default (remaining databases that do not meet any rule). The last item in the array should be Default.
      */
     public $DbMatchMode;
 
     /**
-     * @var string Database name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
+     * @var string Database name. It is valid when DbMatchMode=Regular.
      */
     public $DbName;
 
     /**
-     * @var string Table name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
+     * @var string Table name matching rule. For example: Regular (regular expression matching) and Default (remaining tables that do not meet any rule). The last item in the array should be Default.
      */
     public $TableMatchMode;
 
     /**
-     * @var string Table name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
+     * @var string Table name. It is valid when TableMatchMode is Regular.
      */
     public $TableName;
 
     /**
-     * @param string $TopicName Topic name
-     * @param string $PartitionType Topic partitioning policy. If the topic sync policy is delivering data to multiple custom topics (`TopicType` = `Multi`), the value of this parameter is `Random` (deliver to a random partition). If the topic sync policy is delivering all data to a single topic (`TopicType` = `Single`), this parameter has three valid values: `AllInPartitionZero` (deliver all data to partition0), `PartitionByTable` (partition by table name), `PartitionByTableAndKey` (partition by table name and primary key).
-     * @param string $DbMatchMode Database name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
-     * @param string $DbName Database name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
-     * @param string $TableMatchMode Table name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
-     * @param string $TableName Table name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
+     * @var array When partitioning by column, you need to select and configure column names. Multi-column selection is supported.
+     */
+    public $Columns;
+
+    /**
+     * @param string $TopicName Topic name. For single-topic scenarios, all TopicNames should be the same.
+     * @param string $PartitionType Topic partition policy. When a topic is customized, the valid value is Random (random shipping); when centralizing shipping to a single topic is adopted, the valid values are AllInPartitionZero (ship all to partition 0), PartitionByTable (partition by table name), PartitionByTableAndKey (partition by table name and primary key), and PartitionByCols (partition by column).
+     * @param string $DbMatchMode Database name matching rule. For example: Regular (regular expression matching) and Default (remaining databases that do not meet any rule). The last item in the array should be Default.
+     * @param string $DbName Database name. It is valid when DbMatchMode=Regular.
+     * @param string $TableMatchMode Table name matching rule. For example: Regular (regular expression matching) and Default (remaining tables that do not meet any rule). The last item in the array should be Default.
+     * @param string $TableName Table name. It is valid when TableMatchMode is Regular.
+     * @param array $Columns When partitioning by column, you need to select and configure column names. Multi-column selection is supported.
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class TopicRule extends AbstractModel
 
         if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
             $this->TableName = $param["TableName"];
+        }
+
+        if (array_key_exists("Columns",$param) and $param["Columns"] !== null) {
+            $this->Columns = $param["Columns"];
         }
     }
 }

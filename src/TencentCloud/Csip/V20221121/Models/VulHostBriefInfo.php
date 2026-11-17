@@ -24,26 +24,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceID(string $InstanceID) Set <p>Cloud host instance ID<br>Parameter format: such as ins-xxxxxxxx</p>
  * @method string getName() Obtain <p>Host name.</p>
  * @method void setName(string $Name) Set <p>Host name.</p>
- * @method string getPublicIP() Obtain <p>Public network IP address</p>
- * @method void setPublicIP(string $PublicIP) Set <p>Public network IP address</p>
+ * @method string getPublicIP() Obtain <p>Public IP address</p>
+ * @method void setPublicIP(string $PublicIP) Set <p>Public IP address</p>
  * @method string getPrivateIP() Obtain <p>Private IP address</p>
  * @method void setPrivateIP(string $PrivateIP) Set <p>Private IP address</p>
- * @method string getDefendVersion() Obtain <p>Protection edition<br>Enumeration value:<br>NONE: No protection<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition<br>PRO_LH: Lightweight edition</p>
- * @method void setDefendVersion(string $DefendVersion) Set <p>Protection edition<br>Enumeration value:<br>NONE: No protection<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition<br>PRO_LH: Lightweight edition</p>
- * @method string getDefendStatus() Obtain <p>Vulnerability defense status<br>Enumeration value:<br>ENABLED: Enabled<br>NOT_SUPPORTED: Unsupported<br>NOT_ENABLED: Not enabled</p>
- * @method void setDefendStatus(string $DefendStatus) Set <p>Vulnerability defense status<br>Enumeration value:<br>ENABLED: Enabled<br>NOT_SUPPORTED: Unsupported<br>NOT_ENABLED: Not enabled</p>
- * @method AccountBriefInfo getAccount() Obtain <p>Associated account information</p>
- * @method void setAccount(AccountBriefInfo $Account) Set <p>Associated account information</p>
- * @method string getInstanceStatus() Obtain <p>Cloud host instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
- * @method void setInstanceStatus(string $InstanceStatus) Set <p>Cloud host instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
- * @method string getRiskStatus() Obtain <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scan in progress, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
- * @method void setRiskStatus(string $RiskStatus) Set <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scan in progress, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
+ * @method string getDefendVersion() Obtain <p>Protection edition<br>Enumeration values:<br>NONE: no protection<br>BASIC: basic version<br>PRO: pro edition<br>ULTIMATE: flagship edition<br>PRO_LH: lightweight edition</p>
+ * @method void setDefendVersion(string $DefendVersion) Set <p>Protection edition<br>Enumeration values:<br>NONE: no protection<br>BASIC: basic version<br>PRO: pro edition<br>ULTIMATE: flagship edition<br>PRO_LH: lightweight edition</p>
+ * @method string getDefendStatus() Obtain <p>Vulnerability defense status<br>Enumeration values:<br>ENABLED: enabled<br>NOT_SUPPORTED: unsupported<br>NOT_ENABLED: not enabled</p>
+ * @method void setDefendStatus(string $DefendStatus) Set <p>Vulnerability defense status<br>Enumeration values:<br>ENABLED: enabled<br>NOT_SUPPORTED: unsupported<br>NOT_ENABLED: not enabled</p>
+ * @method AccountBriefInfo getAccount() Obtain <p>Account information belonging to</p>
+ * @method void setAccount(AccountBriefInfo $Account) Set <p>Account information belonging to</p>
+ * @method string getInstanceStatus() Obtain <p>CVM instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
+ * @method void setInstanceStatus(string $InstanceStatus) Set <p>CVM instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
+ * @method string getRiskStatus() Obtain <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scanning, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
+ * @method void setRiskStatus(string $RiskStatus) Set <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scanning, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
  * @method VPRRatingInfo getVPRRating() Obtain <p>VPR rating information (including rating result and details in each dimension)</p>
  * @method void setVPRRating(VPRRatingInfo $VPRRating) Set <p>VPR rating information (including rating result and details in each dimension)</p>
- * @method string getAgentStatus() Obtain <p>CWP Agent status<br>Enumeration value:<br>ONLINE: Online<br>OFFLINE: Offline<br>UNINSTALLED: Not installed</p>
- * @method void setAgentStatus(string $AgentStatus) Set <p>CWP Agent status<br>Enumeration value:<br>ONLINE: Online<br>OFFLINE: Offline<br>UNINSTALLED: Not installed</p>
- * @method array getTagItem() Obtain <p>Asset tag list (CSIP internal asset tag)</p>
- * @method void setTagItem(array $TagItem) Set <p>Asset tag list (CSIP internal asset tag)</p>
+ * @method string getAgentStatus() Obtain <p>CWP Agent status<br>Enumeration values:<br>ONLINE: ONLINE<br>OFFLINE: OFFLINE<br>UNINSTALLED: not installed</p>
+ * @method void setAgentStatus(string $AgentStatus) Set <p>CWP Agent status<br>Enumeration values:<br>ONLINE: ONLINE<br>OFFLINE: OFFLINE<br>UNINSTALLED: not installed</p>
+ * @method array getTagItem() Obtain <p>Asset tag list (CSIP internal asset tags)</p>
+ * @method void setTagItem(array $TagItem) Set <p>Asset tag list (CSIP internal asset tags)</p>
  * @method array getCloudTag() Obtain <p>Cloud tag list (cloud asset side Tag)</p>
  * @method void setCloudTag(array $CloudTag) Set <p>Cloud tag list (cloud asset side Tag)</p>
  */
@@ -60,7 +60,7 @@ class VulHostBriefInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var string <p>Public network IP address</p>
+     * @var string <p>Public IP address</p>
      */
     public $PublicIP;
 
@@ -70,27 +70,27 @@ class VulHostBriefInfo extends AbstractModel
     public $PrivateIP;
 
     /**
-     * @var string <p>Protection edition<br>Enumeration value:<br>NONE: No protection<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition<br>PRO_LH: Lightweight edition</p>
+     * @var string <p>Protection edition<br>Enumeration values:<br>NONE: no protection<br>BASIC: basic version<br>PRO: pro edition<br>ULTIMATE: flagship edition<br>PRO_LH: lightweight edition</p>
      */
     public $DefendVersion;
 
     /**
-     * @var string <p>Vulnerability defense status<br>Enumeration value:<br>ENABLED: Enabled<br>NOT_SUPPORTED: Unsupported<br>NOT_ENABLED: Not enabled</p>
+     * @var string <p>Vulnerability defense status<br>Enumeration values:<br>ENABLED: enabled<br>NOT_SUPPORTED: unsupported<br>NOT_ENABLED: not enabled</p>
      */
     public $DefendStatus;
 
     /**
-     * @var AccountBriefInfo <p>Associated account information</p>
+     * @var AccountBriefInfo <p>Account information belonging to</p>
      */
     public $Account;
 
     /**
-     * @var string <p>Cloud host instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
+     * @var string <p>CVM instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
      */
     public $InstanceStatus;
 
     /**
-     * @var string <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scan in progress, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
+     * @var string <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scanning, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
      */
     public $RiskStatus;
 
@@ -100,12 +100,12 @@ class VulHostBriefInfo extends AbstractModel
     public $VPRRating;
 
     /**
-     * @var string <p>CWP Agent status<br>Enumeration value:<br>ONLINE: Online<br>OFFLINE: Offline<br>UNINSTALLED: Not installed</p>
+     * @var string <p>CWP Agent status<br>Enumeration values:<br>ONLINE: ONLINE<br>OFFLINE: OFFLINE<br>UNINSTALLED: not installed</p>
      */
     public $AgentStatus;
 
     /**
-     * @var array <p>Asset tag list (CSIP internal asset tag)</p>
+     * @var array <p>Asset tag list (CSIP internal asset tags)</p>
      */
     public $TagItem;
 
@@ -117,16 +117,16 @@ class VulHostBriefInfo extends AbstractModel
     /**
      * @param string $InstanceID <p>Cloud host instance ID<br>Parameter format: such as ins-xxxxxxxx</p>
      * @param string $Name <p>Host name.</p>
-     * @param string $PublicIP <p>Public network IP address</p>
+     * @param string $PublicIP <p>Public IP address</p>
      * @param string $PrivateIP <p>Private IP address</p>
-     * @param string $DefendVersion <p>Protection edition<br>Enumeration value:<br>NONE: No protection<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition<br>PRO_LH: Lightweight edition</p>
-     * @param string $DefendStatus <p>Vulnerability defense status<br>Enumeration value:<br>ENABLED: Enabled<br>NOT_SUPPORTED: Unsupported<br>NOT_ENABLED: Not enabled</p>
-     * @param AccountBriefInfo $Account <p>Associated account information</p>
-     * @param string $InstanceStatus <p>Cloud host instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
-     * @param string $RiskStatus <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scan in progress, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
+     * @param string $DefendVersion <p>Protection edition<br>Enumeration values:<br>NONE: no protection<br>BASIC: basic version<br>PRO: pro edition<br>ULTIMATE: flagship edition<br>PRO_LH: lightweight edition</p>
+     * @param string $DefendStatus <p>Vulnerability defense status<br>Enumeration values:<br>ENABLED: enabled<br>NOT_SUPPORTED: unsupported<br>NOT_ENABLED: not enabled</p>
+     * @param AccountBriefInfo $Account <p>Account information belonging to</p>
+     * @param string $InstanceStatus <p>CVM instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
+     * @param string $RiskStatus <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scanning, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
      * @param VPRRatingInfo $VPRRating <p>VPR rating information (including rating result and details in each dimension)</p>
-     * @param string $AgentStatus <p>CWP Agent status<br>Enumeration value:<br>ONLINE: Online<br>OFFLINE: Offline<br>UNINSTALLED: Not installed</p>
-     * @param array $TagItem <p>Asset tag list (CSIP internal asset tag)</p>
+     * @param string $AgentStatus <p>CWP Agent status<br>Enumeration values:<br>ONLINE: ONLINE<br>OFFLINE: OFFLINE<br>UNINSTALLED: not installed</p>
+     * @param array $TagItem <p>Asset tag list (CSIP internal asset tags)</p>
      * @param array $CloudTag <p>Cloud tag list (cloud asset side Tag)</p>
      */
     function __construct()

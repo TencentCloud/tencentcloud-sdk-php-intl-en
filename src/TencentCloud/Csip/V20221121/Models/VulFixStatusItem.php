@@ -18,42 +18,42 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Vulnerability/KB patch dimensional remediation status
+ * Remediation status in vulnerability/KB patch dimension
  *
- * @method integer getVulId() Obtain Vulnerability ID (empty for KB patch fix tasks)
- * @method void setVulId(integer $VulId) Set Vulnerability ID (empty for KB patch fix tasks)
- * @method integer getKBId() Obtain Patch ID (empty for vulnerability repair tasks)
- * @method void setKBId(integer $KBId) Set Patch ID (empty for vulnerability repair tasks)
+ * @method integer getVulId() Obtain Vulnerability ID (empty for KB patch repair tasks)
+ * @method void setVulId(integer $VulId) Set Vulnerability ID (empty for KB patch repair tasks)
+ * @method integer getKBId() Obtain KB patch ID (empty for vulnerability repair tasks)
+ * @method void setKBId(integer $KBId) Set KB patch ID (empty for vulnerability repair tasks)
  * @method string getVulName() Obtain Vulnerability name or KB patch name
  * @method void setVulName(string $VulName) Set Vulnerability name or KB patch name
  * @method integer getFixStatus() Obtain Remediation status of the vulnerability
 Enumeration value:
 0: In remediation
 1: All successful
-2: partially failed
+2: Partially failed
 3: All failed
  * @method void setFixStatus(integer $FixStatus) Set Remediation status of the vulnerability
 Enumeration value:
 0: In remediation
 1: All successful
-2: partially failed
+2: Partially failed
 3: All failed
- * @method integer getHostCount() Obtain Total hosts associated with the vulnerability/KB patch
- * @method void setHostCount(integer $HostCount) Set Total hosts associated with the vulnerability/KB patch
- * @method integer getSuccessHostCount() Obtain Number of hosts successfully fixed by the vulnerability/KB patch
- * @method void setSuccessHostCount(integer $SuccessHostCount) Set Number of hosts successfully fixed by the vulnerability/KB patch
- * @method integer getFailHostCount() Obtain Number of hosts failed to be fixed for the vulnerability/KB patch
- * @method void setFailHostCount(integer $FailHostCount) Set Number of hosts failed to be fixed for the vulnerability/KB patch
+ * @method integer getHostCount() Obtain Total number of hosts associated with this vulnerability/KB patch
+ * @method void setHostCount(integer $HostCount) Set Total number of hosts associated with this vulnerability/KB patch
+ * @method integer getSuccessHostCount() Obtain Number of hosts successfully fixed by this vulnerability/KB patch
+ * @method void setSuccessHostCount(integer $SuccessHostCount) Set Number of hosts successfully fixed by this vulnerability/KB patch
+ * @method integer getFailHostCount() Obtain Number of hosts failed to be fixed by this vulnerability/KB patch
+ * @method void setFailHostCount(integer $FailHostCount) Set Number of hosts failed to be fixed by this vulnerability/KB patch
  */
 class VulFixStatusItem extends AbstractModel
 {
     /**
-     * @var integer Vulnerability ID (empty for KB patch fix tasks)
+     * @var integer Vulnerability ID (empty for KB patch repair tasks)
      */
     public $VulId;
 
     /**
-     * @var integer Patch ID (empty for vulnerability repair tasks)
+     * @var integer KB patch ID (empty for vulnerability repair tasks)
      */
     public $KBId;
 
@@ -67,39 +67,39 @@ class VulFixStatusItem extends AbstractModel
 Enumeration value:
 0: In remediation
 1: All successful
-2: partially failed
+2: Partially failed
 3: All failed
      */
     public $FixStatus;
 
     /**
-     * @var integer Total hosts associated with the vulnerability/KB patch
+     * @var integer Total number of hosts associated with this vulnerability/KB patch
      */
     public $HostCount;
 
     /**
-     * @var integer Number of hosts successfully fixed by the vulnerability/KB patch
+     * @var integer Number of hosts successfully fixed by this vulnerability/KB patch
      */
     public $SuccessHostCount;
 
     /**
-     * @var integer Number of hosts failed to be fixed for the vulnerability/KB patch
+     * @var integer Number of hosts failed to be fixed by this vulnerability/KB patch
      */
     public $FailHostCount;
 
     /**
-     * @param integer $VulId Vulnerability ID (empty for KB patch fix tasks)
-     * @param integer $KBId Patch ID (empty for vulnerability repair tasks)
+     * @param integer $VulId Vulnerability ID (empty for KB patch repair tasks)
+     * @param integer $KBId KB patch ID (empty for vulnerability repair tasks)
      * @param string $VulName Vulnerability name or KB patch name
      * @param integer $FixStatus Remediation status of the vulnerability
 Enumeration value:
 0: In remediation
 1: All successful
-2: partially failed
+2: Partially failed
 3: All failed
-     * @param integer $HostCount Total hosts associated with the vulnerability/KB patch
-     * @param integer $SuccessHostCount Number of hosts successfully fixed by the vulnerability/KB patch
-     * @param integer $FailHostCount Number of hosts failed to be fixed for the vulnerability/KB patch
+     * @param integer $HostCount Total number of hosts associated with this vulnerability/KB patch
+     * @param integer $SuccessHostCount Number of hosts successfully fixed by this vulnerability/KB patch
+     * @param integer $FailHostCount Number of hosts failed to be fixed by this vulnerability/KB patch
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Statistical curve data item.
+ * Statistics curve data item
  *
  * @method integer getTimestamp() Obtain Time point for returning data, in the format of Unix timestamp in seconds.
  * @method void setTimestamp(integer $Timestamp) Set Time point for returning data, in the format of Unix timestamp in seconds.

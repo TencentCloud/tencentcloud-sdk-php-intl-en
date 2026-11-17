@@ -23,11 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResult() Obtain Business Error Codes.
 -When the return value is "Success", it indicates that liveness detection and face comparison passed. Determined to be the same person.
 -When the return value is "FailedOperation.CompareLowSimilarity", it indicates that liveness detection passed, but face comparison similarity is below 70. Determined not to be the same person.
--For other error cases, please refer to [Liveness Face Comparison (API only) Error Codes](https://www.tencentcloud.com/zh/document/product/1061/55390?lang=zh&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
+-For other error cases, please refer to [Selfie Verification (Pure API) Error Codes](https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
  * @method void setResult(string $Result) Set Business Error Codes.
 -When the return value is "Success", it indicates that liveness detection and face comparison passed. Determined to be the same person.
 -When the return value is "FailedOperation.CompareLowSimilarity", it indicates that liveness detection passed, but face comparison similarity is below 70. Determined not to be the same person.
--For other error cases, please refer to [Liveness Face Comparison (API only) Error Codes](https://www.tencentcloud.com/zh/document/product/1061/55390?lang=zh&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
+-For other error cases, please refer to [Selfie Verification (Pure API) Error Codes](https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
  * @method string getDescription() Obtain The service result description
  * @method void setDescription(string $Description) Set The service result description
  * @method float getSim() Obtain This value indicates the similarity of face comparison. Value range: 0.00-100.00.
@@ -53,7 +53,7 @@ class CompareFaceLivenessResponse extends AbstractModel
      * @var string Business Error Codes.
 -When the return value is "Success", it indicates that liveness detection and face comparison passed. Determined to be the same person.
 -When the return value is "FailedOperation.CompareLowSimilarity", it indicates that liveness detection passed, but face comparison similarity is below 70. Determined not to be the same person.
--For other error cases, please refer to [Liveness Face Comparison (API only) Error Codes](https://www.tencentcloud.com/zh/document/product/1061/55390?lang=zh&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
+-For other error cases, please refer to [Selfie Verification (Pure API) Error Codes](https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
      */
     public $Result;
 
@@ -86,7 +86,7 @@ Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q=="
      * @param string $Result Business Error Codes.
 -When the return value is "Success", it indicates that liveness detection and face comparison passed. Determined to be the same person.
 -When the return value is "FailedOperation.CompareLowSimilarity", it indicates that liveness detection passed, but face comparison similarity is below 70. Determined not to be the same person.
--For other error cases, please refer to [Liveness Face Comparison (API only) Error Codes](https://www.tencentcloud.com/zh/document/product/1061/55390?lang=zh&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
+-For other error cases, please refer to [Selfie Verification (Pure API) Error Codes](https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
      * @param string $Description The service result description
      * @param float $Sim This value indicates the similarity of face comparison. Value range: 0.00-100.00.
 - The false acceptance rate for a threshold of 70 is 0.1%, and for a threshold of 80, it is 0.01%.

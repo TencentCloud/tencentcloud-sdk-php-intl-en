@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLineTwo(string $LineTwo) Set <p>Second line of the address bar</p>
  * @method string getLineThree() Obtain <p>Third line of the address bar</p>
  * @method void setLineThree(string $LineThree) Set <p>Third line of the address bar</p>
- * @method string getLineFour() Obtain <p>Fourth line of the address bar</p>
- * @method void setLineFour(string $LineFour) Set <p>Fourth line of the address bar</p>
- * @method string getLineFive() Obtain <p>Fifth line of the address bar</p>
- * @method void setLineFive(string $LineFive) Set <p>Fifth line of the address bar</p>
+ * @method string getLineFour() Obtain <p>Line 4 of the address bar</p>
+ * @method void setLineFour(string $LineFour) Set <p>Line 4 of the address bar</p>
+ * @method string getLineFive() Obtain <p>Line 5 of the address bar</p>
+ * @method void setLineFive(string $LineFive) Set <p>Line 5 of the address bar</p>
  */
 class AddressInfo extends AbstractModel
 {
@@ -98,12 +98,12 @@ class AddressInfo extends AbstractModel
     public $LineThree;
 
     /**
-     * @var string <p>Fourth line of the address bar</p>
+     * @var string <p>Line 4 of the address bar</p>
      */
     public $LineFour;
 
     /**
-     * @var string <p>Fifth line of the address bar</p>
+     * @var string <p>Line 5 of the address bar</p>
      */
     public $LineFive;
 
@@ -118,8 +118,8 @@ class AddressInfo extends AbstractModel
      * @param string $LineOne <p>First line of the address bar</p>
      * @param string $LineTwo <p>Second line of the address bar</p>
      * @param string $LineThree <p>Third line of the address bar</p>
-     * @param string $LineFour <p>Fourth line of the address bar</p>
-     * @param string $LineFive <p>Fifth line of the address bar</p>
+     * @param string $LineFour <p>Line 4 of the address bar</p>
+     * @param string $LineFive <p>Line 5 of the address bar</p>
      */
     function __construct()
     {

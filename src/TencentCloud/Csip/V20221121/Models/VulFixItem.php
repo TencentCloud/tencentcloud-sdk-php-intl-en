@@ -18,36 +18,36 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Vulnerability repair item, specify a vulnerability/KB patch and its target host that needs to be repaired.
+ * Vulnerability repair item. Specify a vulnerability/KB patch and its target host for repair.
  *
- * @method array getInstanceIds() Obtain <p>Instance ID list of hosts requiring fixing<br>Input parameter limitation: Up to 1,000 instance IDs per single item</p>
- * @method void setInstanceIds(array $InstanceIds) Set <p>Instance ID list of hosts requiring fixing<br>Input parameter limitation: Up to 1,000 instance IDs per single item</p>
- * @method integer getVulId() Obtain <p>Vulnerability ID. Choose either VulId or KBId.</p>
- * @method void setVulId(integer $VulId) Set <p>Vulnerability ID. Choose either VulId or KBId.</p>
- * @method integer getKBId() Obtain <p>Patch ID. Choose either VulId or KBId.</p>
- * @method void setKBId(integer $KBId) Set <p>Patch ID. Choose either VulId or KBId.</p>
+ * @method array getInstanceIds() Obtain <p>Instance ID list of hosts requiring fixing<br>Input limit: up to 1000 instance IDs per single item</p>
+ * @method void setInstanceIds(array $InstanceIds) Set <p>Instance ID list of hosts requiring fixing<br>Input limit: up to 1000 instance IDs per single item</p>
+ * @method integer getVulId() Obtain <p>Vulnerability ID. Choose either VulId or KBId</p>
+ * @method void setVulId(integer $VulId) Set <p>Vulnerability ID. Choose either VulId or KBId</p>
+ * @method integer getKBId() Obtain <p>KB patch ID. Either VulId or KBId is required.</p>
+ * @method void setKBId(integer $KBId) Set <p>KB patch ID. Either VulId or KBId is required.</p>
  */
 class VulFixItem extends AbstractModel
 {
     /**
-     * @var array <p>Instance ID list of hosts requiring fixing<br>Input parameter limitation: Up to 1,000 instance IDs per single item</p>
+     * @var array <p>Instance ID list of hosts requiring fixing<br>Input limit: up to 1000 instance IDs per single item</p>
      */
     public $InstanceIds;
 
     /**
-     * @var integer <p>Vulnerability ID. Choose either VulId or KBId.</p>
+     * @var integer <p>Vulnerability ID. Choose either VulId or KBId</p>
      */
     public $VulId;
 
     /**
-     * @var integer <p>Patch ID. Choose either VulId or KBId.</p>
+     * @var integer <p>KB patch ID. Either VulId or KBId is required.</p>
      */
     public $KBId;
 
     /**
-     * @param array $InstanceIds <p>Instance ID list of hosts requiring fixing<br>Input parameter limitation: Up to 1,000 instance IDs per single item</p>
-     * @param integer $VulId <p>Vulnerability ID. Choose either VulId or KBId.</p>
-     * @param integer $KBId <p>Patch ID. Choose either VulId or KBId.</p>
+     * @param array $InstanceIds <p>Instance ID list of hosts requiring fixing<br>Input limit: up to 1000 instance IDs per single item</p>
+     * @param integer $VulId <p>Vulnerability ID. Choose either VulId or KBId</p>
+     * @param integer $KBId <p>KB patch ID. Either VulId or KBId is required.</p>
      */
     function __construct()
     {

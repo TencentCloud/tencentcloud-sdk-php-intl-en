@@ -202,6 +202,7 @@ Note: Newly designed or cloned voice types cannot be deleted before activation (
 1. AIGC statistical data from the last 365 days can be queried.
    2. The query time span should not exceed 90 days.
 3. If the query time span exceeds 1 day, the data returned is at day granularity. Otherwise, the data returned is at 5-minute granularity.
+ * @method Models\DescribeAigcWhitelistResponse DescribeAigcWhitelist(Models\DescribeAigcWhitelistRequest $req) This API is used to query AIGC allowlist settings.
  * @method Models\DescribeAllClassResponse DescribeAllClass(Models\DescribeAllClassRequest $req) * Obtain all classification information of the user.
  * @method Models\DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(Models\DescribeAnimatedGraphicsTemplatesRequest $req) This API is used to query the list of rotating image templates based on conditions with paging.
  * @method Models\DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplates(Models\DescribeBlindWatermarkTemplatesRequest $req) This API is used to query user-customized digit watermark templates.
@@ -583,6 +584,7 @@ If event notification is used, its type is [audio/video moderation completed](ht
 -(Not recommended: use CreateTime instead) Specify a single starting creation time StartTime to search.
 -(Not recommended: use CreateTime instead) Specify a single ending creation time EndTime to search.
  * @method Models\SearchMediaBySemanticsResponse SearchMediaBySemantics(Models\SearchMediaBySemanticsRequest $req) Use natural language to conduct semantic search on media.
+ * @method Models\SetAigcWhitelistResponse SetAigcWhitelist(Models\SetAigcWhitelistRequest $req) This API is used to modify AIGC allowlist settings.
  * @method Models\SetCLSPushTargetResponse SetCLSPushTarget(Models\SetCLSPushTargetRequest $req) Set a delivery target for the VOD domain in CLS.
  * @method Models\SetDrmKeyProviderInfoResponse SetDrmKeyProviderInfo(Models\SetDrmKeyProviderInfoRequest $req) Sets DRM key provider information.
  * @method Models\SetVodDomainCertificateResponse SetVodDomainCertificate(Models\SetVodDomainCertificateRequest $req) Set the HTTPS certificate for a vod domain.

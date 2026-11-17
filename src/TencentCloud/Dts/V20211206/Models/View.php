@@ -20,30 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Synced view description
  *
- * @method string getViewName() Obtain View name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setViewName(string $ViewName) Set View name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNewViewName() Obtain Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNewViewName(string $NewViewName) Set Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getViewName() Obtain View name.
+ * @method void setViewName(string $ViewName) Set View name.
+ * @method string getNewViewName() Obtain Reserved field. Currently, view renaming is not supported.
+ * @method void setNewViewName(string $NewViewName) Set Reserved field. Currently, view renaming is not supported.
  */
 class View extends AbstractModel
 {
     /**
-     * @var string View name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string View name.
      */
     public $ViewName;
 
     /**
-     * @var string Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Reserved field. Currently, view renaming is not supported.
      */
     public $NewViewName;
 
     /**
-     * @param string $ViewName View name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $NewViewName Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ViewName View name.
+     * @param string $NewViewName Reserved field. Currently, view renaming is not supported.
      */
     function __construct()
     {

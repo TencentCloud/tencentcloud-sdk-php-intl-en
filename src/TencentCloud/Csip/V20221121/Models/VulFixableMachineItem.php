@@ -18,47 +18,47 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Fixable host information
+ * Repairable host information
  *
- * @method array getVulIds() Obtain <p>Vulnerability ID list, grouped by SupportAutoFix dimension: repairable vulnerability IDs when SupportAutoFix=1, non-repairable vulnerability IDs when SupportAutoFix=0</p>
- * @method void setVulIds(array $VulIds) Set <p>Vulnerability ID list, grouped by SupportAutoFix dimension: repairable vulnerability IDs when SupportAutoFix=1, non-repairable vulnerability IDs when SupportAutoFix=0</p>
+ * @method array getVulIds() Obtain <p>Vulnerability ID list, grouped by the SupportAutoFix dimension: When SupportAutoFix=1, it is a repairable vulnerability ID; when SupportAutoFix=0, it is a non-repairable vulnerability ID</p>
+ * @method void setVulIds(array $VulIds) Set <p>Vulnerability ID list, grouped by the SupportAutoFix dimension: When SupportAutoFix=1, it is a repairable vulnerability ID; when SupportAutoFix=0, it is a non-repairable vulnerability ID</p>
  * @method string getInstanceId() Obtain <p>Host instance ID.</p>
  * @method void setInstanceId(string $InstanceId) Set <p>Host instance ID.</p>
  * @method string getMachineName() Obtain <p>Host name.</p>
  * @method void setMachineName(string $MachineName) Set <p>Host name.</p>
  * @method string getMachineIp() Obtain <p>Host IP address.</p>
  * @method void setMachineIp(string $MachineIp) Set <p>Host IP address.</p>
- * @method string getPublicIp() Obtain <p>public IP address</p>
- * @method void setPublicIp(string $PublicIp) Set <p>public IP address</p>
- * @method string getOsType() Obtain <p>OS type<br>Enumeration value:<br>linux: Linux operating system<br>windows: Windows operating system</p>
- * @method void setOsType(string $OsType) Set <p>OS type<br>Enumeration value:<br>linux: Linux operating system<br>windows: Windows operating system</p>
- * @method string getOsName() Obtain <p>Operating system name.</p>
- * @method void setOsName(string $OsName) Set <p>Operating system name.</p>
+ * @method string getPublicIp() Obtain <p>Public IP Address</p>
+ * @method void setPublicIp(string $PublicIp) Set <p>Public IP Address</p>
+ * @method string getOsType() Obtain <p>Operating system type<br>Enumeration values:<br>linux: Linux operating system<br>windows: Windows operating system</p>
+ * @method void setOsType(string $OsType) Set <p>Operating system type<br>Enumeration values:<br>linux: Linux operating system<br>windows: Windows operating system</p>
+ * @method string getOsName() Obtain <p>OS name</p>
+ * @method void setOsName(string $OsName) Set <p>OS name</p>
  * @method string getMachineStatus() Obtain <p>Host online status<br>Enumeration value:<br>ONLINE: online<br>OFFLINE: offline</p>
  * @method void setMachineStatus(string $MachineStatus) Set <p>Host online status<br>Enumeration value:<br>ONLINE: online<br>OFFLINE: offline</p>
- * @method integer getSupportAutoFix() Obtain <p>Is auto-repair supported<br>Enumeration value:<br>0: No support<br>1: Support</p>
- * @method void setSupportAutoFix(integer $SupportAutoFix) Set <p>Is auto-repair supported<br>Enumeration value:<br>0: No support<br>1: Support</p>
- * @method integer getFixStatus() Obtain <p>Current remediation status<br>Enumeration value:<br>0: Unfixed<br>1: In remediation<br>2: Fix failure<br>3: Repair successful<br>4: Timeout</p>
- * @method void setFixStatus(integer $FixStatus) Set <p>Current remediation status<br>Enumeration value:<br>0: Unfixed<br>1: In remediation<br>2: Fix failure<br>3: Repair successful<br>4: Timeout</p>
+ * @method integer getSupportAutoFix() Obtain <p>Is auto-repair supported<br>Enumeration values:<br>0: No support<br>1: Support</p>
+ * @method void setSupportAutoFix(integer $SupportAutoFix) Set <p>Is auto-repair supported<br>Enumeration values:<br>0: No support<br>1: Support</p>
+ * @method integer getFixStatus() Obtain <p>Current remediation status<br>Enumeration values:<br>0: unfixed<br>1: in remediation<br>2: fix failed<br>3: successful fix<br>4: remediation timeout</p>
+ * @method void setFixStatus(integer $FixStatus) Set <p>Current remediation status<br>Enumeration values:<br>0: unfixed<br>1: in remediation<br>2: fix failed<br>3: successful fix<br>4: remediation timeout</p>
  * @method string getLatestFixTime() Obtain <p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
  * @method void setLatestFixTime(string $LatestFixTime) Set <p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
  * @method string getNotFixableReason() Obtain <p>Non-repairable reason. Returned when SupportAutoFix is 0.</p>
  * @method void setNotFixableReason(string $NotFixableReason) Set <p>Non-repairable reason. Returned when SupportAutoFix is 0.</p>
- * @method array getFixCommands() Obtain <p>Fix command list, returned when SupportAutoFix is 1</p>
- * @method void setFixCommands(array $FixCommands) Set <p>Fix command list, returned when SupportAutoFix is 1</p>
+ * @method array getFixCommands() Obtain <p>List of fix commands. Returned when SupportAutoFix is 1</p>
+ * @method void setFixCommands(array $FixCommands) Set <p>List of fix commands. Returned when SupportAutoFix is 1</p>
  * @method array getComponents() Obtain <p>Associated component list</p>
  * @method void setComponents(array $Components) Set <p>Associated component list</p>
  * @method array getTagItems() Obtain <p>Asset tag list</p>
  * @method void setTagItems(array $TagItems) Set <p>Asset tag list</p>
- * @method integer getAppId() Obtain <p>Account AppId</p>
- * @method void setAppId(integer $AppId) Set <p>Account AppId</p>
- * @method string getPayVersion() Obtain <p>Paid edition info<br>Enumeration value:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
- * @method void setPayVersion(string $PayVersion) Set <p>Paid edition info<br>Enumeration value:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
+ * @method integer getAppId() Obtain <p>Associated account AppId</p>
+ * @method void setAppId(integer $AppId) Set <p>Associated account AppId</p>
+ * @method string getPayVersion() Obtain <p>Paid edition info<br>Enumeration values:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
+ * @method void setPayVersion(string $PayVersion) Set <p>Paid edition info<br>Enumeration values:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
  */
 class VulFixableMachineItem extends AbstractModel
 {
     /**
-     * @var array <p>Vulnerability ID list, grouped by SupportAutoFix dimension: repairable vulnerability IDs when SupportAutoFix=1, non-repairable vulnerability IDs when SupportAutoFix=0</p>
+     * @var array <p>Vulnerability ID list, grouped by the SupportAutoFix dimension: When SupportAutoFix=1, it is a repairable vulnerability ID; when SupportAutoFix=0, it is a non-repairable vulnerability ID</p>
      */
     public $VulIds;
 
@@ -78,17 +78,17 @@ class VulFixableMachineItem extends AbstractModel
     public $MachineIp;
 
     /**
-     * @var string <p>public IP address</p>
+     * @var string <p>Public IP Address</p>
      */
     public $PublicIp;
 
     /**
-     * @var string <p>OS type<br>Enumeration value:<br>linux: Linux operating system<br>windows: Windows operating system</p>
+     * @var string <p>Operating system type<br>Enumeration values:<br>linux: Linux operating system<br>windows: Windows operating system</p>
      */
     public $OsType;
 
     /**
-     * @var string <p>Operating system name.</p>
+     * @var string <p>OS name</p>
      */
     public $OsName;
 
@@ -98,12 +98,12 @@ class VulFixableMachineItem extends AbstractModel
     public $MachineStatus;
 
     /**
-     * @var integer <p>Is auto-repair supported<br>Enumeration value:<br>0: No support<br>1: Support</p>
+     * @var integer <p>Is auto-repair supported<br>Enumeration values:<br>0: No support<br>1: Support</p>
      */
     public $SupportAutoFix;
 
     /**
-     * @var integer <p>Current remediation status<br>Enumeration value:<br>0: Unfixed<br>1: In remediation<br>2: Fix failure<br>3: Repair successful<br>4: Timeout</p>
+     * @var integer <p>Current remediation status<br>Enumeration values:<br>0: unfixed<br>1: in remediation<br>2: fix failed<br>3: successful fix<br>4: remediation timeout</p>
      */
     public $FixStatus;
 
@@ -118,7 +118,7 @@ class VulFixableMachineItem extends AbstractModel
     public $NotFixableReason;
 
     /**
-     * @var array <p>Fix command list, returned when SupportAutoFix is 1</p>
+     * @var array <p>List of fix commands. Returned when SupportAutoFix is 1</p>
      */
     public $FixCommands;
 
@@ -133,33 +133,33 @@ class VulFixableMachineItem extends AbstractModel
     public $TagItems;
 
     /**
-     * @var integer <p>Account AppId</p>
+     * @var integer <p>Associated account AppId</p>
      */
     public $AppId;
 
     /**
-     * @var string <p>Paid edition info<br>Enumeration value:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
+     * @var string <p>Paid edition info<br>Enumeration values:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
      */
     public $PayVersion;
 
     /**
-     * @param array $VulIds <p>Vulnerability ID list, grouped by SupportAutoFix dimension: repairable vulnerability IDs when SupportAutoFix=1, non-repairable vulnerability IDs when SupportAutoFix=0</p>
+     * @param array $VulIds <p>Vulnerability ID list, grouped by the SupportAutoFix dimension: When SupportAutoFix=1, it is a repairable vulnerability ID; when SupportAutoFix=0, it is a non-repairable vulnerability ID</p>
      * @param string $InstanceId <p>Host instance ID.</p>
      * @param string $MachineName <p>Host name.</p>
      * @param string $MachineIp <p>Host IP address.</p>
-     * @param string $PublicIp <p>public IP address</p>
-     * @param string $OsType <p>OS type<br>Enumeration value:<br>linux: Linux operating system<br>windows: Windows operating system</p>
-     * @param string $OsName <p>Operating system name.</p>
+     * @param string $PublicIp <p>Public IP Address</p>
+     * @param string $OsType <p>Operating system type<br>Enumeration values:<br>linux: Linux operating system<br>windows: Windows operating system</p>
+     * @param string $OsName <p>OS name</p>
      * @param string $MachineStatus <p>Host online status<br>Enumeration value:<br>ONLINE: online<br>OFFLINE: offline</p>
-     * @param integer $SupportAutoFix <p>Is auto-repair supported<br>Enumeration value:<br>0: No support<br>1: Support</p>
-     * @param integer $FixStatus <p>Current remediation status<br>Enumeration value:<br>0: Unfixed<br>1: In remediation<br>2: Fix failure<br>3: Repair successful<br>4: Timeout</p>
+     * @param integer $SupportAutoFix <p>Is auto-repair supported<br>Enumeration values:<br>0: No support<br>1: Support</p>
+     * @param integer $FixStatus <p>Current remediation status<br>Enumeration values:<br>0: unfixed<br>1: in remediation<br>2: fix failed<br>3: successful fix<br>4: remediation timeout</p>
      * @param string $LatestFixTime <p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
      * @param string $NotFixableReason <p>Non-repairable reason. Returned when SupportAutoFix is 0.</p>
-     * @param array $FixCommands <p>Fix command list, returned when SupportAutoFix is 1</p>
+     * @param array $FixCommands <p>List of fix commands. Returned when SupportAutoFix is 1</p>
      * @param array $Components <p>Associated component list</p>
      * @param array $TagItems <p>Asset tag list</p>
-     * @param integer $AppId <p>Account AppId</p>
-     * @param string $PayVersion <p>Paid edition info<br>Enumeration value:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
+     * @param integer $AppId <p>Associated account AppId</p>
+     * @param string $PayVersion <p>Paid edition info<br>Enumeration values:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
      */
     function __construct()
     {

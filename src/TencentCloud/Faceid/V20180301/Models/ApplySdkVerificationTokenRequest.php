@@ -24,11 +24,13 @@ use TencentCloud\Common\AbstractModel;
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
 3: Liveness detection
+4: OCR
 Default value: 1
  * @method void setCheckMode(integer $CheckMode) Set The verification mode. Valid values:
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
 3: Liveness detection
+4: OCR
 Default value: 1
  * @method integer getSecurityLevel() Obtain The security level of the verification. Valid values:
 1: Video-based liveness detection
@@ -178,6 +180,7 @@ class ApplySdkVerificationTokenRequest extends AbstractModel
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
 3: Liveness detection
+4: OCR
 Default value: 1
      */
     public $CheckMode;
@@ -350,6 +353,7 @@ Default Value: OCR_DETECT_AUTO_MANUAL
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
 3: Liveness detection
+4: OCR
 Default value: 1
      * @param integer $SecurityLevel The security level of the verification. Valid values:
 1: Video-based liveness detection

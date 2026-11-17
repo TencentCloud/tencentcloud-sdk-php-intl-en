@@ -27,6 +27,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\AddAntiInfoLeakRulesResponse AddAntiInfoLeakRules(Models\AddAntiInfoLeakRulesRequest $req) Add information leakage prevention rule
  * @method Models\AddCustomRuleResponse AddCustomRule(Models\AddCustomRuleRequest $req) Add access control (from custom policy)
  * @method Models\AddCustomWhiteRuleResponse AddCustomWhiteRule(Models\AddCustomWhiteRuleRequest $req) Add precision allowlist rules
+ * @method Models\AddLLMSdkAccessResponse AddLLMSdkAccess(Models\AddLLMSdkAccessRequest $req) This API is used to add an access configuration in llmwaf-sdk.
  * @method Models\AddSpartaProtectionResponse AddSpartaProtection(Models\AddSpartaProtectionRequest $req) Add SaaS WAF protection domain
  * @method Models\CreateDealsResponse CreateDeals(Models\CreateDealsRequest $req) Billing Resource Purchase, Renewal Order API
  * @method Models\CreateHostResponse CreateHost(Models\CreateHostRequest $req) Add a protection domain in CLB-WAF
@@ -39,6 +40,9 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DeleteCustomWhiteRuleResponse DeleteCustomWhiteRule(Models\DeleteCustomWhiteRuleRequest $req) Delete precision allowlist rules
  * @method Models\DeleteHostResponse DeleteHost(Models\DeleteHostRequest $req) This API is used to delete a domain name protected by CLB WAF. Batch operation is supported.
  * @method Models\DeleteIpAccessControlV2Response DeleteIpAccessControlV2(Models\DeleteIpAccessControlV2Request $req) This API is used to delete latest versions of WAF IP allowlists/blocklists.
+ * @method Models\DeleteLLMContentRuleResponse DeleteLLMContentRule(Models\DeleteLLMContentRuleRequest $req) This API is used to delete an LLM content protection rule.
+ * @method Models\DeleteLLMKeywordLibraryResponse DeleteLLMKeywordLibrary(Models\DeleteLLMKeywordLibraryRequest $req) This API is used to delete a thesaurus list.
+ * @method Models\DeleteLLMSdkAccessResponse DeleteLLMSdkAccess(Models\DeleteLLMSdkAccessRequest $req) This API is used to delete the access configuration in llmwaf-sdk.
  * @method Models\DeleteOwaspRuleStatusResponse DeleteOwaspRuleStatus(Models\DeleteOwaspRuleStatusRequest $req) This API is used to unlock the Door God rule status.
  * @method Models\DeleteOwaspWhiteRuleResponse DeleteOwaspWhiteRule(Models\DeleteOwaspWhiteRuleRequest $req) This API is used to delete a user rule engine allowlist.
  * @method Models\DeleteSessionResponse DeleteSession(Models\DeleteSessionRequest $req) Delete CC attack session settings
@@ -66,6 +70,14 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeHostsResponse DescribeHosts(Models\DescribeHostsRequest $req) Obtain protection domain list in CLB-WAF
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) Query detailed information of all user instances
  * @method Models\DescribeIpAccessControlResponse DescribeIpAccessControl(Models\DescribeIpAccessControlRequest $req) WAF IP blocklist/allowlist query
+ * @method Models\DescribeLLMContentRuleListResponse DescribeLLMContentRuleList(Models\DescribeLLMContentRuleListRequest $req) This API is used to obtain the LLM content protection rules.
+ * @method Models\DescribeLLMContentSecCheckResponse DescribeLLMContentSecCheck(Models\DescribeLLMContentSecCheckRequest $req) This API is used to review the request and response content of large models.
+ * @method Models\DescribeLLMHourBillDetailResponse DescribeLLMHourBillDetail(Models\DescribeLLMHourBillDetailRequest $req) This API is used to query the hourly bill details of a single instance for a single day, including the estimated total bill amount, itemized costs, hourly trends, and hourly details.
+ * @method Models\DescribeLLMKeywordLibraryResponse DescribeLLMKeywordLibrary(Models\DescribeLLMKeywordLibraryRequest $req) This API is used to query the keyword list.
+ * @method Models\DescribeLLMSdkAccessResponse DescribeLLMSdkAccess(Models\DescribeLLMSdkAccessRequest $req) This API is used to query sdk access configurations.
+ * @method Models\DescribeLLMWafDLPRulesResponse DescribeLLMWafDLPRules(Models\DescribeLLMWafDLPRulesRequest $req) This API is used to query DLP rules.
+ * @method Models\DescribeLLMWafProtectRulesResponse DescribeLLMWafProtectRules(Models\DescribeLLMWafProtectRulesRequest $req) This API is used to query LLM rule requests.
+ * @method Models\DescribeLLMWafToolCallRulesResponse DescribeLLMWafToolCallRules(Models\DescribeLLMWafToolCallRulesRequest $req) This API is used to query Tool Call rules.
  * @method Models\DescribeModuleStatusResponse DescribeModuleStatus(Models\DescribeModuleStatusRequest $req) Query the switch status of each WAF basic security module, check if each module is enabled
  * @method Models\DescribeObjectsResponse DescribeObjects(Models\DescribeObjectsRequest $req) View protected object list
  * @method Models\DescribeOwaspRuleTypesResponse DescribeOwaspRuleTypes(Models\DescribeOwaspRuleTypesRequest $req) This API is used to query the rule types of the rule engine.
@@ -76,6 +88,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribePortsResponse DescribePorts(Models\DescribePortsRequest $req) Obtain the SaaS-type WAF protection port list
  * @method Models\DescribeRuleLimitResponse DescribeRuleLimit(Models\DescribeRuleLimitRequest $req) Obtain specific specification limits for each module
  * @method Models\DescribeSessionResponse DescribeSession(Models\DescribeSessionRequest $req) WAF session definition query API
+ * @method Models\DescribeSkillSecScanResultResponse DescribeSkillSecScanResult(Models\DescribeSkillSecScanResultRequest $req) This API is used to query Skill security detection results by file Hash.
  * @method Models\DescribeSpartaProtectionInfoResponse DescribeSpartaProtectionInfo(Models\DescribeSpartaProtectionInfoRequest $req) WAF Sparta - Obtain protection domain information
  * @method Models\DescribeTlsVersionResponse DescribeTlsVersion(Models\DescribeTlsVersionRequest $req) This API is used to query TLS versions supported by SaaS WAF.
  * @method Models\DescribeTopAttackDomainResponse DescribeTopAttackDomain(Models\DescribeTopAttackDomainRequest $req) Query top 5 attack domains
@@ -84,6 +97,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeUserLevelResponse DescribeUserLevel(Models\DescribeUserLevelRequest $req) Obtain the user protection rule level
  * @method Models\DescribeVipInfoResponse DescribeVipInfo(Models\DescribeVipInfoRequest $req) Query VIP information based on filter criteria
  * @method Models\DescribeWebshellStatusResponse DescribeWebshellStatus(Models\DescribeWebshellStatusRequest $req) Obtain the webshell status of a domain
+ * @method Models\ExportLLMKeywordLibResponse ExportLLMKeywordLib(Models\ExportLLMKeywordLibRequest $req) This API is used to export lexicon files.
  * @method Models\FreshAntiFakeUrlResponse FreshAntiFakeUrl(Models\FreshAntiFakeUrlRequest $req) Refresh a tamper-proof URL
  * @method Models\GenerateDealsAndPayNewResponse GenerateDealsAndPayNew(Models\GenerateDealsAndPayNewRequest $req) Billing Resource Purchase, Renewal Order API
  * @method Models\GetAttackHistogramResponse GetAttackHistogram(Models\GetAttackHistogramRequest $req) This API is used to generate a bar chart for the generation time of attack logs.
@@ -113,6 +127,14 @@ Batch operation is supported.
  * @method Models\ModifyInstanceQpsLimitResponse ModifyInstanceQpsLimit(Models\ModifyInstanceQpsLimitRequest $req) Set elastic QPS limit for package instances
  * @method Models\ModifyInstanceRenewFlagResponse ModifyInstanceRenewFlag(Models\ModifyInstanceRenewFlagRequest $req) Enable or disable auto-renewal for instance
  * @method Models\ModifyIpAccessControlResponse ModifyIpAccessControl(Models\ModifyIpAccessControlRequest $req) This API is used to edit WAF IP allowlists/blocklists.
+ * @method Models\ModifyLLMContentRuleResponse ModifyLLMContentRule(Models\ModifyLLMContentRuleRequest $req) This API is used to update the LLM content security rule.
+ * @method Models\ModifyLLMContentRuleStatusResponse ModifyLLMContentRuleStatus(Models\ModifyLLMContentRuleStatusRequest $req) This API is used to enable or disable the switch of protection rules for LLM content.
+ * @method Models\ModifyLLMKeywordLibraryResponse ModifyLLMKeywordLibrary(Models\ModifyLLMKeywordLibraryRequest $req) This API is used to modify a custom lexicon.
+ * @method Models\ModifyLLMSdkAccessResponse ModifyLLMSdkAccess(Models\ModifyLLMSdkAccessRequest $req) This API is used to configure boundary access for llmwaf-sdk.
+ * @method Models\ModifyLLMStatusResponse ModifyLLMStatus(Models\ModifyLLMStatusRequest $req) This API is used to modify the module switch status of large model protection, supporting independent on/off operations for the master switch and each submodule. Before enabling, ensure that the instance has purchased the large model protection capability. If not purchased, the enable operation returns the AuthFailure.ErrCodeNoPurchased error.
+ * @method Models\ModifyLLMWafDLPRuleResponse ModifyLLMWafDLPRule(Models\ModifyLLMWafDLPRuleRequest $req) This API is used to modify llmwaf DLP rules.
+ * @method Models\ModifyLLMWafProtectRuleResponse ModifyLLMWafProtectRule(Models\ModifyLLMWafProtectRuleRequest $req) This API is used to modify LLM rules.
+ * @method Models\ModifyLLMWafToolCallRuleResponse ModifyLLMWafToolCallRule(Models\ModifyLLMWafToolCallRuleRequest $req) This API is used to modify Tool Call rules.
  * @method Models\ModifyModuleStatusResponse ModifyModuleStatus(Models\ModifyModuleStatusRequest $req) Set the switch for the basic security module under a certain domain
  * @method Models\ModifyObjectResponse ModifyObject(Models\ModifyObjectRequest $req) Modify protection object
  * @method Models\ModifyOwaspRuleStatusResponse ModifyOwaspRuleStatus(Models\ModifyOwaspRuleStatusRequest $req) This API is used to refresh the rule switch.
@@ -129,6 +151,7 @@ Batch operation is supported.
  * @method Models\RefreshAccessCheckResultResponse RefreshAccessCheckResult(Models\RefreshAccessCheckResultRequest $req) Refresh integration check results. The backend will generate integration check tasks
  * @method Models\SearchAttackLogResponse SearchAttackLog(Models\SearchAttackLogRequest $req) The new version of the CLS API has parameter changes, with query changed to query_string to support Lucene syntax for API search queries.
  * @method Models\SwitchElasticModeResponse SwitchElasticMode(Models\SwitchElasticModeRequest $req) Toggle elasticity switch
+ * @method Models\UploadSkillSecScanResponse UploadSkillSecScan(Models\UploadSkillSecScanRequest $req) This API is used to upload a Skill ZIP file and trigger asynchronous security detection.
  * @method Models\UpsertCCRuleResponse UpsertCCRule(Models\UpsertCCRuleRequest $req) WAF CC V2 upsert API
  * @method Models\UpsertSessionResponse UpsertSession(Models\UpsertSessionRequest $req) WAF session definition upsert API
  */

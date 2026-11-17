@@ -20,30 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Column information in data sync
  *
- * @method string getColumnName() Obtain Column nameNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setColumnName(string $ColumnName) Set Column nameNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getNewColumnName() Obtain New column name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNewColumnName(string $NewColumnName) Set New column name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getColumnName() Obtain Column name
+ * @method void setColumnName(string $ColumnName) Set Column name
+ * @method string getNewColumnName() Obtain New column name.
+ * @method void setNewColumnName(string $NewColumnName) Set New column name.
  */
 class Column extends AbstractModel
 {
     /**
-     * @var string Column nameNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Column name
      */
     public $ColumnName;
 
     /**
-     * @var string New column name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string New column name.
      */
     public $NewColumnName;
 
     /**
-     * @param string $ColumnName Column nameNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $NewColumnName New column name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ColumnName Column name
+     * @param string $NewColumnName New column name.
      */
     function __construct()
     {

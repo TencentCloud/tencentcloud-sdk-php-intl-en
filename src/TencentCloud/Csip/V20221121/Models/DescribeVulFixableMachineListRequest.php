@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVulFixableMachineList request structure.
  *
- * @method array getVulIds() Obtain <p>Vulnerability ID list, a maximum of 100</p>
- * @method void setVulIds(array $VulIds) Set <p>Vulnerability ID list, a maximum of 100</p>
- * @method integer getOffset() Obtain <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
- * @method void setOffset(integer $Offset) Set <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
- * @method integer getLimit() Obtain <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
- * @method void setLimit(integer $Limit) Set <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
- * @method array getFilters() Obtain <p>Filtering Conditions<br>Supported Filter.Name:<br>Keyword - fuzzy matching, search by asset ID, asset name<br>ComponentName - fuzzy matching, search by associated component name<br>InstanceId - exact match, filter by host instance ID<br>MachineName - fuzzy matching, search by host name<br>MachineIp - fuzzy matching, search by host IP<br>OsType - exact match, filter by OS type: linux/windows<br>SupportAutoFix - exact match, filter by whether automatic fixing is supported: 0-unsupported 1-supported<br>Tag - exact match, filter by asset tag<br>AppId - exact match, filter by associated account</p>
- * @method void setFilters(array $Filters) Set <p>Filtering Conditions<br>Supported Filter.Name:<br>Keyword - fuzzy matching, search by asset ID, asset name<br>ComponentName - fuzzy matching, search by associated component name<br>InstanceId - exact match, filter by host instance ID<br>MachineName - fuzzy matching, search by host name<br>MachineIp - fuzzy matching, search by host IP<br>OsType - exact match, filter by OS type: linux/windows<br>SupportAutoFix - exact match, filter by whether automatic fixing is supported: 0-unsupported 1-supported<br>Tag - exact match, filter by asset tag<br>AppId - exact match, filter by associated account</p>
+ * @method array getVulIds() Obtain <p>List of vulnerability IDs. Supports up to 100.</p>
+ * @method void setVulIds(array $VulIds) Set <p>List of vulnerability IDs. Supports up to 100.</p>
+ * @method integer getOffset() Obtain <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p>
+ * @method void setOffset(integer $Offset) Set <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p>
+ * @method integer getLimit() Obtain <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
+ * @method array getFilters() Obtain <p>Filter criteria<br>Supported Filter.Name:<br>Keyword - Fuzzy matching. Search by asset ID or asset name.<br>ComponentName - Fuzzy matching. Search by associated component name.<br>InstanceId - Exact match. Filter by host instance ID.<br>MachineName - Fuzzy matching. Search by host name.<br>MachineIp - Fuzzy matching. Search by host IP.<br>OsType - Exact match. Filter by OS type: linux/windows<br>SupportAutoFix - Exact match. Filter by whether auto-repair is supported: 0-unsupported 1-supported<br>Tag - Exact match. Filter by asset tag.<br>AppId - Exact match. Filter by associated account.</p>
+ * @method void setFilters(array $Filters) Set <p>Filter criteria<br>Supported Filter.Name:<br>Keyword - Fuzzy matching. Search by asset ID or asset name.<br>ComponentName - Fuzzy matching. Search by associated component name.<br>InstanceId - Exact match. Filter by host instance ID.<br>MachineName - Fuzzy matching. Search by host name.<br>MachineIp - Fuzzy matching. Search by host IP.<br>OsType - Exact match. Filter by OS type: linux/windows<br>SupportAutoFix - Exact match. Filter by whether auto-repair is supported: 0-unsupported 1-supported<br>Tag - Exact match. Filter by asset tag.<br>AppId - Exact match. Filter by associated account.</p>
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  */
 class DescribeVulFixableMachineListRequest extends AbstractModel
 {
     /**
-     * @var array <p>Vulnerability ID list, a maximum of 100</p>
+     * @var array <p>List of vulnerability IDs. Supports up to 100.</p>
      */
     public $VulIds;
 
     /**
-     * @var integer <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
+     * @var integer <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p>
      */
     public $Offset;
 
     /**
-     * @var integer <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
+     * @var integer <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
      */
     public $Limit;
 
     /**
-     * @var array <p>Filtering Conditions<br>Supported Filter.Name:<br>Keyword - fuzzy matching, search by asset ID, asset name<br>ComponentName - fuzzy matching, search by associated component name<br>InstanceId - exact match, filter by host instance ID<br>MachineName - fuzzy matching, search by host name<br>MachineIp - fuzzy matching, search by host IP<br>OsType - exact match, filter by OS type: linux/windows<br>SupportAutoFix - exact match, filter by whether automatic fixing is supported: 0-unsupported 1-supported<br>Tag - exact match, filter by asset tag<br>AppId - exact match, filter by associated account</p>
+     * @var array <p>Filter criteria<br>Supported Filter.Name:<br>Keyword - Fuzzy matching. Search by asset ID or asset name.<br>ComponentName - Fuzzy matching. Search by associated component name.<br>InstanceId - Exact match. Filter by host instance ID.<br>MachineName - Fuzzy matching. Search by host name.<br>MachineIp - Fuzzy matching. Search by host IP.<br>OsType - Exact match. Filter by OS type: linux/windows<br>SupportAutoFix - Exact match. Filter by whether auto-repair is supported: 0-unsupported 1-supported<br>Tag - Exact match. Filter by asset tag.<br>AppId - Exact match. Filter by associated account.</p>
      */
     public $Filters;
 
@@ -59,10 +59,10 @@ class DescribeVulFixableMachineListRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @param array $VulIds <p>Vulnerability ID list, a maximum of 100</p>
-     * @param integer $Offset <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
-     * @param integer $Limit <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
-     * @param array $Filters <p>Filtering Conditions<br>Supported Filter.Name:<br>Keyword - fuzzy matching, search by asset ID, asset name<br>ComponentName - fuzzy matching, search by associated component name<br>InstanceId - exact match, filter by host instance ID<br>MachineName - fuzzy matching, search by host name<br>MachineIp - fuzzy matching, search by host IP<br>OsType - exact match, filter by OS type: linux/windows<br>SupportAutoFix - exact match, filter by whether automatic fixing is supported: 0-unsupported 1-supported<br>Tag - exact match, filter by asset tag<br>AppId - exact match, filter by associated account</p>
+     * @param array $VulIds <p>List of vulnerability IDs. Supports up to 100.</p>
+     * @param integer $Offset <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p>
+     * @param integer $Limit <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
+     * @param array $Filters <p>Filter criteria<br>Supported Filter.Name:<br>Keyword - Fuzzy matching. Search by asset ID or asset name.<br>ComponentName - Fuzzy matching. Search by associated component name.<br>InstanceId - Exact match. Filter by host instance ID.<br>MachineName - Fuzzy matching. Search by host name.<br>MachineIp - Fuzzy matching. Search by host IP.<br>OsType - Exact match. Filter by OS type: linux/windows<br>SupportAutoFix - Exact match. Filter by whether auto-repair is supported: 0-unsupported 1-supported<br>Tag - Exact match. Filter by asset tag.<br>AppId - Exact match. Filter by associated account.</p>
      * @param array $MemberId Group Account Member ID
      */
     function __construct()

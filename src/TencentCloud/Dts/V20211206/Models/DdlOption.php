@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DDL statement sync processing during data sync
  *
- * @method string getDdlObject() Obtain DDL type, such as database, table, view, and index.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDdlObject(string $DdlObject) Set DDL type, such as database, table, view, and index.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDdlValue() Obtain DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDdlValue(array $DdlValue) Set DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDdlObject() Obtain DDL type. For example: database, table, view, and index.
+ * @method void setDdlObject(string $DdlObject) Set DDL type. For example: database, table, view, and index.
+ * @method array getDdlValue() Obtain Specific values of DDL. For Database, it can be [Create, Drop, Alter];<br>for Table, it can be [Create, Drop, Alter, Truncate, Rename];<br>for View, it can be [Create, Drop];<br>for Index, it can be [Create, Drop].
+ * @method void setDdlValue(array $DdlValue) Set Specific values of DDL. For Database, it can be [Create, Drop, Alter];<br>for Table, it can be [Create, Drop, Alter, Truncate, Rename];<br>for View, it can be [Create, Drop];<br>for Index, it can be [Create, Drop].
  */
 class DdlOption extends AbstractModel
 {
     /**
-     * @var string DDL type, such as database, table, view, and index.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string DDL type. For example: database, table, view, and index.
      */
     public $DdlObject;
 
     /**
-     * @var array DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Specific values of DDL. For Database, it can be [Create, Drop, Alter];<br>for Table, it can be [Create, Drop, Alter, Truncate, Rename];<br>for View, it can be [Create, Drop];<br>for Index, it can be [Create, Drop].
      */
     public $DdlValue;
 
     /**
-     * @param string $DdlObject DDL type, such as database, table, view, and index.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $DdlValue DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DdlObject DDL type. For example: database, table, view, and index.
+     * @param array $DdlValue Specific values of DDL. For Database, it can be [Create, Drop, Alter];<br>for Table, it can be [Create, Drop, Alter, Truncate, Rename];<br>for View, it can be [Create, Drop];<br>for Index, it can be [Create, Drop].
      */
     function __construct()
     {

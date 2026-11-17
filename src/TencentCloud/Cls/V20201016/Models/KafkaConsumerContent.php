@@ -18,124 +18,60 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Kafka consumer content
+ * Kafka consumption content
  *
- * @method integer getFormat() Obtain Consumption data format. Valid values: 0 (original content) and 1 (JSON).
- * @method void setFormat(integer $Format) Set Consumption data format. Valid values: 0 (original content) and 1 (JSON).
- * @method boolean getEnableTag() Obtain Whether to ship tag information
-This parameter does not need to be set when `Format` is set to `0`.
- * @method void setEnableTag(boolean $EnableTag) Set Whether to ship tag information
-This parameter does not need to be set when `Format` is set to `0`.
- * @method array getMetaFields() Obtain Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
-\_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
-This parameter does not need to be set when `Format` is set to `0`.
- * @method void setMetaFields(array $MetaFields) Set Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
-\_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
-This parameter does not need to be set when `Format` is set to `0`.
- * @method integer getTagTransaction() Obtain tag data processing method: 1: Not Tiled (default value); 2: Tile.
-
-Untiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-Tiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
- * @method void setTagTransaction(integer $TagTransaction) Set tag data processing method: 1: Not Tiled (default value); 2: Tile.
-
-Untiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-Tiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
- * @method integer getJsonType() Obtain JSON data format:
-1: Not escaped (default format)
-2: Escaped
-
-Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
-Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
- * @method void setJsonType(integer $JsonType) Set JSON data format:
-1: Not escaped (default format)
-2: Escaped
-
-Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
-Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+ * @method integer getFormat() Obtain <p>Consumption data format. 0: Raw content; 1: JSON.</p>
+ * @method void setFormat(integer $Format) Set <p>Consumption data format. 0: Raw content; 1: JSON.</p>
+ * @method boolean getEnableTag() Obtain <p>Whether to deliver TAG information<br>When Format is 0, this field does not need to be assigned a value</p>
+ * @method void setEnableTag(boolean $EnableTag) Set <p>Whether to deliver TAG information<br>When Format is 0, this field does not need to be assigned a value</p>
+ * @method array getMetaFields() Obtain <p>Metadata information list. Valid values: __SOURCE__, __FILENAME__<br>, __TIMESTAMP__, __HOSTNAME__, __PKGID__<br>When Format is 0, this field does not need to be assigned a value</p>
+ * @method void setMetaFields(array $MetaFields) Set <p>Metadata information list. Valid values: __SOURCE__, __FILENAME__<br>, __TIMESTAMP__, __HOSTNAME__, __PKGID__<br>When Format is 0, this field does not need to be assigned a value</p>
+ * @method integer getTagTransaction() Obtain <p>Tag data processing method. 1: Not flattened (default); 2: Flattened.</p><p>Not flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Not flattened: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>Flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Flattened: <code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
+ * @method void setTagTransaction(integer $TagTransaction) Set <p>Tag data processing method. 1: Not flattened (default); 2: Flattened.</p><p>Not flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Not flattened: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>Flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Flattened: <code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
+ * @method integer getJsonType() Obtain <p>Consumption data Json format:<br>1: Not escaped (default format)<br>2: Escaped</p><p>Delivery Json format.<br>When JsonType is 1: Consistent with the original log, not escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></p><p>When JsonType is 2: Escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></p>
+ * @method void setJsonType(integer $JsonType) Set <p>Consumption data Json format:<br>1: Not escaped (default format)<br>2: Escaped</p><p>Delivery Json format.<br>When JsonType is 1: Consistent with the original log, not escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></p><p>When JsonType is 2: Escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></p>
+ * @method boolean getAutoConvertNumber() Obtain <p>Switch for automatic conversion of numeric types</p><p>Valid values:</p><ul><li>true: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure are automatically converted to numeric types (int/float).</li><li>false: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure remain strings.</li></ul><p>Default value: false</p>
+ * @method void setAutoConvertNumber(boolean $AutoConvertNumber) Set <p>Switch for automatic conversion of numeric types</p><p>Valid values:</p><ul><li>true: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure are automatically converted to numeric types (int/float).</li><li>false: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure remain strings.</li></ul><p>Default value: false</p>
  */
 class KafkaConsumerContent extends AbstractModel
 {
     /**
-     * @var integer Consumption data format. Valid values: 0 (original content) and 1 (JSON).
+     * @var integer <p>Consumption data format. 0: Raw content; 1: JSON.</p>
      */
     public $Format;
 
     /**
-     * @var boolean Whether to ship tag information
-This parameter does not need to be set when `Format` is set to `0`.
+     * @var boolean <p>Whether to deliver TAG information<br>When Format is 0, this field does not need to be assigned a value</p>
      */
     public $EnableTag;
 
     /**
-     * @var array Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
-\_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
-This parameter does not need to be set when `Format` is set to `0`.
+     * @var array <p>Metadata information list. Valid values: __SOURCE__, __FILENAME__<br>, __TIMESTAMP__, __HOSTNAME__, __PKGID__<br>When Format is 0, this field does not need to be assigned a value</p>
      */
     public $MetaFields;
 
     /**
-     * @var integer tag data processing method: 1: Not Tiled (default value); 2: Tile.
-
-Untiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-Tiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+     * @var integer <p>Tag data processing method. 1: Not flattened (default); 2: Flattened.</p><p>Not flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Not flattened: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>Flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Flattened: <code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
      */
     public $TagTransaction;
 
     /**
-     * @var integer JSON data format:
-1: Not escaped (default format)
-2: Escaped
-
-Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
-Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+     * @var integer <p>Consumption data Json format:<br>1: Not escaped (default format)<br>2: Escaped</p><p>Delivery Json format.<br>When JsonType is 1: Consistent with the original log, not escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></p><p>When JsonType is 2: Escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></p>
      */
     public $JsonType;
 
     /**
-     * @param integer $Format Consumption data format. Valid values: 0 (original content) and 1 (JSON).
-     * @param boolean $EnableTag Whether to ship tag information
-This parameter does not need to be set when `Format` is set to `0`.
-     * @param array $MetaFields Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
-\_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
-This parameter does not need to be set when `Format` is set to `0`.
-     * @param integer $TagTransaction tag data processing method: 1: Not Tiled (default value); 2: Tile.
+     * @var boolean <p>Switch for automatic conversion of numeric types</p><p>Valid values:</p><ul><li>true: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure are automatically converted to numeric types (int/float).</li><li>false: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure remain strings.</li></ul><p>Default value: false</p>
+     */
+    public $AutoConvertNumber;
 
-Untiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-Tiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-     * @param integer $JsonType JSON data format:
-1: Not escaped (default format)
-2: Escaped
-
-Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
-Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+    /**
+     * @param integer $Format <p>Consumption data format. 0: Raw content; 1: JSON.</p>
+     * @param boolean $EnableTag <p>Whether to deliver TAG information<br>When Format is 0, this field does not need to be assigned a value</p>
+     * @param array $MetaFields <p>Metadata information list. Valid values: __SOURCE__, __FILENAME__<br>, __TIMESTAMP__, __HOSTNAME__, __PKGID__<br>When Format is 0, this field does not need to be assigned a value</p>
+     * @param integer $TagTransaction <p>Tag data processing method. 1: Not flattened (default); 2: Flattened.</p><p>Not flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Not flattened: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>Flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Flattened: <code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
+     * @param integer $JsonType <p>Consumption data Json format:<br>1: Not escaped (default format)<br>2: Escaped</p><p>Delivery Json format.<br>When JsonType is 1: Consistent with the original log, not escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></p><p>When JsonType is 2: Escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></p>
+     * @param boolean $AutoConvertNumber <p>Switch for automatic conversion of numeric types</p><p>Valid values:</p><ul><li>true: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure are automatically converted to numeric types (int/float).</li><li>false: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure remain strings.</li></ul><p>Default value: false</p>
      */
     function __construct()
     {
@@ -168,6 +104,10 @@ Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
 
         if (array_key_exists("JsonType",$param) and $param["JsonType"] !== null) {
             $this->JsonType = $param["JsonType"];
+        }
+
+        if (array_key_exists("AutoConvertNumber",$param) and $param["AutoConvertNumber"] !== null) {
+            $this->AutoConvertNumber = $param["AutoConvertNumber"];
         }
     }
 }

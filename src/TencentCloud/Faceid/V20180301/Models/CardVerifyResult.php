@@ -236,18 +236,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for tamper certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
+-8101 Alarm for document information format verification,
+-8102 Alarm for document information consistency verification,
 -9109 This capability is not enabled.
  * @method void setWarnCardInfos(array $WarnCardInfos) Set Card warning information
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for tamper certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
+-8101 Alarm for document information format verification,
+-8102 Alarm for document information consistency verification,
 -9109 This capability is not enabled.
  * @method array getEditDetails() Obtain Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
  * @method void setEditDetails(array $EditDetails) Set Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
+ * @method string getDetectedCardType() Obtain Detected card type. Returns the corresponding document type combining country or region name and document type. Enums: Passport, IndonesiaIDCard, MalaysiaIDCard, SingaporeIDCard, ThailandIDCard, ThailandPinkCard, VietnamIDCard, MyanmarDriverLicense, HongKongIDCard, MacaoIDCard, TaiwanIDCard, HmtTravelPermit, HmtMainlandTravelPermit, HmtResidencePermit, HmtResidencePermitBack, MainlandIDCard, MainlandIDCardBack, MainlandTempIDCard, MainlandTempIDCardBack, BrazilIDCard, BrazilIDCardBack, BrazilRNM, BrazilRNMBack, BrazilRNE, BrazilDriverLicense, BrazilDriverLicenseBack, MexicoVoterCard, PhilippinesUMID, PhilippinesDriverLicense, PhilippinesVoteID, PhilippinesSSSID, PhilippinesTINID, PhilippinesNationalID, PhilippinesPRCID, PhilippinesPostalID, PhilippinesHealthCard, Other.
+ * @method void setDetectedCardType(string $DetectedCardType) Set Detected card type. Returns the corresponding document type combining country or region name and document type. Enums: Passport, IndonesiaIDCard, MalaysiaIDCard, SingaporeIDCard, ThailandIDCard, ThailandPinkCard, VietnamIDCard, MyanmarDriverLicense, HongKongIDCard, MacaoIDCard, TaiwanIDCard, HmtTravelPermit, HmtMainlandTravelPermit, HmtResidencePermit, HmtResidencePermitBack, MainlandIDCard, MainlandIDCardBack, MainlandTempIDCard, MainlandTempIDCardBack, BrazilIDCard, BrazilIDCardBack, BrazilRNM, BrazilRNMBack, BrazilRNE, BrazilDriverLicense, BrazilDriverLicenseBack, MexicoVoterCard, PhilippinesUMID, PhilippinesDriverLicense, PhilippinesVoteID, PhilippinesSSSID, PhilippinesTINID, PhilippinesNationalID, PhilippinesPRCID, PhilippinesPostalID, PhilippinesHealthCard, Other.
  */
 class CardVerifyResult extends AbstractModel
 {
@@ -395,8 +403,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for tamper certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
+-8101 Alarm for document information format verification,
+-8102 Alarm for document information consistency verification,
 -9109 This capability is not enabled.
      */
     public $WarnCardInfos;
@@ -405,6 +416,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var array Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
      */
     public $EditDetails;
+
+    /**
+     * @var string Detected card type. Returns the corresponding document type combining country or region name and document type. Enums: Passport, IndonesiaIDCard, MalaysiaIDCard, SingaporeIDCard, ThailandIDCard, ThailandPinkCard, VietnamIDCard, MyanmarDriverLicense, HongKongIDCard, MacaoIDCard, TaiwanIDCard, HmtTravelPermit, HmtMainlandTravelPermit, HmtResidencePermit, HmtResidencePermitBack, MainlandIDCard, MainlandIDCardBack, MainlandTempIDCard, MainlandTempIDCardBack, BrazilIDCard, BrazilIDCardBack, BrazilRNM, BrazilRNMBack, BrazilRNE, BrazilDriverLicense, BrazilDriverLicenseBack, MexicoVoterCard, PhilippinesUMID, PhilippinesDriverLicense, PhilippinesVoteID, PhilippinesSSSID, PhilippinesTINID, PhilippinesNationalID, PhilippinesPRCID, PhilippinesPostalID, PhilippinesHealthCard, Other.
+     */
+    public $DetectedCardType;
 
     /**
      * @param boolean $IsPass Whether the authentication or OCR process is successful.
@@ -517,10 +533,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for tamper certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
+-8101 Alarm for document information format verification,
+-8102 Alarm for document information consistency verification,
 -9109 This capability is not enabled.
      * @param array $EditDetails Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
+     * @param string $DetectedCardType Detected card type. Returns the corresponding document type combining country or region name and document type. Enums: Passport, IndonesiaIDCard, MalaysiaIDCard, SingaporeIDCard, ThailandIDCard, ThailandPinkCard, VietnamIDCard, MyanmarDriverLicense, HongKongIDCard, MacaoIDCard, TaiwanIDCard, HmtTravelPermit, HmtMainlandTravelPermit, HmtResidencePermit, HmtResidencePermitBack, MainlandIDCard, MainlandIDCardBack, MainlandTempIDCard, MainlandTempIDCardBack, BrazilIDCard, BrazilIDCardBack, BrazilRNM, BrazilRNMBack, BrazilRNE, BrazilDriverLicense, BrazilDriverLicenseBack, MexicoVoterCard, PhilippinesUMID, PhilippinesDriverLicense, PhilippinesVoteID, PhilippinesSSSID, PhilippinesTINID, PhilippinesNationalID, PhilippinesPRCID, PhilippinesPostalID, PhilippinesHealthCard, Other.
      */
     function __construct()
     {
@@ -583,6 +603,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->EditDetails, $obj);
             }
+        }
+
+        if (array_key_exists("DetectedCardType",$param) and $param["DetectedCardType"] !== null) {
+            $this->DetectedCardType = $param["DetectedCardType"];
         }
     }
 }

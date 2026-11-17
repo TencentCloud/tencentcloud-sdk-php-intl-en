@@ -28,9 +28,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setJobName(string $JobName) Set Sync task name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPayMode() Obtain Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
+ * @method string getPayMode() Obtain Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (yearly/monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPayMode(string $PayMode) Set Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
+ * @method void setPayMode(string $PayMode) Set Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (yearly/monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRunMode() Obtain Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -152,8 +152,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOfflineTime(string $OfflineTime) Set Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOptObjStatus() Obtain 
- * @method void setOptObjStatus(string $OptObjStatus) Set 
+ * @method string getOptObjStatus() Obtain Dynamically modify objects, such as changing the status of a task.
+ * @method void setOptObjStatus(string $OptObjStatus) Set Dynamically modify objects, such as changing the status of a task.
  * @method integer getAutoRetryTimeRangeMinutes() Obtain Settings of automatic retry time
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) Set Settings of automatic retry time
@@ -178,7 +178,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $JobName;
 
     /**
-     * @var string Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
+     * @var string Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (yearly/monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PayMode;
@@ -364,7 +364,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OfflineTime;
 
     /**
-     * @var string 
+     * @var string Dynamically modify objects, such as changing the status of a task.
      */
     public $OptObjStatus;
 
@@ -385,7 +385,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $JobName Sync task name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PayMode Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
+     * @param string $PayMode Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (yearly/monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RunMode Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -447,7 +447,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OfflineTime Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OptObjStatus 
+     * @param string $OptObjStatus Dynamically modify objects, such as changing the status of a task.
      * @param integer $AutoRetryTimeRangeMinutes Settings of automatic retry time
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DumperResumeCtrl Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.

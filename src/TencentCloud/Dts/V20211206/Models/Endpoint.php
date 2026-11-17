@@ -20,346 +20,250 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of the source and target databases in data sync
  *
- * @method string getRegion() Obtain Region name, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Region name, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRole() Obtain Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRole(string $Role) Set Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDbKernel() Obtain Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDbKernel(string $DbKernel) Set Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain Database instance ID in the format of `cdb-powiqx8q`
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Database instance ID in the format of `cdb-powiqx8q`
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIp() Obtain Instance IP address, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIp(string $Ip) Set Instance IP address, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getPort() Obtain Instance port, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPort(integer $Port) Set Instance port, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUser() Obtain Username, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUser(string $User) Set Username, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPassword() Obtain Password, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPassword(string $Password) Set Password, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDbName() Obtain Database name, which is required if the database type is `cdwpg`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDbName(string $DbName) Set Database name, which is required if the database type is `cdwpg`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVpcId() Obtain VPC ID in the format of `vpc-92jblxto`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVpcId(string $VpcId) Set VPC ID in the format of `vpc-92jblxto`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSubnetId() Obtain ID of the subnet in the VPC in the format of `subnet-3paxmkdz`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubnetId(string $SubnetId) Set ID of the subnet in the VPC in the format of `subnet-3paxmkdz`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCvmInstanceId() Obtain Short CVM instance ID in the format of `ins-olgl39y8`, which is required if the access type is `cvm`. It is the same as the instance ID displayed in the CVM console.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCvmInstanceId(string $CvmInstanceId) Set Short CVM instance ID in the format of `ins-olgl39y8`, which is required if the access type is `cvm`. It is the same as the instance ID displayed in the CVM console.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUniqDcgId() Obtain Direct Connect gateway ID in the format of `dcg-0rxtqqxb`, which is required if the access type is `dcg`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUniqDcgId(string $UniqDcgId) Set Direct Connect gateway ID in the format of `dcg-0rxtqqxb`, which is required if the access type is `dcg`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUniqVpnGwId() Obtain VPN gateway ID in the format of `vpngw-9ghexg7q`, which is required if the access type is `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUniqVpnGwId(string $UniqVpnGwId) Set VPN gateway ID in the format of `vpngw-9ghexg7q`, which is required if the access type is `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCcnId() Obtain CCN instance ID in the format of `ccn-afp6kltc`, which is required if the access type is `ccn`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCcnId(string $CcnId) Set CCN instance ID in the format of `ccn-afp6kltc`, which is required if the access type is `ccn`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSupplier() Obtain Cloud vendor type. For Alibaba Cloud ApsaraDB for RDS instances, enter `aliyun`; otherwise, enter `others`. Default value: `others`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSupplier(string $Supplier) Set Cloud vendor type. For Alibaba Cloud ApsaraDB for RDS instances, enter `aliyun`; otherwise, enter `others`. Default value: `others`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEngineVersion() Obtain Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEngineVersion(string $EngineVersion) Set Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAccount() Obtain Instance account, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAccount(string $Account) Set Instance account, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAccountMode() Obtain The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAccountMode(string $AccountMode) Set The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAccountRole() Obtain The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAccountRole(string $AccountRole) Set The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRoleExternalId() Obtain External role ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRoleExternalId(string $RoleExternalId) Set External role ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTmpSecretId() Obtain Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTmpSecretId(string $TmpSecretId) Set Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTmpSecretKey() Obtain Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTmpSecretKey(string $TmpSecretKey) Set Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTmpToken() Obtain Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTmpToken(string $TmpToken) Set Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEncryptConn() Obtain Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEncryptConn(string $EncryptConn) Set Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDatabaseNetEnv() Obtain Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDatabaseNetEnv(string $DatabaseNetEnv) Set Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCcnOwnerUin() Obtain The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setCcnOwnerUin(string $CcnOwnerUin) Set The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getChildInstanceId() Obtain 
- * @method void setChildInstanceId(string $ChildInstanceId) Set 
- * @method string getChildInstanceType() Obtain 
- * @method void setChildInstanceType(string $ChildInstanceType) Set 
- * @method string getSetId() Obtain 
- * @method void setSetId(string $SetId) Set 
+ * @method string getRegion() Obtain <p>Region English name, for example: ap-guangzhou</p>
+ * @method void setRegion(string $Region) Set <p>Region English name, for example: ap-guangzhou</p>
+ * @method string getRole() Obtain <p>Node type. proxy means the node type is host, set means the node type is node. proxy type must be the first item in the array. Source/target configuration for tdsqlmysql type is required.</p>
+ * @method void setRole(string $Role) Set <p>Node type. proxy means the node type is host, set means the node type is node. proxy type must be the first item in the array. Source/target configuration for tdsqlmysql type is required.</p>
+ * @method string getDbKernel() Obtain <p>Database kernel type, used in tdsql to differentiate between different kernels: percona, mariadb, mysql. Note that tdsql-C mysql and tdsql PostgreSQL do not need to fill in this field.</p>
+ * @method void setDbKernel(string $DbKernel) Set <p>Database kernel type, used in tdsql to differentiate between different kernels: percona, mariadb, mysql. Note that tdsql-C mysql and tdsql PostgreSQL do not need to fill in this field.</p>
+ * @method string getInstanceId() Obtain <p>Database instance ID, in the format of: cdb-powiqx8q</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Database instance ID, in the format of: cdb-powiqx8q</p>
+ * @method string getIp() Obtain <p>IP address of the instance. This item is required when the access type is not cdb.</p>
+ * @method void setIp(string $Ip) Set <p>IP address of the instance. This item is required when the access type is not cdb.</p>
+ * @method integer getPort() Obtain <p>Instance port. This item is required when the access type is not cdb.</p>
+ * @method void setPort(integer $Port) Set <p>Instance port. This item is required when the access type is not cdb.</p>
+ * @method string getUser() Obtain <p>User name, required for accessing instances that need username and password authentication.</p>
+ * @method void setUser(string $User) Set <p>User name, required for accessing instances that need username and password authentication.</p>
+ * @method string getPassword() Obtain <p>Password is required for accessing instances that need username and password authentication.</p>
+ * @method void setPassword(string $Password) Set <p>Password is required for accessing instances that need username and password authentication.</p>
+ * @method string getDbName() Obtain <p>Database name, required when the database is cdwpg</p>
+ * @method void setDbName(string $DbName) Set <p>Database name, required when the database is cdwpg</p>
+ * @method string getVpcId() Obtain <p>Private network ID. This item is required for private network, Direct Connect, and VPN access methods, in the format of vpc-92jblxto.</p>
+ * @method void setVpcId(string $VpcId) Set <p>Private network ID. This item is required for private network, Direct Connect, and VPN access methods, in the format of vpc-92jblxto.</p>
+ * @method string getSubnetId() Obtain <p>Subnet ID under the private network. This item is required for private network, Direct Connect, and VPN access methods, in the format of subnet-3paxmkdz.</p>
+ * @method void setSubnetId(string $SubnetId) Set <p>Subnet ID under the private network. This item is required for private network, Direct Connect, and VPN access methods, in the format of subnet-3paxmkdz.</p>
+ * @method string getCvmInstanceId() Obtain <p>CVM instance short ID, in the format of: ins-olgl39y8, is identical to the instance ID displayed on the cloud server console page. If it is a CVM self-created instance, this field is required.</p>
+ * @method void setCvmInstanceId(string $CvmInstanceId) Set <p>CVM instance short ID, in the format of: ins-olgl39y8, is identical to the instance ID displayed on the cloud server console page. If it is a CVM self-created instance, this field is required.</p>
+ * @method string getUniqDcgId() Obtain <p>Direct Connect gateway ID. This item is required for dedicated access type, in the format of: dcg-0rxtqqxb</p>
+ * @method void setUniqDcgId(string $UniqDcgId) Set <p>Direct Connect gateway ID. This item is required for dedicated access type, in the format of: dcg-0rxtqqxb</p>
+ * @method string getUniqVpnGwId() Obtain <p>VPN Gateway ID. This item is required for VPN access type, in the format of vpngw-9ghexg7q.</p>
+ * @method void setUniqVpnGwId(string $UniqVpnGwId) Set <p>VPN Gateway ID. This item is required for VPN access type, in the format of vpngw-9ghexg7q.</p>
+ * @method string getCcnId() Obtain <p>Cloud Connect Network ID. This item is required for the CCN access type, for example: ccn-afp6kltc</p>
+ * @method void setCcnId(string $CcnId) Set <p>Cloud Connect Network ID. This item is required for the CCN access type, for example: ccn-afp6kltc</p>
+ * @method string getSupplier() Obtain <p>Cloud vendor type. For RDS instances, fill in aliyun. In other cases, fill in others. Default is others.</p>
+ * @method void setSupplier(string $Supplier) Set <p>Cloud vendor type. For RDS instances, fill in aliyun. In other cases, fill in others. Default is others.</p>
+ * @method string getEngineVersion() Obtain <p>Database version. Valid only for RDS instances, ignored for other instances, in the format of 5.6 or 5.7, defaults to 5.6.</p>
+ * @method void setEngineVersion(string $EngineVersion) Set <p>Database version. Valid only for RDS instances, ignored for other instances, in the format of 5.6 or 5.7, defaults to 5.6.</p>
+ * @method string getAccount() Obtain <p>Account of the instance. This item is required if it is a cross-account instance.</p>
+ * @method void setAccount(string $Account) Set <p>Account of the instance. This item is required if it is a cross-account instance.</p>
+ * @method string getAccountMode() Obtain <p>Associated account is empty, self (means resources within this account), or other (means cross-account resources).</p>
+ * @method void setAccountMode(string $AccountMode) Set <p>Associated account is empty, self (means resources within this account), or other (means cross-account resources).</p>
+ * @method string getAccountRole() Obtain <p>Role for cross-account sync, only allow [a-zA-Z0-9-_]+. This item is required if it is a cross-account instance.</p>
+ * @method void setAccountRole(string $AccountRole) Set <p>Role for cross-account sync, only allow [a-zA-Z0-9-_]+. This item is required if it is a cross-account instance.</p>
+ * @method string getRoleExternalId() Obtain <p>External role id</p>
+ * @method void setRoleExternalId(string $RoleExternalId) Set <p>External role id</p>
+ * @method string getTmpSecretId() Obtain <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
+ * @method void setTmpSecretId(string $TmpSecretId) Set <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
+ * @method string getTmpSecretKey() Obtain <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials at https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role definition.</p>
+ * @method void setTmpSecretKey(string $TmpSecretKey) Set <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials at https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role definition.</p>
+ * @method string getTmpToken() Obtain <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
+ * @method void setTmpToken(string $TmpToken) Set <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
+ * @method string getEncryptConn() Obtain <p>Whether to use encrypted transmission. UnEncrypted means no encrypted transmission, Encrypted means encrypted transmission. Default: UnEncrypted</p>
+ * @method void setEncryptConn(string $EncryptConn) Set <p>Whether to use encrypted transmission. UnEncrypted means no encrypted transmission, Encrypted means encrypted transmission. Default: UnEncrypted</p>
+ * @method string getDatabaseNetEnv() Obtain <p>Network environment of the database. Required when AccessType is Cloud Connect Network (ccn). UserIDC refers to User IDC, and TencentVPC refers to Tencent Cloud VPC.</p>
+ * @method void setDatabaseNetEnv(string $DatabaseNetEnv) Set <p>Network environment of the database. Required when AccessType is Cloud Connect Network (ccn). UserIDC refers to User IDC, and TencentVPC refers to Tencent Cloud VPC.</p>
+ * @method string getCcnOwnerUin() Obtain <p>When the database is an instance of cross-account cloud networking, it refers to the main account to which the CCN belongs.</p>
+ * @method void setCcnOwnerUin(string $CcnOwnerUin) Set <p>When the database is an instance of cross-account cloud networking, it refers to the main account to which the CCN belongs.</p>
+ * @method string getChildInstanceId() Obtain <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the ID of the sub-instance.</p>
+ * @method void setChildInstanceId(string $ChildInstanceId) Set <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the ID of the sub-instance.</p>
+ * @method string getChildInstanceType() Obtain <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the type of the sub-instance, for example: pass ro for a read-only instance, pass rw for a read-write instance.</p>
+ * @method void setChildInstanceType(string $ChildInstanceType) Set <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the type of the sub-instance, for example: pass ro for a read-only instance, pass rw for a read-write instance.</p>
+ * @method string getSetId() Obtain <p>Shard id of tdsql. Required if the node type is set.</p>
+ * @method void setSetId(string $SetId) Set <p>Shard id of tdsql. Required if the node type is set.</p>
  */
 class Endpoint extends AbstractModel
 {
     /**
-     * @var string Region name, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Region English name, for example: ap-guangzhou</p>
      */
     public $Region;
 
     /**
-     * @var string Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Node type. proxy means the node type is host, set means the node type is node. proxy type must be the first item in the array. Source/target configuration for tdsqlmysql type is required.</p>
      */
     public $Role;
 
     /**
-     * @var string Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Database kernel type, used in tdsql to differentiate between different kernels: percona, mariadb, mysql. Note that tdsql-C mysql and tdsql PostgreSQL do not need to fill in this field.</p>
      */
     public $DbKernel;
 
     /**
-     * @var string Database instance ID in the format of `cdb-powiqx8q`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Database instance ID, in the format of: cdb-powiqx8q</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Instance IP address, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>IP address of the instance. This item is required when the access type is not cdb.</p>
      */
     public $Ip;
 
     /**
-     * @var integer Instance port, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Instance port. This item is required when the access type is not cdb.</p>
      */
     public $Port;
 
     /**
-     * @var string Username, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>User name, required for accessing instances that need username and password authentication.</p>
      */
     public $User;
 
     /**
-     * @var string Password, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Password is required for accessing instances that need username and password authentication.</p>
      */
     public $Password;
 
     /**
-     * @var string Database name, which is required if the database type is `cdwpg`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Database name, required when the database is cdwpg</p>
      */
     public $DbName;
 
     /**
-     * @var string VPC ID in the format of `vpc-92jblxto`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Private network ID. This item is required for private network, Direct Connect, and VPN access methods, in the format of vpc-92jblxto.</p>
      */
     public $VpcId;
 
     /**
-     * @var string ID of the subnet in the VPC in the format of `subnet-3paxmkdz`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Subnet ID under the private network. This item is required for private network, Direct Connect, and VPN access methods, in the format of subnet-3paxmkdz.</p>
      */
     public $SubnetId;
 
     /**
-     * @var string Short CVM instance ID in the format of `ins-olgl39y8`, which is required if the access type is `cvm`. It is the same as the instance ID displayed in the CVM console.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>CVM instance short ID, in the format of: ins-olgl39y8, is identical to the instance ID displayed on the cloud server console page. If it is a CVM self-created instance, this field is required.</p>
      */
     public $CvmInstanceId;
 
     /**
-     * @var string Direct Connect gateway ID in the format of `dcg-0rxtqqxb`, which is required if the access type is `dcg`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Direct Connect gateway ID. This item is required for dedicated access type, in the format of: dcg-0rxtqqxb</p>
      */
     public $UniqDcgId;
 
     /**
-     * @var string VPN gateway ID in the format of `vpngw-9ghexg7q`, which is required if the access type is `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>VPN Gateway ID. This item is required for VPN access type, in the format of vpngw-9ghexg7q.</p>
      */
     public $UniqVpnGwId;
 
     /**
-     * @var string CCN instance ID in the format of `ccn-afp6kltc`, which is required if the access type is `ccn`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Cloud Connect Network ID. This item is required for the CCN access type, for example: ccn-afp6kltc</p>
      */
     public $CcnId;
 
     /**
-     * @var string Cloud vendor type. For Alibaba Cloud ApsaraDB for RDS instances, enter `aliyun`; otherwise, enter `others`. Default value: `others`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Cloud vendor type. For RDS instances, fill in aliyun. In other cases, fill in others. Default is others.</p>
      */
     public $Supplier;
 
     /**
-     * @var string Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Database version. Valid only for RDS instances, ignored for other instances, in the format of 5.6 or 5.7, defaults to 5.6.</p>
      */
     public $EngineVersion;
 
     /**
-     * @var string Instance account, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Account of the instance. This item is required if it is a cross-account instance.</p>
      */
     public $Account;
 
     /**
-     * @var string The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Associated account is empty, self (means resources within this account), or other (means cross-account resources).</p>
      */
     public $AccountMode;
 
     /**
-     * @var string The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Role for cross-account sync, only allow [a-zA-Z0-9-_]+. This item is required if it is a cross-account instance.</p>
      */
     public $AccountRole;
 
     /**
-     * @var string External role ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>External role id</p>
      */
     public $RoleExternalId;
 
     /**
-     * @var string Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
      */
     public $TmpSecretId;
 
     /**
-     * @var string Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials at https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role definition.</p>
      */
     public $TmpSecretKey;
 
     /**
-     * @var string Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
      */
     public $TmpToken;
 
     /**
-     * @var string Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Whether to use encrypted transmission. UnEncrypted means no encrypted transmission, Encrypted means encrypted transmission. Default: UnEncrypted</p>
      */
     public $EncryptConn;
 
     /**
-     * @var string Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Network environment of the database. Required when AccessType is Cloud Connect Network (ccn). UserIDC refers to User IDC, and TencentVPC refers to Tencent Cloud VPC.</p>
      */
     public $DatabaseNetEnv;
 
     /**
-     * @var string The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string <p>When the database is an instance of cross-account cloud networking, it refers to the main account to which the CCN belongs.</p>
      */
     public $CcnOwnerUin;
 
     /**
-     * @var string 
+     * @var string <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the ID of the sub-instance.</p>
      */
     public $ChildInstanceId;
 
     /**
-     * @var string 
+     * @var string <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the type of the sub-instance, for example: pass ro for a read-only instance, pass rw for a read-write instance.</p>
      */
     public $ChildInstanceType;
 
     /**
-     * @var string 
+     * @var string <p>Shard id of tdsql. Required if the node type is set.</p>
      */
     public $SetId;
 
     /**
-     * @param string $Region Region name, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Role Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DbKernel Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId Database instance ID in the format of `cdb-powiqx8q`
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Ip Instance IP address, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Port Instance port, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $User Username, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Password Password, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DbName Database name, which is required if the database type is `cdwpg`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VpcId VPC ID in the format of `vpc-92jblxto`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SubnetId ID of the subnet in the VPC in the format of `subnet-3paxmkdz`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CvmInstanceId Short CVM instance ID in the format of `ins-olgl39y8`, which is required if the access type is `cvm`. It is the same as the instance ID displayed in the CVM console.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UniqDcgId Direct Connect gateway ID in the format of `dcg-0rxtqqxb`, which is required if the access type is `dcg`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UniqVpnGwId VPN gateway ID in the format of `vpngw-9ghexg7q`, which is required if the access type is `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CcnId CCN instance ID in the format of `ccn-afp6kltc`, which is required if the access type is `ccn`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Supplier Cloud vendor type. For Alibaba Cloud ApsaraDB for RDS instances, enter `aliyun`; otherwise, enter `others`. Default value: `others`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EngineVersion Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Account Instance account, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AccountMode The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AccountRole The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RoleExternalId External role ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TmpSecretId Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TmpSecretKey Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TmpToken Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EncryptConn Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CcnOwnerUin The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ChildInstanceId 
-     * @param string $ChildInstanceType 
-     * @param string $SetId 
+     * @param string $Region <p>Region English name, for example: ap-guangzhou</p>
+     * @param string $Role <p>Node type. proxy means the node type is host, set means the node type is node. proxy type must be the first item in the array. Source/target configuration for tdsqlmysql type is required.</p>
+     * @param string $DbKernel <p>Database kernel type, used in tdsql to differentiate between different kernels: percona, mariadb, mysql. Note that tdsql-C mysql and tdsql PostgreSQL do not need to fill in this field.</p>
+     * @param string $InstanceId <p>Database instance ID, in the format of: cdb-powiqx8q</p>
+     * @param string $Ip <p>IP address of the instance. This item is required when the access type is not cdb.</p>
+     * @param integer $Port <p>Instance port. This item is required when the access type is not cdb.</p>
+     * @param string $User <p>User name, required for accessing instances that need username and password authentication.</p>
+     * @param string $Password <p>Password is required for accessing instances that need username and password authentication.</p>
+     * @param string $DbName <p>Database name, required when the database is cdwpg</p>
+     * @param string $VpcId <p>Private network ID. This item is required for private network, Direct Connect, and VPN access methods, in the format of vpc-92jblxto.</p>
+     * @param string $SubnetId <p>Subnet ID under the private network. This item is required for private network, Direct Connect, and VPN access methods, in the format of subnet-3paxmkdz.</p>
+     * @param string $CvmInstanceId <p>CVM instance short ID, in the format of: ins-olgl39y8, is identical to the instance ID displayed on the cloud server console page. If it is a CVM self-created instance, this field is required.</p>
+     * @param string $UniqDcgId <p>Direct Connect gateway ID. This item is required for dedicated access type, in the format of: dcg-0rxtqqxb</p>
+     * @param string $UniqVpnGwId <p>VPN Gateway ID. This item is required for VPN access type, in the format of vpngw-9ghexg7q.</p>
+     * @param string $CcnId <p>Cloud Connect Network ID. This item is required for the CCN access type, for example: ccn-afp6kltc</p>
+     * @param string $Supplier <p>Cloud vendor type. For RDS instances, fill in aliyun. In other cases, fill in others. Default is others.</p>
+     * @param string $EngineVersion <p>Database version. Valid only for RDS instances, ignored for other instances, in the format of 5.6 or 5.7, defaults to 5.6.</p>
+     * @param string $Account <p>Account of the instance. This item is required if it is a cross-account instance.</p>
+     * @param string $AccountMode <p>Associated account is empty, self (means resources within this account), or other (means cross-account resources).</p>
+     * @param string $AccountRole <p>Role for cross-account sync, only allow [a-zA-Z0-9-_]+. This item is required if it is a cross-account instance.</p>
+     * @param string $RoleExternalId <p>External role id</p>
+     * @param string $TmpSecretId <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
+     * @param string $TmpSecretKey <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials at https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role definition.</p>
+     * @param string $TmpToken <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
+     * @param string $EncryptConn <p>Whether to use encrypted transmission. UnEncrypted means no encrypted transmission, Encrypted means encrypted transmission. Default: UnEncrypted</p>
+     * @param string $DatabaseNetEnv <p>Network environment of the database. Required when AccessType is Cloud Connect Network (ccn). UserIDC refers to User IDC, and TencentVPC refers to Tencent Cloud VPC.</p>
+     * @param string $CcnOwnerUin <p>When the database is an instance of cross-account cloud networking, it refers to the main account to which the CCN belongs.</p>
+     * @param string $ChildInstanceId <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the ID of the sub-instance.</p>
+     * @param string $ChildInstanceType <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the type of the sub-instance, for example: pass ro for a read-only instance, pass rw for a read-write instance.</p>
+     * @param string $SetId <p>Shard id of tdsql. Required if the node type is set.</p>
      */
     function __construct()
     {

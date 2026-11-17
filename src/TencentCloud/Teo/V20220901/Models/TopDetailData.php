@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The top-ranked data details
+ * Detailed information of Top data
  *
- * @method string getKey() Obtain The field name.
- * @method void setKey(string $Key) Set The field name.
- * @method integer getValue() Obtain The field value.
- * @method void setValue(integer $Value) Set The field value.
+ * @method string getKey() Obtain Field name.
+ * @method void setKey(string $Key) Set Field name.
+ * @method integer getValue() Obtain Field value.
+ * @method void setValue(integer $Value) Set Field value.
  */
 class TopDetailData extends AbstractModel
 {
     /**
-     * @var string The field name.
+     * @var string Field name.
      */
     public $Key;
 
     /**
-     * @var integer The field value.
+     * @var integer Field value.
      */
     public $Value;
 
     /**
-     * @param string $Key The field name.
-     * @param integer $Value The field value.
+     * @param string $Key Field name.
+     * @param integer $Value Field value.
      */
     function __construct()
     {

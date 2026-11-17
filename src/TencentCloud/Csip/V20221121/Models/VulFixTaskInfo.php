@@ -18,10 +18,10 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task summary of vulnerability repair
+ * Vulnerability repair task summary information
  *
- * @method integer getId() Obtain Primary key ID of the fix task
- * @method void setId(integer $Id) Set Primary key ID of the fix task
+ * @method integer getId() Obtain Repair task primary key ID
+ * @method void setId(integer $Id) Set Repair task primary key ID
  * @method integer getTaskId() Obtain Task ID.
  * @method void setTaskId(integer $TaskId) Set Task ID.
  * @method integer getFixStatus() Obtain Remediation status
@@ -29,7 +29,7 @@ Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partially fixed
 4: All fix failures
 5: Stop repair
  * @method void setFixStatus(integer $FixStatus) Set Remediation status
@@ -37,46 +37,46 @@ Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partially fixed
 4: All fix failures
 5: Stop repair
- * @method integer getAssetCount() Obtain Repair total number of assets
- * @method void setAssetCount(integer $AssetCount) Set Repair total number of assets
+ * @method integer getAssetCount() Obtain Total number of repaired assets
+ * @method void setAssetCount(integer $AssetCount) Set Total number of repaired assets
  * @method integer getSuccessCount() Obtain Number of successful fixes
  * @method void setSuccessCount(integer $SuccessCount) Set Number of successful fixes
- * @method integer getFailCount() Obtain FIX_FAILURE count
- * @method void setFailCount(integer $FailCount) Set FIX_FAILURE count
+ * @method integer getFailCount() Obtain Number of failed fixes
+ * @method void setFailCount(integer $FailCount) Set Number of failed fixes
  * @method integer getFixingCount() Obtain Number of hosts in remediation
  * @method void setFixingCount(integer $FixingCount) Set Number of hosts in remediation
  * @method integer getQueueCount() Obtain Number in queue (waiting for distribution or snapshot creation)
  * @method void setQueueCount(integer $QueueCount) Set Number in queue (waiting for distribution or snapshot creation)
- * @method integer getProgress() Obtain Progress percentage of the repair
+ * @method integer getProgress() Obtain Repair progress percentage
 Value range: [0, 100].
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
- * @method void setProgress(integer $Progress) Set Progress percentage of the repair
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
+ * @method void setProgress(integer $Progress) Set Repair progress percentage
 Value range: [0, 100].
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
- * @method integer getSuccessVulCount() Obtain Number of successfully fixed vulnerabilities
- * @method void setSuccessVulCount(integer $SuccessVulCount) Set Number of successfully fixed vulnerabilities
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
+ * @method integer getSuccessVulCount() Obtain Number of vulnerabilities with successful fixes
+ * @method void setSuccessVulCount(integer $SuccessVulCount) Set Number of vulnerabilities with successful fixes
  * @method integer getFailVulCount() Obtain Number of vulnerabilities that failed to fix
  * @method void setFailVulCount(integer $FailVulCount) Set Number of vulnerabilities that failed to fix
- * @method array getVulNames() Obtain List of vulnerability names to be fixed
- * @method void setVulNames(array $VulNames) Set List of vulnerability names to be fixed
- * @method string getStartTime() Obtain Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
- * @method void setStartTime(string $StartTime) Set Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
- * @method string getEndTime() Obtain Fixing end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
- * @method void setEndTime(string $EndTime) Set Fixing end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
- * @method array getVulFixStatusList() Obtain List of vulnerability dimensional remediation status, status details of each vulnerability
- * @method void setVulFixStatusList(array $VulFixStatusList) Set List of vulnerability dimensional remediation status, status details of each vulnerability
+ * @method array getVulNames() Obtain List of fixed vulnerability names
+ * @method void setVulNames(array $VulNames) Set List of fixed vulnerability names
+ * @method string getStartTime() Obtain Startup time for repair
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+ * @method void setStartTime(string $StartTime) Set Startup time for repair
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+ * @method string getEndTime() Obtain Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+ * @method void setEndTime(string $EndTime) Set Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+ * @method array getVulFixStatusList() Obtain List of vulnerability dimensional remediation statuses, with status details for each vulnerability
+ * @method void setVulFixStatusList(array $VulFixStatusList) Set List of vulnerability dimensional remediation statuses, with status details for each vulnerability
  */
 class VulFixTaskInfo extends AbstractModel
 {
     /**
-     * @var integer Primary key ID of the fix task
+     * @var integer Repair task primary key ID
      */
     public $Id;
 
@@ -91,14 +91,14 @@ Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partially fixed
 4: All fix failures
 5: Stop repair
      */
     public $FixStatus;
 
     /**
-     * @var integer Repair total number of assets
+     * @var integer Total number of repaired assets
      */
     public $AssetCount;
 
@@ -108,7 +108,7 @@ Enumeration values:
     public $SuccessCount;
 
     /**
-     * @var integer FIX_FAILURE count
+     * @var integer Number of failed fixes
      */
     public $FailCount;
 
@@ -123,14 +123,14 @@ Enumeration values:
     public $QueueCount;
 
     /**
-     * @var integer Progress percentage of the repair
+     * @var integer Repair progress percentage
 Value range: [0, 100].
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
      */
     public $Progress;
 
     /**
-     * @var integer Number of successfully fixed vulnerabilities
+     * @var integer Number of vulnerabilities with successful fixes
      */
     public $SuccessVulCount;
 
@@ -140,54 +140,54 @@ Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCo
     public $FailVulCount;
 
     /**
-     * @var array List of vulnerability names to be fixed
+     * @var array List of fixed vulnerability names
      */
     public $VulNames;
 
     /**
-     * @var string Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * @var string Startup time for repair
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public $StartTime;
 
     /**
-     * @var string Fixing end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * @var string Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public $EndTime;
 
     /**
-     * @var array List of vulnerability dimensional remediation status, status details of each vulnerability
+     * @var array List of vulnerability dimensional remediation statuses, with status details for each vulnerability
      */
     public $VulFixStatusList;
 
     /**
-     * @param integer $Id Primary key ID of the fix task
+     * @param integer $Id Repair task primary key ID
      * @param integer $TaskId Task ID.
      * @param integer $FixStatus Remediation status
 Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partially fixed
 4: All fix failures
 5: Stop repair
-     * @param integer $AssetCount Repair total number of assets
+     * @param integer $AssetCount Total number of repaired assets
      * @param integer $SuccessCount Number of successful fixes
-     * @param integer $FailCount FIX_FAILURE count
+     * @param integer $FailCount Number of failed fixes
      * @param integer $FixingCount Number of hosts in remediation
      * @param integer $QueueCount Number in queue (waiting for distribution or snapshot creation)
-     * @param integer $Progress Progress percentage of the repair
+     * @param integer $Progress Repair progress percentage
 Value range: [0, 100].
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
-     * @param integer $SuccessVulCount Number of successfully fixed vulnerabilities
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
+     * @param integer $SuccessVulCount Number of vulnerabilities with successful fixes
      * @param integer $FailVulCount Number of vulnerabilities that failed to fix
-     * @param array $VulNames List of vulnerability names to be fixed
-     * @param string $StartTime Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-     * @param string $EndTime Fixing end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-     * @param array $VulFixStatusList List of vulnerability dimensional remediation status, status details of each vulnerability
+     * @param array $VulNames List of fixed vulnerability names
+     * @param string $StartTime Startup time for repair
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+     * @param string $EndTime Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+     * @param array $VulFixStatusList List of vulnerability dimensional remediation statuses, with status details for each vulnerability
      */
     function __construct()
     {

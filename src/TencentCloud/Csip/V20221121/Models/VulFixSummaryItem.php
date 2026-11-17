@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Vulnerability repair summary
+ * Vulnerability repair summary information
  *
  * @method integer getVulId() Obtain <p>Vulnerability ID</p>
  * @method void setVulId(integer $VulId) Set <p>Vulnerability ID</p>
@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCveId(string $CveId) Set <p>CVE id</p>
  * @method integer getAffectedCount() Obtain <p>Number of affected hosts</p>
  * @method void setAffectedCount(integer $AffectedCount) Set <p>Number of affected hosts</p>
- * @method boolean getNeedReboot() Obtain <p>Whether restart is required after repair</p>
- * @method void setNeedReboot(boolean $NeedReboot) Set <p>Whether restart is required after repair</p>
- * @method boolean getFixSwitch() Obtain <p>Whether one-click repair is supported true-supported false-unsupported</p>
- * @method void setFixSwitch(boolean $FixSwitch) Set <p>Whether one-click repair is supported true-supported false-unsupported</p>
+ * @method boolean getNeedReboot() Obtain <p>Whether the system needs to be restarted after repair</p>
+ * @method void setNeedReboot(boolean $NeedReboot) Set <p>Whether the system needs to be restarted after repair</p>
+ * @method boolean getFixSwitch() Obtain <p>Whether one-click repair is supported. true - support; false - not support</p>
+ * @method void setFixSwitch(boolean $FixSwitch) Set <p>Whether one-click repair is supported. true - support; false - not support</p>
  */
 class VulFixSummaryItem extends AbstractModel
 {
@@ -56,12 +56,12 @@ class VulFixSummaryItem extends AbstractModel
     public $AffectedCount;
 
     /**
-     * @var boolean <p>Whether restart is required after repair</p>
+     * @var boolean <p>Whether the system needs to be restarted after repair</p>
      */
     public $NeedReboot;
 
     /**
-     * @var boolean <p>Whether one-click repair is supported true-supported false-unsupported</p>
+     * @var boolean <p>Whether one-click repair is supported. true - support; false - not support</p>
      */
     public $FixSwitch;
 
@@ -70,8 +70,8 @@ class VulFixSummaryItem extends AbstractModel
      * @param string $VulName <p>Vulnerability name</p>
      * @param string $CveId <p>CVE id</p>
      * @param integer $AffectedCount <p>Number of affected hosts</p>
-     * @param boolean $NeedReboot <p>Whether restart is required after repair</p>
-     * @param boolean $FixSwitch <p>Whether one-click repair is supported true-supported false-unsupported</p>
+     * @param boolean $NeedReboot <p>Whether the system needs to be restarted after repair</p>
+     * @param boolean $FixSwitch <p>Whether one-click repair is supported. true - support; false - not support</p>
      */
     function __construct()
     {

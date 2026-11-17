@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVulFixTask request structure.
  *
- * @method array getFixItems() Obtain <p>Repair item list, each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input parameter limit: No more than 100 items, total number of instances not more than 5000</p>
- * @method void setFixItems(array $FixItems) Set <p>Repair item list, each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input parameter limit: No more than 100 items, total number of instances not more than 5000</p>
- * @method integer getTimeout() Obtain <p>Maximum repair time<br>Measurement unit: second<br>Default value: 3600</p>
- * @method void setTimeout(integer $Timeout) Set <p>Maximum repair time<br>Measurement unit: second<br>Default value: 3600</p>
- * @method boolean getCreateSnapshot() Obtain <p>Whether to create a disk snapshot before repair<br>Default value: false</p>
- * @method void setCreateSnapshot(boolean $CreateSnapshot) Set <p>Whether to create a disk snapshot before repair<br>Default value: false</p>
- * @method string getSnapshotName() Obtain <p>Snapshot name. Valid when CreateSnapshot is true.<br>Input parameter limit: Up to 128 characters.</p>
- * @method void setSnapshotName(string $SnapshotName) Set <p>Snapshot name. Valid when CreateSnapshot is true.<br>Input parameter limit: Up to 128 characters.</p>
- * @method integer getSaveDays() Obtain <p>Snapshot retention days. Valid when CreateSnapshot is true.</p>
- * @method void setSaveDays(integer $SaveDays) Set <p>Snapshot retention days. Valid when CreateSnapshot is true.</p>
+ * @method array getFixItems() Obtain <p>Repair item list. Each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input limit: up to 100 items, and the total number of instances cannot exceed 5000</p>
+ * @method void setFixItems(array $FixItems) Set <p>Repair item list. Each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input limit: up to 100 items, and the total number of instances cannot exceed 5000</p>
+ * @method integer getTimeout() Obtain <p>Maximum repair time<br>Unit: second<br>Default value: 3600</p>
+ * @method void setTimeout(integer $Timeout) Set <p>Maximum repair time<br>Unit: second<br>Default value: 3600</p>
+ * @method boolean getCreateSnapshot() Obtain <p>Create a disk snapshot before repair<br>Default value: false</p>
+ * @method void setCreateSnapshot(boolean $CreateSnapshot) Set <p>Create a disk snapshot before repair<br>Default value: false</p>
+ * @method string getSnapshotName() Obtain <p>Snapshot name. Valid when CreateSnapshot is true. Input limits: up to 60 characters, with automatic truncation for overly long ones.</p>
+ * @method void setSnapshotName(string $SnapshotName) Set <p>Snapshot name. Valid when CreateSnapshot is true. Input limits: up to 60 characters, with automatic truncation for overly long ones.</p>
+ * @method integer getSaveDays() Obtain <p>Snapshot retention days. Valid when CreateSnapshot is true</p>
+ * @method void setSaveDays(integer $SaveDays) Set <p>Snapshot retention days. Valid when CreateSnapshot is true</p>
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  */
 class CreateVulFixTaskRequest extends AbstractModel
 {
     /**
-     * @var array <p>Repair item list, each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input parameter limit: No more than 100 items, total number of instances not more than 5000</p>
+     * @var array <p>Repair item list. Each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input limit: up to 100 items, and the total number of instances cannot exceed 5000</p>
      */
     public $FixItems;
 
     /**
-     * @var integer <p>Maximum repair time<br>Measurement unit: second<br>Default value: 3600</p>
+     * @var integer <p>Maximum repair time<br>Unit: second<br>Default value: 3600</p>
      */
     public $Timeout;
 
     /**
-     * @var boolean <p>Whether to create a disk snapshot before repair<br>Default value: false</p>
+     * @var boolean <p>Create a disk snapshot before repair<br>Default value: false</p>
      */
     public $CreateSnapshot;
 
     /**
-     * @var string <p>Snapshot name. Valid when CreateSnapshot is true.<br>Input parameter limit: Up to 128 characters.</p>
+     * @var string <p>Snapshot name. Valid when CreateSnapshot is true. Input limits: up to 60 characters, with automatic truncation for overly long ones.</p>
      */
     public $SnapshotName;
 
     /**
-     * @var integer <p>Snapshot retention days. Valid when CreateSnapshot is true.</p>
+     * @var integer <p>Snapshot retention days. Valid when CreateSnapshot is true</p>
      */
     public $SaveDays;
 
@@ -66,11 +66,11 @@ class CreateVulFixTaskRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @param array $FixItems <p>Repair item list, each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input parameter limit: No more than 100 items, total number of instances not more than 5000</p>
-     * @param integer $Timeout <p>Maximum repair time<br>Measurement unit: second<br>Default value: 3600</p>
-     * @param boolean $CreateSnapshot <p>Whether to create a disk snapshot before repair<br>Default value: false</p>
-     * @param string $SnapshotName <p>Snapshot name. Valid when CreateSnapshot is true.<br>Input parameter limit: Up to 128 characters.</p>
-     * @param integer $SaveDays <p>Snapshot retention days. Valid when CreateSnapshot is true.</p>
+     * @param array $FixItems <p>Repair item list. Each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input limit: up to 100 items, and the total number of instances cannot exceed 5000</p>
+     * @param integer $Timeout <p>Maximum repair time<br>Unit: second<br>Default value: 3600</p>
+     * @param boolean $CreateSnapshot <p>Create a disk snapshot before repair<br>Default value: false</p>
+     * @param string $SnapshotName <p>Snapshot name. Valid when CreateSnapshot is true. Input limits: up to 60 characters, with automatic truncation for overly long ones.</p>
+     * @param integer $SaveDays <p>Snapshot retention days. Valid when CreateSnapshot is true</p>
      * @param array $MemberId Group Account Member ID
      */
     function __construct()

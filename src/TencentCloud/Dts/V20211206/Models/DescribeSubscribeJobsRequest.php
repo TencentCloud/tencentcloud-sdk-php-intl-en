@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSubscribeId() Obtain Subscription ID (exact match)
  * @method void setSubscribeId(string $SubscribeId) Set Subscription ID (exact match)
- * @method array getSubscribeIds() Obtain 
- * @method void setSubscribeIds(array $SubscribeIds) Set 
+ * @method array getSubscribeIds() Obtain Filter by subscription ID, exact match
+ * @method void setSubscribeIds(array $SubscribeIds) Set Filter by subscription ID, exact match
  * @method string getSubscribeName() Obtain Subscription name (prefix fuzzy match)
  * @method void setSubscribeName(string $SubscribeName) Set Subscription name (prefix fuzzy match)
  * @method string getInstanceId() Obtain Subscribed cloud database instance ID (exact match)
  * @method void setInstanceId(string $InstanceId) Set Subscribed cloud database instance ID (exact match)
- * @method string getTopic() Obtain 
- * @method void setTopic(string $Topic) Set 
- * @method integer getPayType() Obtain Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
- * @method void setPayType(integer $PayType) Set Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+ * @method string getTopic() Obtain Subscribed topicName
+ * @method void setTopic(string $Topic) Set Subscribed topicName
+ * @method integer getPayType() Obtain Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
+ * @method void setPayType(integer $PayType) Set Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
  * @method string getProduct() Obtain Subscribed database product. Currently, cynosdbmysql, mariadb, mongodb, mysql, percona, tdpg, tdsqlpercona are supported.
  * @method void setProduct(string $Product) Set Subscribed database product. Currently, cynosdbmysql, mariadb, mongodb, mysql, percona, tdpg, tdsqlpercona are supported.
  * @method array getStatus() Obtain Data subscription lifecycle status. Valid values: normal, isolating, isolated, offline, post2PrePayIng.
@@ -55,7 +55,7 @@ class DescribeSubscribeJobsRequest extends AbstractModel
     public $SubscribeId;
 
     /**
-     * @var array 
+     * @var array Filter by subscription ID, exact match
      */
     public $SubscribeIds;
 
@@ -70,12 +70,12 @@ class DescribeSubscribeJobsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 
+     * @var string Subscribed topicName
      */
     public $Topic;
 
     /**
-     * @var integer Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+     * @var integer Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
      */
     public $PayType;
 
@@ -116,11 +116,11 @@ class DescribeSubscribeJobsRequest extends AbstractModel
 
     /**
      * @param string $SubscribeId Subscription ID (exact match)
-     * @param array $SubscribeIds 
+     * @param array $SubscribeIds Filter by subscription ID, exact match
      * @param string $SubscribeName Subscription name (prefix fuzzy match)
      * @param string $InstanceId Subscribed cloud database instance ID (exact match)
-     * @param string $Topic 
-     * @param integer $PayType Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+     * @param string $Topic Subscribed topicName
+     * @param integer $PayType Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
      * @param string $Product Subscribed database product. Currently, cynosdbmysql, mariadb, mongodb, mysql, percona, tdpg, tdsqlpercona are supported.
      * @param array $Status Data subscription lifecycle status. Valid values: normal, isolating, isolated, offline, post2PrePayIng.
      * @param array $SubsStatus Data subscription status. Valid values: notStarted, checking, checkNotPass, checkPass, starting, running, error.

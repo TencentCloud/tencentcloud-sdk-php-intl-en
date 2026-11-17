@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulID(integer $VulID) Set <p>Vulnerability ID (vul_vuls.id)</p>
  * @method array getMemberId() Obtain <p>Group account member id</p>
  * @method void setMemberId(array $MemberId) Set <p>Group account member id</p>
- * @method array getFilters() Obtain <p>Filter conditions array, multi-condition with each other in the AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for component name)</p>
- * @method void setFilters(array $Filters) Set <p>Filter conditions array, multi-condition with each other in the AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for component name)</p>
+ * @method array getFilters() Obtain <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: keyword fuzzy search (fuzzy matching for component name)</p>
+ * @method void setFilters(array $Filters) Set <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: keyword fuzzy search (fuzzy matching for component name)</p>
  */
 class DescribeVulRiskRelateComponentRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeVulRiskRelateComponentRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var array <p>Filter conditions array, multi-condition with each other in the AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for component name)</p>
+     * @var array <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: keyword fuzzy search (fuzzy matching for component name)</p>
      */
     public $Filters;
 
     /**
      * @param integer $VulID <p>Vulnerability ID (vul_vuls.id)</p>
      * @param array $MemberId <p>Group account member id</p>
-     * @param array $Filters <p>Filter conditions array, multi-condition with each other in the AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for component name)</p>
+     * @param array $Filters <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: keyword fuzzy search (fuzzy matching for component name)</p>
      */
     function __construct()
     {

@@ -20,54 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Node information of multi-node databases configured for data sync. This data structure is valid for multi-node databases such as TDSQL for MySQL. For single-node databases such as MySQL, use `Endpoint` instead.
  *
- * @method string getRegion() Obtain Region of the database
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Region of the database
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAccessType() Obtain Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAccessType(string $AccessType) Set Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDatabaseType() Obtain Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDatabaseType(string $DatabaseType) Set Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getInfo() Obtain Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInfo(array $Info) Set Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRegion() Obtain Database region
+ * @method void setRegion(string $Region) Set Database region
+ * @method string getAccessType() Obtain Instance network access type. For example: extranet (public network), ipv6 (public network ipv6), cvm (self-built CVM), dcg (DC), vpncloud (instance accessed via VPN), cdb (cloud database), ccn (CCN), intranet (self-developed cloud migration), and vpc (VPC). Note that the specific valid values depend on the current linkage.
+ * @method void setAccessType(string $AccessType) Set Instance network access type. For example: extranet (public network), ipv6 (public network ipv6), cvm (self-built CVM), dcg (DC), vpncloud (instance accessed via VPN), cdb (cloud database), ccn (CCN), intranet (self-developed cloud migration), and vpc (VPC). Note that the specific valid values depend on the current linkage.
+ * @method string getDatabaseType() Obtain Instance database type. For example: mysql, redis, mongodb, postgresql, mariadb, and percona.
+ * @method void setDatabaseType(string $DatabaseType) Set Instance database type. For example: mysql, redis, mongodb, postgresql, mariadb, and percona.
+ * @method array getInfo() Obtain Database information. Note: If the database type is tdsqlmysql, the order of the Endpoint array should follow the following rule: proxy nodes are placed before set nodes. If SrcConnectType selects proxy access, only the proxy node needs to be filled. If set access is selected, the first set node in the array should be the shard with a shardkey range starting from 0.
+ * @method void setInfo(array $Info) Set Database information. Note: If the database type is tdsqlmysql, the order of the Endpoint array should follow the following rule: proxy nodes are placed before set nodes. If SrcConnectType selects proxy access, only the proxy node needs to be filled. If set access is selected, the first set node in the array should be the shard with a shardkey range starting from 0.
  */
 class SyncDBEndpointInfos extends AbstractModel
 {
     /**
-     * @var string Region of the database
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Database region
      */
     public $Region;
 
     /**
-     * @var string Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance network access type. For example: extranet (public network), ipv6 (public network ipv6), cvm (self-built CVM), dcg (DC), vpncloud (instance accessed via VPN), cdb (cloud database), ccn (CCN), intranet (self-developed cloud migration), and vpc (VPC). Note that the specific valid values depend on the current linkage.
      */
     public $AccessType;
 
     /**
-     * @var string Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance database type. For example: mysql, redis, mongodb, postgresql, mariadb, and percona.
      */
     public $DatabaseType;
 
     /**
-     * @var array Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Database information. Note: If the database type is tdsqlmysql, the order of the Endpoint array should follow the following rule: proxy nodes are placed before set nodes. If SrcConnectType selects proxy access, only the proxy node needs to be filled. If set access is selected, the first set node in the array should be the shard with a shardkey range starting from 0.
      */
     public $Info;
 
     /**
-     * @param string $Region Region of the database
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AccessType Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DatabaseType Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Info Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Region Database region
+     * @param string $AccessType Instance network access type. For example: extranet (public network), ipv6 (public network ipv6), cvm (self-built CVM), dcg (DC), vpncloud (instance accessed via VPN), cdb (cloud database), ccn (CCN), intranet (self-developed cloud migration), and vpc (VPC). Note that the specific valid values depend on the current linkage.
+     * @param string $DatabaseType Instance database type. For example: mysql, redis, mongodb, postgresql, mariadb, and percona.
+     * @param array $Info Database information. Note: If the database type is tdsqlmysql, the order of the Endpoint array should follow the following rule: proxy nodes are placed before set nodes. If SrcConnectType selects proxy access, only the proxy node needs to be filled. If set access is selected, the first set node in the array should be the shard with a shardkey range starting from 0.
      */
     function __construct()
     {

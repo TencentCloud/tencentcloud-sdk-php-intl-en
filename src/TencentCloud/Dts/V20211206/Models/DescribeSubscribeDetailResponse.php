@@ -40,12 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time, the format is: Y-m-d h:m:s.Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getIsolateTime() Obtain Isolation time, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsolateTime(string $IsolateTime) Set Isolation time, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExpireTime() Obtain Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpireTime(string $ExpireTime) Set Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getExpireTime() Obtain Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExpireTime(string $ExpireTime) Set Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getOfflineTime() Obtain Offline time, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOfflineTime(string $OfflineTime) Set Offline time, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getPayType() Obtain Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
- * @method void setPayType(integer $PayType) Set Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+ * @method integer getPayType() Obtain Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
+ * @method void setPayType(integer $PayType) Set Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
  * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. It is meaningful only when PayType=0. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled).
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. It is meaningful only when PayType=0. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled).
  * @method string getRegion() Obtain The region where the task is located
@@ -66,8 +66,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setKafkaConfig(SubscribeKafkaConfig $KafkaConfig) Set Kafka configuration information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getKafkaVersion() Obtain 
- * @method void setKafkaVersion(string $KafkaVersion) Set 
+ * @method string getKafkaVersion() Obtain Subscribe to version information for the built-in Kafka
+ * @method void setKafkaVersion(string $KafkaVersion) Set Subscribe to version information for the built-in Kafka
  * @method string getAccessType() Obtain Source database access type. Valid values: extranet (public network); vpncloud (VPN access); dcg (Direct Connect); ccn (CCN); cdb (database); cvm (self-build on CVM); intranet (intranet); vpc (VPC). Note: The specific optional values depend on the current link support capabilities.Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAccessType(string $AccessType) Set Source database access type. Valid values: extranet (public network); vpncloud (VPN access); dcg (Direct Connect); ccn (CCN); cdb (database); cvm (self-build on CVM); intranet (intranet); vpc (VPC). Note: The specific optional values depend on the current link support capabilities.Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getEndpoints() Obtain Access type information
@@ -86,14 +86,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getExtraAttr() Obtain Additional information added for the business. The parameter name is called key, and the parameter value is called value.Optional parameters for mysql: ProcessXA. Fill in true to process, others will not be processed.Optional parameters for mongo: SubscribeType. Currently only changeStream is supported.Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExtraAttr(array $ExtraAttr) Set Additional information added for the business. The parameter name is called key, and the parameter value is called value.Optional parameters for mysql: ProcessXA. Fill in true to process, others will not be processed.Optional parameters for mongo: SubscribeType. Currently only changeStream is supported.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSubscribeVersion() Obtain 
- * @method void setSubscribeVersion(string $SubscribeVersion) Set 
- * @method string getConsumerVpcId() Obtain 
- * @method void setConsumerVpcId(string $ConsumerVpcId) Set 
- * @method string getConsumerSubnetId() Obtain 
- * @method void setConsumerSubnetId(string $ConsumerSubnetId) Set 
- * @method string getInstanceClass() Obtain 
- * @method void setInstanceClass(string $InstanceClass) Set 
+ * @method string getSubscribeVersion() Obtain Data subscription version; currently supports Kafka and KafkaPro (Professional Edition).
+ * @method void setSubscribeVersion(string $SubscribeVersion) Set Data subscription version; currently supports Kafka and KafkaPro (Professional Edition).
+ * @method string getConsumerVpcId() Obtain VPC where the consumer-side address is located
+ * @method void setConsumerVpcId(string $ConsumerVpcId) Set VPC where the consumer-side address is located
+ * @method string getConsumerSubnetId() Obtain Subnet where the consumer-side address is located
+ * @method void setConsumerSubnetId(string $ConsumerSubnetId) Set Subnet where the consumer-side address is located
+ * @method string getInstanceClass() Obtain Subscribe to instance specifications
+ * @method void setInstanceClass(string $InstanceClass) Set Subscribe to instance specifications
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
@@ -150,7 +150,7 @@ class DescribeSubscribeDetailResponse extends AbstractModel
     public $IsolateTime;
 
     /**
-     * @var string Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExpireTime;
 
@@ -160,7 +160,7 @@ class DescribeSubscribeDetailResponse extends AbstractModel
     public $OfflineTime;
 
     /**
-     * @var integer Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+     * @var integer Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
      */
     public $PayType;
 
@@ -207,7 +207,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $KafkaConfig;
 
     /**
-     * @var string 
+     * @var string Subscribe to version information for the built-in Kafka
      */
     public $KafkaVersion;
 
@@ -245,22 +245,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ExtraAttr;
 
     /**
-     * @var string 
+     * @var string Data subscription version; currently supports Kafka and KafkaPro (Professional Edition).
      */
     public $SubscribeVersion;
 
     /**
-     * @var string 
+     * @var string VPC where the consumer-side address is located
      */
     public $ConsumerVpcId;
 
     /**
-     * @var string 
+     * @var string Subnet where the consumer-side address is located
      */
     public $ConsumerSubnetId;
 
     /**
-     * @var string 
+     * @var string Subscribe to instance specifications
      */
     public $InstanceClass;
 
@@ -280,9 +280,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ModifyTime Modification time, the format is: Y-m-d h:m:s.Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time, the format is: Y-m-d h:m:s.Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $IsolateTime Isolation time, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExpireTime Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ExpireTime Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OfflineTime Offline time, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $PayType Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+     * @param integer $PayType Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
      * @param integer $AutoRenewFlag Auto-renewal flag. It is meaningful only when PayType=0. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled).
      * @param string $Region The region where the task is located
      * @param string $Topic Kafka topic
@@ -293,7 +293,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $SubscribeObjects Information of subscribed tableNote: This field may return null, indicating that no valid values can be obtained.
      * @param SubscribeKafkaConfig $KafkaConfig Kafka configuration information
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $KafkaVersion 
+     * @param string $KafkaVersion Subscribe to version information for the built-in Kafka
      * @param string $AccessType Source database access type. Valid values: extranet (public network); vpncloud (VPN access); dcg (Direct Connect); ccn (CCN); cdb (database); cvm (self-build on CVM); intranet (intranet); vpc (VPC). Note: The specific optional values depend on the current link support capabilities.Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Endpoints Access type information
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -303,10 +303,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $Errors Subscription task error information
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ExtraAttr Additional information added for the business. The parameter name is called key, and the parameter value is called value.Optional parameters for mysql: ProcessXA. Fill in true to process, others will not be processed.Optional parameters for mongo: SubscribeType. Currently only changeStream is supported.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SubscribeVersion 
-     * @param string $ConsumerVpcId 
-     * @param string $ConsumerSubnetId 
-     * @param string $InstanceClass 
+     * @param string $SubscribeVersion Data subscription version; currently supports Kafka and KafkaPro (Professional Edition).
+     * @param string $ConsumerVpcId VPC where the consumer-side address is located
+     * @param string $ConsumerSubnetId Subnet where the consumer-side address is located
+     * @param string $InstanceClass Subscribe to instance specifications
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()

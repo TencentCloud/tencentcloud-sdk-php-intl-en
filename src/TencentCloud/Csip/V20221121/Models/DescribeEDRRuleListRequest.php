@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) Set <p>Sorting method: [ASC: Ascending | DESC: Descending]</p>
  * @method string getBy() Obtain <p>Optional sorting column: [ModifyTime]</p>
  * @method void setBy(string $By) Set <p>Optional sorting column: [ModifyTime]</p>
+ * @method RuleContentFileOperation getFileOperationRules() Obtain File operation rule, populated when ContentType=file_operation (file path regex AND any selected action)
+ * @method void setFileOperationRules(RuleContentFileOperation $FileOperationRules) Set File operation rule, populated when ContentType=file_operation (file path regex AND any selected action)
  */
 class DescribeEDRRuleListRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeEDRRuleListRequest extends AbstractModel
     public $By;
 
     /**
+     * @var RuleContentFileOperation File operation rule, populated when ContentType=file_operation (file path regex AND any selected action)
+     */
+    public $FileOperationRules;
+
+    /**
      * @param array $MemberId <p>Group account member id</p>
      * @param array $Filters <p>PolicyType - int - optional - policy type<br>PolicyName - string - optional - Policy Name<br>Domain - string - optional - domain name (urlencode the domain name first, then base64)<br>PolicyAction - int - optional - policy action<br>IsEnabled - int - optional - whether it takes effect</p>
      * @param integer $Limit <p>Limit number, default 10, maximum 100</p>
      * @param integer $Offset <p>Offset. Default: 0</p>
      * @param string $Order <p>Sorting method: [ASC: Ascending | DESC: Descending]</p>
      * @param string $By <p>Optional sorting column: [ModifyTime]</p>
+     * @param RuleContentFileOperation $FileOperationRules File operation rule, populated when ContentType=file_operation (file path regex AND any selected action)
      */
     function __construct()
     {
@@ -113,6 +121,11 @@ class DescribeEDRRuleListRequest extends AbstractModel
 
         if (array_key_exists("By",$param) and $param["By"] !== null) {
             $this->By = $param["By"];
+        }
+
+        if (array_key_exists("FileOperationRules",$param) and $param["FileOperationRules"] !== null) {
+            $this->FileOperationRules = new RuleContentFileOperation();
+            $this->FileOperationRules->deserialize($param["FileOperationRules"]);
         }
     }
 }

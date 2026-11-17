@@ -22,26 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResult() Obtain VPR rating result
 Enumeration value:
-URGENT: Immediate repair
-SUGGESTED: Suggested repairs
+URGENT: immediate repair
+SUGGESTED repairs
 DEFERRABLE: Deferrable repair
  * @method void setResult(string $Result) Set VPR rating result
 Enumeration value:
-URGENT: Immediate repair
-SUGGESTED: Suggested repairs
+URGENT: immediate repair
+SUGGESTED repairs
 DEFERRABLE: Deferrable repair
  * @method string getRemark() Obtain Rating description
  * @method void setRemark(string $Remark) Set Rating description
- * @method array getStage() Obtain List of stage rating details
- * @method void setStage(array $Stage) Set List of stage rating details
+ * @method array getStage() Obtain List of phased rating details
+ * @method void setStage(array $Stage) Set List of phased rating details
  */
 class VPRRatingInfo extends AbstractModel
 {
     /**
      * @var string VPR rating result
 Enumeration value:
-URGENT: Immediate repair
-SUGGESTED: Suggested repairs
+URGENT: immediate repair
+SUGGESTED repairs
 DEFERRABLE: Deferrable repair
      */
     public $Result;
@@ -52,18 +52,18 @@ DEFERRABLE: Deferrable repair
     public $Remark;
 
     /**
-     * @var array List of stage rating details
+     * @var array List of phased rating details
      */
     public $Stage;
 
     /**
      * @param string $Result VPR rating result
 Enumeration value:
-URGENT: Immediate repair
-SUGGESTED: Suggested repairs
+URGENT: immediate repair
+SUGGESTED repairs
 DEFERRABLE: Deferrable repair
      * @param string $Remark Rating description
-     * @param array $Stage List of stage rating details
+     * @param array $Stage List of phased rating details
      */
     function __construct()
     {

@@ -147,6 +147,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\ModifyNodePoolInstanceTypesResponse ModifyNodePoolInstanceTypes(Models\ModifyNodePoolInstanceTypesRequest $req) This API is used to modify the model of instances in a node pool.
  * @method Models\ModifyPrometheusAlertRuleResponse ModifyPrometheusAlertRule(Models\ModifyPrometheusAlertRuleRequest $req) This API is used to modify an alert rule.
  * @method Models\RemoveNodeFromNodePoolResponse RemoveNodeFromNodePool(Models\RemoveNodeFromNodePoolRequest $req) This API is used to remove a node from a node pool but retain it in the cluster.
+ * @method Models\RotateClusterTokenResponse RotateClusterToken(Models\RotateClusterTokenRequest $req) This API is used to rotate a cluster token.
  * @method Models\SetNodePoolNodeProtectionResponse SetNodePoolNodeProtection(Models\SetNodePoolNodeProtectionRequest $req) This API is used to enable removal protection for the nodes automatically created by the scaling group in a node pool.
  * @method Models\UninstallEdgeLogAgentResponse UninstallEdgeLogAgent(Models\UninstallEdgeLogAgentRequest $req) This API is used to uninstall the log collection add-on from TKE Edge cluster nodes.
  * @method Models\UpdateAddonResponse UpdateAddon(Models\UpdateAddonRequest $req) This API is used to update parameters and version of an add-on.

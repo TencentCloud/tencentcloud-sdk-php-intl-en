@@ -20,50 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyKafkaConsumer request structure.
  *
- * @method string getFromTopicId() Obtain <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
- * @method void setFromTopicId(string $FromTopicId) Set <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
- * @method integer getCompression() Obtain <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
- * @method void setCompression(integer $Compression) Set <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
- * @method KafkaConsumerContent getConsumerContent() Obtain <p>kafka protocol consumption data format</p>
- * @method void setConsumerContent(KafkaConsumerContent $ConsumerContent) Set <p>kafka protocol consumption data format</p>
- * @method integer getHasServicesLog() Obtain <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
- * @method void setHasServicesLog(integer $HasServicesLog) Set <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
- * @method integer getScopeType() Obtain <p>Range type of consumption, 0: latest, 1: history + latest</p>
- * @method void setScopeType(integer $ScopeType) Set <p>Range type of consumption, 0: latest, 1: history + latest</p>
+ * @method string getFromTopicId() Obtain <p>Log topic Id.</p><ul><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">getting the log topic list</a>.</li><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">creating a log topic</a>.</li></ul>
+ * @method void setFromTopicId(string $FromTopicId) Set <p>Log topic Id.</p><ul><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">getting the log topic list</a>.</li><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">creating a log topic</a>.</li></ul>
+ * @method integer getCompression() Obtain <p>Compression method. 0: No compression; 2: Snappy compression; 3: LZ4 compression</p>
+ * @method void setCompression(integer $Compression) Set <p>Compression method. 0: No compression; 2: Snappy compression; 3: LZ4 compression</p>
+ * @method KafkaConsumerContent getConsumerContent() Obtain <p>kafka consumption data format</p>
+ * @method void setConsumerContent(KafkaConsumerContent $ConsumerContent) Set <p>kafka consumption data format</p>
+ * @method integer getHasServicesLog() Obtain <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p>
+ * @method void setHasServicesLog(integer $HasServicesLog) Set <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p>
+ * @method boolean getEnableInternetConsume() Obtain <p>Public network consumption switch.</p>
+ * @method void setEnableInternetConsume(boolean $EnableInternetConsume) Set <p>Public network consumption switch.</p>
+ * @method boolean getEnableIntranetConsume() Obtain <p>Private network consumption switch.</p>
+ * @method void setEnableIntranetConsume(boolean $EnableIntranetConsume) Set <p>Private network consumption switch.</p>
+ * @method integer getScopeType() Obtain <p>Consumption scope type. 0: Latest, 1: Historical + latest</p>
+ * @method void setScopeType(integer $ScopeType) Set <p>Consumption scope type. 0: Latest, 1: Historical + latest</p>
  */
 class ModifyKafkaConsumerRequest extends AbstractModel
 {
     /**
-     * @var string <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
+     * @var string <p>Log topic Id.</p><ul><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">getting the log topic list</a>.</li><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">creating a log topic</a>.</li></ul>
      */
     public $FromTopicId;
 
     /**
-     * @var integer <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
+     * @var integer <p>Compression method. 0: No compression; 2: Snappy compression; 3: LZ4 compression</p>
      */
     public $Compression;
 
     /**
-     * @var KafkaConsumerContent <p>kafka protocol consumption data format</p>
+     * @var KafkaConsumerContent <p>kafka consumption data format</p>
      */
     public $ConsumerContent;
 
     /**
-     * @var integer <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+     * @var integer <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p>
      */
     public $HasServicesLog;
 
     /**
-     * @var integer <p>Range type of consumption, 0: latest, 1: history + latest</p>
+     * @var boolean <p>Public network consumption switch.</p>
+     */
+    public $EnableInternetConsume;
+
+    /**
+     * @var boolean <p>Private network consumption switch.</p>
+     */
+    public $EnableIntranetConsume;
+
+    /**
+     * @var integer <p>Consumption scope type. 0: Latest, 1: Historical + latest</p>
      */
     public $ScopeType;
 
     /**
-     * @param string $FromTopicId <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
-     * @param integer $Compression <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
-     * @param KafkaConsumerContent $ConsumerContent <p>kafka protocol consumption data format</p>
-     * @param integer $HasServicesLog <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
-     * @param integer $ScopeType <p>Range type of consumption, 0: latest, 1: history + latest</p>
+     * @param string $FromTopicId <p>Log topic Id.</p><ul><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">getting the log topic list</a>.</li><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">creating a log topic</a>.</li></ul>
+     * @param integer $Compression <p>Compression method. 0: No compression; 2: Snappy compression; 3: LZ4 compression</p>
+     * @param KafkaConsumerContent $ConsumerContent <p>kafka consumption data format</p>
+     * @param integer $HasServicesLog <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p>
+     * @param boolean $EnableInternetConsume <p>Public network consumption switch.</p>
+     * @param boolean $EnableIntranetConsume <p>Private network consumption switch.</p>
+     * @param integer $ScopeType <p>Consumption scope type. 0: Latest, 1: Historical + latest</p>
      */
     function __construct()
     {
@@ -93,6 +109,14 @@ class ModifyKafkaConsumerRequest extends AbstractModel
 
         if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
             $this->HasServicesLog = $param["HasServicesLog"];
+        }
+
+        if (array_key_exists("EnableInternetConsume",$param) and $param["EnableInternetConsume"] !== null) {
+            $this->EnableInternetConsume = $param["EnableInternetConsume"];
+        }
+
+        if (array_key_exists("EnableIntranetConsume",$param) and $param["EnableIntranetConsume"] !== null) {
+            $this->EnableIntranetConsume = $param["EnableIntranetConsume"];
         }
 
         if (array_key_exists("ScopeType",$param) and $param["ScopeType"] !== null) {

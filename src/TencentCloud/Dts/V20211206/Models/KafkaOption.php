@@ -18,44 +18,52 @@ namespace TencentCloud\Dts\V20211206\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Sync options configured when the target database is Kafka
+ * Synchronization option fields added when the destination is Kafka.
  *
- * @method string getDataType() Obtain Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
- * @method void setDataType(string $DataType) Set Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
- * @method string getTopicType() Obtain Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
- * @method void setTopicType(string $TopicType) Set Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
- * @method string getDDLTopicName() Obtain Topic for DDL storage
- * @method void setDDLTopicName(string $DDLTopicName) Set Topic for DDL storage
- * @method array getTopicRules() Obtain Topic description
- * @method void setTopicRules(array $TopicRules) Set Topic description
+ * @method string getDataType() Obtain <p>Data type delivered to kafka, such as Avro, Json, canal-pb, canal-Json, debezium</p>
+ * @method void setDataType(string $DataType) Set <p>Data type delivered to kafka, such as Avro, Json, canal-pb, canal-Json, debezium</p>
+ * @method string getTopicType() Obtain <p>Synchronize topic policies, for example, Single (Deliver to a single topic), Multi (Custom topic name)</p>
+ * @method void setTopicType(string $TopicType) Set <p>Synchronize topic policies, for example, Single (Deliver to a single topic), Multi (Custom topic name)</p>
+ * @method string getDDLTopicName() Obtain <p>topic used to store ddl</p>
+ * @method void setDDLTopicName(string $DDLTopicName) Set <p>topic used to store ddl</p>
+ * @method array getTopicRules() Obtain <p>Description of single topic and custom topic</p>
+ * @method void setTopicRules(array $TopicRules) Set <p>Description of single topic and custom topic</p>
+ * @method array getDataOption() Obtain <p>Additional information, for specific data types, additional parameters can be set. For example, for Canal-compatible feature support: "canalOfficialFormat":"on" means to enable the Canal-compatible feature, not included by default. For large message skipping feature support: "skipLargeMessage":"on" means to enable skipping large messages, not included by default; when enabled, "maxMessageSizeMB" must be simultaneously set to a positive integer string from 1 to 100, representing the max message size threshold (MB), messages exceeding this size will be skipped, not included by default.</p>
+ * @method void setDataOption(array $DataOption) Set <p>Additional information, for specific data types, additional parameters can be set. For example, for Canal-compatible feature support: "canalOfficialFormat":"on" means to enable the Canal-compatible feature, not included by default. For large message skipping feature support: "skipLargeMessage":"on" means to enable skipping large messages, not included by default; when enabled, "maxMessageSizeMB" must be simultaneously set to a positive integer string from 1 to 100, representing the max message size threshold (MB), messages exceeding this size will be skipped, not included by default.</p>
  */
 class KafkaOption extends AbstractModel
 {
     /**
-     * @var string Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
+     * @var string <p>Data type delivered to kafka, such as Avro, Json, canal-pb, canal-Json, debezium</p>
      */
     public $DataType;
 
     /**
-     * @var string Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
+     * @var string <p>Synchronize topic policies, for example, Single (Deliver to a single topic), Multi (Custom topic name)</p>
      */
     public $TopicType;
 
     /**
-     * @var string Topic for DDL storage
+     * @var string <p>topic used to store ddl</p>
      */
     public $DDLTopicName;
 
     /**
-     * @var array Topic description
+     * @var array <p>Description of single topic and custom topic</p>
      */
     public $TopicRules;
 
     /**
-     * @param string $DataType Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
-     * @param string $TopicType Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
-     * @param string $DDLTopicName Topic for DDL storage
-     * @param array $TopicRules Topic description
+     * @var array <p>Additional information, for specific data types, additional parameters can be set. For example, for Canal-compatible feature support: "canalOfficialFormat":"on" means to enable the Canal-compatible feature, not included by default. For large message skipping feature support: "skipLargeMessage":"on" means to enable skipping large messages, not included by default; when enabled, "maxMessageSizeMB" must be simultaneously set to a positive integer string from 1 to 100, representing the max message size threshold (MB), messages exceeding this size will be skipped, not included by default.</p>
+     */
+    public $DataOption;
+
+    /**
+     * @param string $DataType <p>Data type delivered to kafka, such as Avro, Json, canal-pb, canal-Json, debezium</p>
+     * @param string $TopicType <p>Synchronize topic policies, for example, Single (Deliver to a single topic), Multi (Custom topic name)</p>
+     * @param string $DDLTopicName <p>topic used to store ddl</p>
+     * @param array $TopicRules <p>Description of single topic and custom topic</p>
+     * @param array $DataOption <p>Additional information, for specific data types, additional parameters can be set. For example, for Canal-compatible feature support: "canalOfficialFormat":"on" means to enable the Canal-compatible feature, not included by default. For large message skipping feature support: "skipLargeMessage":"on" means to enable skipping large messages, not included by default; when enabled, "maxMessageSizeMB" must be simultaneously set to a positive integer string from 1 to 100, representing the max message size threshold (MB), messages exceeding this size will be skipped, not included by default.</p>
      */
     function __construct()
     {
@@ -88,6 +96,15 @@ class KafkaOption extends AbstractModel
                 $obj = new TopicRule();
                 $obj->deserialize($value);
                 array_push($this->TopicRules, $obj);
+            }
+        }
+
+        if (array_key_exists("DataOption",$param) and $param["DataOption"] !== null) {
+            $this->DataOption = [];
+            foreach ($param["DataOption"] as $key => $value){
+                $obj = new KeyValuePairOption();
+                $obj->deserialize($value);
+                array_push($this->DataOption, $obj);
             }
         }
     }

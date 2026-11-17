@@ -22,20 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() Obtain Subscription database type. Currently, cynosdbmysql, mariadb, mongodb, mysql, percona, tdpg, and tdsqlpercona are supported.
  * @method void setProduct(string $Product) Set Subscription database type. Currently, cynosdbmysql, mariadb, mongodb, mysql, percona, tdpg, and tdsqlpercona are supported.
- * @method integer getPayType() Obtain Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
- * @method void setPayType(integer $PayType) Set Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
- * @method integer getDuration() Obtain Purchase duration. This field needs to be filled in when the payType is monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
- * @method void setDuration(integer $Duration) Set Purchase duration. This field needs to be filled in when the payType is monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
- * @method integer getAutoRenew() Obtain Whether to renew automatically. This field needs to be filled in when the payType is monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
- * @method void setAutoRenew(integer $AutoRenew) Set Whether to renew automatically. This field needs to be filled in when the payType is monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
+ * @method integer getPayType() Obtain Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
+ * @method void setPayType(integer $PayType) Set Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
+ * @method integer getDuration() Obtain Purchase duration. This field needs to be filled in when the payType is yearly/monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
+ * @method void setDuration(integer $Duration) Set Purchase duration. This field needs to be filled in when the payType is yearly/monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
+ * @method integer getAutoRenew() Obtain Whether to renew automatically. This field needs to be filled in when the payType is yearly/monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
+ * @method void setAutoRenew(integer $AutoRenew) Set Whether to renew automatically. This field needs to be filled in when the payType is yearly/monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
  * @method integer getCount() Obtain Quantity. Default value: 1. Maximum value: 10.
  * @method void setCount(integer $Count) Set Quantity. Default value: 1. Maximum value: 10.
  * @method array getTags() Obtain Instance resource tags
  * @method void setTags(array $Tags) Set Instance resource tags
  * @method string getName() Obtain Custom task name
  * @method void setName(string $Name) Set Custom task name
- * @method string getInstanceClass() Obtain 
- * @method void setInstanceClass(string $InstanceClass) Set 
+ * @method string getSubscribeVersion() Obtain For the data subscription version, Kafka and KafkaPro (Professional Edition) are currently supported; if left blank, it defaults to KafkaPro.
+ * @method void setSubscribeVersion(string $SubscribeVersion) Set For the data subscription version, Kafka and KafkaPro (Professional Edition) are currently supported; if left blank, it defaults to KafkaPro.
+ * @method string getInstanceClass() Obtain For subscription instance specifications, only 'small', 'medium', and 'large' are currently supported.
+ * @method void setInstanceClass(string $InstanceClass) Set For subscription instance specifications, only 'small', 'medium', and 'large' are currently supported.
  */
 class CreateSubscribeRequest extends AbstractModel
 {
@@ -45,17 +47,17 @@ class CreateSubscribeRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var integer Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+     * @var integer Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
      */
     public $PayType;
 
     /**
-     * @var integer Purchase duration. This field needs to be filled in when the payType is monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
+     * @var integer Purchase duration. This field needs to be filled in when the payType is yearly/monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
      */
     public $Duration;
 
     /**
-     * @var integer Whether to renew automatically. This field needs to be filled in when the payType is monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
+     * @var integer Whether to renew automatically. This field needs to be filled in when the payType is yearly/monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
      */
     public $AutoRenew;
 
@@ -75,19 +77,25 @@ class CreateSubscribeRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 
+     * @var string For the data subscription version, Kafka and KafkaPro (Professional Edition) are currently supported; if left blank, it defaults to KafkaPro.
+     */
+    public $SubscribeVersion;
+
+    /**
+     * @var string For subscription instance specifications, only 'small', 'medium', and 'large' are currently supported.
      */
     public $InstanceClass;
 
     /**
      * @param string $Product Subscription database type. Currently, cynosdbmysql, mariadb, mongodb, mysql, percona, tdpg, and tdsqlpercona are supported.
-     * @param integer $PayType Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
-     * @param integer $Duration Purchase duration. This field needs to be filled in when the payType is monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
-     * @param integer $AutoRenew Whether to renew automatically. This field needs to be filled in when the payType is monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
+     * @param integer $PayType Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
+     * @param integer $Duration Purchase duration. This field needs to be filled in when the payType is yearly/monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
+     * @param integer $AutoRenew Whether to renew automatically. This field needs to be filled in when the payType is yearly/monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
      * @param integer $Count Quantity. Default value: 1. Maximum value: 10.
      * @param array $Tags Instance resource tags
      * @param string $Name Custom task name
-     * @param string $InstanceClass 
+     * @param string $SubscribeVersion For the data subscription version, Kafka and KafkaPro (Professional Edition) are currently supported; if left blank, it defaults to KafkaPro.
+     * @param string $InstanceClass For subscription instance specifications, only 'small', 'medium', and 'large' are currently supported.
      */
     function __construct()
     {
@@ -133,6 +141,10 @@ class CreateSubscribeRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("SubscribeVersion",$param) and $param["SubscribeVersion"] !== null) {
+            $this->SubscribeVersion = $param["SubscribeVersion"];
         }
 
         if (array_key_exists("InstanceClass",$param) and $param["InstanceClass"] !== null) {

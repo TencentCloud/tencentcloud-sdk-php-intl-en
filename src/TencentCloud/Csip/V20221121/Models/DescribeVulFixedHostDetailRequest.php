@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulId(integer $VulId) Set <p>Vulnerability ID</p>
  * @method string getInstanceId() Obtain <p>Host instance ID.</p>
  * @method void setInstanceId(string $InstanceId) Set <p>Host instance ID.</p>
- * @method integer getOffset() Obtain <p>Paging offset, used for associated component & path list pagination.<br>Value ranges from 0 to +∞.<br>Default value: 0.</p>
- * @method void setOffset(integer $Offset) Set <p>Paging offset, used for associated component & path list pagination.<br>Value ranges from 0 to +∞.<br>Default value: 0.</p>
- * @method integer getLimit() Obtain <p>Number of results per page, used for paginating associated components & path list<br>Value ranges from 1 to 100<br>Default value: 10</p>
- * @method void setLimit(integer $Limit) Set <p>Number of results per page, used for paginating associated components & path list<br>Value ranges from 1 to 100<br>Default value: 10</p>
+ * @method integer getOffset() Obtain <p>Paging offset for associated component &amp; path list pagination<br>Value range: [0, +∞)<br>Default value: 0</p>
+ * @method void setOffset(integer $Offset) Set <p>Paging offset for associated component &amp; path list pagination<br>Value range: [0, +∞)<br>Default value: 0</p>
+ * @method integer getLimit() Obtain <p>Number of results per page, used for list pagination of associated components &amp; paths<br>Value range: [1, 100]<br>Default value: 10</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of results per page, used for list pagination of associated components &amp; paths<br>Value range: [1, 100]<br>Default value: 10</p>
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  */
@@ -44,12 +44,12 @@ class DescribeVulFixedHostDetailRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer <p>Paging offset, used for associated component & path list pagination.<br>Value ranges from 0 to +∞.<br>Default value: 0.</p>
+     * @var integer <p>Paging offset for associated component &amp; path list pagination<br>Value range: [0, +∞)<br>Default value: 0</p>
      */
     public $Offset;
 
     /**
-     * @var integer <p>Number of results per page, used for paginating associated components & path list<br>Value ranges from 1 to 100<br>Default value: 10</p>
+     * @var integer <p>Number of results per page, used for list pagination of associated components &amp; paths<br>Value range: [1, 100]<br>Default value: 10</p>
      */
     public $Limit;
 
@@ -61,8 +61,8 @@ class DescribeVulFixedHostDetailRequest extends AbstractModel
     /**
      * @param integer $VulId <p>Vulnerability ID</p>
      * @param string $InstanceId <p>Host instance ID.</p>
-     * @param integer $Offset <p>Paging offset, used for associated component & path list pagination.<br>Value ranges from 0 to +∞.<br>Default value: 0.</p>
-     * @param integer $Limit <p>Number of results per page, used for paginating associated components & path list<br>Value ranges from 1 to 100<br>Default value: 10</p>
+     * @param integer $Offset <p>Paging offset for associated component &amp; path list pagination<br>Value range: [0, +∞)<br>Default value: 0</p>
+     * @param integer $Limit <p>Number of results per page, used for list pagination of associated components &amp; paths<br>Value range: [1, 100]<br>Default value: 10</p>
      * @param array $MemberId Group Account Member ID
      */
     function __construct()

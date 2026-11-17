@@ -18,14 +18,14 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Time series type details.
+ * Detailed data of time series type
  *
  * @method float getSum() Obtain Data and.
  * @method void setSum(float $Sum) Set Data and.
  * @method float getMax() Obtain Maximum value.
  * @method void setMax(float $Max) Set Maximum value.
- * @method float getAvg() Obtain Average.
- * @method void setAvg(float $Avg) Set Average.
+ * @method float getAvg() Obtain Mean.
+ * @method void setAvg(float $Avg) Set Mean.
  * @method string getMetricName() Obtain Metric name.
  * @method void setMetricName(string $MetricName) Set Metric name.
  * @method array getDetail() Obtain Details.
@@ -44,7 +44,7 @@ class FloatTimingTypeValue extends AbstractModel
     public $Max;
 
     /**
-     * @var float Average.
+     * @var float Mean.
      */
     public $Avg;
 
@@ -61,7 +61,7 @@ class FloatTimingTypeValue extends AbstractModel
     /**
      * @param float $Sum Data and.
      * @param float $Max Maximum value.
-     * @param float $Avg Average.
+     * @param float $Avg Mean.
      * @param string $MetricName Metric name.
      * @param array $Detail Details.
      */

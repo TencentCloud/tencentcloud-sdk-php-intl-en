@@ -20,33 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Detailed data of time series type
  *
- * @method integer getSum() Obtain Sum.
- * @method void setSum(integer $Sum) Set Sum.
- * @method integer getMax() Obtain The maximum value.
- * @method void setMax(integer $Max) Set The maximum value.
- * @method integer getAvg() Obtain The average value.
- * @method void setAvg(integer $Avg) Set The average value.
+ * @method integer getSum() Obtain Data and.
+ * @method void setSum(integer $Sum) Set Data and.
+ * @method integer getMax() Obtain Maximum value.
+ * @method void setMax(integer $Max) Set Maximum value.
+ * @method integer getAvg() Obtain Mean.
+ * @method void setAvg(integer $Avg) Set Mean.
  * @method string getMetricName() Obtain Metric name.
  * @method void setMetricName(string $MetricName) Set Metric name.
  * @method array getDetail() Obtain Details.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDetail(array $Detail) Set Details.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TimingTypeValue extends AbstractModel
 {
     /**
-     * @var integer Sum.
+     * @var integer Data and.
      */
     public $Sum;
 
     /**
-     * @var integer The maximum value.
+     * @var integer Maximum value.
      */
     public $Max;
 
     /**
-     * @var integer The average value.
+     * @var integer Mean.
      */
     public $Avg;
 
@@ -57,17 +55,15 @@ class TimingTypeValue extends AbstractModel
 
     /**
      * @var array Details.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Detail;
 
     /**
-     * @param integer $Sum Sum.
-     * @param integer $Max The maximum value.
-     * @param integer $Avg The average value.
+     * @param integer $Sum Data and.
+     * @param integer $Max Maximum value.
+     * @param integer $Avg Mean.
      * @param string $MetricName Metric name.
      * @param array $Detail Details.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

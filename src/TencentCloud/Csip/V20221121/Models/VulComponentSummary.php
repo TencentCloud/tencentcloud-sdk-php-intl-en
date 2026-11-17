@@ -18,28 +18,28 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Host Vulnerability Component Overview
+ * Host vulnerability component overview
  *
- * @method string getName() Obtain <p>Component name.</p>
- * @method void setName(string $Name) Set <p>Component name.</p>
- * @method integer getRelateHostCount() Obtain <p>Associated hosts.</p>
- * @method void setRelateHostCount(integer $RelateHostCount) Set <p>Associated hosts.</p>
+ * @method string getName() Obtain <p>Component name</p>
+ * @method void setName(string $Name) Set <p>Component name</p>
+ * @method integer getRelateHostCount() Obtain <p>Number of associated hosts</p>
+ * @method void setRelateHostCount(integer $RelateHostCount) Set <p>Number of associated hosts</p>
  */
 class VulComponentSummary extends AbstractModel
 {
     /**
-     * @var string <p>Component name.</p>
+     * @var string <p>Component name</p>
      */
     public $Name;
 
     /**
-     * @var integer <p>Associated hosts.</p>
+     * @var integer <p>Number of associated hosts</p>
      */
     public $RelateHostCount;
 
     /**
-     * @param string $Name <p>Component name.</p>
-     * @param integer $RelateHostCount <p>Associated hosts.</p>
+     * @param string $Name <p>Component name</p>
+     * @param integer $RelateHostCount <p>Number of associated hosts</p>
      */
     function __construct()
     {

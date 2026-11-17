@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSyncJob request structure.
  *
- * @method string getPayMode() Obtain Billing mode. Valid values: `PrePay` (monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
- * @method void setPayMode(string $PayMode) Set Billing mode. Valid values: `PrePay` (monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
+ * @method string getPayMode() Obtain Billing mode. Valid values: `PrePay` (yearly/monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
+ * @method void setPayMode(string $PayMode) Set Billing mode. Valid values: `PrePay` (yearly/monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
  * @method string getSrcDatabaseType() Obtain Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
  * @method void setSrcDatabaseType(string $SrcDatabaseType) Set Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
  * @method string getSrcRegion() Obtain Source database region, such as `ap-guangzhou`.
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstRegion(string $DstRegion) Set Target database region, such as `ap-guangzhou`.
  * @method string getSpecification() Obtain Sync task specification, such as `Standard`.
  * @method void setSpecification(string $Specification) Set Sync task specification, such as `Standard`.
- * @method integer getTimeSpan() Obtain 
- * @method void setTimeSpan(integer $TimeSpan) Set 
+ * @method integer getTimeSpan() Obtain Purchase duration (in months); this configuration is applicable only when PayMode is set to 'PrePay'. The default value is 1 month, and the valid range is [1, 100].
+ * @method void setTimeSpan(integer $TimeSpan) Set Purchase duration (in months); this configuration is applicable only when PayMode is set to 'PrePay'. The default value is 1 month, and the valid range is [1, 100].
  * @method array getTags() Obtain Tag information
  * @method void setTags(array $Tags) Set Tag information
  * @method integer getCount() Obtain The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateSyncJobRequest extends AbstractModel
 {
     /**
-     * @var string Billing mode. Valid values: `PrePay` (monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
+     * @var string Billing mode. Valid values: `PrePay` (yearly/monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
      */
     public $PayMode;
 
@@ -80,7 +80,7 @@ class CreateSyncJobRequest extends AbstractModel
     public $Specification;
 
     /**
-     * @var integer 
+     * @var integer Purchase duration (in months); this configuration is applicable only when PayMode is set to 'PrePay'. The default value is 1 month, and the valid range is [1, 100].
      */
     public $TimeSpan;
 
@@ -115,13 +115,13 @@ class CreateSyncJobRequest extends AbstractModel
     public $ExistedJobId;
 
     /**
-     * @param string $PayMode Billing mode. Valid values: `PrePay` (monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
+     * @param string $PayMode Billing mode. Valid values: `PrePay` (yearly/monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
      * @param string $SrcDatabaseType Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
      * @param string $SrcRegion Source database region, such as `ap-guangzhou`.
      * @param string $DstDatabaseType Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, `tdsqlmysql`, and `kafka`.
      * @param string $DstRegion Target database region, such as `ap-guangzhou`.
      * @param string $Specification Sync task specification, such as `Standard`.
-     * @param integer $TimeSpan 
+     * @param integer $TimeSpan Purchase duration (in months); this configuration is applicable only when PayMode is set to 'PrePay'. The default value is 1 month, and the valid range is [1, 100].
      * @param array $Tags Tag information
      * @param integer $Count The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
      * @param integer $AutoRenew Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`.
