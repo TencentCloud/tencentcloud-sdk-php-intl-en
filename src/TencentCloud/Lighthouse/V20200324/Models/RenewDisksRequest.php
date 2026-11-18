@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDiskIds() Obtain IDs of cloud disks. The value can be obtained from the `DiskId` parameter returned by the [DescribeDisks](https://intl.cloud.tencent.com/document/product/1207/66093?from_cn_redirect=1) API. Up to 50 disks can be requested at a time.
  * @method void setDiskIds(array $DiskIds) Set IDs of cloud disks. The value can be obtained from the `DiskId` parameter returned by the [DescribeDisks](https://intl.cloud.tencent.com/document/product/1207/66093?from_cn_redirect=1) API. Up to 50 disks can be requested at a time.
- * @method RenewDiskChargePrepaid getRenewDiskChargePrepaid() Obtain Parameter settings for renewing the monthly subscribed cloud disk.
- * @method void setRenewDiskChargePrepaid(RenewDiskChargePrepaid $RenewDiskChargePrepaid) Set Parameter settings for renewing the monthly subscribed cloud disk.
+ * @method RenewDiskChargePrepaid getRenewDiskChargePrepaid() Obtain Parameter settings for renewing the yearly/monthly subscribed cloud disk.
+ * @method void setRenewDiskChargePrepaid(RenewDiskChargePrepaid $RenewDiskChargePrepaid) Set Parameter settings for renewing the yearly/monthly subscribed cloud disk.
  * @method boolean getAutoVoucher() Obtain Whether to use the vouchers automatically. It defaults to No.
  * @method void setAutoVoucher(boolean $AutoVoucher) Set Whether to use the vouchers automatically. It defaults to No.
  */
@@ -35,7 +35,7 @@ class RenewDisksRequest extends AbstractModel
     public $DiskIds;
 
     /**
-     * @var RenewDiskChargePrepaid Parameter settings for renewing the monthly subscribed cloud disk.
+     * @var RenewDiskChargePrepaid Parameter settings for renewing the yearly/monthly subscribed cloud disk.
      */
     public $RenewDiskChargePrepaid;
 
@@ -46,7 +46,7 @@ class RenewDisksRequest extends AbstractModel
 
     /**
      * @param array $DiskIds IDs of cloud disks. The value can be obtained from the `DiskId` parameter returned by the [DescribeDisks](https://intl.cloud.tencent.com/document/product/1207/66093?from_cn_redirect=1) API. Up to 50 disks can be requested at a time.
-     * @param RenewDiskChargePrepaid $RenewDiskChargePrepaid Parameter settings for renewing the monthly subscribed cloud disk.
+     * @param RenewDiskChargePrepaid $RenewDiskChargePrepaid Parameter settings for renewing the yearly/monthly subscribed cloud disk.
      * @param boolean $AutoVoucher Whether to use the vouchers automatically. It defaults to No.
      */
     function __construct()

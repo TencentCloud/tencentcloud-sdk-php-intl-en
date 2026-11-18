@@ -18,7 +18,7 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameter settings for the monthly subscribed cloud disk
+ * Parameter settings for the yearly/monthly subscribed cloud disk
  *
  * @method integer getPeriod() Obtain Purchase duration.
  * @method void setPeriod(integer $Period) Set Purchase duration.

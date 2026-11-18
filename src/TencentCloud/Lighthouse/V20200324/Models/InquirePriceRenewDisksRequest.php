@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDiskIds() Obtain List of cloud disk IDs.
  * @method void setDiskIds(array $DiskIds) Set List of cloud disk IDs.
- * @method RenewDiskChargePrepaid getRenewDiskChargePrepaid() Obtain Parameter settings for renewing the monthly subscribed cloud disk.
- * @method void setRenewDiskChargePrepaid(RenewDiskChargePrepaid $RenewDiskChargePrepaid) Set Parameter settings for renewing the monthly subscribed cloud disk.
+ * @method RenewDiskChargePrepaid getRenewDiskChargePrepaid() Obtain Parameter settings for renewing the yearly/monthly subscribed cloud disk.
+ * @method void setRenewDiskChargePrepaid(RenewDiskChargePrepaid $RenewDiskChargePrepaid) Set Parameter settings for renewing the yearly/monthly subscribed cloud disk.
  */
 class InquirePriceRenewDisksRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class InquirePriceRenewDisksRequest extends AbstractModel
     public $DiskIds;
 
     /**
-     * @var RenewDiskChargePrepaid Parameter settings for renewing the monthly subscribed cloud disk.
+     * @var RenewDiskChargePrepaid Parameter settings for renewing the yearly/monthly subscribed cloud disk.
      */
     public $RenewDiskChargePrepaid;
 
     /**
      * @param array $DiskIds List of cloud disk IDs.
-     * @param RenewDiskChargePrepaid $RenewDiskChargePrepaid Parameter settings for renewing the monthly subscribed cloud disk.
+     * @param RenewDiskChargePrepaid $RenewDiskChargePrepaid Parameter settings for renewing the yearly/monthly subscribed cloud disk.
      */
     function __construct()
     {

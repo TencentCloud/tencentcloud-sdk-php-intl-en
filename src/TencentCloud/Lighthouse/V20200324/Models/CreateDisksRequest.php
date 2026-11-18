@@ -26,18 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskSize(integer $DiskSize) Set Cloud disk size in GB.
  * @method string getDiskType() Obtain Cloud disk media type. Valid values: "CLOUD_PREMIUM" (premium cloud disk), "CLOUD_SSD" (SSD cloud disk).
  * @method void setDiskType(string $DiskType) Set Cloud disk media type. Valid values: "CLOUD_PREMIUM" (premium cloud disk), "CLOUD_SSD" (SSD cloud disk).
- * @method DiskChargePrepaid getDiskChargePrepaid() Obtain Parameters of monthly subscribed cloud disks
- * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) Set Parameters of monthly subscribed cloud disks
+ * @method DiskChargePrepaid getDiskChargePrepaid() Obtain Parameters of yearly/monthly subscribed cloud disks
+ * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) Set Parameters of yearly/monthly subscribed cloud disks
  * @method string getDiskName() Obtain Image name, which can contain up to 60 characters.
  * @method void setDiskName(string $DiskName) Set Image name, which can contain up to 60 characters.
  * @method integer getDiskCount() Obtain Number of cloud disks. Range: [1, 30]. Default value: 1.
  * @method void setDiskCount(integer $DiskCount) Set Number of cloud disks. Range: [1, 30]. Default value: 1.
- * @method integer getDiskBackupQuota() Obtain Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
- * @method void setDiskBackupQuota(integer $DiskBackupQuota) Set Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+ * @method integer getDiskBackupQuota() Obtain Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
+ * @method void setDiskBackupQuota(integer $DiskBackupQuota) Set Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
  * @method boolean getAutoVoucher() Obtain Whether to use the vouchers automatically. It defaults to No.
  * @method void setAutoVoucher(boolean $AutoVoucher) Set Whether to use the vouchers automatically. It defaults to No.
  * @method AutoMountConfiguration getAutoMountConfiguration() Obtain Automatically mount and initialize the data disk.
  * @method void setAutoMountConfiguration(AutoMountConfiguration $AutoMountConfiguration) Set Automatically mount and initialize the data disk.
+ * @method array getTags() Obtain Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+ * @method void setTags(array $Tags) Set Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
  */
 class CreateDisksRequest extends AbstractModel
 {
@@ -57,7 +59,7 @@ class CreateDisksRequest extends AbstractModel
     public $DiskType;
 
     /**
-     * @var DiskChargePrepaid Parameters of monthly subscribed cloud disks
+     * @var DiskChargePrepaid Parameters of yearly/monthly subscribed cloud disks
      */
     public $DiskChargePrepaid;
 
@@ -72,7 +74,7 @@ class CreateDisksRequest extends AbstractModel
     public $DiskCount;
 
     /**
-     * @var integer Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+     * @var integer Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
      */
     public $DiskBackupQuota;
 
@@ -87,15 +89,21 @@ class CreateDisksRequest extends AbstractModel
     public $AutoMountConfiguration;
 
     /**
+     * @var array Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+     */
+    public $Tags;
+
+    /**
      * @param string $Zone Availability zone. You can call [DescribeZones](https://intl.cloud.tencent.com/document/product/1207/57513?from_cn_redirect=1) and get the information in the `Zone` parameter re 
      * @param integer $DiskSize Cloud disk size in GB.
      * @param string $DiskType Cloud disk media type. Valid values: "CLOUD_PREMIUM" (premium cloud disk), "CLOUD_SSD" (SSD cloud disk).
-     * @param DiskChargePrepaid $DiskChargePrepaid Parameters of monthly subscribed cloud disks
+     * @param DiskChargePrepaid $DiskChargePrepaid Parameters of yearly/monthly subscribed cloud disks
      * @param string $DiskName Image name, which can contain up to 60 characters.
      * @param integer $DiskCount Number of cloud disks. Range: [1, 30]. Default value: 1.
-     * @param integer $DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+     * @param integer $DiskBackupQuota Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
      * @param boolean $AutoVoucher Whether to use the vouchers automatically. It defaults to No.
      * @param AutoMountConfiguration $AutoMountConfiguration Automatically mount and initialize the data disk.
+     * @param array $Tags Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
      */
     function __construct()
     {
@@ -146,6 +154,15 @@ class CreateDisksRequest extends AbstractModel
         if (array_key_exists("AutoMountConfiguration",$param) and $param["AutoMountConfiguration"] !== null) {
             $this->AutoMountConfiguration = new AutoMountConfiguration();
             $this->AutoMountConfiguration->deserialize($param["AutoMountConfiguration"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

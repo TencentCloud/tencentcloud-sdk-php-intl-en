@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() Obtain IDs of one or more instances to be operated. The value can be obtained from the `InstanceId` parameter returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API. Up to 100 instances can be requested at a time.
  * @method void setInstanceIds(array $InstanceIds) Set IDs of one or more instances to be operated. The value can be obtained from the `InstanceId` parameter returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API. Up to 100 instances can be requested at a time.
- * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Prepaid mode, i.e., yearly/monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Prepaid mode, i.e., yearly/monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
  * @method boolean getRenewDataDisk() Obtain Whether to renew elastic data disks. Values: 
 `TRUE`: Renew the elastic data disks attached to the instance as well when the related instance is renewed.
 `FALSE`: Do not renew the elastic data disks attached to the instance as well when the related instance is renewed.
@@ -49,7 +49,7 @@ class RenewInstancesRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var InstanceChargePrepaid Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
+     * @var InstanceChargePrepaid Prepaid mode, i.e., yearly/monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
      */
     public $InstanceChargePrepaid;
 
@@ -71,7 +71,7 @@ Default: `FALSE`.
 
     /**
      * @param array $InstanceIds IDs of one or more instances to be operated. The value can be obtained from the `InstanceId` parameter returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API. Up to 100 instances can be requested at a time.
-     * @param InstanceChargePrepaid $InstanceChargePrepaid Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
+     * @param InstanceChargePrepaid $InstanceChargePrepaid Prepaid mode, i.e., yearly/monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
      * @param boolean $RenewDataDisk Whether to renew elastic data disks. Values: 
 `TRUE`: Renew the elastic data disks attached to the instance as well when the related instance is renewed.
 `FALSE`: Do not renew the elastic data disks attached to the instance as well when the related instance is renewed.

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstancesBundle request structure.
  *
- * @method array getInstanceIds() Obtain IDs of target instances. You can get the IDs from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 15 instances can be specified at the same time.
- * @method void setInstanceIds(array $InstanceIds) Set IDs of target instances. You can get the IDs from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 15 instances can be specified at the same time.
- * @method string getBundleId() Obtain ID of bundles to change. You can get the IDs from the `BundleId` returned by the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1).
- * @method void setBundleId(string $BundleId) Set ID of bundles to change. You can get the IDs from the `BundleId` returned by the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1).
+ * @method array getInstanceIds() Obtain List of instance IDs. One or more IDs of the instances to be operated. You can obtain the InstanceId from the value returned by the [DescribeInstances](https://www.tencentcloud.com/document/api/1207/47573?from_cn_redirect=1) API. The maximum number of instances in each request is 15.
+ * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs. One or more IDs of the instances to be operated. You can obtain the InstanceId from the value returned by the [DescribeInstances](https://www.tencentcloud.com/document/api/1207/47573?from_cn_redirect=1) API. The maximum number of instances in each request is 15.
+ * @method string getBundleId() Obtain ID of the target bundle. Note that it cannot be the same as the current bundle ID of the instance to be upgraded. You can obtain the BundleId from the value returned by the [DescribeBundles](https://www.tencentcloud.com/document/api/1207/47575?from_cn_redirect=1) API.
+ * @method void setBundleId(string $BundleId) Set ID of the target bundle. Note that it cannot be the same as the current bundle ID of the instance to be upgraded. You can obtain the BundleId from the value returned by the [DescribeBundles](https://www.tencentcloud.com/document/api/1207/47575?from_cn_redirect=1) API.
  * @method boolean getAutoVoucher() Obtain Whether to use existing vouchers under the current account automatically. Valid values: 
 `true`: Deduct from existing vouchers automatically 
 `false`: Do not deduct from existing vouchers automatically 
@@ -36,12 +36,12 @@ Default value: `false`.
 class ModifyInstancesBundleRequest extends AbstractModel
 {
     /**
-     * @var array IDs of target instances. You can get the IDs from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 15 instances can be specified at the same time.
+     * @var array List of instance IDs. One or more IDs of the instances to be operated. You can obtain the InstanceId from the value returned by the [DescribeInstances](https://www.tencentcloud.com/document/api/1207/47573?from_cn_redirect=1) API. The maximum number of instances in each request is 15.
      */
     public $InstanceIds;
 
     /**
-     * @var string ID of bundles to change. You can get the IDs from the `BundleId` returned by the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1).
+     * @var string ID of the target bundle. Note that it cannot be the same as the current bundle ID of the instance to be upgraded. You can obtain the BundleId from the value returned by the [DescribeBundles](https://www.tencentcloud.com/document/api/1207/47575?from_cn_redirect=1) API.
      */
     public $BundleId;
 
@@ -54,8 +54,8 @@ Default value: `false`.
     public $AutoVoucher;
 
     /**
-     * @param array $InstanceIds IDs of target instances. You can get the IDs from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 15 instances can be specified at the same time.
-     * @param string $BundleId ID of bundles to change. You can get the IDs from the `BundleId` returned by the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1).
+     * @param array $InstanceIds List of instance IDs. One or more IDs of the instances to be operated. You can obtain the InstanceId from the value returned by the [DescribeInstances](https://www.tencentcloud.com/document/api/1207/47573?from_cn_redirect=1) API. The maximum number of instances in each request is 15.
+     * @param string $BundleId ID of the target bundle. Note that it cannot be the same as the current bundle ID of the instance to be upgraded. You can obtain the BundleId from the value returned by the [DescribeBundles](https://www.tencentcloud.com/document/api/1207/47575?from_cn_redirect=1) API.
      * @param boolean $AutoVoucher Whether to use existing vouchers under the current account automatically. Valid values: 
 `true`: Deduct from existing vouchers automatically 
 `false`: Do not deduct from existing vouchers automatically 
