@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBundleId() Obtain Instance package ID.
  * @method void setBundleId(string $BundleId) Set Instance package ID.
- * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the yearly/monthly subscribed instances.
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the yearly/monthly subscribed instances.
  * @method integer getInstanceCount() Obtain Number of instances to be created. Default value: 1.
  * @method void setInstanceCount(integer $InstanceCount) Set Number of instances to be created. Default value: 1.
  * @method string getBlueprintId() Obtain Application image ID, which is required if a paid application image is used and can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
@@ -37,7 +37,7 @@ class InquirePriceCreateInstancesRequest extends AbstractModel
     public $BundleId;
 
     /**
-     * @var InstanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+     * @var InstanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the yearly/monthly subscribed instances.
      */
     public $InstanceChargePrepaid;
 
@@ -53,7 +53,7 @@ class InquirePriceCreateInstancesRequest extends AbstractModel
 
     /**
      * @param string $BundleId Instance package ID.
-     * @param InstanceChargePrepaid $InstanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+     * @param InstanceChargePrepaid $InstanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the yearly/monthly subscribed instances.
      * @param integer $InstanceCount Number of instances to be created. Default value: 1.
      * @param string $BlueprintId Application image ID, which is required if a paid application image is used and can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
      */

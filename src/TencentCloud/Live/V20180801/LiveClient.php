@@ -237,6 +237,7 @@ Referer information is included in HTTP requests. After you enable referer confi
  * @method Models\StopLivePadStreamResponse StopLivePadStream(Models\StopLivePadStreamRequest $req) Call this API to end the transition to standby footage.
  * @method Models\StopLiveRecordResponse StopLiveRecord(Models\StopLiveRecordRequest $req) Note: Recording files are stored on the VOD platform. To use the recording feature, you need to activate a VOD account and ensure that it is available. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing method. For more information, please see the corresponding document.
  * @method Models\StopRecordTaskResponse StopRecordTask(Models\StopRecordTaskRequest $req) This API is used to terminate an ongoing recording task and generate a recording file.
+ * @method Models\StopScreenshotTaskResponse StopScreenshotTask(Models\StopScreenshotTaskRequest $req) This API is used to terminate a screenshot task in advance. After the task is successfully terminated, it will not be started again.
  * @method Models\UnBindLiveDomainCertResponse UnBindLiveDomainCert(Models\UnBindLiveDomainCertRequest $req) This API is used to unbind a domain name certificate.
  * @method Models\UpdateLiveWatermarkResponse UpdateLiveWatermark(Models\UpdateLiveWatermarkRequest $req) This API is used to update a watermark.
  */

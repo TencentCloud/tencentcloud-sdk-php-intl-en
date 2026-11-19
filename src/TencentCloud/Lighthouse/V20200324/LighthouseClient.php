@@ -181,7 +181,7 @@ Sharing CVM images to Lighthouse requires the following conditions to be met:
 * Only instances in the RUNNING or STOPPED state can be operated through this API.
 * Batch operations are supported. The maximum number of instances in each request is 15.
 * This API is an async API. After a request is sent successfully, a RequestId is returned, but the operation is not completed immediately. You can call the <a href="https://www.tencentcloud.com/document/product/1207/47573?from_cn_redirect=1" target="_blank">DescribeInstances</a> API to query the instance operation result. If the latest operation state (LatestOperationState) of the instance is "SUCCESS", the operation is successful.
- * @method Models\ModifyInstancesRenewFlagResponse ModifyInstancesRenewFlag(Models\ModifyInstancesRenewFlagRequest $req) This API is used to change the auto-renewal setting of monthly-subscribed instances. 
+ * @method Models\ModifyInstancesRenewFlagResponse ModifyInstancesRenewFlag(Models\ModifyInstancesRenewFlagRequest $req) This API is used to change the auto-renewal setting of yearly/monthly-subscribed instances. 
 
 * Instances with auto-renewal enabled are automatically renewed on a monthly basis upon the expiration. 
 * Batch operations are supported. Up to 100 instances per request is allowed.
