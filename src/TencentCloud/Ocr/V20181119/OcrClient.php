@@ -100,6 +100,7 @@ A maximum of 5 requests can be initiated per second for this API.
  * @method Models\SmartStructuralOCRV2Response SmartStructuralOCRV2(Models\SmartStructuralOCRV2Request $req) This API is used to recognize fields from cards, documents, bills, forms, contracts, and other structured information. It is flexible and efficient to use, without any configuration required. This API is suitable for recognizing structured information.
 
 A maximum of 10 requests can be initiated per second for this API.
+ * @method Models\VerifyPdfOcrResponse VerifyPdfOcr(Models\VerifyPdfOcrRequest $req) This API is used to recognize entry and exit record PDFs and verify electronic signatures, returning structured entry and exit records and signature verification conclusions.
  * @method Models\VinOCRResponse VinOCR(Models\VinOCRRequest $req) This API is used to recognize the vehicle identification number (VIN) in an image.
  */
 
