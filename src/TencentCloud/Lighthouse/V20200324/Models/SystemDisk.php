@@ -18,48 +18,44 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information on the block device where the operating system is installed, namely the system disk.
+ * Describes the information of the block device where the operating system resides, i.e., the system disk.
  *
  * @method string getDiskType() Obtain System disk type.
 Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: basic cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: premium cloud disk</li>
  * @method void setDiskType(string $DiskType) Set System disk type.
 Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
- * @method integer getDiskSize() Obtain System disk size in GB.
- * @method void setDiskSize(integer $DiskSize) Set System disk size in GB.
+<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: basic cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: premium cloud disk</li>
+ * @method integer getDiskSize() Obtain System disk size, in the unit of GB.
+ * @method void setDiskSize(integer $DiskSize) Set System disk size, in the unit of GB.
  * @method string getDiskId() Obtain System disk ID.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDiskId(string $DiskId) Set System disk ID.
-Note: this field may return null, indicating that no valid values can be obtained.
  */
 class SystemDisk extends AbstractModel
 {
     /**
      * @var string System disk type.
 Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: basic cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: premium cloud disk</li>
      */
     public $DiskType;
 
     /**
-     * @var integer System disk size in GB.
+     * @var integer System disk size, in the unit of GB.
      */
     public $DiskSize;
 
     /**
      * @var string System disk ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DiskId;
 
     /**
      * @param string $DiskType System disk type.
 Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
-     * @param integer $DiskSize System disk size in GB.
+<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: basic cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: premium cloud disk</li>
+     * @param integer $DiskSize System disk size, in the unit of GB.
      * @param string $DiskId System disk ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -18,11 +18,11 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * >Key-Value pair filter for conditional filtering queries, such as filtering name
-> * If there are multiple `Filter` parameters, the relationship among them is the logical `AND`.
-> * If there are multiple `Values` for the same `Filter`, the relationship among the `Values` is the logical `OR`.
+ * >Describes key-value pair filters used for conditional filtering queries. For example, filter by name.
+> * If there are multiple `Filter` parameters, the relationship between them is logical AND (`AND`).
+> * If the same `Filter` has multiple `Values`, the relationship between the `Values` under the same `Filter` is logical OR (`OR`).
 >
-> Taking the `Filter` in the `DescribeInstances` API as an example, you can use the following filters to query the instance whose name (`instance-name`) is `test` ***and*** private IP (`private-ip-address`) is 10.10.10.10:
+> Take the `Filter` of the DescribeInstances API as an example. If you need to query instances whose instance name (`instance-name`) is test ***and*** private IP (`private-ip-address`) is 10.10.10.10, you can implement it as follows:
 ```
 Filters.0.Name=instance-name
 &Filters.0.Values.0=test
@@ -30,26 +30,26 @@ Filters.0.Name=instance-name
 &Filters.1.Values.0=10.10.10.10
 ```
  *
- * @method string getName() Obtain Field to be filtered.
- * @method void setName(string $Name) Set Field to be filtered.
- * @method array getValues() Obtain Filter value of field.
- * @method void setValues(array $Values) Set Filter value of field.
+ * @method string getName() Obtain Fields to be filtered.
+ * @method void setName(string $Name) Set Fields to be filtered.
+ * @method array getValues() Obtain Filter value of the field.
+ * @method void setValues(array $Values) Set Filter value of the field.
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string Field to be filtered.
+     * @var string Fields to be filtered.
      */
     public $Name;
 
     /**
-     * @var array Filter value of field.
+     * @var array Filter value of the field.
      */
     public $Values;
 
     /**
-     * @param string $Name Field to be filtered.
-     * @param array $Values Filter value of field.
+     * @param string $Name Fields to be filtered.
+     * @param array $Values Filter value of the field.
      */
     function __construct()
     {

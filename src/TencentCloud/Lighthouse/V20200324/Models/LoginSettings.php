@@ -18,20 +18,20 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Describes login settings of an instance.
+ * Describe the instance login related configuration and information.
  *
- * @method array getKeyIds() Obtain Key ID list. After a key is associated, you can use it to access the instance. Note: this field may return [], indicating that no valid values can be obtained.
- * @method void setKeyIds(array $KeyIds) Set Key ID list. After a key is associated, you can use it to access the instance. Note: this field may return [], indicating that no valid values can be obtained.
+ * @method array getKeyIds() Obtain List of key IDs. After a key is associated, you can access the instance by using the corresponding private key. Note: This field may return [], indicating that no valid value can be obtained.
+ * @method void setKeyIds(array $KeyIds) Set List of key IDs. After a key is associated, you can access the instance by using the corresponding private key. Note: This field may return [], indicating that no valid value can be obtained.
  */
 class LoginSettings extends AbstractModel
 {
     /**
-     * @var array Key ID list. After a key is associated, you can use it to access the instance. Note: this field may return [], indicating that no valid values can be obtained.
+     * @var array List of key IDs. After a key is associated, you can access the instance by using the corresponding private key. Note: This field may return [], indicating that no valid value can be obtained.
      */
     public $KeyIds;
 
     /**
-     * @param array $KeyIds Key ID list. After a key is associated, you can use it to access the instance. Note: this field may return [], indicating that no valid values can be obtained.
+     * @param array $KeyIds List of key IDs. After a key is associated, you can access the instance by using the corresponding private key. Note: This field may return [], indicating that no valid value can be obtained.
      */
     function __construct()
     {

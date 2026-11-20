@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Transcribe user information
  *
- * @method string getUserId() Obtain User ID.
- * @method void setUserId(string $UserId) Set User ID.
+ * @method string getUserId() Obtain <p>uid.</p>
+ * @method void setUserId(string $UserId) Set <p>uid.</p>
  */
 class TranscriptionUserInfoParams extends AbstractModel
 {
     /**
-     * @var string User ID.
+     * @var string <p>uid.</p>
      */
     public $UserId;
 
     /**
-     * @param string $UserId User ID.
+     * @param string $UserId <p>uid.</p>
      */
     function __construct()
     {

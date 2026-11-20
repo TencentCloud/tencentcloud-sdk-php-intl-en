@@ -18,98 +18,98 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance information.
+ * Describes the instance information.
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getBundleId() Obtain Package ID.
- * @method void setBundleId(string $BundleId) Set Package ID.
+ * @method string getBundleId() Obtain Bundle ID.
+ * @method void setBundleId(string $BundleId) Set Bundle ID.
  * @method string getBlueprintId() Obtain Image ID.
  * @method void setBlueprintId(string $BlueprintId) Set Image ID.
- * @method integer getCPU() Obtain Number of instance CPU cores.
- * @method void setCPU(integer $CPU) Set Number of instance CPU cores.
- * @method integer getMemory() Obtain Instance memory capacity in GB.
- * @method void setMemory(integer $Memory) Set Instance memory capacity in GB.
+ * @method integer getCPU() Obtain Number of CPU cores for the instance, in cores.
+ * @method void setCPU(integer $CPU) Set Number of CPU cores for the instance, in cores.
+ * @method integer getMemory() Obtain Instance memory capacity, in GB.
+ * @method void setMemory(integer $Memory) Set Instance memory capacity, in GB.
  * @method string getInstanceName() Obtain Instance name.
  * @method void setInstanceName(string $InstanceName) Set Instance name.
  * @method string getInstanceChargeType() Obtain Instance billing mode. Valid values: 
-PREPAID: prepaid (i.e., monthly subscription).
+PREPAID: prepaid, that is, monthly or yearly subscription.
  * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing mode. Valid values: 
-PREPAID: prepaid (i.e., monthly subscription).
+PREPAID: prepaid, that is, monthly or yearly subscription.
  * @method SystemDisk getSystemDisk() Obtain Instance system disk information.
  * @method void setSystemDisk(SystemDisk $SystemDisk) Set Instance system disk information.
- * @method array getPrivateAddresses() Obtain Private IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPrivateAddresses(array $PrivateAddresses) Set Private IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getPublicAddresses() Obtain Public IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPublicAddresses(array $PublicAddresses) Set Public IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getPrivateAddresses() Obtain Private IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setPrivateAddresses(array $PrivateAddresses) Set Private IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method array getPublicAddresses() Obtain Public IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setPublicAddresses(array $PublicAddresses) Set Public IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method InternetAccessible getInternetAccessible() Obtain Instance bandwidth information.
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set Instance bandwidth information.
- * @method string getRenewFlag() Obtain Auto-Renewal flag. Valid values: 
-NOTIFY_AND_MANUAL_RENEW: notify upon expiration but do not renew automatically  
-NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
- * @method void setRenewFlag(string $RenewFlag) Set Auto-Renewal flag. Valid values: 
-NOTIFY_AND_MANUAL_RENEW: notify upon expiration but do not renew automatically  
-NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
- * @method LoginSettings getLoginSettings() Obtain Instance login settings.
- * @method void setLoginSettings(LoginSettings $LoginSettings) Set Instance login settings.
+ * @method string getRenewFlag() Obtain Auto-renewal flag. Valid values: 
+NOTIFY_AND_MANUAL_RENEW: Notify when the subscription is about to expire, but do not renew automatically.  
+NOTIFY_AND_AUTO_RENEW: Notify when the subscription is about to expire and renew automatically. DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not renew automatically or send notifications.
+ * @method void setRenewFlag(string $RenewFlag) Set Auto-renewal flag. Valid values: 
+NOTIFY_AND_MANUAL_RENEW: Notify when the subscription is about to expire, but do not renew automatically.  
+NOTIFY_AND_AUTO_RENEW: Notify when the subscription is about to expire and renew automatically. DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not renew automatically or send notifications.
+ * @method LoginSettings getLoginSettings() Obtain Instance login setting.
+ * @method void setLoginSettings(LoginSettings $LoginSettings) Set Instance login setting.
  * @method string getInstanceState() Obtain Instance status. Valid values: 
-<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting the rescue mode</li>
  * @method void setInstanceState(string $InstanceState) Set Instance status. Valid values: 
-<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
- * @method string getUuid() Obtain Globally unique ID of instance.
- * @method void setUuid(string $Uuid) Set Globally unique ID of instance.
- * @method string getLatestOperation() Obtain Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLatestOperation(string $LatestOperation) Set Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getLatestOperationState() Obtain Last instance operation status. Valid values: 
-SUCCESS: operation succeeded 
-OPERATING: the operation is being executed 
-FAILED: operation failed 
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLatestOperationState(string $LatestOperationState) Set Last instance operation status. Valid values: 
-SUCCESS: operation succeeded 
-OPERATING: the operation is being executed 
-FAILED: operation failed 
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getLatestOperationRequestId() Obtain Unique request ID for the last operation of the instance. 
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLatestOperationRequestId(string $LatestOperationRequestId) Set Unique request ID for the last operation of the instance. 
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getIsolatedTime() Obtain Isolation time according to ISO 8601 standard. UTC time is used. 
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting the rescue mode</li>
+ * @method string getUuid() Obtain Globally unique ID of the instance.
+ * @method void setUuid(string $Uuid) Set Globally unique ID of the instance.
+ * @method string getLatestOperation() Obtain Latest operation on the instance, such as StopInstances and ResetInstance. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLatestOperation(string $LatestOperation) Set Latest operation on the instance, such as StopInstances and ResetInstance. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLatestOperationState() Obtain Status of the latest operation on the instance. Valid values: 
+SUCCESS: The operation succeeded. 
+OPERATING: The operation is in progress. 
+FAILED: The operation failed. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLatestOperationState(string $LatestOperationState) Set Status of the latest operation on the instance. Valid values: 
+SUCCESS: The operation succeeded. 
+OPERATING: The operation is in progress. 
+FAILED: The operation failed. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLatestOperationRequestId() Obtain Unique request ID of the latest operation on the instance. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLatestOperationRequestId(string $LatestOperationRequestId) Set Unique request ID of the latest operation on the instance. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLatestOperationStartedTime() Obtain Start time of the latest operation on the instance.
+ * @method void setLatestOperationStartedTime(string $LatestOperationStartedTime) Set Start time of the latest operation on the instance.
+ * @method string getIsolatedTime() Obtain Isolation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsolatedTime(string $IsolatedTime) Set Isolation time according to ISO 8601 standard. UTC time is used. 
+ * @method void setIsolatedTime(string $IsolatedTime) Set Isolation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCreatedTime() Obtain Creation time according to ISO 8601 standard. UTC time is used. 
+ * @method string getCreatedTime() Obtain Creation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCreatedTime(string $CreatedTime) Set Creation time according to ISO 8601 standard. UTC time is used. 
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getExpiredTime() Obtain Expiration time according to ISO 8601 standard. UTC time is used. 
+ * @method string getExpiredTime() Obtain Expiration time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setExpiredTime(string $ExpiredTime) Set Expiration time according to ISO 8601 standard. UTC time is used. 
+ * @method void setExpiredTime(string $ExpiredTime) Set Expiration time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getPlatformType() Obtain OS type, such as LINUX_UNIX and WINDOWS.
- * @method void setPlatformType(string $PlatformType) Set OS type, such as LINUX_UNIX and WINDOWS.
- * @method string getPlatform() Obtain OS type.
- * @method void setPlatform(string $Platform) Set OS type.
- * @method string getOsName() Obtain OS name.
- * @method void setOsName(string $OsName) Set OS name.
+ * @method string getPlatformType() Obtain Operating system platform type, such as LINUX_UNIX and WINDOWS.
+ * @method void setPlatformType(string $PlatformType) Set Operating system platform type, such as LINUX_UNIX and WINDOWS.
+ * @method string getPlatform() Obtain Operating system platform.
+ * @method void setPlatform(string $Platform) Set Operating system platform.
+ * @method string getOsName() Obtain Operating system name.
+ * @method void setOsName(string $OsName) Set Operating system name.
  * @method string getZone() Obtain AZ.
  * @method void setZone(string $Zone) Set AZ.
- * @method array getTags() Obtain The list of tags associated with the instance
- * @method void setTags(array $Tags) Set The list of tags associated with the instance
- * @method string getInstanceRestrictState() Obtain Obtain instance status
-<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
- * @method void setInstanceRestrictState(string $InstanceRestrictState) Set Obtain instance status
-<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
+ * @method array getTags() Obtain List of tags bound to the instance.
+ * @method void setTags(array $Tags) Set List of tags bound to the instance.
+ * @method string getInstanceRestrictState() Obtain Instance ban status. Valid values:
+<li>NORMAL: The instance is normal.</li><li>NETWORK_RESTRICT: The instance is banned from network access.</li>
+ * @method void setInstanceRestrictState(string $InstanceRestrictState) Set Instance ban status. Valid values:
+<li>NORMAL: The instance is normal.</li><li>NETWORK_RESTRICT: The instance is banned from network access.</li>
+ * @method string getInitInvocationId() Obtain Invocation ID of the TAT command to be automatically executed after the instance is created.
+ * @method void setInitInvocationId(string $InitInvocationId) Set Invocation ID of the TAT command to be automatically executed after the instance is created.
+ * @method InstanceViolationDetail getInstanceViolationDetail() Obtain Instance violation details.
+ * @method void setInstanceViolationDetail(InstanceViolationDetail $InstanceViolationDetail) Set Instance violation details.
  */
 class Instance extends AbstractModel
 {
@@ -119,7 +119,7 @@ class Instance extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Package ID.
+     * @var string Bundle ID.
      */
     public $BundleId;
 
@@ -129,12 +129,12 @@ class Instance extends AbstractModel
     public $BlueprintId;
 
     /**
-     * @var integer Number of instance CPU cores.
+     * @var integer Number of CPU cores for the instance, in cores.
      */
     public $CPU;
 
     /**
-     * @var integer Instance memory capacity in GB.
+     * @var integer Instance memory capacity, in GB.
      */
     public $Memory;
 
@@ -145,7 +145,7 @@ class Instance extends AbstractModel
 
     /**
      * @var string Instance billing mode. Valid values: 
-PREPAID: prepaid (i.e., monthly subscription).
+PREPAID: prepaid, that is, monthly or yearly subscription.
      */
     public $InstanceChargeType;
 
@@ -155,14 +155,14 @@ PREPAID: prepaid (i.e., monthly subscription).
     public $SystemDisk;
 
     /**
-     * @var array Private IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Private IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $PrivateAddresses;
 
     /**
-     * @var array Public IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Public IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $PublicAddresses;
 
@@ -172,81 +172,83 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $InternetAccessible;
 
     /**
-     * @var string Auto-Renewal flag. Valid values: 
-NOTIFY_AND_MANUAL_RENEW: notify upon expiration but do not renew automatically  
-NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
+     * @var string Auto-renewal flag. Valid values: 
+NOTIFY_AND_MANUAL_RENEW: Notify when the subscription is about to expire, but do not renew automatically.  
+NOTIFY_AND_AUTO_RENEW: Notify when the subscription is about to expire and renew automatically. DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not renew automatically or send notifications.
      */
     public $RenewFlag;
 
     /**
-     * @var LoginSettings Instance login settings.
+     * @var LoginSettings Instance login setting.
      */
     public $LoginSettings;
 
     /**
      * @var string Instance status. Valid values: 
-<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting the rescue mode</li>
      */
     public $InstanceState;
 
     /**
-     * @var string Globally unique ID of instance.
+     * @var string Globally unique ID of the instance.
      */
     public $Uuid;
 
     /**
-     * @var string Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Latest operation on the instance, such as StopInstances and ResetInstance. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LatestOperation;
 
     /**
-     * @var string Last instance operation status. Valid values: 
-SUCCESS: operation succeeded 
-OPERATING: the operation is being executed 
-FAILED: operation failed 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Status of the latest operation on the instance. Valid values: 
+SUCCESS: The operation succeeded. 
+OPERATING: The operation is in progress. 
+FAILED: The operation failed. 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LatestOperationState;
 
     /**
-     * @var string Unique request ID for the last operation of the instance. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Unique request ID of the latest operation on the instance. 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LatestOperationRequestId;
 
     /**
-     * @var string Isolation time according to ISO 8601 standard. UTC time is used. 
+     * @var string Start time of the latest operation on the instance.
+     */
+    public $LatestOperationStartedTime;
+
+    /**
+     * @var string Isolation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IsolatedTime;
 
     /**
-     * @var string Creation time according to ISO 8601 standard. UTC time is used. 
+     * @var string Creation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CreatedTime;
 
     /**
-     * @var string Expiration time according to ISO 8601 standard. UTC time is used. 
+     * @var string Expiration time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ExpiredTime;
 
     /**
-     * @var string OS type, such as LINUX_UNIX and WINDOWS.
+     * @var string Operating system platform type, such as LINUX_UNIX and WINDOWS.
      */
     public $PlatformType;
 
     /**
-     * @var string OS type.
+     * @var string Operating system platform.
      */
     public $Platform;
 
     /**
-     * @var string OS name.
+     * @var string Operating system name.
      */
     public $OsName;
 
@@ -256,62 +258,72 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Zone;
 
     /**
-     * @var array The list of tags associated with the instance
+     * @var array List of tags bound to the instance.
      */
     public $Tags;
 
     /**
-     * @var string Obtain instance status
-<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
+     * @var string Instance ban status. Valid values:
+<li>NORMAL: The instance is normal.</li><li>NETWORK_RESTRICT: The instance is banned from network access.</li>
      */
     public $InstanceRestrictState;
 
     /**
+     * @var string Invocation ID of the TAT command to be automatically executed after the instance is created.
+     */
+    public $InitInvocationId;
+
+    /**
+     * @var InstanceViolationDetail Instance violation details.
+     */
+    public $InstanceViolationDetail;
+
+    /**
      * @param string $InstanceId Instance ID.
-     * @param string $BundleId Package ID.
+     * @param string $BundleId Bundle ID.
      * @param string $BlueprintId Image ID.
-     * @param integer $CPU Number of instance CPU cores.
-     * @param integer $Memory Instance memory capacity in GB.
+     * @param integer $CPU Number of CPU cores for the instance, in cores.
+     * @param integer $Memory Instance memory capacity, in GB.
      * @param string $InstanceName Instance name.
      * @param string $InstanceChargeType Instance billing mode. Valid values: 
-PREPAID: prepaid (i.e., monthly subscription).
+PREPAID: prepaid, that is, monthly or yearly subscription.
      * @param SystemDisk $SystemDisk Instance system disk information.
-     * @param array $PrivateAddresses Private IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $PublicAddresses Public IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $PrivateAddresses Private IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param array $PublicAddresses Public IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param InternetAccessible $InternetAccessible Instance bandwidth information.
-     * @param string $RenewFlag Auto-Renewal flag. Valid values: 
-NOTIFY_AND_MANUAL_RENEW: notify upon expiration but do not renew automatically  
-NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
-     * @param LoginSettings $LoginSettings Instance login settings.
+     * @param string $RenewFlag Auto-renewal flag. Valid values: 
+NOTIFY_AND_MANUAL_RENEW: Notify when the subscription is about to expire, but do not renew automatically.  
+NOTIFY_AND_AUTO_RENEW: Notify when the subscription is about to expire and renew automatically. DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not renew automatically or send notifications.
+     * @param LoginSettings $LoginSettings Instance login setting.
      * @param string $InstanceState Instance status. Valid values: 
-<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
-     * @param string $Uuid Globally unique ID of instance.
-     * @param string $LatestOperation Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $LatestOperationState Last instance operation status. Valid values: 
-SUCCESS: operation succeeded 
-OPERATING: the operation is being executed 
-FAILED: operation failed 
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $LatestOperationRequestId Unique request ID for the last operation of the instance. 
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $IsolatedTime Isolation time according to ISO 8601 standard. UTC time is used. 
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting the rescue mode</li>
+     * @param string $Uuid Globally unique ID of the instance.
+     * @param string $LatestOperation Latest operation on the instance, such as StopInstances and ResetInstance. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LatestOperationState Status of the latest operation on the instance. Valid values: 
+SUCCESS: The operation succeeded. 
+OPERATING: The operation is in progress. 
+FAILED: The operation failed. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LatestOperationRequestId Unique request ID of the latest operation on the instance. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LatestOperationStartedTime Start time of the latest operation on the instance.
+     * @param string $IsolatedTime Isolation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CreatedTime Creation time according to ISO 8601 standard. UTC time is used. 
+     * @param string $CreatedTime Creation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ExpiredTime Expiration time according to ISO 8601 standard. UTC time is used. 
+     * @param string $ExpiredTime Expiration time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $PlatformType OS type, such as LINUX_UNIX and WINDOWS.
-     * @param string $Platform OS type.
-     * @param string $OsName OS name.
+     * @param string $PlatformType Operating system platform type, such as LINUX_UNIX and WINDOWS.
+     * @param string $Platform Operating system platform.
+     * @param string $OsName Operating system name.
      * @param string $Zone AZ.
-     * @param array $Tags The list of tags associated with the instance
-     * @param string $InstanceRestrictState Obtain instance status
-<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
+     * @param array $Tags List of tags bound to the instance.
+     * @param string $InstanceRestrictState Instance ban status. Valid values:
+<li>NORMAL: The instance is normal.</li><li>NETWORK_RESTRICT: The instance is banned from network access.</li>
+     * @param string $InitInvocationId Invocation ID of the TAT command to be automatically executed after the instance is created.
+     * @param InstanceViolationDetail $InstanceViolationDetail Instance violation details.
      */
     function __construct()
     {
@@ -401,6 +413,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
             $this->LatestOperationRequestId = $param["LatestOperationRequestId"];
         }
 
+        if (array_key_exists("LatestOperationStartedTime",$param) and $param["LatestOperationStartedTime"] !== null) {
+            $this->LatestOperationStartedTime = $param["LatestOperationStartedTime"];
+        }
+
         if (array_key_exists("IsolatedTime",$param) and $param["IsolatedTime"] !== null) {
             $this->IsolatedTime = $param["IsolatedTime"];
         }
@@ -440,6 +456,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("InstanceRestrictState",$param) and $param["InstanceRestrictState"] !== null) {
             $this->InstanceRestrictState = $param["InstanceRestrictState"];
+        }
+
+        if (array_key_exists("InitInvocationId",$param) and $param["InitInvocationId"] !== null) {
+            $this->InitInvocationId = $param["InitInvocationId"];
+        }
+
+        if (array_key_exists("InstanceViolationDetail",$param) and $param["InstanceViolationDetail"] !== null) {
+            $this->InstanceViolationDetail = new InstanceViolationDetail();
+            $this->InstanceViolationDetail->deserialize($param["InstanceViolationDetail"]);
         }
     }
 }

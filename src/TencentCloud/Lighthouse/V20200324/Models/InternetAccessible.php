@@ -18,44 +18,44 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * This describes the internet accessibility of the instance created by a launch configuration and declares the internet usage billing method of the instance and the maximum bandwidth
+ * Describes the public network accessibility of instances created with the launch configuration, and declares the public network billing mode and maximum bandwidth of the instance.
  *
- * @method string getInternetChargeType() Obtain Network billing mode. Valid values:
-<li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
-<li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
- * @method void setInternetChargeType(string $InternetChargeType) Set Network billing mode. Valid values:
-<li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
-<li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
- * @method integer getInternetMaxBandwidthOut() Obtain Public network outbound bandwidth cap in Mbps.
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set Public network outbound bandwidth cap in Mbps.
- * @method boolean getPublicIpAssigned() Obtain Whether to assign a public IP.
- * @method void setPublicIpAssigned(boolean $PublicIpAssigned) Set Whether to assign a public IP.
+ * @method string getInternetChargeType() Obtain Network billing type. Valid values:
+<li>Pay-as-you-go by traffic: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>Pay-as-you-go by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+ * @method void setInternetChargeType(string $InternetChargeType) Set Network billing type. Valid values:
+<li>Pay-as-you-go by traffic: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>Pay-as-you-go by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+ * @method integer getInternetMaxBandwidthOut() Obtain Maximum outbound public bandwidth, in the unit of Mbps.
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set Maximum outbound public bandwidth, in the unit of Mbps.
+ * @method boolean getPublicIpAssigned() Obtain Indicates whether a public IP is assigned.
+ * @method void setPublicIpAssigned(boolean $PublicIpAssigned) Set Indicates whether a public IP is assigned.
  */
 class InternetAccessible extends AbstractModel
 {
     /**
-     * @var string Network billing mode. Valid values:
-<li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
-<li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+     * @var string Network billing type. Valid values:
+<li>Pay-as-you-go by traffic: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>Pay-as-you-go by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
      */
     public $InternetChargeType;
 
     /**
-     * @var integer Public network outbound bandwidth cap in Mbps.
+     * @var integer Maximum outbound public bandwidth, in the unit of Mbps.
      */
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var boolean Whether to assign a public IP.
+     * @var boolean Indicates whether a public IP is assigned.
      */
     public $PublicIpAssigned;
 
     /**
-     * @param string $InternetChargeType Network billing mode. Valid values:
-<li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
-<li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
-     * @param integer $InternetMaxBandwidthOut Public network outbound bandwidth cap in Mbps.
-     * @param boolean $PublicIpAssigned Whether to assign a public IP.
+     * @param string $InternetChargeType Network billing type. Valid values:
+<li>Pay-as-you-go by traffic: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>Pay-as-you-go by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+     * @param integer $InternetMaxBandwidthOut Maximum outbound public bandwidth, in the unit of Mbps.
+     * @param boolean $PublicIpAssigned Indicates whether a public IP is assigned.
      */
     function __construct()
     {
