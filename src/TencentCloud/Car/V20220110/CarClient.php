@@ -29,6 +29,7 @@ use TencentCloud\Car\V20220110\Models as Models;
  * @method Models\CreateApplicationProjectResponse CreateApplicationProject(Models\CreateApplicationProjectRequest $req) This API is used to create a cloud application project.
  * @method Models\CreateApplicationSnapshotResponse CreateApplicationSnapshot(Models\CreateApplicationSnapshotRequest $req) This API is used to create a cloud application version snapshot.
  * @method Models\CreateApplicationVersionResponse CreateApplicationVersion(Models\CreateApplicationVersionRequest $req) This API is used to create a cloud application version.
+ * @method Models\CreateMCPTokenResponse CreateMCPToken(Models\CreateMCPTokenRequest $req) This API is used to create an MCP token (issue a token).
  * @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) This API is used to create a session. The timeout period of the API is 5 seconds.
  * @method Models\DeleteApplicationResponse DeleteApplication(Models\DeleteApplicationRequest $req) This API is used to delete a cloud application.
  * @method Models\DeleteApplicationProjectsResponse DeleteApplicationProjects(Models\DeleteApplicationProjectsRequest $req) This API is used to delete cloud application projects in batches.
@@ -44,12 +45,14 @@ use TencentCloud\Car\V20220110\Models as Models;
  * @method Models\DescribeConcurrentPackagesResponse DescribeConcurrentPackages(Models\DescribeConcurrentPackagesRequest $req) This API is used to obtain the cloud application concurrency pack list.
  * @method Models\DescribeConcurrentSummaryResponse DescribeConcurrentSummary(Models\DescribeConcurrentSummaryRequest $req) This API is used to query the concurrency overview.
  * @method Models\DescribeCosCredentialResponse DescribeCosCredential(Models\DescribeCosCredentialRequest $req) This API is used to query COS key information.
+ * @method Models\DescribeMCPTokensResponse DescribeMCPTokens(Models\DescribeMCPTokensRequest $req) This API is used to query the MCP Token list.
  * @method Models\DestroySessionResponse DestroySession(Models\DestroySessionRequest $req) This API is used to terminate a session. If cloud-based streaming has been enabled for this session, the cloud-based streaming will end upon session termination.
  * @method Models\ModifyApplicationBaseInfoResponse ModifyApplicationBaseInfo(Models\ModifyApplicationBaseInfoRequest $req) This API is used to modify basic information of a cloud application.
  * @method Models\ModifyApplicationProjectResponse ModifyApplicationProject(Models\ModifyApplicationProjectRequest $req) This API is used to modify a cloud application project.
  * @method Models\ModifyApplicationVersionResponse ModifyApplicationVersion(Models\ModifyApplicationVersionRequest $req) This API is used to modify the version information of a cloud application.
  * @method Models\ModifyConcurrentPackageResponse ModifyConcurrentPackage(Models\ModifyConcurrentPackageRequest $req) This API is used to modify a cloud application concurrency pack.
  * @method Models\ModifyMobileApplicationInfoResponse ModifyMobileApplicationInfo(Models\ModifyMobileApplicationInfoRequest $req) This API is used to modify the mobile application data.
+ * @method Models\RenewMCPTokenResponse RenewMCPToken(Models\RenewMCPTokenRequest $req) This API is used to renew an MCP Token.
  * @method Models\ResetConcurrentPackagesResponse ResetConcurrentPackages(Models\ResetConcurrentPackagesRequest $req) This API is used to reset a concurrency pack and disconnect all user connections.
  * @method Models\SetApplicationVersionOnlineResponse SetApplicationVersionOnline(Models\SetApplicationVersionOnlineRequest $req) This API is used to launch an application version.
  * @method Models\StartPublishStreamResponse StartPublishStream(Models\StartPublishStreamRequest $req) This API is used to start pushing your cloud application's video streams in real time to CSS. The codec for the streaming is automatically selected based on the client's (SDK) capabilities, with a default order of H.265, H.264, VP8, and VP9.
