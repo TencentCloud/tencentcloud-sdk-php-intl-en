@@ -18,32 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HTTP2 integration configuration parameters.
+ * HTTP/2 access configuration parameters.
  *
- * @method string getSwitch() Obtain Whether to enable http2 access. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method void setSwitch(string $Switch) Set Whether to enable http2 access. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+ * @method string getSwitch() Obtain HTTP/2 integration configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set HTTP/2 integration configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
  */
 class HTTP2Parameters extends AbstractModel
 {
     /**
-     * @var string Whether to enable http2 access. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @var string HTTP/2 integration configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable http2 access. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @param string $Switch HTTP/2 integration configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     function __construct()
     {

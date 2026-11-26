@@ -20,122 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Application data information.
  *
- * @method string getApplicationId() Obtain Application ID.
- * @method void setApplicationId(string $ApplicationId) Set Application ID.
- * @method string getApplicationName() Obtain Application name.
- * @method void setApplicationName(string $ApplicationName) Set Application name.
- * @method string getApplicationType() Obtain Application type (cloud 3D: Application3D; cloud XR: ApplicationXR; cloud Web: ApplicationWeb).
- * @method void setApplicationType(string $ApplicationType) Set Application type (cloud 3D: Application3D; cloud XR: ApplicationXR; cloud Web: ApplicationWeb).
- * @method string getApplicationExePath() Obtain Application program execution path.
- * @method void setApplicationExePath(string $ApplicationExePath) Set Application program execution path.
- * @method string getApplicationInterList() Obtain Application process list.
- * @method void setApplicationInterList(string $ApplicationInterList) Set Application process list.
- * @method string getApplicationParams() Obtain Application startup parameters.
- * @method void setApplicationParams(string $ApplicationParams) Set Application startup parameters.
- * @method string getApplicationRunStatus() Obtain Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).
- * @method void setApplicationRunStatus(string $ApplicationRunStatus) Set Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).
- * @method string getApplicationUpdateStatus() Obtain Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
- * @method void setApplicationUpdateStatus(string $ApplicationUpdateStatus) Set Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
- * @method string getApplicationCreateTime() Obtain Application creation time.
- * @method void setApplicationCreateTime(string $ApplicationCreateTime) Set Application creation time.
- * @method array getApplicationVersions() Obtain List of application versions.
- * @method void setApplicationVersions(array $ApplicationVersions) Set List of application versions.
- * @method ApplicationBaseInfo getApplicationBaseInfo() Obtain Application basic data.
- * @method void setApplicationBaseInfo(ApplicationBaseInfo $ApplicationBaseInfo) Set Application basic data.
- * @method integer getApplicationUpdateProgress() Obtain Application update progress.
- * @method void setApplicationUpdateProgress(integer $ApplicationUpdateProgress) Set Application update progress.
- * @method string getApplicationNature() Obtain Application nature (PUBLIC: public application; PRIVATE: user application).
- * @method void setApplicationNature(string $ApplicationNature) Set Application nature (PUBLIC: public application; PRIVATE: user application).
- * @method array getApplicationStores() Obtain Application repository list.
- * @method void setApplicationStores(array $ApplicationStores) Set Application repository list.
+ * @method string getApplicationId() Obtain <p>Application Id</p>
+ * @method void setApplicationId(string $ApplicationId) Set <p>Application Id</p>
+ * @method string getApplicationName() Obtain <p>Application name</p>
+ * @method void setApplicationName(string $ApplicationName) Set <p>Application name</p>
+ * @method string getApplicationType() Obtain <p>Application type (Cloud 3D: Application3D, Cloud XR: ApplicationXR, Cloud Web: ApplicationWeb)</p>
+ * @method void setApplicationType(string $ApplicationType) Set <p>Application type (Cloud 3D: Application3D, Cloud XR: ApplicationXR, Cloud Web: ApplicationWeb)</p>
+ * @method string getApplicationExePath() Obtain <p>Program execution path</p>
+ * @method void setApplicationExePath(string $ApplicationExePath) Set <p>Program execution path</p>
+ * @method string getApplicationInterList() Obtain <p>Application process list</p>
+ * @method void setApplicationInterList(string $ApplicationInterList) Set <p>Application process list</p>
+ * @method string getApplicationParams() Obtain <p>Application startup parameter</p>
+ * @method void setApplicationParams(string $ApplicationParams) Set <p>Application startup parameter</p>
+ * @method string getApplicationRunStatus() Obtain <p>Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).</p>
+ * @method void setApplicationRunStatus(string $ApplicationRunStatus) Set <p>Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).</p>
+ * @method string getApplicationUpdateStatus() Obtain <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
+ * @method void setApplicationUpdateStatus(string $ApplicationUpdateStatus) Set <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
+ * @method string getApplicationCreateTime() Obtain <p>Application creation time</p>
+ * @method void setApplicationCreateTime(string $ApplicationCreateTime) Set <p>Application creation time</p>
+ * @method array getApplicationVersions() Obtain <p>Application version list</p>
+ * @method void setApplicationVersions(array $ApplicationVersions) Set <p>Application version list</p>
+ * @method ApplicationBaseInfo getApplicationBaseInfo() Obtain <p>Application basic data</p>
+ * @method void setApplicationBaseInfo(ApplicationBaseInfo $ApplicationBaseInfo) Set <p>Application basic data</p>
+ * @method integer getApplicationUpdateProgress() Obtain <p>Application update progress</p>
+ * @method void setApplicationUpdateProgress(integer $ApplicationUpdateProgress) Set <p>Application update progress</p>
+ * @method string getApplicationNature() Obtain <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
+ * @method void setApplicationNature(string $ApplicationNature) Set <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
+ * @method array getApplicationStores() Obtain <p>Application repository list</p>
+ * @method void setApplicationStores(array $ApplicationStores) Set <p>Application repository list</p>
+ * @method array getApplicationTags() Obtain <p>Application tag</p>
+ * @method void setApplicationTags(array $ApplicationTags) Set <p>Application tag</p>
  */
 class UserApplicationInfo extends AbstractModel
 {
     /**
-     * @var string Application ID.
+     * @var string <p>Application Id</p>
      */
     public $ApplicationId;
 
     /**
-     * @var string Application name.
+     * @var string <p>Application name</p>
      */
     public $ApplicationName;
 
     /**
-     * @var string Application type (cloud 3D: Application3D; cloud XR: ApplicationXR; cloud Web: ApplicationWeb).
+     * @var string <p>Application type (Cloud 3D: Application3D, Cloud XR: ApplicationXR, Cloud Web: ApplicationWeb)</p>
      */
     public $ApplicationType;
 
     /**
-     * @var string Application program execution path.
+     * @var string <p>Program execution path</p>
      */
     public $ApplicationExePath;
 
     /**
-     * @var string Application process list.
+     * @var string <p>Application process list</p>
      */
     public $ApplicationInterList;
 
     /**
-     * @var string Application startup parameters.
+     * @var string <p>Application startup parameter</p>
      */
     public $ApplicationParams;
 
     /**
-     * @var string Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).
+     * @var string <p>Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).</p>
      */
     public $ApplicationRunStatus;
 
     /**
-     * @var string Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
+     * @var string <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
      */
     public $ApplicationUpdateStatus;
 
     /**
-     * @var string Application creation time.
+     * @var string <p>Application creation time</p>
      */
     public $ApplicationCreateTime;
 
     /**
-     * @var array List of application versions.
+     * @var array <p>Application version list</p>
      */
     public $ApplicationVersions;
 
     /**
-     * @var ApplicationBaseInfo Application basic data.
+     * @var ApplicationBaseInfo <p>Application basic data</p>
      */
     public $ApplicationBaseInfo;
 
     /**
-     * @var integer Application update progress.
+     * @var integer <p>Application update progress</p>
      */
     public $ApplicationUpdateProgress;
 
     /**
-     * @var string Application nature (PUBLIC: public application; PRIVATE: user application).
+     * @var string <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
      */
     public $ApplicationNature;
 
     /**
-     * @var array Application repository list.
+     * @var array <p>Application repository list</p>
      */
     public $ApplicationStores;
 
     /**
-     * @param string $ApplicationId Application ID.
-     * @param string $ApplicationName Application name.
-     * @param string $ApplicationType Application type (cloud 3D: Application3D; cloud XR: ApplicationXR; cloud Web: ApplicationWeb).
-     * @param string $ApplicationExePath Application program execution path.
-     * @param string $ApplicationInterList Application process list.
-     * @param string $ApplicationParams Application startup parameters.
-     * @param string $ApplicationRunStatus Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).
-     * @param string $ApplicationUpdateStatus Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
-     * @param string $ApplicationCreateTime Application creation time.
-     * @param array $ApplicationVersions List of application versions.
-     * @param ApplicationBaseInfo $ApplicationBaseInfo Application basic data.
-     * @param integer $ApplicationUpdateProgress Application update progress.
-     * @param string $ApplicationNature Application nature (PUBLIC: public application; PRIVATE: user application).
-     * @param array $ApplicationStores Application repository list.
+     * @var array <p>Application tag</p>
+     */
+    public $ApplicationTags;
+
+    /**
+     * @param string $ApplicationId <p>Application Id</p>
+     * @param string $ApplicationName <p>Application name</p>
+     * @param string $ApplicationType <p>Application type (Cloud 3D: Application3D, Cloud XR: ApplicationXR, Cloud Web: ApplicationWeb)</p>
+     * @param string $ApplicationExePath <p>Program execution path</p>
+     * @param string $ApplicationInterList <p>Application process list</p>
+     * @param string $ApplicationParams <p>Application startup parameter</p>
+     * @param string $ApplicationRunStatus <p>Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).</p>
+     * @param string $ApplicationUpdateStatus <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
+     * @param string $ApplicationCreateTime <p>Application creation time</p>
+     * @param array $ApplicationVersions <p>Application version list</p>
+     * @param ApplicationBaseInfo $ApplicationBaseInfo <p>Application basic data</p>
+     * @param integer $ApplicationUpdateProgress <p>Application update progress</p>
+     * @param string $ApplicationNature <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
+     * @param array $ApplicationStores <p>Application repository list</p>
+     * @param array $ApplicationTags <p>Application tag</p>
      */
     function __construct()
     {
@@ -214,6 +222,15 @@ class UserApplicationInfo extends AbstractModel
                 $obj = new UserApplicationStore();
                 $obj->deserialize($value);
                 array_push($this->ApplicationStores, $obj);
+            }
+        }
+
+        if (array_key_exists("ApplicationTags",$param) and $param["ApplicationTags"] !== null) {
+            $this->ApplicationTags = [];
+            foreach ($param["ApplicationTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->ApplicationTags, $obj);
             }
         }
     }

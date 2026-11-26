@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Origin server failure failover config.
+ * Origin server failover configuration parameters.
  *
- * @method array getSiteFailoverStatusCodes() Obtain Origin server fault migration condition status code. The origin server response status code must hit the field return to execute origin server migration as SiteFailoverParams. The parameter value is one of 4xx, 5xx.
- * @method void setSiteFailoverStatusCodes(array $SiteFailoverStatusCodes) Set Origin server fault migration condition status code. The origin server response status code must hit the field return to execute origin server migration as SiteFailoverParams. The parameter value is one of 4xx, 5xx.
- * @method array getSiteFailoverParams() Obtain Origin server failure failover configuration parameter list. Minimum length is 1, maximum length is 2.
- * @method void setSiteFailoverParams(array $SiteFailoverParams) Set Origin server failure failover configuration parameter list. Minimum length is 1, maximum length is 2.
+ * @method array getSiteFailoverStatusCodes() Obtain Status code for origin fault migration condition. Origin migration is executed as specified in SiteFailoverParams only when the response status code returned by the origin hits the value of this field. The parameter value is one of 4xx and 5xx.
+ * @method void setSiteFailoverStatusCodes(array $SiteFailoverStatusCodes) Set Status code for origin fault migration condition. Origin migration is executed as specified in SiteFailoverParams only when the response status code returned by the origin hits the value of this field. The parameter value is one of 4xx and 5xx.
+ * @method array getSiteFailoverParams() Obtain List of origin server failover configuration parameters. Minimum length: 1. Maximum length: 2.
+ * @method void setSiteFailoverParams(array $SiteFailoverParams) Set List of origin server failover configuration parameters. Minimum length: 1. Maximum length: 2.
  */
 class SiteFailoverParameters extends AbstractModel
 {
     /**
-     * @var array Origin server fault migration condition status code. The origin server response status code must hit the field return to execute origin server migration as SiteFailoverParams. The parameter value is one of 4xx, 5xx.
+     * @var array Status code for origin fault migration condition. Origin migration is executed as specified in SiteFailoverParams only when the response status code returned by the origin hits the value of this field. The parameter value is one of 4xx and 5xx.
      */
     public $SiteFailoverStatusCodes;
 
     /**
-     * @var array Origin server failure failover configuration parameter list. Minimum length is 1, maximum length is 2.
+     * @var array List of origin server failover configuration parameters. Minimum length: 1. Maximum length: 2.
      */
     public $SiteFailoverParams;
 
     /**
-     * @param array $SiteFailoverStatusCodes Origin server fault migration condition status code. The origin server response status code must hit the field return to execute origin server migration as SiteFailoverParams. The parameter value is one of 4xx, 5xx.
-     * @param array $SiteFailoverParams Origin server failure failover configuration parameter list. Minimum length is 1, maximum length is 2.
+     * @param array $SiteFailoverStatusCodes Status code for origin fault migration condition. Origin migration is executed as specified in SiteFailoverParams only when the response status code returned by the origin hits the value of this field. The parameter value is one of 4xx and 5xx.
+     * @param array $SiteFailoverParams List of origin server failover configuration parameters. Minimum length: 1. Maximum length: 2.
      */
     function __construct()
     {

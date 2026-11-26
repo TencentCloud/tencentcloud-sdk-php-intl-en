@@ -20,46 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeL7AccRules request structure.
  *
- * @method string getZoneId() Obtain Zone id.
- * @method void setZoneId(string $ZoneId) Set Zone id.
- * @method array getFilters() Obtain Filter conditions. the upper limit for filters.values is 20. if this parameter is not filled in, the rules under the site are returned in order by default. detailed filtering conditions are as follows:.
-<Li>Rule-Id: filter by rule id.</li>.
- * @method void setFilters(array $Filters) Set Filter conditions. the upper limit for filters.values is 20. if this parameter is not filled in, the rules under the site are returned in order by default. detailed filtering conditions are as follows:.
-<Li>Rule-Id: filter by rule id.</li>.
- * @method integer getLimit() Obtain Number limit of paginated query. default value: 20. maximum value: 1000.
- * @method void setLimit(integer $Limit) Set Number limit of paginated query. default value: 20. maximum value: 1000.
- * @method integer getOffset() Obtain Offset of paginated query. default value: 0.
- * @method void setOffset(integer $Offset) Set Offset of paginated query. default value: 0.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method array getFilters() Obtain Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not specified, rules under the site are returned in sequence by default. Detailed filter criteria:
+<li>rule-id: Filter by rule ID.</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not specified, rules under the site are returned in sequence by default. Detailed filter criteria:
+<li>rule-id: Filter by rule ID.</li>
+ * @method integer getLimit() Obtain Number limit of paginated query. Default value: 20. Maximum value: 1000.
+ * @method void setLimit(integer $Limit) Set Number limit of paginated query. Default value: 20. Maximum value: 1000.
+ * @method integer getOffset() Obtain Offset of paginated query. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset of paginated query. Default value: 0.
  */
 class DescribeL7AccRulesRequest extends AbstractModel
 {
     /**
-     * @var string Zone id.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var array Filter conditions. the upper limit for filters.values is 20. if this parameter is not filled in, the rules under the site are returned in order by default. detailed filtering conditions are as follows:.
-<Li>Rule-Id: filter by rule id.</li>.
+     * @var array Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not specified, rules under the site are returned in sequence by default. Detailed filter criteria:
+<li>rule-id: Filter by rule ID.</li>
      */
     public $Filters;
 
     /**
-     * @var integer Number limit of paginated query. default value: 20. maximum value: 1000.
+     * @var integer Number limit of paginated query. Default value: 20. Maximum value: 1000.
      */
     public $Limit;
 
     /**
-     * @var integer Offset of paginated query. default value: 0.
+     * @var integer Offset of paginated query. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @param string $ZoneId Zone id.
-     * @param array $Filters Filter conditions. the upper limit for filters.values is 20. if this parameter is not filled in, the rules under the site are returned in order by default. detailed filtering conditions are as follows:.
-<Li>Rule-Id: filter by rule id.</li>.
-     * @param integer $Limit Number limit of paginated query. default value: 20. maximum value: 1000.
-     * @param integer $Offset Offset of paginated query. default value: 0.
+     * @param string $ZoneId Zone ID.
+     * @param array $Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not specified, rules under the site are returned in sequence by default. Detailed filter criteria:
+<li>rule-id: Filter by rule ID.</li>
+     * @param integer $Limit Number limit of paginated query. Default value: 20. Maximum value: 1000.
+     * @param integer $Offset Offset of paginated query. Default value: 0.
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intermediate IPs
+ * IP allowlist for origin protection
  *
- * @method array getIPv4() Obtain List of IPv4 addresses
- * @method void setIPv4(array $IPv4) Set List of IPv4 addresses
- * @method array getIPv6() Obtain List of IPv6 addresses
- * @method void setIPv6(array $IPv6) Set List of IPv6 addresses
+ * @method array getIPv4() Obtain IPv4 list.
+ * @method void setIPv4(array $IPv4) Set IPv4 list.
+ * @method array getIPv6() Obtain IPv6 list.
+ * @method void setIPv6(array $IPv6) Set IPv6 list.
  */
 class IPWhitelist extends AbstractModel
 {
     /**
-     * @var array List of IPv4 addresses
+     * @var array IPv4 list.
      */
     public $IPv4;
 
     /**
-     * @var array List of IPv6 addresses
+     * @var array IPv6 list.
      */
     public $IPv6;
 
     /**
-     * @param array $IPv4 List of IPv4 addresses
-     * @param array $IPv6 List of IPv6 addresses
+     * @param array $IPv4 IPv4 list.
+     * @param array $IPv6 IPv6 list.
      */
     function __construct()
     {

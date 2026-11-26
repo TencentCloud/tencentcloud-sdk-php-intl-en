@@ -18,20 +18,20 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Specifies the authentication parameter for origin-pull.
+ * Origin-pull authentication parameter.
  *
- * @method array getRequestProperties() Obtain Specifies the authentication request attribute for origin pull.
- * @method void setRequestProperties(array $RequestProperties) Set Specifies the authentication request attribute for origin pull.
+ * @method array getRequestProperties() Obtain Origin-pull authentication request attributes.
+ * @method void setRequestProperties(array $RequestProperties) Set Origin-pull authentication request attributes.
  */
 class OriginAuthenticationParameters extends AbstractModel
 {
     /**
-     * @var array Specifies the authentication request attribute for origin pull.
+     * @var array Origin-pull authentication request attributes.
      */
     public $RequestProperties;
 
     /**
-     * @param array $RequestProperties Specifies the authentication request attribute for origin pull.
+     * @param array $RequestProperties Origin-pull authentication request attributes.
      */
     function __construct()
     {

@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * WebSocket configuration
+ * WebSocket configuration.
  *
- * @method string getSwitch() Obtain Whether to enable websocket connection timeout. values:.
-<Li>On: use timeout as the websocket timeout;</li>.
-<Li>Off: the platform still supports websocket connections, using the system default timeout of 15 seconds.</li>.
- * @method void setSwitch(string $Switch) Set Whether to enable websocket connection timeout. values:.
-<Li>On: use timeout as the websocket timeout;</li>.
-<Li>Off: the platform still supports websocket connections, using the system default timeout of 15 seconds.</li>.
- * @method integer getTimeout() Obtain Timeout, unit: seconds. maximum timeout is 120 seconds.<br>note: this field is required when switch is on; otherwise, this field will not take effect.
- * @method void setTimeout(integer $Timeout) Set Timeout, unit: seconds. maximum timeout is 120 seconds.<br>note: this field is required when switch is on; otherwise, this field will not take effect.
+ * @method string getSwitch() Obtain WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout period;</li>
+<li>off: The platform still supports WebSocket connections, and the system default timeout period of 15 seconds is used.</li>
+ * @method void setSwitch(string $Switch) Set WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout period;</li>
+<li>off: The platform still supports WebSocket connections, and the system default timeout period of 15 seconds is used.</li>
+ * @method integer getTimeout() Obtain Timeout period, in seconds. Maximum timeout time: 120 seconds.<br>Note: This field is required when Switch is on. Otherwise, it is ineffective.
+ * @method void setTimeout(integer $Timeout) Set Timeout period, in seconds. Maximum timeout time: 120 seconds.<br>Note: This field is required when Switch is on. Otherwise, it is ineffective.
  */
 class WebSocketParameters extends AbstractModel
 {
     /**
-     * @var string Whether to enable websocket connection timeout. values:.
-<Li>On: use timeout as the websocket timeout;</li>.
-<Li>Off: the platform still supports websocket connections, using the system default timeout of 15 seconds.</li>.
+     * @var string WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout period;</li>
+<li>off: The platform still supports WebSocket connections, and the system default timeout period of 15 seconds is used.</li>
      */
     public $Switch;
 
     /**
-     * @var integer Timeout, unit: seconds. maximum timeout is 120 seconds.<br>note: this field is required when switch is on; otherwise, this field will not take effect.
+     * @var integer Timeout period, in seconds. Maximum timeout time: 120 seconds.<br>Note: This field is required when Switch is on. Otherwise, it is ineffective.
      */
     public $Timeout;
 
     /**
-     * @param string $Switch Whether to enable websocket connection timeout. values:.
-<Li>On: use timeout as the websocket timeout;</li>.
-<Li>Off: the platform still supports websocket connections, using the system default timeout of 15 seconds.</li>.
-     * @param integer $Timeout Timeout, unit: seconds. maximum timeout is 120 seconds.<br>note: this field is required when switch is on; otherwise, this field will not take effect.
+     * @param string $Switch WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout period;</li>
+<li>off: The platform still supports WebSocket connections, and the system default timeout period of 15 seconds is used.</li>
+     * @param integer $Timeout Timeout period, in seconds. Maximum timeout time: 120 seconds.<br>Note: This field is required when Switch is on. Otherwise, it is ineffective.
      */
     function __construct()
     {

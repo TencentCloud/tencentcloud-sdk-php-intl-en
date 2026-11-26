@@ -18,34 +18,34 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Edge reasoning scheduled scaling policy configuration.
+ * Scheduled scaling policy configuration for edge reasoning.
  *
- * @method array getScheduledActions() Obtain Scheduled scaling action list. Fill in at least 1, supports up to 10.
- * @method void setScheduledActions(array $ScheduledActions) Set Scheduled scaling action list. Fill in at least 1, supports up to 10.
- * @method InferenceScheduledScalingEffectiveRange getEffectiveRange() Obtain Validity period range, for description of whether the scheduled scaling policy is permanently valid or valid only within a specified date range.
- * @method void setEffectiveRange(InferenceScheduledScalingEffectiveRange $EffectiveRange) Set Validity period range, for description of whether the scheduled scaling policy is permanently valid or valid only within a specified date range.
- * @method string getTimeZone() Obtain Time zone, using [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, Asia/Kolkata. UTC is used by default if not specified.
+ * @method array getScheduledActions() Obtain List of scheduled scaling actions. Fill in at least 1 and up to 10.
+ * @method void setScheduledActions(array $ScheduledActions) Set List of scheduled scaling actions. Fill in at least 1 and up to 10.
+ * @method InferenceScheduledScalingEffectiveRange getEffectiveRange() Obtain Validity period range, for description of whether the scheduled scaling policy is long-term valid or valid only within a specified date range.
+ * @method void setEffectiveRange(InferenceScheduledScalingEffectiveRange $EffectiveRange) Set Validity period range, for description of whether the scheduled scaling policy is long-term valid or valid only within a specified date range.
+ * @method string getTimeZone() Obtain Time zone. Use the [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, and Asia/Kolkata. UTC is used by default if this parameter is not specified.
 
 
 
 
 
- * @method void setTimeZone(string $TimeZone) Set Time zone, using [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, Asia/Kolkata. UTC is used by default if not specified.
+ * @method void setTimeZone(string $TimeZone) Set Time zone. Use the [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, and Asia/Kolkata. UTC is used by default if this parameter is not specified.
  */
 class InferenceScheduledScalingPolicy extends AbstractModel
 {
     /**
-     * @var array Scheduled scaling action list. Fill in at least 1, supports up to 10.
+     * @var array List of scheduled scaling actions. Fill in at least 1 and up to 10.
      */
     public $ScheduledActions;
 
     /**
-     * @var InferenceScheduledScalingEffectiveRange Validity period range, for description of whether the scheduled scaling policy is permanently valid or valid only within a specified date range.
+     * @var InferenceScheduledScalingEffectiveRange Validity period range, for description of whether the scheduled scaling policy is long-term valid or valid only within a specified date range.
      */
     public $EffectiveRange;
 
     /**
-     * @var string Time zone, using [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, Asia/Kolkata. UTC is used by default if not specified.
+     * @var string Time zone. Use the [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, and Asia/Kolkata. UTC is used by default if this parameter is not specified.
 
 
 
@@ -55,9 +55,9 @@ class InferenceScheduledScalingPolicy extends AbstractModel
     public $TimeZone;
 
     /**
-     * @param array $ScheduledActions Scheduled scaling action list. Fill in at least 1, supports up to 10.
-     * @param InferenceScheduledScalingEffectiveRange $EffectiveRange Validity period range, for description of whether the scheduled scaling policy is permanently valid or valid only within a specified date range.
-     * @param string $TimeZone Time zone, using [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, Asia/Kolkata. UTC is used by default if not specified.
+     * @param array $ScheduledActions List of scheduled scaling actions. Fill in at least 1 and up to 10.
+     * @param InferenceScheduledScalingEffectiveRange $EffectiveRange Validity period range, for description of whether the scheduled scaling policy is long-term valid or valid only within a specified date range.
+     * @param string $TimeZone Time zone. Use the [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, and Asia/Kolkata. UTC is used by default if this parameter is not specified.
      */
     function __construct()
     {

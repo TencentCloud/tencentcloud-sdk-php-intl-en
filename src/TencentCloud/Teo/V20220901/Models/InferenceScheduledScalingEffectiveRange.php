@@ -18,24 +18,24 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Edge reasoning scheduled scaling validity period range configuration.
+ * Configuration of the validity period range for scheduled scaling of edge reasoning.
  *
- * @method string getEffectiveType() Obtain <p>Validity period type. Valid values: <li>LongTerm: Permanently valid;</li><li>Custom: Custom start and end date.</li></p>
- * @method void setEffectiveType(string $EffectiveType) Set <p>Validity period type. Valid values: <li>LongTerm: Permanently valid;</li><li>Custom: Custom start and end date.</li></p>
- * @method string getStartDate() Obtain <p>Start date of the valid period. Required when EffectiveType is Custom. Do not pass this field when EffectiveType is LongTerm.</p>
- * @method void setStartDate(string $StartDate) Set <p>Start date of the valid period. Required when EffectiveType is Custom. Do not pass this field when EffectiveType is LongTerm.</p>
+ * @method string getEffectiveType() Obtain <p>Validity period type. Valid values: <li>LongTerm: permanently valid;</li><li>Custom: custom start and end date.</li></p>
+ * @method void setEffectiveType(string $EffectiveType) Set <p>Validity period type. Valid values: <li>LongTerm: permanently valid;</li><li>Custom: custom start and end date.</li></p>
+ * @method string getStartDate() Obtain <p>Start date of the valid period. Required when EffectiveType is Custom; do not pass this field when EffectiveType is LongTerm.</p>
+ * @method void setStartDate(string $StartDate) Set <p>Start date of the valid period. Required when EffectiveType is Custom; do not pass this field when EffectiveType is LongTerm.</p>
  * @method string getEndDate() Obtain <p>Termination date of the valid period. Required when EffectiveType is Custom, and cannot be earlier than StartDate. Do not pass this field when EffectiveType is LongTerm.</p>
  * @method void setEndDate(string $EndDate) Set <p>Termination date of the valid period. Required when EffectiveType is Custom, and cannot be earlier than StartDate. Do not pass this field when EffectiveType is LongTerm.</p>
  */
 class InferenceScheduledScalingEffectiveRange extends AbstractModel
 {
     /**
-     * @var string <p>Validity period type. Valid values: <li>LongTerm: Permanently valid;</li><li>Custom: Custom start and end date.</li></p>
+     * @var string <p>Validity period type. Valid values: <li>LongTerm: permanently valid;</li><li>Custom: custom start and end date.</li></p>
      */
     public $EffectiveType;
 
     /**
-     * @var string <p>Start date of the valid period. Required when EffectiveType is Custom. Do not pass this field when EffectiveType is LongTerm.</p>
+     * @var string <p>Start date of the valid period. Required when EffectiveType is Custom; do not pass this field when EffectiveType is LongTerm.</p>
      */
     public $StartDate;
 
@@ -45,8 +45,8 @@ class InferenceScheduledScalingEffectiveRange extends AbstractModel
     public $EndDate;
 
     /**
-     * @param string $EffectiveType <p>Validity period type. Valid values: <li>LongTerm: Permanently valid;</li><li>Custom: Custom start and end date.</li></p>
-     * @param string $StartDate <p>Start date of the valid period. Required when EffectiveType is Custom. Do not pass this field when EffectiveType is LongTerm.</p>
+     * @param string $EffectiveType <p>Validity period type. Valid values: <li>LongTerm: permanently valid;</li><li>Custom: custom start and end date.</li></p>
+     * @param string $StartDate <p>Start date of the valid period. Required when EffectiveType is Custom; do not pass this field when EffectiveType is LongTerm.</p>
      * @param string $EndDate <p>Termination date of the valid period. Required when EffectiveType is Custom, and cannot be earlier than StartDate. Do not pass this field when EffectiveType is LongTerm.</p>
      */
     function __construct()

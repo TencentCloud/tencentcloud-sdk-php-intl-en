@@ -20,118 +20,118 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDDoSAttackEvent request structure.
  *
- * @method string getStartTime() Obtain The start time.
- * @method void setStartTime(string $StartTime) Set The start time.
- * @method string getEndTime() Obtain End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
- * @method void setEndTime(string $EndTime) Set End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
- * @method array getPolicyIds() Obtain List of DDoS policy IDs. All policies are selected if this field is not specified.
- * @method void setPolicyIds(array $PolicyIds) Set List of DDoS policy IDs. All policies are selected if this field is not specified.
- * @method array getZoneIds() Obtain Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
- * @method void setZoneIds(array $ZoneIds) Set Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
- * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 1000.
- * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20. Maximum value: 1000.
- * @method integer getOffset() Obtain The page offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set The page offset. Default value: 0.
- * @method boolean getShowDetail() Obtain Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
- * @method void setShowDetail(boolean $ShowDetail) Set Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
- * @method string getArea() Obtain Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
- * @method void setArea(string $Area) Set Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
- * @method string getOrderBy() Obtain The sorting field. Values: 
-<li>`MaxBandWidth`: Peak bandwidth</li>
-<li>`AttackStartTime` Start time of the attack</li>If this field is not specified, the default value `AttackStartTime` is used.
- * @method void setOrderBy(string $OrderBy) Set The sorting field. Values: 
-<li>`MaxBandWidth`: Peak bandwidth</li>
-<li>`AttackStartTime` Start time of the attack</li>If this field is not specified, the default value `AttackStartTime` is used.
- * @method string getOrderType() Obtain The sorting method. Values: 
-<Li>`asc`: Ascending</li>
-<li>`desc`: Descending</li>If this field is not specified, the default value `desc` is used.
- * @method void setOrderType(string $OrderType) Set The sorting method. Values: 
-<Li>`asc`: Ascending</li>
-<li>`desc`: Descending</li>If this field is not specified, the default value `desc` is used.
+ * @method string getStartTime() Obtain Start time. Time range: 30 days.
+ * @method void setStartTime(string $StartTime) Set Start time. Time range: 30 days.
+ * @method string getEndTime() Obtain End time. The query time range (`EndTime` - `StartTime`) must be up to 31 days.
+ * @method void setEndTime(string $EndTime) Set End time. The query time range (`EndTime` - `StartTime`) must be up to 31 days.
+ * @method array getPolicyIds() Obtain Collection of ddos policy groups. If left blank, all policies are selected by default.
+ * @method void setPolicyIds(array $PolicyIds) Set Collection of ddos policy groups. If left blank, all policies are selected by default.
+ * @method array getZoneIds() Obtain Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). You can import up to 100 site IDs. To query all site data under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
+ * @method void setZoneIds(array $ZoneIds) Set Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). You can import up to 100 site IDs. To query all site data under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
+ * @method integer getLimit() Obtain Number limit of paginated query. Default value: 20. Maximum number of query entries: 1000.
+ * @method void setLimit(integer $Limit) Set Number limit of paginated query. Default value: 20. Maximum number of query entries: 1000.
+ * @method integer getOffset() Obtain Page offset. Default value: 0
+ * @method void setOffset(integer $Offset) Set Page offset. Default value: 0
+ * @method boolean getShowDetail() Obtain Parameter to show attack details. If set to `false`, only the number of attacks is returned. If set to `true`, attack details are returned.
+ * @method void setShowDetail(boolean $ShowDetail) Set Parameter to show attack details. If set to `false`, only the number of attacks is returned. If set to `true`, attack details are returned.
+ * @method string getArea() Obtain Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data;</li>If this parameter is not input, the default value `global` is used.
+ * @method void setArea(string $Area) Set Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data;</li>If this parameter is not input, the default value `global` is used.
+ * @method string getOrderBy() Obtain Sorting field. Valid values:
+<li>MaxBandWidth: bandwidth peak;</li>
+<li>AttackStartTime: attack start time.</li>If not specified, the default value is AttackStartTime.
+ * @method void setOrderBy(string $OrderBy) Set Sorting field. Valid values:
+<li>MaxBandWidth: bandwidth peak;</li>
+<li>AttackStartTime: attack start time.</li>If not specified, the default value is AttackStartTime.
+ * @method string getOrderType() Obtain Sorting method. Valid values:
+<li>asc: in ascending order;</li>
+<li>desc: in descending order.</li> If not specified, the default value is desc.
+ * @method void setOrderType(string $OrderType) Set Sorting method. Valid values:
+<li>asc: in ascending order;</li>
+<li>desc: in descending order.</li> If not specified, the default value is desc.
  */
 class DescribeDDoSAttackEventRequest extends AbstractModel
 {
     /**
-     * @var string The start time.
+     * @var string Start time. Time range: 30 days.
      */
     public $StartTime;
 
     /**
-     * @var string End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * @var string End time. The query time range (`EndTime` - `StartTime`) must be up to 31 days.
      */
     public $EndTime;
 
     /**
-     * @var array List of DDoS policy IDs. All policies are selected if this field is not specified.
+     * @var array Collection of ddos policy groups. If left blank, all policies are selected by default.
      */
     public $PolicyIds;
 
     /**
-     * @var array Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+     * @var array Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). You can import up to 100 site IDs. To query all site data under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
      */
     public $ZoneIds;
 
     /**
-     * @var integer Limit on paginated queries. Default value: 20. Maximum value: 1000.
+     * @var integer Number limit of paginated query. Default value: 20. Maximum number of query entries: 1000.
      */
     public $Limit;
 
     /**
-     * @var integer The page offset. Default value: 0.
+     * @var integer Page offset. Default value: 0
      */
     public $Offset;
 
     /**
-     * @var boolean Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
+     * @var boolean Parameter to show attack details. If set to `false`, only the number of attacks is returned. If set to `true`, attack details are returned.
      */
     public $ShowDetail;
 
     /**
-     * @var string Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+     * @var string Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data;</li>If this parameter is not input, the default value `global` is used.
      */
     public $Area;
 
     /**
-     * @var string The sorting field. Values: 
-<li>`MaxBandWidth`: Peak bandwidth</li>
-<li>`AttackStartTime` Start time of the attack</li>If this field is not specified, the default value `AttackStartTime` is used.
+     * @var string Sorting field. Valid values:
+<li>MaxBandWidth: bandwidth peak;</li>
+<li>AttackStartTime: attack start time.</li>If not specified, the default value is AttackStartTime.
      */
     public $OrderBy;
 
     /**
-     * @var string The sorting method. Values: 
-<Li>`asc`: Ascending</li>
-<li>`desc`: Descending</li>If this field is not specified, the default value `desc` is used.
+     * @var string Sorting method. Valid values:
+<li>asc: in ascending order;</li>
+<li>desc: in descending order.</li> If not specified, the default value is desc.
      */
     public $OrderType;
 
     /**
-     * @param string $StartTime The start time.
-     * @param string $EndTime End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
-     * @param array $PolicyIds List of DDoS policy IDs. All policies are selected if this field is not specified.
-     * @param array $ZoneIds Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
-     * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
-     * @param integer $Offset The page offset. Default value: 0.
-     * @param boolean $ShowDetail Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
-     * @param string $Area Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
-     * @param string $OrderBy The sorting field. Values: 
-<li>`MaxBandWidth`: Peak bandwidth</li>
-<li>`AttackStartTime` Start time of the attack</li>If this field is not specified, the default value `AttackStartTime` is used.
-     * @param string $OrderType The sorting method. Values: 
-<Li>`asc`: Ascending</li>
-<li>`desc`: Descending</li>If this field is not specified, the default value `desc` is used.
+     * @param string $StartTime Start time. Time range: 30 days.
+     * @param string $EndTime End time. The query time range (`EndTime` - `StartTime`) must be up to 31 days.
+     * @param array $PolicyIds Collection of ddos policy groups. If left blank, all policies are selected by default.
+     * @param array $ZoneIds Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). You can import up to 100 site IDs. To query all site data under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
+     * @param integer $Limit Number limit of paginated query. Default value: 20. Maximum number of query entries: 1000.
+     * @param integer $Offset Page offset. Default value: 0
+     * @param boolean $ShowDetail Parameter to show attack details. If set to `false`, only the number of attacks is returned. If set to `true`, attack details are returned.
+     * @param string $Area Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data;</li>If this parameter is not input, the default value `global` is used.
+     * @param string $OrderBy Sorting field. Valid values:
+<li>MaxBandWidth: bandwidth peak;</li>
+<li>AttackStartTime: attack start time.</li>If not specified, the default value is AttackStartTime.
+     * @param string $OrderType Sorting method. Valid values:
+<li>asc: in ascending order;</li>
+<li>desc: in descending order.</li> If not specified, the default value is desc.
      */
     function __construct()
     {

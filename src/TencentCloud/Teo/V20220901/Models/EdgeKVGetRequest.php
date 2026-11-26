@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getNamespace() Obtain Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
- * @method void setNamespace(string $Namespace) Set Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
- * @method array getKeys() Obtain Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
- * @method void setKeys(array $Keys) Set Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
+ * @method string getNamespace() Obtain Namespace name. You can obtain the list of namespaces under a site through the DescribeEdgeKVNamespaces API.
+ * @method void setNamespace(string $Namespace) Set Namespace name. You can obtain the list of namespaces under a site through the DescribeEdgeKVNamespaces API.
+ * @method array getKeys() Obtain Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long. Valid UTF-8 characters are supported. To query one key, input an array containing one element.
+ * @method void setKeys(array $Keys) Set Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long. Valid UTF-8 characters are supported. To query one key, input an array containing one element.
  */
 class EdgeKVGetRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class EdgeKVGetRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
+     * @var string Namespace name. You can obtain the list of namespaces under a site through the DescribeEdgeKVNamespaces API.
      */
     public $Namespace;
 
     /**
-     * @var array Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
+     * @var array Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long. Valid UTF-8 characters are supported. To query one key, input an array containing one element.
      */
     public $Keys;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $Namespace Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
-     * @param array $Keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
+     * @param string $Namespace Namespace name. You can obtain the list of namespaces under a site through the DescribeEdgeKVNamespaces API.
+     * @param array $Keys Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long. Valid UTF-8 characters are supported. To query one key, input an array containing one element.
      */
     function __construct()
     {

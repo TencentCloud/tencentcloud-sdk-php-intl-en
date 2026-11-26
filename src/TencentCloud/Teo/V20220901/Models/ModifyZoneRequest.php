@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyZone request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
  * @method string getType() Obtain Site access method. Valid values:
-<li>full: NS access.</li>
+<li>full: NS access;</li>
 <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
 <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
  * @method void setType(string $Type) Set Site access method. Valid values:
-<li>full: NS access.</li>
+<li>full: NS access;</li>
 <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
 <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
- * @method VanityNameServers getVanityNameServers() Obtain The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
- * @method void setVanityNameServers(VanityNameServers $VanityNameServers) Set The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
- * @method string getAliasZoneName() Obtain Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
- * @method void setAliasZoneName(string $AliasZoneName) Set Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
- * @method string getArea() Obtain The region where the site requests access. Values:
-<li> `global`: Global coverage</li>
-<li> `mainland`: Chinese mainland</li>
-<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
- * @method void setArea(string $Area) Set The region where the site requests access. Values:
-<li> `global`: Global coverage</li>
-<li> `mainland`: Chinese mainland</li>
-<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
- * @method string getZoneName() Obtain Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
- * @method void setZoneName(string $ZoneName) Set Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+ * @method VanityNameServers getVanityNameServers() Obtain Custom site info used as an alternative to the default name server assigned by the system. Maintain the original configuration if not specified. This parameter cannot be passed when the site uses the no domain access method.
+ * @method void setVanityNameServers(VanityNameServers $VanityNameServers) Set Custom site info used as an alternative to the default name server assigned by the system. Maintain the original configuration if not specified. This parameter cannot be passed when the site uses the no domain access method.
+ * @method string getAliasZoneName() Obtain Identical site identifier. Enter numbers, letters, ".", "-", and "_" only, up to 200 characters.
+ * @method void setAliasZoneName(string $AliasZoneName) Set Identical site identifier. Enter numbers, letters, ".", "-", and "_" only, up to 200 characters.
+ * @method string getArea() Obtain Site access region. Valid values:
+<li> global: global;</li>
+<li>mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>This parameter is not allowed when the site uses no domain access method.
+ * @method void setArea(string $Area) Set Site access region. Valid values:
+<li> global: global;</li>
+<li>mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>This parameter is not allowed when the site uses no domain access method.
+ * @method string getZoneName() Obtain Site name. This field is valid only when the site is switched from the no domain access method to the CNAME access method.
+ * @method void setZoneName(string $ZoneName) Set Site name. This field is valid only when the site is switched from the no domain access method to the CNAME access method.
  */
 class ModifyZoneRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
      * @var string Site access method. Valid values:
-<li>full: NS access.</li>
+<li>full: NS access;</li>
 <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
 <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
      */
     public $Type;
 
     /**
-     * @var VanityNameServers The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
+     * @var VanityNameServers Custom site info used as an alternative to the default name server assigned by the system. Maintain the original configuration if not specified. This parameter cannot be passed when the site uses the no domain access method.
      */
     public $VanityNameServers;
 
     /**
-     * @var string Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
+     * @var string Identical site identifier. Enter numbers, letters, ".", "-", and "_" only, up to 200 characters.
      */
     public $AliasZoneName;
 
     /**
-     * @var string The region where the site requests access. Values:
-<li> `global`: Global coverage</li>
-<li> `mainland`: Chinese mainland</li>
-<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+     * @var string Site access region. Valid values:
+<li> global: global;</li>
+<li>mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>This parameter is not allowed when the site uses no domain access method.
      */
     public $Area;
 
     /**
-     * @var string Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+     * @var string Site name. This field is valid only when the site is switched from the no domain access method to the CNAME access method.
      */
     public $ZoneName;
 
     /**
-     * @param string $ZoneId The site ID.
+     * @param string $ZoneId Zone ID.
      * @param string $Type Site access method. Valid values:
-<li>full: NS access.</li>
+<li>full: NS access;</li>
 <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
 <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
-     * @param VanityNameServers $VanityNameServers The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
-     * @param string $AliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
-     * @param string $Area The region where the site requests access. Values:
-<li> `global`: Global coverage</li>
-<li> `mainland`: Chinese mainland</li>
-<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
-     * @param string $ZoneName Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+     * @param VanityNameServers $VanityNameServers Custom site info used as an alternative to the default name server assigned by the system. Maintain the original configuration if not specified. This parameter cannot be passed when the site uses the no domain access method.
+     * @param string $AliasZoneName Identical site identifier. Enter numbers, letters, ".", "-", and "_" only, up to 200 characters.
+     * @param string $Area Site access region. Valid values:
+<li> global: global;</li>
+<li>mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>This parameter is not allowed when the site uses no domain access method.
+     * @param string $ZoneName Site name. This field is valid only when the site is switched from the no domain access method to the CNAME access method.
      */
     function __construct()
     {

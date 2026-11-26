@@ -20,110 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDDoSAttackData request structure.
  *
- * @method string getStartTime() Obtain The start time.
- * @method void setStartTime(string $StartTime) Set The start time.
- * @method string getEndTime() Obtain End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
- * @method void setEndTime(string $EndTime) Set End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
- * @method array getMetricNames() Obtain Statistical metrics.
-<li>`ddos_attackMaxBandwidth`: Peak attack bandwidth;</li>
-<li>`ddos_attackMaxPackageRate`: Peak attack packet rate;</li>
-<li>`ddos_attackBandwidth`: Time-series data of attack bandwidth;</li>
-<li>`ddos_attackPackageRate`: Time-series data of attack packet rate.</li>
- * @method void setMetricNames(array $MetricNames) Set Statistical metrics.
-<li>`ddos_attackMaxBandwidth`: Peak attack bandwidth;</li>
-<li>`ddos_attackMaxPackageRate`: Peak attack packet rate;</li>
-<li>`ddos_attackBandwidth`: Time-series data of attack bandwidth;</li>
-<li>`ddos_attackPackageRate`: Time-series data of attack packet rate.</li>
- * @method array getZoneIds() Obtain Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
- * @method void setZoneIds(array $ZoneIds) Set Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
- * @method array getPolicyIds() Obtain IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
- * @method void setPolicyIds(array $PolicyIds) Set IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
- * @method string getInterval() Obtain Query period granularity. Valid values:
-<li>min: 1 minute;</li>
-<li>5min: 5 minutes;</li>
-<li>hour: 1 hour;</li>
-<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
- * @method void setInterval(string $Interval) Set Query period granularity. Valid values:
-<li>min: 1 minute;</li>
-<li>5min: 5 minutes;</li>
-<li>hour: 1 hour;</li>
-<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
- * @method string getArea() Obtain Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global </li>If this field is not specified, the default value `global` is used.
- * @method void setArea(string $Area) Set Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global </li>If this field is not specified, the default value `global` is used.
+ * @method string getStartTime() Obtain <p>Start time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
+ * @method void setStartTime(string $StartTime) Set <p>Start time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
+ * @method string getEndTime() Obtain <p>End time. The time is in Coordinated Universal Time (UTC), following the ISO 8601 standard date and time format. The query time range (<code>EndTime</code> - <code>StartTime</code>) must be less than or equal to 31 days.</p>
+ * @method void setEndTime(string $EndTime) Set <p>End time. The time is in Coordinated Universal Time (UTC), following the ISO 8601 standard date and time format. The query time range (<code>EndTime</code> - <code>StartTime</code>) must be less than or equal to 31 days.</p>
+ * @method array getMetricNames() Obtain <p>List of statistical metrics. Fill in at least 1, and duplication is not allowed.</p><p>Enumeration values:</p><ul><li>ddos_attackMaxBandwidth: Peak attack bandwidth, in bps;</li><li>ddos_attackMaxPackageRate: Peak attack packet rate, in pps;</li><li>ddos_attackBandwidth: Attack bandwidth curve, in bps;</li><li>ddos_attackPackageRate: Attack packet rate curve, in pps.</li></ul>
+ * @method void setMetricNames(array $MetricNames) Set <p>List of statistical metrics. Fill in at least 1, and duplication is not allowed.</p><p>Enumeration values:</p><ul><li>ddos_attackMaxBandwidth: Peak attack bandwidth, in bps;</li><li>ddos_attackMaxPackageRate: Peak attack packet rate, in pps;</li><li>ddos_attackBandwidth: Attack bandwidth curve, in bps;</li><li>ddos_attackPackageRate: Attack packet rate curve, in pps.</li></ul>
+ * @method array getZoneIds() Obtain <p>Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: <a href="https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1">[Tencent Cloud EdgeOne] Cloud API Change Notification</a>. You can import up to 100 site IDs. To query all site data under the Tencent Cloud root account, use <code>*</code> instead. To query account-level data, you must have permission for all site resources of this interface.</p>
+ * @method void setZoneIds(array $ZoneIds) Set <p>Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: <a href="https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1">[Tencent Cloud EdgeOne] Cloud API Change Notification</a>. You can import up to 100 site IDs. To query all site data under the Tencent Cloud root account, use <code>*</code> instead. To query account-level data, you must have permission for all site resources of this interface.</p>
+ * @method array getPolicyIds() Obtain <p>List of DDoS policy group IDs. If not specified, all policy IDs are selected by default.</p>
+ * @method void setPolicyIds(array $PolicyIds) Set <p>List of DDoS policy group IDs. If not specified, all policy IDs are selected by default.</p>
+ * @method string getInterval() Obtain <p>Query time granularity. If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.</p><p>Enumeration values:</p><ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>
+ * @method void setInterval(string $Interval) Set <p>Query time granularity. If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.</p><p>Enumeration values:</p><ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>
+ * @method string getArea() Obtain <p>Data ownership region.</p><p>Enumeration values:</p><ul><li>overseas: global data (excluding the Chinese mainland);</li><li>mainland: data in the Chinese mainland;</li><li>global: global data.</li></ul><p>Default value: global</p>
+ * @method void setArea(string $Area) Set <p>Data ownership region.</p><p>Enumeration values:</p><ul><li>overseas: global data (excluding the Chinese mainland);</li><li>mainland: data in the Chinese mainland;</li><li>global: global data.</li></ul><p>Default value: global</p>
+ * @method array getFilters() Obtain <p>Filter conditions. The maximum number of QueryCondition.Value collections is 20. The detailed filter conditions for QueryCondition.Key values are as follows:</p><li>ddos-attack-dip: filter by DDoS attack destination IP. QueryCondition.Operator only supports equals.</li>
+ * @method void setFilters(array $Filters) Set <p>Filter conditions. The maximum number of QueryCondition.Value collections is 20. The detailed filter conditions for QueryCondition.Key values are as follows:</p><li>ddos-attack-dip: filter by DDoS attack destination IP. QueryCondition.Operator only supports equals.</li>
  */
 class DescribeDDoSAttackDataRequest extends AbstractModel
 {
     /**
-     * @var string The start time.
+     * @var string <p>Start time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
      */
     public $StartTime;
 
     /**
-     * @var string End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * @var string <p>End time. The time is in Coordinated Universal Time (UTC), following the ISO 8601 standard date and time format. The query time range (<code>EndTime</code> - <code>StartTime</code>) must be less than or equal to 31 days.</p>
      */
     public $EndTime;
 
     /**
-     * @var array Statistical metrics.
-<li>`ddos_attackMaxBandwidth`: Peak attack bandwidth;</li>
-<li>`ddos_attackMaxPackageRate`: Peak attack packet rate;</li>
-<li>`ddos_attackBandwidth`: Time-series data of attack bandwidth;</li>
-<li>`ddos_attackPackageRate`: Time-series data of attack packet rate.</li>
+     * @var array <p>List of statistical metrics. Fill in at least 1, and duplication is not allowed.</p><p>Enumeration values:</p><ul><li>ddos_attackMaxBandwidth: Peak attack bandwidth, in bps;</li><li>ddos_attackMaxPackageRate: Peak attack packet rate, in pps;</li><li>ddos_attackBandwidth: Attack bandwidth curve, in bps;</li><li>ddos_attackPackageRate: Attack packet rate curve, in pps.</li></ul>
      */
     public $MetricNames;
 
     /**
-     * @var array Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+     * @var array <p>Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: <a href="https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1">[Tencent Cloud EdgeOne] Cloud API Change Notification</a>. You can import up to 100 site IDs. To query all site data under the Tencent Cloud root account, use <code>*</code> instead. To query account-level data, you must have permission for all site resources of this interface.</p>
      */
     public $ZoneIds;
 
     /**
-     * @var array IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
+     * @var array <p>List of DDoS policy group IDs. If not specified, all policy IDs are selected by default.</p>
      */
     public $PolicyIds;
 
     /**
-     * @var string Query period granularity. Valid values:
-<li>min: 1 minute;</li>
-<li>5min: 5 minutes;</li>
-<li>hour: 1 hour;</li>
-<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
+     * @var string <p>Query time granularity. If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.</p><p>Enumeration values:</p><ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>
      */
     public $Interval;
 
     /**
-     * @var string Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global </li>If this field is not specified, the default value `global` is used.
+     * @var string <p>Data ownership region.</p><p>Enumeration values:</p><ul><li>overseas: global data (excluding the Chinese mainland);</li><li>mainland: data in the Chinese mainland;</li><li>global: global data.</li></ul><p>Default value: global</p>
      */
     public $Area;
 
     /**
-     * @param string $StartTime The start time.
-     * @param string $EndTime End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
-     * @param array $MetricNames Statistical metrics.
-<li>`ddos_attackMaxBandwidth`: Peak attack bandwidth;</li>
-<li>`ddos_attackMaxPackageRate`: Peak attack packet rate;</li>
-<li>`ddos_attackBandwidth`: Time-series data of attack bandwidth;</li>
-<li>`ddos_attackPackageRate`: Time-series data of attack packet rate.</li>
-     * @param array $ZoneIds Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
-     * @param array $PolicyIds IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
-     * @param string $Interval Query period granularity. Valid values:
-<li>min: 1 minute;</li>
-<li>5min: 5 minutes;</li>
-<li>hour: 1 hour;</li>
-<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
-     * @param string $Area Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global </li>If this field is not specified, the default value `global` is used.
+     * @var array <p>Filter conditions. The maximum number of QueryCondition.Value collections is 20. The detailed filter conditions for QueryCondition.Key values are as follows:</p><li>ddos-attack-dip: filter by DDoS attack destination IP. QueryCondition.Operator only supports equals.</li>
+     */
+    public $Filters;
+
+    /**
+     * @param string $StartTime <p>Start time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
+     * @param string $EndTime <p>End time. The time is in Coordinated Universal Time (UTC), following the ISO 8601 standard date and time format. The query time range (<code>EndTime</code> - <code>StartTime</code>) must be less than or equal to 31 days.</p>
+     * @param array $MetricNames <p>List of statistical metrics. Fill in at least 1, and duplication is not allowed.</p><p>Enumeration values:</p><ul><li>ddos_attackMaxBandwidth: Peak attack bandwidth, in bps;</li><li>ddos_attackMaxPackageRate: Peak attack packet rate, in pps;</li><li>ddos_attackBandwidth: Attack bandwidth curve, in bps;</li><li>ddos_attackPackageRate: Attack packet rate curve, in pps.</li></ul>
+     * @param array $ZoneIds <p>Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: <a href="https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1">[Tencent Cloud EdgeOne] Cloud API Change Notification</a>. You can import up to 100 site IDs. To query all site data under the Tencent Cloud root account, use <code>*</code> instead. To query account-level data, you must have permission for all site resources of this interface.</p>
+     * @param array $PolicyIds <p>List of DDoS policy group IDs. If not specified, all policy IDs are selected by default.</p>
+     * @param string $Interval <p>Query time granularity. If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.</p><p>Enumeration values:</p><ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>
+     * @param string $Area <p>Data ownership region.</p><p>Enumeration values:</p><ul><li>overseas: global data (excluding the Chinese mainland);</li><li>mainland: data in the Chinese mainland;</li><li>global: global data.</li></ul><p>Default value: global</p>
+     * @param array $Filters <p>Filter conditions. The maximum number of QueryCondition.Value collections is 20. The detailed filter conditions for QueryCondition.Key values are as follows:</p><li>ddos-attack-dip: filter by DDoS attack destination IP. QueryCondition.Operator only supports equals.</li>
      */
     function __construct()
     {
@@ -164,6 +128,15 @@ class DescribeDDoSAttackDataRequest extends AbstractModel
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new QueryCondition();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

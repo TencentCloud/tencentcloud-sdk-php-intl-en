@@ -18,20 +18,20 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Modify HTTP node response header configuration parameters.
+ * HTTP node response header configuration parameter modification.
  *
- * @method array getHeaderActions() Obtain HTTP origin header rule list.
- * @method void setHeaderActions(array $HeaderActions) Set HTTP origin header rule list.
+ * @method array getHeaderActions() Obtain List of HTTP origin-pull header rules.
+ * @method void setHeaderActions(array $HeaderActions) Set List of HTTP origin-pull header rules.
  */
 class ModifyResponseHeaderParameters extends AbstractModel
 {
     /**
-     * @var array HTTP origin header rule list.
+     * @var array List of HTTP origin-pull header rules.
      */
     public $HeaderActions;
 
     /**
-     * @param array $HeaderActions HTTP origin header rule list.
+     * @param array $HeaderActions List of HTTP origin-pull header rules.
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getGatewayId() Obtain Specifies the gateway ID.
- * @method void setGatewayId(string $GatewayId) Set Specifies the gateway ID.
+ * @method string getGatewayId() Obtain Gateway ID.
+ * @method void setGatewayId(string $GatewayId) Set Gateway ID.
  * @method string getLineId() Obtain Line ID.
  * @method void setLineId(string $LineId) Set Line ID.
  */
@@ -35,7 +35,7 @@ class DeleteMultiPathGatewayLineRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Specifies the gateway ID.
+     * @var string Gateway ID.
      */
     public $GatewayId;
 
@@ -46,7 +46,7 @@ class DeleteMultiPathGatewayLineRequest extends AbstractModel
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $GatewayId Specifies the gateway ID.
+     * @param string $GatewayId Gateway ID.
      * @param string $LineId Line ID.
      */
     function __construct()

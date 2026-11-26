@@ -18,40 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cache prefresh configuration parameters
+ * Cache pre-refresh configuration parameters.
  *
- * @method string getSwitch() Obtain Whether to enable cache prefresh. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method void setSwitch(string $Switch) Set Whether to enable cache prefresh. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method integer getCacheTimePercent() Obtain Prefresh interval set as a percentage of the node cache time. value range: 1-99.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
- * @method void setCacheTimePercent(integer $CacheTimePercent) Set Prefresh interval set as a percentage of the node cache time. value range: 1-99.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+ * @method string getSwitch() Obtain Cache pre-refresh switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Cache pre-refresh switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method integer getCacheTimePercent() Obtain The pre-refresh time is set to a percentage value of the node cache time. Value range: 1–99.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field. If specified, it does not take effect.
+ * @method void setCacheTimePercent(integer $CacheTimePercent) Set The pre-refresh time is set to a percentage value of the node cache time. Value range: 1–99.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field. If specified, it does not take effect.
  */
 class CachePrefreshParameters extends AbstractModel
 {
     /**
-     * @var string Whether to enable cache prefresh. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @var string Cache pre-refresh switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var integer Prefresh interval set as a percentage of the node cache time. value range: 1-99.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+     * @var integer The pre-refresh time is set to a percentage value of the node cache time. Value range: 1–99.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field. If specified, it does not take effect.
      */
     public $CacheTimePercent;
 
     /**
-     * @param string $Switch Whether to enable cache prefresh. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-     * @param integer $CacheTimePercent Prefresh interval set as a percentage of the node cache time. value range: 1-99.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+     * @param string $Switch Cache pre-refresh switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param integer $CacheTimePercent The pre-refresh time is set to a percentage value of the node cache time. Value range: 1–99.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field. If specified, it does not take effect.
      */
     function __construct()
     {

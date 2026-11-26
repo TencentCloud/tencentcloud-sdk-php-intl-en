@@ -20,162 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Application version information.
  *
- * @method string getApplicationVersionId() Obtain Application version ID.
- * @method void setApplicationVersionId(string $ApplicationVersionId) Set Application version ID.
- * @method integer getApplicationVersionSize() Obtain Application version size.
- * @method void setApplicationVersionSize(integer $ApplicationVersionSize) Set Application version size.
- * @method string getApplicationVersionStatus() Obtain Application version status (Uploading: uploading; Creating: in creation; CreateFailed: creation failed; Deleting: deleting; Inuse: current version; Normal: to be released; Usable: available).
- * @method void setApplicationVersionStatus(string $ApplicationVersionStatus) Set Application version status (Uploading: uploading; Creating: in creation; CreateFailed: creation failed; Deleting: deleting; Inuse: current version; Normal: to be released; Usable: available).
- * @method string getApplicationVersionName() Obtain Application version name.
- * @method void setApplicationVersionName(string $ApplicationVersionName) Set Application version name.
- * @method string getCreateTime() Obtain Application version creation time.
- * @method void setCreateTime(string $CreateTime) Set Application version creation time.
- * @method array getApplicationVersionRegions() Obtain Region for application version distribution (
-Standard zone:
-ap-chinese-mainland: Chinese mainland
-na-north-america: North America
-eu-frankfurt: Frankfurt
-ap-mumbai: Mumbai
-ap-tokyo: Tokyo
-ap-seoul: Seoul
-ap-singapore: Singapore
-ap-bangkok: Bangkok
-ap-hongkong: Hong Kong (China)
-Integration zone:
-me-middle-east-fusion: Middle East
-na-north-america-fusion: North America
-sa-south-america-fusion: South America
-ap-tokyo-fusion: Tokyo
-ap-seoul-fusion: Seoul
-eu-frankfurt-fusion: Frankfurt
-ap-singapore-fusion: Singapore
-ap-hongkong-fusion: Hong Kong (China)
-).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setApplicationVersionRegions(array $ApplicationVersionRegions) Set Region for application version distribution (
-Standard zone:
-ap-chinese-mainland: Chinese mainland
-na-north-america: North America
-eu-frankfurt: Frankfurt
-ap-mumbai: Mumbai
-ap-tokyo: Tokyo
-ap-seoul: Seoul
-ap-singapore: Singapore
-ap-bangkok: Bangkok
-ap-hongkong: Hong Kong (China)
-Integration zone:
-me-middle-east-fusion: Middle East
-na-north-america-fusion: North America
-sa-south-america-fusion: South America
-ap-tokyo-fusion: Tokyo
-ap-seoul-fusion: Seoul
-eu-frankfurt-fusion: Frankfurt
-ap-singapore-fusion: Singapore
-ap-hongkong-fusion: Hong Kong (China)
-).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getApplicationVersionUpdateMode() Obtain Application version update method.
-FULL: full update.
-INCREMENT: incremental update.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setApplicationVersionUpdateMode(string $ApplicationVersionUpdateMode) Set Application version update method.
-FULL: full update.
-INCREMENT: incremental update.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getApplicationVersionId() Obtain <p>Application version Id</p>
+ * @method void setApplicationVersionId(string $ApplicationVersionId) Set <p>Application version Id</p>
+ * @method integer getApplicationVersionSize() Obtain <p>Application version size</p>
+ * @method void setApplicationVersionSize(integer $ApplicationVersionSize) Set <p>Application version size</p>
+ * @method string getApplicationVersionStatus() Obtain <p>Application version status (Uploading: Creating, Creating: Creating, CreateFailed: Failed to create, Deleting: Deleting, Inuse: Current version, Normal: To be released, Usable: Available)</p>
+ * @method void setApplicationVersionStatus(string $ApplicationVersionStatus) Set <p>Application version status (Uploading: Creating, Creating: Creating, CreateFailed: Failed to create, Deleting: Deleting, Inuse: Current version, Normal: To be released, Usable: Available)</p>
+ * @method string getApplicationVersionName() Obtain <p>Application version name</p>
+ * @method void setApplicationVersionName(string $ApplicationVersionName) Set <p>Application version name</p>
+ * @method string getCreateTime() Obtain <p>Application version creation time</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Application version creation time</p>
+ * @method array getApplicationVersionRegions() Obtain <p>Application version distribution regions (<br>Standard regions:<br>ap-chinese-mainland: Chinese mainland,<br>na-north-america: North America,<br>eu-frankfurt: Frankfurt,<br>ap-mumbai: Mumbai,<br>ap-tokyo: Tokyo,<br>ap-seoul: Seoul,<br>ap-singapore: Singapore,<br>ap-bangkok: Bangkok,<br>ap-hongkong: Hong Kong (China),<br>Fusion regions:<br>me-middle-east-fusion: Middle East<br>na-north-america-fusion: North America<br>sa-south-america-fusion: South America<br>ap-tokyo-fusion: Tokyo<br>ap-seoul-fusion: Seoul<br>eu-frankfurt-fusion: Frankfurt<br>ap-singapore-fusion: Singapore<br>ap-hongkong-fusion: Hong Kong (China)<br>)</p>
+ * @method void setApplicationVersionRegions(array $ApplicationVersionRegions) Set <p>Application version distribution regions (<br>Standard regions:<br>ap-chinese-mainland: Chinese mainland,<br>na-north-america: North America,<br>eu-frankfurt: Frankfurt,<br>ap-mumbai: Mumbai,<br>ap-tokyo: Tokyo,<br>ap-seoul: Seoul,<br>ap-singapore: Singapore,<br>ap-bangkok: Bangkok,<br>ap-hongkong: Hong Kong (China),<br>Fusion regions:<br>me-middle-east-fusion: Middle East<br>na-north-america-fusion: North America<br>sa-south-america-fusion: South America<br>ap-tokyo-fusion: Tokyo<br>ap-seoul-fusion: Seoul<br>eu-frankfurt-fusion: Frankfurt<br>ap-singapore-fusion: Singapore<br>ap-hongkong-fusion: Hong Kong (China)<br>)</p>
+ * @method string getApplicationVersionUpdateMode() Obtain <p>Application version update mode: <br>FULL: Full update, <br>INCREMENT: Incremental update</p>
+ * @method void setApplicationVersionUpdateMode(string $ApplicationVersionUpdateMode) Set <p>Application version update mode: <br>FULL: Full update, <br>INCREMENT: Incremental update</p>
  */
 class UserApplicationVersion extends AbstractModel
 {
     /**
-     * @var string Application version ID.
+     * @var string <p>Application version Id</p>
      */
     public $ApplicationVersionId;
 
     /**
-     * @var integer Application version size.
+     * @var integer <p>Application version size</p>
      */
     public $ApplicationVersionSize;
 
     /**
-     * @var string Application version status (Uploading: uploading; Creating: in creation; CreateFailed: creation failed; Deleting: deleting; Inuse: current version; Normal: to be released; Usable: available).
+     * @var string <p>Application version status (Uploading: Creating, Creating: Creating, CreateFailed: Failed to create, Deleting: Deleting, Inuse: Current version, Normal: To be released, Usable: Available)</p>
      */
     public $ApplicationVersionStatus;
 
     /**
-     * @var string Application version name.
+     * @var string <p>Application version name</p>
      */
     public $ApplicationVersionName;
 
     /**
-     * @var string Application version creation time.
+     * @var string <p>Application version creation time</p>
      */
     public $CreateTime;
 
     /**
-     * @var array Region for application version distribution (
-Standard zone:
-ap-chinese-mainland: Chinese mainland
-na-north-america: North America
-eu-frankfurt: Frankfurt
-ap-mumbai: Mumbai
-ap-tokyo: Tokyo
-ap-seoul: Seoul
-ap-singapore: Singapore
-ap-bangkok: Bangkok
-ap-hongkong: Hong Kong (China)
-Integration zone:
-me-middle-east-fusion: Middle East
-na-north-america-fusion: North America
-sa-south-america-fusion: South America
-ap-tokyo-fusion: Tokyo
-ap-seoul-fusion: Seoul
-eu-frankfurt-fusion: Frankfurt
-ap-singapore-fusion: Singapore
-ap-hongkong-fusion: Hong Kong (China)
-).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Application version distribution regions (<br>Standard regions:<br>ap-chinese-mainland: Chinese mainland,<br>na-north-america: North America,<br>eu-frankfurt: Frankfurt,<br>ap-mumbai: Mumbai,<br>ap-tokyo: Tokyo,<br>ap-seoul: Seoul,<br>ap-singapore: Singapore,<br>ap-bangkok: Bangkok,<br>ap-hongkong: Hong Kong (China),<br>Fusion regions:<br>me-middle-east-fusion: Middle East<br>na-north-america-fusion: North America<br>sa-south-america-fusion: South America<br>ap-tokyo-fusion: Tokyo<br>ap-seoul-fusion: Seoul<br>eu-frankfurt-fusion: Frankfurt<br>ap-singapore-fusion: Singapore<br>ap-hongkong-fusion: Hong Kong (China)<br>)</p>
      */
     public $ApplicationVersionRegions;
 
     /**
-     * @var string Application version update method.
-FULL: full update.
-INCREMENT: incremental update.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Application version update mode: <br>FULL: Full update, <br>INCREMENT: Incremental update</p>
      */
     public $ApplicationVersionUpdateMode;
 
     /**
-     * @param string $ApplicationVersionId Application version ID.
-     * @param integer $ApplicationVersionSize Application version size.
-     * @param string $ApplicationVersionStatus Application version status (Uploading: uploading; Creating: in creation; CreateFailed: creation failed; Deleting: deleting; Inuse: current version; Normal: to be released; Usable: available).
-     * @param string $ApplicationVersionName Application version name.
-     * @param string $CreateTime Application version creation time.
-     * @param array $ApplicationVersionRegions Region for application version distribution (
-Standard zone:
-ap-chinese-mainland: Chinese mainland
-na-north-america: North America
-eu-frankfurt: Frankfurt
-ap-mumbai: Mumbai
-ap-tokyo: Tokyo
-ap-seoul: Seoul
-ap-singapore: Singapore
-ap-bangkok: Bangkok
-ap-hongkong: Hong Kong (China)
-Integration zone:
-me-middle-east-fusion: Middle East
-na-north-america-fusion: North America
-sa-south-america-fusion: South America
-ap-tokyo-fusion: Tokyo
-ap-seoul-fusion: Seoul
-eu-frankfurt-fusion: Frankfurt
-ap-singapore-fusion: Singapore
-ap-hongkong-fusion: Hong Kong (China)
-).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ApplicationVersionUpdateMode Application version update method.
-FULL: full update.
-INCREMENT: incremental update.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ApplicationVersionId <p>Application version Id</p>
+     * @param integer $ApplicationVersionSize <p>Application version size</p>
+     * @param string $ApplicationVersionStatus <p>Application version status (Uploading: Creating, Creating: Creating, CreateFailed: Failed to create, Deleting: Deleting, Inuse: Current version, Normal: To be released, Usable: Available)</p>
+     * @param string $ApplicationVersionName <p>Application version name</p>
+     * @param string $CreateTime <p>Application version creation time</p>
+     * @param array $ApplicationVersionRegions <p>Application version distribution regions (<br>Standard regions:<br>ap-chinese-mainland: Chinese mainland,<br>na-north-america: North America,<br>eu-frankfurt: Frankfurt,<br>ap-mumbai: Mumbai,<br>ap-tokyo: Tokyo,<br>ap-seoul: Seoul,<br>ap-singapore: Singapore,<br>ap-bangkok: Bangkok,<br>ap-hongkong: Hong Kong (China),<br>Fusion regions:<br>me-middle-east-fusion: Middle East<br>na-north-america-fusion: North America<br>sa-south-america-fusion: South America<br>ap-tokyo-fusion: Tokyo<br>ap-seoul-fusion: Seoul<br>eu-frankfurt-fusion: Frankfurt<br>ap-singapore-fusion: Singapore<br>ap-hongkong-fusion: Hong Kong (China)<br>)</p>
+     * @param string $ApplicationVersionUpdateMode <p>Application version update mode: <br>FULL: Full update, <br>INCREMENT: Incremental update</p>
      */
     function __construct()
     {

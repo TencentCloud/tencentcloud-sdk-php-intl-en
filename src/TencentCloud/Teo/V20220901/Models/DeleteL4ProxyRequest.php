@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getProxyId() Obtain Layer 4 proxy instance ID.
- * @method void setProxyId(string $ProxyId) Set Layer 4 proxy instance ID.
+ * @method string getProxyId() Obtain Layer 4 Proxy Instance ID.
+ * @method void setProxyId(string $ProxyId) Set Layer 4 Proxy Instance ID.
  */
 class DeleteL4ProxyRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteL4ProxyRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Layer 4 proxy instance ID.
+     * @var string Layer 4 Proxy Instance ID.
      */
     public $ProxyId;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $ProxyId Layer 4 proxy instance ID.
+     * @param string $ProxyId Layer 4 Proxy Instance ID.
      */
     function __construct()
     {

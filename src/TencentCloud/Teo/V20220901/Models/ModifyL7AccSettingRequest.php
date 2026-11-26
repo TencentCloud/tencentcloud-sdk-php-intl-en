@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyL7AccSetting request structure.
  *
- * @method string getZoneId() Obtain Zone id.
- * @method void setZoneId(string $ZoneId) Set Zone id.
- * @method ZoneConfig getZoneConfig() Obtain Site acceleration global configuration. the settings in this parameter will apply to all domain names under the site. you only need to modify the required settings directly, and other settings not passed in will remain unchanged.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method ZoneConfig getZoneConfig() Obtain Global configuration for site acceleration. The configuration in this parameter takes effect for all domain names under the site. You just need to directly modify the desired configuration. Other configuration not passed in will keep its original status.
 
 
- * @method void setZoneConfig(ZoneConfig $ZoneConfig) Set Site acceleration global configuration. the settings in this parameter will apply to all domain names under the site. you only need to modify the required settings directly, and other settings not passed in will remain unchanged.
+ * @method void setZoneConfig(ZoneConfig $ZoneConfig) Set Global configuration for site acceleration. The configuration in this parameter takes effect for all domain names under the site. You just need to directly modify the desired configuration. Other configuration not passed in will keep its original status.
  */
 class ModifyL7AccSettingRequest extends AbstractModel
 {
     /**
-     * @var string Zone id.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var ZoneConfig Site acceleration global configuration. the settings in this parameter will apply to all domain names under the site. you only need to modify the required settings directly, and other settings not passed in will remain unchanged.
+     * @var ZoneConfig Global configuration for site acceleration. The configuration in this parameter takes effect for all domain names under the site. You just need to directly modify the desired configuration. Other configuration not passed in will keep its original status.
 
 
      */
     public $ZoneConfig;
 
     /**
-     * @param string $ZoneId Zone id.
-     * @param ZoneConfig $ZoneConfig Site acceleration global configuration. the settings in this parameter will apply to all domain names under the site. you only need to modify the required settings directly, and other settings not passed in will remain unchanged.
+     * @param string $ZoneId Zone ID.
+     * @param ZoneConfig $ZoneConfig Global configuration for site acceleration. The configuration in this parameter takes effect for all domain names under the site. You just need to directly modify the desired configuration. Other configuration not passed in will keep its original status.
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyL7AccRule request structure.
  *
- * @method string getZoneId() Obtain Zone id.
- * @method void setZoneId(string $ZoneId) Set Zone id.
- * @method RuleEngineItem getRule() Obtain Rules to be modified. you can first obtain the ruleid of the rule to be modified through the describel7accrules api, then pass in the modified rule content. the original rule content will be updated in an overriding manner.
- * @method void setRule(RuleEngineItem $Rule) Set Rules to be modified. you can first obtain the ruleid of the rule to be modified through the describel7accrules api, then pass in the modified rule content. the original rule content will be updated in an overriding manner.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method RuleEngineItem getRule() Obtain Rule to modify. You can first call the DescribeL7AccRules API to get the Ruleid of the rule to modify, then input the modified rule content. The original rule content will be overwritten.
+ * @method void setRule(RuleEngineItem $Rule) Set Rule to modify. You can first call the DescribeL7AccRules API to get the Ruleid of the rule to modify, then input the modified rule content. The original rule content will be overwritten.
  */
 class ModifyL7AccRuleRequest extends AbstractModel
 {
     /**
-     * @var string Zone id.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var RuleEngineItem Rules to be modified. you can first obtain the ruleid of the rule to be modified through the describel7accrules api, then pass in the modified rule content. the original rule content will be updated in an overriding manner.
+     * @var RuleEngineItem Rule to modify. You can first call the DescribeL7AccRules API to get the Ruleid of the rule to modify, then input the modified rule content. The original rule content will be overwritten.
      */
     public $Rule;
 
     /**
-     * @param string $ZoneId Zone id.
-     * @param RuleEngineItem $Rule Rules to be modified. you can first obtain the ruleid of the rule to be modified through the describel7accrules api, then pass in the modified rule content. the original rule content will be updated in an overriding manner.
+     * @param string $ZoneId Zone ID.
+     * @param RuleEngineItem $Rule Rule to modify. You can first call the DescribeL7AccRules API to get the Ruleid of the rule to modify, then input the modified rule content. The original rule content will be overwritten.
      */
     function __construct()
     {

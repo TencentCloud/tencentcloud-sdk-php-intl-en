@@ -18,40 +18,40 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Browser cache rule configuration, which is used to set the default value of `MaxAge` and is disabled by default.
+ * Browser cache rule configuration, used to set the default MaxAge. Disabled by default.
  *
- * @method string getFollowOrigin() Obtain Whether to follow the origin server. Values:
-<li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
-<li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
- * @method void setFollowOrigin(string $FollowOrigin) Set Whether to follow the origin server. Values:
-<li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
-<li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
- * @method integer getMaxAgeTime() Obtain MaxAge specifies the time setting in seconds. value range: 0–315360000.
-Specifies the time when the cache is disabled if set to 0.
- * @method void setMaxAgeTime(integer $MaxAgeTime) Set MaxAge specifies the time setting in seconds. value range: 0–315360000.
-Specifies the time when the cache is disabled if set to 0.
+ * @method string getFollowOrigin() Obtain Whether to follow the origin site, with values:
+<li>on: follow the origin site, ignore the MaxAge time setting;</li>
+<li>off: Do not follow the origin site. Use the MaxAge time setting.</li>
+ * @method void setFollowOrigin(string $FollowOrigin) Set Whether to follow the origin site, with values:
+<li>on: follow the origin site, ignore the MaxAge time setting;</li>
+<li>off: Do not follow the origin site. Use the MaxAge time setting.</li>
+ * @method integer getMaxAgeTime() Obtain MaxAge time setting, in seconds. Value range: 0–315360000.
+Note: If the time is 0, no cache is used.
+ * @method void setMaxAgeTime(integer $MaxAgeTime) Set MaxAge time setting, in seconds. Value range: 0–315360000.
+Note: If the time is 0, no cache is used.
  */
 class MaxAge extends AbstractModel
 {
     /**
-     * @var string Whether to follow the origin server. Values:
-<li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
-<li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
+     * @var string Whether to follow the origin site, with values:
+<li>on: follow the origin site, ignore the MaxAge time setting;</li>
+<li>off: Do not follow the origin site. Use the MaxAge time setting.</li>
      */
     public $FollowOrigin;
 
     /**
-     * @var integer MaxAge specifies the time setting in seconds. value range: 0–315360000.
-Specifies the time when the cache is disabled if set to 0.
+     * @var integer MaxAge time setting, in seconds. Value range: 0–315360000.
+Note: If the time is 0, no cache is used.
      */
     public $MaxAgeTime;
 
     /**
-     * @param string $FollowOrigin Whether to follow the origin server. Values:
-<li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
-<li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
-     * @param integer $MaxAgeTime MaxAge specifies the time setting in seconds. value range: 0–315360000.
-Specifies the time when the cache is disabled if set to 0.
+     * @param string $FollowOrigin Whether to follow the origin site, with values:
+<li>on: follow the origin site, ignore the MaxAge time setting;</li>
+<li>off: Do not follow the origin site. Use the MaxAge time setting.</li>
+     * @param integer $MaxAgeTime MaxAge time setting, in seconds. Value range: 0–315360000.
+Note: If the time is 0, no cache is used.
      */
     function __construct()
     {

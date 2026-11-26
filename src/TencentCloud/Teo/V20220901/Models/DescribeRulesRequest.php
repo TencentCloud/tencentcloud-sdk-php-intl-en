@@ -20,34 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRules request structure.
  *
- * @method string getZoneId() Obtain ID of the site
- * @method void setZoneId(string $ZoneId) Set ID of the site
- * @method array getFilters() Obtain Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
-.
-<Li>Rule-Id: filter by rule id.</li>.
- * @method void setFilters(array $Filters) Set Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
-.
-<Li>Rule-Id: filter by rule id.</li>.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method array getFilters() Obtain Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>rule-id: Filter by rule ID.</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>rule-id: Filter by rule ID.</li>
  */
 class DescribeRulesRequest extends AbstractModel
 {
     /**
-     * @var string ID of the site
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var array Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
-.
-<Li>Rule-Id: filter by rule id.</li>.
+     * @var array Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>rule-id: Filter by rule ID.</li>
      */
     public $Filters;
 
     /**
-     * @param string $ZoneId ID of the site
-     * @param array $Filters Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
-.
-<Li>Rule-Id: filter by rule id.</li>.
+     * @param string $ZoneId Zone ID.
+     * @param array $Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>rule-id: Filter by rule ID.</li>
      */
     function __construct()
     {

@@ -18,31 +18,31 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The origin server configuration.
+ * Origin server configuration.
  *
- * @method array getOrigins() Obtain Origin server list.
- * @method void setOrigins(array $Origins) Set Origin server list.
+ * @method array getOrigins() Obtain Primary origin server list.
+ * @method void setOrigins(array $Origins) Set Primary origin server list.
  * @method array getBackupOrigins() Obtain Backup origin list.
  * @method void setBackupOrigins(array $BackupOrigins) Set Backup origin list.
- * @method string getOriginPullProtocol() Obtain Origin server protocol configuration. valid values:.
-<Li>Http: forced http back to source;</li>.
-<Li>`Follow`: follow protocol.</li>.
-<Li>Https: enforce https origin-pull.</li>.
- * @method void setOriginPullProtocol(string $OriginPullProtocol) Set Origin server protocol configuration. valid values:.
-<Li>Http: forced http back to source;</li>.
-<Li>`Follow`: follow protocol.</li>.
-<Li>Https: enforce https origin-pull.</li>.
- * @method string getCosPrivateAccess() Obtain When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
-<li>`on`: private network access;</li>.
-<li>`off`: public access.</li>.
- * @method void setCosPrivateAccess(string $CosPrivateAccess) Set When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
-<li>`on`: private network access;</li>.
-<li>`off`: public access.</li>.
+ * @method string getOriginPullProtocol() Obtain Origin-pull protocol configuration, with values:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>https: Force HTTPS origin-pull.</li>
+ * @method void setOriginPullProtocol(string $OriginPullProtocol) Set Origin-pull protocol configuration, with values:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>https: Force HTTPS origin-pull.</li>
+ * @method string getCosPrivateAccess() Obtain Whether the origin server is a private access bucket when it is Tencent Cloud COS. Valid values:
+<li>on: Private access;</li>
+<li>off: Public Access.</li>
+ * @method void setCosPrivateAccess(string $CosPrivateAccess) Set Whether the origin server is a private access bucket when it is Tencent Cloud COS. Valid values:
+<li>on: Private access;</li>
+<li>off: Public Access.</li>
  */
 class Origin extends AbstractModel
 {
     /**
-     * @var array Origin server list.
+     * @var array Primary origin server list.
      */
     public $Origins;
 
@@ -52,30 +52,30 @@ class Origin extends AbstractModel
     public $BackupOrigins;
 
     /**
-     * @var string Origin server protocol configuration. valid values:.
-<Li>Http: forced http back to source;</li>.
-<Li>`Follow`: follow protocol.</li>.
-<Li>Https: enforce https origin-pull.</li>.
+     * @var string Origin-pull protocol configuration, with values:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>https: Force HTTPS origin-pull.</li>
      */
     public $OriginPullProtocol;
 
     /**
-     * @var string When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
-<li>`on`: private network access;</li>.
-<li>`off`: public access.</li>.
+     * @var string Whether the origin server is a private access bucket when it is Tencent Cloud COS. Valid values:
+<li>on: Private access;</li>
+<li>off: Public Access.</li>
      */
     public $CosPrivateAccess;
 
     /**
-     * @param array $Origins Origin server list.
+     * @param array $Origins Primary origin server list.
      * @param array $BackupOrigins Backup origin list.
-     * @param string $OriginPullProtocol Origin server protocol configuration. valid values:.
-<Li>Http: forced http back to source;</li>.
-<Li>`Follow`: follow protocol.</li>.
-<Li>Https: enforce https origin-pull.</li>.
-     * @param string $CosPrivateAccess When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
-<li>`on`: private network access;</li>.
-<li>`off`: public access.</li>.
+     * @param string $OriginPullProtocol Origin-pull protocol configuration, with values:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>https: Force HTTPS origin-pull.</li>
+     * @param string $CosPrivateAccess Whether the origin server is a private access bucket when it is Tencent Cloud COS. Valid values:
+<li>on: Private access;</li>
+<li>off: Public Access.</li>
      */
     function __construct()
     {

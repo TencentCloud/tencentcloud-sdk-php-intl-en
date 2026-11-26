@@ -18,56 +18,52 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom Cache Key query string configuration parameters
+ * Parameter for custom Cache Key query string configuration.
  *
- * @method string getSwitch() Obtain Query string retain/ignore specified parameter switch. valid values are:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method void setSwitch(string $Switch) Set Query string retain/ignore specified parameter switch. valid values are:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method string getAction() Obtain Actions to retain/ignore specified parameters in the query string. values:.
-<Li>`IncludeCustom`: retain partial parameters.</li>.
-<Li>`ExcludeCustom`: ignore partial parameters.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
- * @method void setAction(string $Action) Set Actions to retain/ignore specified parameters in the query string. values:.
-<Li>`IncludeCustom`: retain partial parameters.</li>.
-<Li>`ExcludeCustom`: ignore partial parameters.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
- * @method array getValues() Obtain List of parameter names to be retained/ignored in the query string. <br>note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
- * @method void setValues(array $Values) Set List of parameter names to be retained/ignored in the query string. <br>note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+ * @method string getSwitch() Obtain Switch to reserve or ignore specified parameters in the query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Switch to reserve or ignore specified parameters in the query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method string getAction() Obtain Action to reserve or ignore specified parameters in the query string. Valid values:
+<li>includeCustom: means to reserve some parameters;</li>
+<li>excludeCustom: means to ignore some parameters.</li>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if filled in.
+ * @method void setAction(string $Action) Set Action to reserve or ignore specified parameters in the query string. Valid values:
+<li>includeCustom: means to reserve some parameters;</li>
+<li>excludeCustom: means to ignore some parameters.</li>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if filled in.
+ * @method array getValues() Obtain List of parameter names to reserve/ignore in the query string.<br>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
+ * @method void setValues(array $Values) Set List of parameter names to reserve/ignore in the query string.<br>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
  */
 class CacheKeyQueryString extends AbstractModel
 {
     /**
-     * @var string Query string retain/ignore specified parameter switch. valid values are:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @var string Switch to reserve or ignore specified parameters in the query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var string Actions to retain/ignore specified parameters in the query string. values:.
-<Li>`IncludeCustom`: retain partial parameters.</li>.
-<Li>`ExcludeCustom`: ignore partial parameters.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+     * @var string Action to reserve or ignore specified parameters in the query string. Valid values:
+<li>includeCustom: means to reserve some parameters;</li>
+<li>excludeCustom: means to ignore some parameters.</li>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if filled in.
      */
     public $Action;
 
     /**
-     * @var array List of parameter names to be retained/ignored in the query string. <br>note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+     * @var array List of parameter names to reserve/ignore in the query string.<br>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
      */
     public $Values;
 
     /**
-     * @param string $Switch Query string retain/ignore specified parameter switch. valid values are:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-     * @param string $Action Actions to retain/ignore specified parameters in the query string. values:.
-<Li>`IncludeCustom`: retain partial parameters.</li>.
-<Li>`ExcludeCustom`: ignore partial parameters.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
-     * @param array $Values List of parameter names to be retained/ignored in the query string. <br>note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+     * @param string $Switch Switch to reserve or ignore specified parameters in the query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param string $Action Action to reserve or ignore specified parameters in the query string. Valid values:
+<li>includeCustom: means to reserve some parameters;</li>
+<li>excludeCustom: means to ignore some parameters.</li>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if filled in.
+     * @param array $Values List of parameter names to reserve/ignore in the query string.<br>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
      */
     function __construct()
     {

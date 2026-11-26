@@ -20,42 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHostsSetting request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0. Minimum value: 0.
- * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0. Minimum value: 0.
- * @method integer getLimit() Obtain Limit on paginated queries. Default value: 100. Maximum value: 1000.
- * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 100. Maximum value: 1000.
- * @method array getFilters() Obtain Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
- * @method void setFilters(array $Filters) Set Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method integer getOffset() Obtain The offset of paginated query. Default value: 0, minimum value: 0.
+ * @method void setOffset(integer $Offset) Set The offset of paginated query. Default value: 0, minimum value: 0.
+ * @method integer getLimit() Obtain Paginated query limit. Default value: 100. Maximum value: 1000.
+ * @method void setLimit(integer $Limit) Set Paginated query limit. Default value: 100. Maximum value: 1000.
+ * @method array getFilters() Obtain Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>host: Filter by domain name.</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>host: Filter by domain name.</li>
  */
 class DescribeHostsSettingRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var integer Offset for paginated queries. Default value: 0. Minimum value: 0.
+     * @var integer The offset of paginated query. Default value: 0, minimum value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Limit on paginated queries. Default value: 100. Maximum value: 1000.
+     * @var integer Paginated query limit. Default value: 100. Maximum value: 1000.
      */
     public $Limit;
 
     /**
-     * @var array Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
+     * @var array Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>host: Filter by domain name.</li>
      */
     public $Filters;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param integer $Offset Offset for paginated queries. Default value: 0. Minimum value: 0.
-     * @param integer $Limit Limit on paginated queries. Default value: 100. Maximum value: 1000.
-     * @param array $Filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
+     * @param string $ZoneId Site ID.
+     * @param integer $Offset The offset of paginated query. Default value: 0, minimum value: 0.
+     * @param integer $Limit Paginated query limit. Default value: 100. Maximum value: 1000.
+     * @param array $Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>host: Filter by domain name.</li>
      */
     function __construct()
     {

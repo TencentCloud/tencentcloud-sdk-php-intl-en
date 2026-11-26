@@ -18,17 +18,17 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Service monitoring data items for reasoning.
+ * Reasoning service monitoring data item.
  *
- * @method string getTimestamp() Obtain Corresponding time point of monitoring data.
- * @method void setTimestamp(string $Timestamp) Set Corresponding time point of monitoring data.
+ * @method string getTimestamp() Obtain Time point of the monitoring data.
+ * @method void setTimestamp(string $Timestamp) Set Time point of the monitoring data.
  * @method float getValue() Obtain Specific values.
  * @method void setValue(float $Value) Set Specific values.
  */
 class InferenceServiceMonitorItem extends AbstractModel
 {
     /**
-     * @var string Corresponding time point of monitoring data.
+     * @var string Time point of the monitoring data.
      */
     public $Timestamp;
 
@@ -38,7 +38,7 @@ class InferenceServiceMonitorItem extends AbstractModel
     public $Value;
 
     /**
-     * @param string $Timestamp Corresponding time point of monitoring data.
+     * @param string $Timestamp Time point of the monitoring data.
      * @param float $Value Specific values.
      */
     function __construct()

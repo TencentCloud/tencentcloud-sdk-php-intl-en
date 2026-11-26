@@ -20,38 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Custom Cache Key HTTP request header configuration parameters.
  *
- * @method string getSwitch() Obtain Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method void setSwitch(string $Switch) Set Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method array getValues() Obtain Custom cache key http request header list.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
- * @method void setValues(array $Values) Set Custom cache key http request header list.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+ * @method string getSwitch() Obtain Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method array getValues() Obtain List of custom Cache Key HTTP request headers.<br>Note: This field is required when Switch is on. It is not required when Switch is off, and will not take effect if specified.
+ * @method void setValues(array $Values) Set List of custom Cache Key HTTP request headers.<br>Note: This field is required when Switch is on. It is not required when Switch is off, and will not take effect if specified.
  */
 class CacheKeyHeader extends AbstractModel
 {
     /**
-     * @var string Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @var string Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var array Custom cache key http request header list.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+     * @var array List of custom Cache Key HTTP request headers.<br>Note: This field is required when Switch is on. It is not required when Switch is off, and will not take effect if specified.
      */
     public $Values;
 
     /**
-     * @param string $Switch Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-     * @param array $Values Custom cache key http request header list.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+     * @param string $Switch Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param array $Values List of custom Cache Key HTTP request headers.<br>Note: This field is required when Switch is on. It is not required when Switch is off, and will not take effect if specified.
      */
     function __construct()
     {

@@ -18,46 +18,60 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Layer 4 proxy instance.
+ * L4 proxy instance.
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getProxyId() Obtain Layer 4 proxy instance ID.
- * @method void setProxyId(string $ProxyId) Set Layer 4 proxy instance ID.
- * @method string getProxyName() Obtain Layer 4 proxy instance name.
- * @method void setProxyName(string $ProxyName) Set Layer 4 proxy instance name.
- * @method string getArea() Obtain Acceleration zone of the Layer 4 proxy instance.<li>mainland: Availability zone in the Chinese mainland;</li><li>overseas: Global availability zone (excluding the Chinese mainland);</li><li>global: Global availability zone.</li>	
- * @method void setArea(string $Area) Set Acceleration zone of the Layer 4 proxy instance.<li>mainland: Availability zone in the Chinese mainland;</li><li>overseas: Global availability zone (excluding the Chinese mainland);</li><li>global: Global availability zone.</li>	
+ * @method string getProxyId() Obtain Layer 4 Proxy Instance ID.
+ * @method void setProxyId(string $ProxyId) Set Layer 4 Proxy Instance ID.
+ * @method string getProxyName() Obtain Name of the L4 proxy instance.
+ * @method void setProxyName(string $ProxyName) Set Name of the L4 proxy instance.
+ * @method string getArea() Obtain Acceleration zone of the Layer 4 proxy instance. 
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland);</li>
+ <li>global: global availability zone.</li>	
+ * @method void setArea(string $Area) Set Acceleration zone of the Layer 4 proxy instance. 
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland);</li>
+ <li>global: global availability zone.</li>	
  * @method string getCname() Obtain Access via CNAME.
  * @method void setCname(string $Cname) Set Access via CNAME.
- * @method array getIps() Obtain After the fixed IP address is enabled, this value will return the corresponding access IP address; if it is not enabled, this value will be empty.
- * @method void setIps(array $Ips) Set After the fixed IP address is enabled, this value will return the corresponding access IP address; if it is not enabled, this value will be empty.
- * @method string getStatus() Obtain Status of the Layer 4 proxy instance.<li>online: Enabled;</li>
+ * @method array getIps() Obtain After fixed IP address is enabled, this value returns the corresponding access IP address. If not enabled, this value is empty.
+ * @method void setIps(array $Ips) Set After fixed IP address is enabled, this value returns the corresponding access IP address. If not enabled, this value is empty.
+ * @method string getStatus() Obtain Status of the Layer 4 proxy instance.
+<li>online: enabled;</li>
 <li>offline: Disabled;</li>
-<li>progress: Deploying;</li>	
-<li>stopping: Disabling;</li>
-<li>banned: Blocked;</li>
-<li>fail: Failed to deploy or disable.</li>	
- * @method void setStatus(string $Status) Set Status of the Layer 4 proxy instance.<li>online: Enabled;</li>
+<li>progress: deploying;</li>	
+<li>stopping: disabling;</li>
+<li>`banned`: The name server is banned.</li>
+<li>fail: deployment or disabling failed.</li>	
+ * @method void setStatus(string $Status) Set Status of the Layer 4 proxy instance.
+<li>online: enabled;</li>
 <li>offline: Disabled;</li>
-<li>progress: Deploying;</li>	
-<li>stopping: Disabling;</li>
-<li>banned: Blocked;</li>
-<li>fail: Failed to deploy or disable.</li>	
- * @method string getIpv6() Obtain Specifies whether to enable IPv6 access.<li>on: Enable;</li> <li>off: Disable.</li>
- * @method void setIpv6(string $Ipv6) Set Specifies whether to enable IPv6 access.<li>on: Enable;</li> <li>off: Disable.</li>
- * @method string getStaticIp() Obtain Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li>
- * @method void setStaticIp(string $StaticIp) Set Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li>
- * @method string getAccelerateMainland() Obtain Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
- * @method void setAccelerateMainland(string $AccelerateMainland) Set Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
- * @method DDosProtectionConfig getDDosProtectionConfig() Obtain Security protection settings.
+<li>progress: deploying;</li>	
+<li>stopping: disabling;</li>
+<li>`banned`: The name server is banned.</li>
+<li>fail: deployment or disabling failed.</li>	
+ * @method string getIpv6() Obtain Specifies whether to enable IPv6 access. 
+<li>`on`: Enable;</li> 
+<li>off: Disable.</li>
+ * @method void setIpv6(string $Ipv6) Set Specifies whether to enable IPv6 access. 
+<li>`on`: Enable;</li> 
+<li>off: Disable.</li>
+ * @method string getStaticIp() Obtain Specifies whether to enable the fixed IP address.
+<li>`on`: Enable;</li> <li>`off`: Disable.</li>
+ * @method void setStaticIp(string $StaticIp) Set Specifies whether to enable the fixed IP address.
+<li>`on`: Enable;</li> <li>`off`: Disable.</li>
+ * @method string getAccelerateMainland() Obtain Specifies whether to enable network optimization in the Chinese mainland.
+<li>on: Enable.</li> <li>off: Disable.</li>
+ * @method void setAccelerateMainland(string $AccelerateMainland) Set Specifies whether to enable network optimization in the Chinese mainland.
+<li>on: Enable.</li> <li>off: Disable.</li>
+ * @method DDosProtectionConfig getDDosProtectionConfig() Obtain Security protection configuration.
 This field is deprecated.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setDDosProtectionConfig(DDosProtectionConfig $DDosProtectionConfig) Set Security protection settings.
+ * @method void setDDosProtectionConfig(DDosProtectionConfig $DDosProtectionConfig) Set Security protection configuration.
 This field is deprecated.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method integer getL4ProxyRuleCount() Obtain Number of forwarding rules under the Layer 4 proxy instance.
- * @method void setL4ProxyRuleCount(integer $L4ProxyRuleCount) Set Number of forwarding rules under the Layer 4 proxy instance.
+ * @method integer getL4ProxyRuleCount() Obtain Number of forwarding rules under the layer 4 proxy instance.
+ * @method void setL4ProxyRuleCount(integer $L4ProxyRuleCount) Set Number of forwarding rules under the layer 4 proxy instance.
  * @method string getUpdateTime() Obtain Latest modification time.
  * @method void setUpdateTime(string $UpdateTime) Set Latest modification time.
  */
@@ -69,17 +83,20 @@ class L4Proxy extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Layer 4 proxy instance ID.
+     * @var string Layer 4 Proxy Instance ID.
      */
     public $ProxyId;
 
     /**
-     * @var string Layer 4 proxy instance name.
+     * @var string Name of the L4 proxy instance.
      */
     public $ProxyName;
 
     /**
-     * @var string Acceleration zone of the Layer 4 proxy instance.<li>mainland: Availability zone in the Chinese mainland;</li><li>overseas: Global availability zone (excluding the Chinese mainland);</li><li>global: Global availability zone.</li>	
+     * @var string Acceleration zone of the Layer 4 proxy instance. 
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland);</li>
+ <li>global: global availability zone.</li>	
      */
     public $Area;
 
@@ -89,45 +106,49 @@ class L4Proxy extends AbstractModel
     public $Cname;
 
     /**
-     * @var array After the fixed IP address is enabled, this value will return the corresponding access IP address; if it is not enabled, this value will be empty.
+     * @var array After fixed IP address is enabled, this value returns the corresponding access IP address. If not enabled, this value is empty.
      */
     public $Ips;
 
     /**
-     * @var string Status of the Layer 4 proxy instance.<li>online: Enabled;</li>
+     * @var string Status of the Layer 4 proxy instance.
+<li>online: enabled;</li>
 <li>offline: Disabled;</li>
-<li>progress: Deploying;</li>	
-<li>stopping: Disabling;</li>
-<li>banned: Blocked;</li>
-<li>fail: Failed to deploy or disable.</li>	
+<li>progress: deploying;</li>	
+<li>stopping: disabling;</li>
+<li>`banned`: The name server is banned.</li>
+<li>fail: deployment or disabling failed.</li>	
      */
     public $Status;
 
     /**
-     * @var string Specifies whether to enable IPv6 access.<li>on: Enable;</li> <li>off: Disable.</li>
+     * @var string Specifies whether to enable IPv6 access. 
+<li>`on`: Enable;</li> 
+<li>off: Disable.</li>
      */
     public $Ipv6;
 
     /**
-     * @var string Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li>
+     * @var string Specifies whether to enable the fixed IP address.
+<li>`on`: Enable;</li> <li>`off`: Disable.</li>
      */
     public $StaticIp;
 
     /**
-     * @var string Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
+     * @var string Specifies whether to enable network optimization in the Chinese mainland.
+<li>on: Enable.</li> <li>off: Disable.</li>
      */
     public $AccelerateMainland;
 
     /**
-     * @var DDosProtectionConfig Security protection settings.
+     * @var DDosProtectionConfig Security protection configuration.
 This field is deprecated.
-Note: This field may return null, which indicates a failure to obtain a valid value.
      * @deprecated
      */
     public $DDosProtectionConfig;
 
     /**
-     * @var integer Number of forwarding rules under the Layer 4 proxy instance.
+     * @var integer Number of forwarding rules under the layer 4 proxy instance.
      */
     public $L4ProxyRuleCount;
 
@@ -138,24 +159,31 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $ProxyId Layer 4 proxy instance ID.
-     * @param string $ProxyName Layer 4 proxy instance name.
-     * @param string $Area Acceleration zone of the Layer 4 proxy instance.<li>mainland: Availability zone in the Chinese mainland;</li><li>overseas: Global availability zone (excluding the Chinese mainland);</li><li>global: Global availability zone.</li>	
+     * @param string $ProxyId Layer 4 Proxy Instance ID.
+     * @param string $ProxyName Name of the L4 proxy instance.
+     * @param string $Area Acceleration zone of the Layer 4 proxy instance. 
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland);</li>
+ <li>global: global availability zone.</li>	
      * @param string $Cname Access via CNAME.
-     * @param array $Ips After the fixed IP address is enabled, this value will return the corresponding access IP address; if it is not enabled, this value will be empty.
-     * @param string $Status Status of the Layer 4 proxy instance.<li>online: Enabled;</li>
+     * @param array $Ips After fixed IP address is enabled, this value returns the corresponding access IP address. If not enabled, this value is empty.
+     * @param string $Status Status of the Layer 4 proxy instance.
+<li>online: enabled;</li>
 <li>offline: Disabled;</li>
-<li>progress: Deploying;</li>	
-<li>stopping: Disabling;</li>
-<li>banned: Blocked;</li>
-<li>fail: Failed to deploy or disable.</li>	
-     * @param string $Ipv6 Specifies whether to enable IPv6 access.<li>on: Enable;</li> <li>off: Disable.</li>
-     * @param string $StaticIp Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li>
-     * @param string $AccelerateMainland Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
-     * @param DDosProtectionConfig $DDosProtectionConfig Security protection settings.
+<li>progress: deploying;</li>	
+<li>stopping: disabling;</li>
+<li>`banned`: The name server is banned.</li>
+<li>fail: deployment or disabling failed.</li>	
+     * @param string $Ipv6 Specifies whether to enable IPv6 access. 
+<li>`on`: Enable;</li> 
+<li>off: Disable.</li>
+     * @param string $StaticIp Specifies whether to enable the fixed IP address.
+<li>`on`: Enable;</li> <li>`off`: Disable.</li>
+     * @param string $AccelerateMainland Specifies whether to enable network optimization in the Chinese mainland.
+<li>on: Enable.</li> <li>off: Disable.</li>
+     * @param DDosProtectionConfig $DDosProtectionConfig Security protection configuration.
 This field is deprecated.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param integer $L4ProxyRuleCount Number of forwarding rules under the Layer 4 proxy instance.
+     * @param integer $L4ProxyRuleCount Number of forwarding rules under the layer 4 proxy instance.
      * @param string $UpdateTime Latest modification time.
      */
     function __construct()

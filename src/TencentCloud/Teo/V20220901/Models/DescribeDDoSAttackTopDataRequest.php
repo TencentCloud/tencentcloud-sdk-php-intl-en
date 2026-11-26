@@ -20,146 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDDoSAttackTopData request structure.
  *
- * @method string getStartTime() Obtain The start time.
- * @method void setStartTime(string $StartTime) Set The start time.
- * @method string getEndTime() Obtain End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
- * @method void setEndTime(string $EndTime) Set End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
- * @method string getMetricName() Obtain The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
-<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
-<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
-<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
-<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
- * @method void setMetricName(string $MetricName) Set The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
-<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
-<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
-<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
-<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
- * @method array getZoneIds() Obtain Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
- * @method void setZoneIds(array $ZoneIds) Set Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
- * @method array getPolicyIds() Obtain The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
- * @method void setPolicyIds(array $PolicyIds) Set The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
- * @method string getAttackType() Obtain The attack type. Values:
-<li>`flood`: Flood;</li>
-<li>`icmpFlood`: ICMP flood;</li>
-<li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
- * @method void setAttackType(string $AttackType) Set The attack type. Values:
-<li>`flood`: Flood;</li>
-<li>`icmpFlood`: ICMP flood;</li>
-<li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
- * @method string getProtocolType() Obtain The protocol type. Values:
-<li>`tcp`: TCP protocol;</li>
-<li>`udp`: UDP protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
- * @method void setProtocolType(string $ProtocolType) Set The protocol type. Values:
-<li>`tcp`: TCP protocol;</li>
-<li>`udp`: UDP protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
- * @method integer getPort() Obtain The port number.
- * @method void setPort(integer $Port) Set The port number.
- * @method integer getLimit() Obtain Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
- * @method void setLimit(integer $Limit) Set Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
- * @method string getArea() Obtain Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
- * @method void setArea(string $Area) Set Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
+ * @method string getStartTime() Obtain Start time.
+ * @method void setStartTime(string $StartTime) Set Start time.
+ * @method string getEndTime() Obtain End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+ * @method void setEndTime(string $EndTime) Set End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+ * @method string getMetricName() Obtain Queried statistical metric. Valid values:
+<li>ddos_attackFlux_protocol: ranking of attack traffic by protocol;</li>
+<li>ddos_attackPackageNum_protocol: ranking by attack packet volume of each protocol;</li>
+<li>ddos_attackNum_attackType: Ranking by number of attacks for each attack type;</li>
+<li>ddos_attackNum_sregion: ranking by number of attacks by attack source region;</li>
+<li>ddos_attackFlux_sip: ranking by number of attacks from attack source IPs;</li>
+<li>ddos_attackFlux_sregion: ranking of attackNum by attack source region.</li>
+ * @method void setMetricName(string $MetricName) Set Queried statistical metric. Valid values:
+<li>ddos_attackFlux_protocol: ranking of attack traffic by protocol;</li>
+<li>ddos_attackPackageNum_protocol: ranking by attack packet volume of each protocol;</li>
+<li>ddos_attackNum_attackType: Ranking by number of attacks for each attack type;</li>
+<li>ddos_attackNum_sregion: ranking by number of attacks by attack source region;</li>
+<li>ddos_attackFlux_sip: ranking by number of attacks from attack source IPs;</li>
+<li>ddos_attackFlux_sregion: ranking of attackNum by attack source region.</li>
+ * @method array getZoneIds() Obtain Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). Import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
+ * @method void setZoneIds(array $ZoneIds) Set Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). Import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
+ * @method array getPolicyIds() Obtain Set of DDoS policy group IDs. If not specified, all policy IDs are selected by default.
+ * @method void setPolicyIds(array $PolicyIds) Set Set of DDoS policy group IDs. If not specified, all policy IDs are selected by default.
+ * @method string getAttackType() Obtain Attack type. Valid values:
+<li>flood: flood attack;</li>
+<li>icmpFlood: ICMP flood attack;</li>
+<li>all: all attack types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all attack types.
+ * @method void setAttackType(string $AttackType) Set Attack type. Valid values:
+<li>flood: flood attack;</li>
+<li>icmpFlood: ICMP flood attack;</li>
+<li>all: all attack types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all attack types.
+ * @method string getProtocolType() Obtain Protocol type. Valid values:
+<li>tcp: TCP protocol;</li>
+<li>udp: UDP protocol;</li>
+<li>all: all protocol types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all protocols.
+ * @method void setProtocolType(string $ProtocolType) Set Protocol type. Valid values:
+<li>tcp: TCP protocol;</li>
+<li>udp: UDP protocol;</li>
+<li>all: all protocol types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all protocols.
+ * @method integer getPort() Obtain Port number.
+ * @method void setPort(integer $Port) Set Port number.
+ * @method integer getLimit() Obtain Indicates the top N data to be queried. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
+ * @method void setLimit(integer $Limit) Set Indicates the top N data to be queried. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
+ * @method string getArea() Obtain Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data.</li>If not specified, the region will be smart selected according to the user's location.
+ * @method void setArea(string $Area) Set Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data.</li>If not specified, the region will be smart selected according to the user's location.
  */
 class DescribeDDoSAttackTopDataRequest extends AbstractModel
 {
     /**
-     * @var string The start time.
+     * @var string Start time.
      */
     public $StartTime;
 
     /**
-     * @var string End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * @var string End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public $EndTime;
 
     /**
-     * @var string The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
-<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
-<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
-<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
-<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
+     * @var string Queried statistical metric. Valid values:
+<li>ddos_attackFlux_protocol: ranking of attack traffic by protocol;</li>
+<li>ddos_attackPackageNum_protocol: ranking by attack packet volume of each protocol;</li>
+<li>ddos_attackNum_attackType: Ranking by number of attacks for each attack type;</li>
+<li>ddos_attackNum_sregion: ranking by number of attacks by attack source region;</li>
+<li>ddos_attackFlux_sip: ranking by number of attacks from attack source IPs;</li>
+<li>ddos_attackFlux_sregion: ranking of attackNum by attack source region.</li>
      */
     public $MetricName;
 
     /**
-     * @var array Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+     * @var array Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). Import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
      */
     public $ZoneIds;
 
     /**
-     * @var array The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
+     * @var array Set of DDoS policy group IDs. If not specified, all policy IDs are selected by default.
      */
     public $PolicyIds;
 
     /**
-     * @var string The attack type. Values:
-<li>`flood`: Flood;</li>
-<li>`icmpFlood`: ICMP flood;</li>
-<li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
+     * @var string Attack type. Valid values:
+<li>flood: flood attack;</li>
+<li>icmpFlood: ICMP flood attack;</li>
+<li>all: all attack types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all attack types.
      */
     public $AttackType;
 
     /**
-     * @var string The protocol type. Values:
-<li>`tcp`: TCP protocol;</li>
-<li>`udp`: UDP protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
+     * @var string Protocol type. Valid values:
+<li>tcp: TCP protocol;</li>
+<li>udp: UDP protocol;</li>
+<li>all: all protocol types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all protocols.
      */
     public $ProtocolType;
 
     /**
-     * @var integer The port number.
+     * @var integer Port number.
      */
     public $Port;
 
     /**
-     * @var integer Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
+     * @var integer Indicates the top N data to be queried. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
      */
     public $Limit;
 
     /**
-     * @var string Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
+     * @var string Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data.</li>If not specified, the region will be smart selected according to the user's location.
      */
     public $Area;
 
     /**
-     * @param string $StartTime The start time.
-     * @param string $EndTime End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
-     * @param string $MetricName The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
-<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
-<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
-<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
-<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
-     * @param array $ZoneIds Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
-     * @param array $PolicyIds The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
-     * @param string $AttackType The attack type. Values:
-<li>`flood`: Flood;</li>
-<li>`icmpFlood`: ICMP flood;</li>
-<li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
-     * @param string $ProtocolType The protocol type. Values:
-<li>`tcp`: TCP protocol;</li>
-<li>`udp`: UDP protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
-     * @param integer $Port The port number.
-     * @param integer $Limit Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
-     * @param string $Area Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
+     * @param string $StartTime Start time.
+     * @param string $EndTime End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * @param string $MetricName Queried statistical metric. Valid values:
+<li>ddos_attackFlux_protocol: ranking of attack traffic by protocol;</li>
+<li>ddos_attackPackageNum_protocol: ranking by attack packet volume of each protocol;</li>
+<li>ddos_attackNum_attackType: Ranking by number of attacks for each attack type;</li>
+<li>ddos_attackNum_sregion: ranking by number of attacks by attack source region;</li>
+<li>ddos_attackFlux_sip: ranking by number of attacks from attack source IPs;</li>
+<li>ddos_attackFlux_sregion: ranking of attackNum by attack source region.</li>
+     * @param array $ZoneIds Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). Import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
+     * @param array $PolicyIds Set of DDoS policy group IDs. If not specified, all policy IDs are selected by default.
+     * @param string $AttackType Attack type. Valid values:
+<li>flood: flood attack;</li>
+<li>icmpFlood: ICMP flood attack;</li>
+<li>all: all attack types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all attack types.
+     * @param string $ProtocolType Protocol type. Valid values:
+<li>tcp: TCP protocol;</li>
+<li>udp: UDP protocol;</li>
+<li>all: all protocol types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all protocols.
+     * @param integer $Port Port number.
+     * @param integer $Limit Indicates the top N data to be queried. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
+     * @param string $Area Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data.</li>If not specified, the region will be smart selected according to the user's location.
      */
     function __construct()
     {

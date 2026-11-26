@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Application file information.
  *
  * @method string getFilePath() Obtain Application file path.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFilePath(string $FilePath) Set Application file path.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFileState() Obtain File status. NO_EXIST: The file does not exist; EXIST: The file exists.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileState(string $FileState) Set File status. NO_EXIST: The file does not exist; EXIST: The file exists.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFileState() Obtain File status. NO_EXIST: not EXIST; EXIST: exist.
+ * @method void setFileState(string $FileState) Set File status. NO_EXIST: not EXIST; EXIST: exist.
  */
 class UserApplicationFileInfo extends AbstractModel
 {
     /**
      * @var string Application file path.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FilePath;
 
     /**
-     * @var string File status. NO_EXIST: The file does not exist; EXIST: The file exists.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File status. NO_EXIST: not EXIST; EXIST: exist.
      */
     public $FileState;
 
     /**
      * @param string $FilePath Application file path.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FileState File status. NO_EXIST: The file does not exist; EXIST: The file exists.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FileState File status. NO_EXIST: not EXIST; EXIST: exist.
      */
     function __construct()
     {

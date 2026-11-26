@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RCE authentication option instance information.
  *
- * @method string getChannel() Obtain Channel information.
- * @method void setChannel(string $Channel) Set Channel information.
- * @method string getRegion() Obtain Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
- * @method void setRegion(string $Region) Set Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
+ * @method string getChannel() Obtain Channel info.
+ * @method void setChannel(string $Channel) Set Channel info.
+ * @method string getRegion() Obtain Enabled regions for RCE Channel. Currently optional values: <li>ap-beijing: North China (Beijing);</li><li>ap-jakarta: Southeast Asia Pacific (Jakarta);</li><li>ap-singapore: Southeast Asia Pacific (Singapore);</li><li>eu-frankfurt: Europe (Frankfurt);</li><li>na-siliconvalley: West US (Silicon Valley).</li>
+ * @method void setRegion(string $Region) Set Enabled regions for RCE Channel. Currently optional values: <li>ap-beijing: North China (Beijing);</li><li>ap-jakarta: Southeast Asia Pacific (Jakarta);</li><li>ap-singapore: Southeast Asia Pacific (Singapore);</li><li>eu-frankfurt: Europe (Frankfurt);</li><li>na-siliconvalley: West US (Silicon Valley).</li>
  */
 class TCRCEOption extends AbstractModel
 {
     /**
-     * @var string Channel information.
+     * @var string Channel info.
      */
     public $Channel;
 
     /**
-     * @var string Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
+     * @var string Enabled regions for RCE Channel. Currently optional values: <li>ap-beijing: North China (Beijing);</li><li>ap-jakarta: Southeast Asia Pacific (Jakarta);</li><li>ap-singapore: Southeast Asia Pacific (Singapore);</li><li>eu-frankfurt: Europe (Frankfurt);</li><li>na-siliconvalley: West US (Silicon Valley).</li>
      */
     public $Region;
 
     /**
-     * @param string $Channel Channel information.
-     * @param string $Region Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
+     * @param string $Channel Channel info.
+     * @param string $Region Enabled regions for RCE Channel. Currently optional values: <li>ap-beijing: North China (Beijing);</li><li>ap-jakarta: Southeast Asia Pacific (Jakarta);</li><li>ap-singapore: Southeast Asia Pacific (Singapore);</li><li>eu-frankfurt: Europe (Frankfurt);</li><li>na-siliconvalley: West US (Silicon Valley).</li>
      */
     function __construct()
     {

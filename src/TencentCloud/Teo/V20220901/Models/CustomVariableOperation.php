@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom Variable operation details.
+ * Operation details of custom variables.
  *
- * @method array getBranches() Obtain <p>Sub-rule branch. This list currently only supports filling in one rule; additional entries are invalid.</p>
- * @method void setBranches(array $Branches) Set <p>Sub-rule branch. This list currently only supports filling in one rule; additional entries are invalid.</p>
- * @method array getDescription() Obtain <p>Rule note. Multiple notes can be filled.</p>
- * @method void setDescription(array $Description) Set <p>Rule note. Multiple notes can be filled.</p>
+ * @method array getBranches() Obtain <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
+ * @method void setBranches(array $Branches) Set <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
+ * @method array getDescription() Obtain <p>Rule annotation. Multiple annotations can be filled.</p>
+ * @method void setDescription(array $Description) Set <p>Rule annotation. Multiple annotations can be filled.</p>
  */
 class CustomVariableOperation extends AbstractModel
 {
     /**
-     * @var array <p>Sub-rule branch. This list currently only supports filling in one rule; additional entries are invalid.</p>
+     * @var array <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
      */
     public $Branches;
 
     /**
-     * @var array <p>Rule note. Multiple notes can be filled.</p>
+     * @var array <p>Rule annotation. Multiple annotations can be filled.</p>
      */
     public $Description;
 
     /**
-     * @param array $Branches <p>Sub-rule branch. This list currently only supports filling in one rule; additional entries are invalid.</p>
-     * @param array $Description <p>Rule note. Multiple notes can be filled.</p>
+     * @param array $Branches <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
+     * @param array $Description <p>Rule annotation. Multiple annotations can be filled.</p>
      */
     function __construct()
     {

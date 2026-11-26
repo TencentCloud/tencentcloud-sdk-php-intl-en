@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set Zone ID.
  * @method string getFunctionId() Obtain Function ID.
  * @method void setFunctionId(string $FunctionId) Set Function ID.
- * @method string getReplicaName() Obtain Edge function copy name that needs to be modified.
- * @method void setReplicaName(string $ReplicaName) Set Edge function copy name that needs to be modified.
- * @method string getContent() Obtain Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
- * @method void setContent(string $Content) Set Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
- * @method string getRemark() Obtain Edge function replica description. Supports up to 50 characters.
- * @method void setRemark(string $Remark) Set Edge function replica description. Supports up to 50 characters.
+ * @method string getReplicaName() Obtain Name of the edge function copy that needs to be modified.
+ * @method void setReplicaName(string $ReplicaName) Set Name of the edge function copy that needs to be modified.
+ * @method string getContent() Obtain Content of the edge function replica, which currently only supports JavaScript code. Its maximum size is 5 MB.
+ * @method void setContent(string $Content) Set Content of the edge function replica, which currently only supports JavaScript code. Its maximum size is 5 MB.
+ * @method string getRemark() Obtain Description of the edge function copy. It can contain up to 50 characters.
+ * @method void setRemark(string $Remark) Set Description of the edge function copy. It can contain up to 50 characters.
  */
 class ModifyFunctionReplicaRequest extends AbstractModel
 {
@@ -44,26 +44,26 @@ class ModifyFunctionReplicaRequest extends AbstractModel
     public $FunctionId;
 
     /**
-     * @var string Edge function copy name that needs to be modified.
+     * @var string Name of the edge function copy that needs to be modified.
      */
     public $ReplicaName;
 
     /**
-     * @var string Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
+     * @var string Content of the edge function replica, which currently only supports JavaScript code. Its maximum size is 5 MB.
      */
     public $Content;
 
     /**
-     * @var string Edge function replica description. Supports up to 50 characters.
+     * @var string Description of the edge function copy. It can contain up to 50 characters.
      */
     public $Remark;
 
     /**
      * @param string $ZoneId Zone ID.
      * @param string $FunctionId Function ID.
-     * @param string $ReplicaName Edge function copy name that needs to be modified.
-     * @param string $Content Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
-     * @param string $Remark Edge function replica description. Supports up to 50 characters.
+     * @param string $ReplicaName Name of the edge function copy that needs to be modified.
+     * @param string $Content Content of the edge function replica, which currently only supports JavaScript code. Its maximum size is 5 MB.
+     * @param string $Remark Description of the edge function copy. It can contain up to 50 characters.
      */
     function __construct()
     {

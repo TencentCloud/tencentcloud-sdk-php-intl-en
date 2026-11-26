@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rum\V20210622\Models;
+namespace TencentCloud\Car\V20220110\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeOfflineLogConfigs request structure.
+ * Tag information
  *
- * @method string getProjectKey() Obtain Unique project key for reporting
- * @method void setProjectKey(string $ProjectKey) Set Unique project key for reporting
+ * @method string getTagKey() Obtain <p>Tag key</p>
+ * @method void setTagKey(string $TagKey) Set <p>Tag key</p>
+ * @method string getTagValue() Obtain <p>Tag value</p>
+ * @method void setTagValue(string $TagValue) Set <p>Tag value</p>
  */
-class DescribeOfflineLogConfigsRequest extends AbstractModel
+class Tag extends AbstractModel
 {
     /**
-     * @var string Unique project key for reporting
+     * @var string <p>Tag key</p>
      */
-    public $ProjectKey;
+    public $TagKey;
 
     /**
-     * @param string $ProjectKey Unique project key for reporting
+     * @var string <p>Tag value</p>
+     */
+    public $TagValue;
+
+    /**
+     * @param string $TagKey <p>Tag key</p>
+     * @param string $TagValue <p>Tag value</p>
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeOfflineLogConfigsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectKey",$param) and $param["ProjectKey"] !== null) {
-            $this->ProjectKey = $param["ProjectKey"];
+        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
+            $this->TagKey = $param["TagKey"];
+        }
+
+        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
+            $this->TagValue = $param["TagValue"];
         }
     }
 }

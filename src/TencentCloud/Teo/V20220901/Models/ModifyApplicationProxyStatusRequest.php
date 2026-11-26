@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApplicationProxyStatus request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getProxyId() Obtain The proxy ID.
- * @method void setProxyId(string $ProxyId) Set The proxy ID.
- * @method string getStatus() Obtain The proxy status. Values:
-<li>`offline`: The proxy is disabled.</li>
-<li>`online`: The proxy is enabled.</li>
- * @method void setStatus(string $Status) Set The proxy status. Values:
-<li>`offline`: The proxy is disabled.</li>
-<li>`online`: The proxy is enabled.</li>
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method string getProxyId() Obtain Proxy ID.
+ * @method void setProxyId(string $ProxyId) Set Proxy ID.
+ * @method string getStatus() Obtain Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li>
+ * @method void setStatus(string $Status) Set Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li>
  */
 class ModifyApplicationProxyStatusRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var string The proxy ID.
+     * @var string Proxy ID.
      */
     public $ProxyId;
 
     /**
-     * @var string The proxy status. Values:
-<li>`offline`: The proxy is disabled.</li>
-<li>`online`: The proxy is enabled.</li>
+     * @var string Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li>
      */
     public $Status;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $ProxyId The proxy ID.
-     * @param string $Status The proxy status. Values:
-<li>`offline`: The proxy is disabled.</li>
-<li>`online`: The proxy is enabled.</li>
+     * @param string $ZoneId Site ID.
+     * @param string $ProxyId Proxy ID.
+     * @param string $Status Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li>
      */
     function __construct()
     {

@@ -18,52 +18,52 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Private authentication parameters for Cloud Object Storage origin server.
+ * Private authentication parameter for the COS origin server.
  *
- * @method string getAccessKeyId() Obtain Authentication parameter access key id.
- * @method void setAccessKeyId(string $AccessKeyId) Set Authentication parameter access key id.
- * @method string getSecretAccessKey() Obtain Authentication parameter secret access key.
- * @method void setSecretAccessKey(string $SecretAccessKey) Set Authentication parameter secret access key.
- * @method string getSignatureVersion() Obtain Authentication version. values:.
-<Li>V2: v2 version;</li>.
-<Li>V4: v4 version.</li>.
- * @method void setSignatureVersion(string $SignatureVersion) Set Authentication version. values:.
-<Li>V2: v2 version;</li>.
-<Li>V4: v4 version.</li>.
- * @method string getRegion() Obtain Region of the bucket.
- * @method void setRegion(string $Region) Set Region of the bucket.
+ * @method string getAccessKeyId() Obtain Access Key ID authentication parameter.
+ * @method void setAccessKeyId(string $AccessKeyId) Set Access Key ID authentication parameter.
+ * @method string getSecretAccessKey() Obtain Secret Access Key authentication parameter.
+ * @method void setSecretAccessKey(string $SecretAccessKey) Set Secret Access Key authentication parameter.
+ * @method string getSignatureVersion() Obtain Authentication version. Valid values:
+<li>v2: v2 version;</li>
+<li>v4: v4 version.</li>
+ * @method void setSignatureVersion(string $SignatureVersion) Set Authentication version. Valid values:
+<li>v2: v2 version;</li>
+<li>v4: v4 version.</li>
+ * @method string getRegion() Obtain Bucket region.
+ * @method void setRegion(string $Region) Set Bucket region.
  */
 class OriginPrivateParameters extends AbstractModel
 {
     /**
-     * @var string Authentication parameter access key id.
+     * @var string Access Key ID authentication parameter.
      */
     public $AccessKeyId;
 
     /**
-     * @var string Authentication parameter secret access key.
+     * @var string Secret Access Key authentication parameter.
      */
     public $SecretAccessKey;
 
     /**
-     * @var string Authentication version. values:.
-<Li>V2: v2 version;</li>.
-<Li>V4: v4 version.</li>.
+     * @var string Authentication version. Valid values:
+<li>v2: v2 version;</li>
+<li>v4: v4 version.</li>
      */
     public $SignatureVersion;
 
     /**
-     * @var string Region of the bucket.
+     * @var string Bucket region.
      */
     public $Region;
 
     /**
-     * @param string $AccessKeyId Authentication parameter access key id.
-     * @param string $SecretAccessKey Authentication parameter secret access key.
-     * @param string $SignatureVersion Authentication version. values:.
-<Li>V2: v2 version;</li>.
-<Li>V4: v4 version.</li>.
-     * @param string $Region Region of the bucket.
+     * @param string $AccessKeyId Access Key ID authentication parameter.
+     * @param string $SecretAccessKey Secret Access Key authentication parameter.
+     * @param string $SignatureVersion Authentication version. Valid values:
+<li>v2: v2 version;</li>
+<li>v4: v4 version.</li>
+     * @param string $Region Bucket region.
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindZoneToPlan request structure.
  *
- * @method string getZoneId() Obtain ID of the site to be bound.
- * @method void setZoneId(string $ZoneId) Set ID of the site to be bound.
- * @method string getPlanId() Obtain ID of the target plan.
- * @method void setPlanId(string $PlanId) Set ID of the target plan.
+ * @method string getZoneId() Obtain Site ID of the selected site that is not bound to a package.
+ * @method void setZoneId(string $ZoneId) Set Site ID of the selected site that is not bound to a package.
+ * @method string getPlanId() Obtain Target package ID to be bound.
+ * @method void setPlanId(string $PlanId) Set Target package ID to be bound.
  */
 class BindZoneToPlanRequest extends AbstractModel
 {
     /**
-     * @var string ID of the site to be bound.
+     * @var string Site ID of the selected site that is not bound to a package.
      */
     public $ZoneId;
 
     /**
-     * @var string ID of the target plan.
+     * @var string Target package ID to be bound.
      */
     public $PlanId;
 
     /**
-     * @param string $ZoneId ID of the site to be bound.
-     * @param string $PlanId ID of the target plan.
+     * @param string $ZoneId Site ID of the selected site that is not bound to a package.
+     * @param string $PlanId Target package ID to be bound.
      */
     function __construct()
     {

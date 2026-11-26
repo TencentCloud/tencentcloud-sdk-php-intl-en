@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Access URL redirect HostName configuration parameters.
+ * HostName configuration parameter for access URL redirection.
  *
- * @method string getAction() Obtain Target hostname configuration, valid values are:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom</li>.
- * @method void setAction(string $Action) Set Target hostname configuration, valid values are:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom</li>.
- * @method string getValue() Obtain Custom value for target hostname, maximum length is 1024.<br>note: when action is custom, this field is required; when action is follow, this field is not effective.
- * @method void setValue(string $Value) Set Custom value for target hostname, maximum length is 1024.<br>note: when action is custom, this field is required; when action is follow, this field is not effective.
+ * @method string getAction() Obtain Target HostName configuration. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom.</li>
+ * @method void setAction(string $Action) Set Target HostName configuration. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom.</li>
+ * @method string getValue() Obtain custom value of the target HostName. Maximum length: 1024.<br>Note: This field is required when Action is custom, and it is ineffective when Action is follow.
+ * @method void setValue(string $Value) Set custom value of the target HostName. Maximum length: 1024.<br>Note: This field is required when Action is custom, and it is ineffective when Action is follow.
  */
 class HostName extends AbstractModel
 {
     /**
-     * @var string Target hostname configuration, valid values are:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom</li>.
+     * @var string Target HostName configuration. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom.</li>
      */
     public $Action;
 
     /**
-     * @var string Custom value for target hostname, maximum length is 1024.<br>note: when action is custom, this field is required; when action is follow, this field is not effective.
+     * @var string custom value of the target HostName. Maximum length: 1024.<br>Note: This field is required when Action is custom, and it is ineffective when Action is follow.
      */
     public $Value;
 
     /**
-     * @param string $Action Target hostname configuration, valid values are:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom</li>.
-     * @param string $Value Custom value for target hostname, maximum length is 1024.<br>note: when action is custom, this field is required; when action is follow, this field is not effective.
+     * @param string $Action Target HostName configuration. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom.</li>
+     * @param string $Value custom value of the target HostName. Maximum length: 1024.<br>Note: This field is required when Action is custom, and it is ineffective when Action is follow.
      */
     function __construct()
     {

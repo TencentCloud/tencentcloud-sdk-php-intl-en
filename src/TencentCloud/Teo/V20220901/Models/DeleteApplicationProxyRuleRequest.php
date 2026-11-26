@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteApplicationProxyRule request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getProxyId() Obtain The proxy ID.
- * @method void setProxyId(string $ProxyId) Set The proxy ID.
- * @method string getRuleId() Obtain The rule ID.
- * @method void setRuleId(string $RuleId) Set The rule ID.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method string getProxyId() Obtain Proxy ID.
+ * @method void setProxyId(string $ProxyId) Set Proxy ID.
+ * @method string getRuleId() Obtain Rule ID.
+ * @method void setRuleId(string $RuleId) Set Rule ID.
  */
 class DeleteApplicationProxyRuleRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var string The proxy ID.
+     * @var string Proxy ID.
      */
     public $ProxyId;
 
     /**
-     * @var string The rule ID.
+     * @var string Rule ID.
      */
     public $RuleId;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $ProxyId The proxy ID.
-     * @param string $RuleId The rule ID.
+     * @param string $ZoneId Site ID.
+     * @param string $ProxyId Proxy ID.
+     * @param string $RuleId Rule ID.
      */
     function __construct()
     {

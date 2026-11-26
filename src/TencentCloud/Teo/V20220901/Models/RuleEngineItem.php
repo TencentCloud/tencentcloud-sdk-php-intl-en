@@ -18,64 +18,76 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rule details of the rule engine.
+ * Rule details of the engine rule.
  *
- * @method string getStatus() Obtain Rule status. values: <li>`enable`: enabled</li> <li>`disable`: disabled</li>.
- * @method void setStatus(string $Status) Set Rule status. values: <li>`enable`: enabled</li> <li>`disable`: disabled</li>.
- * @method string getRuleId() Obtain Rule id. a unique identifier for the rule. this parameter is required when calling `modifyl7accrules`.
- * @method void setRuleId(string $RuleId) Set Rule id. a unique identifier for the rule. this parameter is required when calling `modifyl7accrules`.
- * @method string getRuleName() Obtain Rule name. name length limit: 255 characters.
- * @method void setRuleName(string $RuleName) Set Rule name. name length limit: 255 characters.
- * @method array getDescription() Obtain Rule annotation. multiple annotations can be added.
- * @method void setDescription(array $Description) Set Rule annotation. multiple annotations can be added.
- * @method array getBranches() Obtain Sub-Rule branch. this list currently supports filling in only one rule; multiple entries are invalid.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setBranches(array $Branches) Set Sub-Rule branch. this list currently supports filling in only one rule; multiple entries are invalid.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method integer getRulePriority() Obtain Rule priority. only used as an output parameter.
- * @method void setRulePriority(integer $RulePriority) Set Rule priority. only used as an output parameter.
+ * @method string getStatus() Obtain <p>Rule status. Valid values: <li> enable: Enable; </li><li> disable: Disabled.</li></p>
+ * @method void setStatus(string $Status) Set <p>Rule status. Valid values: <li> enable: Enable; </li><li> disable: Disabled.</li></p>
+ * @method string getRuleId() Obtain <p>Rule ID. The unique identifier of a rule. This parameter is required when calling ModifyL7AccRule.</p>
+ * @method void setRuleId(string $RuleId) Set <p>Rule ID. The unique identifier of a rule. This parameter is required when calling ModifyL7AccRule.</p>
+ * @method string getRuleName() Obtain <p>Rule name. The name can contain no more than 255 characters.</p>
+ * @method void setRuleName(string $RuleName) Set <p>Rule name. The name can contain no more than 255 characters.</p>
+ * @method array getDescription() Obtain <p>Rule note. Multiple notes can be filled.</p>
+ * @method void setDescription(array $Description) Set <p>Rule note. Multiple notes can be filled.</p>
+ * @method array getCustomVariables() Obtain <p>List of rule-level custom variables. CustomVariable.Name requires the use of user.rule. as a prefix. Variables are initialized sequentially in the array order. InitialValue supports referencing site-level custom variables and rule-level custom variables before the current variable. It does not support referencing the current variable itself or rule-level custom variables after it. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. When Branches is empty, CustomVariable cannot be filled in, and any entry is invalid.</p>
+ * @method void setCustomVariables(array $CustomVariables) Set <p>List of rule-level custom variables. CustomVariable.Name requires the use of user.rule. as a prefix. Variables are initialized sequentially in the array order. InitialValue supports referencing site-level custom variables and rule-level custom variables before the current variable. It does not support referencing the current variable itself or rule-level custom variables after it. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. When Branches is empty, CustomVariable cannot be filled in, and any entry is invalid.</p>
+ * @method array getCustomVariableOperations() Obtain <p>Operation details of rule-level custom variables. You can reference site-level custom variables and rule-level custom variables defined in the current rule during operations. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. This list currently only supports filling in one rule; additional entries are invalid. When Branches is empty, CustomVariableOperations is not allowed to be filled in, and any entry will be invalid.</p>
+ * @method void setCustomVariableOperations(array $CustomVariableOperations) Set <p>Operation details of rule-level custom variables. You can reference site-level custom variables and rule-level custom variables defined in the current rule during operations. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. This list currently only supports filling in one rule; additional entries are invalid. When Branches is empty, CustomVariableOperations is not allowed to be filled in, and any entry will be invalid.</p>
+ * @method array getBranches() Obtain <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
+ * @method void setBranches(array $Branches) Set <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
+ * @method integer getRulePriority() Obtain <p>Rule priority. Output only.</p>
+ * @method void setRulePriority(integer $RulePriority) Set <p>Rule priority. Output only.</p>
  */
 class RuleEngineItem extends AbstractModel
 {
     /**
-     * @var string Rule status. values: <li>`enable`: enabled</li> <li>`disable`: disabled</li>.
+     * @var string <p>Rule status. Valid values: <li> enable: Enable; </li><li> disable: Disabled.</li></p>
      */
     public $Status;
 
     /**
-     * @var string Rule id. a unique identifier for the rule. this parameter is required when calling `modifyl7accrules`.
+     * @var string <p>Rule ID. The unique identifier of a rule. This parameter is required when calling ModifyL7AccRule.</p>
      */
     public $RuleId;
 
     /**
-     * @var string Rule name. name length limit: 255 characters.
+     * @var string <p>Rule name. The name can contain no more than 255 characters.</p>
      */
     public $RuleName;
 
     /**
-     * @var array Rule annotation. multiple annotations can be added.
+     * @var array <p>Rule note. Multiple notes can be filled.</p>
      */
     public $Description;
 
     /**
-     * @var array Sub-Rule branch. this list currently supports filling in only one rule; multiple entries are invalid.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var array <p>List of rule-level custom variables. CustomVariable.Name requires the use of user.rule. as a prefix. Variables are initialized sequentially in the array order. InitialValue supports referencing site-level custom variables and rule-level custom variables before the current variable. It does not support referencing the current variable itself or rule-level custom variables after it. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. When Branches is empty, CustomVariable cannot be filled in, and any entry is invalid.</p>
+     */
+    public $CustomVariables;
+
+    /**
+     * @var array <p>Operation details of rule-level custom variables. You can reference site-level custom variables and rule-level custom variables defined in the current rule during operations. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. This list currently only supports filling in one rule; additional entries are invalid. When Branches is empty, CustomVariableOperations is not allowed to be filled in, and any entry will be invalid.</p>
+     */
+    public $CustomVariableOperations;
+
+    /**
+     * @var array <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
      */
     public $Branches;
 
     /**
-     * @var integer Rule priority. only used as an output parameter.
+     * @var integer <p>Rule priority. Output only.</p>
      */
     public $RulePriority;
 
     /**
-     * @param string $Status Rule status. values: <li>`enable`: enabled</li> <li>`disable`: disabled</li>.
-     * @param string $RuleId Rule id. a unique identifier for the rule. this parameter is required when calling `modifyl7accrules`.
-     * @param string $RuleName Rule name. name length limit: 255 characters.
-     * @param array $Description Rule annotation. multiple annotations can be added.
-     * @param array $Branches Sub-Rule branch. this list currently supports filling in only one rule; multiple entries are invalid.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param integer $RulePriority Rule priority. only used as an output parameter.
+     * @param string $Status <p>Rule status. Valid values: <li> enable: Enable; </li><li> disable: Disabled.</li></p>
+     * @param string $RuleId <p>Rule ID. The unique identifier of a rule. This parameter is required when calling ModifyL7AccRule.</p>
+     * @param string $RuleName <p>Rule name. The name can contain no more than 255 characters.</p>
+     * @param array $Description <p>Rule note. Multiple notes can be filled.</p>
+     * @param array $CustomVariables <p>List of rule-level custom variables. CustomVariable.Name requires the use of user.rule. as a prefix. Variables are initialized sequentially in the array order. InitialValue supports referencing site-level custom variables and rule-level custom variables before the current variable. It does not support referencing the current variable itself or rule-level custom variables after it. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. When Branches is empty, CustomVariable cannot be filled in, and any entry is invalid.</p>
+     * @param array $CustomVariableOperations <p>Operation details of rule-level custom variables. You can reference site-level custom variables and rule-level custom variables defined in the current rule during operations. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. This list currently only supports filling in one rule; additional entries are invalid. When Branches is empty, CustomVariableOperations is not allowed to be filled in, and any entry will be invalid.</p>
+     * @param array $Branches <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
+     * @param integer $RulePriority <p>Rule priority. Output only.</p>
      */
     function __construct()
     {
@@ -104,6 +116,24 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("CustomVariables",$param) and $param["CustomVariables"] !== null) {
+            $this->CustomVariables = [];
+            foreach ($param["CustomVariables"] as $key => $value){
+                $obj = new CustomVariable();
+                $obj->deserialize($value);
+                array_push($this->CustomVariables, $obj);
+            }
+        }
+
+        if (array_key_exists("CustomVariableOperations",$param) and $param["CustomVariableOperations"] !== null) {
+            $this->CustomVariableOperations = [];
+            foreach ($param["CustomVariableOperations"] as $key => $value){
+                $obj = new CustomVariableOperation();
+                $obj->deserialize($value);
+                array_push($this->CustomVariableOperations, $obj);
+            }
         }
 
         if (array_key_exists("Branches",$param) and $param["Branches"] !== null) {

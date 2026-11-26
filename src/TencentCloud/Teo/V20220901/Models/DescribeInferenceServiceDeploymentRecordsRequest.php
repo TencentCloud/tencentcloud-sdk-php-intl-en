@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain <p>Site ID.</p>
  * @method void setZoneId(string $ZoneId) Set <p>Site ID.</p>
- * @method string getServiceId() Obtain <p>ID of the inference service.</p>
- * @method void setServiceId(string $ServiceId) Set <p>ID of the inference service.</p>
- * @method string getSortBy() Obtain <p>Sorting field. Valid values: <li>create-time: Deployment creation time.</li>Default value: create-time.</p>
- * @method void setSortBy(string $SortBy) Set <p>Sorting field. Valid values: <li>create-time: Deployment creation time.</li>Default value: create-time.</p>
- * @method string getSortOrder() Obtain <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
- * @method void setSortOrder(string $SortOrder) Set <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+ * @method string getServiceId() Obtain <p>Inference service ID.</p>
+ * @method void setServiceId(string $ServiceId) Set <p>Inference service ID.</p>
+ * @method string getSortBy() Obtain <p>Sorting field. Valid values: <li>create-time: deployment creation time.</li> Default value: create-time.</p>
+ * @method void setSortBy(string $SortBy) Set <p>Sorting field. Valid values: <li>create-time: deployment creation time.</li> Default value: create-time.</p>
+ * @method string getSortOrder() Obtain <p>Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.</p>
+ * @method void setSortOrder(string $SortOrder) Set <p>Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.</p>
  * @method integer getOffset() Obtain <p>Paging offset. Default value: 0.</p>
  * @method void setOffset(integer $Offset) Set <p>Paging offset. Default value: 0.</p>
  * @method integer getLimit() Obtain <p>Number of returned entries. Default value: 20. Maximum value: 100.</p>
@@ -41,17 +41,17 @@ class DescribeInferenceServiceDeploymentRecordsRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string <p>ID of the inference service.</p>
+     * @var string <p>Inference service ID.</p>
      */
     public $ServiceId;
 
     /**
-     * @var string <p>Sorting field. Valid values: <li>create-time: Deployment creation time.</li>Default value: create-time.</p>
+     * @var string <p>Sorting field. Valid values: <li>create-time: deployment creation time.</li> Default value: create-time.</p>
      */
     public $SortBy;
 
     /**
-     * @var string <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+     * @var string <p>Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.</p>
      */
     public $SortOrder;
 
@@ -67,9 +67,9 @@ class DescribeInferenceServiceDeploymentRecordsRequest extends AbstractModel
 
     /**
      * @param string $ZoneId <p>Site ID.</p>
-     * @param string $ServiceId <p>ID of the inference service.</p>
-     * @param string $SortBy <p>Sorting field. Valid values: <li>create-time: Deployment creation time.</li>Default value: create-time.</p>
-     * @param string $SortOrder <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+     * @param string $ServiceId <p>Inference service ID.</p>
+     * @param string $SortBy <p>Sorting field. Valid values: <li>create-time: deployment creation time.</li> Default value: create-time.</p>
+     * @param string $SortOrder <p>Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.</p>
      * @param integer $Offset <p>Paging offset. Default value: 0.</p>
      * @param integer $Limit <p>Number of returned entries. Default value: 20. Maximum value: 100.</p>
      */

@@ -18,44 +18,44 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Standard debugging
+ * Supports the standard debug struct
  *
- * @method string getSwitch() Obtain Whether to enable standard debugging. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
- * @method void setSwitch(string $Switch) Set Whether to enable standard debugging. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
- * @method array getAllowClientIPList() Obtain The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
- * @method void setAllowClientIPList(array $AllowClientIPList) Set The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
- * @method string getExpireTime() Obtain The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
- * @method void setExpireTime(string $ExpireTime) Set The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
+ * @method string getSwitch() Obtain Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method array getAllowClientIPList() Obtain Allowed client sources. Supports filling in IPv4 and IPv6 IPs or IP ranges. 0.0.0.0/0 indicates that all IPv4 clients are allowed for debugging, and ::/0 indicates that all IPv6 clients are allowed for debugging.
+ * @method void setAllowClientIPList(array $AllowClientIPList) Set Allowed client sources. Supports filling in IPv4 and IPv6 IPs or IP ranges. 0.0.0.0/0 indicates that all IPv4 clients are allowed for debugging, and ::/0 indicates that all IPv6 clients are allowed for debugging.
+ * @method string getExpireTime() Obtain Debug feature expiration time. If the set time is exceeded, the feature becomes invalid.
+ * @method void setExpireTime(string $ExpireTime) Set Debug feature expiration time. If the set time is exceeded, the feature becomes invalid.
  */
 class StandardDebug extends AbstractModel
 {
     /**
-     * @var string Whether to enable standard debugging. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
+     * @var string Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var array The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+     * @var array Allowed client sources. Supports filling in IPv4 and IPv6 IPs or IP ranges. 0.0.0.0/0 indicates that all IPv4 clients are allowed for debugging, and ::/0 indicates that all IPv6 clients are allowed for debugging.
      */
     public $AllowClientIPList;
 
     /**
-     * @var string The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
+     * @var string Debug feature expiration time. If the set time is exceeded, the feature becomes invalid.
      */
     public $ExpireTime;
 
     /**
-     * @param string $Switch Whether to enable standard debugging. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-     * @param array $AllowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
-     * @param string $ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
+     * @param string $Switch Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param array $AllowClientIPList Allowed client sources. Supports filling in IPv4 and IPv6 IPs or IP ranges. 0.0.0.0/0 indicates that all IPv4 clients are allowed for debugging, and ::/0 indicates that all IPv6 clients are allowed for debugging.
+     * @param string $ExpireTime Debug feature expiration time. If the set time is exceeded, the feature becomes invalid.
      */
     function __construct()
     {

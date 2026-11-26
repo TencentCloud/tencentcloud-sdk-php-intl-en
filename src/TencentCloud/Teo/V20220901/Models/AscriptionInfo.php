@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The site ownership information
+ * Site ownership information
  *
- * @method string getSubdomain() Obtain 
- * @method void setSubdomain(string $Subdomain) Set 
- * @method string getRecordType() Obtain The record type.
- * @method void setRecordType(string $RecordType) Set The record type.
- * @method string getRecordValue() Obtain The record value.
- * @method void setRecordValue(string $RecordValue) Set The record value.
+ * @method string getSubdomain() Obtain Host record.
+ * @method void setSubdomain(string $Subdomain) Set Host record.
+ * @method string getRecordType() Obtain Record type.
+ * @method void setRecordType(string $RecordType) Set Record type.
+ * @method string getRecordValue() Obtain Record value.
+ * @method void setRecordValue(string $RecordValue) Set Record value.
  */
 class AscriptionInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Host record.
      */
     public $Subdomain;
 
     /**
-     * @var string The record type.
+     * @var string Record type.
      */
     public $RecordType;
 
     /**
-     * @var string The record value.
+     * @var string Record value.
      */
     public $RecordValue;
 
     /**
-     * @param string $Subdomain 
-     * @param string $RecordType The record type.
-     * @param string $RecordValue The record value.
+     * @param string $Subdomain Host record.
+     * @param string $RecordType Record type.
+     * @param string $RecordValue Record value.
      */
     function __construct()
     {

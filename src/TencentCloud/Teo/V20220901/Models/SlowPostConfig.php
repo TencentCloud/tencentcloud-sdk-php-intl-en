@@ -18,33 +18,33 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Slow attack defense configuration.
+ * Slow attack configuration.
  *
- * @method string getSwitch() Obtain Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+ * @method string getSwitch() Obtain Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
  * @method FirstPartConfig getFirstPartConfig() Obtain First packet configuration.
  * @method void setFirstPartConfig(FirstPartConfig $FirstPartConfig) Set First packet configuration.
- * @method SlowRateConfig getSlowRateConfig() Obtain Specifies the basic configuration.
- * @method void setSlowRateConfig(SlowRateConfig $SlowRateConfig) Set Specifies the basic configuration.
- * @method string getAction() Obtain Handling action for slow attack. valid values:.
-<li>`monitor`: observe</li>.
-<li>`drop`: block the request.</li>.
- * @method void setAction(string $Action) Set Handling action for slow attack. valid values:.
-<li>`monitor`: observe</li>.
-<li>`drop`: block the request.</li>.
- * @method integer getRuleId() Obtain Specifies the Id of this rule.
- * @method void setRuleId(integer $RuleId) Set Specifies the Id of this rule.
+ * @method SlowRateConfig getSlowRateConfig() Obtain Basic configuration.
+ * @method void setSlowRateConfig(SlowRateConfig $SlowRateConfig) Set Basic configuration.
+ * @method string getAction() Obtain Handling action for slow attacks. Valid values:
+<li>monitor: observation;</li>
+<li>drop: block.</li>
+ * @method void setAction(string $Action) Set Handling action for slow attacks. Valid values:
+<li>monitor: observation;</li>
+<li>drop: block.</li>
+ * @method integer getRuleId() Obtain Rule Id.
+ * @method void setRuleId(integer $RuleId) Set Rule Id.
  */
 class SlowPostConfig extends AbstractModel
 {
     /**
-     * @var string Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
@@ -54,32 +54,32 @@ class SlowPostConfig extends AbstractModel
     public $FirstPartConfig;
 
     /**
-     * @var SlowRateConfig Specifies the basic configuration.
+     * @var SlowRateConfig Basic configuration.
      */
     public $SlowRateConfig;
 
     /**
-     * @var string Handling action for slow attack. valid values:.
-<li>`monitor`: observe</li>.
-<li>`drop`: block the request.</li>.
+     * @var string Handling action for slow attacks. Valid values:
+<li>monitor: observation;</li>
+<li>drop: block.</li>
      */
     public $Action;
 
     /**
-     * @var integer Specifies the Id of this rule.
+     * @var integer Rule Id.
      */
     public $RuleId;
 
     /**
-     * @param string $Switch Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @param string $Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      * @param FirstPartConfig $FirstPartConfig First packet configuration.
-     * @param SlowRateConfig $SlowRateConfig Specifies the basic configuration.
-     * @param string $Action Handling action for slow attack. valid values:.
-<li>`monitor`: observe</li>.
-<li>`drop`: block the request.</li>.
-     * @param integer $RuleId Specifies the Id of this rule.
+     * @param SlowRateConfig $SlowRateConfig Basic configuration.
+     * @param string $Action Handling action for slow attacks. Valid values:
+<li>monitor: observation;</li>
+<li>drop: block.</li>
+     * @param integer $RuleId Rule Id.
      */
     function __construct()
     {

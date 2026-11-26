@@ -18,32 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Offline cache feature status switch.
+ * Whether offline cache is enabled.
  *
- * @method string getSwitch() Obtain Whether to enable offline caching. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method void setSwitch(string $Switch) Set Whether to enable offline caching. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+ * @method string getSwitch() Obtain Offline cache switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Offline cache switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
  */
 class OfflineCacheParameters extends AbstractModel
 {
     /**
-     * @var string Whether to enable offline caching. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @var string Offline cache switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable offline caching. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @param string $Switch Offline cache switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     function __construct()
     {

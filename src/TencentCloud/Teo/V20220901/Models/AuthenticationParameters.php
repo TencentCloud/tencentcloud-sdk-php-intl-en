@@ -18,108 +18,108 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Token authentication configuration parameters
+ * Token authentication configuration parameters.
  *
- * @method string getAuthType() Obtain Authentication type. valid values:.
+ * @method string getAuthType() Obtain Authentication type. Valid values:
 
-<Li>TypeA: authentication method a type, for specific meaning please refer to [authentication method a](https://intl.cloud.tencent.com/document/product/1552/109329?from_cn_redirect=1);</li>.
-<Li>TypeB: authentication method b type, for specific meaning please refer to [authentication method b](https://intl.cloud.tencent.com/document/product/1552/109330?from_cn_redirect=1);</li>.
-<Li>TypeC: authentication method c type, for specific meaning please refer to [authentication method c](https://intl.cloud.tencent.com/document/product/1552/109331?from_cn_redirect=1);</li>.
-<Li>TypeD: authentication method d type, for specific meaning please refer to [authentication method d](https://intl.cloud.tencent.com/document/product/1552/109332?from_cn_redirect=1);</li>.
-<Li>TypeVOD: authentication method v type, for specific meaning please refer to [authentication method v](https://intl.cloud.tencent.com/document/product/1552/109333?from_cn_redirect=1).</li>.
- * @method void setAuthType(string $AuthType) Set Authentication type. valid values:.
+<li>TypeA: authentication method type A. For its specific meaning, refer to [Authentication Method A](https://www.tencentcloud.com/document/product/1552/109329?from_cn_redirect=1);</li>
+<li>TypeB: authentication method B type. For its specific meaning, refer to [Authentication Method B](https://www.tencentcloud.com/document/product/1552/109330?from_cn_redirect=1);</li>
+<li>TypeC: authentication method C type. For its specific meaning, refer to [Authentication Method C](https://www.tencentcloud.com/document/product/1552/109331?from_cn_redirect=1);</li>
+<li>TypeD: authentication method D type. For its specific meaning, refer to [Authentication Method D](https://www.tencentcloud.com/document/product/1552/109332?from_cn_redirect=1);</li>
+<li>TypeVOD: authentication method V type. For its specific meaning, refer to [Authentication Method V](https://www.tencentcloud.com/document/product/1552/109333?from_cn_redirect=1).</li>
+ * @method void setAuthType(string $AuthType) Set Authentication type. Valid values:
 
-<Li>TypeA: authentication method a type, for specific meaning please refer to [authentication method a](https://intl.cloud.tencent.com/document/product/1552/109329?from_cn_redirect=1);</li>.
-<Li>TypeB: authentication method b type, for specific meaning please refer to [authentication method b](https://intl.cloud.tencent.com/document/product/1552/109330?from_cn_redirect=1);</li>.
-<Li>TypeC: authentication method c type, for specific meaning please refer to [authentication method c](https://intl.cloud.tencent.com/document/product/1552/109331?from_cn_redirect=1);</li>.
-<Li>TypeD: authentication method d type, for specific meaning please refer to [authentication method d](https://intl.cloud.tencent.com/document/product/1552/109332?from_cn_redirect=1);</li>.
-<Li>TypeVOD: authentication method v type, for specific meaning please refer to [authentication method v](https://intl.cloud.tencent.com/document/product/1552/109333?from_cn_redirect=1).</li>.
- * @method string getSecretKey() Obtain The primary authentication key consists of 6–40 uppercase and lowercase english letters or digits, and cannot contain " and $.
- * @method void setSecretKey(string $SecretKey) Set The primary authentication key consists of 6–40 uppercase and lowercase english letters or digits, and cannot contain " and $.
- * @method integer getTimeout() Obtain Validity period of the authentication url, in seconds, value range: 1–630720000. used to determine if the client access request has expired:.
-<Li>If the current time exceeds "timestamp + validity period", it is an expired request, and a 403 is returned directly.</li>.
-<Li>If the current time does not exceed "timestamp + validity period", the request is not expired, and the md5 string is further validated.</li> note: when authtype is one of typea, typeb, typec, or typed, this field is required.
- * @method void setTimeout(integer $Timeout) Set Validity period of the authentication url, in seconds, value range: 1–630720000. used to determine if the client access request has expired:.
-<Li>If the current time exceeds "timestamp + validity period", it is an expired request, and a 403 is returned directly.</li>.
-<Li>If the current time does not exceed "timestamp + validity period", the request is not expired, and the md5 string is further validated.</li> note: when authtype is one of typea, typeb, typec, or typed, this field is required.
- * @method string getBackupSecretKey() Obtain The backup authentication key consists of 6–40 uppercase and lowercase english letters or digits, and cannot contain " and $.
- * @method void setBackupSecretKey(string $BackupSecretKey) Set The backup authentication key consists of 6–40 uppercase and lowercase english letters or digits, and cannot contain " and $.
- * @method string getAuthParam() Obtain Authentication parameters name. the node will validate the value corresponding to this parameter name. consists of 1-100 uppercase and lowercase letters, numbers, or underscores.<br>note: this field is required when authtype is either typea or typed.
- * @method void setAuthParam(string $AuthParam) Set Authentication parameters name. the node will validate the value corresponding to this parameter name. consists of 1-100 uppercase and lowercase letters, numbers, or underscores.<br>note: this field is required when authtype is either typea or typed.
- * @method string getTimeParam() Obtain Authentication timestamp. it cannot be the same as the value of the authparam field.<br>note: this field is required when authtype is typed.
- * @method void setTimeParam(string $TimeParam) Set Authentication timestamp. it cannot be the same as the value of the authparam field.<br>note: this field is required when authtype is typed.
- * @method string getTimeFormat() Obtain Authentication time format. values:.
-<Li>Dec: decimal;</li>.
-<Li>Hex: hexadecimal.</li>note: this field is required when authtype is typed. the default is hex.
- * @method void setTimeFormat(string $TimeFormat) Set Authentication time format. values:.
-<Li>Dec: decimal;</li>.
-<Li>Hex: hexadecimal.</li>note: this field is required when authtype is typed. the default is hex.
+<li>TypeA: authentication method type A. For its specific meaning, refer to [Authentication Method A](https://www.tencentcloud.com/document/product/1552/109329?from_cn_redirect=1);</li>
+<li>TypeB: authentication method B type. For its specific meaning, refer to [Authentication Method B](https://www.tencentcloud.com/document/product/1552/109330?from_cn_redirect=1);</li>
+<li>TypeC: authentication method C type. For its specific meaning, refer to [Authentication Method C](https://www.tencentcloud.com/document/product/1552/109331?from_cn_redirect=1);</li>
+<li>TypeD: authentication method D type. For its specific meaning, refer to [Authentication Method D](https://www.tencentcloud.com/document/product/1552/109332?from_cn_redirect=1);</li>
+<li>TypeVOD: authentication method V type. For its specific meaning, refer to [Authentication Method V](https://www.tencentcloud.com/document/product/1552/109333?from_cn_redirect=1).</li>
+ * @method string getSecretKey() Obtain Primary authentication key. It contains 6–40 uppercase/lowercase letters or digits and cannot contain " or $.
+ * @method void setSecretKey(string $SecretKey) Set Primary authentication key. It contains 6–40 uppercase/lowercase letters or digits and cannot contain " or $.
+ * @method integer getTimeout() Obtain Valid duration of the authentication URL, in seconds. Value range: 1–630720000. It is used to determine whether the client access request is expired:
+<li>If the current time exceeds the "timestamp + valid duration" time, the request is expired and 403 is returned directly.</li>
+<li>If the current time has not exceeded the "timestamp + valid duration" time, the request is not expired. Proceed to validate the md5 string.</li>Note: This field is required when AuthType is one of TypeA, TypeB, TypeC, or TypeD.
+ * @method void setTimeout(integer $Timeout) Set Valid duration of the authentication URL, in seconds. Value range: 1–630720000. It is used to determine whether the client access request is expired:
+<li>If the current time exceeds the "timestamp + valid duration" time, the request is expired and 403 is returned directly.</li>
+<li>If the current time has not exceeded the "timestamp + valid duration" time, the request is not expired. Proceed to validate the md5 string.</li>Note: This field is required when AuthType is one of TypeA, TypeB, TypeC, or TypeD.
+ * @method string getBackupSecretKey() Obtain Backup authentication key. It contains 6–40 uppercase/lowercase letters or digits and cannot contain " or $.
+ * @method void setBackupSecretKey(string $BackupSecretKey) Set Backup authentication key. It contains 6–40 uppercase/lowercase letters or digits and cannot contain " or $.
+ * @method string getAuthParam() Obtain Authentication parameter name. The node will validate the value corresponding to this parameter name. It consists of 1–100 upper- and lower-case letters, digits, or underscores.<br>Note: This field is required when AuthType is one of TypeA and TypeD.
+ * @method void setAuthParam(string $AuthParam) Set Authentication parameter name. The node will validate the value corresponding to this parameter name. It consists of 1–100 upper- and lower-case letters, digits, or underscores.<br>Note: This field is required when AuthType is one of TypeA and TypeD.
+ * @method string getTimeParam() Obtain Authentication timestamp. It cannot be the same as the AuthParam field value.<br>Note: This field is required when AuthType is TypeD.
+ * @method void setTimeParam(string $TimeParam) Set Authentication timestamp. It cannot be the same as the AuthParam field value.<br>Note: This field is required when AuthType is TypeD.
+ * @method string getTimeFormat() Obtain Authentication time format. Valid values:
+<li>dec: decimal;</li>
+<li>hex: hexadecimal.</li>Note: This field is required when AuthType is TypeD. Default value: hex.
+ * @method void setTimeFormat(string $TimeFormat) Set Authentication time format. Valid values:
+<li>dec: decimal;</li>
+<li>hex: hexadecimal.</li>Note: This field is required when AuthType is TypeD. Default value: hex.
  */
 class AuthenticationParameters extends AbstractModel
 {
     /**
-     * @var string Authentication type. valid values:.
+     * @var string Authentication type. Valid values:
 
-<Li>TypeA: authentication method a type, for specific meaning please refer to [authentication method a](https://intl.cloud.tencent.com/document/product/1552/109329?from_cn_redirect=1);</li>.
-<Li>TypeB: authentication method b type, for specific meaning please refer to [authentication method b](https://intl.cloud.tencent.com/document/product/1552/109330?from_cn_redirect=1);</li>.
-<Li>TypeC: authentication method c type, for specific meaning please refer to [authentication method c](https://intl.cloud.tencent.com/document/product/1552/109331?from_cn_redirect=1);</li>.
-<Li>TypeD: authentication method d type, for specific meaning please refer to [authentication method d](https://intl.cloud.tencent.com/document/product/1552/109332?from_cn_redirect=1);</li>.
-<Li>TypeVOD: authentication method v type, for specific meaning please refer to [authentication method v](https://intl.cloud.tencent.com/document/product/1552/109333?from_cn_redirect=1).</li>.
+<li>TypeA: authentication method type A. For its specific meaning, refer to [Authentication Method A](https://www.tencentcloud.com/document/product/1552/109329?from_cn_redirect=1);</li>
+<li>TypeB: authentication method B type. For its specific meaning, refer to [Authentication Method B](https://www.tencentcloud.com/document/product/1552/109330?from_cn_redirect=1);</li>
+<li>TypeC: authentication method C type. For its specific meaning, refer to [Authentication Method C](https://www.tencentcloud.com/document/product/1552/109331?from_cn_redirect=1);</li>
+<li>TypeD: authentication method D type. For its specific meaning, refer to [Authentication Method D](https://www.tencentcloud.com/document/product/1552/109332?from_cn_redirect=1);</li>
+<li>TypeVOD: authentication method V type. For its specific meaning, refer to [Authentication Method V](https://www.tencentcloud.com/document/product/1552/109333?from_cn_redirect=1).</li>
      */
     public $AuthType;
 
     /**
-     * @var string The primary authentication key consists of 6–40 uppercase and lowercase english letters or digits, and cannot contain " and $.
+     * @var string Primary authentication key. It contains 6–40 uppercase/lowercase letters or digits and cannot contain " or $.
      */
     public $SecretKey;
 
     /**
-     * @var integer Validity period of the authentication url, in seconds, value range: 1–630720000. used to determine if the client access request has expired:.
-<Li>If the current time exceeds "timestamp + validity period", it is an expired request, and a 403 is returned directly.</li>.
-<Li>If the current time does not exceed "timestamp + validity period", the request is not expired, and the md5 string is further validated.</li> note: when authtype is one of typea, typeb, typec, or typed, this field is required.
+     * @var integer Valid duration of the authentication URL, in seconds. Value range: 1–630720000. It is used to determine whether the client access request is expired:
+<li>If the current time exceeds the "timestamp + valid duration" time, the request is expired and 403 is returned directly.</li>
+<li>If the current time has not exceeded the "timestamp + valid duration" time, the request is not expired. Proceed to validate the md5 string.</li>Note: This field is required when AuthType is one of TypeA, TypeB, TypeC, or TypeD.
      */
     public $Timeout;
 
     /**
-     * @var string The backup authentication key consists of 6–40 uppercase and lowercase english letters or digits, and cannot contain " and $.
+     * @var string Backup authentication key. It contains 6–40 uppercase/lowercase letters or digits and cannot contain " or $.
      */
     public $BackupSecretKey;
 
     /**
-     * @var string Authentication parameters name. the node will validate the value corresponding to this parameter name. consists of 1-100 uppercase and lowercase letters, numbers, or underscores.<br>note: this field is required when authtype is either typea or typed.
+     * @var string Authentication parameter name. The node will validate the value corresponding to this parameter name. It consists of 1–100 upper- and lower-case letters, digits, or underscores.<br>Note: This field is required when AuthType is one of TypeA and TypeD.
      */
     public $AuthParam;
 
     /**
-     * @var string Authentication timestamp. it cannot be the same as the value of the authparam field.<br>note: this field is required when authtype is typed.
+     * @var string Authentication timestamp. It cannot be the same as the AuthParam field value.<br>Note: This field is required when AuthType is TypeD.
      */
     public $TimeParam;
 
     /**
-     * @var string Authentication time format. values:.
-<Li>Dec: decimal;</li>.
-<Li>Hex: hexadecimal.</li>note: this field is required when authtype is typed. the default is hex.
+     * @var string Authentication time format. Valid values:
+<li>dec: decimal;</li>
+<li>hex: hexadecimal.</li>Note: This field is required when AuthType is TypeD. Default value: hex.
      */
     public $TimeFormat;
 
     /**
-     * @param string $AuthType Authentication type. valid values:.
+     * @param string $AuthType Authentication type. Valid values:
 
-<Li>TypeA: authentication method a type, for specific meaning please refer to [authentication method a](https://intl.cloud.tencent.com/document/product/1552/109329?from_cn_redirect=1);</li>.
-<Li>TypeB: authentication method b type, for specific meaning please refer to [authentication method b](https://intl.cloud.tencent.com/document/product/1552/109330?from_cn_redirect=1);</li>.
-<Li>TypeC: authentication method c type, for specific meaning please refer to [authentication method c](https://intl.cloud.tencent.com/document/product/1552/109331?from_cn_redirect=1);</li>.
-<Li>TypeD: authentication method d type, for specific meaning please refer to [authentication method d](https://intl.cloud.tencent.com/document/product/1552/109332?from_cn_redirect=1);</li>.
-<Li>TypeVOD: authentication method v type, for specific meaning please refer to [authentication method v](https://intl.cloud.tencent.com/document/product/1552/109333?from_cn_redirect=1).</li>.
-     * @param string $SecretKey The primary authentication key consists of 6–40 uppercase and lowercase english letters or digits, and cannot contain " and $.
-     * @param integer $Timeout Validity period of the authentication url, in seconds, value range: 1–630720000. used to determine if the client access request has expired:.
-<Li>If the current time exceeds "timestamp + validity period", it is an expired request, and a 403 is returned directly.</li>.
-<Li>If the current time does not exceed "timestamp + validity period", the request is not expired, and the md5 string is further validated.</li> note: when authtype is one of typea, typeb, typec, or typed, this field is required.
-     * @param string $BackupSecretKey The backup authentication key consists of 6–40 uppercase and lowercase english letters or digits, and cannot contain " and $.
-     * @param string $AuthParam Authentication parameters name. the node will validate the value corresponding to this parameter name. consists of 1-100 uppercase and lowercase letters, numbers, or underscores.<br>note: this field is required when authtype is either typea or typed.
-     * @param string $TimeParam Authentication timestamp. it cannot be the same as the value of the authparam field.<br>note: this field is required when authtype is typed.
-     * @param string $TimeFormat Authentication time format. values:.
-<Li>Dec: decimal;</li>.
-<Li>Hex: hexadecimal.</li>note: this field is required when authtype is typed. the default is hex.
+<li>TypeA: authentication method type A. For its specific meaning, refer to [Authentication Method A](https://www.tencentcloud.com/document/product/1552/109329?from_cn_redirect=1);</li>
+<li>TypeB: authentication method B type. For its specific meaning, refer to [Authentication Method B](https://www.tencentcloud.com/document/product/1552/109330?from_cn_redirect=1);</li>
+<li>TypeC: authentication method C type. For its specific meaning, refer to [Authentication Method C](https://www.tencentcloud.com/document/product/1552/109331?from_cn_redirect=1);</li>
+<li>TypeD: authentication method D type. For its specific meaning, refer to [Authentication Method D](https://www.tencentcloud.com/document/product/1552/109332?from_cn_redirect=1);</li>
+<li>TypeVOD: authentication method V type. For its specific meaning, refer to [Authentication Method V](https://www.tencentcloud.com/document/product/1552/109333?from_cn_redirect=1).</li>
+     * @param string $SecretKey Primary authentication key. It contains 6–40 uppercase/lowercase letters or digits and cannot contain " or $.
+     * @param integer $Timeout Valid duration of the authentication URL, in seconds. Value range: 1–630720000. It is used to determine whether the client access request is expired:
+<li>If the current time exceeds the "timestamp + valid duration" time, the request is expired and 403 is returned directly.</li>
+<li>If the current time has not exceeded the "timestamp + valid duration" time, the request is not expired. Proceed to validate the md5 string.</li>Note: This field is required when AuthType is one of TypeA, TypeB, TypeC, or TypeD.
+     * @param string $BackupSecretKey Backup authentication key. It contains 6–40 uppercase/lowercase letters or digits and cannot contain " or $.
+     * @param string $AuthParam Authentication parameter name. The node will validate the value corresponding to this parameter name. It consists of 1–100 upper- and lower-case letters, digits, or underscores.<br>Note: This field is required when AuthType is one of TypeA and TypeD.
+     * @param string $TimeParam Authentication timestamp. It cannot be the same as the AuthParam field value.<br>Note: This field is required when AuthType is TypeD.
+     * @param string $TimeFormat Authentication time format. Valid values:
+<li>dec: decimal;</li>
+<li>hex: hexadecimal.</li>Note: This field is required when AuthType is TypeD. Default value: hex.
      */
     function __construct()
     {

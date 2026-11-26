@@ -18,84 +18,84 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The L7 log details
+ * Offline log details
  *
- * @method string getProxyId() Obtain L4 proxy instance ID.
- * @method void setProxyId(string $ProxyId) Set L4 proxy instance ID.
- * @method string getArea() Obtain Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
- * @method void setArea(string $Area) Set Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
- * @method string getLogPacketName() Obtain Log packet name.
- * @method void setLogPacketName(string $LogPacketName) Set Log packet name.
- * @method string getUrl() Obtain Log download address.
- * @method void setUrl(string $Url) Set Log download address.
- * @method integer getLogTime() Obtain (Disused) Log packaging time. 
- * @method void setLogTime(integer $LogTime) Set (Disused) Log packaging time. 
- * @method string getLogStartTime() Obtain Start time of log packaging.
- * @method void setLogStartTime(string $LogStartTime) Set Start time of log packaging.
- * @method string getLogEndTime() Obtain End time of the log package.
- * @method void setLogEndTime(string $LogEndTime) Set End time of the log package.
- * @method integer getSize() Obtain Log size (in bytes).
- * @method void setSize(integer $Size) Set Log size (in bytes).
+ * @method string getProxyId() Obtain Layer 4 Proxy Instance ID.
+ * @method void setProxyId(string $ProxyId) Set Layer 4 Proxy Instance ID.
+ * @method string getArea() Obtain Log region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+ * @method void setArea(string $Area) Set Log region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+ * @method string getLogPacketName() Obtain Name of the offline log data packet.
+ * @method void setLogPacketName(string $LogPacketName) Set Name of the offline log data packet.
+ * @method string getUrl() Obtain Offline log download URL.
+ * @method void setUrl(string $Url) Set Offline log download URL.
+ * @method integer getLogTime() Obtain Log packaging time. This parameter has been deprecated.
+ * @method void setLogTime(integer $LogTime) Set Log packaging time. This parameter has been deprecated.
+ * @method string getLogStartTime() Obtain Start time for log packaging.
+ * @method void setLogStartTime(string $LogStartTime) Set Start time for log packaging.
+ * @method string getLogEndTime() Obtain Log packaging end time.
+ * @method void setLogEndTime(string $LogEndTime) Set Log packaging end time.
+ * @method integer getSize() Obtain Log size in bytes.
+ * @method void setSize(integer $Size) Set Log size in bytes.
  */
 class L4OfflineLog extends AbstractModel
 {
     /**
-     * @var string L4 proxy instance ID.
+     * @var string Layer 4 Proxy Instance ID.
      */
     public $ProxyId;
 
     /**
-     * @var string Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
+     * @var string Log region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
      */
     public $Area;
 
     /**
-     * @var string Log packet name.
+     * @var string Name of the offline log data packet.
      */
     public $LogPacketName;
 
     /**
-     * @var string Log download address.
+     * @var string Offline log download URL.
      */
     public $Url;
 
     /**
-     * @var integer (Disused) Log packaging time. 
+     * @var integer Log packaging time. This parameter has been deprecated.
      */
     public $LogTime;
 
     /**
-     * @var string Start time of log packaging.
+     * @var string Start time for log packaging.
      */
     public $LogStartTime;
 
     /**
-     * @var string End time of the log package.
+     * @var string Log packaging end time.
      */
     public $LogEndTime;
 
     /**
-     * @var integer Log size (in bytes).
+     * @var integer Log size in bytes.
      */
     public $Size;
 
     /**
-     * @param string $ProxyId L4 proxy instance ID.
-     * @param string $Area Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
-     * @param string $LogPacketName Log packet name.
-     * @param string $Url Log download address.
-     * @param integer $LogTime (Disused) Log packaging time. 
-     * @param string $LogStartTime Start time of log packaging.
-     * @param string $LogEndTime End time of the log package.
-     * @param integer $Size Log size (in bytes).
+     * @param string $ProxyId Layer 4 Proxy Instance ID.
+     * @param string $Area Log region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+     * @param string $LogPacketName Name of the offline log data packet.
+     * @param string $Url Offline log download URL.
+     * @param integer $LogTime Log packaging time. This parameter has been deprecated.
+     * @param string $LogStartTime Start time for log packaging.
+     * @param string $LogEndTime Log packaging end time.
+     * @param integer $Size Log size in bytes.
      */
     function __construct()
     {

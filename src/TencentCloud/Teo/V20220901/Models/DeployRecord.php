@@ -18,22 +18,22 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Version release record details for the configuration group.
+ * Details of configuration group version release notes.
  *
- * @method array getConfigGroupVersionInfos() Obtain Details about the released version.
- * @method void setConfigGroupVersionInfos(array $ConfigGroupVersionInfos) Set Details about the released version.
- * @method string getDeployTime() Obtain Release time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
- * @method void setDeployTime(string $DeployTime) Set Release time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
- * @method string getStatus() Obtain Release status. Valid values: 
-<li>deploying: Being released.</li>
-<li>failure: Release failed.</li>
-<li>success: Released successfully. </li>
- * @method void setStatus(string $Status) Set Release status. Valid values: 
-<li>deploying: Being released.</li>
-<li>failure: Release failed.</li>
-<li>success: Released successfully. </li>
- * @method string getMessage() Obtain Release result information.
- * @method void setMessage(string $Message) Set Release result information.
+ * @method array getConfigGroupVersionInfos() Obtain Detailed information of the released version.
+ * @method void setConfigGroupVersionInfos(array $ConfigGroupVersionInfos) Set Detailed information of the released version.
+ * @method string getDeployTime() Obtain Release time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+ * @method void setDeployTime(string $DeployTime) Set Release time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+ * @method string getStatus() Obtain Publishing status. Valid values:
+<li> deploying: Releasing;</li>
+<li>failure: release failure;</li>
+<li>success: Published successfully.</li>
+ * @method void setStatus(string $Status) Set Publishing status. Valid values:
+<li> deploying: Releasing;</li>
+<li>failure: release failure;</li>
+<li>success: Published successfully.</li>
+ * @method string getMessage() Obtain Publish result information.
+ * @method void setMessage(string $Message) Set Publish result information.
  * @method string getRecordId() Obtain Release record ID.
  * @method void setRecordId(string $RecordId) Set Release record ID.
  * @method string getDescription() Obtain Change description.
@@ -42,25 +42,25 @@ use TencentCloud\Common\AbstractModel;
 class DeployRecord extends AbstractModel
 {
     /**
-     * @var array Details about the released version.
+     * @var array Detailed information of the released version.
      */
     public $ConfigGroupVersionInfos;
 
     /**
-     * @var string Release time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+     * @var string Release time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
     public $DeployTime;
 
     /**
-     * @var string Release status. Valid values: 
-<li>deploying: Being released.</li>
-<li>failure: Release failed.</li>
-<li>success: Released successfully. </li>
+     * @var string Publishing status. Valid values:
+<li> deploying: Releasing;</li>
+<li>failure: release failure;</li>
+<li>success: Published successfully.</li>
      */
     public $Status;
 
     /**
-     * @var string Release result information.
+     * @var string Publish result information.
      */
     public $Message;
 
@@ -75,13 +75,13 @@ class DeployRecord extends AbstractModel
     public $Description;
 
     /**
-     * @param array $ConfigGroupVersionInfos Details about the released version.
-     * @param string $DeployTime Release time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
-     * @param string $Status Release status. Valid values: 
-<li>deploying: Being released.</li>
-<li>failure: Release failed.</li>
-<li>success: Released successfully. </li>
-     * @param string $Message Release result information.
+     * @param array $ConfigGroupVersionInfos Detailed information of the released version.
+     * @param string $DeployTime Release time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+     * @param string $Status Publishing status. Valid values:
+<li> deploying: Releasing;</li>
+<li>failure: release failure;</li>
+<li>success: Published successfully.</li>
+     * @param string $Message Publish result information.
      * @param string $RecordId Release record ID.
      * @param string $Description Change description.
      */

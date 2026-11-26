@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteJustInTimeTranscodeTemplates request structure.
  *
- * @method string getZoneId() Obtain Specifies the site ID.
- * @method void setZoneId(string $ZoneId) Set Specifies the site ID.
- * @method array getTemplateIds() Obtain Specifies the array of transcoding template unique identifiers to be deleted, with a length limit of 100.
- * @method void setTemplateIds(array $TemplateIds) Set Specifies the array of transcoding template unique identifiers to be deleted, with a length limit of 100.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method array getTemplateIds() Obtain Array of unique identifiers of instant transcoding templates to be deleted. Length limit: 100.
+ * @method void setTemplateIds(array $TemplateIds) Set Array of unique identifiers of instant transcoding templates to be deleted. Length limit: 100.
  */
 class DeleteJustInTimeTranscodeTemplatesRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the site ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var array Specifies the array of transcoding template unique identifiers to be deleted, with a length limit of 100.
+     * @var array Array of unique identifiers of instant transcoding templates to be deleted. Length limit: 100.
      */
     public $TemplateIds;
 
     /**
-     * @param string $ZoneId Specifies the site ID.
-     * @param array $TemplateIds Specifies the array of transcoding template unique identifiers to be deleted, with a length limit of 100.
+     * @param string $ZoneId Site ID.
+     * @param array $TemplateIds Array of unique identifiers of instant transcoding templates to be deleted. Length limit: 100.
      */
     function __construct()
     {

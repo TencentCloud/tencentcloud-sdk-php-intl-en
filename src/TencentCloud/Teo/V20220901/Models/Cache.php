@@ -18,61 +18,57 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cache time settings
+ * Cache time setting
  *
- * @method string getSwitch() Obtain Whether to enable cache configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable cache configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method integer getCacheTime() Obtain Specifies the cache expiration time settings.
-Unit: seconds. the maximum settable value is 365 days.
- * @method void setCacheTime(integer $CacheTime) Set Specifies the cache expiration time settings.
-Unit: seconds. the maximum settable value is 365 days.
- * @method string getIgnoreCacheControl() Obtain Whether to enable force cache. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIgnoreCacheControl(string $IgnoreCacheControl) Set Whether to enable force cache. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSwitch() Obtain Cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method integer getCacheTime() Obtain Cache expiration time settings.
+Unit: seconds. Maximum settable to 365 days.
+ * @method void setCacheTime(integer $CacheTime) Set Cache expiration time settings.
+Unit: seconds. Maximum settable to 365 days.
+ * @method string getIgnoreCacheControl() Obtain Whether to enable forced caching. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setIgnoreCacheControl(string $IgnoreCacheControl) Set Whether to enable forced caching. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
  */
 class Cache extends AbstractModel
 {
     /**
-     * @var string Whether to enable cache configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var integer Specifies the cache expiration time settings.
-Unit: seconds. the maximum settable value is 365 days.
+     * @var integer Cache expiration time settings.
+Unit: seconds. Maximum settable to 365 days.
      */
     public $CacheTime;
 
     /**
-     * @var string Whether to enable force cache. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Whether to enable forced caching. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      * @deprecated
      */
     public $IgnoreCacheControl;
 
     /**
-     * @param string $Switch Whether to enable cache configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param integer $CacheTime Specifies the cache expiration time settings.
-Unit: seconds. the maximum settable value is 365 days.
-     * @param string $IgnoreCacheControl Whether to enable force cache. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Switch Cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param integer $CacheTime Cache expiration time settings.
+Unit: seconds. Maximum settable to 365 days.
+     * @param string $IgnoreCacheControl Whether to enable forced caching. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     function __construct()
     {

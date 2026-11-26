@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Video encoding configuration.
  *
- * @method integer getStreamPushGOPSeconds() Obtain Streaming GOP length, in seconds.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStreamPushGOPSeconds(integer $StreamPushGOPSeconds) Set Streaming GOP length, in seconds.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStreamPushGOPSeconds() Obtain Push streaming GOP length, in seconds.
+ * @method void setStreamPushGOPSeconds(integer $StreamPushGOPSeconds) Set Push streaming GOP length, in seconds.
  */
 class VideoEncodeConfig extends AbstractModel
 {
     /**
-     * @var integer Streaming GOP length, in seconds.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Push streaming GOP length, in seconds.
      */
     public $StreamPushGOPSeconds;
 
     /**
-     * @param integer $StreamPushGOPSeconds Streaming GOP length, in seconds.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $StreamPushGOPSeconds Push streaming GOP length, in seconds.
      */
     function __construct()
     {

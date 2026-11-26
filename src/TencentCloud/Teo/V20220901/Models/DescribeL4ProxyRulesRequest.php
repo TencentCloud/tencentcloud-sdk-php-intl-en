@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getProxyId() Obtain Layer 4 proxy instance ID.
- * @method void setProxyId(string $ProxyId) Set Layer 4 proxy instance ID.
- * @method integer getOffset() Obtain Paginated query offset. Defaults to 0 when not specified.
- * @method void setOffset(integer $Offset) Set Paginated query offset. Defaults to 0 when not specified.
- * @method integer getLimit() Obtain Paginated query limit. Default value: 20. Maximum value: 1000.
- * @method void setLimit(integer $Limit) Set Paginated query limit. Default value: 20. Maximum value: 1000.
+ * @method string getProxyId() Obtain Layer 4 Proxy Instance ID.
+ * @method void setProxyId(string $ProxyId) Set Layer 4 Proxy Instance ID.
+ * @method integer getOffset() Obtain Offset of paginated query. If left empty, the default value is 0.	
+ * @method void setOffset(integer $Offset) Set Offset of paginated query. If left empty, the default value is 0.	
+ * @method integer getLimit() Obtain The limit of paginated query. Default value: 20. Maximum value: 1,000.	
+ * @method void setLimit(integer $Limit) Set The limit of paginated query. Default value: 20. Maximum value: 1,000.	
  * @method array getFilters() Obtain Filter criteria. The upper limit of Filters.Values is 20. If it is not filled in, all rule information under the current layer-4 instance will be returned. The detailed filter criteria are as follows: <li>rule-id: filter as per the rules under the layer-4 proxy instance by Rule ID. Rule ID is in the form: rule-31vv7qig0vjy;</li> <li>rule-tag: filter as per the rules under the layer-4 proxy instance by Rule Tag.</li>
  * @method void setFilters(array $Filters) Set Filter criteria. The upper limit of Filters.Values is 20. If it is not filled in, all rule information under the current layer-4 instance will be returned. The detailed filter criteria are as follows: <li>rule-id: filter as per the rules under the layer-4 proxy instance by Rule ID. Rule ID is in the form: rule-31vv7qig0vjy;</li> <li>rule-tag: filter as per the rules under the layer-4 proxy instance by Rule Tag.</li>
  */
@@ -39,17 +39,17 @@ class DescribeL4ProxyRulesRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Layer 4 proxy instance ID.
+     * @var string Layer 4 Proxy Instance ID.
      */
     public $ProxyId;
 
     /**
-     * @var integer Paginated query offset. Defaults to 0 when not specified.
+     * @var integer Offset of paginated query. If left empty, the default value is 0.	
      */
     public $Offset;
 
     /**
-     * @var integer Paginated query limit. Default value: 20. Maximum value: 1000.
+     * @var integer The limit of paginated query. Default value: 20. Maximum value: 1,000.	
      */
     public $Limit;
 
@@ -60,9 +60,9 @@ class DescribeL4ProxyRulesRequest extends AbstractModel
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $ProxyId Layer 4 proxy instance ID.
-     * @param integer $Offset Paginated query offset. Defaults to 0 when not specified.
-     * @param integer $Limit Paginated query limit. Default value: 20. Maximum value: 1000.
+     * @param string $ProxyId Layer 4 Proxy Instance ID.
+     * @param integer $Offset Offset of paginated query. If left empty, the default value is 0.	
+     * @param integer $Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.	
      * @param array $Filters Filter criteria. The upper limit of Filters.Values is 20. If it is not filled in, all rule information under the current layer-4 instance will be returned. The detailed filter criteria are as follows: <li>rule-id: filter as per the rules under the layer-4 proxy instance by Rule ID. Rule ID is in the form: rule-31vv7qig0vjy;</li> <li>rule-tag: filter as per the rules under the layer-4 proxy instance by Rule Tag.</li>
      */
     function __construct()

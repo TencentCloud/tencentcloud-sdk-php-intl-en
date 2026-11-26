@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Acceleration type
  *
- * @method string getSwitch() Obtain Acceleration switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Acceleration switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+ * @method string getSwitch() Obtain Acceleration switch. Value range:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Acceleration switch. Value range:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
  */
 class AccelerateType extends AbstractModel
 {
     /**
-     * @var string Acceleration switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Acceleration switch. Value range:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Acceleration switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @param string $Switch Acceleration switch. Value range:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     function __construct()
     {

@@ -18,48 +18,44 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Container configuration of the inference service.
+ * Container configuration for the inference service.
  *
- * @method string getImageType() Obtain Image type. Valid values: <li>TCR: a Tencent Cloud container mirroring service image.</li>
- * @method void setImageType(string $ImageType) Set Image type. Valid values: <li>TCR: a Tencent Cloud container mirroring service image.</li>
- * @method InferenceTCRRepositoryConfig getTcrRepositoryConfig() Obtain TCR image repository information. Required when ImageType is TCR.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setTcrRepositoryConfig(InferenceTCRRepositoryConfig $TcrRepositoryConfig) Set TCR image repository information. Required when ImageType is TCR.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method string getStartupCommand() Obtain Executed command at container startup. Uses the mirror's Entrypoint/CMD by default when left empty. Supports up to 1024 characters.
- * @method void setStartupCommand(string $StartupCommand) Set Executed command at container startup. Uses the mirror's Entrypoint/CMD by default when left empty. Supports up to 1024 characters.
- * @method array getEnvironmentVariables() Obtain Environment variables of the container runtime. Supports up to 10 variables.
- * @method void setEnvironmentVariables(array $EnvironmentVariables) Set Environment variables of the container runtime. Supports up to 10 variables.
+ * @method string getImageType() Obtain <p>Image type. Valid values: <li>TCR: Image from Tencent Cloud container mirroring service.</li></p>
+ * @method void setImageType(string $ImageType) Set <p>Image type. Valid values: <li>TCR: Image from Tencent Cloud container mirroring service.</li></p>
+ * @method InferenceTCRRepositoryConfig getTcrRepositoryConfig() Obtain <p>TCR image repository info. Required when ImageType is TCR.</p>
+ * @method void setTcrRepositoryConfig(InferenceTCRRepositoryConfig $TcrRepositoryConfig) Set <p>TCR image repository info. Required when ImageType is TCR.</p>
+ * @method string getStartupCommand() Obtain <p>Command executed at container startup. If left empty, the image's Entrypoint/CMD is used by default. Supports up to 1024 characters.</p>
+ * @method void setStartupCommand(string $StartupCommand) Set <p>Command executed at container startup. If left empty, the image's Entrypoint/CMD is used by default. Supports up to 1024 characters.</p>
+ * @method array getEnvironmentVariables() Obtain <p>Environment variables for the container runtime. Supports up to 10 variables.</p>
+ * @method void setEnvironmentVariables(array $EnvironmentVariables) Set <p>Environment variables for the container runtime. Supports up to 10 variables.</p>
  */
 class InferenceContainerConfig extends AbstractModel
 {
     /**
-     * @var string Image type. Valid values: <li>TCR: a Tencent Cloud container mirroring service image.</li>
+     * @var string <p>Image type. Valid values: <li>TCR: Image from Tencent Cloud container mirroring service.</li></p>
      */
     public $ImageType;
 
     /**
-     * @var InferenceTCRRepositoryConfig TCR image repository information. Required when ImageType is TCR.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var InferenceTCRRepositoryConfig <p>TCR image repository info. Required when ImageType is TCR.</p>
      */
     public $TcrRepositoryConfig;
 
     /**
-     * @var string Executed command at container startup. Uses the mirror's Entrypoint/CMD by default when left empty. Supports up to 1024 characters.
+     * @var string <p>Command executed at container startup. If left empty, the image's Entrypoint/CMD is used by default. Supports up to 1024 characters.</p>
      */
     public $StartupCommand;
 
     /**
-     * @var array Environment variables of the container runtime. Supports up to 10 variables.
+     * @var array <p>Environment variables for the container runtime. Supports up to 10 variables.</p>
      */
     public $EnvironmentVariables;
 
     /**
-     * @param string $ImageType Image type. Valid values: <li>TCR: a Tencent Cloud container mirroring service image.</li>
-     * @param InferenceTCRRepositoryConfig $TcrRepositoryConfig TCR image repository information. Required when ImageType is TCR.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param string $StartupCommand Executed command at container startup. Uses the mirror's Entrypoint/CMD by default when left empty. Supports up to 1024 characters.
-     * @param array $EnvironmentVariables Environment variables of the container runtime. Supports up to 10 variables.
+     * @param string $ImageType <p>Image type. Valid values: <li>TCR: Image from Tencent Cloud container mirroring service.</li></p>
+     * @param InferenceTCRRepositoryConfig $TcrRepositoryConfig <p>TCR image repository info. Required when ImageType is TCR.</p>
+     * @param string $StartupCommand <p>Command executed at container startup. If left empty, the image's Entrypoint/CMD is used by default. Supports up to 1024 characters.</p>
+     * @param array $EnvironmentVariables <p>Environment variables for the container runtime. Supports up to 10 variables.</p>
      */
     function __construct()
     {

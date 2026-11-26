@@ -18,76 +18,76 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Bot security configuration
+ * Security Bot configuration
  *
- * @method string getSwitch() Obtain Whether to enable bot security. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable bot security. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method BotManagedRule getBotManagedRule() Obtain The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
- * @method void setBotManagedRule(BotManagedRule $BotManagedRule) Set The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
- * @method BotPortraitRule getBotPortraitRule() Obtain The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
- * @method void setBotPortraitRule(BotPortraitRule $BotPortraitRule) Set The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
- * @method IntelligenceRule getIntelligenceRule() Obtain Bot intelligent analysis. if null, use the last set configuration by default.
- * @method void setIntelligenceRule(IntelligenceRule $IntelligenceRule) Set Bot intelligent analysis. if null, use the last set configuration by default.
- * @method array getBotUserRules() Obtain Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
- * @method void setBotUserRules(array $BotUserRules) Set Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
- * @method array getAlgDetectRule() Obtain Active bot detection rule.
- * @method void setAlgDetectRule(array $AlgDetectRule) Set Active bot detection rule.
- * @method array getCustomizes() Obtain Bot managed custom policy. optional input. output usage only.
- * @method void setCustomizes(array $Customizes) Set Bot managed custom policy. optional input. output usage only.
+ * @method string getSwitch() Obtain bot switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set bot switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method BotManagedRule getBotManagedRule() Obtain Common detailed basic rules. If it is null, use the last set configuration by default.
+ * @method void setBotManagedRule(BotManagedRule $BotManagedRule) Set Common detailed basic rules. If it is null, use the last set configuration by default.
+ * @method BotPortraitRule getBotPortraitRule() Obtain User profiling rule. If it is null, use the last set configuration by default.
+ * @method void setBotPortraitRule(BotPortraitRule $BotPortraitRule) Set User profiling rule. If it is null, use the last set configuration by default.
+ * @method IntelligenceRule getIntelligenceRule() Obtain Bot intelligent analysis. If it is null, use the last set configuration by default.
+ * @method void setIntelligenceRule(IntelligenceRule $IntelligenceRule) Set Bot intelligent analysis. If it is null, use the last set configuration by default.
+ * @method array getBotUserRules() Obtain Bot custom rule. If it is null, the last set configuration is used by default.
+ * @method void setBotUserRules(array $BotUserRules) Set Bot custom rule. If it is null, the last set configuration is used by default.
+ * @method array getAlgDetectRule() Obtain Bot active feature detection rule.
+ * @method void setAlgDetectRule(array $AlgDetectRule) Set Bot active feature detection rule.
+ * @method array getCustomizes() Obtain Bot managed custom policy. This input parameter is optional and is only used as an output parameter.
+ * @method void setCustomizes(array $Customizes) Set Bot managed custom policy. This input parameter is optional and is only used as an output parameter.
  */
 class BotConfig extends AbstractModel
 {
     /**
-     * @var string Whether to enable bot security. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string bot switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var BotManagedRule The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
+     * @var BotManagedRule Common detailed basic rules. If it is null, use the last set configuration by default.
      */
     public $BotManagedRule;
 
     /**
-     * @var BotPortraitRule The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
+     * @var BotPortraitRule User profiling rule. If it is null, use the last set configuration by default.
      */
     public $BotPortraitRule;
 
     /**
-     * @var IntelligenceRule Bot intelligent analysis. if null, use the last set configuration by default.
+     * @var IntelligenceRule Bot intelligent analysis. If it is null, use the last set configuration by default.
      */
     public $IntelligenceRule;
 
     /**
-     * @var array Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+     * @var array Bot custom rule. If it is null, the last set configuration is used by default.
      */
     public $BotUserRules;
 
     /**
-     * @var array Active bot detection rule.
+     * @var array Bot active feature detection rule.
      */
     public $AlgDetectRule;
 
     /**
-     * @var array Bot managed custom policy. optional input. output usage only.
+     * @var array Bot managed custom policy. This input parameter is optional and is only used as an output parameter.
      */
     public $Customizes;
 
     /**
-     * @param string $Switch Whether to enable bot security. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param BotManagedRule $BotManagedRule The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
-     * @param BotPortraitRule $BotPortraitRule The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
-     * @param IntelligenceRule $IntelligenceRule Bot intelligent analysis. if null, use the last set configuration by default.
-     * @param array $BotUserRules Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
-     * @param array $AlgDetectRule Active bot detection rule.
-     * @param array $Customizes Bot managed custom policy. optional input. output usage only.
+     * @param string $Switch bot switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param BotManagedRule $BotManagedRule Common detailed basic rules. If it is null, use the last set configuration by default.
+     * @param BotPortraitRule $BotPortraitRule User profiling rule. If it is null, use the last set configuration by default.
+     * @param IntelligenceRule $IntelligenceRule Bot intelligent analysis. If it is null, use the last set configuration by default.
+     * @param array $BotUserRules Bot custom rule. If it is null, the last set configuration is used by default.
+     * @param array $AlgDetectRule Bot active feature detection rule.
+     * @param array $Customizes Bot managed custom policy. This input parameter is optional and is only used as an output parameter.
      */
     function __construct()
     {

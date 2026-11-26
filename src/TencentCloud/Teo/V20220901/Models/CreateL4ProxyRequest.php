@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getProxyName() Obtain Name of the L4 proxy instance, which can contain 1-50 characters, including a-z, 0-9, and hyphens (-). However, hyphens (-) cannot be used individually or consecutively and should not be placed at the beginning or end of the name. Modification is not allowed after creation.
+ * @method string getProxyName() Obtain L4 proxy instance name. Enter 1-50 characters. Allowed characters: a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Modifications are not allowed after creation.
 
- * @method void setProxyName(string $ProxyName) Set Name of the L4 proxy instance, which can contain 1-50 characters, including a-z, 0-9, and hyphens (-). However, hyphens (-) cannot be used individually or consecutively and should not be placed at the beginning or end of the name. Modification is not allowed after creation.
+ * @method void setProxyName(string $ProxyName) Set L4 proxy instance name. Enter 1-50 characters. Allowed characters: a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Modifications are not allowed after creation.
 
  * @method string getArea() Obtain Acceleration zone of the L4 proxy instance.
 <li>mainland: Chinese mainland availability zone;</li>
@@ -34,28 +34,28 @@ use TencentCloud\Common\AbstractModel;
 <li>mainland: Chinese mainland availability zone;</li>
 <li>overseas: global availability zone (excluding the Chinese mainland);</li>
 <li>global: global availability zone.</li>
- * @method string getIpv6() Obtain Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+ * @method string getIpv6() Obtain Whether IPv6 access is enabled. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
- * @method void setIpv6(string $Ipv6) Set Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+ * @method void setIpv6(string $Ipv6) Set Whether IPv6 access is enabled. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
- * @method string getStaticIp() Obtain Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+ * @method string getStaticIp() Obtain Whether to enable static IP. Default off if left empty. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
- * @method void setStaticIp(string $StaticIp) Set Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+ * @method void setStaticIp(string $StaticIp) Set Whether to enable static IP. Default off if left empty. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
- * @method string getAccelerateMainland() Obtain Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+ * @method string getAccelerateMainland() Obtain Whether to enable network optimization in the Chinese mainland. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance. Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
- * @method void setAccelerateMainland(string $AccelerateMainland) Set Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+ * @method void setAccelerateMainland(string $AccelerateMainland) Set Whether to enable network optimization in the Chinese mainland. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance. Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
- * @method DDosProtectionConfig getDDosProtectionConfig() Obtain Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
-This field is deprecated, please use DDosProtectionId field specification for associated protection configuration.
- * @method void setDDosProtectionConfig(DDosProtectionConfig $DDosProtectionConfig) Set Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
-This field is deprecated, please use DDosProtectionId field specification for associated protection configuration.
+ * @method DDosProtectionConfig getDDosProtectionConfig() Obtain Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection](https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
+This field is deprecated. Please use the DDosProtectionId field to specify the associated DDoS protection configuration.
+ * @method void setDDosProtectionConfig(DDosProtectionConfig $DDosProtectionConfig) Set Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection](https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
+This field is deprecated. Please use the DDosProtectionId field to specify the associated DDoS protection configuration.
  */
 class CreateL4ProxyRequest extends AbstractModel
 {
@@ -65,7 +65,7 @@ class CreateL4ProxyRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Name of the L4 proxy instance, which can contain 1-50 characters, including a-z, 0-9, and hyphens (-). However, hyphens (-) cannot be used individually or consecutively and should not be placed at the beginning or end of the name. Modification is not allowed after creation.
+     * @var string L4 proxy instance name. Enter 1-50 characters. Allowed characters: a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Modifications are not allowed after creation.
 
      */
     public $ProxyName;
@@ -79,52 +79,52 @@ class CreateL4ProxyRequest extends AbstractModel
     public $Area;
 
     /**
-     * @var string Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @var string Whether IPv6 access is enabled. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
     public $Ipv6;
 
     /**
-     * @var string Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @var string Whether to enable static IP. Default off if left empty. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
     public $StaticIp;
 
     /**
-     * @var string Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @var string Whether to enable network optimization in the Chinese mainland. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance. Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
     public $AccelerateMainland;
 
     /**
-     * @var DDosProtectionConfig Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
-This field is deprecated, please use DDosProtectionId field specification for associated protection configuration.
+     * @var DDosProtectionConfig Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection](https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
+This field is deprecated. Please use the DDosProtectionId field to specify the associated DDoS protection configuration.
      * @deprecated
      */
     public $DDosProtectionConfig;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $ProxyName Name of the L4 proxy instance, which can contain 1-50 characters, including a-z, 0-9, and hyphens (-). However, hyphens (-) cannot be used individually or consecutively and should not be placed at the beginning or end of the name. Modification is not allowed after creation.
+     * @param string $ProxyName L4 proxy instance name. Enter 1-50 characters. Allowed characters: a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Modifications are not allowed after creation.
 
      * @param string $Area Acceleration zone of the L4 proxy instance.
 <li>mainland: Chinese mainland availability zone;</li>
 <li>overseas: global availability zone (excluding the Chinese mainland);</li>
 <li>global: global availability zone.</li>
-     * @param string $Ipv6 Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @param string $Ipv6 Whether IPv6 access is enabled. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-     * @param string $StaticIp Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @param string $StaticIp Whether to enable static IP. Default off if left empty. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-     * @param string $AccelerateMainland Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @param string $AccelerateMainland Whether to enable network optimization in the Chinese mainland. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance. Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-     * @param DDosProtectionConfig $DDosProtectionConfig Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
-This field is deprecated, please use DDosProtectionId field specification for associated protection configuration.
+     * @param DDosProtectionConfig $DDosProtectionConfig Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection](https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
+This field is deprecated. Please use the DDosProtectionId field to specify the associated DDoS protection configuration.
      */
     function __construct()
     {

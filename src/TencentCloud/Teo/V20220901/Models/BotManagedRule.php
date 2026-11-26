@@ -18,84 +18,84 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Bot managed rules. The rule IDs can be obtained from the output of DescribeBotManagedRules.
+ * Bot Rules. The following rule IDs can be found in the ID information returned by the DescribeBotManagedRules API.
  *
- * @method string getAction() Obtain The rule action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
- * @method void setAction(string $Action) Set The rule action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
- * @method integer getRuleID() Obtain The rule ID, which is only used as an output parameter.
- * @method void setRuleID(integer $RuleID) Set The rule ID, which is only used as an output parameter.
- * @method array getTransManagedIds() Obtain Rule ID to allow. defaults to no rules configured for allowance.
- * @method void setTransManagedIds(array $TransManagedIds) Set Rule ID to allow. defaults to no rules configured for allowance.
- * @method array getAlgManagedIds() Obtain Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
- * @method void setAlgManagedIds(array $AlgManagedIds) Set Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
- * @method array getCapManagedIds() Obtain The rule ID for digit verification code. by default, all rules do not configure digit verification code.
- * @method void setCapManagedIds(array $CapManagedIds) Set The rule ID for digit verification code. by default, all rules do not configure digit verification code.
- * @method array getMonManagedIds() Obtain Rule ID for observation. by default, observation is not configured for all rules.
- * @method void setMonManagedIds(array $MonManagedIds) Set Rule ID for observation. by default, observation is not configured for all rules.
- * @method array getDropManagedIds() Obtain Rule ID for interception. by default, all rules have no configuration interception.
- * @method void setDropManagedIds(array $DropManagedIds) Set Rule ID for interception. by default, all rules have no configuration interception.
+ * @method string getAction() Obtain Handling method after the trigger rule is triggered. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>monitor: observation.</li>
+ * @method void setAction(string $Action) Set Handling method after the trigger rule is triggered. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>monitor: observation.</li>
+ * @method integer getRuleID() Obtain Rule ID. Output only.
+ * @method void setRuleID(integer $RuleID) Set Rule ID. Output only.
+ * @method array getTransManagedIds() Obtain Rule ID to allow. By default, no rule is allowed.
+ * @method void setTransManagedIds(array $TransManagedIds) Set Rule ID to allow. By default, no rule is allowed.
+ * @method array getAlgManagedIds() Obtain Rule ID of the JS challenge. By default, no JS challenge is configured for all rules.
+ * @method void setAlgManagedIds(array $AlgManagedIds) Set Rule ID of the JS challenge. By default, no JS challenge is configured for all rules.
+ * @method array getCapManagedIds() Obtain Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
+ * @method void setCapManagedIds(array $CapManagedIds) Set Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
+ * @method array getMonManagedIds() Obtain Rule ID to observe. By default, no rule is configured for observation.
+ * @method void setMonManagedIds(array $MonManagedIds) Set Rule ID to observe. By default, no rule is configured for observation.
+ * @method array getDropManagedIds() Obtain Rule ID to intercept. By default, no rule is intercepted.
+ * @method void setDropManagedIds(array $DropManagedIds) Set Rule ID to intercept. By default, no rule is intercepted.
  */
 class BotManagedRule extends AbstractModel
 {
     /**
-     * @var string The rule action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
+     * @var string Handling method after the trigger rule is triggered. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>monitor: observation.</li>
      */
     public $Action;
 
     /**
-     * @var integer The rule ID, which is only used as an output parameter.
+     * @var integer Rule ID. Output only.
      */
     public $RuleID;
 
     /**
-     * @var array Rule ID to allow. defaults to no rules configured for allowance.
+     * @var array Rule ID to allow. By default, no rule is allowed.
      */
     public $TransManagedIds;
 
     /**
-     * @var array Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
+     * @var array Rule ID of the JS challenge. By default, no JS challenge is configured for all rules.
      */
     public $AlgManagedIds;
 
     /**
-     * @var array The rule ID for digit verification code. by default, all rules do not configure digit verification code.
+     * @var array Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
      */
     public $CapManagedIds;
 
     /**
-     * @var array Rule ID for observation. by default, observation is not configured for all rules.
+     * @var array Rule ID to observe. By default, no rule is configured for observation.
      */
     public $MonManagedIds;
 
     /**
-     * @var array Rule ID for interception. by default, all rules have no configuration interception.
+     * @var array Rule ID to intercept. By default, no rule is intercepted.
      */
     public $DropManagedIds;
 
     /**
-     * @param string $Action The rule action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
-     * @param integer $RuleID The rule ID, which is only used as an output parameter.
-     * @param array $TransManagedIds Rule ID to allow. defaults to no rules configured for allowance.
-     * @param array $AlgManagedIds Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
-     * @param array $CapManagedIds The rule ID for digit verification code. by default, all rules do not configure digit verification code.
-     * @param array $MonManagedIds Rule ID for observation. by default, observation is not configured for all rules.
-     * @param array $DropManagedIds Rule ID for interception. by default, all rules have no configuration interception.
+     * @param string $Action Handling method after the trigger rule is triggered. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>monitor: observation.</li>
+     * @param integer $RuleID Rule ID. Output only.
+     * @param array $TransManagedIds Rule ID to allow. By default, no rule is allowed.
+     * @param array $AlgManagedIds Rule ID of the JS challenge. By default, no JS challenge is configured for all rules.
+     * @param array $CapManagedIds Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
+     * @param array $MonManagedIds Rule ID to observe. By default, no rule is configured for observation.
+     * @param array $DropManagedIds Rule ID to intercept. By default, no rule is intercepted.
      */
     function __construct()
     {

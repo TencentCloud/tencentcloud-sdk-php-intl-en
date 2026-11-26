@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIPRegion request structure.
  *
- * @method array getIPs() Obtain List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
- * @method void setIPs(array $IPs) Set List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
+ * @method array getIPs() Obtain List of IPs to be queried. Supports IPV4 and IPV6. A maximum of 100 entries can be queried.
+ * @method void setIPs(array $IPs) Set List of IPs to be queried. Supports IPV4 and IPV6. A maximum of 100 entries can be queried.
  */
 class DescribeIPRegionRequest extends AbstractModel
 {
     /**
-     * @var array List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
+     * @var array List of IPs to be queried. Supports IPV4 and IPV6. A maximum of 100 entries can be queried.
      */
     public $IPs;
 
     /**
-     * @param array $IPs List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
+     * @param array $IPs List of IPs to be queried. Supports IPV4 and IPV6. A maximum of 100 entries can be queried.
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteContentIdentifier request structure.
  *
- * @method string getContentId() Obtain Content identifier id.
- * @method void setContentId(string $ContentId) Set Content identifier id.
+ * @method string getContentId() Obtain Content identifier ID.
+ * @method void setContentId(string $ContentId) Set Content identifier ID.
  */
 class DeleteContentIdentifierRequest extends AbstractModel
 {
     /**
-     * @var string Content identifier id.
+     * @var string Content identifier ID.
      */
     public $ContentId;
 
     /**
-     * @param string $ContentId Content identifier id.
+     * @param string $ContentId Content identifier ID.
      */
     function __construct()
     {

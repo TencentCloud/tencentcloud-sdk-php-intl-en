@@ -20,167 +20,167 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Application proxy instance
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getZoneName() Obtain The site name.
- * @method void setZoneName(string $ZoneName) Set The site name.
- * @method string getProxyId() Obtain The proxy ID.
- * @method void setProxyId(string $ProxyId) Set The proxy ID.
- * @method string getProxyName() Obtain The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
- * @method void setProxyName(string $ProxyName) Set The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
- * @method string getProxyType() Obtain The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>
- * @method void setProxyType(string $ProxyType) Set The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>
- * @method string getPlatType() Obtain The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
- * @method void setPlatType(string $PlatType) Set The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
- * @method string getArea() Obtain Acceleration region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-Default value: overseas.
- * @method void setArea(string $Area) Set Acceleration region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-Default value: overseas.
- * @method integer getSecurityType() Obtain Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
- * @method void setSecurityType(integer $SecurityType) Set Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
- * @method integer getAccelerateType() Obtain Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
- * @method void setAccelerateType(integer $AccelerateType) Set Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
- * @method integer getSessionPersistTime() Obtain Session hold time, unit: seconds.
- * @method void setSessionPersistTime(integer $SessionPersistTime) Set Session hold time, unit: seconds.
- * @method string getStatus() Obtain The rule status. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-<li>`progress`: Deploying</li>
-<li>`stopping`: Disabling</li>
-<li>`fail`: Failed to deploy or disable</li>
- * @method void setStatus(string $Status) Set The rule status. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-<li>`progress`: Deploying</li>
-<li>`stopping`: Disabling</li>
-<li>`fail`: Failed to deploy or disable</li>
- * @method string getBanStatus() Obtain The blocking status of the proxy. Values:
-<li>`banned`: Blocked</li>
-<li>`banning`: Blocking</li>
-<li>`recover`: Unblocked</li>
-<li>`recovering`: Unblocking</li>
- * @method void setBanStatus(string $BanStatus) Set The blocking status of the proxy. Values:
-<li>`banned`: Blocked</li>
-<li>`banning`: Blocking</li>
-<li>`recover`: Unblocked</li>
-<li>`recovering`: Unblocking</li>
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method string getZoneName() Obtain Site name.
+ * @method void setZoneName(string $ZoneName) Set Site name.
+ * @method string getProxyId() Obtain Proxy ID.
+ * @method void setProxyId(string $ProxyId) Set Proxy ID.
+ * @method string getProxyName() Obtain When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
+ * @method void setProxyName(string $ProxyName) Set When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
+ * @method string getProxyType() Obtain L4 proxy mode. Valid values:
+<li>`hostname`: Create by subdomain name;</li>
+<li>`instance`: Create by instance.</li>
+ * @method void setProxyType(string $ProxyType) Set L4 proxy mode. Valid values:
+<li>`hostname`: Create by subdomain name;</li>
+<li>`instance`: Create by instance.</li>
+ * @method string getPlatType() Obtain Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
+ * @method void setPlatType(string $PlatType) Set Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
+ * @method string getArea() Obtain Acceleration region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+Default value: overseas
+ * @method void setArea(string $Area) Set Acceleration region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+Default value: overseas
+ * @method integer getSecurityType() Obtain Whether security is enabled. Valid values:
+<li>0: Disable security;</li>
+<li>1: Enable security.</li>
+ * @method void setSecurityType(integer $SecurityType) Set Whether security is enabled. Valid values:
+<li>0: Disable security;</li>
+<li>1: Enable security.</li>
+ * @method integer getAccelerateType() Obtain Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
+ * @method void setAccelerateType(integer $AccelerateType) Set Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
+ * @method integer getSessionPersistTime() Obtain Session hold time, in seconds.
+ * @method void setSessionPersistTime(integer $SessionPersistTime) Set Session hold time, in seconds.
+ * @method string getStatus() Obtain Status. Valid values:
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
+<li>progress: deploying;</li>
+<li>stopping: disabling;</li>
+<li>fail: deployment or disabling failed.</li>
+ * @method void setStatus(string $Status) Set Status. Valid values:
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
+<li>progress: deploying;</li>
+<li>stopping: disabling;</li>
+<li>fail: deployment or disabling failed.</li>
+ * @method string getBanStatus() Obtain Blocking status. Valid values:
+<li>banned: blocked;</li>
+<li>banning: Being banned;</li>
+<li>recover: unblocked;</li>
+<li>`recovering`: The name server is being unblocked.</li>
+ * @method void setBanStatus(string $BanStatus) Set Blocking status. Valid values:
+<li>banned: blocked;</li>
+<li>banning: Being banned;</li>
+<li>recover: unblocked;</li>
+<li>`recovering`: The name server is being unblocked.</li>
  * @method array getScheduleValue() Obtain Scheduling information.
  * @method void setScheduleValue(array $ScheduleValue) Set Scheduling information.
- * @method string getHostId() Obtain When `ProxyType=hostname`:
-This field indicates the unique ID of the subdomain name.
- * @method void setHostId(string $HostId) Set When `ProxyType=hostname`:
-This field indicates the unique ID of the subdomain name.
- * @method Ipv6 getIpv6() Obtain The IPv6 access configuration.
- * @method void setIpv6(Ipv6 $Ipv6) Set The IPv6 access configuration.
- * @method string getUpdateTime() Obtain The update time.
- * @method void setUpdateTime(string $UpdateTime) Set The update time.
- * @method array getApplicationProxyRules() Obtain List of rules.
- * @method void setApplicationProxyRules(array $ApplicationProxyRules) Set List of rules.
- * @method AccelerateMainland getAccelerateMainland() Obtain Cross-MLC-border acceleration.
- * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) Set Cross-MLC-border acceleration.
+ * @method string getHostId() Obtain When ProxyType=hostname:
+Indicates the unique ID of the proxy acceleration.
+ * @method void setHostId(string $HostId) Set When ProxyType=hostname:
+Indicates the unique ID of the proxy acceleration.
+ * @method Ipv6 getIpv6() Obtain Ipv6 access configuration.
+ * @method void setIpv6(Ipv6 $Ipv6) Set Ipv6 access configuration.
+ * @method string getUpdateTime() Obtain Update time.
+ * @method void setUpdateTime(string $UpdateTime) Set Update time.
+ * @method array getApplicationProxyRules() Obtain Rule list.
+ * @method void setApplicationProxyRules(array $ApplicationProxyRules) Set Rule list.
+ * @method AccelerateMainland getAccelerateMainland() Obtain Acceleration optimization configuration for the Chinese mainland.
+ * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) Set Acceleration optimization configuration for the Chinese mainland.
  */
 class ApplicationProxy extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var string The site name.
+     * @var string Site name.
      */
     public $ZoneName;
 
     /**
-     * @var string The proxy ID.
+     * @var string Proxy ID.
      */
     public $ProxyId;
 
     /**
-     * @var string The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
+     * @var string When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
      */
     public $ProxyName;
 
     /**
-     * @var string The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>
+     * @var string L4 proxy mode. Valid values:
+<li>`hostname`: Create by subdomain name;</li>
+<li>`instance`: Create by instance.</li>
      */
     public $ProxyType;
 
     /**
-     * @var string The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
+     * @var string Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
      */
     public $PlatType;
 
     /**
-     * @var string Acceleration region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-Default value: overseas.
+     * @var string Acceleration region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+Default value: overseas
      */
     public $Area;
 
     /**
-     * @var integer Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
+     * @var integer Whether security is enabled. Valid values:
+<li>0: Disable security;</li>
+<li>1: Enable security.</li>
      */
     public $SecurityType;
 
     /**
-     * @var integer Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
+     * @var integer Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
      */
     public $AccelerateType;
 
     /**
-     * @var integer Session hold time, unit: seconds.
+     * @var integer Session hold time, in seconds.
      */
     public $SessionPersistTime;
 
     /**
-     * @var string The rule status. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-<li>`progress`: Deploying</li>
-<li>`stopping`: Disabling</li>
-<li>`fail`: Failed to deploy or disable</li>
+     * @var string Status. Valid values:
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
+<li>progress: deploying;</li>
+<li>stopping: disabling;</li>
+<li>fail: deployment or disabling failed.</li>
      */
     public $Status;
 
     /**
-     * @var string The blocking status of the proxy. Values:
-<li>`banned`: Blocked</li>
-<li>`banning`: Blocking</li>
-<li>`recover`: Unblocked</li>
-<li>`recovering`: Unblocking</li>
+     * @var string Blocking status. Valid values:
+<li>banned: blocked;</li>
+<li>banning: Being banned;</li>
+<li>recover: unblocked;</li>
+<li>`recovering`: The name server is being unblocked.</li>
      */
     public $BanStatus;
 
@@ -190,72 +190,72 @@ Default value: overseas.
     public $ScheduleValue;
 
     /**
-     * @var string When `ProxyType=hostname`:
-This field indicates the unique ID of the subdomain name.
+     * @var string When ProxyType=hostname:
+Indicates the unique ID of the proxy acceleration.
      */
     public $HostId;
 
     /**
-     * @var Ipv6 The IPv6 access configuration.
+     * @var Ipv6 Ipv6 access configuration.
      */
     public $Ipv6;
 
     /**
-     * @var string The update time.
+     * @var string Update time.
      */
     public $UpdateTime;
 
     /**
-     * @var array List of rules.
+     * @var array Rule list.
      */
     public $ApplicationProxyRules;
 
     /**
-     * @var AccelerateMainland Cross-MLC-border acceleration.
+     * @var AccelerateMainland Acceleration optimization configuration for the Chinese mainland.
      */
     public $AccelerateMainland;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $ZoneName The site name.
-     * @param string $ProxyId The proxy ID.
-     * @param string $ProxyName The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
-     * @param string $ProxyType The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>
-     * @param string $PlatType The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
-     * @param string $Area Acceleration region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-Default value: overseas.
-     * @param integer $SecurityType Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
-     * @param integer $AccelerateType Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
-     * @param integer $SessionPersistTime Session hold time, unit: seconds.
-     * @param string $Status The rule status. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-<li>`progress`: Deploying</li>
-<li>`stopping`: Disabling</li>
-<li>`fail`: Failed to deploy or disable</li>
-     * @param string $BanStatus The blocking status of the proxy. Values:
-<li>`banned`: Blocked</li>
-<li>`banning`: Blocking</li>
-<li>`recover`: Unblocked</li>
-<li>`recovering`: Unblocking</li>
+     * @param string $ZoneId Site ID.
+     * @param string $ZoneName Site name.
+     * @param string $ProxyId Proxy ID.
+     * @param string $ProxyName When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
+     * @param string $ProxyType L4 proxy mode. Valid values:
+<li>`hostname`: Create by subdomain name;</li>
+<li>`instance`: Create by instance.</li>
+     * @param string $PlatType Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
+     * @param string $Area Acceleration region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+Default value: overseas
+     * @param integer $SecurityType Whether security is enabled. Valid values:
+<li>0: Disable security;</li>
+<li>1: Enable security.</li>
+     * @param integer $AccelerateType Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
+     * @param integer $SessionPersistTime Session hold time, in seconds.
+     * @param string $Status Status. Valid values:
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
+<li>progress: deploying;</li>
+<li>stopping: disabling;</li>
+<li>fail: deployment or disabling failed.</li>
+     * @param string $BanStatus Blocking status. Valid values:
+<li>banned: blocked;</li>
+<li>banning: Being banned;</li>
+<li>recover: unblocked;</li>
+<li>`recovering`: The name server is being unblocked.</li>
      * @param array $ScheduleValue Scheduling information.
-     * @param string $HostId When `ProxyType=hostname`:
-This field indicates the unique ID of the subdomain name.
-     * @param Ipv6 $Ipv6 The IPv6 access configuration.
-     * @param string $UpdateTime The update time.
-     * @param array $ApplicationProxyRules List of rules.
-     * @param AccelerateMainland $AccelerateMainland Cross-MLC-border acceleration.
+     * @param string $HostId When ProxyType=hostname:
+Indicates the unique ID of the proxy acceleration.
+     * @param Ipv6 $Ipv6 Ipv6 access configuration.
+     * @param string $UpdateTime Update time.
+     * @param array $ApplicationProxyRules Rule list.
+     * @param AccelerateMainland $AccelerateMainland Acceleration optimization configuration for the Chinese mainland.
      */
     function __construct()
     {

@@ -20,42 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Sub-rule branch.
  *
- * @method string getCondition() Obtain Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
- * @method void setCondition(string $Condition) Set Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
- * @method array getActions() Obtain [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setActions(array $Actions) Set [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method array getSubRules() Obtain List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setSubRules(array $SubRules) Set List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method string getCondition() Obtain [Match condition](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+ * @method void setCondition(string $Condition) Set [Match condition](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+ * @method array getActions() Obtain [Operate](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<br>Note: Actions and SubRules cannot be empty at the same time.
+ * @method void setActions(array $Actions) Set [Operate](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<br>Note: Actions and SubRules cannot be empty at the same time.
+ * @method array getSubRules() Obtain Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only one level of SubRules is supported.
+ * @method void setSubRules(array $SubRules) Set Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only one level of SubRules is supported.
  */
 class RuleBranch extends AbstractModel
 {
     /**
-     * @var string Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+     * @var string [Match condition](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
      */
     public $Condition;
 
     /**
-     * @var array [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var array [Operate](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<br>Note: Actions and SubRules cannot be empty at the same time.
      */
     public $Actions;
 
     /**
-     * @var array List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var array Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only one level of SubRules is supported.
      */
     public $SubRules;
 
     /**
-     * @param string $Condition Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
-     * @param array $Actions [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param array $SubRules List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param string $Condition [Match condition](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+     * @param array $Actions [Operate](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<br>Note: Actions and SubRules cannot be empty at the same time.
+     * @param array $SubRules Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only one level of SubRules is supported.
      */
     function __construct()
     {

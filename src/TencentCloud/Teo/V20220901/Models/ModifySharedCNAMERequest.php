@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySharedCNAME request structure.
  *
- * @method string getZoneId() Obtain Shared CNAME associated site ID.
- * @method void setZoneId(string $ZoneId) Set Shared CNAME associated site ID.
+ * @method string getZoneId() Obtain ID of the site associated with the shared CNAME.
+ * @method void setZoneId(string $ZoneId) Set ID of the site associated with the shared CNAME.
  * @method string getSharedCNAME() Obtain Shared CNAME.
  * @method void setSharedCNAME(string $SharedCNAME) Set Shared CNAME.
  * @method string getDescription() Obtain Enter the adjusted description.
  * @method void setDescription(string $Description) Set Enter the adjusted description.
- * @method IPSSLSetting getIPSSLSetting() Obtain Set the IP SSL message of the shared CNAME with IP SSL type.
- * @method void setIPSSLSetting(IPSSLSetting $IPSSLSetting) Set Set the IP SSL message of the shared CNAME with IP SSL type.
+ * @method IPSSLSetting getIPSSLSetting() Obtain Set the IP SSL info of the shared CNAME of IP SSL type.
+ * @method void setIPSSLSetting(IPSSLSetting $IPSSLSetting) Set Set the IP SSL info of the shared CNAME of IP SSL type.
  */
 class ModifySharedCNAMERequest extends AbstractModel
 {
     /**
-     * @var string Shared CNAME associated site ID.
+     * @var string ID of the site associated with the shared CNAME.
      */
     public $ZoneId;
 
@@ -47,15 +47,15 @@ class ModifySharedCNAMERequest extends AbstractModel
     public $Description;
 
     /**
-     * @var IPSSLSetting Set the IP SSL message of the shared CNAME with IP SSL type.
+     * @var IPSSLSetting Set the IP SSL info of the shared CNAME of IP SSL type.
      */
     public $IPSSLSetting;
 
     /**
-     * @param string $ZoneId Shared CNAME associated site ID.
+     * @param string $ZoneId ID of the site associated with the shared CNAME.
      * @param string $SharedCNAME Shared CNAME.
      * @param string $Description Enter the adjusted description.
-     * @param IPSSLSetting $IPSSLSetting Set the IP SSL message of the shared CNAME with IP SSL type.
+     * @param IPSSLSetting $IPSSLSetting Set the IP SSL info of the shared CNAME of IP SSL type.
      */
     function __construct()
     {

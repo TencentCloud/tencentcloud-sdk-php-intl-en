@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWebSecurityTemplate request structure.
  *
- * @method string getZoneId() Obtain Zone ID. The zone to which the target policy template belongs for access control. Use the DescribeWebSecurityTemplates interface to query the zone of the policy template.
- * @method void setZoneId(string $ZoneId) Set Zone ID. The zone to which the target policy template belongs for access control. Use the DescribeWebSecurityTemplates interface to query the zone of the policy template.
+ * @method string getZoneId() Obtain Site ID. Requires the input of the site to which the target policy template belongs in terms of access privileges. You can use the DescribeWebSecurityTemplates API to query the site to which the policy template belongs.
+ * @method void setZoneId(string $ZoneId) Set Site ID. Requires the input of the site to which the target policy template belongs in terms of access privileges. You can use the DescribeWebSecurityTemplates API to query the site to which the policy template belongs.
  * @method string getTemplateId() Obtain Policy template ID.
  * @method void setTemplateId(string $TemplateId) Set Policy template ID.
  */
 class DescribeWebSecurityTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID. The zone to which the target policy template belongs for access control. Use the DescribeWebSecurityTemplates interface to query the zone of the policy template.
+     * @var string Site ID. Requires the input of the site to which the target policy template belongs in terms of access privileges. You can use the DescribeWebSecurityTemplates API to query the site to which the policy template belongs.
      */
     public $ZoneId;
 
@@ -38,7 +38,7 @@ class DescribeWebSecurityTemplateRequest extends AbstractModel
     public $TemplateId;
 
     /**
-     * @param string $ZoneId Zone ID. The zone to which the target policy template belongs for access control. Use the DescribeWebSecurityTemplates interface to query the zone of the policy template.
+     * @param string $ZoneId Site ID. Requires the input of the site to which the target policy template belongs in terms of access privileges. You can use the DescribeWebSecurityTemplates API to query the site to which the policy template belongs.
      * @param string $TemplateId Policy template ID.
      */
     function __construct()

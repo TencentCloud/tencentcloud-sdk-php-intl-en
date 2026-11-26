@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getProxyId() Obtain Layer 4 proxy instance ID.
- * @method void setProxyId(string $ProxyId) Set Layer 4 proxy instance ID.
- * @method string getStatus() Obtain Layer 4 proxy instance status. Valid values:<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
- * @method void setStatus(string $Status) Set Layer 4 proxy instance status. Valid values:<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
+ * @method string getProxyId() Obtain Layer 4 Proxy Instance ID.
+ * @method void setProxyId(string $ProxyId) Set Layer 4 Proxy Instance ID.
+ * @method string getStatus() Obtain Status of the Layer 4 proxy instance. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
+ * @method void setStatus(string $Status) Set Status of the Layer 4 proxy instance. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
  */
 class ModifyL4ProxyStatusRequest extends AbstractModel
 {
@@ -37,21 +39,23 @@ class ModifyL4ProxyStatusRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Layer 4 proxy instance ID.
+     * @var string Layer 4 Proxy Instance ID.
      */
     public $ProxyId;
 
     /**
-     * @var string Layer 4 proxy instance status. Valid values:<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
+     * @var string Status of the Layer 4 proxy instance. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
      */
     public $Status;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $ProxyId Layer 4 proxy instance ID.
-     * @param string $Status Layer 4 proxy instance status. Valid values:<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
+     * @param string $ProxyId Layer 4 Proxy Instance ID.
+     * @param string $Status Status of the Layer 4 proxy instance. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
      */
     function __construct()
     {

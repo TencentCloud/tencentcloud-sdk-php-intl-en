@@ -18,32 +18,32 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Nested rule settings
+ * Nested rule information.
  *
- * @method array getConditions() Obtain The condition that determines if a feature should run.
-Note: If any condition in the array is met, the feature will run.
- * @method void setConditions(array $Conditions) Set The condition that determines if a feature should run.
-Note: If any condition in the array is met, the feature will run.
- * @method array getActions() Obtain The feature to be executed.
- * @method void setActions(array $Actions) Set The feature to be executed.
+ * @method array getConditions() Obtain Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
+ * @method void setConditions(array $Conditions) Set Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
+ * @method array getActions() Obtain Function to execute.
+ * @method void setActions(array $Actions) Set Function to execute.
  */
 class SubRule extends AbstractModel
 {
     /**
-     * @var array The condition that determines if a feature should run.
-Note: If any condition in the array is met, the feature will run.
+     * @var array Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
      */
     public $Conditions;
 
     /**
-     * @var array The feature to be executed.
+     * @var array Function to execute.
      */
     public $Actions;
 
     /**
-     * @param array $Conditions The condition that determines if a feature should run.
-Note: If any condition in the array is met, the feature will run.
-     * @param array $Actions The feature to be executed.
+     * @param array $Conditions Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
+     * @param array $Actions Function to execute.
      */
     function __construct()
     {

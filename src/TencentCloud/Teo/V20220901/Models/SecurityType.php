@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The security type setting item.
+ * Security type configuration item.
  *
- * @method string getSwitch() Obtain Whether to enable the security type setting. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable the security type setting. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+ * @method string getSwitch() Obtain Security type switch. Value:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Security type switch. Value:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
  */
 class SecurityType extends AbstractModel
 {
     /**
-     * @var string Whether to enable the security type setting. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Security type switch. Value:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable the security type setting. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @param string $Switch Security type switch. Value:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     function __construct()
     {

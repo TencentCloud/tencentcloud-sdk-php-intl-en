@@ -18,140 +18,184 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP blocklist/allowlist rule details
+ * Custom rule - basic access control configuration.
  *
- * @method string getAction() Obtain The action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`monitor`: Observe</li>
- * @method void setAction(string $Action) Set The action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`monitor`: Observe</li>
- * @method string getMatchFrom() Obtain The matching dimension. Values:
-<li>`ip`: Match by IP.</li>
-<li>`area`: Match by IP region.</li>
- * @method void setMatchFrom(string $MatchFrom) Set The matching dimension. Values:
-<li>`ip`: Match by IP.</li>
-<li>`area`: Match by IP region.</li>
- * @method string getOperator() Obtain Matching method. It defaults to `equal` if it’s left empty.
-Values: 
-<li>`is_empty`: The field is empty.</li>
-<li>`not_exists`: The configuration item does not exist.</li>
-<li>`include`: Include</li>
-<li>`not_include`: Do not include</li>
-<li>`equal`: Equal to</li>
-<li>`not_equal`: Not equal to</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOperator(string $Operator) Set Matching method. It defaults to `equal` if it’s left empty.
-Values: 
-<li>`is_empty`: The field is empty.</li>
-<li>`not_exists`: The configuration item does not exist.</li>
-<li>`include`: Include</li>
-<li>`not_include`: Do not include</li>
-<li>`equal`: Equal to</li>
-<li>`not_equal`: Not equal to</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRuleID() Obtain The rule ID, which is only used as an output parameter.
- * @method void setRuleID(integer $RuleID) Set The rule ID, which is only used as an output parameter.
- * @method string getUpdateTime() Obtain The update time, which is only used as an output parameter.
- * @method void setUpdateTime(string $UpdateTime) Set The update time, which is only used as an output parameter.
- * @method string getStatus() Obtain The rule status. A null value indicates that the rule is enabled. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set The rule status. A null value indicates that the rule is enabled. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRuleName() Obtain Specifies the rule name.
- * @method void setRuleName(string $RuleName) Set Specifies the rule name.
- * @method string getMatchContent() Obtain Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
- * @method void setMatchContent(string $MatchContent) Set Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+ * @method string getAction() Obtain Action. Valid values:
+<li> drop: block;</li>
+<li> trans: release;</li>
+<li>monitor: observation.</li>
+ * @method void setAction(string $Action) Set Action. Valid values:
+<li> drop: block;</li>
+<li> trans: release;</li>
+<li>monitor: observation.</li>
+ * @method string getMatchFrom() Obtain According to type matching. Valid values:
+<li>ip: Match by client IP;</li>
+<li>area: match by client IP region;</li>
+<li>asn: Match the autonomous system to which the client belongs;</li>
+<li>referer: match the Referer request header;</li>
+<li>ua: match the User-Agent request header;</li>
+<li>url: Request URL for matching.</li>
+ * @method void setMatchFrom(string $MatchFrom) Set According to type matching. Valid values:
+<li>ip: Match by client IP;</li>
+<li>area: match by client IP region;</li>
+<li>asn: Match the autonomous system to which the client belongs;</li>
+<li>referer: match the Referer request header;</li>
+<li>ua: match the User-Agent request header;</li>
+<li>url: Request URL for matching.</li>
+ * @method string getOperator() Obtain Match method of the rule. Valid values:
+<li> match: match, suitable for MatchFrom as ip;</li>
+<li> not_match: Not match, suitable for when MatchFrom is ip;</li>
+<li> include_area: region inclusion, suitable for MatchFrom as area;</li>
+<li> not_include_area: Regions excluded, applicable to MatchFrom as area;</li>
+<li> asn_match: ASN contains, suitable for MatchFrom as asn;</li>
+<li> asn_not_match: ASN not contained, applicable to MatchFrom as asn;</li>
+<li> equal: equal, suitable for MatchFrom being ua, referer;</li>
+<li> not_equal: Not equal to, applicable to MatchFrom being ua, referer;</li>
+<li> include: wildcard match, suitable for MatchFrom being ua, referer, url;</li>
+<li> not_include: wildcard mismatch, suitable for MatchFrom being ua, referer;</li>
+<li> is_emty: The configuration content is empty, suitable for MatchFrom being ua or referer;</li>
+<li> not_exists: The configuration content does not exist. This is applicable when MatchFrom is ua or referer.</li>
+ * @method void setOperator(string $Operator) Set Match method of the rule. Valid values:
+<li> match: match, suitable for MatchFrom as ip;</li>
+<li> not_match: Not match, suitable for when MatchFrom is ip;</li>
+<li> include_area: region inclusion, suitable for MatchFrom as area;</li>
+<li> not_include_area: Regions excluded, applicable to MatchFrom as area;</li>
+<li> asn_match: ASN contains, suitable for MatchFrom as asn;</li>
+<li> asn_not_match: ASN not contained, applicable to MatchFrom as asn;</li>
+<li> equal: equal, suitable for MatchFrom being ua, referer;</li>
+<li> not_equal: Not equal to, applicable to MatchFrom being ua, referer;</li>
+<li> include: wildcard match, suitable for MatchFrom being ua, referer, url;</li>
+<li> not_include: wildcard mismatch, suitable for MatchFrom being ua, referer;</li>
+<li> is_emty: The configuration content is empty, suitable for MatchFrom being ua or referer;</li>
+<li> not_exists: The configuration content does not exist. This is applicable when MatchFrom is ua or referer.</li>
+ * @method integer getRuleID() Obtain Rule id. Output only.
+ * @method void setRuleID(integer $RuleID) Set Rule id. Output only.
+ * @method string getUpdateTime() Obtain Update time. For output usage only.
+ * @method void setUpdateTime(string $UpdateTime) Set Update time. For output usage only.
+ * @method string getStatus() Obtain Rule enablement status. Valid values:
+<li>`on`: Enable;</li>
+<li> off: Disabled.</li>
+If the input parameter is not specified, the value defaults to `on`.
+ * @method void setStatus(string $Status) Set Rule enablement status. Valid values:
+<li>`on`: Enable;</li>
+<li> off: Disabled.</li>
+If the input parameter is not specified, the value defaults to `on`.
+ * @method string getRuleName() Obtain Rule name.
+ * @method void setRuleName(string $RuleName) Set Rule name.
+ * @method string getMatchContent() Obtain Matching content. Multi-value input is supported.
+<li>When entering multiple matching values, please separate them with English commas;</li>
+<li>When MatchFrom is ua, multi-value input is not supported;</li>
+<li>When Operator is is_empty or not_exists, the input value of this field is invalid.</li>
+ * @method void setMatchContent(string $MatchContent) Set Matching content. Multi-value input is supported.
+<li>When entering multiple matching values, please separate them with English commas;</li>
+<li>When MatchFrom is ua, multi-value input is not supported;</li>
+<li>When Operator is is_empty or not_exists, the input value of this field is invalid.</li>
  */
 class IpTableRule extends AbstractModel
 {
     /**
-     * @var string The action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`monitor`: Observe</li>
+     * @var string Action. Valid values:
+<li> drop: block;</li>
+<li> trans: release;</li>
+<li>monitor: observation.</li>
      */
     public $Action;
 
     /**
-     * @var string The matching dimension. Values:
-<li>`ip`: Match by IP.</li>
-<li>`area`: Match by IP region.</li>
+     * @var string According to type matching. Valid values:
+<li>ip: Match by client IP;</li>
+<li>area: match by client IP region;</li>
+<li>asn: Match the autonomous system to which the client belongs;</li>
+<li>referer: match the Referer request header;</li>
+<li>ua: match the User-Agent request header;</li>
+<li>url: Request URL for matching.</li>
      */
     public $MatchFrom;
 
     /**
-     * @var string Matching method. It defaults to `equal` if it’s left empty.
-Values: 
-<li>`is_empty`: The field is empty.</li>
-<li>`not_exists`: The configuration item does not exist.</li>
-<li>`include`: Include</li>
-<li>`not_include`: Do not include</li>
-<li>`equal`: Equal to</li>
-<li>`not_equal`: Not equal to</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Match method of the rule. Valid values:
+<li> match: match, suitable for MatchFrom as ip;</li>
+<li> not_match: Not match, suitable for when MatchFrom is ip;</li>
+<li> include_area: region inclusion, suitable for MatchFrom as area;</li>
+<li> not_include_area: Regions excluded, applicable to MatchFrom as area;</li>
+<li> asn_match: ASN contains, suitable for MatchFrom as asn;</li>
+<li> asn_not_match: ASN not contained, applicable to MatchFrom as asn;</li>
+<li> equal: equal, suitable for MatchFrom being ua, referer;</li>
+<li> not_equal: Not equal to, applicable to MatchFrom being ua, referer;</li>
+<li> include: wildcard match, suitable for MatchFrom being ua, referer, url;</li>
+<li> not_include: wildcard mismatch, suitable for MatchFrom being ua, referer;</li>
+<li> is_emty: The configuration content is empty, suitable for MatchFrom being ua or referer;</li>
+<li> not_exists: The configuration content does not exist. This is applicable when MatchFrom is ua or referer.</li>
      */
     public $Operator;
 
     /**
-     * @var integer The rule ID, which is only used as an output parameter.
+     * @var integer Rule id. Output only.
      */
     public $RuleID;
 
     /**
-     * @var string The update time, which is only used as an output parameter.
+     * @var string Update time. For output usage only.
      */
     public $UpdateTime;
 
     /**
-     * @var string The rule status. A null value indicates that the rule is enabled. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Rule enablement status. Valid values:
+<li>`on`: Enable;</li>
+<li> off: Disabled.</li>
+If the input parameter is not specified, the value defaults to `on`.
      */
     public $Status;
 
     /**
-     * @var string Specifies the rule name.
+     * @var string Rule name.
      */
     public $RuleName;
 
     /**
-     * @var string Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+     * @var string Matching content. Multi-value input is supported.
+<li>When entering multiple matching values, please separate them with English commas;</li>
+<li>When MatchFrom is ua, multi-value input is not supported;</li>
+<li>When Operator is is_empty or not_exists, the input value of this field is invalid.</li>
      */
     public $MatchContent;
 
     /**
-     * @param string $Action The action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`monitor`: Observe</li>
-     * @param string $MatchFrom The matching dimension. Values:
-<li>`ip`: Match by IP.</li>
-<li>`area`: Match by IP region.</li>
-     * @param string $Operator Matching method. It defaults to `equal` if it’s left empty.
-Values: 
-<li>`is_empty`: The field is empty.</li>
-<li>`not_exists`: The configuration item does not exist.</li>
-<li>`include`: Include</li>
-<li>`not_include`: Do not include</li>
-<li>`equal`: Equal to</li>
-<li>`not_equal`: Not equal to</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RuleID The rule ID, which is only used as an output parameter.
-     * @param string $UpdateTime The update time, which is only used as an output parameter.
-     * @param string $Status The rule status. A null value indicates that the rule is enabled. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RuleName Specifies the rule name.
-     * @param string $MatchContent Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+     * @param string $Action Action. Valid values:
+<li> drop: block;</li>
+<li> trans: release;</li>
+<li>monitor: observation.</li>
+     * @param string $MatchFrom According to type matching. Valid values:
+<li>ip: Match by client IP;</li>
+<li>area: match by client IP region;</li>
+<li>asn: Match the autonomous system to which the client belongs;</li>
+<li>referer: match the Referer request header;</li>
+<li>ua: match the User-Agent request header;</li>
+<li>url: Request URL for matching.</li>
+     * @param string $Operator Match method of the rule. Valid values:
+<li> match: match, suitable for MatchFrom as ip;</li>
+<li> not_match: Not match, suitable for when MatchFrom is ip;</li>
+<li> include_area: region inclusion, suitable for MatchFrom as area;</li>
+<li> not_include_area: Regions excluded, applicable to MatchFrom as area;</li>
+<li> asn_match: ASN contains, suitable for MatchFrom as asn;</li>
+<li> asn_not_match: ASN not contained, applicable to MatchFrom as asn;</li>
+<li> equal: equal, suitable for MatchFrom being ua, referer;</li>
+<li> not_equal: Not equal to, applicable to MatchFrom being ua, referer;</li>
+<li> include: wildcard match, suitable for MatchFrom being ua, referer, url;</li>
+<li> not_include: wildcard mismatch, suitable for MatchFrom being ua, referer;</li>
+<li> is_emty: The configuration content is empty, suitable for MatchFrom being ua or referer;</li>
+<li> not_exists: The configuration content does not exist. This is applicable when MatchFrom is ua or referer.</li>
+     * @param integer $RuleID Rule id. Output only.
+     * @param string $UpdateTime Update time. For output usage only.
+     * @param string $Status Rule enablement status. Valid values:
+<li>`on`: Enable;</li>
+<li> off: Disabled.</li>
+If the input parameter is not specified, the value defaults to `on`.
+     * @param string $RuleName Rule name.
+     * @param string $MatchContent Matching content. Multi-value input is supported.
+<li>When entering multiple matching values, please separate them with English commas;</li>
+<li>When MatchFrom is ua, multi-value input is not supported;</li>
+<li>When Operator is is_empty or not_exists, the input value of this field is invalid.</li>
      */
     function __construct()
     {

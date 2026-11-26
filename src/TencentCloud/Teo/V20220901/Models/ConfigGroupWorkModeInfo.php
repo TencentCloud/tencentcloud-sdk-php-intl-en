@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Version management configuration group working mode information.
  *
- * @method string getConfigGroupType() Obtain Configuration group type. Options are as follows:<li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
- * @method void setConfigGroupType(string $ConfigGroupType) Set Configuration group type. Options are as follows:<li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
- * @method string getWorkMode() Obtain Working mode. options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>.
- * @method void setWorkMode(string $WorkMode) Set Working mode. options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>.
+ * @method string getConfigGroupType() Obtain Configuration group type. Options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
+ * @method void setConfigGroupType(string $ConfigGroupType) Set Configuration group type. Options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
+ * @method string getWorkMode() Obtain Working mode. Options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>
+ * @method void setWorkMode(string $WorkMode) Set Working mode. Options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>
  */
 class ConfigGroupWorkModeInfo extends AbstractModel
 {
     /**
-     * @var string Configuration group type. Options are as follows:<li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
+     * @var string Configuration group type. Options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
      */
     public $ConfigGroupType;
 
     /**
-     * @var string Working mode. options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>.
+     * @var string Working mode. Options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>
      */
     public $WorkMode;
 
     /**
-     * @param string $ConfigGroupType Configuration group type. Options are as follows:<li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
-     * @param string $WorkMode Working mode. options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>.
+     * @param string $ConfigGroupType Configuration group type. Options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
+     * @param string $WorkMode Working mode. Options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>
      */
     function __construct()
     {

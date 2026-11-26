@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method integer getOffset() Obtain Pagination offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
- * @method integer getLimit() Obtain Pagination limit. Default value: 20, maximum value: 1000.
- * @method void setLimit(integer $Limit) Set Pagination limit. Default value: 20, maximum value: 1000.
- * @method array getFilters() Obtain Filter fields for gateway list. If this parameter is left empty, return the current appid's all gateway information. detailed filter criteria:.
-<Li>Gateway-Type: filter by gateway type. valid values: cloud and private, representing cloud gateway and private gateway respectively.</li>
-<Li>Keyword: filter by keyword in the gateway name.</li>
- * @method void setFilters(array $Filters) Set Filter fields for gateway list. If this parameter is left empty, return the current appid's all gateway information. detailed filter criteria:.
-<Li>Gateway-Type: filter by gateway type. valid values: cloud and private, representing cloud gateway and private gateway respectively.</li>
-<Li>Keyword: filter by keyword in the gateway name.</li>
+ * @method integer getOffset() Obtain The offset of paginated query. Default value: 0.
+ * @method void setOffset(integer $Offset) Set The offset of paginated query. Default value: 0.
+ * @method integer getLimit() Obtain The limit of paginated query. Default value: 20. Maximum value: 1,000.
+ * @method void setLimit(integer $Limit) Set The limit of paginated query. Default value: 20. Maximum value: 1,000.
+ * @method array getFilters() Obtain Filter field for the gateway list. If this parameter is left empty, all gateway information under the current appid is returned. The detailed filter criteria are as follows:
+<li> gateway-type: filter by gateway type. Valid values: cloud and private, representing Cloud Gateway and free gateway respectively;</li>
+<li> keyword: filter by the keyword of the gateway name.</li>
+ * @method void setFilters(array $Filters) Set Filter field for the gateway list. If this parameter is left empty, all gateway information under the current appid is returned. The detailed filter criteria are as follows:
+<li> gateway-type: filter by gateway type. Valid values: cloud and private, representing Cloud Gateway and free gateway respectively;</li>
+<li> keyword: filter by the keyword of the gateway name.</li>
  */
 class DescribeMultiPathGatewaysRequest extends AbstractModel
 {
@@ -41,29 +41,29 @@ class DescribeMultiPathGatewaysRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer Pagination offset. Default value: 0.
+     * @var integer The offset of paginated query. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Pagination limit. Default value: 20, maximum value: 1000.
+     * @var integer The limit of paginated query. Default value: 20. Maximum value: 1,000.
      */
     public $Limit;
 
     /**
-     * @var array Filter fields for gateway list. If this parameter is left empty, return the current appid's all gateway information. detailed filter criteria:.
-<Li>Gateway-Type: filter by gateway type. valid values: cloud and private, representing cloud gateway and private gateway respectively.</li>
-<Li>Keyword: filter by keyword in the gateway name.</li>
+     * @var array Filter field for the gateway list. If this parameter is left empty, all gateway information under the current appid is returned. The detailed filter criteria are as follows:
+<li> gateway-type: filter by gateway type. Valid values: cloud and private, representing Cloud Gateway and free gateway respectively;</li>
+<li> keyword: filter by the keyword of the gateway name.</li>
      */
     public $Filters;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param integer $Offset Pagination offset. Default value: 0.
-     * @param integer $Limit Pagination limit. Default value: 20, maximum value: 1000.
-     * @param array $Filters Filter fields for gateway list. If this parameter is left empty, return the current appid's all gateway information. detailed filter criteria:.
-<Li>Gateway-Type: filter by gateway type. valid values: cloud and private, representing cloud gateway and private gateway respectively.</li>
-<Li>Keyword: filter by keyword in the gateway name.</li>
+     * @param integer $Offset The offset of paginated query. Default value: 0.
+     * @param integer $Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
+     * @param array $Filters Filter field for the gateway list. If this parameter is left empty, all gateway information under the current appid is returned. The detailed filter criteria are as follows:
+<li> gateway-type: filter by gateway type. Valid values: cloud and private, representing Cloud Gateway and free gateway respectively;</li>
+<li> keyword: filter by the keyword of the gateway name.</li>
      */
     function __construct()
     {

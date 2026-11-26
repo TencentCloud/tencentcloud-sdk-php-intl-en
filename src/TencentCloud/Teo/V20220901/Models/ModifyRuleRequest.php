@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRule request structure.
  *
- * @method string getZoneId() Obtain ID of the site
- * @method void setZoneId(string $ZoneId) Set ID of the site
- * @method string getRuleName() Obtain The rule name. It is a string that can contain 1–255 characters.
- * @method void setRuleName(string $RuleName) Set The rule name. It is a string that can contain 1–255 characters.
- * @method array getRules() Obtain The rule content.
- * @method void setRules(array $Rules) Set The rule content.
- * @method string getRuleId() Obtain The rule ID.
- * @method void setRuleId(string $RuleId) Set The rule ID.
- * @method string getStatus() Obtain Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
- * @method void setStatus(string $Status) Set Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
- * @method array getTags() Obtain Tag of the rule.
- * @method void setTags(array $Tags) Set Tag of the rule.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method string getRuleName() Obtain Rule name. The string name can contain 1–255 characters.
+ * @method void setRuleName(string $RuleName) Set Rule name. The string name can contain 1–255 characters.
+ * @method array getRules() Obtain Rule content.
+ * @method void setRules(array $Rules) Set Rule content.
+ * @method string getRuleId() Obtain Rule ID.
+ * @method void setRuleId(string $RuleId) Set Rule ID.
+ * @method string getStatus() Obtain Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: Disabled.</li>
+ * @method void setStatus(string $Status) Set Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: Disabled.</li>
+ * @method array getTags() Obtain Rule tag.
+ * @method void setTags(array $Tags) Set Rule tag.
  */
 class ModifyRuleRequest extends AbstractModel
 {
     /**
-     * @var string ID of the site
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var string The rule name. It is a string that can contain 1–255 characters.
+     * @var string Rule name. The string name can contain 1–255 characters.
      */
     public $RuleName;
 
     /**
-     * @var array The rule content.
+     * @var array Rule content.
      */
     public $Rules;
 
     /**
-     * @var string The rule ID.
+     * @var string Rule ID.
      */
     public $RuleId;
 
     /**
-     * @var string Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
+     * @var string Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: Disabled.</li>
      */
     public $Status;
 
     /**
-     * @var array Tag of the rule.
+     * @var array Rule tag.
      */
     public $Tags;
 
     /**
-     * @param string $ZoneId ID of the site
-     * @param string $RuleName The rule name. It is a string that can contain 1–255 characters.
-     * @param array $Rules The rule content.
-     * @param string $RuleId The rule ID.
-     * @param string $Status Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
-     * @param array $Tags Tag of the rule.
+     * @param string $ZoneId Zone ID.
+     * @param string $RuleName Rule name. The string name can contain 1–255 characters.
+     * @param array $Rules Rule content.
+     * @param string $RuleId Rule ID.
+     * @param string $Status Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: Disabled.</li>
+     * @param array $Tags Rule tag.
      */
     function __construct()
     {

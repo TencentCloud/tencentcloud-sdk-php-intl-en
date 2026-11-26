@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rate limit template
  *
- * @method string getMode() Obtain The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
- * @method void setMode(string $Mode) Set The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
- * @method string getAction() Obtain The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
- * @method void setAction(string $Action) Set The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
- * @method RateLimitTemplateDetail getRateLimitTemplateDetail() Obtain The settings of the rate limiting template. It is only used as an output parameter.
- * @method void setRateLimitTemplateDetail(RateLimitTemplateDetail $RateLimitTemplateDetail) Set The settings of the rate limiting template. It is only used as an output parameter.
+ * @method string getMode() Obtain Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+ * @method void setMode(string $Mode) Set Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+ * @method string getAction() Obtain Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observe.</li>Default value: alg if not specified.
+ * @method void setAction(string $Action) Set Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observe.</li>Default value: alg if not specified.
+ * @method RateLimitTemplateDetail getRateLimitTemplateDetail() Obtain Description of the template value. Returned only as an output parameter.
+ * @method void setRateLimitTemplateDetail(RateLimitTemplateDetail $RateLimitTemplateDetail) Set Description of the template value. Returned only as an output parameter.
  */
 class RateLimitTemplate extends AbstractModel
 {
     /**
-     * @var string The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
+     * @var string Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
      */
     public $Mode;
 
     /**
-     * @var string The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
+     * @var string Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observe.</li>Default value: alg if not specified.
      */
     public $Action;
 
     /**
-     * @var RateLimitTemplateDetail The settings of the rate limiting template. It is only used as an output parameter.
+     * @var RateLimitTemplateDetail Description of the template value. Returned only as an output parameter.
      */
     public $RateLimitTemplateDetail;
 
     /**
-     * @param string $Mode The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
-     * @param string $Action The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
-     * @param RateLimitTemplateDetail $RateLimitTemplateDetail The settings of the rate limiting template. It is only used as an output parameter.
+     * @param string $Mode Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+     * @param string $Action Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observe.</li>Default value: alg if not specified.
+     * @param RateLimitTemplateDetail $RateLimitTemplateDetail Description of the template value. Returned only as an output parameter.
      */
     function __construct()
     {

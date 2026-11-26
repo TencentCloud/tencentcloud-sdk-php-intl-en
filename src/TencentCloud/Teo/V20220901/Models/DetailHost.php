@@ -18,272 +18,220 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Domain name configuration information
+ * Domain configuration information
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getStatus() Obtain The acceleration status. Values:
-<li>`process`: In progress</li>
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
- * @method void setStatus(string $Status) Set The acceleration status. Values:
-<li>`process`: In progress</li>
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
- * @method string getHost() Obtain The domain name.
- * @method void setHost(string $Host) Set The domain name.
- * @method string getZoneName() Obtain Name of the site
- * @method void setZoneName(string $ZoneName) Set Name of the site
- * @method string getCname() Obtain The assigned CNAME
- * @method void setCname(string $Cname) Set The assigned CNAME
- * @method string getId() Obtain The resource ID.
- * @method void setId(string $Id) Set The resource ID.
- * @method string getInstanceId() Obtain The instance ID.
- * @method void setInstanceId(string $InstanceId) Set The instance ID.
- * @method integer getLock() Obtain The lock status.
- * @method void setLock(integer $Lock) Set The lock status.
- * @method integer getMode() Obtain The domain name status.
- * @method void setMode(integer $Mode) Set The domain name status.
- * @method string getArea() Obtain The acceleration area of the domain name. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
- * @method void setArea(string $Area) Set The acceleration area of the domain name. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
- * @method AccelerateType getAccelerateType() Obtain The acceleration type configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAccelerateType(AccelerateType $AccelerateType) Set The acceleration type configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method Https getHttps() Obtain The HTTPS configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHttps(Https $Https) Set The HTTPS configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method CacheConfig getCacheConfig() Obtain The cache configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCacheConfig(CacheConfig $CacheConfig) Set The cache configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method Origin getOrigin() Obtain The origin configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOrigin(Origin $Origin) Set The origin configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method SecurityType getSecurityType() Obtain The security type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSecurityType(SecurityType $SecurityType) Set The security type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method CacheKey getCacheKey() Obtain The cache key configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCacheKey(CacheKey $CacheKey) Set The cache key configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method Compression getCompression() Obtain The smart compression configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCompression(Compression $Compression) Set The smart compression configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method Waf getWaf() Obtain The WAF protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWaf(Waf $Waf) Set The WAF protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method CC getCC() Obtain The CC protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCC(CC $CC) Set The CC protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method DDoS getDDoS() Obtain DDoS mitigation configuration
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDDoS(DDoS $DDoS) Set DDoS mitigation configuration
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method SmartRouting getSmartRouting() Obtain The smart routing configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSmartRouting(SmartRouting $SmartRouting) Set The smart routing configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method Ipv6 getIpv6() Obtain The IPv6 access configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIpv6(Ipv6 $Ipv6) Set The IPv6 access configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ClientIpCountry getClientIpCountry() Obtain Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setClientIpCountry(ClientIpCountry $ClientIpCountry) Set Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method string getStatus() Obtain Acceleration service status. Valid values:
+<li> process: deploying;</li>
+<li> online: started;</li>
+<li>offline: closed.</li>
+ * @method void setStatus(string $Status) Set Acceleration service status. Valid values:
+<li> process: deploying;</li>
+<li> online: started;</li>
+<li>offline: closed.</li>
+ * @method string getHost() Obtain Domain name.
+ * @method void setHost(string $Host) Set Domain name.
+ * @method string getZoneName() Obtain Site name.
+ * @method void setZoneName(string $ZoneName) Set Site name.
+ * @method string getCname() Obtain Assigned Cname domain name
+ * @method void setCname(string $Cname) Set Assigned Cname domain name
+ * @method string getId() Obtain Resource ID.
+ * @method void setId(string $Id) Set Resource ID.
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method integer getLock() Obtain Lock status.
+ * @method void setLock(integer $Lock) Set Lock status.
+ * @method integer getMode() Obtain Domain name status type.
+ * @method void setMode(integer $Mode) Set Domain name status type.
+ * @method string getArea() Obtain Domain name acceleration area. Valid values:
+<li> global: global;</li>
+<li> mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>
+ * @method void setArea(string $Area) Set Domain name acceleration area. Valid values:
+<li> global: global;</li>
+<li> mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>
+ * @method AccelerateType getAccelerateType() Obtain Acceleration type configuration item.
+ * @method void setAccelerateType(AccelerateType $AccelerateType) Set Acceleration type configuration item.
+ * @method Https getHttps() Obtain Https configuration item.
+ * @method void setHttps(Https $Https) Set Https configuration item.
+ * @method CacheConfig getCacheConfig() Obtain Cache configuration item.
+ * @method void setCacheConfig(CacheConfig $CacheConfig) Set Cache configuration item.
+ * @method Origin getOrigin() Obtain Origin server configuration item.
+ * @method void setOrigin(Origin $Origin) Set Origin server configuration item.
+ * @method SecurityType getSecurityType() Obtain Security type.
+ * @method void setSecurityType(SecurityType $SecurityType) Set Security type.
+ * @method CacheKey getCacheKey() Obtain Cache key configuration item.
+ * @method void setCacheKey(CacheKey $CacheKey) Set Cache key configuration item.
+ * @method Compression getCompression() Obtain Intelligent compression configuration item.
+ * @method void setCompression(Compression $Compression) Set Intelligent compression configuration item.
+ * @method Waf getWaf() Obtain Waf protection configuration item.
+ * @method void setWaf(Waf $Waf) Set Waf protection configuration item.
+ * @method CC getCC() Obtain CC protection configuration item.
+ * @method void setCC(CC $CC) Set CC protection configuration item.
+ * @method DDoS getDDoS() Obtain DDoS protection configuration.
+ * @method void setDDoS(DDoS $DDoS) Set DDoS protection configuration.
+ * @method SmartRouting getSmartRouting() Obtain Intelligent routing configuration item.
+ * @method void setSmartRouting(SmartRouting $SmartRouting) Set Intelligent routing configuration item.
+ * @method Ipv6 getIpv6() Obtain Ipv6 access configuration item.
+ * @method void setIpv6(Ipv6 $Ipv6) Set Ipv6 access configuration item.
+ * @method ClientIpCountry getClientIpCountry() Obtain Configuration of whether to carry the region of the client IP during origin-pull.
+ * @method void setClientIpCountry(ClientIpCountry $ClientIpCountry) Set Configuration of whether to carry the region of the client IP during origin-pull.
  */
 class DetailHost extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var string The acceleration status. Values:
-<li>`process`: In progress</li>
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
+     * @var string Acceleration service status. Valid values:
+<li> process: deploying;</li>
+<li> online: started;</li>
+<li>offline: closed.</li>
      */
     public $Status;
 
     /**
-     * @var string The domain name.
+     * @var string Domain name.
      */
     public $Host;
 
     /**
-     * @var string Name of the site
+     * @var string Site name.
      */
     public $ZoneName;
 
     /**
-     * @var string The assigned CNAME
+     * @var string Assigned Cname domain name
      */
     public $Cname;
 
     /**
-     * @var string The resource ID.
+     * @var string Resource ID.
      */
     public $Id;
 
     /**
-     * @var string The instance ID.
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var integer The lock status.
+     * @var integer Lock status.
      */
     public $Lock;
 
     /**
-     * @var integer The domain name status.
+     * @var integer Domain name status type.
      */
     public $Mode;
 
     /**
-     * @var string The acceleration area of the domain name. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
+     * @var string Domain name acceleration area. Valid values:
+<li> global: global;</li>
+<li> mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>
      */
     public $Area;
 
     /**
-     * @var AccelerateType The acceleration type configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AccelerateType Acceleration type configuration item.
      */
     public $AccelerateType;
 
     /**
-     * @var Https The HTTPS configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var Https Https configuration item.
      */
     public $Https;
 
     /**
-     * @var CacheConfig The cache configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var CacheConfig Cache configuration item.
      */
     public $CacheConfig;
 
     /**
-     * @var Origin The origin configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var Origin Origin server configuration item.
      */
     public $Origin;
 
     /**
-     * @var SecurityType The security type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SecurityType Security type.
      */
     public $SecurityType;
 
     /**
-     * @var CacheKey The cache key configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var CacheKey Cache key configuration item.
      */
     public $CacheKey;
 
     /**
-     * @var Compression The smart compression configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var Compression Intelligent compression configuration item.
      */
     public $Compression;
 
     /**
-     * @var Waf The WAF protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var Waf Waf protection configuration item.
      */
     public $Waf;
 
     /**
-     * @var CC The CC protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var CC CC protection configuration item.
      */
     public $CC;
 
     /**
-     * @var DDoS DDoS mitigation configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var DDoS DDoS protection configuration.
      */
     public $DDoS;
 
     /**
-     * @var SmartRouting The smart routing configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SmartRouting Intelligent routing configuration item.
      */
     public $SmartRouting;
 
     /**
-     * @var Ipv6 The IPv6 access configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var Ipv6 Ipv6 access configuration item.
      */
     public $Ipv6;
 
     /**
-     * @var ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var ClientIpCountry Configuration of whether to carry the region of the client IP during origin-pull.
      */
     public $ClientIpCountry;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $Status The acceleration status. Values:
-<li>`process`: In progress</li>
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-     * @param string $Host The domain name.
-     * @param string $ZoneName Name of the site
-     * @param string $Cname The assigned CNAME
-     * @param string $Id The resource ID.
-     * @param string $InstanceId The instance ID.
-     * @param integer $Lock The lock status.
-     * @param integer $Mode The domain name status.
-     * @param string $Area The acceleration area of the domain name. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
-     * @param AccelerateType $AccelerateType The acceleration type configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Https $Https The HTTPS configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CacheConfig $CacheConfig The cache configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Origin $Origin The origin configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SecurityType $SecurityType The security type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CacheKey $CacheKey The cache key configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Compression $Compression The smart compression configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Waf $Waf The WAF protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CC $CC The CC protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DDoS $DDoS DDoS mitigation configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SmartRouting $SmartRouting The smart routing configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Ipv6 $Ipv6 The IPv6 access configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClientIpCountry $ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $ZoneId Site ID.
+     * @param string $Status Acceleration service status. Valid values:
+<li> process: deploying;</li>
+<li> online: started;</li>
+<li>offline: closed.</li>
+     * @param string $Host Domain name.
+     * @param string $ZoneName Site name.
+     * @param string $Cname Assigned Cname domain name
+     * @param string $Id Resource ID.
+     * @param string $InstanceId Instance ID.
+     * @param integer $Lock Lock status.
+     * @param integer $Mode Domain name status type.
+     * @param string $Area Domain name acceleration area. Valid values:
+<li> global: global;</li>
+<li> mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>
+     * @param AccelerateType $AccelerateType Acceleration type configuration item.
+     * @param Https $Https Https configuration item.
+     * @param CacheConfig $CacheConfig Cache configuration item.
+     * @param Origin $Origin Origin server configuration item.
+     * @param SecurityType $SecurityType Security type.
+     * @param CacheKey $CacheKey Cache key configuration item.
+     * @param Compression $Compression Intelligent compression configuration item.
+     * @param Waf $Waf Waf protection configuration item.
+     * @param CC $CC CC protection configuration item.
+     * @param DDoS $DDoS DDoS protection configuration.
+     * @param SmartRouting $SmartRouting Intelligent routing configuration item.
+     * @param Ipv6 $Ipv6 Ipv6 access configuration item.
+     * @param ClientIpCountry $ClientIpCountry Configuration of whether to carry the region of the client IP during origin-pull.
      */
     function __construct()
     {

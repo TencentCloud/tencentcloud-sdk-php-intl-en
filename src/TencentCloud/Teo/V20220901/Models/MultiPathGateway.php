@@ -18,43 +18,43 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Multi-Channel security gateway details.
+ * Multi-channel security gateway details
  *
- * @method string getGatewayId() Obtain Specifies the gateway ID.
- * @method void setGatewayId(string $GatewayId) Set Specifies the gateway ID.
+ * @method string getGatewayId() Obtain Gateway ID.
+ * @method void setGatewayId(string $GatewayId) Set Gateway ID.
  * @method string getGatewayName() Obtain Gateway name.
  * @method void setGatewayName(string $GatewayName) Set Gateway name.
- * @method string getGatewayType() Obtain Gateway type. valid values:
-<Li>Cloud: cloud gateway,  created and managed by Tencent cloud.</li>
-<Li>Private: private gateway, deployed by cutomer.</li>
- * @method void setGatewayType(string $GatewayType) Set Gateway type. valid values:
-<Li>Cloud: cloud gateway,  created and managed by Tencent cloud.</li>
-<Li>Private: private gateway, deployed by cutomer.</li>
- * @method integer getGatewayPort() Obtain Gateway port. value range: 1-65535 (excluding 8888).
- * @method void setGatewayPort(integer $GatewayPort) Set Gateway port. value range: 1-65535 (excluding 8888).
- * @method string getStatus() Obtain Gateway status. valid values:
-<Li>creating: The gateway is being created. </li>
-<Li>online: The gateway is online and operational.</li>
-<Li>offline: The gateway is offline and unavailable.</li>
-<Li>disabled: The gateway has been disabled.</li>
- * @method void setStatus(string $Status) Set Gateway status. valid values:
-<Li>creating: The gateway is being created. </li>
-<Li>online: The gateway is online and operational.</li>
-<Li>offline: The gateway is offline and unavailable.</li>
-<Li>disabled: The gateway has been disabled.</li>
- * @method string getGatewayIP() Obtain Gateway IP, in IPv4 format.
- * @method void setGatewayIP(string $GatewayIP) Set Gateway IP, in IPv4 format.
- * @method string getRegionId() Obtain Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API.
- * @method void setRegionId(string $RegionId) Set Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API.
- * @method array getLines() Obtain Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
- * @method void setLines(array $Lines) Set Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
- * @method string getNeedConfirm() Obtain Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
- * @method void setNeedConfirm(string $NeedConfirm) Set Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+ * @method string getGatewayType() Obtain Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud.</li>
+<li> private: private gateway, a Private Gateway deployed by the user.</li>
+ * @method void setGatewayType(string $GatewayType) Set Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud.</li>
+<li> private: private gateway, a Private Gateway deployed by the user.</li>
+ * @method integer getGatewayPort() Obtain Gateway port. Range: 1–65535 (excluding 8888).
+ * @method void setGatewayPort(integer $GatewayPort) Set Gateway port. Range: 1–65535 (excluding 8888).
+ * @method string getStatus() Obtain Gateway status. Valid values:
+<li> creating : Creating;</li>
+<li> online : Online;</li>
+<li> offline : Offline;</li>
+<li> disable : disabled.</li>
+ * @method void setStatus(string $Status) Set Gateway status. Valid values:
+<li> creating : Creating;</li>
+<li> online : Online;</li>
+<li> offline : Offline;</li>
+<li> disable : disabled.</li>
+ * @method string getGatewayIP() Obtain Gateway IP in IPv4 format.
+ * @method void setGatewayIP(string $GatewayIP) Set Gateway IP in IPv4 format.
+ * @method string getRegionId() Obtain Gateway region ID. You can obtain the RegionId list through the DescribeMultiPathGatewayRegions API.
+ * @method void setRegionId(string $RegionId) Set Gateway region ID. You can obtain the RegionId list through the DescribeMultiPathGatewayRegions API.
+ * @method array getLines() Obtain Line information. It will be returned when querying gateway information details via DescribeMultiPathGateway, but not when querying the gateway list via DescribeMultiPathGateways.
+ * @method void setLines(array $Lines) Set Line information. It will be returned when querying gateway information details via DescribeMultiPathGateway, but not when querying the gateway list via DescribeMultiPathGateways.
+ * @method string getNeedConfirm() Obtain Whether the origin-pull IP list of the gateway has changed and needs confirmation. Valid values: <li>true: The origin-pull IP list has changed and needs confirmation;</li><li>false: The origin-pull IP list has not changed and does not need confirmation.</li>
+ * @method void setNeedConfirm(string $NeedConfirm) Set Whether the origin-pull IP list of the gateway has changed and needs confirmation. Valid values: <li>true: The origin-pull IP list has changed and needs confirmation;</li><li>false: The origin-pull IP list has not changed and does not need confirmation.</li>
  */
 class MultiPathGateway extends AbstractModel
 {
     /**
-     * @var string Specifies the gateway ID.
+     * @var string Gateway ID.
      */
     public $GatewayId;
 
@@ -64,62 +64,62 @@ class MultiPathGateway extends AbstractModel
     public $GatewayName;
 
     /**
-     * @var string Gateway type. valid values:
-<Li>Cloud: cloud gateway,  created and managed by Tencent cloud.</li>
-<Li>Private: private gateway, deployed by cutomer.</li>
+     * @var string Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud.</li>
+<li> private: private gateway, a Private Gateway deployed by the user.</li>
      */
     public $GatewayType;
 
     /**
-     * @var integer Gateway port. value range: 1-65535 (excluding 8888).
+     * @var integer Gateway port. Range: 1–65535 (excluding 8888).
      */
     public $GatewayPort;
 
     /**
-     * @var string Gateway status. valid values:
-<Li>creating: The gateway is being created. </li>
-<Li>online: The gateway is online and operational.</li>
-<Li>offline: The gateway is offline and unavailable.</li>
-<Li>disabled: The gateway has been disabled.</li>
+     * @var string Gateway status. Valid values:
+<li> creating : Creating;</li>
+<li> online : Online;</li>
+<li> offline : Offline;</li>
+<li> disable : disabled.</li>
      */
     public $Status;
 
     /**
-     * @var string Gateway IP, in IPv4 format.
+     * @var string Gateway IP in IPv4 format.
      */
     public $GatewayIP;
 
     /**
-     * @var string Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API.
+     * @var string Gateway region ID. You can obtain the RegionId list through the DescribeMultiPathGatewayRegions API.
      */
     public $RegionId;
 
     /**
-     * @var array Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
+     * @var array Line information. It will be returned when querying gateway information details via DescribeMultiPathGateway, but not when querying the gateway list via DescribeMultiPathGateways.
      */
     public $Lines;
 
     /**
-     * @var string Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+     * @var string Whether the origin-pull IP list of the gateway has changed and needs confirmation. Valid values: <li>true: The origin-pull IP list has changed and needs confirmation;</li><li>false: The origin-pull IP list has not changed and does not need confirmation.</li>
      */
     public $NeedConfirm;
 
     /**
-     * @param string $GatewayId Specifies the gateway ID.
+     * @param string $GatewayId Gateway ID.
      * @param string $GatewayName Gateway name.
-     * @param string $GatewayType Gateway type. valid values:
-<Li>Cloud: cloud gateway,  created and managed by Tencent cloud.</li>
-<Li>Private: private gateway, deployed by cutomer.</li>
-     * @param integer $GatewayPort Gateway port. value range: 1-65535 (excluding 8888).
-     * @param string $Status Gateway status. valid values:
-<Li>creating: The gateway is being created. </li>
-<Li>online: The gateway is online and operational.</li>
-<Li>offline: The gateway is offline and unavailable.</li>
-<Li>disabled: The gateway has been disabled.</li>
-     * @param string $GatewayIP Gateway IP, in IPv4 format.
-     * @param string $RegionId Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API.
-     * @param array $Lines Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
-     * @param string $NeedConfirm Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+     * @param string $GatewayType Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud.</li>
+<li> private: private gateway, a Private Gateway deployed by the user.</li>
+     * @param integer $GatewayPort Gateway port. Range: 1–65535 (excluding 8888).
+     * @param string $Status Gateway status. Valid values:
+<li> creating : Creating;</li>
+<li> online : Online;</li>
+<li> offline : Offline;</li>
+<li> disable : disabled.</li>
+     * @param string $GatewayIP Gateway IP in IPv4 format.
+     * @param string $RegionId Gateway region ID. You can obtain the RegionId list through the DescribeMultiPathGatewayRegions API.
+     * @param array $Lines Line information. It will be returned when querying gateway information details via DescribeMultiPathGateway, but not when querying the gateway list via DescribeMultiPathGateways.
+     * @param string $NeedConfirm Whether the origin-pull IP list of the gateway has changed and needs confirmation. Valid values: <li>true: The origin-pull IP list has changed and needs confirmation;</li><li>false: The origin-pull IP list has not changed and does not need confirmation.</li>
      */
     function __construct()
     {

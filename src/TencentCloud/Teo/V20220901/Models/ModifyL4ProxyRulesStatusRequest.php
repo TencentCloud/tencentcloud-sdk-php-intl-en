@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getProxyId() Obtain Layer 4 proxy instance ID.
- * @method void setProxyId(string $ProxyId) Set Layer 4 proxy instance ID.
- * @method array getRuleIds() Obtain List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
- * @method void setRuleIds(array $RuleIds) Set List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
- * @method string getStatus() Obtain Status of forwarding rules. Valid values:
-<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
- * @method void setStatus(string $Status) Set Status of forwarding rules. Valid values:
-<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
+ * @method string getProxyId() Obtain Layer 4 Proxy Instance ID.
+ * @method void setProxyId(string $ProxyId) Set Layer 4 Proxy Instance ID.
+ * @method array getRuleIds() Obtain List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
+ * @method void setRuleIds(array $RuleIds) Set List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
+ * @method string getStatus() Obtain Forwarding rule status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
+ * @method void setStatus(string $Status) Set Forwarding rule status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
  */
 class ModifyL4ProxyRulesStatusRequest extends AbstractModel
 {
@@ -41,29 +41,29 @@ class ModifyL4ProxyRulesStatusRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Layer 4 proxy instance ID.
+     * @var string Layer 4 Proxy Instance ID.
      */
     public $ProxyId;
 
     /**
-     * @var array List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
+     * @var array List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
      */
     public $RuleIds;
 
     /**
-     * @var string Status of forwarding rules. Valid values:
-<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
+     * @var string Forwarding rule status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
      */
     public $Status;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $ProxyId Layer 4 proxy instance ID.
-     * @param array $RuleIds List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
-     * @param string $Status Status of forwarding rules. Valid values:
-<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
+     * @param string $ProxyId Layer 4 Proxy Instance ID.
+     * @param array $RuleIds List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
+     * @param string $Status Forwarding rule status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
      */
     function __construct()
     {

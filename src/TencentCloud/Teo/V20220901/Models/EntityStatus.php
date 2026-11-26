@@ -18,40 +18,40 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Status of domain names bound with this template.
+ * Security instance status.
  *
- * @method string getEntity() Obtain Instance name. Only subdomain names are supported.
- * @method void setEntity(string $Entity) Set Instance name. Only subdomain names are supported.
- * @method string getStatus() Obtain Instance configuration status. Values:
-<li>`online`: Configuration has taken effect;</li><li>`fail`: Configuration failed;</li><li>`process`: Configuration is being delivered. </li>
- * @method void setStatus(string $Status) Set Instance configuration status. Values:
-<li>`online`: Configuration has taken effect;</li><li>`fail`: Configuration failed;</li><li>`process`: Configuration is being delivered. </li>
- * @method string getMessage() Obtain Message returned after the operation completed. 
- * @method void setMessage(string $Message) Set Message returned after the operation completed. 
+ * @method string getEntity() Obtain Instance name. Currently, only subdomains are available.
+ * @method void setEntity(string $Entity) Set Instance name. Currently, only subdomains are available.
+ * @method string getStatus() Obtain Instance configuration issuance status. Valid values:
+<li>online: Configuration in effect;</li><li>fail: Configuration failure;</li><li>process: Configuration is being deployed.</li>
+ * @method void setStatus(string $Status) Set Instance configuration issuance status. Valid values:
+<li>online: Configuration in effect;</li><li>fail: Configuration failure;</li><li>process: Configuration is being deployed.</li>
+ * @method string getMessage() Obtain Prompt for instance configuration distribution.
+ * @method void setMessage(string $Message) Set Prompt for instance configuration distribution.
  */
 class EntityStatus extends AbstractModel
 {
     /**
-     * @var string Instance name. Only subdomain names are supported.
+     * @var string Instance name. Currently, only subdomains are available.
      */
     public $Entity;
 
     /**
-     * @var string Instance configuration status. Values:
-<li>`online`: Configuration has taken effect;</li><li>`fail`: Configuration failed;</li><li>`process`: Configuration is being delivered. </li>
+     * @var string Instance configuration issuance status. Valid values:
+<li>online: Configuration in effect;</li><li>fail: Configuration failure;</li><li>process: Configuration is being deployed.</li>
      */
     public $Status;
 
     /**
-     * @var string Message returned after the operation completed. 
+     * @var string Prompt for instance configuration distribution.
      */
     public $Message;
 
     /**
-     * @param string $Entity Instance name. Only subdomain names are supported.
-     * @param string $Status Instance configuration status. Values:
-<li>`online`: Configuration has taken effect;</li><li>`fail`: Configuration failed;</li><li>`process`: Configuration is being delivered. </li>
-     * @param string $Message Message returned after the operation completed. 
+     * @param string $Entity Instance name. Currently, only subdomains are available.
+     * @param string $Status Instance configuration issuance status. Valid values:
+<li>online: Configuration in effect;</li><li>fail: Configuration failure;</li><li>process: Configuration is being deployed.</li>
+     * @param string $Message Prompt for instance configuration distribution.
      */
     function __construct()
     {

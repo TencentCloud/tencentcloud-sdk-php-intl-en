@@ -20,114 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccelerationDomains request structure.
  *
- * @method string getZoneId() Obtain ID of the site related with the acceleration domain name.
- * @method void setZoneId(string $ZoneId) Set ID of the site related with the acceleration domain name.
- * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0.
- * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0.
- * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 200.
- * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20. Maximum value: 200.
- * @method array getFilters() Obtain Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
-<li>domain-name: Filter by acceleration domain name;</li>
-<li>origin-type: Filter by origin server type;</li>
-<li>origin: Filter by primary origin server address;</li>
-<li>backup-origin: Filter by replica origin server address;</li>
-<li>domain-cname: Filter by CNAME;</li>
-<li>share-cname: Filter by shared CNAME.</li>
- * @method void setFilters(array $Filters) Set Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
-<li>domain-name: Filter by acceleration domain name;</li>
-<li>origin-type: Filter by origin server type;</li>
-<li>origin: Filter by primary origin server address;</li>
-<li>backup-origin: Filter by replica origin server address;</li>
-<li>domain-cname: Filter by CNAME;</li>
-<li>share-cname: Filter by shared CNAME.</li>
- * @method string getOrder() Obtain Sort the returned results according to this field. Values include:
-<li>`created_on`: Creation time of the acceleration domain name</li>
-<li>`domain-name`: (Default) Acceleration domain name.</li> 
- * @method void setOrder(string $Order) Set Sort the returned results according to this field. Values include:
-<li>`created_on`: Creation time of the acceleration domain name</li>
-<li>`domain-name`: (Default) Acceleration domain name.</li> 
- * @method string getDirection() Obtain Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li> Default value: `asc`.
- * @method void setDirection(string $Direction) Set Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li> Default value: `asc`.
- * @method string getMatch() Obtain The match mode. Values:
-<li>`all`: Return all matches.</li>
-<li>`any`: Return any match.</li>Default value: `all`.
- * @method void setMatch(string $Match) Set The match mode. Values:
-<li>`all`: Return all matches.</li>
-<li>`any`: Return any match.</li>Default value: `all`.
+ * @method string getZoneId() Obtain <p>Zone ID of the acceleration domain name.</p>
+ * @method void setZoneId(string $ZoneId) Set <p>Zone ID of the acceleration domain name.</p>
+ * @method integer getOffset() Obtain <p>The offset of paginated query. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>The offset of paginated query. Default value: 0.</p>
+ * @method integer getLimit() Obtain <p>Paginated query limit. Default value: 20, maximum value: 200.</p>
+ * @method void setLimit(integer $Limit) Set <p>Paginated query limit. Default value: 20, maximum value: 200.</p>
+ * @method array getFilters() Obtain <p>Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all domain information under the current zone-id is returned. The detailed filter criteria are as follows:</p><li>domain-name: Filter by acceleration domain name;</li><li>origin-type: Filter by origin server type;</li><li>origin: Filter by primary origin server address;</li><li>backup-origin: Filter by secondary origin server address;</li><li>domain-cname: Filter by CNAME;</li><li>share-cname: Filter by shared CNAME;</li>
+ * @method void setFilters(array $Filters) Set <p>Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all domain information under the current zone-id is returned. The detailed filter criteria are as follows:</p><li>domain-name: Filter by acceleration domain name;</li><li>origin-type: Filter by origin server type;</li><li>origin: Filter by primary origin server address;</li><li>backup-origin: Filter by secondary origin server address;</li><li>domain-cname: Filter by CNAME;</li><li>share-cname: Filter by shared CNAME;</li>
+ * @method string getOrder() Obtain <p>Sort returned results by this field. Valid values:</p><li>created_on: acceleration domain name creation time;</li><li>domain-name: acceleration domain name.</li>If left empty, returned results are sorted by domain-name by default.
+ * @method void setOrder(string $Order) Set <p>Sort returned results by this field. Valid values:</p><li>created_on: acceleration domain name creation time;</li><li>domain-name: acceleration domain name.</li>If left empty, returned results are sorted by domain-name by default.
+ * @method string getDirection() Obtain <p>Sorting order. If the field value is a number, sort by its size. If the field value is text, sort by ASCII code size. Valid values:</p><li>asc: ascending order;</li><li>desc: descending order.</li>Use default value asc if not specified.
+ * @method void setDirection(string $Direction) Set <p>Sorting order. If the field value is a number, sort by its size. If the field value is text, sort by ASCII code size. Valid values:</p><li>asc: ascending order;</li><li>desc: descending order.</li>Use default value asc if not specified.
+ * @method string getMatch() Obtain <p>Match mode. Valid values:</p><li>all: return acceleration domain names that match all query conditions;</li><li>any: return acceleration domain names that match any query condition.</li>If left empty, the default value is all.
+ * @method void setMatch(string $Match) Set <p>Match mode. Valid values:</p><li>all: return acceleration domain names that match all query conditions;</li><li>any: return acceleration domain names that match any query condition.</li>If left empty, the default value is all.
  */
 class DescribeAccelerationDomainsRequest extends AbstractModel
 {
     /**
-     * @var string ID of the site related with the acceleration domain name.
+     * @var string <p>Zone ID of the acceleration domain name.</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer Offset for paginated queries. Default value: 0.
+     * @var integer <p>The offset of paginated query. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var integer Limit on paginated queries. Default value: 20. Maximum value: 200.
+     * @var integer <p>Paginated query limit. Default value: 20, maximum value: 200.</p>
      */
     public $Limit;
 
     /**
-     * @var array Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
-<li>domain-name: Filter by acceleration domain name;</li>
-<li>origin-type: Filter by origin server type;</li>
-<li>origin: Filter by primary origin server address;</li>
-<li>backup-origin: Filter by replica origin server address;</li>
-<li>domain-cname: Filter by CNAME;</li>
-<li>share-cname: Filter by shared CNAME.</li>
+     * @var array <p>Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all domain information under the current zone-id is returned. The detailed filter criteria are as follows:</p><li>domain-name: Filter by acceleration domain name;</li><li>origin-type: Filter by origin server type;</li><li>origin: Filter by primary origin server address;</li><li>backup-origin: Filter by secondary origin server address;</li><li>domain-cname: Filter by CNAME;</li><li>share-cname: Filter by shared CNAME;</li>
      */
     public $Filters;
 
     /**
-     * @var string Sort the returned results according to this field. Values include:
-<li>`created_on`: Creation time of the acceleration domain name</li>
-<li>`domain-name`: (Default) Acceleration domain name.</li> 
+     * @var string <p>Sort returned results by this field. Valid values:</p><li>created_on: acceleration domain name creation time;</li><li>domain-name: acceleration domain name.</li>If left empty, returned results are sorted by domain-name by default.
      */
     public $Order;
 
     /**
-     * @var string Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li> Default value: `asc`.
+     * @var string <p>Sorting order. If the field value is a number, sort by its size. If the field value is text, sort by ASCII code size. Valid values:</p><li>asc: ascending order;</li><li>desc: descending order.</li>Use default value asc if not specified.
      */
     public $Direction;
 
     /**
-     * @var string The match mode. Values:
-<li>`all`: Return all matches.</li>
-<li>`any`: Return any match.</li>Default value: `all`.
+     * @var string <p>Match mode. Valid values:</p><li>all: return acceleration domain names that match all query conditions;</li><li>any: return acceleration domain names that match any query condition.</li>If left empty, the default value is all.
      */
     public $Match;
 
     /**
-     * @param string $ZoneId ID of the site related with the acceleration domain name.
-     * @param integer $Offset Offset for paginated queries. Default value: 0.
-     * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 200.
-     * @param array $Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
-<li>domain-name: Filter by acceleration domain name;</li>
-<li>origin-type: Filter by origin server type;</li>
-<li>origin: Filter by primary origin server address;</li>
-<li>backup-origin: Filter by replica origin server address;</li>
-<li>domain-cname: Filter by CNAME;</li>
-<li>share-cname: Filter by shared CNAME.</li>
-     * @param string $Order Sort the returned results according to this field. Values include:
-<li>`created_on`: Creation time of the acceleration domain name</li>
-<li>`domain-name`: (Default) Acceleration domain name.</li> 
-     * @param string $Direction Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li> Default value: `asc`.
-     * @param string $Match The match mode. Values:
-<li>`all`: Return all matches.</li>
-<li>`any`: Return any match.</li>Default value: `all`.
+     * @param string $ZoneId <p>Zone ID of the acceleration domain name.</p>
+     * @param integer $Offset <p>The offset of paginated query. Default value: 0.</p>
+     * @param integer $Limit <p>Paginated query limit. Default value: 20, maximum value: 200.</p>
+     * @param array $Filters <p>Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all domain information under the current zone-id is returned. The detailed filter criteria are as follows:</p><li>domain-name: Filter by acceleration domain name;</li><li>origin-type: Filter by origin server type;</li><li>origin: Filter by primary origin server address;</li><li>backup-origin: Filter by secondary origin server address;</li><li>domain-cname: Filter by CNAME;</li><li>share-cname: Filter by shared CNAME;</li>
+     * @param string $Order <p>Sort returned results by this field. Valid values:</p><li>created_on: acceleration domain name creation time;</li><li>domain-name: acceleration domain name.</li>If left empty, returned results are sorted by domain-name by default.
+     * @param string $Direction <p>Sorting order. If the field value is a number, sort by its size. If the field value is text, sort by ASCII code size. Valid values:</p><li>asc: ascending order;</li><li>desc: descending order.</li>Use default value asc if not specified.
+     * @param string $Match <p>Match mode. Valid values:</p><li>all: return acceleration domain names that match all query conditions;</li><li>any: return acceleration domain names that match any query condition.</li>If left empty, the default value is all.
      */
     function __construct()
     {

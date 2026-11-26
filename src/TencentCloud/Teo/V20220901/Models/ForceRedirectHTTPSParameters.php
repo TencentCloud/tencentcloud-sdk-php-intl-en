@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Forced HTTPS redirect configuration for access protocols.
  *
- * @method string getSwitch() Obtain Whether to enable forced redirect configuration switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method void setSwitch(string $Switch) Set Whether to enable forced redirect configuration switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method integer getRedirectStatusCode() Obtain Redirection status code. this field is required when switch is on; otherwise, it is not effective. valid values are:.
-<Li>`301`: 301 redirect;</li>.
-<Li>`302`: 302 redirect.</li>.
- * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Redirection status code. this field is required when switch is on; otherwise, it is not effective. valid values are:.
-<Li>`301`: 301 redirect;</li>.
-<Li>`302`: 302 redirect.</li>.
+ * @method string getSwitch() Obtain Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method integer getRedirectStatusCode() Obtain Redirection status code. When Switch is on, this field is required; otherwise, it is ineffective. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
+ * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Redirection status code. When Switch is on, this field is required; otherwise, it is ineffective. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
  */
 class ForceRedirectHTTPSParameters extends AbstractModel
 {
     /**
-     * @var string Whether to enable forced redirect configuration switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @var string Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var integer Redirection status code. this field is required when switch is on; otherwise, it is not effective. valid values are:.
-<Li>`301`: 301 redirect;</li>.
-<Li>`302`: 302 redirect.</li>.
+     * @var integer Redirection status code. When Switch is on, this field is required; otherwise, it is ineffective. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
      */
     public $RedirectStatusCode;
 
     /**
-     * @param string $Switch Whether to enable forced redirect configuration switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-     * @param integer $RedirectStatusCode Redirection status code. this field is required when switch is on; otherwise, it is not effective. valid values are:.
-<Li>`301`: 301 redirect;</li>.
-<Li>`302`: 302 redirect.</li>.
+     * @param string $Switch Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param integer $RedirectStatusCode Redirection status code. When Switch is on, this field is required; otherwise, it is ineffective. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
      */
     function __construct()
     {

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getId() Obtain API service ID.
  * @method void setId(string $Id) Set API service ID.
- * @method string getName() Obtain Specifies the API service name.
- * @method void setName(string $Name) Set Specifies the API service name.
- * @method string getBasePath() Obtain Specifies the base path.
- * @method void setBasePath(string $BasePath) Set Specifies the base path.
+ * @method string getName() Obtain API service name.
+ * @method void setName(string $Name) Set API service name.
+ * @method string getBasePath() Obtain Base path.
+ * @method void setBasePath(string $BasePath) Set Base path.
  */
 class APIService extends AbstractModel
 {
@@ -35,19 +35,19 @@ class APIService extends AbstractModel
     public $Id;
 
     /**
-     * @var string Specifies the API service name.
+     * @var string API service name.
      */
     public $Name;
 
     /**
-     * @var string Specifies the base path.
+     * @var string Base path.
      */
     public $BasePath;
 
     /**
      * @param string $Id API service ID.
-     * @param string $Name Specifies the API service name.
-     * @param string $BasePath Specifies the base path.
+     * @param string $Name API service name.
+     * @param string $BasePath Base path.
      */
     function __construct()
     {

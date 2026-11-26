@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFunctionRule request structure.
  *
- * @method string getZoneId() Obtain Zone ID
- * @method void setZoneId(string $ZoneId) Set Zone ID
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
  * @method array getFunctionRuleConditions() Obtain Rule condition list. There is an OR relationship between different conditions of the same trigger rule.
  * @method void setFunctionRuleConditions(array $FunctionRuleConditions) Set Rule condition list. There is an OR relationship between different conditions of the same trigger rule.
  * @method string getTriggerType() Obtain Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
-Specifies the default value as direct when left blank.
+<li> direct: directly specify the execution function;</li>
+<li> weight: Select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
+Default value: direct.
  * @method void setTriggerType(string $TriggerType) Set Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
-Specifies the default value as direct when left blank.
- * @method string getFunctionId() Obtain Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
- * @method void setFunctionId(string $FunctionId) Set Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
- * @method array getRegionMappingSelections() Obtain Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
- * @method void setRegionMappingSelections(array $RegionMappingSelections) Set Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
- * @method array getWeightedSelections() Obtain Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
- * @method void setWeightedSelections(array $WeightedSelections) Set Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+<li> direct: directly specify the execution function;</li>
+<li> weight: Select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
+Default value: direct.
+ * @method string getFunctionId() Obtain ID of the function to execute. This parameter is valid only when TriggerType is direct or not specified.
+ * @method void setFunctionId(string $FunctionId) Set ID of the function to execute. This parameter is valid only when TriggerType is direct or not specified.
+ * @method array getRegionMappingSelections() Obtain Function selection configuration based on client IP country/region. This parameter is valid only when TriggerType is region, and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+ * @method void setRegionMappingSelections(array $RegionMappingSelections) Set Function selection configuration based on client IP country/region. This parameter is valid only when TriggerType is region, and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+ * @method array getWeightedSelections() Obtain Weight-based function selection configuration. This parameter is valid only when TriggerType is weight, and WeightedSelections is required. The sum of all weights in WeightedSelections needs to be 100.
+ * @method void setWeightedSelections(array $WeightedSelections) Set Weight-based function selection configuration. This parameter is valid only when TriggerType is weight, and WeightedSelections is required. The sum of all weights in WeightedSelections needs to be 100.
  * @method string getRemark() Obtain Rule description, which can contain up to 60 characters.
  * @method void setRemark(string $Remark) Set Rule description, which can contain up to 60 characters.
  */
 class CreateFunctionRuleRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID
+     * @var string Zone ID.
      */
     public $ZoneId;
 
@@ -57,25 +57,25 @@ class CreateFunctionRuleRequest extends AbstractModel
 
     /**
      * @var string Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
-Specifies the default value as direct when left blank.
+<li> direct: directly specify the execution function;</li>
+<li> weight: Select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
+Default value: direct.
      */
     public $TriggerType;
 
     /**
-     * @var string Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
+     * @var string ID of the function to execute. This parameter is valid only when TriggerType is direct or not specified.
      */
     public $FunctionId;
 
     /**
-     * @var array Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+     * @var array Function selection configuration based on client IP country/region. This parameter is valid only when TriggerType is region, and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
      */
     public $RegionMappingSelections;
 
     /**
-     * @var array Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+     * @var array Weight-based function selection configuration. This parameter is valid only when TriggerType is weight, and WeightedSelections is required. The sum of all weights in WeightedSelections needs to be 100.
      */
     public $WeightedSelections;
 
@@ -85,16 +85,16 @@ Specifies the default value as direct when left blank.
     public $Remark;
 
     /**
-     * @param string $ZoneId Zone ID
+     * @param string $ZoneId Zone ID.
      * @param array $FunctionRuleConditions Rule condition list. There is an OR relationship between different conditions of the same trigger rule.
      * @param string $TriggerType Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
-Specifies the default value as direct when left blank.
-     * @param string $FunctionId Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
-     * @param array $RegionMappingSelections Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
-     * @param array $WeightedSelections Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+<li> direct: directly specify the execution function;</li>
+<li> weight: Select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
+Default value: direct.
+     * @param string $FunctionId ID of the function to execute. This parameter is valid only when TriggerType is direct or not specified.
+     * @param array $RegionMappingSelections Function selection configuration based on client IP country/region. This parameter is valid only when TriggerType is region, and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+     * @param array $WeightedSelections Weight-based function selection configuration. This parameter is valid only when TriggerType is weight, and WeightedSelections is required. The sum of all weights in WeightedSelections needs to be 100.
      * @param string $Remark Rule description, which can contain up to 60 characters.
      */
     function __construct()

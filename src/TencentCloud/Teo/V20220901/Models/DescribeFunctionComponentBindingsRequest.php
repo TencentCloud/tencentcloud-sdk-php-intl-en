@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set The offset of paginated query. Default value: 0.
  * @method integer getLimit() Obtain The limit of paginated query. Default value: 20. Maximum value: 1,000.
  * @method void setLimit(integer $Limit) Set The limit of paginated query. Default value: 20. Maximum value: 1,000.
- * @method array getFilters() Obtain Filter conditions. The maximum number of Filters.Values is 20. Detailed filter criteria:
-<li>Name: Filter by the bound variable name. Fuzzy query is supported.</li>
+ * @method array getFilters() Obtain Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>name: filter by the bound variable name. Fuzzy query is supported;</li>
 <li>type: Filter by binding type. Fuzzy queries are not supported.</li>
 
- * @method void setFilters(array $Filters) Set Filter conditions. The maximum number of Filters.Values is 20. Detailed filter criteria:
-<li>Name: Filter by the bound variable name. Fuzzy query is supported.</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>name: filter by the bound variable name. Fuzzy query is supported;</li>
 <li>type: Filter by binding type. Fuzzy queries are not supported.</li>
  */
 class DescribeFunctionComponentBindingsRequest extends AbstractModel
@@ -59,8 +59,8 @@ class DescribeFunctionComponentBindingsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array Filter conditions. The maximum number of Filters.Values is 20. Detailed filter criteria:
-<li>Name: Filter by the bound variable name. Fuzzy query is supported.</li>
+     * @var array Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>name: filter by the bound variable name. Fuzzy query is supported;</li>
 <li>type: Filter by binding type. Fuzzy queries are not supported.</li>
 
      */
@@ -71,8 +71,8 @@ class DescribeFunctionComponentBindingsRequest extends AbstractModel
      * @param string $FunctionId Function ID.
      * @param integer $Offset The offset of paginated query. Default value: 0.
      * @param integer $Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
-     * @param array $Filters Filter conditions. The maximum number of Filters.Values is 20. Detailed filter criteria:
-<li>Name: Filter by the bound variable name. Fuzzy query is supported.</li>
+     * @param array $Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>name: filter by the bound variable name. Fuzzy query is supported;</li>
 <li>type: Filter by binding type. Fuzzy queries are not supported.</li>
      */
     function __construct()

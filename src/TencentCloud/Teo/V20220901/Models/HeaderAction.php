@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HTTP header setting rules.
+ * HTTP header setting rule.
  *
- * @method string getAction() Obtain HTTP header setting methods. valid values are:.
-<Li>`Set`: sets a value for an existing header parameter;</li>.
-<Li>`Del`: deletes a header parameter;</li>.
-<Li>`Add`: adds a header parameter.</li>.
- * @method void setAction(string $Action) Set HTTP header setting methods. valid values are:.
-<Li>`Set`: sets a value for an existing header parameter;</li>.
-<Li>`Del`: deletes a header parameter;</li>.
-<Li>`Add`: adds a header parameter.</li>.
+ * @method string getAction() Obtain HTTP header setting method. Valid values:
+<li>set: Set. Change the value of the specified header parameter to the value after setting;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter.</li>
+ * @method void setAction(string $Action) Set HTTP header setting method. Valid values:
+<li>set: Set. Change the value of the specified header parameter to the value after setting;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter.</li>
  * @method string getName() Obtain HTTP header name.
  * @method void setName(string $Name) Set HTTP header name.
- * @method string getValue() Obtain HTTP header value. this parameter is required when the action is set to `set` or `add`; it is optional when the action is set to `del`.
- * @method void setValue(string $Value) Set HTTP header value. this parameter is required when the action is set to `set` or `add`; it is optional when the action is set to `del`.
+ * @method string getValue() Obtain HTTP header value. This parameter is required when Action is set or add, and not required when Action is del.
+ * @method void setValue(string $Value) Set HTTP header value. This parameter is required when Action is set or add, and not required when Action is del.
  */
 class HeaderAction extends AbstractModel
 {
     /**
-     * @var string HTTP header setting methods. valid values are:.
-<Li>`Set`: sets a value for an existing header parameter;</li>.
-<Li>`Del`: deletes a header parameter;</li>.
-<Li>`Add`: adds a header parameter.</li>.
+     * @var string HTTP header setting method. Valid values:
+<li>set: Set. Change the value of the specified header parameter to the value after setting;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter.</li>
      */
     public $Action;
 
@@ -49,17 +49,17 @@ class HeaderAction extends AbstractModel
     public $Name;
 
     /**
-     * @var string HTTP header value. this parameter is required when the action is set to `set` or `add`; it is optional when the action is set to `del`.
+     * @var string HTTP header value. This parameter is required when Action is set or add, and not required when Action is del.
      */
     public $Value;
 
     /**
-     * @param string $Action HTTP header setting methods. valid values are:.
-<Li>`Set`: sets a value for an existing header parameter;</li>.
-<Li>`Del`: deletes a header parameter;</li>.
-<Li>`Add`: adds a header parameter.</li>.
+     * @param string $Action HTTP header setting method. Valid values:
+<li>set: Set. Change the value of the specified header parameter to the value after setting;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter.</li>
      * @param string $Name HTTP header name.
-     * @param string $Value HTTP header value. this parameter is required when the action is set to `set` or `add`; it is optional when the action is set to `del`.
+     * @param string $Value HTTP header value. This parameter is required when Action is set or add, and not required when Action is del.
      */
     function __construct()
     {

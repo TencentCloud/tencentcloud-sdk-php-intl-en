@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Network Error Logging configuration.
+ * Network error log configuration item
  *
- * @method string getSwitch() Obtain Specifies whether the Network Error Logging configuration is enabled. Valid values:.
+ * @method string getSwitch() Obtain Whether to enable network error log configuration. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
- * @method void setSwitch(string $Switch) Set Specifies whether the Network Error Logging configuration is enabled. Valid values:.
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Whether to enable network error log configuration. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
  */
 class NetworkErrorLogging extends AbstractModel
 {
     /**
-     * @var string Specifies whether the Network Error Logging configuration is enabled. Valid values:.
+     * @var string Whether to enable network error log configuration. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Specifies whether the Network Error Logging configuration is enabled. Valid values:.
+     * @param string $Switch Whether to enable network error log configuration. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
      */
     function __construct()
     {

@@ -18,84 +18,84 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Active bot detection results.
+ * Proactive feature recognition check results for Bot.
  *
- * @method string getResult() Obtain The validation result. Values:
-<li>`invalid`: Invalid Cookie</li>
-<li>`cookie_empty`: No Cookie/Cookie expired</li>
-<li>`js_empty`: Client JS disabled</li>
-<li>`low`: Low-risk session</li>
-<li>`middle`: Medium-risk session</li>
-<li>`high`: High-risk session</li>
-<li>`timeout`: JS validation timed out</li>
-<li>`not_browser`: Invalid browser</li>
-<li>`is_bot`: Bot client</li>
- * @method void setResult(string $Result) Set The validation result. Values:
-<li>`invalid`: Invalid Cookie</li>
-<li>`cookie_empty`: No Cookie/Cookie expired</li>
-<li>`js_empty`: Client JS disabled</li>
-<li>`low`: Low-risk session</li>
-<li>`middle`: Medium-risk session</li>
-<li>`high`: High-risk session</li>
-<li>`timeout`: JS validation timed out</li>
-<li>`not_browser`: Invalid browser</li>
-<li>`is_bot`: Bot client</li>
- * @method string getAction() Obtain The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
- * @method void setAction(string $Action) Set The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+ * @method string getResult() Obtain Check results. Valid values:
+<li>invalid: invalid Cookie;</li>
+<li>cookie_empty: No cookie carried or the cookie has expired;</li>
+<li>js_empty: JS is not enabled on the client (test not completed);</li>
+<li>low: low risk in session rate and periodic feature verification;</li>
+<li>middle: medium-risk in session rate and periodic feature verification;</li>
+<li>high: high-risk session rate and periodic feature verification;</li>
+<li>timeout: Timeout duration for detection;</li>
+<li>not_browser: invalid browser;</li>
+<li>is_bot: Bot Client.</li>
+ * @method void setResult(string $Result) Set Check results. Valid values:
+<li>invalid: invalid Cookie;</li>
+<li>cookie_empty: No cookie carried or the cookie has expired;</li>
+<li>js_empty: JS is not enabled on the client (test not completed);</li>
+<li>low: low risk in session rate and periodic feature verification;</li>
+<li>middle: medium-risk in session rate and periodic feature verification;</li>
+<li>high: high-risk session rate and periodic feature verification;</li>
+<li>timeout: Timeout duration for detection;</li>
+<li>not_browser: invalid browser;</li>
+<li>is_bot: Bot Client.</li>
+ * @method string getAction() Obtain Penalty action. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>silence: silence;</li>
+<li>shortdelay: respond after a short time;</li>
+<li>longdelay: respond after a long wait.</li>
+ * @method void setAction(string $Action) Set Penalty action. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>silence: silence;</li>
+<li>shortdelay: respond after a short time;</li>
+<li>longdelay: respond after a long wait.</li>
  */
 class AlgDetectResult extends AbstractModel
 {
     /**
-     * @var string The validation result. Values:
-<li>`invalid`: Invalid Cookie</li>
-<li>`cookie_empty`: No Cookie/Cookie expired</li>
-<li>`js_empty`: Client JS disabled</li>
-<li>`low`: Low-risk session</li>
-<li>`middle`: Medium-risk session</li>
-<li>`high`: High-risk session</li>
-<li>`timeout`: JS validation timed out</li>
-<li>`not_browser`: Invalid browser</li>
-<li>`is_bot`: Bot client</li>
+     * @var string Check results. Valid values:
+<li>invalid: invalid Cookie;</li>
+<li>cookie_empty: No cookie carried or the cookie has expired;</li>
+<li>js_empty: JS is not enabled on the client (test not completed);</li>
+<li>low: low risk in session rate and periodic feature verification;</li>
+<li>middle: medium-risk in session rate and periodic feature verification;</li>
+<li>high: high-risk session rate and periodic feature verification;</li>
+<li>timeout: Timeout duration for detection;</li>
+<li>not_browser: invalid browser;</li>
+<li>is_bot: Bot Client.</li>
      */
     public $Result;
 
     /**
-     * @var string The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+     * @var string Penalty action. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>silence: silence;</li>
+<li>shortdelay: respond after a short time;</li>
+<li>longdelay: respond after a long wait.</li>
      */
     public $Action;
 
     /**
-     * @param string $Result The validation result. Values:
-<li>`invalid`: Invalid Cookie</li>
-<li>`cookie_empty`: No Cookie/Cookie expired</li>
-<li>`js_empty`: Client JS disabled</li>
-<li>`low`: Low-risk session</li>
-<li>`middle`: Medium-risk session</li>
-<li>`high`: High-risk session</li>
-<li>`timeout`: JS validation timed out</li>
-<li>`not_browser`: Invalid browser</li>
-<li>`is_bot`: Bot client</li>
-     * @param string $Action The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+     * @param string $Result Check results. Valid values:
+<li>invalid: invalid Cookie;</li>
+<li>cookie_empty: No cookie carried or the cookie has expired;</li>
+<li>js_empty: JS is not enabled on the client (test not completed);</li>
+<li>low: low risk in session rate and periodic feature verification;</li>
+<li>middle: medium-risk in session rate and periodic feature verification;</li>
+<li>high: high-risk session rate and periodic feature verification;</li>
+<li>timeout: Timeout duration for detection;</li>
+<li>not_browser: invalid browser;</li>
+<li>is_bot: Bot Client.</li>
+     * @param string $Action Penalty action. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>silence: silence;</li>
+<li>shortdelay: respond after a short time;</li>
+<li>longdelay: respond after a long wait.</li>
      */
     function __construct()
     {

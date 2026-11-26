@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getTaskId() Obtain The ID of the real-time log delivery task.
- * @method void setTaskId(string $TaskId) Set The ID of the real-time log delivery task.
+ * @method string getTaskId() Obtain ID of a real-time log shipping task.
+ * @method void setTaskId(string $TaskId) Set ID of a real-time log shipping task.
  */
 class CreateCLSIndexRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CreateCLSIndexRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string The ID of the real-time log delivery task.
+     * @var string ID of a real-time log shipping task.
      */
     public $TaskId;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $TaskId The ID of the real-time log delivery task.
+     * @param string $TaskId ID of a real-time log shipping task.
      */
     function __construct()
     {

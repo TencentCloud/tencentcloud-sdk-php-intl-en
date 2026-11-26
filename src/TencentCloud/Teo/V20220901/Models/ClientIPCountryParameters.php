@@ -18,40 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Location information of the Client IP carried in origin-pull. It is formatted as a two-letter ISO-3166-1 country/region code.
+ * Carry the regional information of the client IP during origin-pull. The value format is an ISO-3166-1 two-letter code.
  *
- * @method string getSwitch() Obtain Whether to enable configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method void setSwitch(string $Switch) Set Whether to enable configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method string getHeaderName() Obtain Name of the request header that contains the client ip region. it is valid when `switch=on`. the default value `eo-client-ipcountry` is used when it is not specified.
- * @method void setHeaderName(string $HeaderName) Set Name of the request header that contains the client ip region. it is valid when `switch=on`. the default value `eo-client-ipcountry` is used when it is not specified.
+ * @method string getSwitch() Obtain Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method string getHeaderName() Obtain Request header name for storing the region of the client IP address. Valid when Switch is on. If empty, the default value EO-Client-IPCountry is used.
+ * @method void setHeaderName(string $HeaderName) Set Request header name for storing the region of the client IP address. Valid when Switch is on. If empty, the default value EO-Client-IPCountry is used.
  */
 class ClientIPCountryParameters extends AbstractModel
 {
     /**
-     * @var string Whether to enable configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @var string Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var string Name of the request header that contains the client ip region. it is valid when `switch=on`. the default value `eo-client-ipcountry` is used when it is not specified.
+     * @var string Request header name for storing the region of the client IP address. Valid when Switch is on. If empty, the default value EO-Client-IPCountry is used.
      */
     public $HeaderName;
 
     /**
-     * @param string $Switch Whether to enable configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-     * @param string $HeaderName Name of the request header that contains the client ip region. it is valid when `switch=on`. the default value `eo-client-ipcountry` is used when it is not specified.
+     * @param string $Switch Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param string $HeaderName Request header name for storing the region of the client IP address. Valid when Switch is on. If empty, the default value EO-Client-IPCountry is used.
      */
     function __construct()
     {

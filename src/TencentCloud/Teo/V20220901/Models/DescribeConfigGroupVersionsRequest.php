@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getGroupId() Obtain Configuraration group ID.
- * @method void setGroupId(string $GroupId) Set Configuraration group ID.
- * @method array getFilters() Obtain Filtering condition. The maximum value of Filters.Values is 20. If this parameter is not specified, all version information for the selected configuration group is returned. Detailed filtering conditions: 
-<li>version-id: Filter by version ID.</li>
- * @method void setFilters(array $Filters) Set Filtering condition. The maximum value of Filters.Values is 20. If this parameter is not specified, all version information for the selected configuration group is returned. Detailed filtering conditions: 
-<li>version-id: Filter by version ID.</li>
- * @method integer getOffset() Obtain Paging query offset. The default value is 0.
- * @method void setOffset(integer $Offset) Set Paging query offset. The default value is 0.
- * @method integer getLimit() Obtain Limited entries in paging queries. The default value is 20 and the maximum value is 100. 
- * @method void setLimit(integer $Limit) Set Limited entries in paging queries. The default value is 20 and the maximum value is 100. 
+ * @method string getGroupId() Obtain Configuration group ID.
+ * @method void setGroupId(string $GroupId) Set Configuration group ID.
+ * @method array getFilters() Obtain Filter criteria. The maximum number of `Filters.Values` is 20. If this parameter is left empty, all version information under the selected configuration group is returned. Detailed filter criteria:
+<li>version-id: Filter by version ID;</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The maximum number of `Filters.Values` is 20. If this parameter is left empty, all version information under the selected configuration group is returned. Detailed filter criteria:
+<li>version-id: Filter by version ID;</li>
+ * @method integer getOffset() Obtain The offset of paginated query. Default value: 0.
+ * @method void setOffset(integer $Offset) Set The offset of paginated query. Default value: 0.
+ * @method integer getLimit() Obtain Paginated query limit. Default value: 20, maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Paginated query limit. Default value: 20, maximum value: 100.
  */
 class DescribeConfigGroupVersionsRequest extends AbstractModel
 {
@@ -41,33 +41,33 @@ class DescribeConfigGroupVersionsRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Configuraration group ID.
+     * @var string Configuration group ID.
      */
     public $GroupId;
 
     /**
-     * @var array Filtering condition. The maximum value of Filters.Values is 20. If this parameter is not specified, all version information for the selected configuration group is returned. Detailed filtering conditions: 
-<li>version-id: Filter by version ID.</li>
+     * @var array Filter criteria. The maximum number of `Filters.Values` is 20. If this parameter is left empty, all version information under the selected configuration group is returned. Detailed filter criteria:
+<li>version-id: Filter by version ID;</li>
      */
     public $Filters;
 
     /**
-     * @var integer Paging query offset. The default value is 0.
+     * @var integer The offset of paginated query. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Limited entries in paging queries. The default value is 20 and the maximum value is 100. 
+     * @var integer Paginated query limit. Default value: 20, maximum value: 100.
      */
     public $Limit;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $GroupId Configuraration group ID.
-     * @param array $Filters Filtering condition. The maximum value of Filters.Values is 20. If this parameter is not specified, all version information for the selected configuration group is returned. Detailed filtering conditions: 
-<li>version-id: Filter by version ID.</li>
-     * @param integer $Offset Paging query offset. The default value is 0.
-     * @param integer $Limit Limited entries in paging queries. The default value is 20 and the maximum value is 100. 
+     * @param string $GroupId Configuration group ID.
+     * @param array $Filters Filter criteria. The maximum number of `Filters.Values` is 20. If this parameter is left empty, all version information under the selected configuration group is returned. Detailed filter criteria:
+<li>version-id: Filter by version ID;</li>
+     * @param integer $Offset The offset of paginated query. Default value: 0.
+     * @param integer $Limit Paginated query limit. Default value: 20, maximum value: 100.
      */
     function __construct()
     {

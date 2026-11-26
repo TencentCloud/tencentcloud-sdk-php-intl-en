@@ -18,32 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Smart acceleration configuration.
+ * Intelligent acceleration configuration.
  *
- * @method string getSwitch() Obtain Whether to enable smart acceleration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method void setSwitch(string $Switch) Set Whether to enable smart acceleration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+ * @method string getSwitch() Obtain Smart acceleration configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Smart acceleration configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
  */
 class SmartRoutingParameters extends AbstractModel
 {
     /**
-     * @var string Whether to enable smart acceleration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @var string Smart acceleration configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable smart acceleration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @param string $Switch Smart acceleration configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     function __construct()
     {

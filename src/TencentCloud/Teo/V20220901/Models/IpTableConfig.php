@@ -18,40 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP/Region blocklist/allowlist configuration
+ * IP whitelist/blacklist and IP region control configuration
  *
- * @method string getSwitch() Obtain Switch. valid values:.
+ * @method string getSwitch() Obtain Switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled;</li>.
- * @method void setSwitch(string $Switch) Set Switch. valid values:.
+<li>off: Disable;</li>
+ * @method void setSwitch(string $Switch) Set Switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled;</li>.
- * @method array getIpTableRules() Obtain Basic control rules. if null, historical configuration is used by default.
- * @method void setIpTableRules(array $IpTableRules) Set Basic control rules. if null, historical configuration is used by default.
+<li>off: Disable;</li>
+ * @method array getIpTableRules() Obtain Basic access control rule. If it is null, use the last set configuration by default.
+ * @method void setIpTableRules(array $IpTableRules) Set Basic access control rule. If it is null, use the last set configuration by default.
  */
 class IpTableConfig extends AbstractModel
 {
     /**
-     * @var string Switch. valid values:.
+     * @var string Switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled;</li>.
+<li>off: Disable;</li>
      */
     public $Switch;
 
     /**
-     * @var array Basic control rules. if null, historical configuration is used by default.
+     * @var array Basic access control rule. If it is null, use the last set configuration by default.
      */
     public $IpTableRules;
 
     /**
-     * @param string $Switch Switch. valid values:.
+     * @param string $Switch Switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled;</li>.
-     * @param array $IpTableRules Basic control rules. if null, historical configuration is used by default.
+<li>off: Disable;</li>
+     * @param array $IpTableRules Basic access control rule. If it is null, use the last set configuration by default.
      */
     function __construct()
     {

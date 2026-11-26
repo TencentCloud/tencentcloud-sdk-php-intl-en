@@ -20,70 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Application repository information.
  *
- * @method string getCosBucket() Obtain COS bucket name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCosBucket(string $CosBucket) Set COS bucket name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCosRegion() Obtain COS bucket region.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCosRegion(string $CosRegion) Set COS bucket region.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStoreType() Obtain Repository type. LOG: application logs; ARCHIVE: application archive.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStoreType(string $StoreType) Set Repository type. LOG: application logs; ARCHIVE: application archive.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStoreState() Obtain Repository status. ON: enabled; OFF: disabled.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStoreState(string $StoreState) Set Repository status. ON: enabled; OFF: disabled.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStorePath() Obtain Repository path.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStorePath(string $StorePath) Set Repository path.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCosBucket() Obtain <p>Cos bucket name</p>
+ * @method void setCosBucket(string $CosBucket) Set <p>Cos bucket name</p>
+ * @method string getCosRegion() Obtain <p>Cos Bucket Region</p>
+ * @method void setCosRegion(string $CosRegion) Set <p>Cos Bucket Region</p>
+ * @method string getStoreType() Obtain <p>Repository type. LOG: application logs; ARCHIVE: application archive.</p>
+ * @method void setStoreType(string $StoreType) Set <p>Repository type. LOG: application logs; ARCHIVE: application archive.</p>
+ * @method string getStoreState() Obtain <p>Repository status. ON: enabled; OFF: disabled.</p>
+ * @method void setStoreState(string $StoreState) Set <p>Repository status. ON: enabled; OFF: disabled.</p>
+ * @method string getStorePath() Obtain <p>Repository path</p><p>Primary path data. If StoreType is ARCHIVE and SubStorePaths is configured, the system default value will be used.</p>
+ * @method void setStorePath(string $StorePath) Set <p>Repository path</p><p>Primary path data. If StoreType is ARCHIVE and SubStorePaths is configured, the system default value will be used.</p>
+ * @method array getSubStorePaths() Obtain <p>Subpath list</p><p>Subpath data (multi-path pattern) supports only ARCHIVE StoreType; up to 25 data entries.</p>
+ * @method void setSubStorePaths(array $SubStorePaths) Set <p>Subpath list</p><p>Subpath data (multi-path pattern) supports only ARCHIVE StoreType; up to 25 data entries.</p>
  */
 class UserApplicationStore extends AbstractModel
 {
     /**
-     * @var string COS bucket name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Cos bucket name</p>
      */
     public $CosBucket;
 
     /**
-     * @var string COS bucket region.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Cos Bucket Region</p>
      */
     public $CosRegion;
 
     /**
-     * @var string Repository type. LOG: application logs; ARCHIVE: application archive.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Repository type. LOG: application logs; ARCHIVE: application archive.</p>
      */
     public $StoreType;
 
     /**
-     * @var string Repository status. ON: enabled; OFF: disabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Repository status. ON: enabled; OFF: disabled.</p>
      */
     public $StoreState;
 
     /**
-     * @var string Repository path.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Repository path</p><p>Primary path data. If StoreType is ARCHIVE and SubStorePaths is configured, the system default value will be used.</p>
      */
     public $StorePath;
 
     /**
-     * @param string $CosBucket COS bucket name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CosRegion COS bucket region.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StoreType Repository type. LOG: application logs; ARCHIVE: application archive.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StoreState Repository status. ON: enabled; OFF: disabled.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StorePath Repository path.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Subpath list</p><p>Subpath data (multi-path pattern) supports only ARCHIVE StoreType; up to 25 data entries.</p>
+     */
+    public $SubStorePaths;
+
+    /**
+     * @param string $CosBucket <p>Cos bucket name</p>
+     * @param string $CosRegion <p>Cos Bucket Region</p>
+     * @param string $StoreType <p>Repository type. LOG: application logs; ARCHIVE: application archive.</p>
+     * @param string $StoreState <p>Repository status. ON: enabled; OFF: disabled.</p>
+     * @param string $StorePath <p>Repository path</p><p>Primary path data. If StoreType is ARCHIVE and SubStorePaths is configured, the system default value will be used.</p>
+     * @param array $SubStorePaths <p>Subpath list</p><p>Subpath data (multi-path pattern) supports only ARCHIVE StoreType; up to 25 data entries.</p>
      */
     function __construct()
     {
@@ -116,6 +104,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("StorePath",$param) and $param["StorePath"] !== null) {
             $this->StorePath = $param["StorePath"];
+        }
+
+        if (array_key_exists("SubStorePaths",$param) and $param["SubStorePaths"] !== null) {
+            $this->SubStorePaths = $param["SubStorePaths"];
         }
     }
 }

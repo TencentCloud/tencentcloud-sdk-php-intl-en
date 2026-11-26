@@ -18,31 +18,31 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Purging/Pre-warming available usage and quota
+ * Refresh/preheat available amount and quotas
  *
- * @method integer getBatch() Obtain 
- * @method void setBatch(integer $Batch) Set 
+ * @method integer getBatch() Obtain Quota limit for a single batch submission.
+ * @method void setBatch(integer $Batch) Set Quota limit for a single batch submission.
  * @method integer getDaily() Obtain Daily submission quota limit.
  * @method void setDaily(integer $Daily) Set Daily submission quota limit.
- * @method integer getDailyAvailable() Obtain Remaining daily submission quota.
- * @method void setDailyAvailable(integer $DailyAvailable) Set Remaining daily submission quota.
- * @method string getType() Obtain Type of cache purging/pre-warming. Values:
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
- * @method void setType(string $Type) Set Type of cache purging/pre-warming. Values:
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
+ * @method integer getDailyAvailable() Obtain Daily unconsumed submission quota.
+ * @method void setDailyAvailable(integer $DailyAvailable) Set Daily unconsumed submission quota.
+ * @method string getType() Obtain Purge and prefetch cache type. Valid values:
+<li> purge_prefix: refresh by prefix;</li>
+<li> purge_url: refresh by URL;</li>
+<li> purge_host: refresh by Hostname;</li>
+<li> purge_all: Refresh all cached content;</li>
+<li> purge_cache_tag: refresh by cache tag;</li><li> prefetch_url: prefetch by url.</li>
+ * @method void setType(string $Type) Set Purge and prefetch cache type. Valid values:
+<li> purge_prefix: refresh by prefix;</li>
+<li> purge_url: refresh by URL;</li>
+<li> purge_host: refresh by Hostname;</li>
+<li> purge_all: Refresh all cached content;</li>
+<li> purge_cache_tag: refresh by cache tag;</li><li> prefetch_url: prefetch by url.</li>
  */
 class Quota extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Quota limit for a single batch submission.
      */
     public $Batch;
 
@@ -52,30 +52,30 @@ class Quota extends AbstractModel
     public $Daily;
 
     /**
-     * @var integer Remaining daily submission quota.
+     * @var integer Daily unconsumed submission quota.
      */
     public $DailyAvailable;
 
     /**
-     * @var string Type of cache purging/pre-warming. Values:
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
+     * @var string Purge and prefetch cache type. Valid values:
+<li> purge_prefix: refresh by prefix;</li>
+<li> purge_url: refresh by URL;</li>
+<li> purge_host: refresh by Hostname;</li>
+<li> purge_all: Refresh all cached content;</li>
+<li> purge_cache_tag: refresh by cache tag;</li><li> prefetch_url: prefetch by url.</li>
      */
     public $Type;
 
     /**
-     * @param integer $Batch 
+     * @param integer $Batch Quota limit for a single batch submission.
      * @param integer $Daily Daily submission quota limit.
-     * @param integer $DailyAvailable Remaining daily submission quota.
-     * @param string $Type Type of cache purging/pre-warming. Values:
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
+     * @param integer $DailyAvailable Daily unconsumed submission quota.
+     * @param string $Type Purge and prefetch cache type. Valid values:
+<li> purge_prefix: refresh by prefix;</li>
+<li> purge_url: refresh by URL;</li>
+<li> purge_host: refresh by Hostname;</li>
+<li> purge_all: Refresh all cached content;</li>
+<li> purge_cache_tag: refresh by cache tag;</li><li> prefetch_url: prefetch by url.</li>
      */
     function __construct()
     {

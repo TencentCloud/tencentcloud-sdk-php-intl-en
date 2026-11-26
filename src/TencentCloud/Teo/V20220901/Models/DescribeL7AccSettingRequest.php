@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeL7AccSetting request structure.
  *
- * @method string getZoneId() Obtain Zone id.
- * @method void setZoneId(string $ZoneId) Set Zone id.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
  */
 class DescribeL7AccSettingRequest extends AbstractModel
 {
     /**
-     * @var string Zone id.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @param string $ZoneId Zone id.
+     * @param string $ZoneId Zone ID.
      */
     function __construct()
     {

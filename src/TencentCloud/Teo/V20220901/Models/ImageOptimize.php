@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Image optimization configuration.
  *
- * @method string getSwitch() Obtain Whether to enable configuration. Values: 
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable configuration. Values: 
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+ * @method string getSwitch() Obtain Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
  */
 class ImageOptimize extends AbstractModel
 {
     /**
-     * @var string Whether to enable configuration. Values: 
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable configuration. Values: 
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @param string $Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     function __construct()
     {

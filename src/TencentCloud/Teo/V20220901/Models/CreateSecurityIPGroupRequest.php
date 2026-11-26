@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSecurityIPGroup request structure.
  *
- * @method string getZoneId() Obtain Site ID.
- * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method string getZoneId() Obtain Site Id.
+ * @method void setZoneId(string $ZoneId) Set Site Id.
  * @method IPGroup getIPGroup() Obtain IP group information.
  * @method void setIPGroup(IPGroup $IPGroup) Set IP group information.
  */
 class CreateSecurityIPGroupRequest extends AbstractModel
 {
     /**
-     * @var string Site ID.
+     * @var string Site Id.
      */
     public $ZoneId;
 
@@ -38,7 +38,7 @@ class CreateSecurityIPGroupRequest extends AbstractModel
     public $IPGroup;
 
     /**
-     * @param string $ZoneId Site ID.
+     * @param string $ZoneId Site Id.
      * @param IPGroup $IPGroup IP group information.
      */
     function __construct()

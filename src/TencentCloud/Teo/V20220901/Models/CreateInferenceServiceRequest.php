@@ -20,40 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInferenceService request structure.
  *
- * @method string getZoneId() Obtain <p>Site ID.</p>
- * @method void setZoneId(string $ZoneId) Set <p>Site ID.</p>
- * @method string getName() Obtain <p>Service name. Length limit is no more than 30 characters, only lowercase letters, digits, and hyphens are supported, must start with a letter, ends with a digit or letter, duplicates are not supported.</p>
- * @method void setName(string $Name) Set <p>Service name. Length limit is no more than 30 characters, only lowercase letters, digits, and hyphens are supported, must start with a letter, ends with a digit or letter, duplicates are not supported.</p>
- * @method integer getListenPort() Obtain <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
- * @method void setListenPort(integer $ListenPort) Set <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
- * @method array getContainers() Obtain <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
- * @method void setContainers(array $Containers) Set <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
+ * @method string getZoneId() Obtain <p>Zone ID.</p>
+ * @method void setZoneId(string $ZoneId) Set <p>Zone ID.</p>
+ * @method string getName() Obtain <p>Name of the reasoning service. Length limited to 30 characters. Only lowercase letters, digits, and hyphens are supported. It must start with a letter and end with a number or letter. Repetition is not supported.</p>
+ * @method void setName(string $Name) Set <p>Name of the reasoning service. Length limited to 30 characters. Only lowercase letters, digits, and hyphens are supported. It must start with a letter and end with a number or letter. Repetition is not supported.</p>
+ * @method integer getListenPort() Obtain <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
+ * @method void setListenPort(integer $ListenPort) Set <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
+ * @method array getContainers() Obtain <p>Container configuration for the inference service. Currently, only support setting 1 container.</p>
+ * @method void setContainers(array $Containers) Set <p>Container configuration for the inference service. Currently, only support setting 1 container.</p>
  * @method InferenceResourceConfig getResourceConfig() Obtain <p>Resource configuration of the inference service.</p>
  * @method void setResourceConfig(InferenceResourceConfig $ResourceConfig) Set <p>Resource configuration of the inference service.</p>
- * @method array getRequestPaths() Obtain <p>Request path list for inference service. Supports up to 20 paths.</p>
- * @method void setRequestPaths(array $RequestPaths) Set <p>Request path list for inference service. Supports up to 20 paths.</p>
+ * @method InferenceAffinityConfig getAffinityConfig() Obtain <p>Inference service affinity configuration.</p>
+ * @method void setAffinityConfig(InferenceAffinityConfig $AffinityConfig) Set <p>Inference service affinity configuration.</p>
+ * @method array getRequestPaths() Obtain <p>List of request paths for the inference service. Supports up to 20 paths.</p>
+ * @method void setRequestPaths(array $RequestPaths) Set <p>List of request paths for the inference service. Supports up to 20 paths.</p>
  * @method string getDescription() Obtain <p>Description. Length limit: no more than 60 characters.</p>
  * @method void setDescription(string $Description) Set <p>Description. Length limit: no more than 60 characters.</p>
  */
 class CreateInferenceServiceRequest extends AbstractModel
 {
     /**
-     * @var string <p>Site ID.</p>
+     * @var string <p>Zone ID.</p>
      */
     public $ZoneId;
 
     /**
-     * @var string <p>Service name. Length limit is no more than 30 characters, only lowercase letters, digits, and hyphens are supported, must start with a letter, ends with a digit or letter, duplicates are not supported.</p>
+     * @var string <p>Name of the reasoning service. Length limited to 30 characters. Only lowercase letters, digits, and hyphens are supported. It must start with a letter and end with a number or letter. Repetition is not supported.</p>
      */
     public $Name;
 
     /**
-     * @var integer <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
+     * @var integer <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
      */
     public $ListenPort;
 
     /**
-     * @var array <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
+     * @var array <p>Container configuration for the inference service. Currently, only support setting 1 container.</p>
      */
     public $Containers;
 
@@ -63,7 +65,12 @@ class CreateInferenceServiceRequest extends AbstractModel
     public $ResourceConfig;
 
     /**
-     * @var array <p>Request path list for inference service. Supports up to 20 paths.</p>
+     * @var InferenceAffinityConfig <p>Inference service affinity configuration.</p>
+     */
+    public $AffinityConfig;
+
+    /**
+     * @var array <p>List of request paths for the inference service. Supports up to 20 paths.</p>
      */
     public $RequestPaths;
 
@@ -73,12 +80,13 @@ class CreateInferenceServiceRequest extends AbstractModel
     public $Description;
 
     /**
-     * @param string $ZoneId <p>Site ID.</p>
-     * @param string $Name <p>Service name. Length limit is no more than 30 characters, only lowercase letters, digits, and hyphens are supported, must start with a letter, ends with a digit or letter, duplicates are not supported.</p>
-     * @param integer $ListenPort <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
-     * @param array $Containers <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
+     * @param string $ZoneId <p>Zone ID.</p>
+     * @param string $Name <p>Name of the reasoning service. Length limited to 30 characters. Only lowercase letters, digits, and hyphens are supported. It must start with a letter and end with a number or letter. Repetition is not supported.</p>
+     * @param integer $ListenPort <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
+     * @param array $Containers <p>Container configuration for the inference service. Currently, only support setting 1 container.</p>
      * @param InferenceResourceConfig $ResourceConfig <p>Resource configuration of the inference service.</p>
-     * @param array $RequestPaths <p>Request path list for inference service. Supports up to 20 paths.</p>
+     * @param InferenceAffinityConfig $AffinityConfig <p>Inference service affinity configuration.</p>
+     * @param array $RequestPaths <p>List of request paths for the inference service. Supports up to 20 paths.</p>
      * @param string $Description <p>Description. Length limit: no more than 60 characters.</p>
      */
     function __construct()
@@ -118,6 +126,11 @@ class CreateInferenceServiceRequest extends AbstractModel
         if (array_key_exists("ResourceConfig",$param) and $param["ResourceConfig"] !== null) {
             $this->ResourceConfig = new InferenceResourceConfig();
             $this->ResourceConfig->deserialize($param["ResourceConfig"]);
+        }
+
+        if (array_key_exists("AffinityConfig",$param) and $param["AffinityConfig"] !== null) {
+            $this->AffinityConfig = new InferenceAffinityConfig();
+            $this->AffinityConfig->deserialize($param["AffinityConfig"]);
         }
 
         if (array_key_exists("RequestPaths",$param) and $param["RequestPaths"] !== null) {

@@ -18,44 +18,52 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Deployment configuration for a single inference service.
+ * Deployment configuration of a single inference service.
  *
- * @method integer getListenPort() Obtain Ports monitored by the model service.
- * @method void setListenPort(integer $ListenPort) Set Ports monitored by the model service.
- * @method array getRequestPaths() Obtain Request path list for inference service.
- * @method void setRequestPaths(array $RequestPaths) Set Request path list for inference service.
- * @method array getContainers() Obtain Container configuration of the inference service.
- * @method void setContainers(array $Containers) Set Container configuration of the inference service.
- * @method InferenceResourceConfig getResourceConfig() Obtain Resource configuration of the inference service.
- * @method void setResourceConfig(InferenceResourceConfig $ResourceConfig) Set Resource configuration of the inference service.
+ * @method integer getListenPort() Obtain <p>Ports monitored by the model service.</p>
+ * @method void setListenPort(integer $ListenPort) Set <p>Ports monitored by the model service.</p>
+ * @method array getRequestPaths() Obtain <p>Request path list of the inference service.</p>
+ * @method void setRequestPaths(array $RequestPaths) Set <p>Request path list of the inference service.</p>
+ * @method array getContainers() Obtain <p>Container configuration for the inference service.</p>
+ * @method void setContainers(array $Containers) Set <p>Container configuration for the inference service.</p>
+ * @method InferenceResourceConfig getResourceConfig() Obtain <p>Resource configuration of the inference service.</p>
+ * @method void setResourceConfig(InferenceResourceConfig $ResourceConfig) Set <p>Resource configuration of the inference service.</p>
+ * @method InferenceAffinityConfig getAffinityConfig() Obtain <p>Inference service affinity configuration.</p>
+ * @method void setAffinityConfig(InferenceAffinityConfig $AffinityConfig) Set <p>Inference service affinity configuration.</p>
  */
 class InferenceServiceConfig extends AbstractModel
 {
     /**
-     * @var integer Ports monitored by the model service.
+     * @var integer <p>Ports monitored by the model service.</p>
      */
     public $ListenPort;
 
     /**
-     * @var array Request path list for inference service.
+     * @var array <p>Request path list of the inference service.</p>
      */
     public $RequestPaths;
 
     /**
-     * @var array Container configuration of the inference service.
+     * @var array <p>Container configuration for the inference service.</p>
      */
     public $Containers;
 
     /**
-     * @var InferenceResourceConfig Resource configuration of the inference service.
+     * @var InferenceResourceConfig <p>Resource configuration of the inference service.</p>
      */
     public $ResourceConfig;
 
     /**
-     * @param integer $ListenPort Ports monitored by the model service.
-     * @param array $RequestPaths Request path list for inference service.
-     * @param array $Containers Container configuration of the inference service.
-     * @param InferenceResourceConfig $ResourceConfig Resource configuration of the inference service.
+     * @var InferenceAffinityConfig <p>Inference service affinity configuration.</p>
+     */
+    public $AffinityConfig;
+
+    /**
+     * @param integer $ListenPort <p>Ports monitored by the model service.</p>
+     * @param array $RequestPaths <p>Request path list of the inference service.</p>
+     * @param array $Containers <p>Container configuration for the inference service.</p>
+     * @param InferenceResourceConfig $ResourceConfig <p>Resource configuration of the inference service.</p>
+     * @param InferenceAffinityConfig $AffinityConfig <p>Inference service affinity configuration.</p>
      */
     function __construct()
     {
@@ -90,6 +98,11 @@ class InferenceServiceConfig extends AbstractModel
         if (array_key_exists("ResourceConfig",$param) and $param["ResourceConfig"] !== null) {
             $this->ResourceConfig = new InferenceResourceConfig();
             $this->ResourceConfig->deserialize($param["ResourceConfig"]);
+        }
+
+        if (array_key_exists("AffinityConfig",$param) and $param["AffinityConfig"] !== null) {
+            $this->AffinityConfig = new InferenceAffinityConfig();
+            $this->AffinityConfig->deserialize($param["AffinityConfig"]);
         }
     }
 }

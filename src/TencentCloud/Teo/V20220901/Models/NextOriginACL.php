@@ -18,60 +18,60 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * When origin ACLs are updated, this field will be returned with the next version of the IP range to take effect, including a comparison with the currently effective IP range.
+ * When the origin-pull IP range is updated, this field will return the origin-pull IP range that will be effective in the next version, including a comparison with the currently effective origin-pull IP range.
  *
- * @method string getVersion() Obtain Version number.
- * @method void setVersion(string $Version) Set Version number.
- * @method string getPlannedActiveTime() Obtain Version effective time, which adopts UTC+8 and follows the date and time format of the ISO 8601 standard.
- * @method void setPlannedActiveTime(string $PlannedActiveTime) Set Version effective time, which adopts UTC+8 and follows the date and time format of the ISO 8601 standard.
- * @method Addresses getEntireAddresses() Obtain IP range details.
- * @method void setEntireAddresses(Addresses $EntireAddresses) Set IP range details.
- * @method Addresses getAddedAddresses() Obtain The latest origin IP range newly-added compared with the origin IP range in CurrentOrginACL.
- * @method void setAddedAddresses(Addresses $AddedAddresses) Set The latest origin IP range newly-added compared with the origin IP range in CurrentOrginACL.
- * @method Addresses getRemovedAddresses() Obtain The latest origin IP range deleted compared with the origin IP range in CurrentOrginACL.
- * @method void setRemovedAddresses(Addresses $RemovedAddresses) Set The latest origin IP range deleted compared with the origin IP range in CurrentOrginACL.
- * @method Addresses getNoChangeAddresses() Obtain The latest origin IP range is unchanged compared with the origin IP range in CurrentOrginACL.
- * @method void setNoChangeAddresses(Addresses $NoChangeAddresses) Set The latest origin IP range is unchanged compared with the origin IP range in CurrentOrginACL.
+ * @method string getVersion() Obtain Version.
+ * @method void setVersion(string $Version) Set Version.
+ * @method string getPlannedActiveTime() Obtain Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
+ * @method void setPlannedActiveTime(string $PlannedActiveTime) Set Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
+ * @method Addresses getEntireAddresses() Obtain Origin-pull IP range details.
+ * @method void setEntireAddresses(Addresses $EntireAddresses) Set Origin-pull IP range details.
+ * @method Addresses getAddedAddresses() Obtain Latest origin-pull IP range newly added compared with the origin-pull IP range in CurrentOrginACL.
+ * @method void setAddedAddresses(Addresses $AddedAddresses) Set Latest origin-pull IP range newly added compared with the origin-pull IP range in CurrentOrginACL.
+ * @method Addresses getRemovedAddresses() Obtain The part deleted from the latest origin-pull IP range compared with the origin-pull IP range in CurrentOrginACL.
+ * @method void setRemovedAddresses(Addresses $RemovedAddresses) Set The part deleted from the latest origin-pull IP range compared with the origin-pull IP range in CurrentOrginACL.
+ * @method Addresses getNoChangeAddresses() Obtain The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in CurrentOrginACL.
+ * @method void setNoChangeAddresses(Addresses $NoChangeAddresses) Set The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in CurrentOrginACL.
  */
 class NextOriginACL extends AbstractModel
 {
     /**
-     * @var string Version number.
+     * @var string Version.
      */
     public $Version;
 
     /**
-     * @var string Version effective time, which adopts UTC+8 and follows the date and time format of the ISO 8601 standard.
+     * @var string Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
      */
     public $PlannedActiveTime;
 
     /**
-     * @var Addresses IP range details.
+     * @var Addresses Origin-pull IP range details.
      */
     public $EntireAddresses;
 
     /**
-     * @var Addresses The latest origin IP range newly-added compared with the origin IP range in CurrentOrginACL.
+     * @var Addresses Latest origin-pull IP range newly added compared with the origin-pull IP range in CurrentOrginACL.
      */
     public $AddedAddresses;
 
     /**
-     * @var Addresses The latest origin IP range deleted compared with the origin IP range in CurrentOrginACL.
+     * @var Addresses The part deleted from the latest origin-pull IP range compared with the origin-pull IP range in CurrentOrginACL.
      */
     public $RemovedAddresses;
 
     /**
-     * @var Addresses The latest origin IP range is unchanged compared with the origin IP range in CurrentOrginACL.
+     * @var Addresses The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in CurrentOrginACL.
      */
     public $NoChangeAddresses;
 
     /**
-     * @param string $Version Version number.
-     * @param string $PlannedActiveTime Version effective time, which adopts UTC+8 and follows the date and time format of the ISO 8601 standard.
-     * @param Addresses $EntireAddresses IP range details.
-     * @param Addresses $AddedAddresses The latest origin IP range newly-added compared with the origin IP range in CurrentOrginACL.
-     * @param Addresses $RemovedAddresses The latest origin IP range deleted compared with the origin IP range in CurrentOrginACL.
-     * @param Addresses $NoChangeAddresses The latest origin IP range is unchanged compared with the origin IP range in CurrentOrginACL.
+     * @param string $Version Version.
+     * @param string $PlannedActiveTime Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
+     * @param Addresses $EntireAddresses Origin-pull IP range details.
+     * @param Addresses $AddedAddresses Latest origin-pull IP range newly added compared with the origin-pull IP range in CurrentOrginACL.
+     * @param Addresses $RemovedAddresses The part deleted from the latest origin-pull IP range compared with the origin-pull IP range in CurrentOrginACL.
+     * @param Addresses $NoChangeAddresses The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in CurrentOrginACL.
      */
     function __construct()
     {

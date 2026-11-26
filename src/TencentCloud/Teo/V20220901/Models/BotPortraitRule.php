@@ -18,68 +18,68 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Bot user portrait rules
+ * bot user profiling rules
  *
- * @method string getSwitch() Obtain Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method integer getRuleID() Obtain The rule ID, which is only used as an output parameter.
- * @method void setRuleID(integer $RuleID) Set The rule ID, which is only used as an output parameter.
- * @method array getAlgManagedIds() Obtain The rule ID of JS challenge. default all rules without configuring JS challenge.
- * @method void setAlgManagedIds(array $AlgManagedIds) Set The rule ID of JS challenge. default all rules without configuring JS challenge.
- * @method array getCapManagedIds() Obtain Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
- * @method void setCapManagedIds(array $CapManagedIds) Set Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
- * @method array getMonManagedIds() Obtain Rule ID for observation. by default, observation is not configured for all rules.
- * @method void setMonManagedIds(array $MonManagedIds) Set Rule ID for observation. by default, observation is not configured for all rules.
- * @method array getDropManagedIds() Obtain Rule ID for interception. default to all rules with no configuration interception.
- * @method void setDropManagedIds(array $DropManagedIds) Set Rule ID for interception. default to all rules with no configuration interception.
+ * @method string getSwitch() Obtain Feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method integer getRuleID() Obtain Rule ID. Output only.
+ * @method void setRuleID(integer $RuleID) Set Rule ID. Output only.
+ * @method array getAlgManagedIds() Obtain Rule ID of the JS challenge. All rules have no JS challenge configured by default.
+ * @method void setAlgManagedIds(array $AlgManagedIds) Set Rule ID of the JS challenge. All rules have no JS challenge configured by default.
+ * @method array getCapManagedIds() Obtain Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
+ * @method void setCapManagedIds(array $CapManagedIds) Set Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
+ * @method array getMonManagedIds() Obtain Rule ID for observation. By default, no rule is configured for observation.
+ * @method void setMonManagedIds(array $MonManagedIds) Set Rule ID for observation. By default, no rule is configured for observation.
+ * @method array getDropManagedIds() Obtain Rule ID for interception. By default, no interception is configured for all rules.
+ * @method void setDropManagedIds(array $DropManagedIds) Set Rule ID for interception. By default, no interception is configured for all rules.
  */
 class BotPortraitRule extends AbstractModel
 {
     /**
-     * @var string Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var integer The rule ID, which is only used as an output parameter.
+     * @var integer Rule ID. Output only.
      */
     public $RuleID;
 
     /**
-     * @var array The rule ID of JS challenge. default all rules without configuring JS challenge.
+     * @var array Rule ID of the JS challenge. All rules have no JS challenge configured by default.
      */
     public $AlgManagedIds;
 
     /**
-     * @var array Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
+     * @var array Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
      */
     public $CapManagedIds;
 
     /**
-     * @var array Rule ID for observation. by default, observation is not configured for all rules.
+     * @var array Rule ID for observation. By default, no rule is configured for observation.
      */
     public $MonManagedIds;
 
     /**
-     * @var array Rule ID for interception. default to all rules with no configuration interception.
+     * @var array Rule ID for interception. By default, no interception is configured for all rules.
      */
     public $DropManagedIds;
 
     /**
-     * @param string $Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param integer $RuleID The rule ID, which is only used as an output parameter.
-     * @param array $AlgManagedIds The rule ID of JS challenge. default all rules without configuring JS challenge.
-     * @param array $CapManagedIds Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
-     * @param array $MonManagedIds Rule ID for observation. by default, observation is not configured for all rules.
-     * @param array $DropManagedIds Rule ID for interception. default to all rules with no configuration interception.
+     * @param string $Switch Feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param integer $RuleID Rule ID. Output only.
+     * @param array $AlgManagedIds Rule ID of the JS challenge. All rules have no JS challenge configured by default.
+     * @param array $CapManagedIds Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
+     * @param array $MonManagedIds Rule ID for observation. By default, no rule is configured for observation.
+     * @param array $DropManagedIds Rule ID for interception. By default, no interception is configured for all rules.
      */
     function __construct()
     {

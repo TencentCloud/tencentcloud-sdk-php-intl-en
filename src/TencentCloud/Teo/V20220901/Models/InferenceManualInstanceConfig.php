@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Manual setting of inference service instance configuration.
+ * Manually set configurations for the inference service.
  *
  * @method integer getFixedInstanceCount() Obtain Fixed instance count.
  * @method void setFixedInstanceCount(integer $FixedInstanceCount) Set Fixed instance count.

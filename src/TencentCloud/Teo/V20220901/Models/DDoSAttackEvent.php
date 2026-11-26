@@ -18,124 +18,108 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of the DDoS attacker
+ * DDoS attack event objects
  *
- * @method string getEventId() Obtain The event ID.
- * @method void setEventId(string $EventId) Set The event ID.
- * @method string getAttackType() Obtain The attack type.
- * @method void setAttackType(string $AttackType) Set The attack type.
- * @method integer getAttackStatus() Obtain The attack status.
- * @method void setAttackStatus(integer $AttackStatus) Set The attack status.
- * @method integer getAttackMaxBandWidth() Obtain Maximum bandwidth of the attack in bps.
- * @method void setAttackMaxBandWidth(integer $AttackMaxBandWidth) Set Maximum bandwidth of the attack in bps.
- * @method integer getAttackPacketMaxRate() Obtain Peak attack packet rate, unit: pps.
- * @method void setAttackPacketMaxRate(integer $AttackPacketMaxRate) Set Peak attack packet rate, unit: pps.
- * @method integer getAttackStartTime() Obtain The attack start time recorded in seconds.
- * @method void setAttackStartTime(integer $AttackStartTime) Set The attack start time recorded in seconds.
- * @method integer getAttackEndTime() Obtain The attack end time recorded in seconds.
- * @method void setAttackEndTime(integer $AttackEndTime) Set The attack end time recorded in seconds.
- * @method integer getPolicyId() Obtain The DDoS policy ID. 
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setPolicyId(integer $PolicyId) Set The DDoS policy ID. 
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getZoneId() Obtain The site ID. 
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setZoneId(string $ZoneId) Set The site ID. 
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getArea() Obtain Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setArea(string $Area) Set Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-Note: This field may return `null`, indicating that no valid value was found.
- * @method array getDDoSBlockData() Obtain The blocking time of a DDoS attack. 
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setDDoSBlockData(array $DDoSBlockData) Set The blocking time of a DDoS attack. 
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getEventId() Obtain <p>Event ID.</p>
+ * @method void setEventId(string $EventId) Set <p>Event ID.</p>
+ * @method string getAttackType() Obtain <p>Attack type.</p>
+ * @method void setAttackType(string $AttackType) Set <p>Attack type.</p>
+ * @method integer getAttackStatus() Obtain <p>Attack status.</p><p>Enumeration values:</p><ul><li>0: Observing</li><li>1: Attacking</li><li>2: Attack ended</li></ul>
+ * @method void setAttackStatus(integer $AttackStatus) Set <p>Attack status.</p><p>Enumeration values:</p><ul><li>0: Observing</li><li>1: Attacking</li><li>2: Attack ended</li></ul>
+ * @method integer getAttackMaxBandWidth() Obtain <p>Maximum attack bandwidth, in bps.</p>
+ * @method void setAttackMaxBandWidth(integer $AttackMaxBandWidth) Set <p>Maximum attack bandwidth, in bps.</p>
+ * @method integer getAttackPacketMaxRate() Obtain <p>Peak attack packet rate, unit: pps.</p>
+ * @method void setAttackPacketMaxRate(integer $AttackPacketMaxRate) Set <p>Peak attack packet rate, unit: pps.</p>
+ * @method integer getAttackStartTime() Obtain <p>Attack start timestamp.</p><p>Unit: second</p>
+ * @method void setAttackStartTime(integer $AttackStartTime) Set <p>Attack start timestamp.</p><p>Unit: second</p>
+ * @method integer getAttackEndTime() Obtain <p>Attack end timestamp.</p><p>Unit: second</p>
+ * @method void setAttackEndTime(integer $AttackEndTime) Set <p>Attack end timestamp.</p><p>Unit: second</p>
+ * @method integer getPolicyId() Obtain <p>DDoS policy group ID.</p>
+ * @method void setPolicyId(integer $PolicyId) Set <p>DDoS policy group ID.</p>
+ * @method string getZoneId() Obtain <p>Zone ID.</p>
+ * @method void setZoneId(string $ZoneId) Set <p>Zone ID.</p>
+ * @method string getArea() Obtain <p>Region of the attack event.</p><p>Enumeration values:</p><ul><li>overseas: global (excluding the Chinese mainland) data;</li><li>mainland: Chinese mainland data.</li></ul>
+ * @method void setArea(string $Area) Set <p>Region of the attack event.</p><p>Enumeration values:</p><ul><li>overseas: global (excluding the Chinese mainland) data;</li><li>mainland: Chinese mainland data.</li></ul>
+ * @method array getDDoSBlockData() Obtain <p>Block and unblock info.</p>
+ * @method void setDDoSBlockData(array $DDoSBlockData) Set <p>Block and unblock info.</p>
+ * @method array getDDoSAttackDips() Obtain <p>List of target IPs under DDoS attack.</p>
+ * @method void setDDoSAttackDips(array $DDoSAttackDips) Set <p>List of target IPs under DDoS attack.</p>
  */
 class DDoSAttackEvent extends AbstractModel
 {
     /**
-     * @var string The event ID.
+     * @var string <p>Event ID.</p>
      */
     public $EventId;
 
     /**
-     * @var string The attack type.
+     * @var string <p>Attack type.</p>
      */
     public $AttackType;
 
     /**
-     * @var integer The attack status.
+     * @var integer <p>Attack status.</p><p>Enumeration values:</p><ul><li>0: Observing</li><li>1: Attacking</li><li>2: Attack ended</li></ul>
      */
     public $AttackStatus;
 
     /**
-     * @var integer Maximum bandwidth of the attack in bps.
+     * @var integer <p>Maximum attack bandwidth, in bps.</p>
      */
     public $AttackMaxBandWidth;
 
     /**
-     * @var integer Peak attack packet rate, unit: pps.
+     * @var integer <p>Peak attack packet rate, unit: pps.</p>
      */
     public $AttackPacketMaxRate;
 
     /**
-     * @var integer The attack start time recorded in seconds.
+     * @var integer <p>Attack start timestamp.</p><p>Unit: second</p>
      */
     public $AttackStartTime;
 
     /**
-     * @var integer The attack end time recorded in seconds.
+     * @var integer <p>Attack end timestamp.</p><p>Unit: second</p>
      */
     public $AttackEndTime;
 
     /**
-     * @var integer The DDoS policy ID. 
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer <p>DDoS policy group ID.</p>
      */
     public $PolicyId;
 
     /**
-     * @var string The site ID. 
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string <p>Zone ID.</p>
      */
     public $ZoneId;
 
     /**
-     * @var string Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string <p>Region of the attack event.</p><p>Enumeration values:</p><ul><li>overseas: global (excluding the Chinese mainland) data;</li><li>mainland: Chinese mainland data.</li></ul>
      */
     public $Area;
 
     /**
-     * @var array The blocking time of a DDoS attack. 
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array <p>Block and unblock info.</p>
      */
     public $DDoSBlockData;
 
     /**
-     * @param string $EventId The event ID.
-     * @param string $AttackType The attack type.
-     * @param integer $AttackStatus The attack status.
-     * @param integer $AttackMaxBandWidth Maximum bandwidth of the attack in bps.
-     * @param integer $AttackPacketMaxRate Peak attack packet rate, unit: pps.
-     * @param integer $AttackStartTime The attack start time recorded in seconds.
-     * @param integer $AttackEndTime The attack end time recorded in seconds.
-     * @param integer $PolicyId The DDoS policy ID. 
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $ZoneId The site ID. 
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $Area Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param array $DDoSBlockData The blocking time of a DDoS attack. 
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array <p>List of target IPs under DDoS attack.</p>
+     */
+    public $DDoSAttackDips;
+
+    /**
+     * @param string $EventId <p>Event ID.</p>
+     * @param string $AttackType <p>Attack type.</p>
+     * @param integer $AttackStatus <p>Attack status.</p><p>Enumeration values:</p><ul><li>0: Observing</li><li>1: Attacking</li><li>2: Attack ended</li></ul>
+     * @param integer $AttackMaxBandWidth <p>Maximum attack bandwidth, in bps.</p>
+     * @param integer $AttackPacketMaxRate <p>Peak attack packet rate, unit: pps.</p>
+     * @param integer $AttackStartTime <p>Attack start timestamp.</p><p>Unit: second</p>
+     * @param integer $AttackEndTime <p>Attack end timestamp.</p><p>Unit: second</p>
+     * @param integer $PolicyId <p>DDoS policy group ID.</p>
+     * @param string $ZoneId <p>Zone ID.</p>
+     * @param string $Area <p>Region of the attack event.</p><p>Enumeration values:</p><ul><li>overseas: global (excluding the Chinese mainland) data;</li><li>mainland: Chinese mainland data.</li></ul>
+     * @param array $DDoSBlockData <p>Block and unblock info.</p>
+     * @param array $DDoSAttackDips <p>List of target IPs under DDoS attack.</p>
      */
     function __construct()
     {
@@ -197,6 +181,10 @@ Note: This field may return `null`, indicating that no valid value was found.
                 $obj->deserialize($value);
                 array_push($this->DDoSBlockData, $obj);
             }
+        }
+
+        if (array_key_exists("DDoSAttackDips",$param) and $param["DDoSAttackDips"] !== null) {
+            $this->DDoSAttackDips = $param["DDoSAttackDips"];
         }
     }
 }

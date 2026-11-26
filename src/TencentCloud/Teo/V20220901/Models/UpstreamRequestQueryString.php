@@ -18,64 +18,60 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Origin-pull request parameters query string configuration.
+ * Origin-pull request parameter query string configuration.
  *
- * @method string getSwitch() Obtain Whether to enable origin-pull request parameter query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method void setSwitch(string $Switch) Set Whether to enable origin-pull request parameter query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method string getAction() Obtain Query string mode. this parameter is required when switch is on. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all;</li>.
-<Li>IncludeCustom: retain partial parameters.</li>.
-<Li>ExcludeCustom: ignore partial parameters.</li>.
- * @method void setAction(string $Action) Set Query string mode. this parameter is required when switch is on. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all;</li>.
-<Li>IncludeCustom: retain partial parameters.</li>.
-<Li>ExcludeCustom: ignore partial parameters.</li>.
- * @method array getValues() Obtain Specifies parameter values. this parameter takes effect only when the query string mode action is `includecustom` or `excludecustom`, and is used to specify the parameters to be reserved or ignored. up to 10 parameters are supported.
- * @method void setValues(array $Values) Set Specifies parameter values. this parameter takes effect only when the query string mode action is `includecustom` or `excludecustom`, and is used to specify the parameters to be reserved or ignored. up to 10 parameters are supported.
+ * @method string getSwitch() Obtain Configuration switch for the origin-pull request parameter query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Configuration switch for the origin-pull request parameter query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method string getAction() Obtain Query string mode. This parameter is required when Switch is on. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all;</li>
+<li>includeCustom: reserve some parameters;</li>
+<li>excludeCustom: ignore some parameters.</li>
+ * @method void setAction(string $Action) Set Query string mode. This parameter is required when Switch is on. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all;</li>
+<li>includeCustom: reserve some parameters;</li>
+<li>excludeCustom: ignore some parameters.</li>
+ * @method array getValues() Obtain Specified parameter values. This parameter takes effect only when the string mode Action is includeCustom or excludeCustom. It is used to specify parameters to keep or ignore. Supports up to 10 parameters.
+ * @method void setValues(array $Values) Set Specified parameter values. This parameter takes effect only when the string mode Action is includeCustom or excludeCustom. It is used to specify parameters to keep or ignore. Supports up to 10 parameters.
  */
 class UpstreamRequestQueryString extends AbstractModel
 {
     /**
-     * @var string Whether to enable origin-pull request parameter query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @var string Configuration switch for the origin-pull request parameter query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var string Query string mode. this parameter is required when switch is on. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all;</li>.
-<Li>IncludeCustom: retain partial parameters.</li>.
-<Li>ExcludeCustom: ignore partial parameters.</li>.
+     * @var string Query string mode. This parameter is required when Switch is on. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all;</li>
+<li>includeCustom: reserve some parameters;</li>
+<li>excludeCustom: ignore some parameters.</li>
      */
     public $Action;
 
     /**
-     * @var array Specifies parameter values. this parameter takes effect only when the query string mode action is `includecustom` or `excludecustom`, and is used to specify the parameters to be reserved or ignored. up to 10 parameters are supported.
+     * @var array Specified parameter values. This parameter takes effect only when the string mode Action is includeCustom or excludeCustom. It is used to specify parameters to keep or ignore. Supports up to 10 parameters.
      */
     public $Values;
 
     /**
-     * @param string $Switch Whether to enable origin-pull request parameter query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-     * @param string $Action Query string mode. this parameter is required when switch is on. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all;</li>.
-<Li>IncludeCustom: retain partial parameters.</li>.
-<Li>ExcludeCustom: ignore partial parameters.</li>.
-     * @param array $Values Specifies parameter values. this parameter takes effect only when the query string mode action is `includecustom` or `excludecustom`, and is used to specify the parameters to be reserved or ignored. up to 10 parameters are supported.
+     * @param string $Switch Configuration switch for the origin-pull request parameter query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param string $Action Query string mode. This parameter is required when Switch is on. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all;</li>
+<li>includeCustom: reserve some parameters;</li>
+<li>excludeCustom: ignore some parameters.</li>
+     * @param array $Values Specified parameter values. This parameter takes effect only when the string mode Action is includeCustom or excludeCustom. It is used to specify parameters to keep or ignore. Supports up to 10 parameters.
      */
     function __construct()
     {

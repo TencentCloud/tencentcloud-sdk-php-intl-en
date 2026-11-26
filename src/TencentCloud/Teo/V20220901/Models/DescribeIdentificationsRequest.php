@@ -20,34 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIdentifications request structure.
  *
- * @method array getFilters() Obtain Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
- * @method void setFilters(array $Filters) Set Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
- * @method integer getOffset() Obtain The page offset. Default value: 0
- * @method void setOffset(integer $Offset) Set The page offset. Default value: 0
- * @method integer getLimit() Obtain The paginated query limit. Default value: 20. Maximum value: 1000.
- * @method void setLimit(integer $Limit) Set The paginated query limit. Default value: 20. Maximum value: 1000.
+ * @method array getFilters() Obtain Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>zone-name: Filter by site name.</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>zone-name: Filter by site name.</li>
+ * @method integer getOffset() Obtain The offset of paginated query. Default value: 0.
+ * @method void setOffset(integer $Offset) Set The offset of paginated query. Default value: 0.
+ * @method integer getLimit() Obtain The limit of paginated query. Default value: 20. Maximum value: 1,000.
+ * @method void setLimit(integer $Limit) Set The limit of paginated query. Default value: 20. Maximum value: 1,000.
  */
 class DescribeIdentificationsRequest extends AbstractModel
 {
     /**
-     * @var array Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
+     * @var array Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>zone-name: Filter by site name.</li>
      */
     public $Filters;
 
     /**
-     * @var integer The page offset. Default value: 0
+     * @var integer The offset of paginated query. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer The paginated query limit. Default value: 20. Maximum value: 1000.
+     * @var integer The limit of paginated query. Default value: 20. Maximum value: 1,000.
      */
     public $Limit;
 
     /**
-     * @param array $Filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
-     * @param integer $Offset The page offset. Default value: 0
-     * @param integer $Limit The paginated query limit. Default value: 20. Maximum value: 1000.
+     * @param array $Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>zone-name: Filter by site name.</li>
+     * @param integer $Offset The offset of paginated query. Default value: 0.
+     * @param integer $Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
      */
     function __construct()
     {

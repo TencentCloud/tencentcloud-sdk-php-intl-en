@@ -18,88 +18,84 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Origin group record
+ * Origin server group records
  *
- * @method string getRecord() Obtain The origin record value, which can be an IPv4/IPv6 address or a domain name.
- * @method void setRecord(string $Record) Set The origin record value, which can be an IPv4/IPv6 address or a domain name.
- * @method string getType() Obtain The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`AWS_S3`: AWS S3 bucket address
- * @method void setType(string $Type) Set The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`AWS_S3`: AWS S3 bucket address
- * @method string getRecordId() Obtain The origin record ID.
- * @method void setRecordId(string $RecordId) Set The origin record ID.
- * @method integer getWeight() Obtain [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setWeight(integer $Weight) Set [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method boolean getPrivate() Obtain Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
-<li>`true`: Yes.</li>
-<li>`false`: No.</li>Default: `false`.
+ * @method string getRecord() Obtain Origin server record value, excluding port information. It can be an IPv4 address, IPv6 address, or domain name format.
+ * @method void setRecord(string $Record) Set Origin server record value, excluding port information. It can be an IPv4 address, IPv6 address, or domain name format.
+ * @method string getType() Obtain Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, domain type origin server;</li>
+<li>COS: COS origin.</li>
+<li>AWS_S3: AWS S3 COS origin server.</li>
+ * @method void setType(string $Type) Set Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, domain type origin server;</li>
+<li>COS: COS origin.</li>
+<li>AWS_S3: AWS S3 COS origin server.</li>
+ * @method string getRecordId() Obtain Origin record ID.
+ * @method void setRecordId(string $RecordId) Set Origin record ID.
+ * @method integer getWeight() Obtain 【Origin server weight】: A parameter used to control traffic assignment priority. Value range: 0-100 (integer): <li>Empty value: No weight is set, and the system schedules traffic based on the default policy;</li><li>0: The weight is explicitly set to 0, and traffic will not be assigned to this origin server. Note: Make sure at least one origin server has a weight above 0;</li><li>Normal value: The larger the value, the more traffic is assigned;</li>
+ * @method void setWeight(integer $Weight) Set 【Origin server weight】: A parameter used to control traffic assignment priority. Value range: 0-100 (integer): <li>Empty value: No weight is set, and the system schedules traffic based on the default policy;</li><li>0: The weight is explicitly set to 0, and traffic will not be assigned to this origin server. Note: Make sure at least one origin server has a weight above 0;</li><li>Normal value: The larger the value, the more traffic is assigned;</li>
+ * @method boolean getPrivate() Obtain Whether to use private authentication. This parameter is valid only when RecordType is COS or AWS_S3. Valid values:
+<li>true: Enable private authentication;</li>
+<li>false: Do not use private authentication.</li>Not specified. Default value: false.
 
- * @method void setPrivate(boolean $Private) Set Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
-<li>`true`: Yes.</li>
-<li>`false`: No.</li>Default: `false`.
+ * @method void setPrivate(boolean $Private) Set Whether to use private authentication. This parameter is valid only when RecordType is COS or AWS_S3. Valid values:
+<li>true: Enable private authentication;</li>
+<li>false: Do not use private authentication.</li>Not specified. Default value: false.
 
- * @method array getPrivateParameters() Obtain Private authentication parameters. This field is valid when `Private=true`.
- * @method void setPrivateParameters(array $PrivateParameters) Set Private authentication parameters. This field is valid when `Private=true`.
+ * @method array getPrivateParameters() Obtain Private authentication parameter. Valid when the origin server type is Private=true.
+ * @method void setPrivateParameters(array $PrivateParameters) Set Private authentication parameter. Valid when the origin server type is Private=true.
  */
 class OriginRecord extends AbstractModel
 {
     /**
-     * @var string The origin record value, which can be an IPv4/IPv6 address or a domain name.
+     * @var string Origin server record value, excluding port information. It can be an IPv4 address, IPv6 address, or domain name format.
      */
     public $Record;
 
     /**
-     * @var string The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`AWS_S3`: AWS S3 bucket address
+     * @var string Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, domain type origin server;</li>
+<li>COS: COS origin.</li>
+<li>AWS_S3: AWS S3 COS origin server.</li>
      */
     public $Type;
 
     /**
-     * @var string The origin record ID.
+     * @var string Origin record ID.
      */
     public $RecordId;
 
     /**
-     * @var integer [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var integer 【Origin server weight】: A parameter used to control traffic assignment priority. Value range: 0-100 (integer): <li>Empty value: No weight is set, and the system schedules traffic based on the default policy;</li><li>0: The weight is explicitly set to 0, and traffic will not be assigned to this origin server. Note: Make sure at least one origin server has a weight above 0;</li><li>Normal value: The larger the value, the more traffic is assigned;</li>
      */
     public $Weight;
 
     /**
-     * @var boolean Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
-<li>`true`: Yes.</li>
-<li>`false`: No.</li>Default: `false`.
+     * @var boolean Whether to use private authentication. This parameter is valid only when RecordType is COS or AWS_S3. Valid values:
+<li>true: Enable private authentication;</li>
+<li>false: Do not use private authentication.</li>Not specified. Default value: false.
 
      */
     public $Private;
 
     /**
-     * @var array Private authentication parameters. This field is valid when `Private=true`.
+     * @var array Private authentication parameter. Valid when the origin server type is Private=true.
      */
     public $PrivateParameters;
 
     /**
-     * @param string $Record The origin record value, which can be an IPv4/IPv6 address or a domain name.
-     * @param string $Type The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`AWS_S3`: AWS S3 bucket address
-     * @param string $RecordId The origin record ID.
-     * @param integer $Weight [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param boolean $Private Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
-<li>`true`: Yes.</li>
-<li>`false`: No.</li>Default: `false`.
+     * @param string $Record Origin server record value, excluding port information. It can be an IPv4 address, IPv6 address, or domain name format.
+     * @param string $Type Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, domain type origin server;</li>
+<li>COS: COS origin.</li>
+<li>AWS_S3: AWS S3 COS origin server.</li>
+     * @param string $RecordId Origin record ID.
+     * @param integer $Weight 【Origin server weight】: A parameter used to control traffic assignment priority. Value range: 0-100 (integer): <li>Empty value: No weight is set, and the system schedules traffic based on the default policy;</li><li>0: The weight is explicitly set to 0, and traffic will not be assigned to this origin server. Note: Make sure at least one origin server has a weight above 0;</li><li>Normal value: The larger the value, the more traffic is assigned;</li>
+     * @param boolean $Private Whether to use private authentication. This parameter is valid only when RecordType is COS or AWS_S3. Valid values:
+<li>true: Enable private authentication;</li>
+<li>false: Do not use private authentication.</li>Not specified. Default value: false.
 
-     * @param array $PrivateParameters Private authentication parameters. This field is valid when `Private=true`.
+     * @param array $PrivateParameters Private authentication parameter. Valid when the origin server type is Private=true.
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getSecretKey() Obtain Multi-Channel security acceleration gateway integration key, base64-encoded string with an unencoded length of 32-48 characters.
- * @method void setSecretKey(string $SecretKey) Set Multi-Channel security acceleration gateway integration key, base64-encoded string with an unencoded length of 32-48 characters.
+ * @method string getSecretKey() Obtain Key for multi-channel security acceleration gateway integration, base64 string. The string length before encoding is 32-48 characters.
+ * @method void setSecretKey(string $SecretKey) Set Key for multi-channel security acceleration gateway integration, base64 string. The string length before encoding is 32-48 characters.
  */
 class ModifyMultiPathGatewaySecretKeyRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyMultiPathGatewaySecretKeyRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Multi-Channel security acceleration gateway integration key, base64-encoded string with an unencoded length of 32-48 characters.
+     * @var string Key for multi-channel security acceleration gateway integration, base64 string. The string length before encoding is 32-48 characters.
      */
     public $SecretKey;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $SecretKey Multi-Channel security acceleration gateway integration key, base64-encoded string with an unencoded length of 32-48 characters.
+     * @param string $SecretKey Key for multi-channel security acceleration gateway integration, base64 string. The string length before encoding is 32-48 characters.
      */
     function __construct()
     {

@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Mobile application data information.
  *
- * @method string getApplicationId() Obtain Application ID.
- * @method void setApplicationId(string $ApplicationId) Set Application ID.
- * @method string getApplicationName() Obtain Application name.
- * @method void setApplicationName(string $ApplicationName) Set Application name.
- * @method string getApplicationType() Obtain Application type (cloud APK: application APK).
- * @method void setApplicationType(string $ApplicationType) Set Application type (cloud APK: application APK).
- * @method string getApplicationRunStatus() Obtain Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package).
- * @method void setApplicationRunStatus(string $ApplicationRunStatus) Set Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package).
- * @method string getApplicationUpdateStatus() Obtain Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
- * @method void setApplicationUpdateStatus(string $ApplicationUpdateStatus) Set Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
- * @method string getApplicationCreateTime() Obtain Application creation time.
- * @method void setApplicationCreateTime(string $ApplicationCreateTime) Set Application creation time.
- * @method array getApplicationVersions() Obtain List of application versions.
- * @method void setApplicationVersions(array $ApplicationVersions) Set List of application versions.
- * @method string getApplicationNature() Obtain Application nature (PUBLIC: public application; PRIVATE: user application).
- * @method void setApplicationNature(string $ApplicationNature) Set Application nature (PUBLIC: public application; PRIVATE: user application).
+ * @method string getApplicationId() Obtain <p>Application Id</p>
+ * @method void setApplicationId(string $ApplicationId) Set <p>Application Id</p>
+ * @method string getApplicationName() Obtain <p>Application name</p>
+ * @method void setApplicationName(string $ApplicationName) Set <p>Application name</p>
+ * @method string getApplicationType() Obtain <p>App type (Cloud APK: ApplicationAPK)</p>
+ * @method void setApplicationType(string $ApplicationType) Set <p>App type (Cloud APK: ApplicationAPK)</p>
+ * @method string getApplicationRunStatus() Obtain <p>Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package)</p>
+ * @method void setApplicationRunStatus(string $ApplicationRunStatus) Set <p>Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package)</p>
+ * @method string getApplicationUpdateStatus() Obtain <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
+ * @method void setApplicationUpdateStatus(string $ApplicationUpdateStatus) Set <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
+ * @method string getApplicationCreateTime() Obtain <p>Application creation time</p>
+ * @method void setApplicationCreateTime(string $ApplicationCreateTime) Set <p>Application creation time</p>
+ * @method array getApplicationVersions() Obtain <p>Application version list</p>
+ * @method void setApplicationVersions(array $ApplicationVersions) Set <p>Application version list</p>
+ * @method string getApplicationNature() Obtain <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
+ * @method void setApplicationNature(string $ApplicationNature) Set <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
+ * @method array getApplicationTags() Obtain <p>Application tag</p>
+ * @method void setApplicationTags(array $ApplicationTags) Set <p>Application tag</p>
  */
 class UserMobileApplicationInfo extends AbstractModel
 {
     /**
-     * @var string Application ID.
+     * @var string <p>Application Id</p>
      */
     public $ApplicationId;
 
     /**
-     * @var string Application name.
+     * @var string <p>Application name</p>
      */
     public $ApplicationName;
 
     /**
-     * @var string Application type (cloud APK: application APK).
+     * @var string <p>App type (Cloud APK: ApplicationAPK)</p>
      */
     public $ApplicationType;
 
     /**
-     * @var string Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package).
+     * @var string <p>Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package)</p>
      */
     public $ApplicationRunStatus;
 
     /**
-     * @var string Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
+     * @var string <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
      */
     public $ApplicationUpdateStatus;
 
     /**
-     * @var string Application creation time.
+     * @var string <p>Application creation time</p>
      */
     public $ApplicationCreateTime;
 
     /**
-     * @var array List of application versions.
+     * @var array <p>Application version list</p>
      */
     public $ApplicationVersions;
 
     /**
-     * @var string Application nature (PUBLIC: public application; PRIVATE: user application).
+     * @var string <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
      */
     public $ApplicationNature;
 
     /**
-     * @param string $ApplicationId Application ID.
-     * @param string $ApplicationName Application name.
-     * @param string $ApplicationType Application type (cloud APK: application APK).
-     * @param string $ApplicationRunStatus Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package).
-     * @param string $ApplicationUpdateStatus Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
-     * @param string $ApplicationCreateTime Application creation time.
-     * @param array $ApplicationVersions List of application versions.
-     * @param string $ApplicationNature Application nature (PUBLIC: public application; PRIVATE: user application).
+     * @var array <p>Application tag</p>
+     */
+    public $ApplicationTags;
+
+    /**
+     * @param string $ApplicationId <p>Application Id</p>
+     * @param string $ApplicationName <p>Application name</p>
+     * @param string $ApplicationType <p>App type (Cloud APK: ApplicationAPK)</p>
+     * @param string $ApplicationRunStatus <p>Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package)</p>
+     * @param string $ApplicationUpdateStatus <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
+     * @param string $ApplicationCreateTime <p>Application creation time</p>
+     * @param array $ApplicationVersions <p>Application version list</p>
+     * @param string $ApplicationNature <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
+     * @param array $ApplicationTags <p>Application tag</p>
      */
     function __construct()
     {
@@ -137,6 +145,15 @@ class UserMobileApplicationInfo extends AbstractModel
 
         if (array_key_exists("ApplicationNature",$param) and $param["ApplicationNature"] !== null) {
             $this->ApplicationNature = $param["ApplicationNature"];
+        }
+
+        if (array_key_exists("ApplicationTags",$param) and $param["ApplicationTags"] !== null) {
+            $this->ApplicationTags = [];
+            foreach ($param["ApplicationTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->ApplicationTags, $obj);
+            }
         }
     }
 }

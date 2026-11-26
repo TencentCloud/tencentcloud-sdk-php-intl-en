@@ -20,54 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLogAnalysisDetail request structure.
  *
- * @method string getZoneId() Obtain <p>Site ID.</p>
- * @method void setZoneId(string $ZoneId) Set <p>Site ID.</p>
- * @method string getArea() Obtain <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul>Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
- * @method void setArea(string $Area) Set <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul>Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
- * @method string getStartTime() Obtain <p>Start time, example value: 2020-04 29T00:00:00Z. The maximum span supported for query start time to this day varies by package version. For more details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
- * @method void setStartTime(string $StartTime) Set <p>Start time, example value: 2020-04 29T00:00:00Z. The maximum span supported for query start time to this day varies by package version. For more details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
- * @method string getEndTime() Obtain <p>End time, example value: 2020-04-30T00:00:00Z. The maximum duration from the start time to the end time per request is 31 days.</p>
- * @method void setEndTime(string $EndTime) Set <p>End time, example value: 2020-04-30T00:00:00Z. The maximum duration from the start time to the end time per request is 31 days.</p>
- * @method string getLogType() Obtain <p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
- * @method void setLogType(string $LogType) Set <p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
- * @method string getCondition() Obtain <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
- * @method void setCondition(string $Condition) Set <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
+ * @method string getZoneId() Obtain <p>Zone ID.</p>
+ * @method void setZoneId(string $ZoneId) Set <p>Zone ID.</p>
+ * @method string getArea() Obtain <p>Data ownership region. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>Note: If the site service area is "global availability zone", query the data of mainland and overseas separately to obtain all data.</p>
+ * @method void setArea(string $Area) Set <p>Data ownership region. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>Note: If the site service area is "global availability zone", query the data of mainland and overseas separately to obtain all data.</p>
+ * @method string getStartTime() Obtain <p>Start time. Example value: 2020-04-29T00:00:00Z. The maximum supported span from the query start time to this day varies by package version. For more details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
+ * @method void setStartTime(string $StartTime) Set <p>Start time. Example value: 2020-04-29T00:00:00Z. The maximum supported span from the query start time to this day varies by package version. For more details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
+ * @method string getEndTime() Obtain <p>End time, for example, 2020-04-30T00:00:00Z. The maximum time span from start time to end time per request is 31 days.</p>
+ * @method void setEndTime(string $EndTime) Set <p>End time, for example, 2020-04-30T00:00:00Z. The maximum time span from start time to end time per request is 31 days.</p>
+ * @method string getLogType() Obtain <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul> Defaults to l7-access-logs.</p>
+ * @method void setLogType(string $LogType) Set <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul> Defaults to l7-access-logs.</p>
+ * @method string getCondition() Obtain <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
+ * @method void setCondition(string $Condition) Set <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
  * @method integer getLimit() Obtain <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
  * @method void setLimit(integer $Limit) Set <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
- * @method integer getOffset() Obtain <p>Paginated query offset, defaults to 0.</p>
- * @method void setOffset(integer $Offset) Set <p>Paginated query offset, defaults to 0.</p>
- * @method string getSort() Obtain <p>Whether raw logs are returned in time sequence. Available values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul> Default is desc.</p>
- * @method void setSort(string $Sort) Set <p>Whether raw logs are returned in time sequence. Available values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul> Default is desc.</p>
+ * @method integer getOffset() Obtain <p>Paginated query offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Paginated query offset. Default value: 0.</p>
+ * @method string getSort() Obtain <p>Whether raw logs are returned in time sequence; available values: <ul><li>asc: ascending;</li><li>desc: descending.</li></ul>Default to desc.</p>
+ * @method void setSort(string $Sort) Set <p>Whether raw logs are returned in time sequence; available values: <ul><li>asc: ascending;</li><li>desc: descending.</li></ul>Default to desc.</p>
  */
 class DescribeLogAnalysisDetailRequest extends AbstractModel
 {
     /**
-     * @var string <p>Site ID.</p>
+     * @var string <p>Zone ID.</p>
      */
     public $ZoneId;
 
     /**
-     * @var string <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul>Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
+     * @var string <p>Data ownership region. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>Note: If the site service area is "global availability zone", query the data of mainland and overseas separately to obtain all data.</p>
      */
     public $Area;
 
     /**
-     * @var string <p>Start time, example value: 2020-04 29T00:00:00Z. The maximum span supported for query start time to this day varies by package version. For more details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
+     * @var string <p>Start time. Example value: 2020-04-29T00:00:00Z. The maximum supported span from the query start time to this day varies by package version. For more details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
      */
     public $StartTime;
 
     /**
-     * @var string <p>End time, example value: 2020-04-30T00:00:00Z. The maximum duration from the start time to the end time per request is 31 days.</p>
+     * @var string <p>End time, for example, 2020-04-30T00:00:00Z. The maximum time span from start time to end time per request is 31 days.</p>
      */
     public $EndTime;
 
     /**
-     * @var string <p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
+     * @var string <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul> Defaults to l7-access-logs.</p>
      */
     public $LogType;
 
     /**
-     * @var string <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
+     * @var string <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
      */
     public $Condition;
 
@@ -77,25 +77,25 @@ class DescribeLogAnalysisDetailRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer <p>Paginated query offset, defaults to 0.</p>
+     * @var integer <p>Paginated query offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var string <p>Whether raw logs are returned in time sequence. Available values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul> Default is desc.</p>
+     * @var string <p>Whether raw logs are returned in time sequence; available values: <ul><li>asc: ascending;</li><li>desc: descending.</li></ul>Default to desc.</p>
      */
     public $Sort;
 
     /**
-     * @param string $ZoneId <p>Site ID.</p>
-     * @param string $Area <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul>Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
-     * @param string $StartTime <p>Start time, example value: 2020-04 29T00:00:00Z. The maximum span supported for query start time to this day varies by package version. For more details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
-     * @param string $EndTime <p>End time, example value: 2020-04-30T00:00:00Z. The maximum duration from the start time to the end time per request is 31 days.</p>
-     * @param string $LogType <p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
-     * @param string $Condition <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
+     * @param string $ZoneId <p>Zone ID.</p>
+     * @param string $Area <p>Data ownership region. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>Note: If the site service area is "global availability zone", query the data of mainland and overseas separately to obtain all data.</p>
+     * @param string $StartTime <p>Start time. Example value: 2020-04-29T00:00:00Z. The maximum supported span from the query start time to this day varies by package version. For more details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
+     * @param string $EndTime <p>End time, for example, 2020-04-30T00:00:00Z. The maximum time span from start time to end time per request is 31 days.</p>
+     * @param string $LogType <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul> Defaults to l7-access-logs.</p>
+     * @param string $Condition <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
      * @param integer $Limit <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
-     * @param integer $Offset <p>Paginated query offset, defaults to 0.</p>
-     * @param string $Sort <p>Whether raw logs are returned in time sequence. Available values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul> Default is desc.</p>
+     * @param integer $Offset <p>Paginated query offset. Default value: 0.</p>
+     * @param string $Sort <p>Whether raw logs are returned in time sequence; available values: <ul><li>asc: ascending;</li><li>desc: descending.</li></ul>Default to desc.</p>
      */
     function __construct()
     {

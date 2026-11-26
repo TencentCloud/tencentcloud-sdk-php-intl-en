@@ -20,130 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApplicationProxy request structure.
  *
- * @method string getZoneId() Obtain Site ID.
- * @method void setZoneId(string $ZoneId) Set Site ID.
- * @method string getProxyName() Obtain Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
- * @method void setProxyName(string $ProxyName) Set Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
- * @method string getPlatType() Obtain The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
- * @method void setPlatType(string $PlatType) Set The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
- * @method integer getSecurityType() Obtain Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
- * @method void setSecurityType(integer $SecurityType) Set Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
- * @method integer getAccelerateType() Obtain Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
- * @method void setAccelerateType(integer $AccelerateType) Set Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
- * @method string getProxyType() Obtain Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
- * @method void setProxyType(string $ProxyType) Set Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
- * @method integer getSessionPersistTime() Obtain The session persistence duration. Value range: 30-3600 (in seconds).
-If not specified, this field uses the default value 600.
- * @method void setSessionPersistTime(integer $SessionPersistTime) Set The session persistence duration. Value range: 30-3600 (in seconds).
-If not specified, this field uses the default value 600.
- * @method Ipv6 getIpv6() Obtain Ipv6 access configuration. 
-IPv6 access is disabled if it is not specified.
- * @method void setIpv6(Ipv6 $Ipv6) Set Ipv6 access configuration. 
-IPv6 access is disabled if it is not specified.
- * @method array getApplicationProxyRules() Obtain The rule details.
-If this field is not specified, an application proxy rule will not be created.
- * @method void setApplicationProxyRules(array $ApplicationProxyRules) Set The rule details.
-If this field is not specified, an application proxy rule will not be created.
- * @method AccelerateMainland getAccelerateMainland() Obtain Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
- * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) Set Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method string getProxyName() Obtain When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
+ * @method void setProxyName(string $ProxyName) Set When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
+ * @method string getPlatType() Obtain Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
+ * @method void setPlatType(string $PlatType) Set Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
+ * @method integer getSecurityType() Obtain Whether security is enabled. Valid values:
+<li>0: security off;</li>
+<li>1: Enable security.</li>
+ * @method void setSecurityType(integer $SecurityType) Set Whether security is enabled. Valid values:
+<li>0: security off;</li>
+<li>1: Enable security.</li>
+ * @method integer getAccelerateType() Obtain Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
+ * @method void setAccelerateType(integer $AccelerateType) Set Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
+ * @method string getProxyType() Obtain Layer 4 proxy mode. Valid values: <li>instance: instance mode.</li>Use default value instance if not specified.
+ * @method void setProxyType(string $ProxyType) Set Layer 4 proxy mode. Valid values: <li>instance: instance mode.</li>Use default value instance if not specified.
+ * @method integer getSessionPersistTime() Obtain Session persistence duration. Value range: 30-3600. Unit: second.
+If this field is not specified, the default value '600' will be used.
+ * @method void setSessionPersistTime(integer $SessionPersistTime) Set Session persistence duration. Value range: 30-3600. Unit: second.
+If this field is not specified, the default value '600' will be used.
+ * @method Ipv6 getIpv6() Obtain Ipv6 access configuration.
+Not specified means disabling Ipv6 access.
+ * @method void setIpv6(Ipv6 $Ipv6) Set Ipv6 access configuration.
+Not specified means disabling Ipv6 access.
+ * @method array getApplicationProxyRules() Obtain Rule details.
+If not specified, no rules are created.
+ * @method void setApplicationProxyRules(array $ApplicationProxyRules) Set Rule details.
+If not specified, no rules are created.
+ * @method AccelerateMainland getAccelerateMainland() Obtain Acceleration optimization configuration for the Chinese mainland. Not specified means disabling acceleration optimization for the Chinese mainland.
+ * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) Set Acceleration optimization configuration for the Chinese mainland. Not specified means disabling acceleration optimization for the Chinese mainland.
  */
 class CreateApplicationProxyRequest extends AbstractModel
 {
     /**
-     * @var string Site ID.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var string Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
+     * @var string When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
      */
     public $ProxyName;
 
     /**
-     * @var string The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
+     * @var string Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
      */
     public $PlatType;
 
     /**
-     * @var integer Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
+     * @var integer Whether security is enabled. Valid values:
+<li>0: security off;</li>
+<li>1: Enable security.</li>
      */
     public $SecurityType;
 
     /**
-     * @var integer Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
+     * @var integer Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
      */
     public $AccelerateType;
 
     /**
-     * @var string Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
+     * @var string Layer 4 proxy mode. Valid values: <li>instance: instance mode.</li>Use default value instance if not specified.
      */
     public $ProxyType;
 
     /**
-     * @var integer The session persistence duration. Value range: 30-3600 (in seconds).
-If not specified, this field uses the default value 600.
+     * @var integer Session persistence duration. Value range: 30-3600. Unit: second.
+If this field is not specified, the default value '600' will be used.
      */
     public $SessionPersistTime;
 
     /**
-     * @var Ipv6 Ipv6 access configuration. 
-IPv6 access is disabled if it is not specified.
+     * @var Ipv6 Ipv6 access configuration.
+Not specified means disabling Ipv6 access.
      */
     public $Ipv6;
 
     /**
-     * @var array The rule details.
-If this field is not specified, an application proxy rule will not be created.
+     * @var array Rule details.
+If not specified, no rules are created.
      */
     public $ApplicationProxyRules;
 
     /**
-     * @var AccelerateMainland Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+     * @var AccelerateMainland Acceleration optimization configuration for the Chinese mainland. Not specified means disabling acceleration optimization for the Chinese mainland.
      */
     public $AccelerateMainland;
 
     /**
-     * @param string $ZoneId Site ID.
-     * @param string $ProxyName Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
-     * @param string $PlatType The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
-     * @param integer $SecurityType Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
-     * @param integer $AccelerateType Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
-     * @param string $ProxyType Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
-     * @param integer $SessionPersistTime The session persistence duration. Value range: 30-3600 (in seconds).
-If not specified, this field uses the default value 600.
-     * @param Ipv6 $Ipv6 Ipv6 access configuration. 
-IPv6 access is disabled if it is not specified.
-     * @param array $ApplicationProxyRules The rule details.
-If this field is not specified, an application proxy rule will not be created.
-     * @param AccelerateMainland $AccelerateMainland Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+     * @param string $ZoneId Zone ID.
+     * @param string $ProxyName When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
+     * @param string $PlatType Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
+     * @param integer $SecurityType Whether security is enabled. Valid values:
+<li>0: security off;</li>
+<li>1: Enable security.</li>
+     * @param integer $AccelerateType Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
+     * @param string $ProxyType Layer 4 proxy mode. Valid values: <li>instance: instance mode.</li>Use default value instance if not specified.
+     * @param integer $SessionPersistTime Session persistence duration. Value range: 30-3600. Unit: second.
+If this field is not specified, the default value '600' will be used.
+     * @param Ipv6 $Ipv6 Ipv6 access configuration.
+Not specified means disabling Ipv6 access.
+     * @param array $ApplicationProxyRules Rule details.
+If not specified, no rules are created.
+     * @param AccelerateMainland $AccelerateMainland Acceleration optimization configuration for the Chinese mainland. Not specified means disabling acceleration optimization for the Chinese mainland.
      */
     function __construct()
     {

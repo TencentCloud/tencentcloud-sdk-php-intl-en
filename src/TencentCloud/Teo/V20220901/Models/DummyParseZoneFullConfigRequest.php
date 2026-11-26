@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rum\V20210622\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLogExports request structure.
+ * DummyParseZoneFullConfig request structure.
  *
- * @method integer getID() Obtain Project ID
- * @method void setID(integer $ID) Set Project ID
+
  */
-class DescribeLogExportsRequest extends AbstractModel
+class DummyParseZoneFullConfigRequest extends AbstractModel
 {
-    /**
-     * @var integer Project ID
-     */
-    public $ID;
+
 
     /**
-     * @param integer $ID Project ID
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class DescribeLogExportsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
-            $this->ID = $param["ID"];
-        }
+
     }
 }

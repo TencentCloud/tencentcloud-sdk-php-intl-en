@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Content compression configuration.
  *
- * @method string getSwitch() Obtain Specifies the content compression configuration switch. valid values:.
+ * @method string getSwitch() Obtain Content compression configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-Specifies whether to simultaneously support brotli and gzip compression algorithms when Switch is on.
- * @method void setSwitch(string $Switch) Set Specifies the content compression configuration switch. valid values:.
+When Switch is on, brotli and gzip compression algorithms are simultaneously supported.
+ * @method void setSwitch(string $Switch) Set Content compression configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-Specifies whether to simultaneously support brotli and gzip compression algorithms when Switch is on.
+When Switch is on, brotli and gzip compression algorithms are simultaneously supported.
  */
 class ContentCompressionParameters extends AbstractModel
 {
     /**
-     * @var string Specifies the content compression configuration switch. valid values:.
+     * @var string Content compression configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-Specifies whether to simultaneously support brotli and gzip compression algorithms when Switch is on.
+When Switch is on, brotli and gzip compression algorithms are simultaneously supported.
      */
     public $Switch;
 
     /**
-     * @param string $Switch Specifies the content compression configuration switch. valid values:.
+     * @param string $Switch Content compression configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-Specifies whether to simultaneously support brotli and gzip compression algorithms when Switch is on.
+When Switch is on, brotli and gzip compression algorithms are simultaneously supported.
      */
     function __construct()
     {

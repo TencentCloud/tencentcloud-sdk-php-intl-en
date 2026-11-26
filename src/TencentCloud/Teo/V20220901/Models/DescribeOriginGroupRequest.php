@@ -20,50 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOriginGroup request structure.
  *
- * @method string getZoneId() Obtain (Required) Site ID
- * @method void setZoneId(string $ZoneId) Set (Required) Site ID
- * @method integer getOffset() Obtain The paginated query offset. Default value: 0
- * @method void setOffset(integer $Offset) Set The paginated query offset. Default value: 0
- * @method integer getLimit() Obtain Limit on paginated queries. Value range: 1-1000. Default value: 20.
- * @method void setLimit(integer $Limit) Set Limit on paginated queries. Value range: 1-1000. Default value: 20.
+ * @method string getZoneId() Obtain Site ID. This parameter is required.
+ * @method void setZoneId(string $ZoneId) Set Site ID. This parameter is required.
+ * @method integer getOffset() Obtain Paginated query offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Paginated query offset. Default value: 0.
+ * @method integer getLimit() Obtain Paginated query limit. If not specified, the default value is 20. Value range: 1-1000.
+ * @method void setLimit(integer $Limit) Set Paginated query limit. If not specified, the default value is 20. Value range: 1-1000.
  * @method array getFilters() Obtain Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-
-<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
+<li>origin-group-id: filter by origin group ID. Fuzzy queries are not supported. The origin group ID format is: origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a;</li><li>origin-group-name: filter by origin group name. When fuzzy search is used, only one origin group name can be filled in.</li>
  * @method void setFilters(array $Filters) Set Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-
-<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
+<li>origin-group-id: filter by origin group ID. Fuzzy queries are not supported. The origin group ID format is: origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a;</li><li>origin-group-name: filter by origin group name. When fuzzy search is used, only one origin group name can be filled in.</li>
  */
 class DescribeOriginGroupRequest extends AbstractModel
 {
     /**
-     * @var string (Required) Site ID
+     * @var string Site ID. This parameter is required.
      */
     public $ZoneId;
 
     /**
-     * @var integer The paginated query offset. Default value: 0
+     * @var integer Paginated query offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Limit on paginated queries. Value range: 1-1000. Default value: 20.
+     * @var integer Paginated query limit. If not specified, the default value is 20. Value range: 1-1000.
      */
     public $Limit;
 
     /**
      * @var array Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-
-<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
+<li>origin-group-id: filter by origin group ID. Fuzzy queries are not supported. The origin group ID format is: origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a;</li><li>origin-group-name: filter by origin group name. When fuzzy search is used, only one origin group name can be filled in.</li>
      */
     public $Filters;
 
     /**
-     * @param string $ZoneId (Required) Site ID
-     * @param integer $Offset The paginated query offset. Default value: 0
-     * @param integer $Limit Limit on paginated queries. Value range: 1-1000. Default value: 20.
+     * @param string $ZoneId Site ID. This parameter is required.
+     * @param integer $Offset Paginated query offset. Default value: 0.
+     * @param integer $Limit Paginated query limit. If not specified, the default value is 20. Value range: 1-1000.
      * @param array $Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-
-<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
+<li>origin-group-id: filter by origin group ID. Fuzzy queries are not supported. The origin group ID format is: origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a;</li><li>origin-group-name: filter by origin group name. When fuzzy search is used, only one origin group name can be filled in.</li>
      */
     function __construct()
     {

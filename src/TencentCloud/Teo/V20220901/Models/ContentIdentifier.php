@@ -18,37 +18,35 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content identifier. This feature is only available to the allowlist.
+ * Content identifier. The feature is open only in the allowlist.
  *
- * @method string getContentId() Obtain Content identifier id.
- * @method void setContentId(string $ContentId) Set Content identifier id.
+ * @method string getContentId() Obtain Content identifier ID.
+ * @method void setContentId(string $ContentId) Set Content identifier ID.
  * @method string getDescription() Obtain Content identifier description.
  * @method void setDescription(string $Description) Set Content identifier description.
- * @method integer getReferenceCount() Obtain Count of citations by the rule engine.
- * @method void setReferenceCount(integer $ReferenceCount) Set Count of citations by the rule engine.
- * @method string getPlanId() Obtain Bound package id.
- * @method void setPlanId(string $PlanId) Set Bound package id.
- * @method array getTags() Obtain Bound tags.
- * @method void setTags(array $Tags) Set Bound tags.
- * @method string getStatus() Obtain Content identifier status. valid values:.
-<Li>`Active`: activated</li>.
-<Li>`Deleted`: deleted</li>.
- * @method void setStatus(string $Status) Set Content identifier status. valid values:.
-<Li>`Active`: activated</li>.
-<Li>`Deleted`: deleted</li>.
- * @method string getCreatedOn() Obtain Creation time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
- * @method void setCreatedOn(string $CreatedOn) Set Creation time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
- * @method string getModifiedOn() Obtain Latest update time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
- * @method void setModifiedOn(string $ModifiedOn) Set Latest update time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
- * @method string getDeletedOn() Obtain Deletion time, which is empty when the status is not `deleted`. the time format follows the iso 8601 standard and is represented in coordinated universal time (utc).
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setDeletedOn(string $DeletedOn) Set Deletion time, which is empty when the status is not `deleted`. the time format follows the iso 8601 standard and is represented in coordinated universal time (utc).
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method integer getReferenceCount() Obtain Number of times referenced by the rule engine.
+ * @method void setReferenceCount(integer $ReferenceCount) Set Number of times referenced by the rule engine.
+ * @method string getPlanId() Obtain Bound package ID.
+ * @method void setPlanId(string $PlanId) Set Bound package ID.
+ * @method array getTags() Obtain Bound tag.
+ * @method void setTags(array $Tags) Set Bound tag.
+ * @method string getStatus() Obtain Content identifier status. Valid values:
+<li> active: effective; </li>
+<li> deleted: Deleted.</li>
+ * @method void setStatus(string $Status) Set Content identifier status. Valid values:
+<li> active: effective; </li>
+<li> deleted: Deleted.</li>
+ * @method string getCreatedOn() Obtain Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+ * @method void setCreatedOn(string $CreatedOn) Set Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+ * @method string getModifiedOn() Obtain Latest update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+ * @method void setModifiedOn(string $ModifiedOn) Set Latest update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+ * @method string getDeletedOn() Obtain Deletion time. It is empty when the status is not "deleted". The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
+ * @method void setDeletedOn(string $DeletedOn) Set Deletion time. It is empty when the status is not "deleted". The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
  */
 class ContentIdentifier extends AbstractModel
 {
     /**
-     * @var string Content identifier id.
+     * @var string Content identifier ID.
      */
     public $ContentId;
 
@@ -58,56 +56,54 @@ class ContentIdentifier extends AbstractModel
     public $Description;
 
     /**
-     * @var integer Count of citations by the rule engine.
+     * @var integer Number of times referenced by the rule engine.
      */
     public $ReferenceCount;
 
     /**
-     * @var string Bound package id.
+     * @var string Bound package ID.
      */
     public $PlanId;
 
     /**
-     * @var array Bound tags.
+     * @var array Bound tag.
      */
     public $Tags;
 
     /**
-     * @var string Content identifier status. valid values:.
-<Li>`Active`: activated</li>.
-<Li>`Deleted`: deleted</li>.
+     * @var string Content identifier status. Valid values:
+<li> active: effective; </li>
+<li> deleted: Deleted.</li>
      */
     public $Status;
 
     /**
-     * @var string Creation time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
+     * @var string Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
     public $CreatedOn;
 
     /**
-     * @var string Latest update time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
+     * @var string Latest update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
     public $ModifiedOn;
 
     /**
-     * @var string Deletion time, which is empty when the status is not `deleted`. the time format follows the iso 8601 standard and is represented in coordinated universal time (utc).
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var string Deletion time. It is empty when the status is not "deleted". The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
      */
     public $DeletedOn;
 
     /**
-     * @param string $ContentId Content identifier id.
+     * @param string $ContentId Content identifier ID.
      * @param string $Description Content identifier description.
-     * @param integer $ReferenceCount Count of citations by the rule engine.
-     * @param string $PlanId Bound package id.
-     * @param array $Tags Bound tags.
-     * @param string $Status Content identifier status. valid values:.
-<Li>`Active`: activated</li>.
-<Li>`Deleted`: deleted</li>.
-     * @param string $CreatedOn Creation time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
-     * @param string $ModifiedOn Latest update time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
-     * @param string $DeletedOn Deletion time, which is empty when the status is not `deleted`. the time format follows the iso 8601 standard and is represented in coordinated universal time (utc).
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param integer $ReferenceCount Number of times referenced by the rule engine.
+     * @param string $PlanId Bound package ID.
+     * @param array $Tags Bound tag.
+     * @param string $Status Content identifier status. Valid values:
+<li> active: effective; </li>
+<li> deleted: Deleted.</li>
+     * @param string $CreatedOn Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+     * @param string $ModifiedOn Latest update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+     * @param string $DeletedOn Deletion time. It is empty when the status is not "deleted". The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
      */
     function __construct()
     {

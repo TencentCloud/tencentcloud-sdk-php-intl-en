@@ -18,52 +18,52 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Exclusive Anti-DDoS protection configuration.
+ * Exclusive DDoS protection configuration.
  *
- * @method string getProtectionOption() Obtain Specifies the protection scope of standalone DDoS. valid values:.
-<li>protect_all_domains: specifies exclusive Anti-DDoS protection for all domain names in the site. newly added domain names automatically enable exclusive Anti-DDoS protection. when this parameter is specified, DomainDDoSProtections will not be processed.</li>.
-<li>protect_specified_domains: only applicable to specified domains. specific scope can be set via DomainDDoSProtection parameter.</li>.
- * @method void setProtectionOption(string $ProtectionOption) Set Specifies the protection scope of standalone DDoS. valid values:.
-<li>protect_all_domains: specifies exclusive Anti-DDoS protection for all domain names in the site. newly added domain names automatically enable exclusive Anti-DDoS protection. when this parameter is specified, DomainDDoSProtections will not be processed.</li>.
-<li>protect_specified_domains: only applicable to specified domains. specific scope can be set via DomainDDoSProtection parameter.</li>.
- * @method array getDomainDDoSProtections() Obtain Anti-DDoS configuration of the domain. specifies the exclusive ddos protection settings for the domain in request parameters.
-<li>When ProtectionOption remains protect_specified_domains, the domain names not filled in keep their exclusive Anti-DDoS protection configuration unchanged, while explicitly specified domain names are updated according to the input parameters.</li>.
-<li>When ProtectionOption switches from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, disable exclusive DDoS protection for all domains under the site; if DomainDDoSProtections is not empty, disable or maintain exclusive DDoS protection for the domain names specified in the parameter, and disable exclusive DDoS protection for other unlisted domain names.</li>.
- * @method void setDomainDDoSProtections(array $DomainDDoSProtections) Set Anti-DDoS configuration of the domain. specifies the exclusive ddos protection settings for the domain in request parameters.
-<li>When ProtectionOption remains protect_specified_domains, the domain names not filled in keep their exclusive Anti-DDoS protection configuration unchanged, while explicitly specified domain names are updated according to the input parameters.</li>.
-<li>When ProtectionOption switches from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, disable exclusive DDoS protection for all domains under the site; if DomainDDoSProtections is not empty, disable or maintain exclusive DDoS protection for the domain names specified in the parameter, and disable exclusive DDoS protection for other unlisted domain names.</li>.
- * @method array getSharedCNAMEDDoSProtections() Obtain Specifies the exclusive DDoS protection configuration of a shared CNAME. used as an output parameter.
- * @method void setSharedCNAMEDDoSProtections(array $SharedCNAMEDDoSProtections) Set Specifies the exclusive DDoS protection configuration of a shared CNAME. used as an output parameter.
+ * @method string getProtectionOption() Obtain Specify the protection scope of standalone DDoS. Value:
+<li> protect_all_domains: exclusive DDoS protection takes effect for all domains in the site. Newly added domain names automatically enable exclusive DDoS protection. When the input parameter is protect_all_domains, the input parameter DomainDDoSProtections will not be processed;</li>
+<li> protect_specified_domains: only applicable to specified domains. The specific scope can be specified via the DomainDDoSProtection parameter.</li>
+ * @method void setProtectionOption(string $ProtectionOption) Set Specify the protection scope of standalone DDoS. Value:
+<li> protect_all_domains: exclusive DDoS protection takes effect for all domains in the site. Newly added domain names automatically enable exclusive DDoS protection. When the input parameter is protect_all_domains, the input parameter DomainDDoSProtections will not be processed;</li>
+<li> protect_specified_domains: only applicable to specified domains. The specific scope can be specified via the DomainDDoSProtection parameter.</li>
+ * @method array getDomainDDoSProtections() Obtain Exclusive DDoS protection configuration of the domain. In the input parameter scenario:
+<li> When ProtectionOption remains protect_specified_domains: domains not filled in keep their exclusive DDoS protection configuration unchanged, and explicitly specified domains are updated based on the input parameter;</li>
+<li> When ProtectionOption is switched from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, exclusive DDoS protection is disabled for all domain names under the site; if DomainDDoSProtections is not empty, exclusive DDoS protection is disabled or retained for the specified domain names in the parameter, and exclusive DDoS protection is disabled for the rest of the unlisted domain names.</li>
+ * @method void setDomainDDoSProtections(array $DomainDDoSProtections) Set Exclusive DDoS protection configuration of the domain. In the input parameter scenario:
+<li> When ProtectionOption remains protect_specified_domains: domains not filled in keep their exclusive DDoS protection configuration unchanged, and explicitly specified domains are updated based on the input parameter;</li>
+<li> When ProtectionOption is switched from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, exclusive DDoS protection is disabled for all domain names under the site; if DomainDDoSProtections is not empty, exclusive DDoS protection is disabled or retained for the specified domain names in the parameter, and exclusive DDoS protection is disabled for the rest of the unlisted domain names.</li>
+ * @method array getSharedCNAMEDDoSProtections() Obtain Configuration of exclusive DDoS protection with a shared CNAME. Used only as an output parameter.
+ * @method void setSharedCNAMEDDoSProtections(array $SharedCNAMEDDoSProtections) Set Configuration of exclusive DDoS protection with a shared CNAME. Used only as an output parameter.
  */
 class DDoSProtection extends AbstractModel
 {
     /**
-     * @var string Specifies the protection scope of standalone DDoS. valid values:.
-<li>protect_all_domains: specifies exclusive Anti-DDoS protection for all domain names in the site. newly added domain names automatically enable exclusive Anti-DDoS protection. when this parameter is specified, DomainDDoSProtections will not be processed.</li>.
-<li>protect_specified_domains: only applicable to specified domains. specific scope can be set via DomainDDoSProtection parameter.</li>.
+     * @var string Specify the protection scope of standalone DDoS. Value:
+<li> protect_all_domains: exclusive DDoS protection takes effect for all domains in the site. Newly added domain names automatically enable exclusive DDoS protection. When the input parameter is protect_all_domains, the input parameter DomainDDoSProtections will not be processed;</li>
+<li> protect_specified_domains: only applicable to specified domains. The specific scope can be specified via the DomainDDoSProtection parameter.</li>
      */
     public $ProtectionOption;
 
     /**
-     * @var array Anti-DDoS configuration of the domain. specifies the exclusive ddos protection settings for the domain in request parameters.
-<li>When ProtectionOption remains protect_specified_domains, the domain names not filled in keep their exclusive Anti-DDoS protection configuration unchanged, while explicitly specified domain names are updated according to the input parameters.</li>.
-<li>When ProtectionOption switches from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, disable exclusive DDoS protection for all domains under the site; if DomainDDoSProtections is not empty, disable or maintain exclusive DDoS protection for the domain names specified in the parameter, and disable exclusive DDoS protection for other unlisted domain names.</li>.
+     * @var array Exclusive DDoS protection configuration of the domain. In the input parameter scenario:
+<li> When ProtectionOption remains protect_specified_domains: domains not filled in keep their exclusive DDoS protection configuration unchanged, and explicitly specified domains are updated based on the input parameter;</li>
+<li> When ProtectionOption is switched from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, exclusive DDoS protection is disabled for all domain names under the site; if DomainDDoSProtections is not empty, exclusive DDoS protection is disabled or retained for the specified domain names in the parameter, and exclusive DDoS protection is disabled for the rest of the unlisted domain names.</li>
      */
     public $DomainDDoSProtections;
 
     /**
-     * @var array Specifies the exclusive DDoS protection configuration of a shared CNAME. used as an output parameter.
+     * @var array Configuration of exclusive DDoS protection with a shared CNAME. Used only as an output parameter.
      */
     public $SharedCNAMEDDoSProtections;
 
     /**
-     * @param string $ProtectionOption Specifies the protection scope of standalone DDoS. valid values:.
-<li>protect_all_domains: specifies exclusive Anti-DDoS protection for all domain names in the site. newly added domain names automatically enable exclusive Anti-DDoS protection. when this parameter is specified, DomainDDoSProtections will not be processed.</li>.
-<li>protect_specified_domains: only applicable to specified domains. specific scope can be set via DomainDDoSProtection parameter.</li>.
-     * @param array $DomainDDoSProtections Anti-DDoS configuration of the domain. specifies the exclusive ddos protection settings for the domain in request parameters.
-<li>When ProtectionOption remains protect_specified_domains, the domain names not filled in keep their exclusive Anti-DDoS protection configuration unchanged, while explicitly specified domain names are updated according to the input parameters.</li>.
-<li>When ProtectionOption switches from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, disable exclusive DDoS protection for all domains under the site; if DomainDDoSProtections is not empty, disable or maintain exclusive DDoS protection for the domain names specified in the parameter, and disable exclusive DDoS protection for other unlisted domain names.</li>.
-     * @param array $SharedCNAMEDDoSProtections Specifies the exclusive DDoS protection configuration of a shared CNAME. used as an output parameter.
+     * @param string $ProtectionOption Specify the protection scope of standalone DDoS. Value:
+<li> protect_all_domains: exclusive DDoS protection takes effect for all domains in the site. Newly added domain names automatically enable exclusive DDoS protection. When the input parameter is protect_all_domains, the input parameter DomainDDoSProtections will not be processed;</li>
+<li> protect_specified_domains: only applicable to specified domains. The specific scope can be specified via the DomainDDoSProtection parameter.</li>
+     * @param array $DomainDDoSProtections Exclusive DDoS protection configuration of the domain. In the input parameter scenario:
+<li> When ProtectionOption remains protect_specified_domains: domains not filled in keep their exclusive DDoS protection configuration unchanged, and explicitly specified domains are updated based on the input parameter;</li>
+<li> When ProtectionOption is switched from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, exclusive DDoS protection is disabled for all domain names under the site; if DomainDDoSProtections is not empty, exclusive DDoS protection is disabled or retained for the specified domain names in the parameter, and exclusive DDoS protection is disabled for the rest of the unlisted domain names.</li>
+     * @param array $SharedCNAMEDDoSProtections Configuration of exclusive DDoS protection with a shared CNAME. Used only as an output parameter.
      */
     function __construct()
     {

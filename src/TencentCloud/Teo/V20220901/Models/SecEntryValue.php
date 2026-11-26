@@ -18,52 +18,52 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The security data queried by metric
+ * Security data dimension value information
  *
- * @method string getMetric() Obtain The metric name.
- * @method void setMetric(string $Metric) Set The metric name.
- * @method array getDetail() Obtain The time-series data details.
- * @method void setDetail(array $Detail) Set The time-series data details.
- * @method integer getMax() Obtain The maximum value.
- * @method void setMax(integer $Max) Set The maximum value.
- * @method float getAvg() Obtain The average value.
- * @method void setAvg(float $Avg) Set The average value.
- * @method float getSum() Obtain Sum
- * @method void setSum(float $Sum) Set Sum
+ * @method string getMetric() Obtain Metric name.
+ * @method void setMetric(string $Metric) Set Metric name.
+ * @method array getDetail() Obtain Details of time series data.
+ * @method void setDetail(array $Detail) Set Details of time series data.
+ * @method integer getMax() Obtain Maximum value.
+ * @method void setMax(integer $Max) Set Maximum value.
+ * @method float getAvg() Obtain Mean.
+ * @method void setAvg(float $Avg) Set Mean.
+ * @method float getSum() Obtain Total data.
+ * @method void setSum(float $Sum) Set Total data.
  */
 class SecEntryValue extends AbstractModel
 {
     /**
-     * @var string The metric name.
+     * @var string Metric name.
      */
     public $Metric;
 
     /**
-     * @var array The time-series data details.
+     * @var array Details of time series data.
      */
     public $Detail;
 
     /**
-     * @var integer The maximum value.
+     * @var integer Maximum value.
      */
     public $Max;
 
     /**
-     * @var float The average value.
+     * @var float Mean.
      */
     public $Avg;
 
     /**
-     * @var float Sum
+     * @var float Total data.
      */
     public $Sum;
 
     /**
-     * @param string $Metric The metric name.
-     * @param array $Detail The time-series data details.
-     * @param integer $Max The maximum value.
-     * @param float $Avg The average value.
-     * @param float $Sum Sum
+     * @param string $Metric Metric name.
+     * @param array $Detail Details of time series data.
+     * @param integer $Max Maximum value.
+     * @param float $Avg Mean.
+     * @param float $Sum Total data.
      */
     function __construct()
     {

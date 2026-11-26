@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cross-MLC-border acceleration.
+ * Acceleration optimization configuration for the Chinese mainland.
  *
- * @method string getSwitch() Obtain Whether to enable Cross-MLC-border acceleration. Valid values: 
+ * @method string getSwitch() Obtain Whether acceleration optimization configuration is enabled for the Chinese mainland. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
- * @method void setSwitch(string $Switch) Set Whether to enable Cross-MLC-border acceleration. Valid values: 
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Whether acceleration optimization configuration is enabled for the Chinese mainland. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
  */
 class AccelerateMainland extends AbstractModel
 {
     /**
-     * @var string Whether to enable Cross-MLC-border acceleration. Valid values: 
+     * @var string Whether acceleration optimization configuration is enabled for the Chinese mainland. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable Cross-MLC-border acceleration. Valid values: 
+     * @param string $Switch Whether acceleration optimization configuration is enabled for the Chinese mainland. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
      */
     function __construct()
     {

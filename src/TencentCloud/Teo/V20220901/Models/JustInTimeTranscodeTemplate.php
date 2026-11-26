@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Just-In-Time transcoding template description.
+ * Details of the just in time transcoding template.
  *
  * @method string getTemplateId() Obtain Unique identifier of the instant transcoding template.
  * @method void setTemplateId(string $TemplateId) Set Unique identifier of the instant transcoding template.
- * @method string getTemplateName() Obtain Specifies the transcoding template name.
- * @method void setTemplateName(string $TemplateName) Set Specifies the transcoding template name.
+ * @method string getTemplateName() Obtain Transcoding template name.
+ * @method void setTemplateName(string $TemplateName) Set Transcoding template name.
  * @method string getComment() Obtain Template description information.
  * @method void setComment(string $Comment) Set Template description information.
- * @method string getType() Obtain Template type. valid values: <li>preset: system-preset template;</li> <li>custom: user-defined template.</li>.
- * @method void setType(string $Type) Set Template type. valid values: <li>preset: system-preset template;</li> <li>custom: user-defined template.</li>.
- * @method string getVideoStreamSwitch() Obtain Enable video stream. valid values: <li>on: turn on;</li> <li>off: turn off.</li>.
- * @method void setVideoStreamSwitch(string $VideoStreamSwitch) Set Enable video stream. valid values: <li>on: turn on;</li> <li>off: turn off.</li>.
- * @method string getAudioStreamSwitch() Obtain Enable audio stream. valid values: <li>on: enable;</li> <li>off: disable.</li>.
- * @method void setAudioStreamSwitch(string $AudioStreamSwitch) Set Enable audio stream. valid values: <li>on: enable;</li> <li>off: disable.</li>.
- * @method VideoTemplateInfo getVideoTemplate() Obtain Video stream configuration parameters. this field is valid only when VideoStreamSwitch is on.
- * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) Set Video stream configuration parameters. this field is valid only when VideoStreamSwitch is on.
- * @method AudioTemplateInfo getAudioTemplate() Obtain Audio stream configuration parameters. specifies this field is valid only when AudioStreamSwitch is on.
- * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) Set Audio stream configuration parameters. specifies this field is valid only when AudioStreamSwitch is on.
- * @method string getCreateTime() Obtain Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method void setCreateTime(string $CreateTime) Set Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method string getUpdateTime() Obtain Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
- * @method void setUpdateTime(string $UpdateTime) Set Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method string getType() Obtain Template type. Valid values: <li>preset: system-preset template.</li><li>custom: custom template.</li>
+ * @method void setType(string $Type) Set Template type. Valid values: <li>preset: system-preset template.</li><li>custom: custom template.</li>
+ * @method string getVideoStreamSwitch() Obtain Enable the video stream switch. Value: <li>on: enable;</li><li>off: disable.</li>
+ * @method void setVideoStreamSwitch(string $VideoStreamSwitch) Set Enable the video stream switch. Value: <li>on: enable;</li><li>off: disable.</li>
+ * @method string getAudioStreamSwitch() Obtain Enable the audio stream switch. Valid values: <li>on: enable;</li><li>off: disable.</li>
+ * @method void setAudioStreamSwitch(string $AudioStreamSwitch) Set Enable the audio stream switch. Valid values: <li>on: enable;</li><li>off: disable.</li>
+ * @method VideoTemplateInfo getVideoTemplate() Obtain Video stream configuration parameters. This field is valid only when VideoStreamSwitch is on.
+ * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) Set Video stream configuration parameters. This field is valid only when VideoStreamSwitch is on.
+ * @method AudioTemplateInfo getAudioTemplate() Obtain Audio stream configuration parameters. This field is valid only when AudioStreamSwitch is on.
+ * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) Set Audio stream configuration parameters. This field is valid only when AudioStreamSwitch is on.
+ * @method string getCreateTime() Obtain Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setCreateTime(string $CreateTime) Set Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getUpdateTime() Obtain Template last modified time, use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setUpdateTime(string $UpdateTime) Set Template last modified time, use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class JustInTimeTranscodeTemplate extends AbstractModel
 {
@@ -49,7 +49,7 @@ class JustInTimeTranscodeTemplate extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string Specifies the transcoding template name.
+     * @var string Transcoding template name.
      */
     public $TemplateName;
 
@@ -59,51 +59,51 @@ class JustInTimeTranscodeTemplate extends AbstractModel
     public $Comment;
 
     /**
-     * @var string Template type. valid values: <li>preset: system-preset template;</li> <li>custom: user-defined template.</li>.
+     * @var string Template type. Valid values: <li>preset: system-preset template.</li><li>custom: custom template.</li>
      */
     public $Type;
 
     /**
-     * @var string Enable video stream. valid values: <li>on: turn on;</li> <li>off: turn off.</li>.
+     * @var string Enable the video stream switch. Value: <li>on: enable;</li><li>off: disable.</li>
      */
     public $VideoStreamSwitch;
 
     /**
-     * @var string Enable audio stream. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * @var string Enable the audio stream switch. Valid values: <li>on: enable;</li><li>off: disable.</li>
      */
     public $AudioStreamSwitch;
 
     /**
-     * @var VideoTemplateInfo Video stream configuration parameters. this field is valid only when VideoStreamSwitch is on.
+     * @var VideoTemplateInfo Video stream configuration parameters. This field is valid only when VideoStreamSwitch is on.
      */
     public $VideoTemplate;
 
     /**
-     * @var AudioTemplateInfo Audio stream configuration parameters. specifies this field is valid only when AudioStreamSwitch is on.
+     * @var AudioTemplateInfo Audio stream configuration parameters. This field is valid only when AudioStreamSwitch is on.
      */
     public $AudioTemplate;
 
     /**
-     * @var string Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @var string Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
 
     /**
-     * @var string Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @var string Template last modified time, use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $UpdateTime;
 
     /**
      * @param string $TemplateId Unique identifier of the instant transcoding template.
-     * @param string $TemplateName Specifies the transcoding template name.
+     * @param string $TemplateName Transcoding template name.
      * @param string $Comment Template description information.
-     * @param string $Type Template type. valid values: <li>preset: system-preset template;</li> <li>custom: user-defined template.</li>.
-     * @param string $VideoStreamSwitch Enable video stream. valid values: <li>on: turn on;</li> <li>off: turn off.</li>.
-     * @param string $AudioStreamSwitch Enable audio stream. valid values: <li>on: enable;</li> <li>off: disable.</li>.
-     * @param VideoTemplateInfo $VideoTemplate Video stream configuration parameters. this field is valid only when VideoStreamSwitch is on.
-     * @param AudioTemplateInfo $AudioTemplate Audio stream configuration parameters. specifies this field is valid only when AudioStreamSwitch is on.
-     * @param string $CreateTime Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-     * @param string $UpdateTime Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param string $Type Template type. Valid values: <li>preset: system-preset template.</li><li>custom: custom template.</li>
+     * @param string $VideoStreamSwitch Enable the video stream switch. Value: <li>on: enable;</li><li>off: disable.</li>
+     * @param string $AudioStreamSwitch Enable the audio stream switch. Valid values: <li>on: enable;</li><li>off: disable.</li>
+     * @param VideoTemplateInfo $VideoTemplate Video stream configuration parameters. This field is valid only when VideoStreamSwitch is on.
+     * @param AudioTemplateInfo $AudioTemplate Audio stream configuration parameters. This field is valid only when AudioStreamSwitch is on.
+     * @param string $CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $UpdateTime Template last modified time, use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {

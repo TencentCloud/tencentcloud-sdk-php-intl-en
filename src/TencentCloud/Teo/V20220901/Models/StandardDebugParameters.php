@@ -18,48 +18,44 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Debug structure.
+ * Debug struct.
  *
- * @method string getSwitch() Obtain Whether to enable standard debugging. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method void setSwitch(string $Switch) Set Whether to enable standard debugging. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method array getAllowClientIPList() Obtain The client ip to allow. it can be an ipv4/ipv6 address or a cidr block. 0.0.0.0/0 means to allow all ipv4 clients for debugging; ::/0 means to allow all ipv6 clients for debugging; 127.0.0.1 is not allowed. <br>note: this field is required when `switch=on` and the number of entries should be 1-100. when `switch=off`, this field is not required and any value specified will not take effect.
- * @method void setAllowClientIPList(array $AllowClientIPList) Set The client ip to allow. it can be an ipv4/ipv6 address or a cidr block. 0.0.0.0/0 means to allow all ipv4 clients for debugging; ::/0 means to allow all ipv6 clients for debugging; 127.0.0.1 is not allowed. <br>note: this field is required when `switch=on` and the number of entries should be 1-100. when `switch=off`, this field is not required and any value specified will not take effect.
- * @method string getExpires() Obtain Debug feature expiration time. the feature will be disabled after the set time. <br>note: this field is required when `switch=on`. when `switch=off`, this field is not required and any value specified will not take effect.
- * @method void setExpires(string $Expires) Set Debug feature expiration time. the feature will be disabled after the set time. <br>note: this field is required when `switch=on`. when `switch=off`, this field is not required and any value specified will not take effect.
+ * @method string getSwitch() Obtain Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method array getAllowClientIPList() Obtain Allowed client source. Supports filling in IPv4 and IPv6 IP ranges. 0.0.0.0/0 indicates permission for all IPv4 clients to debug; ::/0 indicates permission for all IPv6 clients to debug; 127.0.0.1 cannot be filled in.<br>Note: When the Switch field is on, this field is required, and the number of writes is 1–100; when Switch is off, no need to specify this field, and if filled in, it does not take effect.
+ * @method void setAllowClientIPList(array $AllowClientIPList) Set Allowed client source. Supports filling in IPv4 and IPv6 IP ranges. 0.0.0.0/0 indicates permission for all IPv4 clients to debug; ::/0 indicates permission for all IPv6 clients to debug; 127.0.0.1 cannot be filled in.<br>Note: When the Switch field is on, this field is required, and the number of writes is 1–100; when Switch is off, no need to specify this field, and if filled in, it does not take effect.
+ * @method string getExpires() Obtain Expiration time of the Debug feature. If the set time is exceeded, the feature becomes invalid.<br>Note: When Switch is on, this field is required; when Switch is off, this field is not required. If filled in, it does not take effect.
+ * @method void setExpires(string $Expires) Set Expiration time of the Debug feature. If the set time is exceeded, the feature becomes invalid.<br>Note: When Switch is on, this field is required; when Switch is off, this field is not required. If filled in, it does not take effect.
  */
 class StandardDebugParameters extends AbstractModel
 {
     /**
-     * @var string Whether to enable standard debugging. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @var string Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var array The client ip to allow. it can be an ipv4/ipv6 address or a cidr block. 0.0.0.0/0 means to allow all ipv4 clients for debugging; ::/0 means to allow all ipv6 clients for debugging; 127.0.0.1 is not allowed. <br>note: this field is required when `switch=on` and the number of entries should be 1-100. when `switch=off`, this field is not required and any value specified will not take effect.
+     * @var array Allowed client source. Supports filling in IPv4 and IPv6 IP ranges. 0.0.0.0/0 indicates permission for all IPv4 clients to debug; ::/0 indicates permission for all IPv6 clients to debug; 127.0.0.1 cannot be filled in.<br>Note: When the Switch field is on, this field is required, and the number of writes is 1–100; when Switch is off, no need to specify this field, and if filled in, it does not take effect.
      */
     public $AllowClientIPList;
 
     /**
-     * @var string Debug feature expiration time. the feature will be disabled after the set time. <br>note: this field is required when `switch=on`. when `switch=off`, this field is not required and any value specified will not take effect.
+     * @var string Expiration time of the Debug feature. If the set time is exceeded, the feature becomes invalid.<br>Note: When Switch is on, this field is required; when Switch is off, this field is not required. If filled in, it does not take effect.
      */
     public $Expires;
 
     /**
-     * @param string $Switch Whether to enable standard debugging. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-     * @param array $AllowClientIPList The client ip to allow. it can be an ipv4/ipv6 address or a cidr block. 0.0.0.0/0 means to allow all ipv4 clients for debugging; ::/0 means to allow all ipv6 clients for debugging; 127.0.0.1 is not allowed. <br>note: this field is required when `switch=on` and the number of entries should be 1-100. when `switch=off`, this field is not required and any value specified will not take effect.
-     * @param string $Expires Debug feature expiration time. the feature will be disabled after the set time. <br>note: this field is required when `switch=on`. when `switch=off`, this field is not required and any value specified will not take effect.
+     * @param string $Switch Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param array $AllowClientIPList Allowed client source. Supports filling in IPv4 and IPv6 IP ranges. 0.0.0.0/0 indicates permission for all IPv4 clients to debug; ::/0 indicates permission for all IPv6 clients to debug; 127.0.0.1 cannot be filled in.<br>Note: When the Switch field is on, this field is required, and the number of writes is 1–100; when Switch is off, no need to specify this field, and if filled in, it does not take effect.
+     * @param string $Expires Expiration time of the Debug feature. If the set time is exceeded, the feature becomes invalid.<br>Note: When Switch is on, this field is required; when Switch is off, this field is not required. If filled in, it does not take effect.
      */
     function __construct()
     {

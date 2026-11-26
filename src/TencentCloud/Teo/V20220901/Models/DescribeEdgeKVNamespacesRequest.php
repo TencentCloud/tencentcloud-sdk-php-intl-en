@@ -28,28 +28,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set The limit of paginated query. Default value: 20. Maximum value: 1,000.
  * @method string getSortBy() Obtain Sorting basis. Valid values:
 <li>created-on: creation time;</li>
-<li>updated-on: Update time.</li>
-Default value is created-on.
+<li>updated-on: update time.</li>
+Default value: created-on.
  * @method void setSortBy(string $SortBy) Set Sorting basis. Valid values:
 <li>created-on: creation time;</li>
-<li>updated-on: Update time.</li>
-Default value is created-on.
+<li>updated-on: update time.</li>
+Default value: created-on.
  * @method string getSortOrder() Obtain List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: descending order.</li>
-Default value is desc.
+<li>desc: sort in descending order.</li>
+Default value: desc.
 
  * @method void setSortOrder(string $SortOrder) Set List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: descending order.</li>
-Default value is desc.
+<li>desc: sort in descending order.</li>
+Default value: desc.
 
- * @method array getFilters() Obtain Filter criteria. The maximum of Filters.Values is 20. If this parameter is left empty, return all KV namespaces under the site ID. Detailed filter criteria:
-<li>Namespace: Filter by KV namespace name. Fuzzy query is supported.</li>
+ * @method array getFilters() Obtain Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all KV namespaces under the site ID are returned. The detailed filter criteria are as follows:
+<li>namespace: filter by KV namespace name; fuzzy query is supported;</li>
 <li>remark: Filter by namespace description. Fuzzy query is supported.</li>
 
- * @method void setFilters(array $Filters) Set Filter criteria. The maximum of Filters.Values is 20. If this parameter is left empty, return all KV namespaces under the site ID. Detailed filter criteria:
-<li>Namespace: Filter by KV namespace name. Fuzzy query is supported.</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all KV namespaces under the site ID are returned. The detailed filter criteria are as follows:
+<li>namespace: filter by KV namespace name; fuzzy query is supported;</li>
 <li>remark: Filter by namespace description. Fuzzy query is supported.</li>
  */
 class DescribeEdgeKVNamespacesRequest extends AbstractModel
@@ -72,23 +72,23 @@ class DescribeEdgeKVNamespacesRequest extends AbstractModel
     /**
      * @var string Sorting basis. Valid values:
 <li>created-on: creation time;</li>
-<li>updated-on: Update time.</li>
-Default value is created-on.
+<li>updated-on: update time.</li>
+Default value: created-on.
      */
     public $SortBy;
 
     /**
      * @var string List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: descending order.</li>
-Default value is desc.
+<li>desc: sort in descending order.</li>
+Default value: desc.
 
      */
     public $SortOrder;
 
     /**
-     * @var array Filter criteria. The maximum of Filters.Values is 20. If this parameter is left empty, return all KV namespaces under the site ID. Detailed filter criteria:
-<li>Namespace: Filter by KV namespace name. Fuzzy query is supported.</li>
+     * @var array Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all KV namespaces under the site ID are returned. The detailed filter criteria are as follows:
+<li>namespace: filter by KV namespace name; fuzzy query is supported;</li>
 <li>remark: Filter by namespace description. Fuzzy query is supported.</li>
 
      */
@@ -100,15 +100,15 @@ Default value is desc.
      * @param integer $Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
      * @param string $SortBy Sorting basis. Valid values:
 <li>created-on: creation time;</li>
-<li>updated-on: Update time.</li>
-Default value is created-on.
+<li>updated-on: update time.</li>
+Default value: created-on.
      * @param string $SortOrder List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: descending order.</li>
-Default value is desc.
+<li>desc: sort in descending order.</li>
+Default value: desc.
 
-     * @param array $Filters Filter criteria. The maximum of Filters.Values is 20. If this parameter is left empty, return all KV namespaces under the site ID. Detailed filter criteria:
-<li>Namespace: Filter by KV namespace name. Fuzzy query is supported.</li>
+     * @param array $Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all KV namespaces under the site ID are returned. The detailed filter criteria are as follows:
+<li>namespace: filter by KV namespace name; fuzzy query is supported;</li>
 <li>remark: Filter by namespace description. Fuzzy query is supported.</li>
      */
     function __construct()

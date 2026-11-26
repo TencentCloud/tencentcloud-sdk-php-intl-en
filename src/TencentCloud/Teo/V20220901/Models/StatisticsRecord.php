@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rum\V20210622\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeOfflineLogRecords request structure.
+ * Statistics result row.
  *
- * @method string getProjectKey() Obtain Unique project key for reporting
- * @method void setProjectKey(string $ProjectKey) Set Unique project key for reporting
+ * @method array getRecord() Obtain <p>List single row record.</p>
+ * @method void setRecord(array $Record) Set <p>List single row record.</p>
  */
-class DescribeOfflineLogRecordsRequest extends AbstractModel
+class StatisticsRecord extends AbstractModel
 {
     /**
-     * @var string Unique project key for reporting
+     * @var array <p>List single row record.</p>
      */
-    public $ProjectKey;
+    public $Record;
 
     /**
-     * @param string $ProjectKey Unique project key for reporting
+     * @param array $Record <p>List single row record.</p>
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeOfflineLogRecordsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectKey",$param) and $param["ProjectKey"] !== null) {
-            $this->ProjectKey = $param["ProjectKey"];
+        if (array_key_exists("Record",$param) and $param["Record"] !== null) {
+            $this->Record = $param["Record"];
         }
     }
 }

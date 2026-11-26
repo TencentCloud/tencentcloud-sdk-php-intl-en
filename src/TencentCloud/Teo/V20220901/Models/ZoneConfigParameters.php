@@ -18,32 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Site configuration information.
+ * Site configuration-related information.
  *
- * @method string getZoneName() Obtain The site name.
- * @method void setZoneName(string $ZoneName) Set The site name.
- * @method ZoneConfig getZoneConfig() Obtain Site configuration information.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setZoneConfig(ZoneConfig $ZoneConfig) Set Site configuration information.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method string getZoneName() Obtain Site name.
+ * @method void setZoneName(string $ZoneName) Set Site name.
+ * @method ZoneConfig getZoneConfig() Obtain Site configuration message.
+ * @method void setZoneConfig(ZoneConfig $ZoneConfig) Set Site configuration message.
  */
 class ZoneConfigParameters extends AbstractModel
 {
     /**
-     * @var string The site name.
+     * @var string Site name.
      */
     public $ZoneName;
 
     /**
-     * @var ZoneConfig Site configuration information.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var ZoneConfig Site configuration message.
      */
     public $ZoneConfig;
 
     /**
-     * @param string $ZoneName The site name.
-     * @param ZoneConfig $ZoneConfig Site configuration information.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param string $ZoneName Site name.
+     * @param ZoneConfig $ZoneConfig Site configuration message.
      */
     function __construct()
     {

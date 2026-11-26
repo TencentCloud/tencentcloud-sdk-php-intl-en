@@ -18,31 +18,27 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * [Vary feature](https://intl.cloud.tencent.com/document/product/1552/89301?from_cn_redirect=1) configuration parameter.
+ * [Vary feature](https://www.tencentcloud.com/document/product/1552/89301?from_cn_redirect=1) configuration parameters.
  *
- * @method string getSwitch() Obtain Vary feature configuration switch. valid values:.
+ * @method string getSwitch() Obtain Vary feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
- * @method void setSwitch(string $Switch) Set Vary feature configuration switch. valid values:.
+ * @method void setSwitch(string $Switch) Set Vary feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
  */
 class VaryParameters extends AbstractModel
 {
     /**
-     * @var string Vary feature configuration switch. valid values:.
+     * @var string Vary feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Vary feature configuration switch. valid values:.
+     * @param string $Switch Vary feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
      */
     function __construct()

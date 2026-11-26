@@ -18,32 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Sub-rule
+ * Sub-rule.
  *
- * @method array getBranches() Obtain Sub-Rule branch.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setBranches(array $Branches) Set Sub-Rule branch.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method array getDescription() Obtain Rule comments.
- * @method void setDescription(array $Description) Set Rule comments.
+ * @method array getBranches() Obtain Sub-rule branch
+ * @method void setBranches(array $Branches) Set Sub-rule branch
+ * @method array getDescription() Obtain Rule note.
+ * @method void setDescription(array $Description) Set Rule note.
  */
 class RuleEngineSubRule extends AbstractModel
 {
     /**
-     * @var array Sub-Rule branch.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var array Sub-rule branch
      */
     public $Branches;
 
     /**
-     * @var array Rule comments.
+     * @var array Rule note.
      */
     public $Description;
 
     /**
-     * @param array $Branches Sub-Rule branch.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param array $Description Rule comments.
+     * @param array $Branches Sub-rule branch
+     * @param array $Description Rule note.
      */
     function __construct()
     {

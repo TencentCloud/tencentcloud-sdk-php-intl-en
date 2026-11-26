@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Common action of the rule engine
+ * Action of the normal type for the rule engine
  *
- * @method string getAction() Obtain Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
- * @method void setAction(string $Action) Set Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
- * @method array getParameters() Obtain Parameter
- * @method void setParameters(array $Parameters) Set Parameter
+ * @method string getAction() Obtain Feature name. For feature name completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
+ * @method void setAction(string $Action) Set Feature name. For feature name completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
+ * @method array getParameters() Obtain Parameter.
+ * @method void setParameters(array $Parameters) Set Parameter.
  */
 class NormalAction extends AbstractModel
 {
     /**
-     * @var string Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
+     * @var string Feature name. For feature name completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
      */
     public $Action;
 
     /**
-     * @var array Parameter
+     * @var array Parameter.
      */
     public $Parameters;
 
     /**
-     * @param string $Action Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
-     * @param array $Parameters Parameter
+     * @param string $Action Feature name. For feature name completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
+     * @param array $Parameters Parameter.
      */
     function __construct()
     {

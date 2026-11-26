@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Policy template information.
  *
- * @method string getZoneId() Obtain The zone ID to which the policy template belongs.
- * @method void setZoneId(string $ZoneId) Set The zone ID to which the policy template belongs.
+ * @method string getZoneId() Obtain Site ID of the policy template.
+ * @method void setZoneId(string $ZoneId) Set Site ID of the policy template.
  * @method string getTemplateId() Obtain Policy template ID.
  * @method void setTemplateId(string $TemplateId) Set Policy template ID.
- * @method string getTemplateName() Obtain The name of the policy template.
- * @method void setTemplateName(string $TemplateName) Set The name of the policy template.
- * @method array getBindDomains() Obtain Information about domains bound to the policy template.
- * @method void setBindDomains(array $BindDomains) Set Information about domains bound to the policy template.
+ * @method string getTemplateName() Obtain Policy template name.
+ * @method void setTemplateName(string $TemplateName) Set Policy template name.
+ * @method array getBindDomains() Obtain Domain name info bound to the policy template.
+ * @method void setBindDomains(array $BindDomains) Set Domain name info bound to the policy template.
  */
 class SecurityPolicyTemplateInfo extends AbstractModel
 {
     /**
-     * @var string The zone ID to which the policy template belongs.
+     * @var string Site ID of the policy template.
      */
     public $ZoneId;
 
@@ -42,20 +42,20 @@ class SecurityPolicyTemplateInfo extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string The name of the policy template.
+     * @var string Policy template name.
      */
     public $TemplateName;
 
     /**
-     * @var array Information about domains bound to the policy template.
+     * @var array Domain name info bound to the policy template.
      */
     public $BindDomains;
 
     /**
-     * @param string $ZoneId The zone ID to which the policy template belongs.
+     * @param string $ZoneId Site ID of the policy template.
      * @param string $TemplateId Policy template ID.
-     * @param string $TemplateName The name of the policy template.
-     * @param array $BindDomains Information about domains bound to the policy template.
+     * @param string $TemplateName Policy template name.
+     * @param array $BindDomains Domain name info bound to the policy template.
      */
     function __construct()
     {

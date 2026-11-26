@@ -18,196 +18,196 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom bot rules
+ * Bot custom rule
  *
- * @method string getRuleName() Obtain 
- * @method void setRuleName(string $RuleName) Set 
- * @method string getAction() Obtain The action. Values:
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Handle the request randomly by the weight</li>
-<li>`silence`: Keep the connection but do not response to the client</li>
-<li>`shortdelay`: Add a short latency period</li>
-<li>`longdelay`: Add a long latency period</li>
- * @method void setAction(string $Action) Set The action. Values:
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Handle the request randomly by the weight</li>
-<li>`silence`: Keep the connection but do not response to the client</li>
-<li>`shortdelay`: Add a short latency period</li>
-<li>`longdelay`: Add a long latency period</li>
- * @method string getRuleStatus() Obtain The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
- * @method void setRuleStatus(string $RuleStatus) Set The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
- * @method array getAclConditions() Obtain Details of the rule.
- * @method void setAclConditions(array $AclConditions) Set Details of the rule.
- * @method integer getRulePriority() Obtain The rule weight. Value range: 0-100.
- * @method void setRulePriority(integer $RulePriority) Set The rule weight. Value range: 0-100.
- * @method integer getRuleID() Obtain Rule ID, which is only used as an output parameter.
- * @method void setRuleID(integer $RuleID) Set Rule ID, which is only used as an output parameter.
- * @method array getExtendActions() Obtain [Currently unavailable] Specify the random action and percentage.
- * @method void setExtendActions(array $ExtendActions) Set [Currently unavailable] Specify the random action and percentage.
- * @method array getFreqFields() Obtain The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
- * @method void setFreqFields(array $FreqFields) Set The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
- * @method string getUpdateTime() Obtain The update time, which is only used as an output parameter.
- * @method void setUpdateTime(string $UpdateTime) Set The update time, which is only used as an output parameter.
- * @method array getFreqScope() Obtain Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
- * @method void setFreqScope(array $FreqScope) Set Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
- * @method string getName() Obtain Name of the custom return page. It's required when `Action=page`.
- * @method void setName(string $Name) Set Name of the custom return page. It's required when `Action=page`.
- * @method string getCustomResponseId() Obtain ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
- * @method void setCustomResponseId(string $CustomResponseId) Set ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
- * @method integer getResponseCode() Obtain The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
- * @method void setResponseCode(integer $ResponseCode) Set The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
- * @method string getRedirectUrl() Obtain The redirection URL. It's required when `Action=redirect`.
- * @method void setRedirectUrl(string $RedirectUrl) Set The redirection URL. It's required when `Action=redirect`.
+ * @method string getRuleName() Obtain Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
+ * @method void setRuleName(string $RuleName) Set Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
+ * @method string getAction() Obtain Disposal actions. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>trans: pass;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: Random disposal;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
+ * @method void setAction(string $Action) Set Disposal actions. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>trans: pass;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: Random disposal;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
+ * @method string getRuleStatus() Obtain Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Not effective.</li>Default on takes effect.
+ * @method void setRuleStatus(string $RuleStatus) Set Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Not effective.</li>Default on takes effect.
+ * @method array getAclConditions() Obtain Rule details.
+ * @method void setAclConditions(array $AclConditions) Set Rule details.
+ * @method integer getRulePriority() Obtain Rule weight. Value range: 0-100.
+ * @method void setRulePriority(integer $RulePriority) Set Rule weight. Value range: 0-100.
+ * @method integer getRuleID() Obtain Rule Id. Output only.
+ * @method void setRuleID(integer $RuleID) Set Rule Id. Output only.
+ * @method array getExtendActions() Obtain Disposal method and proportion of random disposal. Optional for non-random disposal. Not currently supported.
+ * @method void setExtendActions(array $ExtendActions) Set Disposal method and proportion of random disposal. Optional for non-random disposal. Not currently supported.
+ * @method array getFreqFields() Obtain Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
+ * @method void setFreqFields(array $FreqFields) Set Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
+ * @method string getUpdateTime() Obtain Update time. For output usage only.
+ * @method void setUpdateTime(string $UpdateTime) Set Update time. For output usage only.
+ * @method array getFreqScope() Obtain Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
+ * @method void setFreqScope(array $FreqScope) Set Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
+ * @method string getName() Obtain Name of the custom return page. Required when Action is page, and cannot be empty.
+ * @method void setName(string $Name) Set Name of the custom return page. Required when Action is page, and cannot be empty.
+ * @method string getCustomResponseId() Obtain Custom response Id, which can be obtained through the customized error page list interface. The default value is `default`, which uses the system default page. Required and cannot be empty when Action is `page`.	
+ * @method void setCustomResponseId(string $CustomResponseId) Set Custom response Id, which can be obtained through the customized error page list interface. The default value is `default`, which uses the system default page. Required and cannot be empty when Action is `page`.	
+ * @method integer getResponseCode() Obtain Custom response code for the return to page. Required when Action is page, and cannot be empty. Value range: 100–600. 3xx response codes are not supported. Default value: 567.
+ * @method void setResponseCode(integer $ResponseCode) Set Custom response code for the return to page. Required when Action is page, and cannot be empty. Value range: 100–600. 3xx response codes are not supported. Default value: 567.
+ * @method string getRedirectUrl() Obtain Address for redirection. Required when Action is `redirect` and cannot be empty.
+ * @method void setRedirectUrl(string $RedirectUrl) Set Address for redirection. Required when Action is `redirect` and cannot be empty.
  */
 class BotUserRule extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
      */
     public $RuleName;
 
     /**
-     * @var string The action. Values:
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Handle the request randomly by the weight</li>
-<li>`silence`: Keep the connection but do not response to the client</li>
-<li>`shortdelay`: Add a short latency period</li>
-<li>`longdelay`: Add a long latency period</li>
+     * @var string Disposal actions. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>trans: pass;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: Random disposal;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
      */
     public $Action;
 
     /**
-     * @var string The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
+     * @var string Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Not effective.</li>Default on takes effect.
      */
     public $RuleStatus;
 
     /**
-     * @var array Details of the rule.
+     * @var array Rule details.
      */
     public $AclConditions;
 
     /**
-     * @var integer The rule weight. Value range: 0-100.
+     * @var integer Rule weight. Value range: 0-100.
      */
     public $RulePriority;
 
     /**
-     * @var integer Rule ID, which is only used as an output parameter.
+     * @var integer Rule Id. Output only.
      */
     public $RuleID;
 
     /**
-     * @var array [Currently unavailable] Specify the random action and percentage.
+     * @var array Disposal method and proportion of random disposal. Optional for non-random disposal. Not currently supported.
      */
     public $ExtendActions;
 
     /**
-     * @var array The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
+     * @var array Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
      */
     public $FreqFields;
 
     /**
-     * @var string The update time, which is only used as an output parameter.
+     * @var string Update time. For output usage only.
      */
     public $UpdateTime;
 
     /**
-     * @var array Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
+     * @var array Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
      */
     public $FreqScope;
 
     /**
-     * @var string Name of the custom return page. It's required when `Action=page`.
+     * @var string Name of the custom return page. Required when Action is page, and cannot be empty.
      */
     public $Name;
 
     /**
-     * @var string ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+     * @var string Custom response Id, which can be obtained through the customized error page list interface. The default value is `default`, which uses the system default page. Required and cannot be empty when Action is `page`.	
      */
     public $CustomResponseId;
 
     /**
-     * @var integer The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+     * @var integer Custom response code for the return to page. Required when Action is page, and cannot be empty. Value range: 100–600. 3xx response codes are not supported. Default value: 567.
      */
     public $ResponseCode;
 
     /**
-     * @var string The redirection URL. It's required when `Action=redirect`.
+     * @var string Address for redirection. Required when Action is `redirect` and cannot be empty.
      */
     public $RedirectUrl;
 
     /**
-     * @param string $RuleName 
-     * @param string $Action The action. Values:
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Handle the request randomly by the weight</li>
-<li>`silence`: Keep the connection but do not response to the client</li>
-<li>`shortdelay`: Add a short latency period</li>
-<li>`longdelay`: Add a long latency period</li>
-     * @param string $RuleStatus The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
-     * @param array $AclConditions Details of the rule.
-     * @param integer $RulePriority The rule weight. Value range: 0-100.
-     * @param integer $RuleID Rule ID, which is only used as an output parameter.
-     * @param array $ExtendActions [Currently unavailable] Specify the random action and percentage.
-     * @param array $FreqFields The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
-     * @param string $UpdateTime The update time, which is only used as an output parameter.
-     * @param array $FreqScope Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
-     * @param string $Name Name of the custom return page. It's required when `Action=page`.
-     * @param string $CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
-     * @param integer $ResponseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
-     * @param string $RedirectUrl The redirection URL. It's required when `Action=redirect`.
+     * @param string $RuleName Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
+     * @param string $Action Disposal actions. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>trans: pass;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: Random disposal;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
+     * @param string $RuleStatus Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Not effective.</li>Default on takes effect.
+     * @param array $AclConditions Rule details.
+     * @param integer $RulePriority Rule weight. Value range: 0-100.
+     * @param integer $RuleID Rule Id. Output only.
+     * @param array $ExtendActions Disposal method and proportion of random disposal. Optional for non-random disposal. Not currently supported.
+     * @param array $FreqFields Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
+     * @param string $UpdateTime Update time. For output usage only.
+     * @param array $FreqScope Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
+     * @param string $Name Name of the custom return page. Required when Action is page, and cannot be empty.
+     * @param string $CustomResponseId Custom response Id, which can be obtained through the customized error page list interface. The default value is `default`, which uses the system default page. Required and cannot be empty when Action is `page`.	
+     * @param integer $ResponseCode Custom response code for the return to page. Required when Action is page, and cannot be empty. Value range: 100–600. 3xx response codes are not supported. Default value: 567.
+     * @param string $RedirectUrl Address for redirection. Required when Action is `redirect` and cannot be empty.
      */
     function __construct()
     {

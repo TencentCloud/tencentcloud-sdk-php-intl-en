@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Background image information.
  *
- * @method string getCOSFileId() Obtain ID of the COS file.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCOSFileId(string $COSFileId) Set ID of the COS file.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getURL() Obtain Download URL.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setURL(string $URL) Set Download URL.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCOSFileId() Obtain ID of the COS file.
+ * @method void setCOSFileId(string $COSFileId) Set ID of the COS file.
+ * @method string getURL() Obtain Download URL.
+ * @method void setURL(string $URL) Set Download URL.
  * @method string getName() Obtain Name
-
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Name
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) Set Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCreateTime() Obtain Creation Time
+ * @method void setCreateTime(string $CreateTime) Set Creation Time
  */
 class BackgroundImage extends AbstractModel
 {
     /**
-     * @var string ID of the COS file.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string ID of the COS file.
      */
     public $COSFileId;
 
     /**
-     * @var string Download URL.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Download URL.
      */
     public $URL;
 
     /**
      * @var string Name
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
-     * @var string Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Creation Time
      */
     public $CreateTime;
 
     /**
-     * @param string $COSFileId ID of the COS file.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $URL Download URL.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $COSFileId ID of the COS file.
+     * @param string $URL Download URL.
      * @param string $Name Name
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CreateTime Creation Time
      */
     function __construct()
     {

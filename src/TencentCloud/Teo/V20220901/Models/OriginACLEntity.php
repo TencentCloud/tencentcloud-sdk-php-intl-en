@@ -18,60 +18,60 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instances that require configuration origin ACLs.
+ * Instances that need to be configured for origin-pull from specific origin IP ranges.
  *
  * @method string getType() Obtain Instance type. Valid values:
--l7: L7 acceleration domain;
--l4: L4 proxy instance.
+- l7: layer-7 accelerated domain;
+- l4: layer-4 proxy instance.
  * @method void setType(string $Type) Set Instance type. Valid values:
--l7: L7 acceleration domain;
--l4: L4 proxy instance.
- * @method array getInstances() Obtain Instance detail. Valid values:
--When Type = l7, please enter the L7 acceleration domain.
--When Type = l4, please enter the L4 proxy instance ID.
- * @method void setInstances(array $Instances) Set Instance detail. Valid values:
--When Type = l7, please enter the L7 acceleration domain.
--When Type = l4, please enter the L4 proxy instance ID.
- * @method string getOperationMode() Obtain Operation mode. Valid values:.
-- enable: enabled L7/L4 instances.
-- disable: disable L7/L4 instances.
- * @method void setOperationMode(string $OperationMode) Set Operation mode. Valid values:.
-- enable: enabled L7/L4 instances.
-- disable: disable L7/L4 instances.
+- l7: layer-7 accelerated domain;
+- l4: layer-4 proxy instance.
+ * @method array getInstances() Obtain Instance details. Valid values:
+- When Type = l7, enter the layer-7 accelerated domain;
+- When Type = l4, enter the layer-4 proxy instance ID.
+ * @method void setInstances(array $Instances) Set Instance details. Valid values:
+- When Type = l7, enter the layer-7 accelerated domain;
+- When Type = l4, enter the layer-4 proxy instance ID.
+ * @method string getOperationMode() Obtain Operation mode. Valid values:
+<li>enable: enable;</li>
+<li>disable: disable.</li>
+ * @method void setOperationMode(string $OperationMode) Set Operation mode. Valid values:
+<li>enable: enable;</li>
+<li>disable: disable.</li>
  */
 class OriginACLEntity extends AbstractModel
 {
     /**
      * @var string Instance type. Valid values:
--l7: L7 acceleration domain;
--l4: L4 proxy instance.
+- l7: layer-7 accelerated domain;
+- l4: layer-4 proxy instance.
      */
     public $Type;
 
     /**
-     * @var array Instance detail. Valid values:
--When Type = l7, please enter the L7 acceleration domain.
--When Type = l4, please enter the L4 proxy instance ID.
+     * @var array Instance details. Valid values:
+- When Type = l7, enter the layer-7 accelerated domain;
+- When Type = l4, enter the layer-4 proxy instance ID.
      */
     public $Instances;
 
     /**
-     * @var string Operation mode. Valid values:.
-- enable: enabled L7/L4 instances.
-- disable: disable L7/L4 instances.
+     * @var string Operation mode. Valid values:
+<li>enable: enable;</li>
+<li>disable: disable.</li>
      */
     public $OperationMode;
 
     /**
      * @param string $Type Instance type. Valid values:
--l7: L7 acceleration domain;
--l4: L4 proxy instance.
-     * @param array $Instances Instance detail. Valid values:
--When Type = l7, please enter the L7 acceleration domain.
--When Type = l4, please enter the L4 proxy instance ID.
-     * @param string $OperationMode Operation mode. Valid values:.
-- enable: enabled L7/L4 instances.
-- disable: disable L7/L4 instances.
+- l7: layer-7 accelerated domain;
+- l4: layer-4 proxy instance.
+     * @param array $Instances Instance details. Valid values:
+- When Type = l7, enter the layer-7 accelerated domain;
+- When Type = l4, enter the layer-4 proxy instance ID.
+     * @param string $OperationMode Operation mode. Valid values:
+<li>enable: enable;</li>
+<li>disable: disable.</li>
      */
     function __construct()
     {

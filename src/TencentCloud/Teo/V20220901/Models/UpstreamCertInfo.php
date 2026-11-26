@@ -18,12 +18,12 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Used to enable/disable origin-pull mutual authentication and origin certificate verification. the certificate for origin-pull mutual authentication is carried by EO during origin-pull, and the origin server can optionally validate this certificate to ensure the request originates from a trusted EO node. when enabled, the certificate configuration is used for EO nodes to verify whether the origin certificate is trustworthy.
+ * Used to enable or disable origin-pull mutual authentication and origin certificate verification respectively. The certificate for origin-pull mutual authentication is carried when EO pulls from the origin. The origin can choose to verify this certificate to ensure the request originates from a trusted EO node. When origin certificate verification is enabled, the certificate configuration is used for EO nodes to validate whether the origin certificate is trustworthy.
  *
  * @method MutualTLS getUpstreamMutualTLS() Obtain In the origin-pull mutual authentication scenario, this field represents the certificate (including the public and private keys) carried during EO node origin-pull, which is deployed in the EO node for the origin server to authenticate the EO node. When used as an input parameter, it is left blank to indicate retaining the original configuration.
  * @method void setUpstreamMutualTLS(MutualTLS $UpstreamMutualTLS) Set In the origin-pull mutual authentication scenario, this field represents the certificate (including the public and private keys) carried during EO node origin-pull, which is deployed in the EO node for the origin server to authenticate the EO node. When used as an input parameter, it is left blank to indicate retaining the original configuration.
- * @method OriginCertificateVerify getUpstreamCertificateVerify() Obtain In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
- * @method void setUpstreamCertificateVerify(OriginCertificateVerify $UpstreamCertificateVerify) Set In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
+ * @method OriginCertificateVerify getUpstreamCertificateVerify() Obtain In the origin certificate verification scenario, this field is the CA certificate used by the EO node to verify the origin. It is deployed in the EO node and used for the EO node to authenticate the server certificate. As an input parameter, leave it blank to indicate retaining the original configuration.
+ * @method void setUpstreamCertificateVerify(OriginCertificateVerify $UpstreamCertificateVerify) Set In the origin certificate verification scenario, this field is the CA certificate used by the EO node to verify the origin. It is deployed in the EO node and used for the EO node to authenticate the server certificate. As an input parameter, leave it blank to indicate retaining the original configuration.
  */
 class UpstreamCertInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class UpstreamCertInfo extends AbstractModel
     public $UpstreamMutualTLS;
 
     /**
-     * @var OriginCertificateVerify In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
+     * @var OriginCertificateVerify In the origin certificate verification scenario, this field is the CA certificate used by the EO node to verify the origin. It is deployed in the EO node and used for the EO node to authenticate the server certificate. As an input parameter, leave it blank to indicate retaining the original configuration.
      */
     public $UpstreamCertificateVerify;
 
     /**
      * @param MutualTLS $UpstreamMutualTLS In the origin-pull mutual authentication scenario, this field represents the certificate (including the public and private keys) carried during EO node origin-pull, which is deployed in the EO node for the origin server to authenticate the EO node. When used as an input parameter, it is left blank to indicate retaining the original configuration.
-     * @param OriginCertificateVerify $UpstreamCertificateVerify In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
+     * @param OriginCertificateVerify $UpstreamCertificateVerify In the origin certificate verification scenario, this field is the CA certificate used by the EO node to verify the origin. It is deployed in the EO node and used for the EO node to authenticate the server certificate. As an input parameter, leave it blank to indicate retaining the original configuration.
      */
     function __construct()
     {

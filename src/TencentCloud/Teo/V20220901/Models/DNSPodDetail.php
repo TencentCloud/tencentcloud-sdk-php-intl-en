@@ -18,30 +18,30 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DNSPod managed type site parameter description.
+ * Details of the DNSPod managed type site parameters.
  *
- * @method integer getIsFake() Obtain Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+ * @method integer getIsFake() Obtain Whether it is a fake site, with values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
- * @method void setIsFake(integer $IsFake) Set Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+ * @method void setIsFake(integer $IsFake) Set Whether it is a fake site, with values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
  */
 class DNSPodDetail extends AbstractModel
 {
     /**
-     * @var integer Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * @var integer Whether it is a fake site, with values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
      */
     public $IsFake;
 
     /**
-     * @param integer $IsFake Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * @param integer $IsFake Whether it is a fake site, with values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
      */
     function __construct()
     {

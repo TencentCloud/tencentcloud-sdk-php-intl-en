@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Stores the scheduled expiration time and corresponding IP.
+ * Store the scheduled expiration time and corresponding IP.
  *
- * @method string getExpireTime() Obtain Scheduled expiration time, following the ISO 8601 standard date and time format, such as "2022-01-01T00:00:00+08:00".
- * @method void setExpireTime(string $ExpireTime) Set Scheduled expiration time, following the ISO 8601 standard date and time format, such as "2022-01-01T00:00:00+08:00".
- * @method array getIPList() Obtain IP list. supports ip and ip range.
- * @method void setIPList(array $IPList) Set IP list. supports ip and ip range.
+ * @method string getExpireTime() Obtain Scheduled expiration time, following the ISO 8601 date and time format. For example, "2022-01-01T00:00:00+08:00".
+ * @method void setExpireTime(string $ExpireTime) Set Scheduled expiration time, following the ISO 8601 date and time format. For example, "2022-01-01T00:00:00+08:00".
+ * @method array getIPList() Obtain IP list. Only IPs and IP ranges are supported.
+ * @method void setIPList(array $IPList) Set IP list. Only IPs and IP ranges are supported.
  */
 class IPExpireInfo extends AbstractModel
 {
     /**
-     * @var string Scheduled expiration time, following the ISO 8601 standard date and time format, such as "2022-01-01T00:00:00+08:00".
+     * @var string Scheduled expiration time, following the ISO 8601 date and time format. For example, "2022-01-01T00:00:00+08:00".
      */
     public $ExpireTime;
 
     /**
-     * @var array IP list. supports ip and ip range.
+     * @var array IP list. Only IPs and IP ranges are supported.
      */
     public $IPList;
 
     /**
-     * @param string $ExpireTime Scheduled expiration time, following the ISO 8601 standard date and time format, such as "2022-01-01T00:00:00+08:00".
-     * @param array $IPList IP list. supports ip and ip range.
+     * @param string $ExpireTime Scheduled expiration time, following the ISO 8601 date and time format. For example, "2022-01-01T00:00:00+08:00".
+     * @param array $IPList IP list. Only IPs and IP ranges are supported.
      */
     function __construct()
     {

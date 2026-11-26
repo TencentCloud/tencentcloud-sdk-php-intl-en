@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP information of the custom name server
+ * Custom name server IP information
  *
- * @method string getName() Obtain Custom name of the name server
- * @method void setName(string $Name) Set Custom name of the name server
- * @method string getIPv4() Obtain IPv4 address of the custom name server
- * @method void setIPv4(string $IPv4) Set IPv4 address of the custom name server
+ * @method string getName() Obtain Custom name server name.
+ * @method void setName(string $Name) Set Custom name server name.
+ * @method string getIPv4() Obtain Custom IPv4 address of the name server.
+ * @method void setIPv4(string $IPv4) Set Custom IPv4 address of the name server.
  */
 class VanityNameServersIps extends AbstractModel
 {
     /**
-     * @var string Custom name of the name server
+     * @var string Custom name server name.
      */
     public $Name;
 
     /**
-     * @var string IPv4 address of the custom name server
+     * @var string Custom IPv4 address of the name server.
      */
     public $IPv4;
 
     /**
-     * @param string $Name Custom name of the name server
-     * @param string $IPv4 IPv4 address of the custom name server
+     * @param string $Name Custom name server name.
+     * @param string $IPv4 Custom IPv4 address of the name server.
      */
     function __construct()
     {

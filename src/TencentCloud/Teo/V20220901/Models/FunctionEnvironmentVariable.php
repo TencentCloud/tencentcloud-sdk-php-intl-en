@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValue(string $Value) Set Variable value. Its maximum size is 5000 bytes. The default value is empty.
  * @method string getType() Obtain Variable type. Valid values:
 <li>string: string type;</li>
-<li>json: JSON object type.</li>Default value: string.
+<li>json: JSON object type.</li><li>secret: Secret key type.</li>Default value: string.
  * @method void setType(string $Type) Set Variable type. Valid values:
 <li>string: string type;</li>
-<li>json: JSON object type.</li>Default value: string.
+<li>json: JSON object type.</li><li>secret: Secret key type.</li>Default value: string.
  */
 class FunctionEnvironmentVariable extends AbstractModel
 {
@@ -46,7 +46,7 @@ class FunctionEnvironmentVariable extends AbstractModel
     /**
      * @var string Variable type. Valid values:
 <li>string: string type;</li>
-<li>json: JSON object type.</li>Default value: string.
+<li>json: JSON object type.</li><li>secret: Secret key type.</li>Default value: string.
      */
     public $Type;
 
@@ -55,7 +55,7 @@ class FunctionEnvironmentVariable extends AbstractModel
      * @param string $Value Variable value. Its maximum size is 5000 bytes. The default value is empty.
      * @param string $Type Variable type. Valid values:
 <li>string: string type;</li>
-<li>json: JSON object type.</li>Default value: string.
+<li>json: JSON object type.</li><li>secret: Secret key type.</li>Default value: string.
      */
     function __construct()
     {

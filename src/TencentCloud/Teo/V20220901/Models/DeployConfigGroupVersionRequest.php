@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getEnvId() Obtain Environment ID. Please specify the environment ID to which the version should be released.
- * @method void setEnvId(string $EnvId) Set Environment ID. Please specify the environment ID to which the version should be released.
- * @method array getConfigGroupVersionInfos() Obtain Version information required for release. Multiple versions of different configuration groups can be modified simultaneously, while each group allows modifying only one version at a time.
- * @method void setConfigGroupVersionInfos(array $ConfigGroupVersionInfos) Set Version information required for release. Multiple versions of different configuration groups can be modified simultaneously, while each group allows modifying only one version at a time.
- * @method string getDescription() Obtain Change description. It is used to describe the content and reasons for this change. A maximum of 100 characters are supported.
- * @method void setDescription(string $Description) Set Change description. It is used to describe the content and reasons for this change. A maximum of 100 characters are supported.
+ * @method string getEnvId() Obtain Environment ID. Please enter the environment ID to which the version needs to be released.
+ * @method void setEnvId(string $EnvId) Set Environment ID. Please enter the environment ID to which the version needs to be released.
+ * @method array getConfigGroupVersionInfos() Obtain Version information to release. You can update versions of multiple different configuration groups at the same time. Each configuration group supports updating only one version at a time.
+ * @method void setConfigGroupVersionInfos(array $ConfigGroupVersionInfos) Set Version information to release. You can update versions of multiple different configuration groups at the same time. Each configuration group supports updating only one version at a time.
+ * @method string getDescription() Obtain Change description. Used to describe the content and reason for this change. Supports up to 100 characters.
+ * @method void setDescription(string $Description) Set Change description. Used to describe the content and reason for this change. Supports up to 100 characters.
  */
 class DeployConfigGroupVersionRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class DeployConfigGroupVersionRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Environment ID. Please specify the environment ID to which the version should be released.
+     * @var string Environment ID. Please enter the environment ID to which the version needs to be released.
      */
     public $EnvId;
 
     /**
-     * @var array Version information required for release. Multiple versions of different configuration groups can be modified simultaneously, while each group allows modifying only one version at a time.
+     * @var array Version information to release. You can update versions of multiple different configuration groups at the same time. Each configuration group supports updating only one version at a time.
      */
     public $ConfigGroupVersionInfos;
 
     /**
-     * @var string Change description. It is used to describe the content and reasons for this change. A maximum of 100 characters are supported.
+     * @var string Change description. Used to describe the content and reason for this change. Supports up to 100 characters.
      */
     public $Description;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $EnvId Environment ID. Please specify the environment ID to which the version should be released.
-     * @param array $ConfigGroupVersionInfos Version information required for release. Multiple versions of different configuration groups can be modified simultaneously, while each group allows modifying only one version at a time.
-     * @param string $Description Change description. It is used to describe the content and reasons for this change. A maximum of 100 characters are supported.
+     * @param string $EnvId Environment ID. Please enter the environment ID to which the version needs to be released.
+     * @param array $ConfigGroupVersionInfos Version information to release. You can update versions of multiple different configuration groups at the same time. Each configuration group supports updating only one version at a time.
+     * @param string $Description Change description. Used to describe the content and reason for this change. Supports up to 100 characters.
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Returned value of security data entry
+ * Security data Entry return value
  *
- * @method string getKey() Obtain The query dimension value.
- * @method void setKey(string $Key) Set The query dimension value.
- * @method array getValue() Obtain The details.
- * @method void setValue(array $Value) Set The details.
+ * @method string getKey() Obtain Query the dimension value.
+ * @method void setKey(string $Key) Set Query the dimension value.
+ * @method array getValue() Obtain Detailed data under the query dimension.
+ * @method void setValue(array $Value) Set Detailed data under the query dimension.
  */
 class SecEntry extends AbstractModel
 {
     /**
-     * @var string The query dimension value.
+     * @var string Query the dimension value.
      */
     public $Key;
 
     /**
-     * @var array The details.
+     * @var array Detailed data under the query dimension.
      */
     public $Value;
 
     /**
-     * @param string $Key The query dimension value.
-     * @param array $Value The details.
+     * @param string $Key Query the dimension value.
+     * @param array $Value Detailed data under the query dimension.
      */
     function __construct()
     {

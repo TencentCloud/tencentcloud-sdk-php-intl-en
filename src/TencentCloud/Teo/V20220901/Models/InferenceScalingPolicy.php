@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Edge reasoning auto scaling policy.
+ * Auto scaling policy for edge reasoning.
  *
- * @method string getPolicyName() Obtain Policy Name. Length limit is 1-30 characters. Policy name must be unique within the same service.
- * @method void setPolicyName(string $PolicyName) Set Policy Name. Length limit is 1-30 characters. Policy name must be unique within the same service.
- * @method string getPolicyType() Obtain Policy type, cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
- * @method void setPolicyType(string $PolicyType) Set Policy type, cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
- * @method InferenceScheduledScalingPolicy getScheduledScalingPolicy() Obtain Scheduled scaling configuration. This field is required when the PolicyType value is ScheduledScaling.
- * @method void setScheduledScalingPolicy(InferenceScheduledScalingPolicy $ScheduledScalingPolicy) Set Scheduled scaling configuration. This field is required when the PolicyType value is ScheduledScaling.
+ * @method string getPolicyName() Obtain Policy Name. Length limit: 1–30 characters. Must be unique within the same service.
+ * @method void setPolicyName(string $PolicyName) Set Policy Name. Length limit: 1–30 characters. Must be unique within the same service.
+ * @method string getPolicyType() Obtain Policy type. It cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
+ * @method void setPolicyType(string $PolicyType) Set Policy type. It cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
+ * @method InferenceScheduledScalingPolicy getScheduledScalingPolicy() Obtain Scheduled scaling configuration. This field is required when the value of PolicyType is ScheduledScaling.
+ * @method void setScheduledScalingPolicy(InferenceScheduledScalingPolicy $ScheduledScalingPolicy) Set Scheduled scaling configuration. This field is required when the value of PolicyType is ScheduledScaling.
  */
 class InferenceScalingPolicy extends AbstractModel
 {
     /**
-     * @var string Policy Name. Length limit is 1-30 characters. Policy name must be unique within the same service.
+     * @var string Policy Name. Length limit: 1–30 characters. Must be unique within the same service.
      */
     public $PolicyName;
 
     /**
-     * @var string Policy type, cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
+     * @var string Policy type. It cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
      */
     public $PolicyType;
 
     /**
-     * @var InferenceScheduledScalingPolicy Scheduled scaling configuration. This field is required when the PolicyType value is ScheduledScaling.
+     * @var InferenceScheduledScalingPolicy Scheduled scaling configuration. This field is required when the value of PolicyType is ScheduledScaling.
      */
     public $ScheduledScalingPolicy;
 
     /**
-     * @param string $PolicyName Policy Name. Length limit is 1-30 characters. Policy name must be unique within the same service.
-     * @param string $PolicyType Policy type, cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
-     * @param InferenceScheduledScalingPolicy $ScheduledScalingPolicy Scheduled scaling configuration. This field is required when the PolicyType value is ScheduledScaling.
+     * @param string $PolicyName Policy Name. Length limit: 1–30 characters. Must be unique within the same service.
+     * @param string $PolicyType Policy type. It cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
+     * @param InferenceScheduledScalingPolicy $ScheduledScalingPolicy Scheduled scaling configuration. This field is required when the value of PolicyType is ScheduledScaling.
      */
     function __construct()
     {

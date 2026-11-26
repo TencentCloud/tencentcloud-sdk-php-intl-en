@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method integer getLimit() Obtain Paginated query limit. default value: 20, maximum value: 100.
- * @method void setLimit(integer $Limit) Set Paginated query limit. default value: 20, maximum value: 100.
+ * @method integer getLimit() Obtain Paginated query limit. Default value: 20, maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Paginated query limit. Default value: 20, maximum value: 100.
  * @method integer getOffset() Obtain The offset of paginated query. Default value: 0.
  * @method void setOffset(integer $Offset) Set The offset of paginated query. Default value: 0.
  */
@@ -35,7 +35,7 @@ class DescribeSecurityJSInjectionRuleRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer Paginated query limit. default value: 20, maximum value: 100.
+     * @var integer Paginated query limit. Default value: 20, maximum value: 100.
      */
     public $Limit;
 
@@ -46,7 +46,7 @@ class DescribeSecurityJSInjectionRuleRequest extends AbstractModel
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param integer $Limit Paginated query limit. default value: 20, maximum value: 100.
+     * @param integer $Limit Paginated query limit. Default value: 20, maximum value: 100.
      * @param integer $Offset The offset of paginated query. Default value: 0.
      */
     function __construct()

@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInferenceServiceDeploymentLogs request structure.
  *
- * @method string getZoneId() Obtain Zone ID.
- * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getServiceId() Obtain ID of the inference service.
- * @method void setServiceId(string $ServiceId) Set ID of the inference service.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method string getServiceId() Obtain Inference service ID.
+ * @method void setServiceId(string $ServiceId) Set Inference service ID.
  * @method string getRecordId() Obtain Deployment record ID.
  * @method void setRecordId(string $RecordId) Set Deployment record ID.
  * @method string getStartTime() Obtain Start time for retrieving logs.
  * @method void setStartTime(string $StartTime) Set Start time for retrieving logs.
- * @method string getEndTime() Obtain End time for retrieving logs. Default query time range (EndTime - StartTime) is the most recent 7 days.
- * @method void setEndTime(string $EndTime) Set End time for retrieving logs. Default query time range (EndTime - StartTime) is the most recent 7 days.
- * @method string getSortBy() Obtain Sorting field. Valid values: <li>timestamp: Log generation time.</li>Default value: timestamp.
- * @method void setSortBy(string $SortBy) Set Sorting field. Valid values: <li>timestamp: Log generation time.</li>Default value: timestamp.
- * @method string getSortOrder() Obtain <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
- * @method void setSortOrder(string $SortOrder) Set <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+ * @method string getEndTime() Obtain End time for retrieving logs. The default query time range (`EndTime` - `StartTime`) is the most recent 7 days.
+ * @method void setEndTime(string $EndTime) Set End time for retrieving logs. The default query time range (`EndTime` - `StartTime`) is the most recent 7 days.
+ * @method string getSortBy() Obtain Sorting field. Valid values: <li>timestamp: log generation time.</li> Default value: timestamp.
+ * @method void setSortBy(string $SortBy) Set Sorting field. Valid values: <li>timestamp: log generation time.</li> Default value: timestamp.
+ * @method string getSortOrder() Obtain Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.
+ * @method void setSortOrder(string $SortOrder) Set Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 20. Maximum value: 1000.
@@ -42,12 +42,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInferenceServiceDeploymentLogsRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var string ID of the inference service.
+     * @var string Inference service ID.
      */
     public $ServiceId;
 
@@ -62,17 +62,17 @@ class DescribeInferenceServiceDeploymentLogsRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string End time for retrieving logs. Default query time range (EndTime - StartTime) is the most recent 7 days.
+     * @var string End time for retrieving logs. The default query time range (`EndTime` - `StartTime`) is the most recent 7 days.
      */
     public $EndTime;
 
     /**
-     * @var string Sorting field. Valid values: <li>timestamp: Log generation time.</li>Default value: timestamp.
+     * @var string Sorting field. Valid values: <li>timestamp: log generation time.</li> Default value: timestamp.
      */
     public $SortBy;
 
     /**
-     * @var string <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+     * @var string Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.
      */
     public $SortOrder;
 
@@ -87,13 +87,13 @@ class DescribeInferenceServiceDeploymentLogsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $ZoneId Zone ID.
-     * @param string $ServiceId ID of the inference service.
+     * @param string $ZoneId Site ID.
+     * @param string $ServiceId Inference service ID.
      * @param string $RecordId Deployment record ID.
      * @param string $StartTime Start time for retrieving logs.
-     * @param string $EndTime End time for retrieving logs. Default query time range (EndTime - StartTime) is the most recent 7 days.
-     * @param string $SortBy Sorting field. Valid values: <li>timestamp: Log generation time.</li>Default value: timestamp.
-     * @param string $SortOrder <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+     * @param string $EndTime End time for retrieving logs. The default query time range (`EndTime` - `StartTime`) is the most recent 7 days.
+     * @param string $SortBy Sorting field. Valid values: <li>timestamp: log generation time.</li> Default value: timestamp.
+     * @param string $SortOrder Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.
      * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 20. Maximum value: 1000.
      */

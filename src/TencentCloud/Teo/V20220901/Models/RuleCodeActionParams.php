@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameters of the action with the `StatusCode` field as the rule engine condition
+ * Rule engine condition uses the StatusCode field action parameter
  *
- * @method integer getStatusCode() Obtain The status code.
- * @method void setStatusCode(integer $StatusCode) Set The status code.
- * @method string getName() Obtain The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
- * @method void setName(string $Name) Set The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
- * @method array getValues() Obtain The parameter value.
- * @method void setValues(array $Values) Set The parameter value.
+ * @method integer getStatusCode() Obtain Status Code.
+ * @method void setStatusCode(integer $StatusCode) Set Status Code.
+ * @method string getName() Obtain Parameter name. For parameter completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
+ * @method void setName(string $Name) Set Parameter name. For parameter completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
+ * @method array getValues() Obtain Parameter value.
+ * @method void setValues(array $Values) Set Parameter value.
  */
 class RuleCodeActionParams extends AbstractModel
 {
     /**
-     * @var integer The status code.
+     * @var integer Status Code.
      */
     public $StatusCode;
 
     /**
-     * @var string The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+     * @var string Parameter name. For parameter completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
      */
     public $Name;
 
     /**
-     * @var array The parameter value.
+     * @var array Parameter value.
      */
     public $Values;
 
     /**
-     * @param integer $StatusCode The status code.
-     * @param string $Name The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-     * @param array $Values The parameter value.
+     * @param integer $StatusCode Status Code.
+     * @param string $Name Parameter name. For parameter completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
+     * @param array $Values Parameter value.
      */
     function __construct()
     {

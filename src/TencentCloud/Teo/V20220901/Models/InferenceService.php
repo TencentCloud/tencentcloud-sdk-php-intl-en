@@ -18,30 +18,30 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Inference service info.
+ * Inference service information.
  *
- * @method string getServiceId() Obtain ID of the inference service.
- * @method void setServiceId(string $ServiceId) Set ID of the inference service.
- * @method string getName() Obtain Reasoning service name.
- * @method void setName(string $Name) Set Reasoning service name.
+ * @method string getServiceId() Obtain Inference service ID.
+ * @method void setServiceId(string $ServiceId) Set Inference service ID.
+ * @method string getName() Obtain Name of the inference service.
+ * @method void setName(string $Name) Set Name of the inference service.
  * @method string getDescription() Obtain Description information.
  * @method void setDescription(string $Description) Set Description information.
- * @method integer getListenPort() Obtain Ports monitored by the model service. Only integers between 1 and 65535 are supported.
- * @method void setListenPort(integer $ListenPort) Set Ports monitored by the model service. Only integers between 1 and 65535 are supported.
- * @method array getRequestPaths() Obtain Request path list for inference service. Supports up to 20 paths.
- * @method void setRequestPaths(array $RequestPaths) Set Request path list for inference service. Supports up to 20 paths.
+ * @method integer getListenPort() Obtain Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.
+ * @method void setListenPort(integer $ListenPort) Set Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.
+ * @method array getRequestPaths() Obtain Request path list for the inference service. Supports up to 20 paths.
+ * @method void setRequestPaths(array $RequestPaths) Set Request path list for the inference service. Supports up to 20 paths.
  * @method array getContainers() Obtain Container configuration of the inference service.
  * @method void setContainers(array $Containers) Set Container configuration of the inference service.
  * @method InferenceResourceConfig getResourceConfig() Obtain Resource configuration of the inference service.
  * @method void setResourceConfig(InferenceResourceConfig $ResourceConfig) Set Resource configuration of the inference service.
- * @method string getStatus() Obtain Reasoning service status, which includes the following status: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
- * @method void setStatus(string $Status) Set Reasoning service status, which includes the following status: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
- * @method string getScalingStatus() Obtain Scaling status. Valid values: <li>Normal: Stable operation, no scaling operation in progress;</li><li>ScalingOut: Scaling out;</li><li>ScalingIn: Scaling in.</li>
- * @method void setScalingStatus(string $ScalingStatus) Set Scaling status. Valid values: <li>Normal: Stable operation, no scaling operation in progress;</li><li>ScalingOut: Scaling out;</li><li>ScalingIn: Scaling in.</li>
- * @method integer getCurrentInstanceCount() Obtain Number of running instances.
- * @method void setCurrentInstanceCount(integer $CurrentInstanceCount) Set Number of running instances.
- * @method string getInferenceURL() Obtain Reasoning access address, perform reasoning via links to access the underlying model.
- * @method void setInferenceURL(string $InferenceURL) Set Reasoning access address, perform reasoning via links to access the underlying model.
+ * @method string getStatus() Obtain Status of the inference service, including the following: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
+ * @method void setStatus(string $Status) Set Status of the inference service, including the following: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
+ * @method string getScalingStatus() Obtain Scaling status. Valid values: <li>Normal: running steadily with no scaling operation in progress;</li><li>ScalingOut: scaling out;</li><li>ScalingIn: scaling in.</li>
+ * @method void setScalingStatus(string $ScalingStatus) Set Scaling status. Valid values: <li>Normal: running steadily with no scaling operation in progress;</li><li>ScalingOut: scaling out;</li><li>ScalingIn: scaling in.</li>
+ * @method integer getCurrentInstanceCount() Obtain Number of currently running instances.
+ * @method void setCurrentInstanceCount(integer $CurrentInstanceCount) Set Number of currently running instances.
+ * @method string getInferenceURL() Obtain Inference access address. You can access the underlying model for reasoning via links.
+ * @method void setInferenceURL(string $InferenceURL) Set Inference access address. You can access the underlying model for reasoning via links.
  * @method string getCreateTime() Obtain Creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setCreateTime(string $CreateTime) Set Creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getUpdateTime() Obtain Last modification time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -50,12 +50,12 @@ use TencentCloud\Common\AbstractModel;
 class InferenceService extends AbstractModel
 {
     /**
-     * @var string ID of the inference service.
+     * @var string Inference service ID.
      */
     public $ServiceId;
 
     /**
-     * @var string Reasoning service name.
+     * @var string Name of the inference service.
      */
     public $Name;
 
@@ -65,12 +65,12 @@ class InferenceService extends AbstractModel
     public $Description;
 
     /**
-     * @var integer Ports monitored by the model service. Only integers between 1 and 65535 are supported.
+     * @var integer Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.
      */
     public $ListenPort;
 
     /**
-     * @var array Request path list for inference service. Supports up to 20 paths.
+     * @var array Request path list for the inference service. Supports up to 20 paths.
      */
     public $RequestPaths;
 
@@ -85,22 +85,22 @@ class InferenceService extends AbstractModel
     public $ResourceConfig;
 
     /**
-     * @var string Reasoning service status, which includes the following status: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
+     * @var string Status of the inference service, including the following: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
      */
     public $Status;
 
     /**
-     * @var string Scaling status. Valid values: <li>Normal: Stable operation, no scaling operation in progress;</li><li>ScalingOut: Scaling out;</li><li>ScalingIn: Scaling in.</li>
+     * @var string Scaling status. Valid values: <li>Normal: running steadily with no scaling operation in progress;</li><li>ScalingOut: scaling out;</li><li>ScalingIn: scaling in.</li>
      */
     public $ScalingStatus;
 
     /**
-     * @var integer Number of running instances.
+     * @var integer Number of currently running instances.
      */
     public $CurrentInstanceCount;
 
     /**
-     * @var string Reasoning access address, perform reasoning via links to access the underlying model.
+     * @var string Inference access address. You can access the underlying model for reasoning via links.
      */
     public $InferenceURL;
 
@@ -115,17 +115,17 @@ class InferenceService extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @param string $ServiceId ID of the inference service.
-     * @param string $Name Reasoning service name.
+     * @param string $ServiceId Inference service ID.
+     * @param string $Name Name of the inference service.
      * @param string $Description Description information.
-     * @param integer $ListenPort Ports monitored by the model service. Only integers between 1 and 65535 are supported.
-     * @param array $RequestPaths Request path list for inference service. Supports up to 20 paths.
+     * @param integer $ListenPort Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.
+     * @param array $RequestPaths Request path list for the inference service. Supports up to 20 paths.
      * @param array $Containers Container configuration of the inference service.
      * @param InferenceResourceConfig $ResourceConfig Resource configuration of the inference service.
-     * @param string $Status Reasoning service status, which includes the following status: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
-     * @param string $ScalingStatus Scaling status. Valid values: <li>Normal: Stable operation, no scaling operation in progress;</li><li>ScalingOut: Scaling out;</li><li>ScalingIn: Scaling in.</li>
-     * @param integer $CurrentInstanceCount Number of running instances.
-     * @param string $InferenceURL Reasoning access address, perform reasoning via links to access the underlying model.
+     * @param string $Status Status of the inference service, including the following: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
+     * @param string $ScalingStatus Scaling status. Valid values: <li>Normal: running steadily with no scaling operation in progress;</li><li>ScalingOut: scaling out;</li><li>ScalingIn: scaling in.</li>
+     * @param integer $CurrentInstanceCount Number of currently running instances.
+     * @param string $InferenceURL Inference access address. You can access the underlying model for reasoning via links.
      * @param string $CreateTime Creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $UpdateTime Last modification time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */

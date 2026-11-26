@@ -20,50 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyFreeCertificate request structure.
  *
- * @method string getZoneId() Obtain Site ID
- * @method void setZoneId(string $ZoneId) Set Site ID
- * @method string getDomain() Obtain Specifies the target domain name for free certificate application.
- * @method void setDomain(string $Domain) Set Specifies the target domain name for free certificate application.
- * @method string getVerificationMethod() Obtain Specifies the verification method for applying for a free certificate. for detailed verification methods, refer to the [free certificate application documentation](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). valid values:.
-<li>http_challenge: specifies the file validation mode for http access. verifies by getting file information from the specified URL of the access domain to complete free certificate application.</li>
-<li>dns_challenge: specifies the dns delegation verification method. verifies the free certificate application by adding the designated host record pointing to EdgeOne.</li>
-
-Note: after triggering this api, you need to complete the verification content configuration based on the returned verification information. once configured, you must also verify by calling the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>check free certificate application result</a> api. after verification passes, the application succeeds. once the application is successful, you can call the <a href = 'https://www.tencentcloud.com/document/product/1145/50539'>configure domain name certificate</a> API to deploy a free certificate for the current domain name.
- * @method void setVerificationMethod(string $VerificationMethod) Set Specifies the verification method for applying for a free certificate. for detailed verification methods, refer to the [free certificate application documentation](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). valid values:.
-<li>http_challenge: specifies the file validation mode for http access. verifies by getting file information from the specified URL of the access domain to complete free certificate application.</li>
-<li>dns_challenge: specifies the dns delegation verification method. verifies the free certificate application by adding the designated host record pointing to EdgeOne.</li>
-
-Note: after triggering this api, you need to complete the verification content configuration based on the returned verification information. once configured, you must also verify by calling the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>check free certificate application result</a> api. after verification passes, the application succeeds. once the application is successful, you can call the <a href = 'https://www.tencentcloud.com/document/product/1145/50539'>configure domain name certificate</a> API to deploy a free certificate for the current domain name.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method string getDomain() Obtain Target domain name for free certificate application.
+ * @method void setDomain(string $Domain) Set Target domain name for free certificate application.
+ * @method string getVerificationMethod() Obtain Verification methods for applying for a free certificate. For detailed verification method descriptions, see [Free Certificate Application Method Documentation](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). Valid values:
+<li>http_challenge: HTTP access file validation mode, which gets file information by accessing the specified URL of the domain over HTTP to complete the free certificate application verification;</li>
+<li>dns_challenge: DNS delegation verification method, which completes free certificate application verification by adding a designated host record to point to EdgeOne.</li>
+Note: After triggering this API, you need to complete the verification content configuration based on the returned verification information. Once configured, you also need to verify through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>Check Free Certificate Application Result</a> API. After verification passes, the application succeeds. Once the free certificate application is successful, you can call the <a href = 'https://www.tencentcloud.com/document/product/1552/80764?from_cn_redirect=1'>Configure Domain Name Certificate</a> API to deploy the free certificate for the current domain name.
+ * @method void setVerificationMethod(string $VerificationMethod) Set Verification methods for applying for a free certificate. For detailed verification method descriptions, see [Free Certificate Application Method Documentation](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). Valid values:
+<li>http_challenge: HTTP access file validation mode, which gets file information by accessing the specified URL of the domain over HTTP to complete the free certificate application verification;</li>
+<li>dns_challenge: DNS delegation verification method, which completes free certificate application verification by adding a designated host record to point to EdgeOne.</li>
+Note: After triggering this API, you need to complete the verification content configuration based on the returned verification information. Once configured, you also need to verify through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>Check Free Certificate Application Result</a> API. After verification passes, the application succeeds. Once the free certificate application is successful, you can call the <a href = 'https://www.tencentcloud.com/document/product/1552/80764?from_cn_redirect=1'>Configure Domain Name Certificate</a> API to deploy the free certificate for the current domain name.
  */
 class ApplyFreeCertificateRequest extends AbstractModel
 {
     /**
-     * @var string Site ID
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var string Specifies the target domain name for free certificate application.
+     * @var string Target domain name for free certificate application.
      */
     public $Domain;
 
     /**
-     * @var string Specifies the verification method for applying for a free certificate. for detailed verification methods, refer to the [free certificate application documentation](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). valid values:.
-<li>http_challenge: specifies the file validation mode for http access. verifies by getting file information from the specified URL of the access domain to complete free certificate application.</li>
-<li>dns_challenge: specifies the dns delegation verification method. verifies the free certificate application by adding the designated host record pointing to EdgeOne.</li>
-
-Note: after triggering this api, you need to complete the verification content configuration based on the returned verification information. once configured, you must also verify by calling the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>check free certificate application result</a> api. after verification passes, the application succeeds. once the application is successful, you can call the <a href = 'https://www.tencentcloud.com/document/product/1145/50539'>configure domain name certificate</a> API to deploy a free certificate for the current domain name.
+     * @var string Verification methods for applying for a free certificate. For detailed verification method descriptions, see [Free Certificate Application Method Documentation](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). Valid values:
+<li>http_challenge: HTTP access file validation mode, which gets file information by accessing the specified URL of the domain over HTTP to complete the free certificate application verification;</li>
+<li>dns_challenge: DNS delegation verification method, which completes free certificate application verification by adding a designated host record to point to EdgeOne.</li>
+Note: After triggering this API, you need to complete the verification content configuration based on the returned verification information. Once configured, you also need to verify through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>Check Free Certificate Application Result</a> API. After verification passes, the application succeeds. Once the free certificate application is successful, you can call the <a href = 'https://www.tencentcloud.com/document/product/1552/80764?from_cn_redirect=1'>Configure Domain Name Certificate</a> API to deploy the free certificate for the current domain name.
      */
     public $VerificationMethod;
 
     /**
-     * @param string $ZoneId Site ID
-     * @param string $Domain Specifies the target domain name for free certificate application.
-     * @param string $VerificationMethod Specifies the verification method for applying for a free certificate. for detailed verification methods, refer to the [free certificate application documentation](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). valid values:.
-<li>http_challenge: specifies the file validation mode for http access. verifies by getting file information from the specified URL of the access domain to complete free certificate application.</li>
-<li>dns_challenge: specifies the dns delegation verification method. verifies the free certificate application by adding the designated host record pointing to EdgeOne.</li>
-
-Note: after triggering this api, you need to complete the verification content configuration based on the returned verification information. once configured, you must also verify by calling the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>check free certificate application result</a> api. after verification passes, the application succeeds. once the application is successful, you can call the <a href = 'https://www.tencentcloud.com/document/product/1145/50539'>configure domain name certificate</a> API to deploy a free certificate for the current domain name.
+     * @param string $ZoneId Site ID.
+     * @param string $Domain Target domain name for free certificate application.
+     * @param string $VerificationMethod Verification methods for applying for a free certificate. For detailed verification method descriptions, see [Free Certificate Application Method Documentation](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). Valid values:
+<li>http_challenge: HTTP access file validation mode, which gets file information by accessing the specified URL of the domain over HTTP to complete the free certificate application verification;</li>
+<li>dns_challenge: DNS delegation verification method, which completes free certificate application verification by adding a designated host record to point to EdgeOne.</li>
+Note: After triggering this API, you need to complete the verification content configuration based on the returned verification information. Once configured, you also need to verify through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>Check Free Certificate Application Result</a> API. After verification passes, the application succeeds. Once the free certificate application is successful, you can call the <a href = 'https://www.tencentcloud.com/document/product/1552/80764?from_cn_redirect=1'>Configure Domain Name Certificate</a> API to deploy the free certificate for the current domain name.
      */
     function __construct()
     {

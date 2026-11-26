@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSecurityAPIResource request structure.
  *
- * @method string getZoneId() Obtain Zone ID.		
- * @method void setZoneId(string $ZoneId) Set Zone ID.		
- * @method array getAPIResources() Obtain API resource list.
- * @method void setAPIResources(array $APIResources) Set API resource list.
+ * @method string getZoneId() Obtain Zone ID.	
+ * @method void setZoneId(string $ZoneId) Set Zone ID.	
+ * @method array getAPIResources() Obtain List of API resources.
+ * @method void setAPIResources(array $APIResources) Set List of API resources.
  */
 class CreateSecurityAPIResourceRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID.		
+     * @var string Zone ID.	
      */
     public $ZoneId;
 
     /**
-     * @var array API resource list.
+     * @var array List of API resources.
      */
     public $APIResources;
 
     /**
-     * @param string $ZoneId Zone ID.		
-     * @param array $APIResources API resource list.
+     * @param string $ZoneId Zone ID.	
+     * @param array $APIResources List of API resources.
      */
     function __construct()
     {

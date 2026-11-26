@@ -18,16 +18,16 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Referenced instance information.
+ * Instance information that is cited or referencing.
  *
  * @method string getZoneId() Obtain Site ID.
  * @method void setZoneId(string $ZoneId) Set Site ID.
- * @method string getType() Obtain Instance type. Values as follows:
+ * @method string getType() Obtain Instance type. Valid values:
 <li>acceleration-domain: Acceleration domain name;</li>
- * @method void setType(string $Type) Set Instance type. Values as follows:
+ * @method void setType(string $Type) Set Instance type. Valid values:
 <li>acceleration-domain: Acceleration domain name;</li>
- * @method string getInstance() Obtain Referenced instance information.
- * @method void setInstance(string $Instance) Set Referenced instance information.
+ * @method string getInstance() Obtain Instance information that is cited or referencing.
+ * @method void setInstance(string $Instance) Set Instance information that is cited or referencing.
  */
 class ReferenceHolder extends AbstractModel
 {
@@ -37,21 +37,21 @@ class ReferenceHolder extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Instance type. Values as follows:
+     * @var string Instance type. Valid values:
 <li>acceleration-domain: Acceleration domain name;</li>
      */
     public $Type;
 
     /**
-     * @var string Referenced instance information.
+     * @var string Instance information that is cited or referencing.
      */
     public $Instance;
 
     /**
      * @param string $ZoneId Site ID.
-     * @param string $Type Instance type. Values as follows:
+     * @param string $Type Instance type. Valid values:
 <li>acceleration-domain: Acceleration domain name;</li>
-     * @param string $Instance Referenced instance information.
+     * @param string $Instance Instance information that is cited or referencing.
      */
     function __construct()
     {

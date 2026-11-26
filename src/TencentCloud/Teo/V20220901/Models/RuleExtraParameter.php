@@ -18,60 +18,60 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rule engine parameter details and special parameter types.
+ * Rule engine parameter details. Unique parameter type.
  *
  * @method string getId() Obtain Parameter name. Valid values:
-<li>`Action`: Required parameter for HTTP header modification when `RewirteAction` is selected for `RuleAction`.</li>
-<li>`StatusCode`: Required parameter for the status code feature when `CodeAction` is selected for `RuleAction`.</li>
+<li> Action: Parameters required to modify HTTP header. Select RewirteAction for RuleAction;</li>
+<li> StatusCode: Parameters required for status code related features. Select CodeAction for RuleAction.</li>
  * @method void setId(string $Id) Set Parameter name. Valid values:
-<li>`Action`: Required parameter for HTTP header modification when `RewirteAction` is selected for `RuleAction`.</li>
-<li>`StatusCode`: Required parameter for the status code feature when `CodeAction` is selected for `RuleAction`.</li>
+<li> Action: Parameters required to modify HTTP header. Select RewirteAction for RuleAction;</li>
+<li> StatusCode: Parameters required for status code related features. Select CodeAction for RuleAction.</li>
  * @method string getType() Obtain Parameter value type.
-<li>`CHOICE`: The parameter value can be selected only from `Values`.</li>
-<li>`CUSTOM_NUM`: The parameter value is a custom integer.</li>
-<li>`CUSTOM_STRING`: The parameter value is a custom string.</li>
+<li> CHOICE: The parameter value can only be selected from Values; </li>
+<li> CUSTOM_NUM: The parameter value is user-customized, int type;</li>
+<li>CUSTOM_STRING: The parameter value is user-customized, string type.</li>
  * @method void setType(string $Type) Set Parameter value type.
-<li>`CHOICE`: The parameter value can be selected only from `Values`.</li>
-<li>`CUSTOM_NUM`: The parameter value is a custom integer.</li>
-<li>`CUSTOM_STRING`: The parameter value is a custom string.</li>
- * @method array getChoices() Obtain Valid values.
-Note: If the value of `Id` is `StatusCode`, values in the array are all integer values. When entering a parameter value, enter the integer value of the string.
- * @method void setChoices(array $Choices) Set Valid values.
-Note: If the value of `Id` is `StatusCode`, values in the array are all integer values. When entering a parameter value, enter the integer value of the string.
+<li> CHOICE: The parameter value can only be selected from Values; </li>
+<li> CUSTOM_NUM: The parameter value is user-customized, int type;</li>
+<li>CUSTOM_STRING: The parameter value is user-customized, string type.</li>
+ * @method array getChoices() Obtain Optional parameter values.
+Note: When the value of Id is StatusCode, the values in the array are integers. Fill in the parameter value as an integer in string format.
+ * @method void setChoices(array $Choices) Set Optional parameter values.
+Note: When the value of Id is StatusCode, the values in the array are integers. Fill in the parameter value as an integer in string format.
  */
 class RuleExtraParameter extends AbstractModel
 {
     /**
      * @var string Parameter name. Valid values:
-<li>`Action`: Required parameter for HTTP header modification when `RewirteAction` is selected for `RuleAction`.</li>
-<li>`StatusCode`: Required parameter for the status code feature when `CodeAction` is selected for `RuleAction`.</li>
+<li> Action: Parameters required to modify HTTP header. Select RewirteAction for RuleAction;</li>
+<li> StatusCode: Parameters required for status code related features. Select CodeAction for RuleAction.</li>
      */
     public $Id;
 
     /**
      * @var string Parameter value type.
-<li>`CHOICE`: The parameter value can be selected only from `Values`.</li>
-<li>`CUSTOM_NUM`: The parameter value is a custom integer.</li>
-<li>`CUSTOM_STRING`: The parameter value is a custom string.</li>
+<li> CHOICE: The parameter value can only be selected from Values; </li>
+<li> CUSTOM_NUM: The parameter value is user-customized, int type;</li>
+<li>CUSTOM_STRING: The parameter value is user-customized, string type.</li>
      */
     public $Type;
 
     /**
-     * @var array Valid values.
-Note: If the value of `Id` is `StatusCode`, values in the array are all integer values. When entering a parameter value, enter the integer value of the string.
+     * @var array Optional parameter values.
+Note: When the value of Id is StatusCode, the values in the array are integers. Fill in the parameter value as an integer in string format.
      */
     public $Choices;
 
     /**
      * @param string $Id Parameter name. Valid values:
-<li>`Action`: Required parameter for HTTP header modification when `RewirteAction` is selected for `RuleAction`.</li>
-<li>`StatusCode`: Required parameter for the status code feature when `CodeAction` is selected for `RuleAction`.</li>
+<li> Action: Parameters required to modify HTTP header. Select RewirteAction for RuleAction;</li>
+<li> StatusCode: Parameters required for status code related features. Select CodeAction for RuleAction.</li>
      * @param string $Type Parameter value type.
-<li>`CHOICE`: The parameter value can be selected only from `Values`.</li>
-<li>`CUSTOM_NUM`: The parameter value is a custom integer.</li>
-<li>`CUSTOM_STRING`: The parameter value is a custom string.</li>
-     * @param array $Choices Valid values.
-Note: If the value of `Id` is `StatusCode`, values in the array are all integer values. When entering a parameter value, enter the integer value of the string.
+<li> CHOICE: The parameter value can only be selected from Values; </li>
+<li> CUSTOM_NUM: The parameter value is user-customized, int type;</li>
+<li>CUSTOM_STRING: The parameter value is user-customized, string type.</li>
+     * @param array $Choices Optional parameter values.
+Note: When the value of Id is StatusCode, the values in the array are integers. Fill in the parameter value as an integer in string format.
      */
     function __construct()
     {

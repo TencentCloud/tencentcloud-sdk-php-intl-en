@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rule item of the rule engine. The items in the `Conditions` array are in `OR` relationship, and the items in the inner `Conditions` list are in `AND` relationship.
+ * Rule item of the rule engine. The relationship between multiple items in the Conditions array is OR, and the relationship between multiple items in the inner-layer Conditions list is AND.
  *
  * @method array getConditions() Obtain Judgment condition for executing the feature.
 Note: The feature can be executed if any condition in the array is met.

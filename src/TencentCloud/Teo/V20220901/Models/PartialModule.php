@@ -18,40 +18,40 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Module settings of the exception rule
+ * Detailed module configuration of the exception rule.
  *
- * @method string getModule() Obtain Module name. value is.
-<li>managed-rule: managed rule Id;</li>.
-<Li>Managed-Group: managed rule group;</li>.
-<li>`waf`: to be deprecated, managed rule.</li>.
- * @method void setModule(string $Module) Set Module name. value is.
-<li>managed-rule: managed rule Id;</li>.
-<Li>Managed-Group: managed rule group;</li>.
-<li>`waf`: to be deprecated, managed rule.</li>.
- * @method array getInclude() Obtain Specifies the list of rule ids that require exceptions under the module.
- * @method void setInclude(array $Include) Set Specifies the list of rule ids that require exceptions under the module.
+ * @method string getModule() Obtain Module name. Valid values:
+<li>managed-rule: managed rule Id;</li>
+<li>managed-group: managed rule group;</li>
+<li>waf: to be deprecated, managed rule.</li>
+ * @method void setModule(string $Module) Set Module name. Valid values:
+<li>managed-rule: managed rule Id;</li>
+<li>managed-group: managed rule group;</li>
+<li>waf: to be deprecated, managed rule.</li>
+ * @method array getInclude() Obtain List of specific rule IDs that require exceptions under the module.
+ * @method void setInclude(array $Include) Set List of specific rule IDs that require exceptions under the module.
  */
 class PartialModule extends AbstractModel
 {
     /**
-     * @var string Module name. value is.
-<li>managed-rule: managed rule Id;</li>.
-<Li>Managed-Group: managed rule group;</li>.
-<li>`waf`: to be deprecated, managed rule.</li>.
+     * @var string Module name. Valid values:
+<li>managed-rule: managed rule Id;</li>
+<li>managed-group: managed rule group;</li>
+<li>waf: to be deprecated, managed rule.</li>
      */
     public $Module;
 
     /**
-     * @var array Specifies the list of rule ids that require exceptions under the module.
+     * @var array List of specific rule IDs that require exceptions under the module.
      */
     public $Include;
 
     /**
-     * @param string $Module Module name. value is.
-<li>managed-rule: managed rule Id;</li>.
-<Li>Managed-Group: managed rule group;</li>.
-<li>`waf`: to be deprecated, managed rule.</li>.
-     * @param array $Include Specifies the list of rule ids that require exceptions under the module.
+     * @param string $Module Module name. Valid values:
+<li>managed-rule: managed rule Id;</li>
+<li>managed-group: managed rule group;</li>
+<li>waf: to be deprecated, managed rule.</li>
+     * @param array $Include List of specific rule IDs that require exceptions under the module.
      */
     function __construct()
     {

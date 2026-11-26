@@ -20,306 +20,194 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Site acceleration configuration.
  *
- * @method SmartRoutingParameters getSmartRouting() Obtain <Intelligent acceleration configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setSmartRouting(SmartRoutingParameters $SmartRouting) Set <Intelligent acceleration configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method CacheConfigParameters getCache() Obtain Node cache expiration time configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setCache(CacheConfigParameters $Cache) Set Node cache expiration time configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method MaxAgeParameters getMaxAge() Obtain Browser cache rule configuration, which is used to set the default value of maxage and is disabled by default.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setMaxAge(MaxAgeParameters $MaxAge) Set Browser cache rule configuration, which is used to set the default value of maxage and is disabled by default.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method CacheKeyConfigParameters getCacheKey() Obtain The node cache key configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setCacheKey(CacheKeyConfigParameters $CacheKey) Set The node cache key configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method CachePrefreshParameters getCachePrefresh() Obtain Cache prefresh configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setCachePrefresh(CachePrefreshParameters $CachePrefresh) Set Cache prefresh configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method SmartRoutingParameters getSmartRouting() Obtain Intelligent acceleration configuration.
+ * @method void setSmartRouting(SmartRoutingParameters $SmartRouting) Set Intelligent acceleration configuration.
+ * @method CacheConfigParameters getCache() Obtain Cache expiration time configuration.
+ * @method void setCache(CacheConfigParameters $Cache) Set Cache expiration time configuration.
+ * @method MaxAgeParameters getMaxAge() Obtain Browser cache configuration.
+ * @method void setMaxAge(MaxAgeParameters $MaxAge) Set Browser cache configuration.
+ * @method CacheKeyConfigParameters getCacheKey() Obtain Node cache key configuration.
+ * @method void setCacheKey(CacheKeyConfigParameters $CacheKey) Set Node cache key configuration.
+ * @method CachePrefreshParameters getCachePrefresh() Obtain Cache pre-refresh configuration.
+ * @method void setCachePrefresh(CachePrefreshParameters $CachePrefresh) Set Cache pre-refresh configuration.
  * @method OfflineCacheParameters getOfflineCache() Obtain Offline cache configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setOfflineCache(OfflineCacheParameters $OfflineCache) Set Offline cache configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method CompressionParameters getCompression() Obtain Smart compression configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setCompression(CompressionParameters $Compression) Set Smart compression configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method ForceRedirectHTTPSParameters getForceRedirectHTTPS() Obtain Forced https redirect configuration for access protocols.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setForceRedirectHTTPS(ForceRedirectHTTPSParameters $ForceRedirectHTTPS) Set Forced https redirect configuration for access protocols.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method CompressionParameters getCompression() Obtain Intelligent compression configuration.
+ * @method void setCompression(CompressionParameters $Compression) Set Intelligent compression configuration.
+ * @method ForceRedirectHTTPSParameters getForceRedirectHTTPS() Obtain Forced HTTPS redirect configuration for access protocols.
+ * @method void setForceRedirectHTTPS(ForceRedirectHTTPSParameters $ForceRedirectHTTPS) Set Forced HTTPS redirect configuration for access protocols.
  * @method HSTSParameters getHSTS() Obtain HSTS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setHSTS(HSTSParameters $HSTS) Set HSTS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method TLSConfigParameters getTLSConfig() Obtain TLS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setTLSConfig(TLSConfigParameters $TLSConfig) Set TLS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method OCSPStaplingParameters getOCSPStapling() Obtain OCSP stapling configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setOCSPStapling(OCSPStaplingParameters $OCSPStapling) Set OCSP stapling configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method HTTP2Parameters getHTTP2() Obtain HTTP/2 configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setHTTP2(HTTP2Parameters $HTTP2) Set HTTP/2 configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method QUICParameters getQUIC() Obtain QUIC access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setQUIC(QUICParameters $QUIC) Set QUIC access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method UpstreamHTTP2Parameters getUpstreamHTTP2() Obtain HTTP2 origin-pull configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setUpstreamHTTP2(UpstreamHTTP2Parameters $UpstreamHTTP2) Set HTTP2 origin-pull configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method UpstreamHTTP2Parameters getUpstreamHTTP2() Obtain HTTP/2 origin-pull configuration.
+ * @method void setUpstreamHTTP2(UpstreamHTTP2Parameters $UpstreamHTTP2) Set HTTP/2 origin-pull configuration.
  * @method IPv6Parameters getIPv6() Obtain IPv6 access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setIPv6(IPv6Parameters $IPv6) Set IPv6 access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method WebSocketParameters getWebSocket() Obtain WebSocket configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setWebSocket(WebSocketParameters $WebSocket) Set WebSocket configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method PostMaxSizeParameters getPostMaxSize() Obtain POST request transport configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setPostMaxSize(PostMaxSizeParameters $PostMaxSize) Set POST request transport configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method ClientIPHeaderParameters getClientIPHeader() Obtain Client ip origin-pull request header configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setClientIPHeader(ClientIPHeaderParameters $ClientIPHeader) Set Client ip origin-pull request header configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method ClientIPCountryParameters getClientIPCountry() Obtain Whether to carry the region information of the client ip during origin-pull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setClientIPCountry(ClientIPCountryParameters $ClientIPCountry) Set Whether to carry the region information of the client ip during origin-pull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method GrpcParameters getGrpc() Obtain Configuration of grpc support.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setGrpc(GrpcParameters $Grpc) Set Configuration of grpc support.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method NetworkErrorLoggingParameters getNetworkErrorLogging() Obtain Network Error Logging configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setNetworkErrorLogging(NetworkErrorLoggingParameters $NetworkErrorLogging) Set Network Error Logging configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method AccelerateMainlandParameters getAccelerateMainland() Obtain Accelerate optimization and configuration in mainland china.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setAccelerateMainland(AccelerateMainlandParameters $AccelerateMainland) Set Accelerate optimization and configuration in mainland china.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method StandardDebugParameters getStandardDebug() Obtain Standard debugging configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
- * @method void setStandardDebug(StandardDebugParameters $StandardDebug) Set Standard debugging configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+ * @method PostMaxSizeParameters getPostMaxSize() Obtain Configuration for POST request transmission.
+ * @method void setPostMaxSize(PostMaxSizeParameters $PostMaxSize) Set Configuration for POST request transmission.
+ * @method ClientIPHeaderParameters getClientIPHeader() Obtain Client IP origin-pull request header configuration.
+ * @method void setClientIPHeader(ClientIPHeaderParameters $ClientIPHeader) Set Client IP origin-pull request header configuration.
+ * @method ClientIPCountryParameters getClientIPCountry() Obtain Configuration of whether to carry the regional information of the client IP during origin-pull.
+ * @method void setClientIPCountry(ClientIPCountryParameters $ClientIPCountry) Set Configuration of whether to carry the regional information of the client IP during origin-pull.
+ * @method GrpcParameters getGrpc() Obtain The gRPC protocol supports configuration.
+ * @method void setGrpc(GrpcParameters $Grpc) Set The gRPC protocol supports configuration.
+ * @method NetworkErrorLoggingParameters getNetworkErrorLogging() Obtain Network error log configuration.
+ * @method void setNetworkErrorLogging(NetworkErrorLoggingParameters $NetworkErrorLogging) Set Network error log configuration.
+ * @method AccelerateMainlandParameters getAccelerateMainland() Obtain Acceleration optimization configuration in the Chinese mainland.
+ * @method void setAccelerateMainland(AccelerateMainlandParameters $AccelerateMainland) Set Acceleration optimization configuration in the Chinese mainland.
+ * @method StandardDebugParameters getStandardDebug() Obtain Standard Debug configuration.
+ * @method void setStandardDebug(StandardDebugParameters $StandardDebug) Set Standard Debug configuration.
  */
 class ZoneConfig extends AbstractModel
 {
     /**
-     * @var SmartRoutingParameters <Intelligent acceleration configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var SmartRoutingParameters Intelligent acceleration configuration.
      */
     public $SmartRouting;
 
     /**
-     * @var CacheConfigParameters Node cache expiration time configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var CacheConfigParameters Cache expiration time configuration.
      */
     public $Cache;
 
     /**
-     * @var MaxAgeParameters Browser cache rule configuration, which is used to set the default value of maxage and is disabled by default.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var MaxAgeParameters Browser cache configuration.
      */
     public $MaxAge;
 
     /**
-     * @var CacheKeyConfigParameters The node cache key configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var CacheKeyConfigParameters Node cache key configuration.
      */
     public $CacheKey;
 
     /**
-     * @var CachePrefreshParameters Cache prefresh configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var CachePrefreshParameters Cache pre-refresh configuration.
      */
     public $CachePrefresh;
 
     /**
      * @var OfflineCacheParameters Offline cache configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public $OfflineCache;
 
     /**
-     * @var CompressionParameters Smart compression configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var CompressionParameters Intelligent compression configuration.
      */
     public $Compression;
 
     /**
-     * @var ForceRedirectHTTPSParameters Forced https redirect configuration for access protocols.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var ForceRedirectHTTPSParameters Forced HTTPS redirect configuration for access protocols.
      */
     public $ForceRedirectHTTPS;
 
     /**
      * @var HSTSParameters HSTS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public $HSTS;
 
     /**
      * @var TLSConfigParameters TLS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public $TLSConfig;
 
     /**
      * @var OCSPStaplingParameters OCSP stapling configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public $OCSPStapling;
 
     /**
      * @var HTTP2Parameters HTTP/2 configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public $HTTP2;
 
     /**
      * @var QUICParameters QUIC access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public $QUIC;
 
     /**
-     * @var UpstreamHTTP2Parameters HTTP2 origin-pull configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var UpstreamHTTP2Parameters HTTP/2 origin-pull configuration.
      */
     public $UpstreamHTTP2;
 
     /**
      * @var IPv6Parameters IPv6 access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public $IPv6;
 
     /**
      * @var WebSocketParameters WebSocket configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public $WebSocket;
 
     /**
-     * @var PostMaxSizeParameters POST request transport configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var PostMaxSizeParameters Configuration for POST request transmission.
      */
     public $PostMaxSize;
 
     /**
-     * @var ClientIPHeaderParameters Client ip origin-pull request header configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var ClientIPHeaderParameters Client IP origin-pull request header configuration.
      */
     public $ClientIPHeader;
 
     /**
-     * @var ClientIPCountryParameters Whether to carry the region information of the client ip during origin-pull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var ClientIPCountryParameters Configuration of whether to carry the regional information of the client IP during origin-pull.
      */
     public $ClientIPCountry;
 
     /**
-     * @var GrpcParameters Configuration of grpc support.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var GrpcParameters The gRPC protocol supports configuration.
      */
     public $Grpc;
 
     /**
-     * @var NetworkErrorLoggingParameters Network Error Logging configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var NetworkErrorLoggingParameters Network error log configuration.
      */
     public $NetworkErrorLogging;
 
     /**
-     * @var AccelerateMainlandParameters Accelerate optimization and configuration in mainland china.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var AccelerateMainlandParameters Acceleration optimization configuration in the Chinese mainland.
      */
     public $AccelerateMainland;
 
     /**
-     * @var StandardDebugParameters Standard debugging configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @var StandardDebugParameters Standard Debug configuration.
      */
     public $StandardDebug;
 
     /**
-     * @param SmartRoutingParameters $SmartRouting <Intelligent acceleration configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param CacheConfigParameters $Cache Node cache expiration time configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param MaxAgeParameters $MaxAge Browser cache rule configuration, which is used to set the default value of maxage and is disabled by default.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param CacheKeyConfigParameters $CacheKey The node cache key configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param CachePrefreshParameters $CachePrefresh Cache prefresh configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param SmartRoutingParameters $SmartRouting Intelligent acceleration configuration.
+     * @param CacheConfigParameters $Cache Cache expiration time configuration.
+     * @param MaxAgeParameters $MaxAge Browser cache configuration.
+     * @param CacheKeyConfigParameters $CacheKey Node cache key configuration.
+     * @param CachePrefreshParameters $CachePrefresh Cache pre-refresh configuration.
      * @param OfflineCacheParameters $OfflineCache Offline cache configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param CompressionParameters $Compression Smart compression configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param ForceRedirectHTTPSParameters $ForceRedirectHTTPS Forced https redirect configuration for access protocols.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param CompressionParameters $Compression Intelligent compression configuration.
+     * @param ForceRedirectHTTPSParameters $ForceRedirectHTTPS Forced HTTPS redirect configuration for access protocols.
      * @param HSTSParameters $HSTS HSTS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param TLSConfigParameters $TLSConfig TLS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param OCSPStaplingParameters $OCSPStapling OCSP stapling configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param HTTP2Parameters $HTTP2 HTTP/2 configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param QUICParameters $QUIC QUIC access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param UpstreamHTTP2Parameters $UpstreamHTTP2 HTTP2 origin-pull configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param UpstreamHTTP2Parameters $UpstreamHTTP2 HTTP/2 origin-pull configuration.
      * @param IPv6Parameters $IPv6 IPv6 access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param WebSocketParameters $WebSocket WebSocket configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param PostMaxSizeParameters $PostMaxSize POST request transport configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param ClientIPHeaderParameters $ClientIPHeader Client ip origin-pull request header configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param ClientIPCountryParameters $ClientIPCountry Whether to carry the region information of the client ip during origin-pull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param GrpcParameters $Grpc Configuration of grpc support.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param NetworkErrorLoggingParameters $NetworkErrorLogging Network Error Logging configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param AccelerateMainlandParameters $AccelerateMainland Accelerate optimization and configuration in mainland china.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param StandardDebugParameters $StandardDebug Standard debugging configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param PostMaxSizeParameters $PostMaxSize Configuration for POST request transmission.
+     * @param ClientIPHeaderParameters $ClientIPHeader Client IP origin-pull request header configuration.
+     * @param ClientIPCountryParameters $ClientIPCountry Configuration of whether to carry the regional information of the client IP during origin-pull.
+     * @param GrpcParameters $Grpc The gRPC protocol supports configuration.
+     * @param NetworkErrorLoggingParameters $NetworkErrorLogging Network error log configuration.
+     * @param AccelerateMainlandParameters $AccelerateMainland Acceleration optimization configuration in the Chinese mainland.
+     * @param StandardDebugParameters $StandardDebug Standard Debug configuration.
      */
     function __construct()
     {

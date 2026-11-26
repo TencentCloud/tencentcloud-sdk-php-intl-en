@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Custom Variable rule operation.
  *
- * @method string getName() Obtain <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: custom variable settings;</li>
- * @method void setName(string $Name) Set <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: custom variable settings;</li>
+ * @method string getName() Obtain <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: Custom Variable settings;</li>
+ * @method void setName(string $Name) Set <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: Custom Variable settings;</li>
  * @method SetParameters getSetParameters() Obtain <p>Custom Variable parameter settings. If there are multiple operations in this parameter, they are executed in sequence according to the array order. When the value of Name is Set, this parameter is required.</p>
  * @method void setSetParameters(SetParameters $SetParameters) Set <p>Custom Variable parameter settings. If there are multiple operations in this parameter, they are executed in sequence according to the array order. When the value of Name is Set, this parameter is required.</p>
  */
 class CustomVariableOperationRuleAction extends AbstractModel
 {
     /**
-     * @var string <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: custom variable settings;</li>
+     * @var string <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: Custom Variable settings;</li>
      */
     public $Name;
 
@@ -38,7 +38,7 @@ class CustomVariableOperationRuleAction extends AbstractModel
     public $SetParameters;
 
     /**
-     * @param string $Name <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: custom variable settings;</li>
+     * @param string $Name <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: Custom Variable settings;</li>
      * @param SetParameters $SetParameters <p>Custom Variable parameter settings. If there are multiple operations in this parameter, they are executed in sequence according to the array order. When the value of Name is Set, this parameter is required.</p>
      */
     function __construct()

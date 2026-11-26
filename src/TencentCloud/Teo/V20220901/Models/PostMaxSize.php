@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Maximum size of the file uploaded for streaming via a POST request
+ * POST request upload file streaming transmission maximum limit
  *
- * @method string getSwitch() Obtain Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
- * @method void setSwitch(string $Switch) Set Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
- * @method integer getMaxSize() Obtain Specifies the maximum limit. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
- * @method void setMaxSize(integer $MaxSize) Set Specifies the maximum limit. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
+ * @method string getSwitch() Obtain Whether to enable the POST request upload file limit. The platform defaults to a limit of 32 MB. Valid values:
+<li>on: enable limit;</li>
+<li>off: disables the limit.</li>
+ * @method void setSwitch(string $Switch) Set Whether to enable the POST request upload file limit. The platform defaults to a limit of 32 MB. Valid values:
+<li>on: enable limit;</li>
+<li>off: disables the limit.</li>
+ * @method integer getMaxSize() Obtain Maximum limit. This field is valid only when Switch is on. The value ranges from 1 MB to 800 MB, in bytes.
+ * @method void setMaxSize(integer $MaxSize) Set Maximum limit. This field is valid only when Switch is on. The value ranges from 1 MB to 800 MB, in bytes.
  */
 class PostMaxSize extends AbstractModel
 {
     /**
-     * @var string Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+     * @var string Whether to enable the POST request upload file limit. The platform defaults to a limit of 32 MB. Valid values:
+<li>on: enable limit;</li>
+<li>off: disables the limit.</li>
      */
     public $Switch;
 
     /**
-     * @var integer Specifies the maximum limit. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
+     * @var integer Maximum limit. This field is valid only when Switch is on. The value ranges from 1 MB to 800 MB, in bytes.
      */
     public $MaxSize;
 
     /**
-     * @param string $Switch Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
-     * @param integer $MaxSize Specifies the maximum limit. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
+     * @param string $Switch Whether to enable the POST request upload file limit. The platform defaults to a limit of 32 MB. Valid values:
+<li>on: enable limit;</li>
+<li>off: disables the limit.</li>
+     * @param integer $MaxSize Maximum limit. This field is valid only when Switch is on. The value ranges from 1 MB to 800 MB, in bytes.
      */
     function __construct()
     {

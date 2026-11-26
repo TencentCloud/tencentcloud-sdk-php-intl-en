@@ -18,40 +18,40 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CNAME access type site parameter description.
+ * Details of the site parameters for the CNAME access type.
  *
- * @method integer getIsFake() Obtain Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+ * @method integer getIsFake() Obtain Whether it is a fake site. Valid values:
+<li> 0: non-fake site</li>
+<li> 1: Fake site.</li>
 
- * @method void setIsFake(integer $IsFake) Set Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+ * @method void setIsFake(integer $IsFake) Set Whether it is a fake site. Valid values:
+<li> 0: non-fake site</li>
+<li> 1: Fake site.</li>
 
- * @method OwnershipVerification getOwnershipVerification() Obtain Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
- * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+ * @method OwnershipVerification getOwnershipVerification() Obtain Ownership verification information. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+ * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set Ownership verification information. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
  */
 class CNAMEDetail extends AbstractModel
 {
     /**
-     * @var integer Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * @var integer Whether it is a fake site. Valid values:
+<li> 0: non-fake site</li>
+<li> 1: Fake site.</li>
 
      */
     public $IsFake;
 
     /**
-     * @var OwnershipVerification Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+     * @var OwnershipVerification Ownership verification information. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
      */
     public $OwnershipVerification;
 
     /**
-     * @param integer $IsFake Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * @param integer $IsFake Whether it is a fake site. Valid values:
+<li> 0: non-fake site</li>
+<li> 1: Fake site.</li>
 
-     * @param OwnershipVerification $OwnershipVerification Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+     * @param OwnershipVerification $OwnershipVerification Ownership verification information. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
      */
     function __construct()
     {

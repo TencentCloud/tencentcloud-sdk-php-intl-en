@@ -20,130 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAccelerationDomain request structure.
  *
- * @method string getZoneId() Obtain ID of the site related with the acceleration domain name.
- * @method void setZoneId(string $ZoneId) Set ID of the site related with the acceleration domain name.
- * @method string getDomainName() Obtain Acceleration domain name
- * @method void setDomainName(string $DomainName) Set Acceleration domain name
- * @method OriginInfo getOriginInfo() Obtain Details of the origin.
- * @method void setOriginInfo(OriginInfo $OriginInfo) Set Details of the origin.
- * @method string getOriginProtocol() Obtain Origin-Pull protocol. valid values:.
-<Li>FOLLOW: follow protocol;</li>.
-<Li>HTTP: http protocol for origin-pull;</li>.
-<li>HTTPS: the origin server uses the HTTPS protocol.</li>defaults to FOLLOW if left blank.
- * @method void setOriginProtocol(string $OriginProtocol) Set Origin-Pull protocol. valid values:.
-<Li>FOLLOW: follow protocol;</li>.
-<Li>HTTP: http protocol for origin-pull;</li>.
-<li>HTTPS: the origin server uses the HTTPS protocol.</li>defaults to FOLLOW if left blank.
- * @method integer getHttpOriginPort() Obtain HTTP origin port. default value 80. value range: 1–65535.
+ * @method string getZoneId() Obtain Zone ID of the acceleration domain name.
+ * @method void setZoneId(string $ZoneId) Set Zone ID of the acceleration domain name.
+ * @method string getDomainName() Obtain Acceleration domain name.
+ * @method void setDomainName(string $DomainName) Set Acceleration domain name.
+ * @method OriginInfo getOriginInfo() Obtain Origin server information.
+ * @method void setOriginInfo(OriginInfo $OriginInfo) Set Origin server information.
+ * @method string getOriginProtocol() Obtain Origin-pull protocol. Valid values:
+<li>FOLLOW: follow protocol;</li>
+<li>HTTP: Origin-pull over HTTP protocol;</li>
+<li>HTTPS: origin-pull over the HTTPS protocol.</li>If not specified, the default is FOLLOW.
+ * @method void setOriginProtocol(string $OriginProtocol) Set Origin-pull protocol. Valid values:
+<li>FOLLOW: follow protocol;</li>
+<li>HTTP: Origin-pull over HTTP protocol;</li>
+<li>HTTPS: origin-pull over the HTTPS protocol.</li>If not specified, the default is FOLLOW.
+ * @method integer getHttpOriginPort() Obtain HTTP origin-pull port. Default value: 80. Value range: 1–65535.
 This parameter is valid only when OriginProtocol is FOLLOW or HTTP.
- * @method void setHttpOriginPort(integer $HttpOriginPort) Set HTTP origin port. default value 80. value range: 1–65535.
+ * @method void setHttpOriginPort(integer $HttpOriginPort) Set HTTP origin-pull port. Default value: 80. Value range: 1–65535.
 This parameter is valid only when OriginProtocol is FOLLOW or HTTP.
- * @method integer getHttpsOriginPort() Obtain HTTPS origin port. default value 443. value range: 1–65535.
+ * @method integer getHttpsOriginPort() Obtain HTTPS origin port. Default value: 443. Value range: 1–65535.
 This parameter is valid only when OriginProtocol is FOLLOW or HTTPS.
- * @method void setHttpsOriginPort(integer $HttpsOriginPort) Set HTTPS origin port. default value 443. value range: 1–65535.
+ * @method void setHttpsOriginPort(integer $HttpsOriginPort) Set HTTPS origin port. Default value: 443. Value range: 1–65535.
 This parameter is valid only when OriginProtocol is FOLLOW or HTTPS.
- * @method string getIPv6Status() Obtain IPv6 status. valid values:.
-<li>follow: adhere to the site IPv6 configuration;</li>.
-<li>on: enabled status;</li>.
-<li>off: disabled.</li>if left empty, the default value is follow.
- * @method void setIPv6Status(string $IPv6Status) Set IPv6 status. valid values:.
-<li>follow: adhere to the site IPv6 configuration;</li>.
-<li>on: enabled status;</li>.
-<li>off: disabled.</li>if left empty, the default value is follow.
- * @method string getSharedCNAME() Obtain Specify the shared CNAME address for domain binding. use the default CNAME when not specified.
-Bind shared CNAME requires the scheduling policy of all domains to be consistent. the following configuration affects the scheduling policy. when inconsistent, bind shared CNAME will be processed as follows:.
--IPv6 access: not allowed to create domain name. change IPv6Status to keep it configured the same as other domain names bound to the shared CNAME.
--Anti-DDoS: if the selected shared CNAME has DDoS protection enabled, domain activation will enable DDoS protection by default.
--Network optimization in the chinese mainland (international acceleration): not allowed to create a domain name. keep the network optimization in the chinese mainland (international acceleration) configuration of the current domain name consistent with the other domain names bound to the shared CNAME and try again after.
+ * @method string getIPv6Status() Obtain IPv6 status. Valid values:
+<li>follow: follow the site IPv6 configuration;</li>
+<li>`on`: Enabled status;</li>
+<li>off: Disabled.</li>If not specified, the default is: follow.
+ * @method void setIPv6Status(string $IPv6Status) Set IPv6 status. Valid values:
+<li>follow: follow the site IPv6 configuration;</li>
+<li>`on`: Enabled status;</li>
+<li>off: Disabled.</li>If not specified, the default is: follow.
+ * @method string getSharedCNAME() Obtain Shared CNAME address bound to the specified domain. If not specified, the default CNAME is used.
+Binding a shared CNAME requires the scheduling policies of all domains to be consistent. The following configurations affect the scheduling policy. When they are inconsistent, binding a shared CNAME is processed as follows:
+- IPv6 access: not allowed to create a domain name. Modify IPv6Status to match the domain configuration of the rest bound to the shared CNAME.
+-DDoS protection: If DDoS protection is enabled for the selected shared CNAME, DDoS protection will be enabled for the domain by default when you create the domain.
+-Network optimization in the Chinese mainland (international acceleration): You are not allowed to create a domain name. Make sure the network optimization in the Chinese mainland (international acceleration) configuration of the current domain name is consistent with the rest of the domain names bound to the shared CNAME, and try again later.
 
-Note: shared CNAME is currently in beta test. if you need to use it, contact us to enable it.
- * @method void setSharedCNAME(string $SharedCNAME) Set Specify the shared CNAME address for domain binding. use the default CNAME when not specified.
-Bind shared CNAME requires the scheduling policy of all domains to be consistent. the following configuration affects the scheduling policy. when inconsistent, bind shared CNAME will be processed as follows:.
--IPv6 access: not allowed to create domain name. change IPv6Status to keep it configured the same as other domain names bound to the shared CNAME.
--Anti-DDoS: if the selected shared CNAME has DDoS protection enabled, domain activation will enable DDoS protection by default.
--Network optimization in the chinese mainland (international acceleration): not allowed to create a domain name. keep the network optimization in the chinese mainland (international acceleration) configuration of the current domain name consistent with the other domain names bound to the shared CNAME and try again after.
+Note: Shared CNAME is currently in beta test. To use it, contact us to enable it.
+ * @method void setSharedCNAME(string $SharedCNAME) Set Shared CNAME address bound to the specified domain. If not specified, the default CNAME is used.
+Binding a shared CNAME requires the scheduling policies of all domains to be consistent. The following configurations affect the scheduling policy. When they are inconsistent, binding a shared CNAME is processed as follows:
+- IPv6 access: not allowed to create a domain name. Modify IPv6Status to match the domain configuration of the rest bound to the shared CNAME.
+-DDoS protection: If DDoS protection is enabled for the selected shared CNAME, DDoS protection will be enabled for the domain by default when you create the domain.
+-Network optimization in the Chinese mainland (international acceleration): You are not allowed to create a domain name. Make sure the network optimization in the Chinese mainland (international acceleration) configuration of the current domain name is consistent with the rest of the domain names bound to the shared CNAME, and try again later.
 
-Note: shared CNAME is currently in beta test. if you need to use it, contact us to enable it.
+Note: Shared CNAME is currently in beta test. To use it, contact us to enable it.
  */
 class CreateAccelerationDomainRequest extends AbstractModel
 {
     /**
-     * @var string ID of the site related with the acceleration domain name.
+     * @var string Zone ID of the acceleration domain name.
      */
     public $ZoneId;
 
     /**
-     * @var string Acceleration domain name
+     * @var string Acceleration domain name.
      */
     public $DomainName;
 
     /**
-     * @var OriginInfo Details of the origin.
+     * @var OriginInfo Origin server information.
      */
     public $OriginInfo;
 
     /**
-     * @var string Origin-Pull protocol. valid values:.
-<Li>FOLLOW: follow protocol;</li>.
-<Li>HTTP: http protocol for origin-pull;</li>.
-<li>HTTPS: the origin server uses the HTTPS protocol.</li>defaults to FOLLOW if left blank.
+     * @var string Origin-pull protocol. Valid values:
+<li>FOLLOW: follow protocol;</li>
+<li>HTTP: Origin-pull over HTTP protocol;</li>
+<li>HTTPS: origin-pull over the HTTPS protocol.</li>If not specified, the default is FOLLOW.
      */
     public $OriginProtocol;
 
     /**
-     * @var integer HTTP origin port. default value 80. value range: 1–65535.
+     * @var integer HTTP origin-pull port. Default value: 80. Value range: 1–65535.
 This parameter is valid only when OriginProtocol is FOLLOW or HTTP.
      */
     public $HttpOriginPort;
 
     /**
-     * @var integer HTTPS origin port. default value 443. value range: 1–65535.
+     * @var integer HTTPS origin port. Default value: 443. Value range: 1–65535.
 This parameter is valid only when OriginProtocol is FOLLOW or HTTPS.
      */
     public $HttpsOriginPort;
 
     /**
-     * @var string IPv6 status. valid values:.
-<li>follow: adhere to the site IPv6 configuration;</li>.
-<li>on: enabled status;</li>.
-<li>off: disabled.</li>if left empty, the default value is follow.
+     * @var string IPv6 status. Valid values:
+<li>follow: follow the site IPv6 configuration;</li>
+<li>`on`: Enabled status;</li>
+<li>off: Disabled.</li>If not specified, the default is: follow.
      */
     public $IPv6Status;
 
     /**
-     * @var string Specify the shared CNAME address for domain binding. use the default CNAME when not specified.
-Bind shared CNAME requires the scheduling policy of all domains to be consistent. the following configuration affects the scheduling policy. when inconsistent, bind shared CNAME will be processed as follows:.
--IPv6 access: not allowed to create domain name. change IPv6Status to keep it configured the same as other domain names bound to the shared CNAME.
--Anti-DDoS: if the selected shared CNAME has DDoS protection enabled, domain activation will enable DDoS protection by default.
--Network optimization in the chinese mainland (international acceleration): not allowed to create a domain name. keep the network optimization in the chinese mainland (international acceleration) configuration of the current domain name consistent with the other domain names bound to the shared CNAME and try again after.
+     * @var string Shared CNAME address bound to the specified domain. If not specified, the default CNAME is used.
+Binding a shared CNAME requires the scheduling policies of all domains to be consistent. The following configurations affect the scheduling policy. When they are inconsistent, binding a shared CNAME is processed as follows:
+- IPv6 access: not allowed to create a domain name. Modify IPv6Status to match the domain configuration of the rest bound to the shared CNAME.
+-DDoS protection: If DDoS protection is enabled for the selected shared CNAME, DDoS protection will be enabled for the domain by default when you create the domain.
+-Network optimization in the Chinese mainland (international acceleration): You are not allowed to create a domain name. Make sure the network optimization in the Chinese mainland (international acceleration) configuration of the current domain name is consistent with the rest of the domain names bound to the shared CNAME, and try again later.
 
-Note: shared CNAME is currently in beta test. if you need to use it, contact us to enable it.
+Note: Shared CNAME is currently in beta test. To use it, contact us to enable it.
      */
     public $SharedCNAME;
 
     /**
-     * @param string $ZoneId ID of the site related with the acceleration domain name.
-     * @param string $DomainName Acceleration domain name
-     * @param OriginInfo $OriginInfo Details of the origin.
-     * @param string $OriginProtocol Origin-Pull protocol. valid values:.
-<Li>FOLLOW: follow protocol;</li>.
-<Li>HTTP: http protocol for origin-pull;</li>.
-<li>HTTPS: the origin server uses the HTTPS protocol.</li>defaults to FOLLOW if left blank.
-     * @param integer $HttpOriginPort HTTP origin port. default value 80. value range: 1–65535.
+     * @param string $ZoneId Zone ID of the acceleration domain name.
+     * @param string $DomainName Acceleration domain name.
+     * @param OriginInfo $OriginInfo Origin server information.
+     * @param string $OriginProtocol Origin-pull protocol. Valid values:
+<li>FOLLOW: follow protocol;</li>
+<li>HTTP: Origin-pull over HTTP protocol;</li>
+<li>HTTPS: origin-pull over the HTTPS protocol.</li>If not specified, the default is FOLLOW.
+     * @param integer $HttpOriginPort HTTP origin-pull port. Default value: 80. Value range: 1–65535.
 This parameter is valid only when OriginProtocol is FOLLOW or HTTP.
-     * @param integer $HttpsOriginPort HTTPS origin port. default value 443. value range: 1–65535.
+     * @param integer $HttpsOriginPort HTTPS origin port. Default value: 443. Value range: 1–65535.
 This parameter is valid only when OriginProtocol is FOLLOW or HTTPS.
-     * @param string $IPv6Status IPv6 status. valid values:.
-<li>follow: adhere to the site IPv6 configuration;</li>.
-<li>on: enabled status;</li>.
-<li>off: disabled.</li>if left empty, the default value is follow.
-     * @param string $SharedCNAME Specify the shared CNAME address for domain binding. use the default CNAME when not specified.
-Bind shared CNAME requires the scheduling policy of all domains to be consistent. the following configuration affects the scheduling policy. when inconsistent, bind shared CNAME will be processed as follows:.
--IPv6 access: not allowed to create domain name. change IPv6Status to keep it configured the same as other domain names bound to the shared CNAME.
--Anti-DDoS: if the selected shared CNAME has DDoS protection enabled, domain activation will enable DDoS protection by default.
--Network optimization in the chinese mainland (international acceleration): not allowed to create a domain name. keep the network optimization in the chinese mainland (international acceleration) configuration of the current domain name consistent with the other domain names bound to the shared CNAME and try again after.
+     * @param string $IPv6Status IPv6 status. Valid values:
+<li>follow: follow the site IPv6 configuration;</li>
+<li>`on`: Enabled status;</li>
+<li>off: Disabled.</li>If not specified, the default is: follow.
+     * @param string $SharedCNAME Shared CNAME address bound to the specified domain. If not specified, the default CNAME is used.
+Binding a shared CNAME requires the scheduling policies of all domains to be consistent. The following configurations affect the scheduling policy. When they are inconsistent, binding a shared CNAME is processed as follows:
+- IPv6 access: not allowed to create a domain name. Modify IPv6Status to match the domain configuration of the rest bound to the shared CNAME.
+-DDoS protection: If DDoS protection is enabled for the selected shared CNAME, DDoS protection will be enabled for the domain by default when you create the domain.
+-Network optimization in the Chinese mainland (international acceleration): You are not allowed to create a domain name. Make sure the network optimization in the Chinese mainland (international acceleration) configuration of the current domain name is consistent with the rest of the domain names bound to the shared CNAME, and try again later.
 
-Note: shared CNAME is currently in beta test. if you need to use it, contact us to enable it.
+Note: Shared CNAME is currently in beta test. To use it, contact us to enable it.
      */
     function __construct()
     {

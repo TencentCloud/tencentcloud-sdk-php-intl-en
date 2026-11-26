@@ -18,152 +18,152 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The condition of the exception rule
+ * Specific conditions for an exception rule to take effect.
  *
- * @method string getMatchFrom() Obtain The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`sip_proto`: Network layer protocol</li>
- * @method void setMatchFrom(string $MatchFrom) Set The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`sip_proto`: Network layer protocol</li>
- * @method string getMatchParam() Obtain The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
- * @method void setMatchParam(string $MatchParam) Set The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
- * @method string getOperator() Obtain The logical operator. Values:
-<li>`equal`: String equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
- * @method void setOperator(string $Operator) Set The logical operator. Values:
-<li>`equal`: String equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
- * @method string getMatchContent() Obtain The value of the parameter.
- * @method void setMatchContent(string $MatchContent) Set The value of the parameter.
+ * @method string getMatchFrom() Obtain Matching item. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>sip_proto: network layer protocol.</li>
+ * @method void setMatchFrom(string $MatchFrom) Set Matching item. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>sip_proto: network layer protocol.</li>
+ * @method string getMatchParam() Obtain Parameter of the matching item. Only when MatchFrom is header, you can use this parameter, and the key of the header can be set to this parameter.
+ * @method void setMatchParam(string $MatchParam) Set Parameter of the matching item. Only when MatchFrom is header, you can use this parameter, and the key of the header can be set to this parameter.
+ * @method string getOperator() Obtain Matching operator. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
+ * @method void setOperator(string $Operator) Set Matching operator. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
+ * @method string getMatchContent() Obtain Matching value.
+ * @method void setMatchContent(string $MatchContent) Set Matching value.
  */
 class ExceptUserRuleCondition extends AbstractModel
 {
     /**
-     * @var string The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`sip_proto`: Network layer protocol</li>
+     * @var string Matching item. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>sip_proto: network layer protocol.</li>
      */
     public $MatchFrom;
 
     /**
-     * @var string The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
+     * @var string Parameter of the matching item. Only when MatchFrom is header, you can use this parameter, and the key of the header can be set to this parameter.
      */
     public $MatchParam;
 
     /**
-     * @var string The logical operator. Values:
-<li>`equal`: String equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
+     * @var string Matching operator. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
      */
     public $Operator;
 
     /**
-     * @var string The value of the parameter.
+     * @var string Matching value.
      */
     public $MatchContent;
 
     /**
-     * @param string $MatchFrom The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`sip_proto`: Network layer protocol</li>
-     * @param string $MatchParam The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
-     * @param string $Operator The logical operator. Values:
-<li>`equal`: String equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
-     * @param string $MatchContent The value of the parameter.
+     * @param string $MatchFrom Matching item. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>sip_proto: network layer protocol.</li>
+     * @param string $MatchParam Parameter of the matching item. Only when MatchFrom is header, you can use this parameter, and the key of the header can be set to this parameter.
+     * @param string $Operator Matching operator. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
+     * @param string $MatchContent Matching value.
      */
     function __construct()
     {

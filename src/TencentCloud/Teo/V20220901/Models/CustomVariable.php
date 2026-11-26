@@ -18,10 +18,10 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom Variable details.
+ * Custom variable details.
  *
- * @method string getName() Obtain <p>Variable name. You need to fill in the complete prefix: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
- * @method void setName(string $Name) Set <p>Variable name. You need to fill in the complete prefix: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
+ * @method string getName() Obtain <p>Variable name. The complete prefix must be filled in: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
+ * @method void setName(string $Name) Set <p>Variable name. The complete prefix must be filled in: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
  * @method string getInitialValue() Obtain <p>Initial value of the variable. Supports the use of constant strings, variables, and formulas. Length cannot exceed 255 characters.</p>
  * @method void setInitialValue(string $InitialValue) Set <p>Initial value of the variable. Supports the use of constant strings, variables, and formulas. Length cannot exceed 255 characters.</p>
  * @method string getDescription() Obtain <p>Variable description. Length limited to no more than 60 characters.</p>
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CustomVariable extends AbstractModel
 {
     /**
-     * @var string <p>Variable name. You need to fill in the complete prefix: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
+     * @var string <p>Variable name. The complete prefix must be filled in: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
      */
     public $Name;
 
@@ -45,7 +45,7 @@ class CustomVariable extends AbstractModel
     public $Description;
 
     /**
-     * @param string $Name <p>Variable name. You need to fill in the complete prefix: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
+     * @param string $Name <p>Variable name. The complete prefix must be filled in: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
      * @param string $InitialValue <p>Initial value of the variable. Supports the use of constant strings, variables, and formulas. Length cannot exceed 255 characters.</p>
      * @param string $Description <p>Variable description. Length limited to no more than 60 characters.</p>
      */

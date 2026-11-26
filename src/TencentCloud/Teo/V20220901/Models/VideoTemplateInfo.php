@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Video stream configuration parameters.
  *
- * @method string getCodec() Obtain Encoding format for video streams. valid values: <li>H.264: use H.264 encoding;</li><li>H.265: use H.265 encoding.</li>.
- * @method void setCodec(string $Codec) Set Encoding format for video streams. valid values: <li>H.264: use H.264 encoding;</li><li>H.265: use H.265 encoding.</li>.
- * @method float getFps() Obtain Video frame rate. value ranges from 0 to 30. measurement unit: Hz.
-If the value is 0, the frame rate will be the same as that of the source video, with a maximum not exceeding 30.
+ * @method string getCodec() Obtain Encoding format for video streams. Optional values: <li>H.264: Use H.264 encoding;</li><li>H.265: Use H.265 encoding.</li>
+ * @method void setCodec(string $Codec) Set Encoding format for video streams. Optional values: <li>H.264: Use H.264 encoding;</li><li>H.265: Use H.265 encoding.</li>
+ * @method float getFps() Obtain Video frame rate. Value range: [0, 30]. Unit: Hz.
+If the value is 0, the frame rate will be the same as that of the source video, with a maximum of 30.
 Default value: 0.
- * @method void setFps(float $Fps) Set Video frame rate. value ranges from 0 to 30. measurement unit: Hz.
-If the value is 0, the frame rate will be the same as that of the source video, with a maximum not exceeding 30.
+ * @method void setFps(float $Fps) Set Video frame rate. Value range: [0, 30]. Unit: Hz.
+If the value is 0, the frame rate will be the same as that of the source video, with a maximum of 30.
 Default value: 0.
- * @method integer getBitrate() Obtain Specifies the bitrate of video stream. valid values: 0 and [128, 10000]. measurement unit: kbps.
-Value is 0, means automatically select video bitrate based on video image and quality.
+ * @method integer getBitrate() Obtain Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+If the value is 0, the bitrate is automatically selected based on the video footage and quality.
 Default value: 0.
- * @method void setBitrate(integer $Bitrate) Set Specifies the bitrate of video stream. valid values: 0 and [128, 10000]. measurement unit: kbps.
-Value is 0, means automatically select video bitrate based on video image and quality.
+ * @method void setBitrate(integer $Bitrate) Set Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+If the value is 0, the bitrate is automatically selected based on the video footage and quality.
 Default value: 0.
- * @method string getResolutionAdaptive() Obtain Resolution adaptation. available values: <li>open: enable. at this point, Width represents the long side of the video and Height represents the short side.</li><li>close: disable. at this point, Width represents the Width of the video and Height represents the Height.</li>default value: open.
- * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaptation. available values: <li>open: enable. at this point, Width represents the long side of the video and Height represents the short side.</li><li>close: disable. at this point, Width represents the Width of the video and Height represents the Height.</li>default value: open.
- * @method integer getWidth() Obtain The maximum value of the video stream Width (or long side). valid values: 0 and [128, 1920]. unit: px. <li>when Width and Height are both 0, the resolution is from the same source;</li> <li>when Width is 0 and Height is non-0, Width is scaled proportionally;</li> <li>when Width is non-0 and Height is 0, Height is scaled proportionally;</li> <li>when both Width and Height are non-0, the resolution is specified by the user.</li> default value: 0.
- * @method void setWidth(integer $Width) Set The maximum value of the video stream Width (or long side). valid values: 0 and [128, 1920]. unit: px. <li>when Width and Height are both 0, the resolution is from the same source;</li> <li>when Width is 0 and Height is non-0, Width is scaled proportionally;</li> <li>when Width is non-0 and Height is 0, Height is scaled proportionally;</li> <li>when both Width and Height are non-0, the resolution is specified by the user.</li> default value: 0.
- * @method integer getHeight() Obtain The maximum value of the video stream Height (or short side). valid values: 0 and [128, 1080]. unit: px. <li>when Width and Height are both 0, the resolution is from the same source;</li> <li>when Width is 0 and Height is non-0, Width is scaled proportionally;</li> <li>when Width is non-0 and Height is 0, the Height is scaled proportionally;</li> <li>when both Width and Height are non-0, the resolution is specified by the user.</li> default value: 0.
- * @method void setHeight(integer $Height) Set The maximum value of the video stream Height (or short side). valid values: 0 and [128, 1080]. unit: px. <li>when Width and Height are both 0, the resolution is from the same source;</li> <li>when Width is 0 and Height is non-0, Width is scaled proportionally;</li> <li>when Width is non-0 and Height is 0, the Height is scaled proportionally;</li> <li>when both Width and Height are non-0, the resolution is specified by the user.</li> default value: 0.
- * @method string getFillType() Obtain Filling method. specifies the processing method for transcoding when video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video. valid values: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched.</li><li>black: maintain video aspect ratio with edges filled with black.</li><li>white: maintain video aspect ratio with edges filled with white.</li><li>gauss: maintain video aspect ratio with gaussian blur filling for the rest of the edges.</li> default value: black.
- * @method void setFillType(string $FillType) Set Filling method. specifies the processing method for transcoding when video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video. valid values: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched.</li><li>black: maintain video aspect ratio with edges filled with black.</li><li>white: maintain video aspect ratio with edges filled with white.</li><li>gauss: maintain video aspect ratio with gaussian blur filling for the rest of the edges.</li> default value: black.
+ * @method string getResolutionAdaptive() Obtain Resolution adaptation. Available values: <li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side.</li><li>close: disable. At this point, Width represents the width of the video, and Height represents the height.</li>Default value: open.
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaptation. Available values: <li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side.</li><li>close: disable. At this point, Width represents the width of the video, and Height represents the height.</li>Default value: open.
+ * @method integer getWidth() Obtain The maximum value of the video stream width (or long side). Valid values: 0 and [128, 1920]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
+ * @method void setWidth(integer $Width) Set The maximum value of the video stream width (or long side). Valid values: 0 and [128, 1920]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
+ * @method integer getHeight() Obtain The maximum value of the video stream height (or short side). Valid values: 0 and [128, 1080]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
+ * @method void setHeight(integer $Height) Set The maximum value of the video stream height (or short side). Valid values: 0 and [128, 1080]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
+ * @method string getFillType() Obtain Filling method, which is the processing method for transcoding when the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, is called "filling". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched".</li><li>black: keep the video aspect ratio unchanged and fill the edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the edges with white.</li><li>gauss: keep the video aspect ratio unchanged and use Gaussian blur filling for the rest of the edges.</li>Default value: black.
+ * @method void setFillType(string $FillType) Set Filling method, which is the processing method for transcoding when the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, is called "filling". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched".</li><li>black: keep the video aspect ratio unchanged and fill the edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the edges with white.</li><li>gauss: keep the video aspect ratio unchanged and use Gaussian blur filling for the rest of the edges.</li>Default value: black.
  */
 class VideoTemplateInfo extends AbstractModel
 {
     /**
-     * @var string Encoding format for video streams. valid values: <li>H.264: use H.264 encoding;</li><li>H.265: use H.265 encoding.</li>.
+     * @var string Encoding format for video streams. Optional values: <li>H.264: Use H.264 encoding;</li><li>H.265: Use H.265 encoding.</li>
      */
     public $Codec;
 
     /**
-     * @var float Video frame rate. value ranges from 0 to 30. measurement unit: Hz.
-If the value is 0, the frame rate will be the same as that of the source video, with a maximum not exceeding 30.
+     * @var float Video frame rate. Value range: [0, 30]. Unit: Hz.
+If the value is 0, the frame rate will be the same as that of the source video, with a maximum of 30.
 Default value: 0.
      */
     public $Fps;
 
     /**
-     * @var integer Specifies the bitrate of video stream. valid values: 0 and [128, 10000]. measurement unit: kbps.
-Value is 0, means automatically select video bitrate based on video image and quality.
+     * @var integer Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+If the value is 0, the bitrate is automatically selected based on the video footage and quality.
 Default value: 0.
      */
     public $Bitrate;
 
     /**
-     * @var string Resolution adaptation. available values: <li>open: enable. at this point, Width represents the long side of the video and Height represents the short side.</li><li>close: disable. at this point, Width represents the Width of the video and Height represents the Height.</li>default value: open.
+     * @var string Resolution adaptation. Available values: <li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side.</li><li>close: disable. At this point, Width represents the width of the video, and Height represents the height.</li>Default value: open.
      */
     public $ResolutionAdaptive;
 
     /**
-     * @var integer The maximum value of the video stream Width (or long side). valid values: 0 and [128, 1920]. unit: px. <li>when Width and Height are both 0, the resolution is from the same source;</li> <li>when Width is 0 and Height is non-0, Width is scaled proportionally;</li> <li>when Width is non-0 and Height is 0, Height is scaled proportionally;</li> <li>when both Width and Height are non-0, the resolution is specified by the user.</li> default value: 0.
+     * @var integer The maximum value of the video stream width (or long side). Valid values: 0 and [128, 1920]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
      */
     public $Width;
 
     /**
-     * @var integer The maximum value of the video stream Height (or short side). valid values: 0 and [128, 1080]. unit: px. <li>when Width and Height are both 0, the resolution is from the same source;</li> <li>when Width is 0 and Height is non-0, Width is scaled proportionally;</li> <li>when Width is non-0 and Height is 0, the Height is scaled proportionally;</li> <li>when both Width and Height are non-0, the resolution is specified by the user.</li> default value: 0.
+     * @var integer The maximum value of the video stream height (or short side). Valid values: 0 and [128, 1080]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
      */
     public $Height;
 
     /**
-     * @var string Filling method. specifies the processing method for transcoding when video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video. valid values: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched.</li><li>black: maintain video aspect ratio with edges filled with black.</li><li>white: maintain video aspect ratio with edges filled with white.</li><li>gauss: maintain video aspect ratio with gaussian blur filling for the rest of the edges.</li> default value: black.
+     * @var string Filling method, which is the processing method for transcoding when the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, is called "filling". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched".</li><li>black: keep the video aspect ratio unchanged and fill the edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the edges with white.</li><li>gauss: keep the video aspect ratio unchanged and use Gaussian blur filling for the rest of the edges.</li>Default value: black.
      */
     public $FillType;
 
     /**
-     * @param string $Codec Encoding format for video streams. valid values: <li>H.264: use H.264 encoding;</li><li>H.265: use H.265 encoding.</li>.
-     * @param float $Fps Video frame rate. value ranges from 0 to 30. measurement unit: Hz.
-If the value is 0, the frame rate will be the same as that of the source video, with a maximum not exceeding 30.
+     * @param string $Codec Encoding format for video streams. Optional values: <li>H.264: Use H.264 encoding;</li><li>H.265: Use H.265 encoding.</li>
+     * @param float $Fps Video frame rate. Value range: [0, 30]. Unit: Hz.
+If the value is 0, the frame rate will be the same as that of the source video, with a maximum of 30.
 Default value: 0.
-     * @param integer $Bitrate Specifies the bitrate of video stream. valid values: 0 and [128, 10000]. measurement unit: kbps.
-Value is 0, means automatically select video bitrate based on video image and quality.
+     * @param integer $Bitrate Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+If the value is 0, the bitrate is automatically selected based on the video footage and quality.
 Default value: 0.
-     * @param string $ResolutionAdaptive Resolution adaptation. available values: <li>open: enable. at this point, Width represents the long side of the video and Height represents the short side.</li><li>close: disable. at this point, Width represents the Width of the video and Height represents the Height.</li>default value: open.
-     * @param integer $Width The maximum value of the video stream Width (or long side). valid values: 0 and [128, 1920]. unit: px. <li>when Width and Height are both 0, the resolution is from the same source;</li> <li>when Width is 0 and Height is non-0, Width is scaled proportionally;</li> <li>when Width is non-0 and Height is 0, Height is scaled proportionally;</li> <li>when both Width and Height are non-0, the resolution is specified by the user.</li> default value: 0.
-     * @param integer $Height The maximum value of the video stream Height (or short side). valid values: 0 and [128, 1080]. unit: px. <li>when Width and Height are both 0, the resolution is from the same source;</li> <li>when Width is 0 and Height is non-0, Width is scaled proportionally;</li> <li>when Width is non-0 and Height is 0, the Height is scaled proportionally;</li> <li>when both Width and Height are non-0, the resolution is specified by the user.</li> default value: 0.
-     * @param string $FillType Filling method. specifies the processing method for transcoding when video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video. valid values: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched.</li><li>black: maintain video aspect ratio with edges filled with black.</li><li>white: maintain video aspect ratio with edges filled with white.</li><li>gauss: maintain video aspect ratio with gaussian blur filling for the rest of the edges.</li> default value: black.
+     * @param string $ResolutionAdaptive Resolution adaptation. Available values: <li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side.</li><li>close: disable. At this point, Width represents the width of the video, and Height represents the height.</li>Default value: open.
+     * @param integer $Width The maximum value of the video stream width (or long side). Valid values: 0 and [128, 1920]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
+     * @param integer $Height The maximum value of the video stream height (or short side). Valid values: 0 and [128, 1080]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
+     * @param string $FillType Filling method, which is the processing method for transcoding when the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, is called "filling". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched".</li><li>black: keep the video aspect ratio unchanged and fill the edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the edges with white.</li><li>gauss: keep the video aspect ratio unchanged and use Gaussian blur filling for the rest of the edges.</li>Default value: black.
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSharedCNAME request structure.
  *
- * @method string getZoneId() Obtain ID of the site to which the shared CNAME belongs.
- * @method void setZoneId(string $ZoneId) Set ID of the site to which the shared CNAME belongs.
- * @method string getSharedCNAME() Obtain The shared CNAME to be deleted
- * @method void setSharedCNAME(string $SharedCNAME) Set The shared CNAME to be deleted
+ * @method string getZoneId() Obtain ID of the site associated with the shared CNAME.
+ * @method void setZoneId(string $ZoneId) Set ID of the site associated with the shared CNAME.
+ * @method string getSharedCNAME() Obtain Shared CNAME that needs to be deleted.
+ * @method void setSharedCNAME(string $SharedCNAME) Set Shared CNAME that needs to be deleted.
  */
 class DeleteSharedCNAMERequest extends AbstractModel
 {
     /**
-     * @var string ID of the site to which the shared CNAME belongs.
+     * @var string ID of the site associated with the shared CNAME.
      */
     public $ZoneId;
 
     /**
-     * @var string The shared CNAME to be deleted
+     * @var string Shared CNAME that needs to be deleted.
      */
     public $SharedCNAME;
 
     /**
-     * @param string $ZoneId ID of the site to which the shared CNAME belongs.
-     * @param string $SharedCNAME The shared CNAME to be deleted
+     * @param string $ZoneId ID of the site associated with the shared CNAME.
+     * @param string $SharedCNAME Shared CNAME that needs to be deleted.
      */
     function __construct()
     {

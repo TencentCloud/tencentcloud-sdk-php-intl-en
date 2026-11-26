@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDnsRecords request structure.
  *
- * @method string getZoneId() Obtain Zone id.
- * @method void setZoneId(string $ZoneId) Set Zone id.
- * @method array getDnsRecords() Obtain DNS record modification data list, up to 100 entries can be modified at a time.
- * @method void setDnsRecords(array $DnsRecords) Set DNS record modification data list, up to 100 entries can be modified at a time.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method array getDnsRecords() Obtain DNS record modification data list. Up to 100 records can be modified at a time.
+ * @method void setDnsRecords(array $DnsRecords) Set DNS record modification data list. Up to 100 records can be modified at a time.
  */
 class ModifyDnsRecordsRequest extends AbstractModel
 {
     /**
-     * @var string Zone id.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var array DNS record modification data list, up to 100 entries can be modified at a time.
+     * @var array DNS record modification data list. Up to 100 records can be modified at a time.
      */
     public $DnsRecords;
 
     /**
-     * @param string $ZoneId Zone id.
-     * @param array $DnsRecords DNS record modification data list, up to 100 entries can be modified at a time.
+     * @param string $ZoneId Zone ID.
+     * @param array $DnsRecords DNS record modification data list. Up to 100 records can be modified at a time.
      */
     function __construct()
     {

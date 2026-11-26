@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getProxyId() Obtain Layer 4 proxy instance ID.
- * @method void setProxyId(string $ProxyId) Set Layer 4 proxy instance ID.
- * @method array getL4ProxyRules() Obtain List of forwarding rules. A single request supports up to 200 forwarding rules.
-Note: When L4ProxyRule is used here, Protocol, PortRange, OriginType, OriginValue, and OriginPortRange are required fields; ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields; do not fill in RuleId and Status.
- * @method void setL4ProxyRules(array $L4ProxyRules) Set List of forwarding rules. A single request supports up to 200 forwarding rules.
-Note: When L4ProxyRule is used here, Protocol, PortRange, OriginType, OriginValue, and OriginPortRange are required fields; ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields; do not fill in RuleId and Status.
+ * @method string getProxyId() Obtain Layer 4 Proxy Instance ID.
+ * @method void setProxyId(string $ProxyId) Set Layer 4 Proxy Instance ID.
+ * @method array getL4ProxyRules() Obtain Forwarding rule list. Supports up to 200 forwarding rules at a time.
+Note: When L4ProxyRule is used here, Protocol, PortRange, OriginType, OriginValue, and OriginPortRange are required fields. ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields. RuleId and Status should not be filled.
+ * @method void setL4ProxyRules(array $L4ProxyRules) Set Forwarding rule list. Supports up to 200 forwarding rules at a time.
+Note: When L4ProxyRule is used here, Protocol, PortRange, OriginType, OriginValue, and OriginPortRange are required fields. ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields. RuleId and Status should not be filled.
  */
 class CreateL4ProxyRulesRequest extends AbstractModel
 {
@@ -37,21 +37,21 @@ class CreateL4ProxyRulesRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Layer 4 proxy instance ID.
+     * @var string Layer 4 Proxy Instance ID.
      */
     public $ProxyId;
 
     /**
-     * @var array List of forwarding rules. A single request supports up to 200 forwarding rules.
-Note: When L4ProxyRule is used here, Protocol, PortRange, OriginType, OriginValue, and OriginPortRange are required fields; ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields; do not fill in RuleId and Status.
+     * @var array Forwarding rule list. Supports up to 200 forwarding rules at a time.
+Note: When L4ProxyRule is used here, Protocol, PortRange, OriginType, OriginValue, and OriginPortRange are required fields. ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields. RuleId and Status should not be filled.
      */
     public $L4ProxyRules;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $ProxyId Layer 4 proxy instance ID.
-     * @param array $L4ProxyRules List of forwarding rules. A single request supports up to 200 forwarding rules.
-Note: When L4ProxyRule is used here, Protocol, PortRange, OriginType, OriginValue, and OriginPortRange are required fields; ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields; do not fill in RuleId and Status.
+     * @param string $ProxyId Layer 4 Proxy Instance ID.
+     * @param array $L4ProxyRules Forwarding rule list. Supports up to 200 forwarding rules at a time.
+Note: When L4ProxyRule is used here, Protocol, PortRange, OriginType, OriginValue, and OriginPortRange are required fields. ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields. RuleId and Status should not be filled.
      */
     function __construct()
     {

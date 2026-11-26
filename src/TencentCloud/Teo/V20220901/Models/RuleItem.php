@@ -18,68 +18,68 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rule details of the rule engine
+ * Rule engine rule details
  *
- * @method string getRuleId() Obtain The rule ID.
- * @method void setRuleId(string $RuleId) Set The rule ID.
- * @method string getRuleName() Obtain The rule name. It is a string that can contain 1–255 characters.
- * @method void setRuleName(string $RuleName) Set The rule name. It is a string that can contain 1–255 characters.
- * @method string getStatus() Obtain Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
- * @method void setStatus(string $Status) Set Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
- * @method array getRules() Obtain The rule content.
- * @method void setRules(array $Rules) Set The rule content.
- * @method integer getRulePriority() Obtain The rule priority. The greater the value, the higher the priority. The minimum value is `1`.
- * @method void setRulePriority(integer $RulePriority) Set The rule priority. The greater the value, the higher the priority. The minimum value is `1`.
- * @method array getTags() Obtain Tag of the rule.
- * @method void setTags(array $Tags) Set Tag of the rule.
+ * @method string getRuleId() Obtain Rule ID.
+ * @method void setRuleId(string $RuleId) Set Rule ID.
+ * @method string getRuleName() Obtain Rule name. The name string must be 1 to 255 characters in length.
+ * @method void setRuleName(string $RuleName) Set Rule name. The name string must be 1 to 255 characters in length.
+ * @method string getStatus() Obtain Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: disabled. </li>
+ * @method void setStatus(string $Status) Set Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: disabled. </li>
+ * @method array getRules() Obtain Rule content.
+ * @method void setRules(array $Rules) Set Rule content.
+ * @method integer getRulePriority() Obtain Rule priority. A larger value indicates higher priority. Minimum value: 1.
+ * @method void setRulePriority(integer $RulePriority) Set Rule priority. A larger value indicates higher priority. Minimum value: 1.
+ * @method array getTags() Obtain Rule tag.
+ * @method void setTags(array $Tags) Set Rule tag.
  */
 class RuleItem extends AbstractModel
 {
     /**
-     * @var string The rule ID.
+     * @var string Rule ID.
      */
     public $RuleId;
 
     /**
-     * @var string The rule name. It is a string that can contain 1–255 characters.
+     * @var string Rule name. The name string must be 1 to 255 characters in length.
      */
     public $RuleName;
 
     /**
-     * @var string Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
+     * @var string Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: disabled. </li>
      */
     public $Status;
 
     /**
-     * @var array The rule content.
+     * @var array Rule content.
      */
     public $Rules;
 
     /**
-     * @var integer The rule priority. The greater the value, the higher the priority. The minimum value is `1`.
+     * @var integer Rule priority. A larger value indicates higher priority. Minimum value: 1.
      */
     public $RulePriority;
 
     /**
-     * @var array Tag of the rule.
+     * @var array Rule tag.
      */
     public $Tags;
 
     /**
-     * @param string $RuleId The rule ID.
-     * @param string $RuleName The rule name. It is a string that can contain 1–255 characters.
-     * @param string $Status Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
-     * @param array $Rules The rule content.
-     * @param integer $RulePriority The rule priority. The greater the value, the higher the priority. The minimum value is `1`.
-     * @param array $Tags Tag of the rule.
+     * @param string $RuleId Rule ID.
+     * @param string $RuleName Rule name. The name string must be 1 to 255 characters in length.
+     * @param string $Status Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: disabled. </li>
+     * @param array $Rules Rule content.
+     * @param integer $RulePriority Rule priority. A larger value indicates higher priority. Minimum value: 1.
+     * @param array $Tags Rule tag.
      */
     function __construct()
     {

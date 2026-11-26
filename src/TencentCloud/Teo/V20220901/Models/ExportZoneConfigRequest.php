@@ -22,23 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method array getTypes() Obtain Export the type list of configuration items. Leave it blank to export all types of configurations. Currently supported values include:
-<ul>
-<li>L7AccelerationConfig: Exporting the Layer-7 acceleration configuration, corresponding to the console "Site Acceleration - Global Acceleration Configuration" and "Site Acceleration - Rule Engine".</li>
-<li>WebSecurity: Exporting the web protection configuration.</li>
-<li>AccelerationDomain: Exporting the acceleration domain configuration, corresponding to the console "DNS - Domain Name Management" and "DNS - Shared CNAME Management".</li>
-<li>Origin: Exporting the origin configuration, corresponding to the console "Origin Configuration - Origin Group" and "Origin Configuration - Load Balancing".</li>
-</ul>
-Note: Types supported for future export will increase with iterations. When exporting all types, pay attention to export file size. It is recommended to specify the configuration types to be exported to control the request and response packet payload size.
-
- * @method void setTypes(array $Types) Set Export the type list of configuration items. Leave it blank to export all types of configurations. Currently supported values include:
-<ul>
-<li>L7AccelerationConfig: Exporting the Layer-7 acceleration configuration, corresponding to the console "Site Acceleration - Global Acceleration Configuration" and "Site Acceleration - Rule Engine".</li>
-<li>WebSecurity: Exporting the web protection configuration.</li>
-<li>AccelerationDomain: Exporting the acceleration domain configuration, corresponding to the console "DNS - Domain Name Management" and "DNS - Shared CNAME Management".</li>
-<li>Origin: Exporting the origin configuration, corresponding to the console "Origin Configuration - Origin Group" and "Origin Configuration - Load Balancing".</li>
-</ul>
-Note: Types supported for future export will increase with iterations. When exporting all types, pay attention to export file size. It is recommended to specify the configuration types to be exported to control the request and response packet payload size.
+ * @method array getTypes() Obtain Type list of configuration items to export. If not specified, all types of configurations will be exported. Currently supported values: <li>L7AccelerationConfig: exports the Layer-7 acceleration configuration, corresponding to Site Acceleration - Global Acceleration Configuration and Site Acceleration - Rule Engine in the console.</li><li>WebSecurity: exports the Web protection configuration.</li><li>AccelerationDomain: exports the acceleration domain name configuration, corresponding to DNS - Domain Name Management and DNS - Shared CNAME Management in the console.</li><li>Origin: exports the origin configuration, corresponding to Origin Configuration - Origin Groups and Origin Configuration - Load Balancing in the console.</li> Note: The types supported for future export will increase with iterations. Pay attention to export file size when exporting all types. It is recommended to specify the configuration types to be exported to control the request and response packet payload size.
+ * @method void setTypes(array $Types) Set Type list of configuration items to export. If not specified, all types of configurations will be exported. Currently supported values: <li>L7AccelerationConfig: exports the Layer-7 acceleration configuration, corresponding to Site Acceleration - Global Acceleration Configuration and Site Acceleration - Rule Engine in the console.</li><li>WebSecurity: exports the Web protection configuration.</li><li>AccelerationDomain: exports the acceleration domain name configuration, corresponding to DNS - Domain Name Management and DNS - Shared CNAME Management in the console.</li><li>Origin: exports the origin configuration, corresponding to Origin Configuration - Origin Groups and Origin Configuration - Load Balancing in the console.</li> Note: The types supported for future export will increase with iterations. Pay attention to export file size when exporting all types. It is recommended to specify the configuration types to be exported to control the request and response packet payload size.
  */
 class ExportZoneConfigRequest extends AbstractModel
 {
@@ -48,28 +33,13 @@ class ExportZoneConfigRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array Export the type list of configuration items. Leave it blank to export all types of configurations. Currently supported values include:
-<ul>
-<li>L7AccelerationConfig: Exporting the Layer-7 acceleration configuration, corresponding to the console "Site Acceleration - Global Acceleration Configuration" and "Site Acceleration - Rule Engine".</li>
-<li>WebSecurity: Exporting the web protection configuration.</li>
-<li>AccelerationDomain: Exporting the acceleration domain configuration, corresponding to the console "DNS - Domain Name Management" and "DNS - Shared CNAME Management".</li>
-<li>Origin: Exporting the origin configuration, corresponding to the console "Origin Configuration - Origin Group" and "Origin Configuration - Load Balancing".</li>
-</ul>
-Note: Types supported for future export will increase with iterations. When exporting all types, pay attention to export file size. It is recommended to specify the configuration types to be exported to control the request and response packet payload size.
-
+     * @var array Type list of configuration items to export. If not specified, all types of configurations will be exported. Currently supported values: <li>L7AccelerationConfig: exports the Layer-7 acceleration configuration, corresponding to Site Acceleration - Global Acceleration Configuration and Site Acceleration - Rule Engine in the console.</li><li>WebSecurity: exports the Web protection configuration.</li><li>AccelerationDomain: exports the acceleration domain name configuration, corresponding to DNS - Domain Name Management and DNS - Shared CNAME Management in the console.</li><li>Origin: exports the origin configuration, corresponding to Origin Configuration - Origin Groups and Origin Configuration - Load Balancing in the console.</li> Note: The types supported for future export will increase with iterations. Pay attention to export file size when exporting all types. It is recommended to specify the configuration types to be exported to control the request and response packet payload size.
      */
     public $Types;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param array $Types Export the type list of configuration items. Leave it blank to export all types of configurations. Currently supported values include:
-<ul>
-<li>L7AccelerationConfig: Exporting the Layer-7 acceleration configuration, corresponding to the console "Site Acceleration - Global Acceleration Configuration" and "Site Acceleration - Rule Engine".</li>
-<li>WebSecurity: Exporting the web protection configuration.</li>
-<li>AccelerationDomain: Exporting the acceleration domain configuration, corresponding to the console "DNS - Domain Name Management" and "DNS - Shared CNAME Management".</li>
-<li>Origin: Exporting the origin configuration, corresponding to the console "Origin Configuration - Origin Group" and "Origin Configuration - Load Balancing".</li>
-</ul>
-Note: Types supported for future export will increase with iterations. When exporting all types, pay attention to export file size. It is recommended to specify the configuration types to be exported to control the request and response packet payload size.
+     * @param array $Types Type list of configuration items to export. If not specified, all types of configurations will be exported. Currently supported values: <li>L7AccelerationConfig: exports the Layer-7 acceleration configuration, corresponding to Site Acceleration - Global Acceleration Configuration and Site Acceleration - Rule Engine in the console.</li><li>WebSecurity: exports the Web protection configuration.</li><li>AccelerationDomain: exports the acceleration domain name configuration, corresponding to DNS - Domain Name Management and DNS - Shared CNAME Management in the console.</li><li>Origin: exports the origin configuration, corresponding to Origin Configuration - Origin Groups and Origin Configuration - Load Balancing in the console.</li> Note: The types supported for future export will increase with iterations. Pay attention to export file size when exporting all types. It is recommended to specify the configuration types to be exported to control the request and response packet payload size.
      */
     function __construct()
     {

@@ -20,30 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OCSP stapling configuration parameters.
  *
- * @method string getSwitch() Obtain Whether to enable ocsp stapling configuration switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method void setSwitch(string $Switch) Set Whether to enable ocsp stapling configuration switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+ * @method string getSwitch() Obtain OCSP stapling configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set OCSP stapling configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
  */
 class OCSPStaplingParameters extends AbstractModel
 {
     /**
-     * @var string Whether to enable ocsp stapling configuration switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @var string OCSP stapling configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable ocsp stapling configuration switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @param string $Switch OCSP stapling configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     function __construct()
     {

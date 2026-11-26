@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom name servers
+ * Custom nameservers
  *
- * @method string getSwitch() Obtain Whether to enable custom name servers. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable custom name servers. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method array getServers() Obtain List of custom name servers
- * @method void setServers(array $Servers) Set List of custom name servers
+ * @method string getSwitch() Obtain Custom ns switch. Valid values:
+<li> on: enabled</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Custom ns switch. Valid values:
+<li> on: enabled</li>
+<li>off: Disable.</li>
+ * @method array getServers() Obtain List of custom namespaces.
+ * @method void setServers(array $Servers) Set List of custom namespaces.
  */
 class VanityNameServers extends AbstractModel
 {
     /**
-     * @var string Whether to enable custom name servers. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Custom ns switch. Valid values:
+<li> on: enabled</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var array List of custom name servers
+     * @var array List of custom namespaces.
      */
     public $Servers;
 
     /**
-     * @param string $Switch Whether to enable custom name servers. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param array $Servers List of custom name servers
+     * @param string $Switch Custom ns switch. Valid values:
+<li> on: enabled</li>
+<li>off: Disable.</li>
+     * @param array $Servers List of custom namespaces.
      */
     function __construct()
     {

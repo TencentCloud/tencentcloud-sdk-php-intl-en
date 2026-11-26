@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateOriginGroup request structure.
  *
- * @method string getZoneId() Obtain Site ID
- * @method void setZoneId(string $ZoneId) Set Site ID
- * @method array getRecords() Obtain (Required) Origins in the origin group.
- * @method void setRecords(array $Records) Set (Required) Origins in the origin group.
- * @method string getName() Obtain Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
- * @method void setName(string $Name) Set Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
- * @method string getType() Obtain (Required) Origin group type. Values:
-<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer. </li>
-<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>
- * @method void setType(string $Type) Set (Required) Origin group type. Values:
-<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer. </li>
-<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>
- * @method string getHostHeader() Obtain Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
- * @method void setHostHeader(string $HostHeader) Set Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method array getRecords() Obtain Origin server record information. This parameter is required.
+ * @method void setRecords(array $Records) Set Origin server record information. This parameter is required.
+ * @method string getName() Obtain Origin group name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).
+ * @method void setName(string $Name) Set Origin group name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).
+ * @method string getType() Obtain Origin server group type. This parameter is required. Valid values:
+<li>GENERAL: general origin group, only supports adding IP/domain origin servers, and can be referenced by DNS, rule engine, Layer 4 proxy, general load balancer, and HTTP-specific load balancer;</li>
+<li>HTTP: HTTP-specific origin server group. It supports adding IP/domain name and COS origin server as the origin server. It cannot be referenced by Layer-4 proxy. It can only be referenced by add acceleration domain name, rule engine - modify origin, and HTTP-specific load balancer.</li>
+ * @method void setType(string $Type) Set Origin server group type. This parameter is required. Valid values:
+<li>GENERAL: general origin group, only supports adding IP/domain origin servers, and can be referenced by DNS, rule engine, Layer 4 proxy, general load balancer, and HTTP-specific load balancer;</li>
+<li>HTTP: HTTP-specific origin server group. It supports adding IP/domain name and COS origin server as the origin server. It cannot be referenced by Layer-4 proxy. It can only be referenced by add acceleration domain name, rule engine - modify origin, and HTTP-specific load balancer.</li>
+ * @method string getHostHeader() Obtain Origin-pull Host Header. It takes effect only when it is input and Type is HTTP. The rule engine modification of the Host Header configuration has a higher priority than the Host Header of the origin server group.
+ * @method void setHostHeader(string $HostHeader) Set Origin-pull Host Header. It takes effect only when it is input and Type is HTTP. The rule engine modification of the Host Header configuration has a higher priority than the Host Header of the origin server group.
  */
 class CreateOriginGroupRequest extends AbstractModel
 {
     /**
-     * @var string Site ID
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var array (Required) Origins in the origin group.
+     * @var array Origin server record information. This parameter is required.
      */
     public $Records;
 
     /**
-     * @var string Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
+     * @var string Origin group name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).
      */
     public $Name;
 
     /**
-     * @var string (Required) Origin group type. Values:
-<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer. </li>
-<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>
+     * @var string Origin server group type. This parameter is required. Valid values:
+<li>GENERAL: general origin group, only supports adding IP/domain origin servers, and can be referenced by DNS, rule engine, Layer 4 proxy, general load balancer, and HTTP-specific load balancer;</li>
+<li>HTTP: HTTP-specific origin server group. It supports adding IP/domain name and COS origin server as the origin server. It cannot be referenced by Layer-4 proxy. It can only be referenced by add acceleration domain name, rule engine - modify origin, and HTTP-specific load balancer.</li>
      */
     public $Type;
 
     /**
-     * @var string Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
+     * @var string Origin-pull Host Header. It takes effect only when it is input and Type is HTTP. The rule engine modification of the Host Header configuration has a higher priority than the Host Header of the origin server group.
      */
     public $HostHeader;
 
     /**
-     * @param string $ZoneId Site ID
-     * @param array $Records (Required) Origins in the origin group.
-     * @param string $Name Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
-     * @param string $Type (Required) Origin group type. Values:
-<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer. </li>
-<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>
-     * @param string $HostHeader Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
+     * @param string $ZoneId Zone ID.
+     * @param array $Records Origin server record information. This parameter is required.
+     * @param string $Name Origin group name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).
+     * @param string $Type Origin server group type. This parameter is required. Valid values:
+<li>GENERAL: general origin group, only supports adding IP/domain origin servers, and can be referenced by DNS, rule engine, Layer 4 proxy, general load balancer, and HTTP-specific load balancer;</li>
+<li>HTTP: HTTP-specific origin server group. It supports adding IP/domain name and COS origin server as the origin server. It cannot be referenced by Layer-4 proxy. It can only be referenced by add acceleration domain name, rule engine - modify origin, and HTTP-specific load balancer.</li>
+     * @param string $HostHeader Origin-pull Host Header. It takes effect only when it is input and Type is HTTP. The rule engine modification of the Host Header configuration has a higher priority than the Host Header of the origin server group.
      */
     function __construct()
     {

@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set The offset of paginated query. Default value: 0.
  * @method integer getLimit() Obtain Number limit of paginated query. Default value: 20. Maximum value: 200.
  * @method void setLimit(integer $Limit) Set Number limit of paginated query. Default value: 20. Maximum value: 200.
- * @method string getSortBy() Obtain Sorting basis. Valid values: <li>created-on: Creation time.</li> Default sorting is based on the created-on attribute.
- * @method void setSortBy(string $SortBy) Set Sorting basis. Valid values: <li>created-on: Creation time.</li> Default sorting is based on the created-on attribute.
- * @method string getSortOrder() Obtain List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: sort in descending order.</li> Default value: asc.
- * @method void setSortOrder(string $SortOrder) Set List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: sort in descending order.</li> Default value: asc.
- * @method array getFilters() Obtain Filtering Conditions. The maximum of Filters.Values is 20. If this parameter is left empty, it returns all function replicas under the function ID. Detailed filter criteria: <li>replica-name: Filter by function replica name. Fuzzy query is supported.</li>
- * @method void setFilters(array $Filters) Set Filtering Conditions. The maximum of Filters.Values is 20. If this parameter is left empty, it returns all function replicas under the function ID. Detailed filter criteria: <li>replica-name: Filter by function replica name. Fuzzy query is supported.</li>
+ * @method string getSortBy() Obtain Sorting basis. Valid values: <li>created-on: creation time.</li> Default: sort by the created-on attribute.
+ * @method void setSortBy(string $SortBy) Set Sorting basis. Valid values: <li>created-on: creation time.</li> Default: sort by the created-on attribute.
+ * @method string getSortOrder() Obtain List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: descending order.</li> Default value: asc.
+ * @method void setSortOrder(string $SortOrder) Set List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: descending order.</li> Default value: asc.
+ * @method array getFilters() Obtain Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all function copies under the function ID are returned. The detailed filter criteria are as follows: <li> replica-name: filter by function copy name. Fuzzy query is supported.</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all function copies under the function ID are returned. The detailed filter criteria are as follows: <li> replica-name: filter by function copy name. Fuzzy query is supported.</li>
  */
 class DescribeFunctionReplicasRequest extends AbstractModel
 {
@@ -58,17 +58,17 @@ class DescribeFunctionReplicasRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Sorting basis. Valid values: <li>created-on: Creation time.</li> Default sorting is based on the created-on attribute.
+     * @var string Sorting basis. Valid values: <li>created-on: creation time.</li> Default: sort by the created-on attribute.
      */
     public $SortBy;
 
     /**
-     * @var string List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: sort in descending order.</li> Default value: asc.
+     * @var string List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: descending order.</li> Default value: asc.
      */
     public $SortOrder;
 
     /**
-     * @var array Filtering Conditions. The maximum of Filters.Values is 20. If this parameter is left empty, it returns all function replicas under the function ID. Detailed filter criteria: <li>replica-name: Filter by function replica name. Fuzzy query is supported.</li>
+     * @var array Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all function copies under the function ID are returned. The detailed filter criteria are as follows: <li> replica-name: filter by function copy name. Fuzzy query is supported.</li>
      */
     public $Filters;
 
@@ -77,9 +77,9 @@ class DescribeFunctionReplicasRequest extends AbstractModel
      * @param string $FunctionId Function ID.
      * @param integer $Offset The offset of paginated query. Default value: 0.
      * @param integer $Limit Number limit of paginated query. Default value: 20. Maximum value: 200.
-     * @param string $SortBy Sorting basis. Valid values: <li>created-on: Creation time.</li> Default sorting is based on the created-on attribute.
-     * @param string $SortOrder List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: sort in descending order.</li> Default value: asc.
-     * @param array $Filters Filtering Conditions. The maximum of Filters.Values is 20. If this parameter is left empty, it returns all function replicas under the function ID. Detailed filter criteria: <li>replica-name: Filter by function replica name. Fuzzy query is supported.</li>
+     * @param string $SortBy Sorting basis. Valid values: <li>created-on: creation time.</li> Default: sort by the created-on attribute.
+     * @param string $SortOrder List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: descending order.</li> Default value: asc.
+     * @param array $Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all function copies under the function ID are returned. The detailed filter criteria are as follows: <li> replica-name: filter by function copy name. Fuzzy query is supported.</li>
      */
     function __construct()
     {

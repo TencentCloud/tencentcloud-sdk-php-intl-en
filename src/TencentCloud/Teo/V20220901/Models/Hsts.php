@@ -18,75 +18,67 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HSTS configuration
+ * Hsts configuration
  *
- * @method string getSwitch() Obtain Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method integer getMaxAge() Obtain MaxAge value. expressed in seconds, maximum value is 1 day.
- * @method void setMaxAge(integer $MaxAge) Set MaxAge value. expressed in seconds, maximum value is 1 day.
- * @method string getIncludeSubDomains() Obtain Specifies whether the subdomain is included. valid values:.
+ * @method string getSwitch() Obtain Whether it is enabled. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
- * @method void setIncludeSubDomains(string $IncludeSubDomains) Set Specifies whether the subdomain is included. valid values:.
+ * @method void setSwitch(string $Switch) Set Whether it is enabled. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
- * @method string getPreload() Obtain Whether to enable preloading. valid values:.
+ * @method integer getMaxAge() Obtain MaxAge value, in seconds. Maximum value: 1 day.
+ * @method void setMaxAge(integer $MaxAge) Set MaxAge value, in seconds. Maximum value: 1 day.
+ * @method string getIncludeSubDomains() Obtain Whether it contains subdomains. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
- * @method void setPreload(string $Preload) Set Whether to enable preloading. valid values:.
+ * @method void setIncludeSubDomains(string $IncludeSubDomains) Set Whether it contains subdomains. Valid values:
 <li>`on`: Enable;</li>
-
+<li>off: Disable.</li>
+ * @method string getPreload() Obtain Whether to enable preloading. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setPreload(string $Preload) Set Whether to enable preloading. Valid values:
+<li>`on`: Enable;</li>
 <li>off: Disable.</li>
  */
 class Hsts extends AbstractModel
 {
     /**
-     * @var string Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Whether it is enabled. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var integer MaxAge value. expressed in seconds, maximum value is 1 day.
+     * @var integer MaxAge value, in seconds. Maximum value: 1 day.
      */
     public $MaxAge;
 
     /**
-     * @var string Specifies whether the subdomain is included. valid values:.
+     * @var string Whether it contains subdomains. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
      */
     public $IncludeSubDomains;
 
     /**
-     * @var string Whether to enable preloading. valid values:.
+     * @var string Whether to enable preloading. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
      */
     public $Preload;
 
     /**
-     * @param string $Switch Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param integer $MaxAge MaxAge value. expressed in seconds, maximum value is 1 day.
-     * @param string $IncludeSubDomains Specifies whether the subdomain is included. valid values:.
+     * @param string $Switch Whether it is enabled. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-     * @param string $Preload Whether to enable preloading. valid values:.
+     * @param integer $MaxAge MaxAge value, in seconds. Maximum value: 1 day.
+     * @param string $IncludeSubDomains Whether it contains subdomains. Valid values:
 <li>`on`: Enable;</li>
-
+<li>off: Disable.</li>
+     * @param string $Preload Whether to enable preloading. Valid values:
+<li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
     function __construct()

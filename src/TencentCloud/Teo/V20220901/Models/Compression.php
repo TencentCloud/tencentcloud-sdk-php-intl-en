@@ -18,44 +18,44 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Smart compression configuration.
+ * Intelligent compression configuration.
  *
- * @method string getSwitch() Obtain Whether to enable smart compression. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable smart compression. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method array getAlgorithms() Obtain Supported compression algorithm list. valid values:.
-<Li>Brotli: specifies the brotli algorithm.</li>.
-<Li>Gzip: specifies the gzip algorithm.</li>.
- * @method void setAlgorithms(array $Algorithms) Set Supported compression algorithm list. valid values:.
-<Li>Brotli: specifies the brotli algorithm.</li>.
-<Li>Gzip: specifies the gzip algorithm.</li>.
+ * @method string getSwitch() Obtain Intelligent compression configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Intelligent compression configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method array getAlgorithms() Obtain List of supported compression algorithms. Valid values:
+<li>brotli: brotli algorithm;</li>
+<li>gzip: gzip algorithm.</li>
+ * @method void setAlgorithms(array $Algorithms) Set List of supported compression algorithms. Valid values:
+<li>brotli: brotli algorithm;</li>
+<li>gzip: gzip algorithm.</li>
  */
 class Compression extends AbstractModel
 {
     /**
-     * @var string Whether to enable smart compression. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Intelligent compression configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var array Supported compression algorithm list. valid values:.
-<Li>Brotli: specifies the brotli algorithm.</li>.
-<Li>Gzip: specifies the gzip algorithm.</li>.
+     * @var array List of supported compression algorithms. Valid values:
+<li>brotli: brotli algorithm;</li>
+<li>gzip: gzip algorithm.</li>
      */
     public $Algorithms;
 
     /**
-     * @param string $Switch Whether to enable smart compression. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param array $Algorithms Supported compression algorithm list. valid values:.
-<Li>Brotli: specifies the brotli algorithm.</li>.
-<Li>Gzip: specifies the gzip algorithm.</li>.
+     * @param string $Switch Intelligent compression configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param array $Algorithms List of supported compression algorithms. Valid values:
+<li>brotli: brotli algorithm;</li>
+<li>gzip: gzip algorithm.</li>
      */
     function __construct()
     {

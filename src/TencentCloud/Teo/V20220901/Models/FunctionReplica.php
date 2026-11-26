@@ -18,20 +18,20 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Edge function replica.
+ * Replica of an edge function.
  *
  * @method string getFunctionId() Obtain Function ID.
  * @method void setFunctionId(string $FunctionId) Set Function ID.
- * @method string getReplicaName() Obtain Edge function copy name.
- * @method void setReplicaName(string $ReplicaName) Set Edge function copy name.
- * @method string getContent() Obtain Edge function replica content. Format is JavaScript code.
- * @method void setContent(string $Content) Set Edge function replica content. Format is JavaScript code.
- * @method string getRemark() Obtain Edge function replica description.
- * @method void setRemark(string $Remark) Set Edge function replica description.
- * @method string getCreatedOn() Obtain Edge function replica creation time.
- * @method void setCreatedOn(string $CreatedOn) Set Edge function replica creation time.
- * @method string getModifiedOn() Obtain Edge function replica last update time.
- * @method void setModifiedOn(string $ModifiedOn) Set Edge function replica last update time.
+ * @method string getReplicaName() Obtain Name of the edge function copy.
+ * @method void setReplicaName(string $ReplicaName) Set Name of the edge function copy.
+ * @method string getContent() Obtain Content of the edge function copy. Format: JavaScript code.
+ * @method void setContent(string $Content) Set Content of the edge function copy. Format: JavaScript code.
+ * @method string getRemark() Obtain Description of the edge function replica.
+ * @method void setRemark(string $Remark) Set Description of the edge function replica.
+ * @method string getCreatedOn() Obtain Creation time of the edge function replica.
+ * @method void setCreatedOn(string $CreatedOn) Set Creation time of the edge function replica.
+ * @method string getModifiedOn() Obtain Last update time of the edge function replica.
+ * @method void setModifiedOn(string $ModifiedOn) Set Last update time of the edge function replica.
  */
 class FunctionReplica extends AbstractModel
 {
@@ -41,37 +41,37 @@ class FunctionReplica extends AbstractModel
     public $FunctionId;
 
     /**
-     * @var string Edge function copy name.
+     * @var string Name of the edge function copy.
      */
     public $ReplicaName;
 
     /**
-     * @var string Edge function replica content. Format is JavaScript code.
+     * @var string Content of the edge function copy. Format: JavaScript code.
      */
     public $Content;
 
     /**
-     * @var string Edge function replica description.
+     * @var string Description of the edge function replica.
      */
     public $Remark;
 
     /**
-     * @var string Edge function replica creation time.
+     * @var string Creation time of the edge function replica.
      */
     public $CreatedOn;
 
     /**
-     * @var string Edge function replica last update time.
+     * @var string Last update time of the edge function replica.
      */
     public $ModifiedOn;
 
     /**
      * @param string $FunctionId Function ID.
-     * @param string $ReplicaName Edge function copy name.
-     * @param string $Content Edge function replica content. Format is JavaScript code.
-     * @param string $Remark Edge function replica description.
-     * @param string $CreatedOn Edge function replica creation time.
-     * @param string $ModifiedOn Edge function replica last update time.
+     * @param string $ReplicaName Name of the edge function copy.
+     * @param string $Content Content of the edge function copy. Format: JavaScript code.
+     * @param string $Remark Description of the edge function replica.
+     * @param string $CreatedOn Creation time of the edge function replica.
+     * @param string $ModifiedOn Last update time of the edge function replica.
      */
     function __construct()
     {

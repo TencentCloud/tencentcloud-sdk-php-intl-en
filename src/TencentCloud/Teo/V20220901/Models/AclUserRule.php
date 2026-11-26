@@ -18,172 +18,172 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The custom rule
+ * User-defined rules
  *
- * @method string getRuleName() Obtain The rule name.
- * @method void setRuleName(string $RuleName) Set The rule name.
- * @method string getAction() Obtain The action. Values:
-<li>`trans`: Allow</li>
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`ban`: Block the IP</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
- * @method void setAction(string $Action) Set The action. Values:
-<li>`trans`: Allow</li>
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`ban`: Block the IP</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
- * @method string getRuleStatus() Obtain The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
- * @method void setRuleStatus(string $RuleStatus) Set The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
- * @method array getAclConditions() Obtain The custom rule.
- * @method void setAclConditions(array $AclConditions) Set The custom rule.
- * @method integer getRulePriority() Obtain The rule priority. Value range: 0-100.
- * @method void setRulePriority(integer $RulePriority) Set The rule priority. Value range: 0-100.
- * @method integer getRuleID() Obtain Rule ID, which is only used as an output parameter.
- * @method void setRuleID(integer $RuleID) Set Rule ID, which is only used as an output parameter.
- * @method string getUpdateTime() Obtain The update time, which is only used as an output parameter.
- * @method void setUpdateTime(string $UpdateTime) Set The update time, which is only used as an output parameter.
- * @method integer getPunishTime() Obtain IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
- * @method void setPunishTime(integer $PunishTime) Set IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
- * @method string getPunishTimeUnit() Obtain The unit of the IP ban duration. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: `second`.
- * @method void setPunishTimeUnit(string $PunishTimeUnit) Set The unit of the IP ban duration. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: `second`.
- * @method string getName() Obtain Name of the custom return page. It's required when `Action=page`.	
- * @method void setName(string $Name) Set Name of the custom return page. It's required when `Action=page`.	
- * @method integer getPageId() Obtain (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
- * @method void setPageId(integer $PageId) Set (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
- * @method string getCustomResponseId() Obtain ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
- * @method void setCustomResponseId(string $CustomResponseId) Set ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
- * @method integer getResponseCode() Obtain The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
- * @method void setResponseCode(integer $ResponseCode) Set The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
- * @method string getRedirectUrl() Obtain The redirection URL. It's required when `Action=redirect`.	
- * @method void setRedirectUrl(string $RedirectUrl) Set The redirection URL. It's required when `Action=redirect`.	
+ * @method string getRuleName() Obtain Rule name.
+ * @method void setRuleName(string $RuleName) Set Rule name.
+ * @method string getAction() Obtain Penalty action. Valid values:
+<li>trans: pass;</li>
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>ban: IP block;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge.</li>
+ * @method void setAction(string $Action) Set Penalty action. Valid values:
+<li>trans: pass;</li>
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>ban: IP block;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge.</li>
+ * @method string getRuleStatus() Obtain Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Disable.</li>
+ * @method void setRuleStatus(string $RuleStatus) Set Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Disable.</li>
+ * @method array getAclConditions() Obtain Custom rule.
+ * @method void setAclConditions(array $AclConditions) Set Custom rule.
+ * @method integer getRulePriority() Obtain Rule priority. Value range: 0-100.
+ * @method void setRulePriority(integer $RulePriority) Set Rule priority. Value range: 0-100.
+ * @method integer getRuleID() Obtain Rule Id. Output only.
+ * @method void setRuleID(integer $RuleID) Set Rule Id. Output only.
+ * @method string getUpdateTime() Obtain Update time. For output usage only.
+ * @method void setUpdateTime(string $UpdateTime) Set Update time. For output usage only.
+ * @method integer getPunishTime() Obtain Penalty duration for ip blocking. Required when Action is ban. It cannot be empty and the value ranges from 0 to 2 days.
+ * @method void setPunishTime(integer $PunishTime) Set Penalty duration for ip blocking. Required when Action is ban. It cannot be empty and the value ranges from 0 to 2 days.
+ * @method string getPunishTimeUnit() Obtain Penalty time unit for ip blocking. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>Default: second.
+ * @method void setPunishTimeUnit(string $PunishTimeUnit) Set Penalty time unit for ip blocking. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>Default: second.
+ * @method string getName() Obtain Name of the custom return page. Required when Action is page, and cannot be empty.	
+ * @method void setName(string $Name) Set Name of the custom return page. Required when Action is page, and cannot be empty.	
+ * @method integer getPageId() Obtain Instance Id for the custom return page. Default value: 0, which means the system default blocking page is used. This parameter is deprecated.
+ * @method void setPageId(integer $PageId) Set Instance Id for the custom return page. Default value: 0, which means the system default blocking page is used. This parameter is deprecated.
+ * @method string getCustomResponseId() Obtain Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
+ * @method void setCustomResponseId(string $CustomResponseId) Set Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
+ * @method integer getResponseCode() Obtain code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
+ * @method void setResponseCode(integer $ResponseCode) Set code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
+ * @method string getRedirectUrl() Obtain Address for redirection. Required when Action is `redirect` and cannot be empty.	
+ * @method void setRedirectUrl(string $RedirectUrl) Set Address for redirection. Required when Action is `redirect` and cannot be empty.	
  */
 class AclUserRule extends AbstractModel
 {
     /**
-     * @var string The rule name.
+     * @var string Rule name.
      */
     public $RuleName;
 
     /**
-     * @var string The action. Values:
-<li>`trans`: Allow</li>
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`ban`: Block the IP</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
+     * @var string Penalty action. Valid values:
+<li>trans: pass;</li>
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>ban: IP block;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge.</li>
      */
     public $Action;
 
     /**
-     * @var string The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
+     * @var string Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Disable.</li>
      */
     public $RuleStatus;
 
     /**
-     * @var array The custom rule.
+     * @var array Custom rule.
      */
     public $AclConditions;
 
     /**
-     * @var integer The rule priority. Value range: 0-100.
+     * @var integer Rule priority. Value range: 0-100.
      */
     public $RulePriority;
 
     /**
-     * @var integer Rule ID, which is only used as an output parameter.
+     * @var integer Rule Id. Output only.
      */
     public $RuleID;
 
     /**
-     * @var string The update time, which is only used as an output parameter.
+     * @var string Update time. For output usage only.
      */
     public $UpdateTime;
 
     /**
-     * @var integer IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
+     * @var integer Penalty duration for ip blocking. Required when Action is ban. It cannot be empty and the value ranges from 0 to 2 days.
      */
     public $PunishTime;
 
     /**
-     * @var string The unit of the IP ban duration. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: `second`.
+     * @var string Penalty time unit for ip blocking. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>Default: second.
      */
     public $PunishTimeUnit;
 
     /**
-     * @var string Name of the custom return page. It's required when `Action=page`.	
+     * @var string Name of the custom return page. Required when Action is page, and cannot be empty.	
      */
     public $Name;
 
     /**
-     * @var integer (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
+     * @var integer Instance Id for the custom return page. Default value: 0, which means the system default blocking page is used. This parameter is deprecated.
      */
     public $PageId;
 
     /**
-     * @var string ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+     * @var string Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
      */
     public $CustomResponseId;
 
     /**
-     * @var integer The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+     * @var integer code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
      */
     public $ResponseCode;
 
     /**
-     * @var string The redirection URL. It's required when `Action=redirect`.	
+     * @var string Address for redirection. Required when Action is `redirect` and cannot be empty.	
      */
     public $RedirectUrl;
 
     /**
-     * @param string $RuleName The rule name.
-     * @param string $Action The action. Values:
-<li>`trans`: Allow</li>
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`ban`: Block the IP</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-     * @param string $RuleStatus The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-     * @param array $AclConditions The custom rule.
-     * @param integer $RulePriority The rule priority. Value range: 0-100.
-     * @param integer $RuleID Rule ID, which is only used as an output parameter.
-     * @param string $UpdateTime The update time, which is only used as an output parameter.
-     * @param integer $PunishTime IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
-     * @param string $PunishTimeUnit The unit of the IP ban duration. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: `second`.
-     * @param string $Name Name of the custom return page. It's required when `Action=page`.	
-     * @param integer $PageId (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
-     * @param string $CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
-     * @param integer $ResponseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
-     * @param string $RedirectUrl The redirection URL. It's required when `Action=redirect`.	
+     * @param string $RuleName Rule name.
+     * @param string $Action Penalty action. Valid values:
+<li>trans: pass;</li>
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>ban: IP block;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge.</li>
+     * @param string $RuleStatus Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Disable.</li>
+     * @param array $AclConditions Custom rule.
+     * @param integer $RulePriority Rule priority. Value range: 0-100.
+     * @param integer $RuleID Rule Id. Output only.
+     * @param string $UpdateTime Update time. For output usage only.
+     * @param integer $PunishTime Penalty duration for ip blocking. Required when Action is ban. It cannot be empty and the value ranges from 0 to 2 days.
+     * @param string $PunishTimeUnit Penalty time unit for ip blocking. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>Default: second.
+     * @param string $Name Name of the custom return page. Required when Action is page, and cannot be empty.	
+     * @param integer $PageId Instance Id for the custom return page. Default value: 0, which means the system default blocking page is used. This parameter is deprecated.
+     * @param string $CustomResponseId Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
+     * @param integer $ResponseCode code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
+     * @param string $RedirectUrl Address for redirection. Required when Action is `redirect` and cannot be empty.	
      */
     function __construct()
     {

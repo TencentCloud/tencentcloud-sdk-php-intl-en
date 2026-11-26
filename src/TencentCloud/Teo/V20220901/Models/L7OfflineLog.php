@@ -18,84 +18,84 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of L7 logs.
+ * Layer-7 offline log details.
  *
- * @method string getDomain() Obtain Log domain name.
- * @method void setDomain(string $Domain) Set Log domain name.
- * @method string getArea() Obtain Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
- * @method void setArea(string $Area) Set Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
- * @method string getLogPacketName() Obtain Log packet name.	
- * @method void setLogPacketName(string $LogPacketName) Set Log packet name.	
- * @method string getUrl() Obtain Log download address.	
- * @method void setUrl(string $Url) Set Log download address.	
- * @method integer getLogTime() Obtain (Disused) Log packaging time. 
- * @method void setLogTime(integer $LogTime) Set (Disused) Log packaging time. 
- * @method string getLogStartTime() Obtain Start time of log packaging.
- * @method void setLogStartTime(string $LogStartTime) Set Start time of log packaging.
- * @method string getLogEndTime() Obtain End time of the log package.
- * @method void setLogEndTime(string $LogEndTime) Set End time of the log package.
- * @method integer getSize() Obtain Original log size (in bytes).
- * @method void setSize(integer $Size) Set Original log size (in bytes).
+ * @method string getDomain() Obtain Offline log domain name.
+ * @method void setDomain(string $Domain) Set Offline log domain name.
+ * @method string getArea() Obtain Log associated region. Valid values:
+<li>mainland: within the Chinese mainland; </li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+ * @method void setArea(string $Area) Set Log associated region. Valid values:
+<li>mainland: within the Chinese mainland; </li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+ * @method string getLogPacketName() Obtain Offline log data packet name.	
+ * @method void setLogPacketName(string $LogPacketName) Set Offline log data packet name.	
+ * @method string getUrl() Obtain Offline log download address.	
+ * @method void setUrl(string $Url) Set Offline log download address.	
+ * @method integer getLogTime() Obtain Log packaging time. This parameter has been deprecated.
+ * @method void setLogTime(integer $LogTime) Set Log packaging time. This parameter has been deprecated.
+ * @method string getLogStartTime() Obtain Log packaging start time.
+ * @method void setLogStartTime(string $LogStartTime) Set Log packaging start time.
+ * @method string getLogEndTime() Obtain Log packaging end time.
+ * @method void setLogEndTime(string $LogEndTime) Set Log packaging end time.
+ * @method integer getSize() Obtain Log original size in bytes.
+ * @method void setSize(integer $Size) Set Log original size in bytes.
  */
 class L7OfflineLog extends AbstractModel
 {
     /**
-     * @var string Log domain name.
+     * @var string Offline log domain name.
      */
     public $Domain;
 
     /**
-     * @var string Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
+     * @var string Log associated region. Valid values:
+<li>mainland: within the Chinese mainland; </li>
+<li>overseas: global (excluding the Chinese mainland).</li>
      */
     public $Area;
 
     /**
-     * @var string Log packet name.	
+     * @var string Offline log data packet name.	
      */
     public $LogPacketName;
 
     /**
-     * @var string Log download address.	
+     * @var string Offline log download address.	
      */
     public $Url;
 
     /**
-     * @var integer (Disused) Log packaging time. 
+     * @var integer Log packaging time. This parameter has been deprecated.
      */
     public $LogTime;
 
     /**
-     * @var string Start time of log packaging.
+     * @var string Log packaging start time.
      */
     public $LogStartTime;
 
     /**
-     * @var string End time of the log package.
+     * @var string Log packaging end time.
      */
     public $LogEndTime;
 
     /**
-     * @var integer Original log size (in bytes).
+     * @var integer Log original size in bytes.
      */
     public $Size;
 
     /**
-     * @param string $Domain Log domain name.
-     * @param string $Area Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
-     * @param string $LogPacketName Log packet name.	
-     * @param string $Url Log download address.	
-     * @param integer $LogTime (Disused) Log packaging time. 
-     * @param string $LogStartTime Start time of log packaging.
-     * @param string $LogEndTime End time of the log package.
-     * @param integer $Size Original log size (in bytes).
+     * @param string $Domain Offline log domain name.
+     * @param string $Area Log associated region. Valid values:
+<li>mainland: within the Chinese mainland; </li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+     * @param string $LogPacketName Offline log data packet name.	
+     * @param string $Url Offline log download address.	
+     * @param integer $LogTime Log packaging time. This parameter has been deprecated.
+     * @param string $LogStartTime Log packaging start time.
+     * @param string $LogEndTime Log packaging end time.
+     * @param integer $Size Log original size in bytes.
      */
     function __construct()
     {

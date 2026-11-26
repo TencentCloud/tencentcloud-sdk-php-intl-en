@@ -26,20 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End time.
  * @method array getMetricNames() Obtain Queried metric. Valid values:
 <li>l7Flow_outFlux: EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
 <li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_inBandwidth: Edegone request bandwidth;</li>
 <li>l7Flow_hit_outFlux: cache hit traffic;</li>
-<li>l7Flow_request: number of access requests;</li>
+<li>`l7Flow_request`: Access requests;</li>
 <li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
 <li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
  * @method void setMetricNames(array $MetricNames) Set Queried metric. Valid values:
 <li>l7Flow_outFlux: EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
 <li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_inBandwidth: Edegone request bandwidth;</li>
 <li>l7Flow_hit_outFlux: cache hit traffic;</li>
-<li>l7Flow_request: number of access requests;</li>
+<li>`l7Flow_request`: Access requests;</li>
 <li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
 <li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
  * @method array getZoneIds() Obtain Site ID set. This parameter is required.
@@ -67,20 +67,20 @@ use TencentCloud\Common\AbstractModel;
 <li>hour: 1 hour;</li>
 <li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.
  * @method array getFilters() Obtain Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>`socket`:<br>Filter by the specified <strong>HTTP protocol type</strong>.<br>Valid values:<br>`HTTP`: HTTP protocol; <br>`HTTPS`: HTTPS protocol;<br>`QUIC`: QUIC protocol.</li>
 <li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
 <li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
 <li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
  * @method void setFilters(array $Filters) Set Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>`socket`:<br>Filter by the specified <strong>HTTP protocol type</strong>.<br>Valid values:<br>`HTTP`: HTTP protocol; <br>`HTTPS`: HTTPS protocol;<br>`QUIC`: QUIC protocol.</li>
 <li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
 <li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
 <li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
- * @method string getArea() Obtain Data ownership area. Valid values:
+ * @method string getArea() Obtain Data ownership region. Valid values:
 <li>overseas: global (excluding the Chinese mainland) data;</li>
 <li>mainland: Chinese mainland data;</li>
 <li>global: global data.</li>If this parameter is not input, the default value `global` is used.
- * @method void setArea(string $Area) Set Data ownership area. Valid values:
+ * @method void setArea(string $Area) Set Data ownership region. Valid values:
 <li>overseas: global (excluding the Chinese mainland) data;</li>
 <li>mainland: Chinese mainland data;</li>
 <li>global: global data.</li>If this parameter is not input, the default value `global` is used.
@@ -100,11 +100,11 @@ class DescribeOverviewL7DataRequest extends AbstractModel
     /**
      * @var array Queried metric. Valid values:
 <li>l7Flow_outFlux: EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
 <li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_inBandwidth: Edegone request bandwidth;</li>
 <li>l7Flow_hit_outFlux: cache hit traffic;</li>
-<li>l7Flow_request: number of access requests;</li>
+<li>`l7Flow_request`: Access requests;</li>
 <li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
 <li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
      */
@@ -140,7 +140,7 @@ class DescribeOverviewL7DataRequest extends AbstractModel
 
     /**
      * @var array Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>`socket`:<br>Filter by the specified <strong>HTTP protocol type</strong>.<br>Valid values:<br>`HTTP`: HTTP protocol; <br>`HTTPS`: HTTPS protocol;<br>`QUIC`: QUIC protocol.</li>
 <li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
 <li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
 <li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
@@ -148,7 +148,7 @@ class DescribeOverviewL7DataRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string Data ownership area. Valid values:
+     * @var string Data ownership region. Valid values:
 <li>overseas: global (excluding the Chinese mainland) data;</li>
 <li>mainland: Chinese mainland data;</li>
 <li>global: global data.</li>If this parameter is not input, the default value `global` is used.
@@ -160,11 +160,11 @@ class DescribeOverviewL7DataRequest extends AbstractModel
      * @param string $EndTime End time.
      * @param array $MetricNames Queried metric. Valid values:
 <li>l7Flow_outFlux: EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
 <li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_inBandwidth: Edegone request bandwidth;</li>
 <li>l7Flow_hit_outFlux: cache hit traffic;</li>
-<li>l7Flow_request: number of access requests;</li>
+<li>`l7Flow_request`: Access requests;</li>
 <li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
 <li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
      * @param array $ZoneIds Site ID set. This parameter is required.
@@ -180,11 +180,11 @@ class DescribeOverviewL7DataRequest extends AbstractModel
 <li>hour: 1 hour;</li>
 <li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.
      * @param array $Filters Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>`socket`:<br>Filter by the specified <strong>HTTP protocol type</strong>.<br>Valid values:<br>`HTTP`: HTTP protocol; <br>`HTTPS`: HTTPS protocol;<br>`QUIC`: QUIC protocol.</li>
 <li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
 <li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
 <li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
-     * @param string $Area Data ownership area. Valid values:
+     * @param string $Area Data ownership region. Valid values:
 <li>overseas: global (excluding the Chinese mainland) data;</li>
 <li>mainland: Chinese mainland data;</li>
 <li>global: global data.</li>If this parameter is not input, the default value `global` is used.

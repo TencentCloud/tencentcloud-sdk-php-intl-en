@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindSharedCNAME request structure.
  *
- * @method string getZoneId() Obtain ID of the site related with the acceleration domain name.	
- * @method void setZoneId(string $ZoneId) Set ID of the site related with the acceleration domain name.	
- * @method string getBindType() Obtain Action type. Values:
-<li>`bind`: To bind</li>
-<li>`unbind`: To unbind</li>
- * @method void setBindType(string $BindType) Set Action type. Values:
-<li>`bind`: To bind</li>
-<li>`unbind`: To unbind</li>
- * @method array getBindSharedCNAMEMaps() Obtain Bindings between domain names and a shared CNAME
- * @method void setBindSharedCNAMEMaps(array $BindSharedCNAMEMaps) Set Bindings between domain names and a shared CNAME
+ * @method string getZoneId() Obtain Zone ID of the acceleration domain name.	
+ * @method void setZoneId(string $ZoneId) Set Zone ID of the acceleration domain name.	
+ * @method string getBindType() Obtain Binding type. Valid values:
+<li>bind: bind;</li>
+<li>unbind: Unbind.</li>
+ * @method void setBindType(string $BindType) Set Binding type. Valid values:
+<li>bind: bind;</li>
+<li>unbind: Unbind.</li>
+ * @method array getBindSharedCNAMEMaps() Obtain Binding relationship between the domain name and shared CNAME.
+ * @method void setBindSharedCNAMEMaps(array $BindSharedCNAMEMaps) Set Binding relationship between the domain name and shared CNAME.
  */
 class BindSharedCNAMERequest extends AbstractModel
 {
     /**
-     * @var string ID of the site related with the acceleration domain name.	
+     * @var string Zone ID of the acceleration domain name.	
      */
     public $ZoneId;
 
     /**
-     * @var string Action type. Values:
-<li>`bind`: To bind</li>
-<li>`unbind`: To unbind</li>
+     * @var string Binding type. Valid values:
+<li>bind: bind;</li>
+<li>unbind: Unbind.</li>
      */
     public $BindType;
 
     /**
-     * @var array Bindings between domain names and a shared CNAME
+     * @var array Binding relationship between the domain name and shared CNAME.
      */
     public $BindSharedCNAMEMaps;
 
     /**
-     * @param string $ZoneId ID of the site related with the acceleration domain name.	
-     * @param string $BindType Action type. Values:
-<li>`bind`: To bind</li>
-<li>`unbind`: To unbind</li>
-     * @param array $BindSharedCNAMEMaps Bindings between domain names and a shared CNAME
+     * @param string $ZoneId Zone ID of the acceleration domain name.	
+     * @param string $BindType Binding type. Valid values:
+<li>bind: bind;</li>
+<li>unbind: Unbind.</li>
+     * @param array $BindSharedCNAMEMaps Binding relationship between the domain name and shared CNAME.
      */
     function __construct()
     {

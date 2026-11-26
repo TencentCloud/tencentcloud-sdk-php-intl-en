@@ -20,31 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApplicationProxy request structure.
  *
- * @method string getZoneId() Obtain Site ID.
- * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
  * @method string getProxyId() Obtain Proxy ID.
  * @method void setProxyId(string $ProxyId) Set Proxy ID.
- * @method string getProxyName() Obtain Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
- * @method void setProxyName(string $ProxyName) Set Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
- * @method integer getSessionPersistTime() Obtain The session persistence duration. Value range: 30-3600 (in seconds).
-The original configuration will apply if this field is not specified.
- * @method void setSessionPersistTime(integer $SessionPersistTime) Set The session persistence duration. Value range: 30-3600 (in seconds).
-The original configuration will apply if this field is not specified.
- * @method string getProxyType() Obtain L4 proxy mode. Valid values: 
-<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
- * @method void setProxyType(string $ProxyType) Set L4 proxy mode. Valid values: 
-<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
- * @method Ipv6 getIpv6() Obtain IPv6 access configuration. The original configuration will apply if it is not specified.
- * @method void setIpv6(Ipv6 $Ipv6) Set IPv6 access configuration. The original configuration will apply if it is not specified.
- * @method AccelerateMainland getAccelerateMainland() Obtain Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
- * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) Set Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+ * @method string getProxyName() Obtain When ProxyType=hostname, it indicates a domain name or subdomain.
+Proxy name when `ProxyType=instance`.
+ * @method void setProxyName(string $ProxyName) Set When ProxyType=hostname, it indicates a domain name or subdomain.
+Proxy name when `ProxyType=instance`.
+ * @method integer getSessionPersistTime() Obtain Session persistence duration. Value range: 30-3600. Unit: second.
+Maintain the original configuration if not specified.
+ * @method void setSessionPersistTime(integer $SessionPersistTime) Set Session persistence duration. Value range: 30-3600. Unit: second.
+Maintain the original configuration if not specified.
+ * @method string getProxyType() Obtain L4 proxy mode. Valid values:
+<li>`instance`: Create by instance.</li>Use default value `instance` if not specified.
+ * @method void setProxyType(string $ProxyType) Set L4 proxy mode. Valid values:
+<li>`instance`: Create by instance.</li>Use default value `instance` if not specified.
+ * @method Ipv6 getIpv6() Obtain Ipv6 access configuration. Maintain the original configuration if not specified.
+ * @method void setIpv6(Ipv6 $Ipv6) Set Ipv6 access configuration. Maintain the original configuration if not specified.
+ * @method AccelerateMainland getAccelerateMainland() Obtain Chinese mainland acceleration optimization configuration. Leave blank to indicate retaining the original configuration.
+ * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) Set Chinese mainland acceleration optimization configuration. Leave blank to indicate retaining the original configuration.
  */
 class ModifyApplicationProxyRequest extends AbstractModel
 {
     /**
-     * @var string Site ID.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
@@ -54,44 +54,44 @@ class ModifyApplicationProxyRequest extends AbstractModel
     public $ProxyId;
 
     /**
-     * @var string Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
+     * @var string When ProxyType=hostname, it indicates a domain name or subdomain.
+Proxy name when `ProxyType=instance`.
      */
     public $ProxyName;
 
     /**
-     * @var integer The session persistence duration. Value range: 30-3600 (in seconds).
-The original configuration will apply if this field is not specified.
+     * @var integer Session persistence duration. Value range: 30-3600. Unit: second.
+Maintain the original configuration if not specified.
      */
     public $SessionPersistTime;
 
     /**
-     * @var string L4 proxy mode. Valid values: 
-<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
+     * @var string L4 proxy mode. Valid values:
+<li>`instance`: Create by instance.</li>Use default value `instance` if not specified.
      */
     public $ProxyType;
 
     /**
-     * @var Ipv6 IPv6 access configuration. The original configuration will apply if it is not specified.
+     * @var Ipv6 Ipv6 access configuration. Maintain the original configuration if not specified.
      */
     public $Ipv6;
 
     /**
-     * @var AccelerateMainland Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+     * @var AccelerateMainland Chinese mainland acceleration optimization configuration. Leave blank to indicate retaining the original configuration.
      */
     public $AccelerateMainland;
 
     /**
-     * @param string $ZoneId Site ID.
+     * @param string $ZoneId Zone ID.
      * @param string $ProxyId Proxy ID.
-     * @param string $ProxyName Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
-     * @param integer $SessionPersistTime The session persistence duration. Value range: 30-3600 (in seconds).
-The original configuration will apply if this field is not specified.
-     * @param string $ProxyType L4 proxy mode. Valid values: 
-<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
-     * @param Ipv6 $Ipv6 IPv6 access configuration. The original configuration will apply if it is not specified.
-     * @param AccelerateMainland $AccelerateMainland Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+     * @param string $ProxyName When ProxyType=hostname, it indicates a domain name or subdomain.
+Proxy name when `ProxyType=instance`.
+     * @param integer $SessionPersistTime Session persistence duration. Value range: 30-3600. Unit: second.
+Maintain the original configuration if not specified.
+     * @param string $ProxyType L4 proxy mode. Valid values:
+<li>`instance`: Create by instance.</li>Use default value `instance` if not specified.
+     * @param Ipv6 $Ipv6 Ipv6 access configuration. Maintain the original configuration if not specified.
+     * @param AccelerateMainland $AccelerateMainland Chinese mainland acceleration optimization configuration. Leave blank to indicate retaining the original configuration.
      */
     function __construct()
     {

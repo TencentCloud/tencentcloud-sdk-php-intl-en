@@ -22,15 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain ID of the zone where the Layer 4 proxy instance belongs.
  * @method void setZoneId(string $ZoneId) Set ID of the zone where the Layer 4 proxy instance belongs.
- * @method integer getOffset() Obtain Paginated query offset. Defaults to 0 when not specified.
- * @method void setOffset(integer $Offset) Set Paginated query offset. Defaults to 0 when not specified.
- * @method integer getLimit() Obtain Paginated query limit. Default value: 20. Maximum value: 1000.
- * @method void setLimit(integer $Limit) Set Paginated query limit. Default value: 20. Maximum value: 1000.
- * @method array getFilters() Obtain Filter criteria. The upper limit for Filters.Values is 20. If left empty, all Layer 4 proxy instance information under the current zone ID is returned. The detailed filter criteria are as follows: <li>proxy-id: Filters by Layer 4 proxy instance ID;</li>
-<li>ddos-protection-type: Filters by security protection type;</li>
+ * @method integer getOffset() Obtain Offset of paginated query. If left empty, the default value is 0.
+ * @method void setOffset(integer $Offset) Set Offset of paginated query. If left empty, the default value is 0.
+ * @method integer getLimit() Obtain The limit of paginated query. Default value: 20. Maximum value: 1,000.	
+ * @method void setLimit(integer $Limit) Set The limit of paginated query. Default value: 20. Maximum value: 1,000.	
+ * @method array getFilters() Obtain Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all Layer 4 proxy instance information under the current zone ID will be returned. The detailed filter criteria are as follows:
+<li>proxy-id: filter by L4 proxy instance ID;</li>
+<li>ddos-protection-type: filters by security protection type.</li>
 
- * @method void setFilters(array $Filters) Set Filter criteria. The upper limit for Filters.Values is 20. If left empty, all Layer 4 proxy instance information under the current zone ID is returned. The detailed filter criteria are as follows: <li>proxy-id: Filters by Layer 4 proxy instance ID;</li>
-<li>ddos-protection-type: Filters by security protection type;</li>
+
+ * @method void setFilters(array $Filters) Set Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all Layer 4 proxy instance information under the current zone ID will be returned. The detailed filter criteria are as follows:
+<li>proxy-id: filter by L4 proxy instance ID;</li>
+<li>ddos-protection-type: filters by security protection type.</li>
  */
 class DescribeL4ProxyRequest extends AbstractModel
 {
@@ -40,28 +43,31 @@ class DescribeL4ProxyRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer Paginated query offset. Defaults to 0 when not specified.
+     * @var integer Offset of paginated query. If left empty, the default value is 0.
      */
     public $Offset;
 
     /**
-     * @var integer Paginated query limit. Default value: 20. Maximum value: 1000.
+     * @var integer The limit of paginated query. Default value: 20. Maximum value: 1,000.	
      */
     public $Limit;
 
     /**
-     * @var array Filter criteria. The upper limit for Filters.Values is 20. If left empty, all Layer 4 proxy instance information under the current zone ID is returned. The detailed filter criteria are as follows: <li>proxy-id: Filters by Layer 4 proxy instance ID;</li>
-<li>ddos-protection-type: Filters by security protection type;</li>
+     * @var array Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all Layer 4 proxy instance information under the current zone ID will be returned. The detailed filter criteria are as follows:
+<li>proxy-id: filter by L4 proxy instance ID;</li>
+<li>ddos-protection-type: filters by security protection type.</li>
+
 
      */
     public $Filters;
 
     /**
      * @param string $ZoneId ID of the zone where the Layer 4 proxy instance belongs.
-     * @param integer $Offset Paginated query offset. Defaults to 0 when not specified.
-     * @param integer $Limit Paginated query limit. Default value: 20. Maximum value: 1000.
-     * @param array $Filters Filter criteria. The upper limit for Filters.Values is 20. If left empty, all Layer 4 proxy instance information under the current zone ID is returned. The detailed filter criteria are as follows: <li>proxy-id: Filters by Layer 4 proxy instance ID;</li>
-<li>ddos-protection-type: Filters by security protection type;</li>
+     * @param integer $Offset Offset of paginated query. If left empty, the default value is 0.
+     * @param integer $Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.	
+     * @param array $Filters Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all Layer 4 proxy instance information under the current zone ID will be returned. The detailed filter criteria are as follows:
+<li>proxy-id: filter by L4 proxy instance ID;</li>
+<li>ddos-protection-type: filters by security protection type.</li>
      */
     function __construct()
     {

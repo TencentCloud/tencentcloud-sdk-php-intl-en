@@ -18,60 +18,60 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rate limiting rules
+ * Rate limiting rule
  *
- * @method string getSwitch() Obtain Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method array getRateLimitUserRules() Obtain The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
- * @method void setRateLimitUserRules(array $RateLimitUserRules) Set The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
- * @method RateLimitTemplate getRateLimitTemplate() Obtain The rate limit template feature. if null, use the last set configuration by default.
- * @method void setRateLimitTemplate(RateLimitTemplate $RateLimitTemplate) Set The rate limit template feature. if null, use the last set configuration by default.
- * @method RateLimitIntelligence getRateLimitIntelligence() Obtain Intelligent client filtering. if null, use the last set configuration by default.
- * @method void setRateLimitIntelligence(RateLimitIntelligence $RateLimitIntelligence) Set Intelligent client filtering. if null, use the last set configuration by default.
- * @method array getRateLimitCustomizes() Obtain The custom rate limiting rules. if it is `null`, the previous settings is used.
- * @method void setRateLimitCustomizes(array $RateLimitCustomizes) Set The custom rate limiting rules. if it is `null`, the previous settings is used.
+ * @method string getSwitch() Obtain Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method array getRateLimitUserRules() Obtain Rate limit - user rule list. If null, use the last set configuration by default.
+ * @method void setRateLimitUserRules(array $RateLimitUserRules) Set Rate limit - user rule list. If null, use the last set configuration by default.
+ * @method RateLimitTemplate getRateLimitTemplate() Obtain Rate limit template feature. If null, use the last set configuration by default.
+ * @method void setRateLimitTemplate(RateLimitTemplate $RateLimitTemplate) Set Rate limit template feature. If null, use the last set configuration by default.
+ * @method RateLimitIntelligence getRateLimitIntelligence() Obtain Intelligent client filtering. If it is null, use the last set configuration by default.
+ * @method void setRateLimitIntelligence(RateLimitIntelligence $RateLimitIntelligence) Set Intelligent client filtering. If it is null, use the last set configuration by default.
+ * @method array getRateLimitCustomizes() Obtain Rate limit - Managed Custom Rules. If null, use the last set configuration by default.
+ * @method void setRateLimitCustomizes(array $RateLimitCustomizes) Set Rate limit - Managed Custom Rules. If null, use the last set configuration by default.
  */
 class RateLimitConfig extends AbstractModel
 {
     /**
-     * @var string Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var array The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
+     * @var array Rate limit - user rule list. If null, use the last set configuration by default.
      */
     public $RateLimitUserRules;
 
     /**
-     * @var RateLimitTemplate The rate limit template feature. if null, use the last set configuration by default.
+     * @var RateLimitTemplate Rate limit template feature. If null, use the last set configuration by default.
      */
     public $RateLimitTemplate;
 
     /**
-     * @var RateLimitIntelligence Intelligent client filtering. if null, use the last set configuration by default.
+     * @var RateLimitIntelligence Intelligent client filtering. If it is null, use the last set configuration by default.
      */
     public $RateLimitIntelligence;
 
     /**
-     * @var array The custom rate limiting rules. if it is `null`, the previous settings is used.
+     * @var array Rate limit - Managed Custom Rules. If null, use the last set configuration by default.
      */
     public $RateLimitCustomizes;
 
     /**
-     * @param string $Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param array $RateLimitUserRules The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
-     * @param RateLimitTemplate $RateLimitTemplate The rate limit template feature. if null, use the last set configuration by default.
-     * @param RateLimitIntelligence $RateLimitIntelligence Intelligent client filtering. if null, use the last set configuration by default.
-     * @param array $RateLimitCustomizes The custom rate limiting rules. if it is `null`, the previous settings is used.
+     * @param string $Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param array $RateLimitUserRules Rate limit - user rule list. If null, use the last set configuration by default.
+     * @param RateLimitTemplate $RateLimitTemplate Rate limit template feature. If null, use the last set configuration by default.
+     * @param RateLimitIntelligence $RateLimitIntelligence Intelligent client filtering. If it is null, use the last set configuration by default.
+     * @param array $RateLimitCustomizes Rate limit - Managed Custom Rules. If null, use the last set configuration by default.
      */
     function __construct()
     {

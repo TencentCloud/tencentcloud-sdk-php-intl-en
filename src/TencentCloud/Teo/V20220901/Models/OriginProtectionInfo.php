@@ -18,52 +18,48 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Origin protection configuration
+ * Origin protection info
  *
- * @method string getZoneId() Obtain ID of the site.
- * @method void setZoneId(string $ZoneId) Set ID of the site.
- * @method array getHosts() Obtain List of domain names.
- * @method void setHosts(array $Hosts) Set List of domain names.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method array getHosts() Obtain Domain name list.
+ * @method void setHosts(array $Hosts) Set Domain name list.
  * @method array getProxyIds() Obtain List of proxy IDs.
  * @method void setProxyIds(array $ProxyIds) Set List of proxy IDs.
- * @method IPWhitelist getCurrentIPWhitelist() Obtain The existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setCurrentIPWhitelist(IPWhitelist $CurrentIPWhitelist) Set The existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method boolean getNeedUpdate() Obtain Whether the intermediate IP update is needed for the site. Values:
-<li>`true`: Update needed;</li>
-<li>`false`: Update not needed.</li>
- * @method void setNeedUpdate(boolean $NeedUpdate) Set Whether the intermediate IP update is needed for the site. Values:
-<li>`true`: Update needed;</li>
-<li>`false`: Update not needed.</li>
- * @method string getStatus() Obtain Status of the origin protection configuration. Values:
-<li>`online`: Origin protection is activated;</li>
-<li>`offline`: Origin protection is disabled.</li>
-<li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li>
- * @method void setStatus(string $Status) Set Status of the origin protection configuration. Values:
-<li>`online`: Origin protection is activated;</li>
-<li>`offline`: Origin protection is disabled.</li>
-<li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li>
- * @method boolean getPlanSupport() Obtain Whether origin protection is supported in the plan. Values:
-<li>`true`: Origin protection supported;</li>
-<li>`false`: Origin protection not supported.</li>
- * @method void setPlanSupport(boolean $PlanSupport) Set Whether origin protection is supported in the plan. Values:
-<li>`true`: Origin protection supported;</li>
-<li>`false`: Origin protection not supported.</li>
- * @method DiffIPWhitelist getDiffIPWhitelist() Obtain Differences between the latest and existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setDiffIPWhitelist(DiffIPWhitelist $DiffIPWhitelist) Set Differences between the latest and existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method IPWhitelist getCurrentIPWhitelist() Obtain IP allowlist of the current version.
+ * @method void setCurrentIPWhitelist(IPWhitelist $CurrentIPWhitelist) Set IP allowlist of the current version.
+ * @method boolean getNeedUpdate() Obtain Whether to update the origin server allowlist for this site. Valid values:
+<li>true: The IP allowlist needs to be updated;</li>
+<li>false: No need to update the IP allowlist.</li>
+ * @method void setNeedUpdate(boolean $NeedUpdate) Set Whether to update the origin server allowlist for this site. Valid values:
+<li>true: The IP allowlist needs to be updated;</li>
+<li>false: No need to update the IP allowlist.</li>
+ * @method string getStatus() Obtain Origin protection status. Valid values:
+<li>online: origin protection enabled;</li>
+<li>offline: Origin protection disabled;</li>
+<li>nonactivate: Origin protection is inactive. It is only returned in calls for sites that have never used the origin protection feature.</li>
+ * @method void setStatus(string $Status) Set Origin protection status. Valid values:
+<li>online: origin protection enabled;</li>
+<li>offline: Origin protection disabled;</li>
+<li>nonactivate: Origin protection is inactive. It is only returned in calls for sites that have never used the origin protection feature.</li>
+ * @method boolean getPlanSupport() Obtain Whether origin protection is supported for the site package, with values:
+<li>true: support;</li>
+<li>false: not supported.</li>
+ * @method void setPlanSupport(boolean $PlanSupport) Set Whether origin protection is supported for the site package, with values:
+<li>true: support;</li>
+<li>false: not supported.</li>
+ * @method DiffIPWhitelist getDiffIPWhitelist() Obtain Comparison between the latest IP allowlist and the current IP allowlist.
+ * @method void setDiffIPWhitelist(DiffIPWhitelist $DiffIPWhitelist) Set Comparison between the latest IP allowlist and the current IP allowlist.
  */
 class OriginProtectionInfo extends AbstractModel
 {
     /**
-     * @var string ID of the site.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var array List of domain names.
+     * @var array Domain name list.
      */
     public $Hosts;
 
@@ -73,57 +69,53 @@ class OriginProtectionInfo extends AbstractModel
     public $ProxyIds;
 
     /**
-     * @var IPWhitelist The existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var IPWhitelist IP allowlist of the current version.
      */
     public $CurrentIPWhitelist;
 
     /**
-     * @var boolean Whether the intermediate IP update is needed for the site. Values:
-<li>`true`: Update needed;</li>
-<li>`false`: Update not needed.</li>
+     * @var boolean Whether to update the origin server allowlist for this site. Valid values:
+<li>true: The IP allowlist needs to be updated;</li>
+<li>false: No need to update the IP allowlist.</li>
      */
     public $NeedUpdate;
 
     /**
-     * @var string Status of the origin protection configuration. Values:
-<li>`online`: Origin protection is activated;</li>
-<li>`offline`: Origin protection is disabled.</li>
-<li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li>
+     * @var string Origin protection status. Valid values:
+<li>online: origin protection enabled;</li>
+<li>offline: Origin protection disabled;</li>
+<li>nonactivate: Origin protection is inactive. It is only returned in calls for sites that have never used the origin protection feature.</li>
      */
     public $Status;
 
     /**
-     * @var boolean Whether origin protection is supported in the plan. Values:
-<li>`true`: Origin protection supported;</li>
-<li>`false`: Origin protection not supported.</li>
+     * @var boolean Whether origin protection is supported for the site package, with values:
+<li>true: support;</li>
+<li>false: not supported.</li>
      */
     public $PlanSupport;
 
     /**
-     * @var DiffIPWhitelist Differences between the latest and existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var DiffIPWhitelist Comparison between the latest IP allowlist and the current IP allowlist.
      */
     public $DiffIPWhitelist;
 
     /**
-     * @param string $ZoneId ID of the site.
-     * @param array $Hosts List of domain names.
+     * @param string $ZoneId Site ID.
+     * @param array $Hosts Domain name list.
      * @param array $ProxyIds List of proxy IDs.
-     * @param IPWhitelist $CurrentIPWhitelist The existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param boolean $NeedUpdate Whether the intermediate IP update is needed for the site. Values:
-<li>`true`: Update needed;</li>
-<li>`false`: Update not needed.</li>
-     * @param string $Status Status of the origin protection configuration. Values:
-<li>`online`: Origin protection is activated;</li>
-<li>`offline`: Origin protection is disabled.</li>
-<li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li>
-     * @param boolean $PlanSupport Whether origin protection is supported in the plan. Values:
-<li>`true`: Origin protection supported;</li>
-<li>`false`: Origin protection not supported.</li>
-     * @param DiffIPWhitelist $DiffIPWhitelist Differences between the latest and existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param IPWhitelist $CurrentIPWhitelist IP allowlist of the current version.
+     * @param boolean $NeedUpdate Whether to update the origin server allowlist for this site. Valid values:
+<li>true: The IP allowlist needs to be updated;</li>
+<li>false: No need to update the IP allowlist.</li>
+     * @param string $Status Origin protection status. Valid values:
+<li>online: origin protection enabled;</li>
+<li>offline: Origin protection disabled;</li>
+<li>nonactivate: Origin protection is inactive. It is only returned in calls for sites that have never used the origin protection feature.</li>
+     * @param boolean $PlanSupport Whether origin protection is supported for the site package, with values:
+<li>true: support;</li>
+<li>false: not supported.</li>
+     * @param DiffIPWhitelist $DiffIPWhitelist Comparison between the latest IP allowlist and the current IP allowlist.
      */
     function __construct()
     {

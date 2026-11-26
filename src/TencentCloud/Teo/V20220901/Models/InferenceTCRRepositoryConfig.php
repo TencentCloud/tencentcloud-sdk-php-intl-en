@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTCRType() Obtain <p>TCR service type. Valid values: <li>Personal: personal edition;</li><li>Enterprise: enterprise edition.</li></p>
  * @method void setTCRType(string $TCRType) Set <p>TCR service type. Valid values: <li>Personal: personal edition;</li><li>Enterprise: enterprise edition.</li></p>
- * @method string getImage() Obtain <p>Image address.</p>
- * @method void setImage(string $Image) Set <p>Image address.</p>
- * @method string getRegistryId() Obtain <p>ID of the repository instance. Required when TCRType = Enterprise.</p>
- * @method void setRegistryId(string $RegistryId) Set <p>ID of the repository instance. Required when TCRType = Enterprise.</p>
+ * @method string getImage() Obtain <p>Image URL.</p>
+ * @method void setImage(string $Image) Set <p>Image URL.</p>
+ * @method string getRegistryId() Obtain <p>Mirror repository instance ID. Required when TCRType is Enterprise.</p>
+ * @method void setRegistryId(string $RegistryId) Set <p>Mirror repository instance ID. Required when TCRType is Enterprise.</p>
  * @method string getRegionName() Obtain <p>Region name.</p>
  * @method void setRegionName(string $RegionName) Set <p>Region name.</p>
  */
@@ -37,12 +37,12 @@ class InferenceTCRRepositoryConfig extends AbstractModel
     public $TCRType;
 
     /**
-     * @var string <p>Image address.</p>
+     * @var string <p>Image URL.</p>
      */
     public $Image;
 
     /**
-     * @var string <p>ID of the repository instance. Required when TCRType = Enterprise.</p>
+     * @var string <p>Mirror repository instance ID. Required when TCRType is Enterprise.</p>
      */
     public $RegistryId;
 
@@ -53,8 +53,8 @@ class InferenceTCRRepositoryConfig extends AbstractModel
 
     /**
      * @param string $TCRType <p>TCR service type. Valid values: <li>Personal: personal edition;</li><li>Enterprise: enterprise edition.</li></p>
-     * @param string $Image <p>Image address.</p>
-     * @param string $RegistryId <p>ID of the repository instance. Required when TCRType = Enterprise.</p>
+     * @param string $Image <p>Image URL.</p>
+     * @param string $RegistryId <p>Mirror repository instance ID. Required when TCRType is Enterprise.</p>
      * @param string $RegionName <p>Region name.</p>
      */
     function __construct()

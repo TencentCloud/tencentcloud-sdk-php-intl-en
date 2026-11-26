@@ -18,48 +18,48 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Access URL redirect path configuration parameters.
+ * Path configuration parameter for access URL redirection.
  *
- * @method string getAction() Obtain Action to be executed. values:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom;</li>.
-<Li>`Regex`: regular expression matching.</li>.
- * @method void setAction(string $Action) Set Action to be executed. values:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom;</li>.
-<Li>`Regex`: regular expression matching.</li>.
- * @method string getRegex() Obtain Regular expression matching expression, length range is 1-1024.<br>note: when action is regex, this field is required; when action is follow or custom, this field is not required and will not take effect if filled.
- * @method void setRegex(string $Regex) Set Regular expression matching expression, length range is 1-1024.<br>note: when action is regex, this field is required; when action is follow or custom, this field is not required and will not take effect if filled.
- * @method string getValue() Obtain Redirect target url, length range is 1-1024.<br>note: when action is regex or custom, this field is required; when action is follow, this field is not required and will not take effect if filled.
- * @method void setValue(string $Value) Set Redirect target url, length range is 1-1024.<br>note: when action is regex or custom, this field is required; when action is follow, this field is not required and will not take effect if filled.
+ * @method string getAction() Obtain Execution action. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom;</li>
+<li>regex: regular expression matching.</li>
+ * @method void setAction(string $Action) Set Execution action. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom;</li>
+<li>regex: regular expression matching.</li>
+ * @method string getRegex() Obtain Regular expression for matching, with a length range of 1–1024.<br>Note: This field is required when Action is regex. When Action is follow or custom, no need to specify this field, and it does not take effect if specified.
+ * @method void setRegex(string $Regex) Set Regular expression for matching, with a length range of 1–1024.<br>Note: This field is required when Action is regex. When Action is follow or custom, no need to specify this field, and it does not take effect if specified.
+ * @method string getValue() Obtain Target URL for redirection. Length range: 1–1024.<br>Note: This field is required when Action is regex or custom. When Action is follow, no need to specify this field, and it does not take effect if specified.
+ * @method void setValue(string $Value) Set Target URL for redirection. Length range: 1–1024.<br>Note: This field is required when Action is regex or custom. When Action is follow, no need to specify this field, and it does not take effect if specified.
  */
 class URLPath extends AbstractModel
 {
     /**
-     * @var string Action to be executed. values:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom;</li>.
-<Li>`Regex`: regular expression matching.</li>.
+     * @var string Execution action. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom;</li>
+<li>regex: regular expression matching.</li>
      */
     public $Action;
 
     /**
-     * @var string Regular expression matching expression, length range is 1-1024.<br>note: when action is regex, this field is required; when action is follow or custom, this field is not required and will not take effect if filled.
+     * @var string Regular expression for matching, with a length range of 1–1024.<br>Note: This field is required when Action is regex. When Action is follow or custom, no need to specify this field, and it does not take effect if specified.
      */
     public $Regex;
 
     /**
-     * @var string Redirect target url, length range is 1-1024.<br>note: when action is regex or custom, this field is required; when action is follow, this field is not required and will not take effect if filled.
+     * @var string Target URL for redirection. Length range: 1–1024.<br>Note: This field is required when Action is regex or custom. When Action is follow, no need to specify this field, and it does not take effect if specified.
      */
     public $Value;
 
     /**
-     * @param string $Action Action to be executed. values:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom;</li>.
-<Li>`Regex`: regular expression matching.</li>.
-     * @param string $Regex Regular expression matching expression, length range is 1-1024.<br>note: when action is regex, this field is required; when action is follow or custom, this field is not required and will not take effect if filled.
-     * @param string $Value Redirect target url, length range is 1-1024.<br>note: when action is regex or custom, this field is required; when action is follow, this field is not required and will not take effect if filled.
+     * @param string $Action Execution action. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom;</li>
+<li>regex: regular expression matching.</li>
+     * @param string $Regex Regular expression for matching, with a length range of 1–1024.<br>Note: This field is required when Action is regex. When Action is follow or custom, no need to specify this field, and it does not take effect if specified.
+     * @param string $Value Target URL for redirection. Length range: 1–1024.<br>Note: This field is required when Action is regex or custom. When Action is follow, no need to specify this field, and it does not take effect if specified.
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Web security configuration switch
+ * Master switch for features
  *
- * @method string getWebSwitch() Obtain Whether to enable web protection. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>It does not affect DDoS and bot configuration.
- * @method void setWebSwitch(string $WebSwitch) Set Whether to enable web protection. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>It does not affect DDoS and bot configuration.
+ * @method string getWebSwitch() Obtain Master switch for Web security. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>Does not affect the DDoS and Bot switch.
+ * @method void setWebSwitch(string $WebSwitch) Set Master switch for Web security. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>Does not affect the DDoS and Bot switch.
  */
 class SwitchConfig extends AbstractModel
 {
     /**
-     * @var string Whether to enable web protection. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>It does not affect DDoS and bot configuration.
+     * @var string Master switch for Web security. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>Does not affect the DDoS and Bot switch.
      */
     public $WebSwitch;
 
     /**
-     * @param string $WebSwitch Whether to enable web protection. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>It does not affect DDoS and bot configuration.
+     * @param string $WebSwitch Master switch for Web security. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>Does not affect the DDoS and Bot switch.
      */
     function __construct()
     {

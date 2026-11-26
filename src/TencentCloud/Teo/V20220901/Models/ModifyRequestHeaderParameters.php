@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Modify HTTP request header configuration parameters.
+ * Modify HTTP back-to-origin request header configuration.
  *
  * @method array getHeaderActions() Obtain HTTP header setting rule list.
  * @method void setHeaderActions(array $HeaderActions) Set HTTP header setting rule list.

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRules request structure.
  *
- * @method string getZoneId() Obtain ID of the site
- * @method void setZoneId(string $ZoneId) Set ID of the site
- * @method array getRuleIds() Obtain IDs of the rules to be deleted.
- * @method void setRuleIds(array $RuleIds) Set IDs of the rules to be deleted.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method array getRuleIds() Obtain List of specified rule IDs to be deleted.
+ * @method void setRuleIds(array $RuleIds) Set List of specified rule IDs to be deleted.
  */
 class DeleteRulesRequest extends AbstractModel
 {
     /**
-     * @var string ID of the site
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var array IDs of the rules to be deleted.
+     * @var array List of specified rule IDs to be deleted.
      */
     public $RuleIds;
 
     /**
-     * @param string $ZoneId ID of the site
-     * @param array $RuleIds IDs of the rules to be deleted.
+     * @param string $ZoneId Zone ID.
+     * @param array $RuleIds List of specified rule IDs to be deleted.
      */
     function __construct()
     {

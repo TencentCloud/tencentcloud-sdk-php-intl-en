@@ -18,188 +18,188 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rate limit rule
+ * RateLimit rule
  *
- * @method integer getThreshold() Obtain The request threshold. Value range: 0-4294967294.
- * @method void setThreshold(integer $Threshold) Set The request threshold. Value range: 0-4294967294.
- * @method integer getPeriod() Obtain The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds.
- * @method void setPeriod(integer $Period) Set The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds.
- * @method string getRuleName() Obtain The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
- * @method void setRuleName(string $RuleName) Set The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
- * @method string getAction() Obtain Action. Values:<li>`monitor`: Observe;</li><li>`drop`: Block;</li><li>`redirect`: Redirect;</li><li>`page`: Return a specific page;</li><li>`alg`: JavaScript challenge. </li>	
- * @method void setAction(string $Action) Set Action. Values:<li>`monitor`: Observe;</li><li>`drop`: Block;</li><li>`redirect`: Redirect;</li><li>`page`: Return a specific page;</li><li>`alg`: JavaScript challenge. </li>	
- * @method integer getPunishTime() Obtain The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
- * @method void setPunishTime(integer $PunishTime) Set The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
- * @method string getPunishTimeUnit() Obtain The time unit. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>
- * @method void setPunishTimeUnit(string $PunishTimeUnit) Set The time unit. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>
- * @method string getRuleStatus() Obtain The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
- * @method void setRuleStatus(string $RuleStatus) Set The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
- * @method array getAclConditions() Obtain The rule details.
- * @method void setAclConditions(array $AclConditions) Set The rule details.
- * @method integer getRulePriority() Obtain The rule weight. Value range: 0-100.
- * @method void setRulePriority(integer $RulePriority) Set The rule weight. Value range: 0-100.
- * @method integer getRuleID() Obtain Rule ID, which is only used as an output parameter.
- * @method void setRuleID(integer $RuleID) Set Rule ID, which is only used as an output parameter.
- * @method array getFreqFields() Obtain The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
- * @method void setFreqFields(array $FreqFields) Set The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
- * @method string getUpdateTime() Obtain Update time. It is only used as a response parameter, and defaults to the current time. 
- * @method void setUpdateTime(string $UpdateTime) Set Update time. It is only used as a response parameter, and defaults to the current time. 
- * @method array getFreqScope() Obtain Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
- * @method void setFreqScope(array $FreqScope) Set Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
- * @method string getName() Obtain Name of the custom return page. It's required when `Action=page`.
- * @method void setName(string $Name) Set Name of the custom return page. It's required when `Action=page`.
- * @method string getCustomResponseId() Obtain ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
- * @method void setCustomResponseId(string $CustomResponseId) Set ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
- * @method integer getResponseCode() Obtain The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
- * @method void setResponseCode(integer $ResponseCode) Set The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
- * @method string getRedirectUrl() Obtain The redirection URL. It's required when `Action=redirect`.
- * @method void setRedirectUrl(string $RedirectUrl) Set The redirection URL. It's required when `Action=redirect`.
+ * @method integer getThreshold() Obtain Rate limit statistical threshold, in times. Value range: 0-4294967294.
+ * @method void setThreshold(integer $Threshold) Set Rate limit statistical threshold, in times. Value range: 0-4294967294.
+ * @method integer getPeriod() Obtain Rate limit statistical time. Value range: 10/20/30/40/50/60. Unit: seconds.
+ * @method void setPeriod(integer $Period) Set Rate limit statistical time. Value range: 10/20/30/40/50/60. Unit: seconds.
+ * @method string getRuleName() Obtain Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
+ * @method void setRuleName(string $RuleName) Set Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
+ * @method string getAction() Obtain Handling action. Valid values: <li>monitor: observe;</li> <li>drop: block;</li><li> redirect: redirect;</li><li> page: specified page;</li><li>alg: JavaScript challenge.</li>	
+ * @method void setAction(string $Action) Set Handling action. Valid values: <li>monitor: observe;</li> <li>drop: block;</li><li> redirect: redirect;</li><li> page: specified page;</li><li>alg: JavaScript challenge.</li>	
+ * @method integer getPunishTime() Obtain Penalty duration. Value range: 0-2 days.
+ * @method void setPunishTime(integer $PunishTime) Set Penalty duration. Value range: 0-2 days.
+ * @method string getPunishTimeUnit() Obtain Penalty duration unit. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>
+ * @method void setPunishTimeUnit(string $PunishTimeUnit) Set Penalty duration unit. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>
+ * @method string getRuleStatus() Obtain Rule status. Valid values:
+<li>on: enabled</li>
+<li>off: Disable.</li>Default on takes effect.
+ * @method void setRuleStatus(string $RuleStatus) Set Rule status. Valid values:
+<li>on: enabled</li>
+<li>off: Disable.</li>Default on takes effect.
+ * @method array getAclConditions() Obtain Rule details.
+ * @method void setAclConditions(array $AclConditions) Set Rule details.
+ * @method integer getRulePriority() Obtain Rule weight. Value range: 0-100.
+ * @method void setRulePriority(integer $RulePriority) Set Rule weight. Value range: 0-100.
+ * @method integer getRuleID() Obtain Rule Id. Output only.
+ * @method void setRuleID(integer $RuleID) Set Rule Id. Output only.
+ * @method array getFreqFields() Obtain Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
+ * @method void setFreqFields(array $FreqFields) Set Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
+ * @method string getUpdateTime() Obtain Update time. Output usage only. Defaults to the current time when modified.
+ * @method void setUpdateTime(string $UpdateTime) Set Update time. Output usage only. Defaults to the current time when modified.
+ * @method array getFreqScope() Obtain Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
+ * @method void setFreqScope(array $FreqScope) Set Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
+ * @method string getName() Obtain Name of the custom return page. Required when Action is page, and cannot be empty.
+ * @method void setName(string $Name) Set Name of the custom return page. Required when Action is page, and cannot be empty.
+ * @method string getCustomResponseId() Obtain Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
+ * @method void setCustomResponseId(string $CustomResponseId) Set Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
+ * @method integer getResponseCode() Obtain code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
+ * @method void setResponseCode(integer $ResponseCode) Set code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
+ * @method string getRedirectUrl() Obtain Address for redirection. Required when Action is `redirect` and cannot be empty.
+ * @method void setRedirectUrl(string $RedirectUrl) Set Address for redirection. Required when Action is `redirect` and cannot be empty.
  */
 class RateLimitUserRule extends AbstractModel
 {
     /**
-     * @var integer The request threshold. Value range: 0-4294967294.
+     * @var integer Rate limit statistical threshold, in times. Value range: 0-4294967294.
      */
     public $Threshold;
 
     /**
-     * @var integer The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds.
+     * @var integer Rate limit statistical time. Value range: 10/20/30/40/50/60. Unit: seconds.
      */
     public $Period;
 
     /**
-     * @var string The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
+     * @var string Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
      */
     public $RuleName;
 
     /**
-     * @var string Action. Values:<li>`monitor`: Observe;</li><li>`drop`: Block;</li><li>`redirect`: Redirect;</li><li>`page`: Return a specific page;</li><li>`alg`: JavaScript challenge. </li>	
+     * @var string Handling action. Valid values: <li>monitor: observe;</li> <li>drop: block;</li><li> redirect: redirect;</li><li> page: specified page;</li><li>alg: JavaScript challenge.</li>	
      */
     public $Action;
 
     /**
-     * @var integer The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
+     * @var integer Penalty duration. Value range: 0-2 days.
      */
     public $PunishTime;
 
     /**
-     * @var string The time unit. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>
+     * @var string Penalty duration unit. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>
      */
     public $PunishTimeUnit;
 
     /**
-     * @var string The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
+     * @var string Rule status. Valid values:
+<li>on: enabled</li>
+<li>off: Disable.</li>Default on takes effect.
      */
     public $RuleStatus;
 
     /**
-     * @var array The rule details.
+     * @var array Rule details.
      */
     public $AclConditions;
 
     /**
-     * @var integer The rule weight. Value range: 0-100.
+     * @var integer Rule weight. Value range: 0-100.
      */
     public $RulePriority;
 
     /**
-     * @var integer Rule ID, which is only used as an output parameter.
+     * @var integer Rule Id. Output only.
      */
     public $RuleID;
 
     /**
-     * @var array The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
+     * @var array Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
      */
     public $FreqFields;
 
     /**
-     * @var string Update time. It is only used as a response parameter, and defaults to the current time. 
+     * @var string Update time. Output usage only. Defaults to the current time when modified.
      */
     public $UpdateTime;
 
     /**
-     * @var array Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
+     * @var array Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
      */
     public $FreqScope;
 
     /**
-     * @var string Name of the custom return page. It's required when `Action=page`.
+     * @var string Name of the custom return page. Required when Action is page, and cannot be empty.
      */
     public $Name;
 
     /**
-     * @var string ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+     * @var string Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
      */
     public $CustomResponseId;
 
     /**
-     * @var integer The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+     * @var integer code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
      */
     public $ResponseCode;
 
     /**
-     * @var string The redirection URL. It's required when `Action=redirect`.
+     * @var string Address for redirection. Required when Action is `redirect` and cannot be empty.
      */
     public $RedirectUrl;
 
     /**
-     * @param integer $Threshold The request threshold. Value range: 0-4294967294.
-     * @param integer $Period The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds.
-     * @param string $RuleName The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
-     * @param string $Action Action. Values:<li>`monitor`: Observe;</li><li>`drop`: Block;</li><li>`redirect`: Redirect;</li><li>`page`: Return a specific page;</li><li>`alg`: JavaScript challenge. </li>	
-     * @param integer $PunishTime The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
-     * @param string $PunishTimeUnit The time unit. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>
-     * @param string $RuleStatus The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
-     * @param array $AclConditions The rule details.
-     * @param integer $RulePriority The rule weight. Value range: 0-100.
-     * @param integer $RuleID Rule ID, which is only used as an output parameter.
-     * @param array $FreqFields The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
-     * @param string $UpdateTime Update time. It is only used as a response parameter, and defaults to the current time. 
-     * @param array $FreqScope Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
-     * @param string $Name Name of the custom return page. It's required when `Action=page`.
-     * @param string $CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
-     * @param integer $ResponseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
-     * @param string $RedirectUrl The redirection URL. It's required when `Action=redirect`.
+     * @param integer $Threshold Rate limit statistical threshold, in times. Value range: 0-4294967294.
+     * @param integer $Period Rate limit statistical time. Value range: 10/20/30/40/50/60. Unit: seconds.
+     * @param string $RuleName Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
+     * @param string $Action Handling action. Valid values: <li>monitor: observe;</li> <li>drop: block;</li><li> redirect: redirect;</li><li> page: specified page;</li><li>alg: JavaScript challenge.</li>	
+     * @param integer $PunishTime Penalty duration. Value range: 0-2 days.
+     * @param string $PunishTimeUnit Penalty duration unit. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>
+     * @param string $RuleStatus Rule status. Valid values:
+<li>on: enabled</li>
+<li>off: Disable.</li>Default on takes effect.
+     * @param array $AclConditions Rule details.
+     * @param integer $RulePriority Rule weight. Value range: 0-100.
+     * @param integer $RuleID Rule Id. Output only.
+     * @param array $FreqFields Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
+     * @param string $UpdateTime Update time. Output usage only. Defaults to the current time when modified.
+     * @param array $FreqScope Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
+     * @param string $Name Name of the custom return page. Required when Action is page, and cannot be empty.
+     * @param string $CustomResponseId Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
+     * @param integer $ResponseCode code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
+     * @param string $RedirectUrl Address for redirection. Required when Action is `redirect` and cannot be empty.
      */
     function __construct()
     {

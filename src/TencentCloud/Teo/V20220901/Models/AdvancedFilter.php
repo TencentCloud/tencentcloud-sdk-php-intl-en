@@ -18,26 +18,26 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Key-value pair filters for conditional filtering queries and fuzzy queries, such as filtering ID, name, and status.
-If more than one filter exists, the logical relationship between these filters is `AND`.
-If one filter has multiple values, the logical relationship between these values is `OR`.
+ * Description key-value pair filter, which is used for conditional filtering queries and supports fuzzy query. For example, filter by ID, name, and status.
+If there are multiple Filters, the logical relationship between them is AND.
+If there are multiple Values in the same Filter, the logical relationship between the Values under the same Filter is OR.
  *
- * @method string getName() Obtain Field to be filtered.
- * @method void setName(string $Name) Set Field to be filtered.
- * @method array getValues() Obtain Value of the filtered field.
- * @method void setValues(array $Values) Set Value of the filtered field.
+ * @method string getName() Obtain Fields to be filtered.
+ * @method void setName(string $Name) Set Fields to be filtered.
+ * @method array getValues() Obtain Filter value of the field.
+ * @method void setValues(array $Values) Set Filter value of the field.
  * @method boolean getFuzzy() Obtain Whether to enable fuzzy query.
  * @method void setFuzzy(boolean $Fuzzy) Set Whether to enable fuzzy query.
  */
 class AdvancedFilter extends AbstractModel
 {
     /**
-     * @var string Field to be filtered.
+     * @var string Fields to be filtered.
      */
     public $Name;
 
     /**
-     * @var array Value of the filtered field.
+     * @var array Filter value of the field.
      */
     public $Values;
 
@@ -47,8 +47,8 @@ class AdvancedFilter extends AbstractModel
     public $Fuzzy;
 
     /**
-     * @param string $Name Field to be filtered.
-     * @param array $Values Value of the filtered field.
+     * @param string $Name Fields to be filtered.
+     * @param array $Values Filter value of the field.
      * @param boolean $Fuzzy Whether to enable fuzzy query.
      */
     function __construct()

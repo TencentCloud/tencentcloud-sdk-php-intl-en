@@ -18,49 +18,45 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HTTPS server certificate configuration
+ * https server certificate configuration
  *
- * @method string getCertId() Obtain Specifies the server certificate ID.
- * @method void setCertId(string $CertId) Set Specifies the server certificate ID.
+ * @method string getCertId() Obtain Server certificate ID.
+ * @method void setCertId(string $CertId) Set Server certificate ID.
  * @method string getAlias() Obtain Certificate remark name.
  * @method void setAlias(string $Alias) Set Certificate remark name.
- * @method string getType() Obtain Certificate type. valid values:.
+ * @method string getType() Obtain Certificate type. Valid values:
 <li>`default`: Default certificate;</li>
-
 <li>`upload`: External certificate;</li>
-
 <li>`managed`: Tencent Cloud managed certificate.</li>
- * @method void setType(string $Type) Set Certificate type. valid values:.
+ * @method void setType(string $Type) Set Certificate type. Valid values:
 <li>`default`: Default certificate;</li>
-
 <li>`upload`: External certificate;</li>
-
 <li>`managed`: Tencent Cloud managed certificate.</li>
  * @method string getExpireTime() Obtain Certificate expiration time.
  * @method void setExpireTime(string $ExpireTime) Set Certificate expiration time.
  * @method string getEffectiveTime() Obtain Certificate Validation Time.
  * @method void setEffectiveTime(string $EffectiveTime) Set Certificate Validation Time.
- * @method string getCommonName() Obtain Common name of the cert.
- * @method void setCommonName(string $CommonName) Set Common name of the cert.
- * @method array getSubjectAltName() Obtain Specifies the SAN domain of the certificate.
- * @method void setSubjectAltName(array $SubjectAltName) Set Specifies the SAN domain of the certificate.
- * @method string getStatus() Obtain Deployment state. valid values:.
-<li>processing: deployment in progress;</li>.
-<Li>Deployed: deployed</li>.
-<Li>`Failed`: deployment failed</li>.
- * @method void setStatus(string $Status) Set Deployment state. valid values:.
-<li>processing: deployment in progress;</li>.
-<Li>Deployed: deployed</li>.
-<Li>`Failed`: deployment failed</li>.
- * @method string getMessage() Obtain Indicates the failure reason when the Status is failed.
- * @method void setMessage(string $Message) Set Indicates the failure reason when the Status is failed.
+ * @method string getCommonName() Obtain Certificate common name.
+ * @method void setCommonName(string $CommonName) Set Certificate common name.
+ * @method array getSubjectAltName() Obtain SAN domain of the certificate.
+ * @method void setSubjectAltName(array $SubjectAltName) Set SAN domain of the certificate.
+ * @method string getStatus() Obtain Deployment status. Valid values:
+<li>processing: under deployment;</li>
+<li>deployed: deployed;</li>
+<li>failed: Deployment failed.</li>
+ * @method void setStatus(string $Status) Set Deployment status. Valid values:
+<li>processing: under deployment;</li>
+<li>deployed: deployed;</li>
+<li>failed: Deployment failed.</li>
+ * @method string getMessage() Obtain If the Status is failed, this field returns the failure reason.
+ * @method void setMessage(string $Message) Set If the Status is failed, this field returns the failure reason.
  * @method string getSignAlgo() Obtain Certificate algorithm.
  * @method void setSignAlgo(string $SignAlgo) Set Certificate algorithm.
  */
 class DefaultServerCertInfo extends AbstractModel
 {
     /**
-     * @var string Specifies the server certificate ID.
+     * @var string Server certificate ID.
      */
     public $CertId;
 
@@ -70,11 +66,9 @@ class DefaultServerCertInfo extends AbstractModel
     public $Alias;
 
     /**
-     * @var string Certificate type. valid values:.
+     * @var string Certificate type. Valid values:
 <li>`default`: Default certificate;</li>
-
 <li>`upload`: External certificate;</li>
-
 <li>`managed`: Tencent Cloud managed certificate.</li>
      */
     public $Type;
@@ -90,25 +84,25 @@ class DefaultServerCertInfo extends AbstractModel
     public $EffectiveTime;
 
     /**
-     * @var string Common name of the cert.
+     * @var string Certificate common name.
      */
     public $CommonName;
 
     /**
-     * @var array Specifies the SAN domain of the certificate.
+     * @var array SAN domain of the certificate.
      */
     public $SubjectAltName;
 
     /**
-     * @var string Deployment state. valid values:.
-<li>processing: deployment in progress;</li>.
-<Li>Deployed: deployed</li>.
-<Li>`Failed`: deployment failed</li>.
+     * @var string Deployment status. Valid values:
+<li>processing: under deployment;</li>
+<li>deployed: deployed;</li>
+<li>failed: Deployment failed.</li>
      */
     public $Status;
 
     /**
-     * @var string Indicates the failure reason when the Status is failed.
+     * @var string If the Status is failed, this field returns the failure reason.
      */
     public $Message;
 
@@ -118,23 +112,21 @@ class DefaultServerCertInfo extends AbstractModel
     public $SignAlgo;
 
     /**
-     * @param string $CertId Specifies the server certificate ID.
+     * @param string $CertId Server certificate ID.
      * @param string $Alias Certificate remark name.
-     * @param string $Type Certificate type. valid values:.
+     * @param string $Type Certificate type. Valid values:
 <li>`default`: Default certificate;</li>
-
 <li>`upload`: External certificate;</li>
-
 <li>`managed`: Tencent Cloud managed certificate.</li>
      * @param string $ExpireTime Certificate expiration time.
      * @param string $EffectiveTime Certificate Validation Time.
-     * @param string $CommonName Common name of the cert.
-     * @param array $SubjectAltName Specifies the SAN domain of the certificate.
-     * @param string $Status Deployment state. valid values:.
-<li>processing: deployment in progress;</li>.
-<Li>Deployed: deployed</li>.
-<Li>`Failed`: deployment failed</li>.
-     * @param string $Message Indicates the failure reason when the Status is failed.
+     * @param string $CommonName Certificate common name.
+     * @param array $SubjectAltName SAN domain of the certificate.
+     * @param string $Status Deployment status. Valid values:
+<li>processing: under deployment;</li>
+<li>deployed: deployed;</li>
+<li>failed: Deployment failed.</li>
+     * @param string $Message If the Status is failed, this field returns the failure reason.
      * @param string $SignAlgo Certificate algorithm.
      */
     function __construct()

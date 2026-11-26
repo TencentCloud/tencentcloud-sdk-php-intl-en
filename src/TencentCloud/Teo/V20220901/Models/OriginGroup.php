@@ -18,84 +18,84 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Origin group information.
+ * Origin server group information
  *
- * @method string getGroupId() Obtain The ID of the origin group.
- * @method void setGroupId(string $GroupId) Set The ID of the origin group.
- * @method string getName() Obtain The name of the origin group.
- * @method void setName(string $Name) Set The name of the origin group.
- * @method string getType() Obtain The origin group type. Values:
-<li>`GENERAL`: General origin group</li>
-<li>`HTTP`: HTTP-specific origin group</li>
- * @method void setType(string $Type) Set The origin group type. Values:
-<li>`GENERAL`: General origin group</li>
-<li>`HTTP`: HTTP-specific origin group</li>
- * @method array getRecords() Obtain Details of the origin record.
- * @method void setRecords(array $Records) Set Details of the origin record.
- * @method array getReferences() Obtain List of instances referencing this origin group.	
- * @method void setReferences(array $References) Set List of instances referencing this origin group.	
- * @method string getCreateTime() Obtain Creation time of the origin group.
- * @method void setCreateTime(string $CreateTime) Set Creation time of the origin group.
- * @method string getUpdateTime() Obtain The update time of the origin group.
- * @method void setUpdateTime(string $UpdateTime) Set The update time of the origin group.
- * @method string getHostHeader() Obtain Specifies the origin-pull Host Header.
- * @method void setHostHeader(string $HostHeader) Set Specifies the origin-pull Host Header.
+ * @method string getGroupId() Obtain Origin server group ID.
+ * @method void setGroupId(string $GroupId) Set Origin server group ID.
+ * @method string getName() Obtain Origin server group name.
+ * @method void setName(string $Name) Set Origin server group name.
+ * @method string getType() Obtain Origin server group type. Valid values:
+<li>GENERAL: general origin group;</li>
+<li>HTTP: HTTP-specific origin group.</li>
+ * @method void setType(string $Type) Set Origin server group type. Valid values:
+<li>GENERAL: general origin group;</li>
+<li>HTTP: HTTP-specific origin group.</li>
+ * @method array getRecords() Obtain Origin server record information.
+ * @method void setRecords(array $Records) Set Origin server record information.
+ * @method array getReferences() Obtain List of instances that reference the origin group.	
+ * @method void setReferences(array $References) Set List of instances that reference the origin group.	
+ * @method string getCreateTime() Obtain Origin group creation time.
+ * @method void setCreateTime(string $CreateTime) Set Origin group creation time.
+ * @method string getUpdateTime() Obtain Origin-pull group update time.
+ * @method void setUpdateTime(string $UpdateTime) Set Origin-pull group update time.
+ * @method string getHostHeader() Obtain Origin-pull Host Header.
+ * @method void setHostHeader(string $HostHeader) Set Origin-pull Host Header.
  */
 class OriginGroup extends AbstractModel
 {
     /**
-     * @var string The ID of the origin group.
+     * @var string Origin server group ID.
      */
     public $GroupId;
 
     /**
-     * @var string The name of the origin group.
+     * @var string Origin server group name.
      */
     public $Name;
 
     /**
-     * @var string The origin group type. Values:
-<li>`GENERAL`: General origin group</li>
-<li>`HTTP`: HTTP-specific origin group</li>
+     * @var string Origin server group type. Valid values:
+<li>GENERAL: general origin group;</li>
+<li>HTTP: HTTP-specific origin group.</li>
      */
     public $Type;
 
     /**
-     * @var array Details of the origin record.
+     * @var array Origin server record information.
      */
     public $Records;
 
     /**
-     * @var array List of instances referencing this origin group.	
+     * @var array List of instances that reference the origin group.	
      */
     public $References;
 
     /**
-     * @var string Creation time of the origin group.
+     * @var string Origin group creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string The update time of the origin group.
+     * @var string Origin-pull group update time.
      */
     public $UpdateTime;
 
     /**
-     * @var string Specifies the origin-pull Host Header.
+     * @var string Origin-pull Host Header.
      */
     public $HostHeader;
 
     /**
-     * @param string $GroupId The ID of the origin group.
-     * @param string $Name The name of the origin group.
-     * @param string $Type The origin group type. Values:
-<li>`GENERAL`: General origin group</li>
-<li>`HTTP`: HTTP-specific origin group</li>
-     * @param array $Records Details of the origin record.
-     * @param array $References List of instances referencing this origin group.	
-     * @param string $CreateTime Creation time of the origin group.
-     * @param string $UpdateTime The update time of the origin group.
-     * @param string $HostHeader Specifies the origin-pull Host Header.
+     * @param string $GroupId Origin server group ID.
+     * @param string $Name Origin server group name.
+     * @param string $Type Origin server group type. Valid values:
+<li>GENERAL: general origin group;</li>
+<li>HTTP: HTTP-specific origin group.</li>
+     * @param array $Records Origin server record information.
+     * @param array $References List of instances that reference the origin group.	
+     * @param string $CreateTime Origin group creation time.
+     * @param string $UpdateTime Origin-pull group update time.
+     * @param string $HostHeader Origin-pull Host Header.
      */
     function __construct()
     {

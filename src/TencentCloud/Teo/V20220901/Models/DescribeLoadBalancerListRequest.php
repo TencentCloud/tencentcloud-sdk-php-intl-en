@@ -22,17 +22,17 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method integer getOffset() Obtain Offset of paginated query. Default value: 0.		
- * @method void setOffset(integer $Offset) Set Offset of paginated query. Default value: 0.		
+ * @method integer getOffset() Obtain Offset of paginated query. Default value: 0.	
+ * @method void setOffset(integer $Offset) Set Offset of paginated query. Default value: 0.	
  * @method integer getLimit() Obtain Paginated query limit. Default value: 20, maximum value: 100.	
  * @method void setLimit(integer $Limit) Set Paginated query limit. Default value: 20, maximum value: 100.	
- * @method array getFilters() Obtain Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all LoadBalancer information under the current zone ID will be returned. The detailed filter criteria are as follows:
-<li>InstanceName: Filter by LoadBalancer name.</li>
-<li>InstanceId: Filter by LoadBalancer ID.</li>
+ * @method array getFilters() Obtain Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, information of all load balancing instances under the current zone-id is returned. Detailed filter criteria:
+<li>InstanceName: Filter by load balancing instance name.</li>
+<li>InstanceId: Filter by Cloud Load Balancer instance ID.</li>
 
- * @method void setFilters(array $Filters) Set Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all LoadBalancer information under the current zone ID will be returned. The detailed filter criteria are as follows:
-<li>InstanceName: Filter by LoadBalancer name.</li>
-<li>InstanceId: Filter by LoadBalancer ID.</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, information of all load balancing instances under the current zone-id is returned. Detailed filter criteria:
+<li>InstanceName: Filter by load balancing instance name.</li>
+<li>InstanceId: Filter by Cloud Load Balancer instance ID.</li>
  */
 class DescribeLoadBalancerListRequest extends AbstractModel
 {
@@ -42,7 +42,7 @@ class DescribeLoadBalancerListRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer Offset of paginated query. Default value: 0.		
+     * @var integer Offset of paginated query. Default value: 0.	
      */
     public $Offset;
 
@@ -52,20 +52,20 @@ class DescribeLoadBalancerListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all LoadBalancer information under the current zone ID will be returned. The detailed filter criteria are as follows:
-<li>InstanceName: Filter by LoadBalancer name.</li>
-<li>InstanceId: Filter by LoadBalancer ID.</li>
+     * @var array Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, information of all load balancing instances under the current zone-id is returned. Detailed filter criteria:
+<li>InstanceName: Filter by load balancing instance name.</li>
+<li>InstanceId: Filter by Cloud Load Balancer instance ID.</li>
 
      */
     public $Filters;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param integer $Offset Offset of paginated query. Default value: 0.		
+     * @param integer $Offset Offset of paginated query. Default value: 0.	
      * @param integer $Limit Paginated query limit. Default value: 20, maximum value: 100.	
-     * @param array $Filters Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all LoadBalancer information under the current zone ID will be returned. The detailed filter criteria are as follows:
-<li>InstanceName: Filter by LoadBalancer name.</li>
-<li>InstanceId: Filter by LoadBalancer ID.</li>
+     * @param array $Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, information of all load balancing instances under the current zone-id is returned. Detailed filter criteria:
+<li>InstanceName: Filter by load balancing instance name.</li>
+<li>InstanceId: Filter by Cloud Load Balancer instance ID.</li>
      */
     function __construct()
     {

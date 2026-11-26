@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getName() Obtain Name of the reasoning API Token, length limited to no more than 30 characters.
- * @method void setName(string $Name) Set Name of the reasoning API Token, length limited to no more than 30 characters.
+ * @method string getName() Obtain Name of the inference API Token. Length limited to 30 characters.
+ * @method void setName(string $Name) Set Name of the inference API Token. Length limited to 30 characters.
  */
 class CreateInferenceAPITokenRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CreateInferenceAPITokenRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Name of the reasoning API Token, length limited to no more than 30 characters.
+     * @var string Name of the inference API Token. Length limited to 30 characters.
      */
     public $Name;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $Name Name of the reasoning API Token, length limited to no more than 30 characters.
+     * @param string $Name Name of the inference API Token. Length limited to 30 characters.
      */
     function __construct()
     {

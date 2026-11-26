@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Custom error page.
  *
- * @method integer getStatusCode() Obtain Status code. supported values are 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
- * @method void setStatusCode(integer $StatusCode) Set Status code. supported values are 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
- * @method string getRedirectURL() Obtain Redirect url. requires a full redirect path, such as https://www.test.com/error.html.
- * @method void setRedirectURL(string $RedirectURL) Set Redirect url. requires a full redirect path, such as https://www.test.com/error.html.
+ * @method integer getStatusCode() Obtain Status code. Supported values: 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
+ * @method void setStatusCode(integer $StatusCode) Set Status code. Supported values: 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
+ * @method string getRedirectURL() Obtain Redirect URL. It needs to be a complete jump path, for example, https://www.test.com/error.html.
+ * @method void setRedirectURL(string $RedirectURL) Set Redirect URL. It needs to be a complete jump path, for example, https://www.test.com/error.html.
  */
 class ErrorPage extends AbstractModel
 {
     /**
-     * @var integer Status code. supported values are 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
+     * @var integer Status code. Supported values: 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
      */
     public $StatusCode;
 
     /**
-     * @var string Redirect url. requires a full redirect path, such as https://www.test.com/error.html.
+     * @var string Redirect URL. It needs to be a complete jump path, for example, https://www.test.com/error.html.
      */
     public $RedirectURL;
 
     /**
-     * @param integer $StatusCode Status code. supported values are 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
-     * @param string $RedirectURL Redirect url. requires a full redirect path, such as https://www.test.com/error.html.
+     * @param integer $StatusCode Status code. Supported values: 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
+     * @param string $RedirectURL Redirect URL. It needs to be a complete jump path, for example, https://www.test.com/error.html.
      */
     function __construct()
     {

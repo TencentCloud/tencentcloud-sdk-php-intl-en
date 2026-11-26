@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Auto-renewal configuration item in a prepaid plan.
  *
- * @method string getSwitch() Obtain The auto-renewal flag for prepaid plan has the following values:
+ * @method string getSwitch() Obtain Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
- * @method void setSwitch(string $Switch) Set The auto-renewal flag for prepaid plan has the following values:
+ * @method void setSwitch(string $Switch) Set Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
  */
 class RenewFlag extends AbstractModel
 {
     /**
-     * @var string The auto-renewal flag for prepaid plan has the following values:
+     * @var string Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch The auto-renewal flag for prepaid plan has the following values:
+     * @param string $Switch Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
      */

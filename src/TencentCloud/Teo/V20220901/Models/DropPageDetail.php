@@ -18,64 +18,64 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The configuration details of the block page
+ * Configuration message of the interception page
  *
- * @method integer getPageId() Obtain The ID of the block page. Specify `0` to use the default block page. 
-(Disused) If 0 is passed, the default block page will be used.
- * @method void setPageId(integer $PageId) Set The ID of the block page. Specify `0` to use the default block page. 
-(Disused) If 0 is passed, the default block page will be used.
- * @method integer getStatusCode() Obtain The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
- * @method void setStatusCode(integer $StatusCode) Set The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
- * @method string getName() Obtain The block page file or URL.
- * @method void setName(string $Name) Set The block page file or URL.
- * @method string getType() Obtain Type of the block page. Values:
-<li>`page`: Return the specified page.</li>
+ * @method integer getPageId() Obtain Unique Id of the interception page. The system includes a built-in interception page by default, with Id 0.
+The Id can be obtained by uploading via the blocking page creation interface. If 0 is passed in, the system default blocking page is used. This parameter is deprecated.
+ * @method void setPageId(integer $PageId) Set Unique Id of the interception page. The system includes a built-in interception page by default, with Id 0.
+The Id can be obtained by uploading via the blocking page creation interface. If 0 is passed in, the system default blocking page is used. This parameter is deprecated.
+ * @method integer getStatusCode() Obtain HTTP status code of the interception page. Value range: 100–600. 3xx status codes are not supported. Default for managed rule interception page: 566. Default for security protection (excluding managed rules) interception page: 567.
+ * @method void setStatusCode(integer $StatusCode) Set HTTP status code of the interception page. Value range: 100–600. 3xx status codes are not supported. Default for managed rule interception page: 566. Default for security protection (excluding managed rules) interception page: 567.
+ * @method string getName() Obtain Page file name or url.
+ * @method void setName(string $Name) Set Page file name or url.
+ * @method string getType() Obtain Page type, with values:
+<li>page: Specified page.</li>
 
- * @method void setType(string $Type) Set Type of the block page. Values:
-<li>`page`: Return the specified page.</li>
+ * @method void setType(string $Type) Set Page type, with values:
+<li>page: Specified page.</li>
 
- * @method string getCustomResponseId() Obtain ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
- * @method void setCustomResponseId(string $CustomResponseId) Set ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+ * @method string getCustomResponseId() Obtain Id. You can obtain this Id through the API for querying the custom error page list. The default value is `default`, which uses the system default page. This field is required and cannot be empty when Type is `page`.
+ * @method void setCustomResponseId(string $CustomResponseId) Set Id. You can obtain this Id through the API for querying the custom error page list. The default value is `default`, which uses the system default page. This field is required and cannot be empty when Type is `page`.
  */
 class DropPageDetail extends AbstractModel
 {
     /**
-     * @var integer The ID of the block page. Specify `0` to use the default block page. 
-(Disused) If 0 is passed, the default block page will be used.
+     * @var integer Unique Id of the interception page. The system includes a built-in interception page by default, with Id 0.
+The Id can be obtained by uploading via the blocking page creation interface. If 0 is passed in, the system default blocking page is used. This parameter is deprecated.
      */
     public $PageId;
 
     /**
-     * @var integer The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
+     * @var integer HTTP status code of the interception page. Value range: 100–600. 3xx status codes are not supported. Default for managed rule interception page: 566. Default for security protection (excluding managed rules) interception page: 567.
      */
     public $StatusCode;
 
     /**
-     * @var string The block page file or URL.
+     * @var string Page file name or url.
      */
     public $Name;
 
     /**
-     * @var string Type of the block page. Values:
-<li>`page`: Return the specified page.</li>
+     * @var string Page type, with values:
+<li>page: Specified page.</li>
 
      */
     public $Type;
 
     /**
-     * @var string ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+     * @var string Id. You can obtain this Id through the API for querying the custom error page list. The default value is `default`, which uses the system default page. This field is required and cannot be empty when Type is `page`.
      */
     public $CustomResponseId;
 
     /**
-     * @param integer $PageId The ID of the block page. Specify `0` to use the default block page. 
-(Disused) If 0 is passed, the default block page will be used.
-     * @param integer $StatusCode The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
-     * @param string $Name The block page file or URL.
-     * @param string $Type Type of the block page. Values:
-<li>`page`: Return the specified page.</li>
+     * @param integer $PageId Unique Id of the interception page. The system includes a built-in interception page by default, with Id 0.
+The Id can be obtained by uploading via the blocking page creation interface. If 0 is passed in, the system default blocking page is used. This parameter is deprecated.
+     * @param integer $StatusCode HTTP status code of the interception page. Value range: 100–600. 3xx status codes are not supported. Default for managed rule interception page: 566. Default for security protection (excluding managed rules) interception page: 567.
+     * @param string $Name Page file name or url.
+     * @param string $Type Page type, with values:
+<li>page: Specified page.</li>
 
-     * @param string $CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+     * @param string $CustomResponseId Id. You can obtain this Id through the API for querying the custom error page list. The default value is `default`, which uses the system default page. This field is required and cannot be empty when Type is `page`.
      */
     function __construct()
     {

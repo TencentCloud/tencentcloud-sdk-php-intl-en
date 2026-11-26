@@ -18,72 +18,72 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Validate client behavior.
+ * Bot proactive feature recognition client behavior validation.
  *
- * @method string getName() Obtain Method to validate client behavior.
- * @method void setName(string $Name) Set Method to validate client behavior.
- * @method string getWorkLevel() Obtain Proof-of-work strength. Values:
-<li>`low` (default): Low</li>
-<li>`middle`: Medium</li>
-<li>`high`: High</li>
- * @method void setWorkLevel(string $WorkLevel) Set Proof-of-work strength. Values:
-<li>`low` (default): Low</li>
-<li>`middle`: Medium</li>
-<li>`high`: High</li>
- * @method integer getExecuteMode() Obtain Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
- * @method void setExecuteMode(integer $ExecuteMode) Set Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
- * @method integer getInvalidStatTime() Obtain The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
- * @method void setInvalidStatTime(integer $InvalidStatTime) Set The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
- * @method integer getInvalidThreshold() Obtain The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
- * @method void setInvalidThreshold(integer $InvalidThreshold) Set The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
- * @method array getAlgDetectResults() Obtain Client behavior validation results.
- * @method void setAlgDetectResults(array $AlgDetectResults) Set Client behavior validation results.
+ * @method string getName() Obtain Operation name.
+ * @method void setName(string $Name) Set Operation name.
+ * @method string getWorkLevel() Obtain Proof of Work (proof_Of-Work) verification strength. Default value: low. Valid values:
+<li>low: low;</li>
+<li>middle: Medium;</li>
+<li>high: high.</li>
+ * @method void setWorkLevel(string $WorkLevel) Set Proof of Work (proof_Of-Work) verification strength. Default value: low. Valid values:
+<li>low: low;</li>
+<li>middle: Medium;</li>
+<li>high: high.</li>
+ * @method integer getExecuteMode() Obtain Execution mode. The time when js delay execution is triggered. Unit: ms. Default value: 500. Value range: 0–1000.
+ * @method void setExecuteMode(integer $ExecuteMode) Set Execution mode. The time when js delay execution is triggered. Unit: ms. Default value: 500. Value range: 0–1000.
+ * @method integer getInvalidStatTime() Obtain Statistical cycle for clients that do not have JS enabled (test not completed). Unit: seconds. Default: 10. Value range: 5–3600.
+ * @method void setInvalidStatTime(integer $InvalidStatTime) Set Statistical cycle for clients that do not have JS enabled (test not completed). Unit: seconds. Default: 10. Value range: 5–3600.
+ * @method integer getInvalidThreshold() Obtain Client JS not enabled (test not completed) trigger threshold. Count. Default: 300. Value: 1–100000000.
+ * @method void setInvalidThreshold(integer $InvalidThreshold) Set Client JS not enabled (test not completed) trigger threshold. Count. Default: 300. Value: 1–100000000.
+ * @method array getAlgDetectResults() Obtain Bot proactive feature recognition client behavior validation result.
+ * @method void setAlgDetectResults(array $AlgDetectResults) Set Bot proactive feature recognition client behavior validation result.
  */
 class AlgDetectJS extends AbstractModel
 {
     /**
-     * @var string Method to validate client behavior.
+     * @var string Operation name.
      */
     public $Name;
 
     /**
-     * @var string Proof-of-work strength. Values:
-<li>`low` (default): Low</li>
-<li>`middle`: Medium</li>
-<li>`high`: High</li>
+     * @var string Proof of Work (proof_Of-Work) verification strength. Default value: low. Valid values:
+<li>low: low;</li>
+<li>middle: Medium;</li>
+<li>high: high.</li>
      */
     public $WorkLevel;
 
     /**
-     * @var integer Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
+     * @var integer Execution mode. The time when js delay execution is triggered. Unit: ms. Default value: 500. Value range: 0–1000.
      */
     public $ExecuteMode;
 
     /**
-     * @var integer The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
+     * @var integer Statistical cycle for clients that do not have JS enabled (test not completed). Unit: seconds. Default: 10. Value range: 5–3600.
      */
     public $InvalidStatTime;
 
     /**
-     * @var integer The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
+     * @var integer Client JS not enabled (test not completed) trigger threshold. Count. Default: 300. Value: 1–100000000.
      */
     public $InvalidThreshold;
 
     /**
-     * @var array Client behavior validation results.
+     * @var array Bot proactive feature recognition client behavior validation result.
      */
     public $AlgDetectResults;
 
     /**
-     * @param string $Name Method to validate client behavior.
-     * @param string $WorkLevel Proof-of-work strength. Values:
-<li>`low` (default): Low</li>
-<li>`middle`: Medium</li>
-<li>`high`: High</li>
-     * @param integer $ExecuteMode Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
-     * @param integer $InvalidStatTime The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
-     * @param integer $InvalidThreshold The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
-     * @param array $AlgDetectResults Client behavior validation results.
+     * @param string $Name Operation name.
+     * @param string $WorkLevel Proof of Work (proof_Of-Work) verification strength. Default value: low. Valid values:
+<li>low: low;</li>
+<li>middle: Medium;</li>
+<li>high: high.</li>
+     * @param integer $ExecuteMode Execution mode. The time when js delay execution is triggered. Unit: ms. Default value: 500. Value range: 0–1000.
+     * @param integer $InvalidStatTime Statistical cycle for clients that do not have JS enabled (test not completed). Unit: seconds. Default: 10. Value range: 5–3600.
+     * @param integer $InvalidThreshold Client JS not enabled (test not completed) trigger threshold. Count. Default: 300. Value: 1–100000000.
+     * @param array $AlgDetectResults Bot proactive feature recognition client behavior validation result.
      */
     function __construct()
     {

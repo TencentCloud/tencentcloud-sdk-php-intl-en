@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Verification file, used to verify site ownership
+ * Site ownership verification — file verification information.
  *
- * @method string getIdentifyPath() Obtain Directory of the verification file.
- * @method void setIdentifyPath(string $IdentifyPath) Set Directory of the verification file.
- * @method string getIdentifyContent() Obtain Content of the verification file.
- * @method void setIdentifyContent(string $IdentifyContent) Set Content of the verification file.
+ * @method string getIdentifyPath() Obtain File verification directory.
+ * @method void setIdentifyPath(string $IdentifyPath) Set File verification directory.
+ * @method string getIdentifyContent() Obtain File content verification.
+ * @method void setIdentifyContent(string $IdentifyContent) Set File content verification.
  */
 class FileAscriptionInfo extends AbstractModel
 {
     /**
-     * @var string Directory of the verification file.
+     * @var string File verification directory.
      */
     public $IdentifyPath;
 
     /**
-     * @var string Content of the verification file.
+     * @var string File content verification.
      */
     public $IdentifyContent;
 
     /**
-     * @param string $IdentifyPath Directory of the verification file.
-     * @param string $IdentifyContent Content of the verification file.
+     * @param string $IdentifyPath File verification directory.
+     * @param string $IdentifyContent File content verification.
      */
     function __construct()
     {

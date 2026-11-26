@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain <p>Site ID.</p>
  * @method void setZoneId(string $ZoneId) Set <p>Site ID.</p>
- * @method array getFilters() Obtain <p>Filtering Conditions, maximum 20, multiple conditions have an AND relationship, the maximum for Filters.Values is 20. Detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li> Only the field named service-name supports filtering during a fuzzy query.</p>
- * @method void setFilters(array $Filters) Set <p>Filtering Conditions, maximum 20, multiple conditions have an AND relationship, the maximum for Filters.Values is 20. Detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li> Only the field named service-name supports filtering during a fuzzy query.</p>
- * @method integer getOffset() Obtain <p>Paginated query offset. Default value: 0.</p>
- * @method void setOffset(integer $Offset) Set <p>Paginated query offset. Default value: 0.</p>
+ * @method array getFilters() Obtain <p>Filter criteria. Up to 20 criteria are supported, and multiple criteria are in AND relationship. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li>For fuzzy query, only filtering by the field name service-name is supported.</p>
+ * @method void setFilters(array $Filters) Set <p>Filter criteria. Up to 20 criteria are supported, and multiple criteria are in AND relationship. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li>For fuzzy query, only filtering by the field name service-name is supported.</p>
+ * @method integer getOffset() Obtain <p>The offset of paginated query. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>The offset of paginated query. Default value: 0.</p>
  * @method integer getLimit() Obtain <p>Paginated query limit. Default value: 20, maximum value: 200.</p>
  * @method void setLimit(integer $Limit) Set <p>Paginated query limit. Default value: 20, maximum value: 200.</p>
- * @method string getOrder() Obtain <p>Sort returned results based on this field. Valid values: <li>create-time: Creation time.</li>Default sorting order is by create-time if left empty.</p>
- * @method void setOrder(string $Order) Set <p>Sort returned results based on this field. Valid values: <li>create-time: Creation time.</li>Default sorting order is by create-time if left empty.</p>
- * @method string getDirection() Obtain <p>Sorting order. If the field value is a number, sort based on its size; if the field value is text, sort based on ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value if not specified.</p>
- * @method void setDirection(string $Direction) Set <p>Sorting order. If the field value is a number, sort based on its size; if the field value is text, sort based on ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value if not specified.</p>
+ * @method string getOrder() Obtain <p>Returned results can be sorted by this field. Valid values: <li>create-time: creation time.</li>If left empty, results are sorted by create-time by default.</p>
+ * @method void setOrder(string $Order) Set <p>Returned results can be sorted by this field. Valid values: <li>create-time: creation time.</li>If left empty, results are sorted by create-time by default.</p>
+ * @method string getDirection() Obtain <p>Sorting order. If the field value is a number, sort by numeric size; if the field value is text, sort by ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value desc if not specified.</p>
+ * @method void setDirection(string $Direction) Set <p>Sorting order. If the field value is a number, sort by numeric size; if the field value is text, sort by ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value desc if not specified.</p>
  */
 class DescribeInferenceServicesRequest extends AbstractModel
 {
@@ -41,12 +41,12 @@ class DescribeInferenceServicesRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array <p>Filtering Conditions, maximum 20, multiple conditions have an AND relationship, the maximum for Filters.Values is 20. Detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li> Only the field named service-name supports filtering during a fuzzy query.</p>
+     * @var array <p>Filter criteria. Up to 20 criteria are supported, and multiple criteria are in AND relationship. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li>For fuzzy query, only filtering by the field name service-name is supported.</p>
      */
     public $Filters;
 
     /**
-     * @var integer <p>Paginated query offset. Default value: 0.</p>
+     * @var integer <p>The offset of paginated query. Default value: 0.</p>
      */
     public $Offset;
 
@@ -56,22 +56,22 @@ class DescribeInferenceServicesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string <p>Sort returned results based on this field. Valid values: <li>create-time: Creation time.</li>Default sorting order is by create-time if left empty.</p>
+     * @var string <p>Returned results can be sorted by this field. Valid values: <li>create-time: creation time.</li>If left empty, results are sorted by create-time by default.</p>
      */
     public $Order;
 
     /**
-     * @var string <p>Sorting order. If the field value is a number, sort based on its size; if the field value is text, sort based on ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value if not specified.</p>
+     * @var string <p>Sorting order. If the field value is a number, sort by numeric size; if the field value is text, sort by ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value desc if not specified.</p>
      */
     public $Direction;
 
     /**
      * @param string $ZoneId <p>Site ID.</p>
-     * @param array $Filters <p>Filtering Conditions, maximum 20, multiple conditions have an AND relationship, the maximum for Filters.Values is 20. Detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li> Only the field named service-name supports filtering during a fuzzy query.</p>
-     * @param integer $Offset <p>Paginated query offset. Default value: 0.</p>
+     * @param array $Filters <p>Filter criteria. Up to 20 criteria are supported, and multiple criteria are in AND relationship. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li>For fuzzy query, only filtering by the field name service-name is supported.</p>
+     * @param integer $Offset <p>The offset of paginated query. Default value: 0.</p>
      * @param integer $Limit <p>Paginated query limit. Default value: 20, maximum value: 200.</p>
-     * @param string $Order <p>Sort returned results based on this field. Valid values: <li>create-time: Creation time.</li>Default sorting order is by create-time if left empty.</p>
-     * @param string $Direction <p>Sorting order. If the field value is a number, sort based on its size; if the field value is text, sort based on ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value if not specified.</p>
+     * @param string $Order <p>Returned results can be sorted by this field. Valid values: <li>create-time: creation time.</li>If left empty, results are sorted by create-time by default.</p>
+     * @param string $Direction <p>Sorting order. If the field value is a number, sort by numeric size; if the field value is text, sort by ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value desc if not specified.</p>
      */
     function __construct()
     {

@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The client IP header configuration
+ * Header configuration for storing client request IPs
  *
- * @method string getSwitch() Obtain Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method string getHeaderName() Obtain Specifies the request header name containing the client IP For origin-pull. this parameter is required when Switch is on. X-Forwarded-For is not allowed For this parameter.
- * @method void setHeaderName(string $HeaderName) Set Specifies the request header name containing the client IP For origin-pull. this parameter is required when Switch is on. X-Forwarded-For is not allowed For this parameter.
+ * @method string getSwitch() Obtain Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method string getHeaderName() Obtain Name of the request header containing the client IP address for origin-pull. When Switch is on, this parameter is required. X-Forwarded-For is not allowed for this parameter.
+ * @method void setHeaderName(string $HeaderName) Set Name of the request header containing the client IP address for origin-pull. When Switch is on, this parameter is required. X-Forwarded-For is not allowed for this parameter.
  */
 class ClientIpHeader extends AbstractModel
 {
     /**
-     * @var string Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var string Specifies the request header name containing the client IP For origin-pull. this parameter is required when Switch is on. X-Forwarded-For is not allowed For this parameter.
+     * @var string Name of the request header containing the client IP address for origin-pull. When Switch is on, this parameter is required. X-Forwarded-For is not allowed for this parameter.
      */
     public $HeaderName;
 
     /**
-     * @param string $Switch Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param string $HeaderName Specifies the request header name containing the client IP For origin-pull. this parameter is required when Switch is on. X-Forwarded-For is not allowed For this parameter.
+     * @param string $Switch Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param string $HeaderName Name of the request header containing the client IP address for origin-pull. When Switch is on, this parameter is required. X-Forwarded-For is not allowed for this parameter.
      */
     function __construct()
     {

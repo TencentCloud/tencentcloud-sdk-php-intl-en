@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyWebSecurityTemplate request structure.
  *
- * @method string getZoneId() Obtain Zone ID. The zone to which the target policy template belongs for access control. Use the DescribeWebSecurityTemplates interface to query the zone of the policy template.
- * @method void setZoneId(string $ZoneId) Set Zone ID. The zone to which the target policy template belongs for access control. Use the DescribeWebSecurityTemplates interface to query the zone of the policy template.
+ * @method string getZoneId() Obtain Site ID. Requires the input of the site to which the target policy template belongs in terms of access privileges. You can use the DescribeWebSecurityTemplates API to query the site to which the policy template belongs.
+ * @method void setZoneId(string $ZoneId) Set Site ID. Requires the input of the site to which the target policy template belongs in terms of access privileges. You can use the DescribeWebSecurityTemplates API to query the site to which the policy template belongs.
  * @method string getTemplateId() Obtain Policy template ID.
  * @method void setTemplateId(string $TemplateId) Set Policy template ID.
- * @method string getTemplateName() Obtain Modified policy template name. Consists of Chinese characters, letters, numbers, and underscores, cannot start with an underscore, and must not exceed 32 characters. If the field is empty, no modification will be made.
- * @method void setTemplateName(string $TemplateName) Set Modified policy template name. Consists of Chinese characters, letters, numbers, and underscores, cannot start with an underscore, and must not exceed 32 characters. If the field is empty, no modification will be made.
- * @method SecurityPolicy getSecurityPolicy() Obtain Security policy template configuration content. If the value is empty, no modification will be made; submodule structures not passed in will not be modified. Currently supports exception rules, custom rules, rate limiting rules, and managed rule configurations in the Web Security module, using expression syntax for security policy configuration. Bot management rule configuration is not yet supported (under development).
-Special note: When passing a submodule structure as input, ensure all rule content to be retained is included. Rule content not passed in will be treated as deleted.
- * @method void setSecurityPolicy(SecurityPolicy $SecurityPolicy) Set Security policy template configuration content. If the value is empty, no modification will be made; submodule structures not passed in will not be modified. Currently supports exception rules, custom rules, rate limiting rules, and managed rule configurations in the Web Security module, using expression syntax for security policy configuration. Bot management rule configuration is not yet supported (under development).
-Special note: When passing a submodule structure as input, ensure all rule content to be retained is included. Rule content not passed in will be treated as deleted.
+ * @method string getTemplateName() Obtain Name of the policy template after modification. It consists of Chinese characters, letters, digits, and underscores, cannot begin with an underline, and the length cannot exceed 32 characters. If the field is empty, no modification is made.
+ * @method void setTemplateName(string $TemplateName) Set Name of the policy template after modification. It consists of Chinese characters, letters, digits, and underscores, cannot begin with an underline, and the length cannot exceed 32 characters. If the field is empty, no modification is made.
+ * @method SecurityPolicy getSecurityPolicy() Obtain Configuration content of the security policy template. If the value is empty, no modification is made. Submodule structures that are not passed in will not be modified. Currently supports exception rules, custom rules, rate limiting rules, and managed rules in the Web protection module. Configure the security policy through expression syntax. Bot management rule configuration is not currently supported and is under development.
+Special note: When a submodule structure is passed in, please ensure that all rule content to be retained is carried. Rule content not passed in is deemed as deletion.
+ * @method void setSecurityPolicy(SecurityPolicy $SecurityPolicy) Set Configuration content of the security policy template. If the value is empty, no modification is made. Submodule structures that are not passed in will not be modified. Currently supports exception rules, custom rules, rate limiting rules, and managed rules in the Web protection module. Configure the security policy through expression syntax. Bot management rule configuration is not currently supported and is under development.
+Special note: When a submodule structure is passed in, please ensure that all rule content to be retained is carried. Rule content not passed in is deemed as deletion.
  */
 class ModifyWebSecurityTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID. The zone to which the target policy template belongs for access control. Use the DescribeWebSecurityTemplates interface to query the zone of the policy template.
+     * @var string Site ID. Requires the input of the site to which the target policy template belongs in terms of access privileges. You can use the DescribeWebSecurityTemplates API to query the site to which the policy template belongs.
      */
     public $ZoneId;
 
@@ -44,22 +44,22 @@ class ModifyWebSecurityTemplateRequest extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string Modified policy template name. Consists of Chinese characters, letters, numbers, and underscores, cannot start with an underscore, and must not exceed 32 characters. If the field is empty, no modification will be made.
+     * @var string Name of the policy template after modification. It consists of Chinese characters, letters, digits, and underscores, cannot begin with an underline, and the length cannot exceed 32 characters. If the field is empty, no modification is made.
      */
     public $TemplateName;
 
     /**
-     * @var SecurityPolicy Security policy template configuration content. If the value is empty, no modification will be made; submodule structures not passed in will not be modified. Currently supports exception rules, custom rules, rate limiting rules, and managed rule configurations in the Web Security module, using expression syntax for security policy configuration. Bot management rule configuration is not yet supported (under development).
-Special note: When passing a submodule structure as input, ensure all rule content to be retained is included. Rule content not passed in will be treated as deleted.
+     * @var SecurityPolicy Configuration content of the security policy template. If the value is empty, no modification is made. Submodule structures that are not passed in will not be modified. Currently supports exception rules, custom rules, rate limiting rules, and managed rules in the Web protection module. Configure the security policy through expression syntax. Bot management rule configuration is not currently supported and is under development.
+Special note: When a submodule structure is passed in, please ensure that all rule content to be retained is carried. Rule content not passed in is deemed as deletion.
      */
     public $SecurityPolicy;
 
     /**
-     * @param string $ZoneId Zone ID. The zone to which the target policy template belongs for access control. Use the DescribeWebSecurityTemplates interface to query the zone of the policy template.
+     * @param string $ZoneId Site ID. Requires the input of the site to which the target policy template belongs in terms of access privileges. You can use the DescribeWebSecurityTemplates API to query the site to which the policy template belongs.
      * @param string $TemplateId Policy template ID.
-     * @param string $TemplateName Modified policy template name. Consists of Chinese characters, letters, numbers, and underscores, cannot start with an underscore, and must not exceed 32 characters. If the field is empty, no modification will be made.
-     * @param SecurityPolicy $SecurityPolicy Security policy template configuration content. If the value is empty, no modification will be made; submodule structures not passed in will not be modified. Currently supports exception rules, custom rules, rate limiting rules, and managed rule configurations in the Web Security module, using expression syntax for security policy configuration. Bot management rule configuration is not yet supported (under development).
-Special note: When passing a submodule structure as input, ensure all rule content to be retained is included. Rule content not passed in will be treated as deleted.
+     * @param string $TemplateName Name of the policy template after modification. It consists of Chinese characters, letters, digits, and underscores, cannot begin with an underline, and the length cannot exceed 32 characters. If the field is empty, no modification is made.
+     * @param SecurityPolicy $SecurityPolicy Configuration content of the security policy template. If the value is empty, no modification is made. Submodule structures that are not passed in will not be modified. Currently supports exception rules, custom rules, rate limiting rules, and managed rules in the Web protection module. Configure the security policy through expression syntax. Bot management rule configuration is not currently supported and is under development.
+Special note: When a submodule structure is passed in, please ensure that all rule content to be retained is carried. Rule content not passed in is deemed as deletion.
      */
     function __construct()
     {

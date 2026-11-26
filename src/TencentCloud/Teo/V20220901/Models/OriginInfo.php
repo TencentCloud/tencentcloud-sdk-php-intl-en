@@ -18,121 +18,121 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of the origin.
+ * Acceleration domain name origin server information.
  *
  * @method string getOriginType() Obtain Origin server type. Valid values:
-<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN type origin server.</li>.
-<Li>COS: tencent cloud cos origin server;</li>.
-<Li>AWS_S3: aws s3 cos origin server;</li>.
-<Li>ORIGIN_GROUP: origin server group type origin server;</li>.
-<Li>VOD: video on demand;</li>.
-<Li>SPACE: origin server uninstallation. currently only available to the allowlist;</li>.
+<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 COS origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VOD: Video on Demand;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
  * @method void setOriginType(string $OriginType) Set Origin server type. Valid values:
-<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN type origin server.</li>.
-<Li>COS: tencent cloud cos origin server;</li>.
-<Li>AWS_S3: aws s3 cos origin server;</li>.
-<Li>ORIGIN_GROUP: origin server group type origin server;</li>.
-<Li>VOD: video on demand;</li>.
-<Li>SPACE: origin server uninstallation. currently only available to the allowlist;</li>.
+<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 COS origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VOD: Video on Demand;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
- * @method string getOrigin() Obtain Origin server address, which varies according to the value of OriginType:.
-<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a DOMAIN name;</li>.
-<li>When OriginType = COS, this parameter is the access domain of the COS bucket;</li>.
-<li>When OriginType = AWS_S3, this parameter is the access domain of the S3 bucket;</li>.
-<li>When OriginType = ORIGIN_GROUP, this parameter should be the ORIGIN server GROUP ID. if referencing an ORIGIN server GROUP from other sites, the format is {ORIGIN server GROUP ID}@{ZoneID}, such as og-testorigin@zone-38moq1z10wwwy;</li>.
-<li>When OriginType = VOD, this parameter is the VOD application ID;</li>.
-<li>When OriginType = LB, this parameter is the cloud load balancer instance ID. this feature is currently only available to the allowlist. if referencing a load balancer from other sites, the format is {cloud load balancer ID}@{ZoneID}, such as LB-2rxpamcyqfzg@zone-38moq1z10wwwy;</li>.
-<li>When OriginType = SPACE, this parameter specifies the origin server uninstallation SPACE ID. this feature is currently only available to the allowlist.</li>.
- * @method void setOrigin(string $Origin) Set Origin server address, which varies according to the value of OriginType:.
-<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a DOMAIN name;</li>.
-<li>When OriginType = COS, this parameter is the access domain of the COS bucket;</li>.
-<li>When OriginType = AWS_S3, this parameter is the access domain of the S3 bucket;</li>.
-<li>When OriginType = ORIGIN_GROUP, this parameter should be the ORIGIN server GROUP ID. if referencing an ORIGIN server GROUP from other sites, the format is {ORIGIN server GROUP ID}@{ZoneID}, such as og-testorigin@zone-38moq1z10wwwy;</li>.
-<li>When OriginType = VOD, this parameter is the VOD application ID;</li>.
-<li>When OriginType = LB, this parameter is the cloud load balancer instance ID. this feature is currently only available to the allowlist. if referencing a load balancer from other sites, the format is {cloud load balancer ID}@{ZoneID}, such as LB-2rxpamcyqfzg@zone-38moq1z10wwwy;</li>.
-<li>When OriginType = SPACE, this parameter specifies the origin server uninstallation SPACE ID. this feature is currently only available to the allowlist.</li>.
- * @method string getBackupOrigin() Obtain The ID of the secondary origin group. This parameter is valid only when OriginType is ORIGIN_GROUP. This field indicates the old version capability, which cannot be configured or modified on the control panel after being called. Please submit a ticket if required.
- * @method void setBackupOrigin(string $BackupOrigin) Set The ID of the secondary origin group. This parameter is valid only when OriginType is ORIGIN_GROUP. This field indicates the old version capability, which cannot be configured or modified on the control panel after being called. Please submit a ticket if required.
- * @method string getPrivateAccess() Obtain Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type OriginType is COS or AWS_S3. valid values:.
-<Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li>if left empty, the default value is off.
- * @method void setPrivateAccess(string $PrivateAccess) Set Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type OriginType is COS or AWS_S3. valid values:.
-<Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li>if left empty, the default value is off.
- * @method array getPrivateParameters() Obtain Private authentication parameter. This parameter is valid only when PrivateAccess is on.
- * @method void setPrivateParameters(array $PrivateParameters) Set Private authentication parameter. This parameter is valid only when PrivateAccess is on.
- * @method string getHostHeader() Obtain Custom origin server HOST header. this parameter is valid only when OriginType = IP_DOMAIN. when OriginType is other types, this parameter is not required, otherwise error will occur.
-When OriginType is COS or AWS_S3, the origin-pull HOST header will remain consistent with the origin server domain name.
-When OriginType is ORIGIN_GROUP, the HOST header follows the ORIGIN site GROUP configuration. if not configured, it defaults to the acceleration domain name.
-When OriginType is VOD or SPACE, no configuration required for this header, the corresponding domain name takes effect.
- * @method void setHostHeader(string $HostHeader) Set Custom origin server HOST header. this parameter is valid only when OriginType = IP_DOMAIN. when OriginType is other types, this parameter is not required, otherwise error will occur.
-When OriginType is COS or AWS_S3, the origin-pull HOST header will remain consistent with the origin server domain name.
-When OriginType is ORIGIN_GROUP, the HOST header follows the ORIGIN site GROUP configuration. if not configured, it defaults to the acceleration domain name.
-When OriginType is VOD or SPACE, no configuration required for this header, the corresponding domain name takes effect.
+ * @method string getOrigin() Obtain Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID. If you reference an origin server group from another site, use the format {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = VOD, this parameter is the VOD application ID;</li>
+<li>When OriginType = LB, this parameter is the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. If a load balancer from another site is referenced, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy;</li>
+<li>When OriginType = SPACE, this parameter is the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
+ * @method void setOrigin(string $Origin) Set Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID. If you reference an origin server group from another site, use the format {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = VOD, this parameter is the VOD application ID;</li>
+<li>When OriginType = LB, this parameter is the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. If a load balancer from another site is referenced, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy;</li>
+<li>When OriginType = SPACE, this parameter is the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
+ * @method string getBackupOrigin() Obtain Secondary origin group ID. This parameter is valid only when OriginType = ORIGIN_GROUP. This field indicates the old version capability. After calling, you cannot modify the configuration in the console. If needed, submit a ticket for consultation.
+ * @method void setBackupOrigin(string $BackupOrigin) Set Secondary origin group ID. This parameter is valid only when OriginType = ORIGIN_GROUP. This field indicates the old version capability. After calling, you cannot modify the configuration in the console. If needed, submit a ticket for consultation.
+ * @method string getPrivateAccess() Obtain Whether access to the private object storage origin server is allowed. This parameter is valid only when the origin server type OriginType is COS or AWS_S3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication. </li>If left empty, the default value is off.
+ * @method void setPrivateAccess(string $PrivateAccess) Set Whether access to the private object storage origin server is allowed. This parameter is valid only when the origin server type OriginType is COS or AWS_S3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication. </li>If left empty, the default value is off.
+ * @method array getPrivateParameters() Obtain Private authentication parameter. This parameter is valid only when the origin server type is PrivateAccess = on.
+ * @method void setPrivateParameters(array $PrivateParameters) Set Private authentication parameter. This parameter is valid only when the origin server type is PrivateAccess = on.
+ * @method string getHostHeader() Obtain Custom origin server HOST header. This parameter is valid only when OriginType is IP_DOMAIN. For other origin server types, this parameter is not required, otherwise an error will be reported.
+When OriginType is COS or AWS_S3, the origin-pull HOST header remains the same as the origin server domain name.
+When OriginType = ORIGIN_GROUP, the origin-pull HOST header follows the configuration in the origin group. If there is no configuration, it defaults to the acceleration domain name.
+When OriginType is VOD or SPACE, no configuration is required for this header. It takes effect based on the corresponding origin server domain name.
+ * @method void setHostHeader(string $HostHeader) Set Custom origin server HOST header. This parameter is valid only when OriginType is IP_DOMAIN. For other origin server types, this parameter is not required, otherwise an error will be reported.
+When OriginType is COS or AWS_S3, the origin-pull HOST header remains the same as the origin server domain name.
+When OriginType = ORIGIN_GROUP, the origin-pull HOST header follows the configuration in the origin group. If there is no configuration, it defaults to the acceleration domain name.
+When OriginType is VOD or SPACE, no configuration is required for this header. It takes effect based on the corresponding origin server domain name.
  * @method integer getVodeoSubAppId() Obtain VODEO sub-application ID. This parameter is required when OriginType is VODEO.
  * @method void setVodeoSubAppId(integer $VodeoSubAppId) Set VODEO sub-application ID. This parameter is required when OriginType is VODEO.
- * @method string getVodeoDistributionRange() Obtain VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
+ * @method string getVodeoDistributionRange() Obtain VOD on EO distribution range. This parameter is required when OriginType = VODEO. Valid values: 
 <li>All: all buckets under the current application;</li> 
 <li>Bucket: a specified bucket.</li>
- * @method void setVodeoDistributionRange(string $VodeoDistributionRange) Set VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
+ * @method void setVodeoDistributionRange(string $VodeoDistributionRange) Set VOD on EO distribution range. This parameter is required when OriginType = VODEO. Valid values: 
 <li>All: all buckets under the current application;</li> 
 <li>Bucket: a specified bucket.</li>
  * @method string getVodeoBucketId() Obtain VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
  * @method void setVodeoBucketId(string $VodeoBucketId) Set VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
- * @method string getVodOriginScope() Obtain VOD origin range. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server.</li><li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. use parameter VodBucketId to specify the bucket.</li>default value is all if left empty.
- * @method void setVodOriginScope(string $VodOriginScope) Set VOD origin range. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server.</li><li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. use parameter VodBucketId to specify the bucket.</li>default value is all if left empty.
- * @method string getVodBucketId() Obtain VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
- * @method void setVodBucketId(string $VodBucketId) Set VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
+ * @method string getVodOriginScope() Obtain VOD origin-pull scope. This parameter is valid only when OriginType = VOD. Valid values: <li>all: all files in the VOD application corresponding to the current origin server;</li><li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. Specify the bucket with the VodBucketId parameter.</li>If left empty, the default value is all.
+ * @method void setVodOriginScope(string $VodOriginScope) Set VOD origin-pull scope. This parameter is valid only when OriginType = VOD. Valid values: <li>all: all files in the VOD application corresponding to the current origin server;</li><li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. Specify the bucket with the VodBucketId parameter.</li>If left empty, the default value is all.
+ * @method string getVodBucketId() Obtain VOD bucket ID. This parameter is required when OriginType = VOD and VodOriginScope = bucket. Data source: storage ID of a bucket under a VOD professional application.
+ * @method void setVodBucketId(string $VodBucketId) Set VOD bucket ID. This parameter is required when OriginType = VOD and VodOriginScope = bucket. Data source: storage ID of a bucket under a VOD professional application.
  */
 class OriginInfo extends AbstractModel
 {
     /**
      * @var string Origin server type. Valid values:
-<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN type origin server.</li>.
-<Li>COS: tencent cloud cos origin server;</li>.
-<Li>AWS_S3: aws s3 cos origin server;</li>.
-<Li>ORIGIN_GROUP: origin server group type origin server;</li>.
-<Li>VOD: video on demand;</li>.
-<Li>SPACE: origin server uninstallation. currently only available to the allowlist;</li>.
+<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 COS origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VOD: Video on Demand;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
      */
     public $OriginType;
 
     /**
-     * @var string Origin server address, which varies according to the value of OriginType:.
-<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a DOMAIN name;</li>.
-<li>When OriginType = COS, this parameter is the access domain of the COS bucket;</li>.
-<li>When OriginType = AWS_S3, this parameter is the access domain of the S3 bucket;</li>.
-<li>When OriginType = ORIGIN_GROUP, this parameter should be the ORIGIN server GROUP ID. if referencing an ORIGIN server GROUP from other sites, the format is {ORIGIN server GROUP ID}@{ZoneID}, such as og-testorigin@zone-38moq1z10wwwy;</li>.
-<li>When OriginType = VOD, this parameter is the VOD application ID;</li>.
-<li>When OriginType = LB, this parameter is the cloud load balancer instance ID. this feature is currently only available to the allowlist. if referencing a load balancer from other sites, the format is {cloud load balancer ID}@{ZoneID}, such as LB-2rxpamcyqfzg@zone-38moq1z10wwwy;</li>.
-<li>When OriginType = SPACE, this parameter specifies the origin server uninstallation SPACE ID. this feature is currently only available to the allowlist.</li>.
+     * @var string Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID. If you reference an origin server group from another site, use the format {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = VOD, this parameter is the VOD application ID;</li>
+<li>When OriginType = LB, this parameter is the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. If a load balancer from another site is referenced, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy;</li>
+<li>When OriginType = SPACE, this parameter is the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
      */
     public $Origin;
 
     /**
-     * @var string The ID of the secondary origin group. This parameter is valid only when OriginType is ORIGIN_GROUP. This field indicates the old version capability, which cannot be configured or modified on the control panel after being called. Please submit a ticket if required.
+     * @var string Secondary origin group ID. This parameter is valid only when OriginType = ORIGIN_GROUP. This field indicates the old version capability. After calling, you cannot modify the configuration in the console. If needed, submit a ticket for consultation.
      */
     public $BackupOrigin;
 
     /**
-     * @var string Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type OriginType is COS or AWS_S3. valid values:.
-<Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li>if left empty, the default value is off.
+     * @var string Whether access to the private object storage origin server is allowed. This parameter is valid only when the origin server type OriginType is COS or AWS_S3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication. </li>If left empty, the default value is off.
      */
     public $PrivateAccess;
 
     /**
-     * @var array Private authentication parameter. This parameter is valid only when PrivateAccess is on.
+     * @var array Private authentication parameter. This parameter is valid only when the origin server type is PrivateAccess = on.
      */
     public $PrivateParameters;
 
     /**
-     * @var string Custom origin server HOST header. this parameter is valid only when OriginType = IP_DOMAIN. when OriginType is other types, this parameter is not required, otherwise error will occur.
-When OriginType is COS or AWS_S3, the origin-pull HOST header will remain consistent with the origin server domain name.
-When OriginType is ORIGIN_GROUP, the HOST header follows the ORIGIN site GROUP configuration. if not configured, it defaults to the acceleration domain name.
-When OriginType is VOD or SPACE, no configuration required for this header, the corresponding domain name takes effect.
+     * @var string Custom origin server HOST header. This parameter is valid only when OriginType is IP_DOMAIN. For other origin server types, this parameter is not required, otherwise an error will be reported.
+When OriginType is COS or AWS_S3, the origin-pull HOST header remains the same as the origin server domain name.
+When OriginType = ORIGIN_GROUP, the origin-pull HOST header follows the configuration in the origin group. If there is no configuration, it defaults to the acceleration domain name.
+When OriginType is VOD or SPACE, no configuration is required for this header. It takes effect based on the corresponding origin server domain name.
      */
     public $HostHeader;
 
@@ -143,7 +143,7 @@ When OriginType is VOD or SPACE, no configuration required for this header, the 
     public $VodeoSubAppId;
 
     /**
-     * @var string VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
+     * @var string VOD on EO distribution range. This parameter is required when OriginType = VODEO. Valid values: 
 <li>All: all buckets under the current application;</li> 
 <li>Bucket: a specified bucket.</li>
      * @deprecated
@@ -157,48 +157,48 @@ When OriginType is VOD or SPACE, no configuration required for this header, the 
     public $VodeoBucketId;
 
     /**
-     * @var string VOD origin range. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server.</li><li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. use parameter VodBucketId to specify the bucket.</li>default value is all if left empty.
+     * @var string VOD origin-pull scope. This parameter is valid only when OriginType = VOD. Valid values: <li>all: all files in the VOD application corresponding to the current origin server;</li><li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. Specify the bucket with the VodBucketId parameter.</li>If left empty, the default value is all.
      */
     public $VodOriginScope;
 
     /**
-     * @var string VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
+     * @var string VOD bucket ID. This parameter is required when OriginType = VOD and VodOriginScope = bucket. Data source: storage ID of a bucket under a VOD professional application.
      */
     public $VodBucketId;
 
     /**
      * @param string $OriginType Origin server type. Valid values:
-<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN type origin server.</li>.
-<Li>COS: tencent cloud cos origin server;</li>.
-<Li>AWS_S3: aws s3 cos origin server;</li>.
-<Li>ORIGIN_GROUP: origin server group type origin server;</li>.
-<Li>VOD: video on demand;</li>.
-<Li>SPACE: origin server uninstallation. currently only available to the allowlist;</li>.
+<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 COS origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VOD: Video on Demand;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
-     * @param string $Origin Origin server address, which varies according to the value of OriginType:.
-<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a DOMAIN name;</li>.
-<li>When OriginType = COS, this parameter is the access domain of the COS bucket;</li>.
-<li>When OriginType = AWS_S3, this parameter is the access domain of the S3 bucket;</li>.
-<li>When OriginType = ORIGIN_GROUP, this parameter should be the ORIGIN server GROUP ID. if referencing an ORIGIN server GROUP from other sites, the format is {ORIGIN server GROUP ID}@{ZoneID}, such as og-testorigin@zone-38moq1z10wwwy;</li>.
-<li>When OriginType = VOD, this parameter is the VOD application ID;</li>.
-<li>When OriginType = LB, this parameter is the cloud load balancer instance ID. this feature is currently only available to the allowlist. if referencing a load balancer from other sites, the format is {cloud load balancer ID}@{ZoneID}, such as LB-2rxpamcyqfzg@zone-38moq1z10wwwy;</li>.
-<li>When OriginType = SPACE, this parameter specifies the origin server uninstallation SPACE ID. this feature is currently only available to the allowlist.</li>.
-     * @param string $BackupOrigin The ID of the secondary origin group. This parameter is valid only when OriginType is ORIGIN_GROUP. This field indicates the old version capability, which cannot be configured or modified on the control panel after being called. Please submit a ticket if required.
-     * @param string $PrivateAccess Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type OriginType is COS or AWS_S3. valid values:.
-<Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li>if left empty, the default value is off.
-     * @param array $PrivateParameters Private authentication parameter. This parameter is valid only when PrivateAccess is on.
-     * @param string $HostHeader Custom origin server HOST header. this parameter is valid only when OriginType = IP_DOMAIN. when OriginType is other types, this parameter is not required, otherwise error will occur.
-When OriginType is COS or AWS_S3, the origin-pull HOST header will remain consistent with the origin server domain name.
-When OriginType is ORIGIN_GROUP, the HOST header follows the ORIGIN site GROUP configuration. if not configured, it defaults to the acceleration domain name.
-When OriginType is VOD or SPACE, no configuration required for this header, the corresponding domain name takes effect.
+     * @param string $Origin Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID. If you reference an origin server group from another site, use the format {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = VOD, this parameter is the VOD application ID;</li>
+<li>When OriginType = LB, this parameter is the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. If a load balancer from another site is referenced, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy;</li>
+<li>When OriginType = SPACE, this parameter is the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
+     * @param string $BackupOrigin Secondary origin group ID. This parameter is valid only when OriginType = ORIGIN_GROUP. This field indicates the old version capability. After calling, you cannot modify the configuration in the console. If needed, submit a ticket for consultation.
+     * @param string $PrivateAccess Whether access to the private object storage origin server is allowed. This parameter is valid only when the origin server type OriginType is COS or AWS_S3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication. </li>If left empty, the default value is off.
+     * @param array $PrivateParameters Private authentication parameter. This parameter is valid only when the origin server type is PrivateAccess = on.
+     * @param string $HostHeader Custom origin server HOST header. This parameter is valid only when OriginType is IP_DOMAIN. For other origin server types, this parameter is not required, otherwise an error will be reported.
+When OriginType is COS or AWS_S3, the origin-pull HOST header remains the same as the origin server domain name.
+When OriginType = ORIGIN_GROUP, the origin-pull HOST header follows the configuration in the origin group. If there is no configuration, it defaults to the acceleration domain name.
+When OriginType is VOD or SPACE, no configuration is required for this header. It takes effect based on the corresponding origin server domain name.
      * @param integer $VodeoSubAppId VODEO sub-application ID. This parameter is required when OriginType is VODEO.
-     * @param string $VodeoDistributionRange VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
+     * @param string $VodeoDistributionRange VOD on EO distribution range. This parameter is required when OriginType = VODEO. Valid values: 
 <li>All: all buckets under the current application;</li> 
 <li>Bucket: a specified bucket.</li>
      * @param string $VodeoBucketId VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
-     * @param string $VodOriginScope VOD origin range. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server.</li><li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. use parameter VodBucketId to specify the bucket.</li>default value is all if left empty.
-     * @param string $VodBucketId VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
+     * @param string $VodOriginScope VOD origin-pull scope. This parameter is valid only when OriginType = VOD. Valid values: <li>all: all files in the VOD application corresponding to the current origin server;</li><li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. Specify the bucket with the VodBucketId parameter.</li>If left empty, the default value is all.
+     * @param string $VodBucketId VOD bucket ID. This parameter is required when OriginType = VOD and VodOriginScope = bucket. Data source: storage ID of a bucket under a VOD professional application.
      */
     function __construct()
     {

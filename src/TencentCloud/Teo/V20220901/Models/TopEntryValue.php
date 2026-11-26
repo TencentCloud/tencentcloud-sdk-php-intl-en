@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The top-ranked data
+ * TopN data Entry
  *
- * @method string getName() Obtain The item name.
- * @method void setName(string $Name) Set The item name.
- * @method integer getCount() Obtain The number of items.
- * @method void setCount(integer $Count) Set The number of items.
+ * @method string getName() Obtain Sort entity names.
+ * @method void setName(string $Name) Set Sort entity names.
+ * @method integer getCount() Obtain Sort the number of entities.
+ * @method void setCount(integer $Count) Set Sort the number of entities.
  */
 class TopEntryValue extends AbstractModel
 {
     /**
-     * @var string The item name.
+     * @var string Sort entity names.
      */
     public $Name;
 
     /**
-     * @var integer The number of items.
+     * @var integer Sort the number of entities.
      */
     public $Count;
 
     /**
-     * @param string $Name The item name.
-     * @param integer $Count The number of items.
+     * @param string $Name Sort entity names.
+     * @param integer $Count Sort the number of entities.
      */
     function __construct()
     {

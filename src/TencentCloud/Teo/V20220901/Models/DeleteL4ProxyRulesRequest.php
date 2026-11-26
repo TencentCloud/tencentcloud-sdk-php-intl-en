@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getProxyId() Obtain Layer 4 proxy instance ID.
- * @method void setProxyId(string $ProxyId) Set Layer 4 proxy instance ID.
- * @method array getRuleIds() Obtain List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
- * @method void setRuleIds(array $RuleIds) Set List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
+ * @method string getProxyId() Obtain Layer 4 Proxy Instance ID.
+ * @method void setProxyId(string $ProxyId) Set Layer 4 Proxy Instance ID.
+ * @method array getRuleIds() Obtain List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
+ * @method void setRuleIds(array $RuleIds) Set List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
  */
 class DeleteL4ProxyRulesRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DeleteL4ProxyRulesRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Layer 4 proxy instance ID.
+     * @var string Layer 4 Proxy Instance ID.
      */
     public $ProxyId;
 
     /**
-     * @var array List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
+     * @var array List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
      */
     public $RuleIds;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $ProxyId Layer 4 proxy instance ID.
-     * @param array $RuleIds List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
+     * @param string $ProxyId Layer 4 Proxy Instance ID.
+     * @param array $RuleIds List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
      */
     function __construct()
     {

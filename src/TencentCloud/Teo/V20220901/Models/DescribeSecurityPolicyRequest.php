@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getEntity() Obtain `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
- * @method void setEntity(string $Entity) Set `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
- * @method string getTemplateId() Obtain Specify the policy Template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
- * @method void setTemplateId(string $TemplateId) Set Specify the policy Template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
- * @method string getHost() Obtain Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
- * @method void setHost(string $Host) Set Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+ * @method string getEntity() Obtain Security policy type. You can use the following parameter values for query: <li>ZoneDefaultPolicy: used to specify query for site-level policies;</li><li>Template: used to specify query for policy templates. The TemplateId parameter must be specified simultaneously;</li><li>Host: used to specify query for domain-level policies (Note: when using a domain name to specify a domain name service policy, only domain name services or policy templates that already have a domain-level policy applied are supported).</li>	
+ * @method void setEntity(string $Entity) Set Security policy type. You can use the following parameter values for query: <li>ZoneDefaultPolicy: used to specify query for site-level policies;</li><li>Template: used to specify query for policy templates. The TemplateId parameter must be specified simultaneously;</li><li>Host: used to specify query for domain-level policies (Note: when using a domain name to specify a domain name service policy, only domain name services or policy templates that already have a domain-level policy applied are supported).</li>	
+ * @method string getTemplateId() Obtain Specify the policy template ID. When the Entity parameter value is Template, use this parameter to specify the policy template ID to query template configurations.
+ * @method void setTemplateId(string $TemplateId) Set Specify the policy template ID. When the Entity parameter value is Template, use this parameter to specify the policy template ID to query template configurations.
+ * @method string getHost() Obtain Specify domain name. When the value of the Entity parameter is Host, use this parameter to specify the domain-level policy to query the domain configuration. For example, use www.example.com to configure the domain-level policy for this domain.
+ * @method void setHost(string $Host) Set Specify domain name. When the value of the Entity parameter is Host, use this parameter to specify the domain-level policy to query the domain configuration. For example, use www.example.com to configure the domain-level policy for this domain.
  */
 class DescribeSecurityPolicyRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class DescribeSecurityPolicyRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
+     * @var string Security policy type. You can use the following parameter values for query: <li>ZoneDefaultPolicy: used to specify query for site-level policies;</li><li>Template: used to specify query for policy templates. The TemplateId parameter must be specified simultaneously;</li><li>Host: used to specify query for domain-level policies (Note: when using a domain name to specify a domain name service policy, only domain name services or policy templates that already have a domain-level policy applied are supported).</li>	
      */
     public $Entity;
 
     /**
-     * @var string Specify the policy Template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
+     * @var string Specify the policy template ID. When the Entity parameter value is Template, use this parameter to specify the policy template ID to query template configurations.
      */
     public $TemplateId;
 
     /**
-     * @var string Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+     * @var string Specify domain name. When the value of the Entity parameter is Host, use this parameter to specify the domain-level policy to query the domain configuration. For example, use www.example.com to configure the domain-level policy for this domain.
      */
     public $Host;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $Entity `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
-     * @param string $TemplateId Specify the policy Template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
-     * @param string $Host Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+     * @param string $Entity Security policy type. You can use the following parameter values for query: <li>ZoneDefaultPolicy: used to specify query for site-level policies;</li><li>Template: used to specify query for policy templates. The TemplateId parameter must be specified simultaneously;</li><li>Host: used to specify query for domain-level policies (Note: when using a domain name to specify a domain name service policy, only domain name services or policy templates that already have a domain-level policy applied are supported).</li>	
+     * @param string $TemplateId Specify the policy template ID. When the Entity parameter value is Template, use this parameter to specify the policy template ID to query template configurations.
+     * @param string $Host Specify domain name. When the value of the Entity parameter is Host, use this parameter to specify the domain-level policy to query the domain configuration. For example, use www.example.com to configure the domain-level policy for this domain.
      */
     function __construct()
     {

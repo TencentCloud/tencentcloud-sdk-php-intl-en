@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method array getFilters() Obtain Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
- * @method void setFilters(array $Filters) Set Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
- * @method integer getOffset() Obtain Offset for paginated queries. Default value: `0`
- * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: `0`
- * @method integer getLimit() Obtain Limit on paginated queries. Default value: `20`. Maximum value: `100`.
- * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: `20`. Maximum value: `100`.
+ * @method array getFilters() Obtain Filter criteria. The maximum value of Filters.Values is 5. The detailed filter criteria are as follows:
+<li>zone-id<br>   Filter by <strong>site ID</strong>. The site ID format is zone-xxx.<br>   Type: String<br>   Required: Yes </li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The maximum value of Filters.Values is 5. The detailed filter criteria are as follows:
+<li>zone-id<br>   Filter by <strong>site ID</strong>. The site ID format is zone-xxx.<br>   Type: String<br>   Required: Yes </li>
+ * @method integer getOffset() Obtain The offset of paginated query. Default value: 0.
+ * @method void setOffset(integer $Offset) Set The offset of paginated query. Default value: 0.
+ * @method integer getLimit() Obtain Paginated query limit. Default value: 20, maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Paginated query limit. Default value: 20, maximum value: 100.
  */
 class DescribeDefaultCertificatesRequest extends AbstractModel
 {
@@ -39,27 +39,27 @@ class DescribeDefaultCertificatesRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
+     * @var array Filter criteria. The maximum value of Filters.Values is 5. The detailed filter criteria are as follows:
+<li>zone-id<br>   Filter by <strong>site ID</strong>. The site ID format is zone-xxx.<br>   Type: String<br>   Required: Yes </li>
      */
     public $Filters;
 
     /**
-     * @var integer Offset for paginated queries. Default value: `0`
+     * @var integer The offset of paginated query. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Limit on paginated queries. Default value: `20`. Maximum value: `100`.
+     * @var integer Paginated query limit. Default value: 20, maximum value: 100.
      */
     public $Limit;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param array $Filters Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
-     * @param integer $Offset Offset for paginated queries. Default value: `0`
-     * @param integer $Limit Limit on paginated queries. Default value: `20`. Maximum value: `100`.
+     * @param array $Filters Filter criteria. The maximum value of Filters.Values is 5. The detailed filter criteria are as follows:
+<li>zone-id<br>   Filter by <strong>site ID</strong>. The site ID format is zone-xxx.<br>   Type: String<br>   Required: Yes </li>
+     * @param integer $Offset The offset of paginated query. Default value: 0.
+     * @param integer $Limit Paginated query limit. Default value: 20, maximum value: 100.
      */
     function __construct()
     {

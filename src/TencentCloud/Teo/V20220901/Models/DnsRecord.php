@@ -18,58 +18,58 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DNS record
+ * DNS record.
  *
- * @method string getZoneId() Obtain Zone id.<br>note: zoneid is for output parameter use only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
- * @method void setZoneId(string $ZoneId) Set Zone id.<br>note: zoneid is for output parameter use only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
- * @method string getRecordId() Obtain DNS record id.
- * @method void setRecordId(string $RecordId) Set DNS record id.
+ * @method string getZoneId() Obtain Site ID.<br>Note: ZoneId is for output usage only. It cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
+ * @method void setZoneId(string $ZoneId) Set Site ID.<br>Note: ZoneId is for output usage only. It cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
+ * @method string getRecordId() Obtain DNS record ID.
+ * @method void setRecordId(string $RecordId) Set DNS record ID.
  * @method string getName() Obtain DNS record name.
  * @method void setName(string $Name) Set DNS record name.
- * @method string getType() Obtain DNS record type. valid values are:.
-<Li>A: point the domain to a public network ipv4 address, such as 8.8.8.8;</li>.
-<Li>AAAA: point the domain to a public network ipv6 address;</li>.
-<Li>MX: used for email servers. when there are multiple mx records, the lower the priority, the higher the precedence;</li>.
-<Li>CNAME: point the domain to another domain name, which will resolve to the final ip address;</li>.
-<Li>TXT: identify and describe the domain, commonly used for domain verification and spf records (anti-spam);</li>.
-<Li>NS: if you need to delegate the resolution of a subdomain to another dns service provider, you need to add an ns record. ns records cannot be added to the root domain name;</li>.
-<Li>CAA: specifies the ca that can issue certificates for this site;</li>.
-<Li>SRV: indicates that a server is using a service, commonly seen in microsoft system directory management.</li>.
- * @method void setType(string $Type) Set DNS record type. valid values are:.
-<Li>A: point the domain to a public network ipv4 address, such as 8.8.8.8;</li>.
-<Li>AAAA: point the domain to a public network ipv6 address;</li>.
-<Li>MX: used for email servers. when there are multiple mx records, the lower the priority, the higher the precedence;</li>.
-<Li>CNAME: point the domain to another domain name, which will resolve to the final ip address;</li>.
-<Li>TXT: identify and describe the domain, commonly used for domain verification and spf records (anti-spam);</li>.
-<Li>NS: if you need to delegate the resolution of a subdomain to another dns service provider, you need to add an ns record. ns records cannot be added to the root domain name;</li>.
-<Li>CAA: specifies the ca that can issue certificates for this site;</li>.
-<Li>SRV: indicates that a server is using a service, commonly seen in microsoft system directory management.</li>.
- * @method string getLocation() Obtain DNS record resolution route, if not specified, defaults to default, indicating the default resolution route, effective in all regions.<br>resolution route configuration only applies when type (dns record type) is a, aaaa, or cname.<br>for valid values, refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
- * @method void setLocation(string $Location) Set DNS record resolution route, if not specified, defaults to default, indicating the default resolution route, effective in all regions.<br>resolution route configuration only applies when type (dns record type) is a, aaaa, or cname.<br>for valid values, refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
- * @method string getContent() Obtain DNS record content. fill in the corresponding content based on the type value.
- * @method void setContent(string $Content) Set DNS record content. fill in the corresponding content based on the type value.
- * @method integer getTTL() Obtain Cache time. value range: 60–86400. the smaller the value, the faster the record modification will take effect globally. unit: seconds.
- * @method void setTTL(integer $TTL) Set Cache time. value range: 60–86400. the smaller the value, the faster the record modification will take effect globally. unit: seconds.
- * @method integer getWeight() Obtain DNS record weight. value range: -1–100. a value of -1 means no weight is assigned, and 0 means no parsing. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.
- * @method void setWeight(integer $Weight) Set DNS record weight. value range: -1–100. a value of -1 means no weight is assigned, and 0 means no parsing. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.
- * @method integer getPriority() Obtain MX record priority. value range: 0–50. the smaller the value, the higher the priority.
- * @method void setPriority(integer $Priority) Set MX record priority. value range: 0–50. the smaller the value, the higher the priority.
- * @method string getStatus() Obtain DNS record parsing status. valid values are: <li>enable: takes effect;</li><li>disable: disabled.</li> note: status is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
- * @method void setStatus(string $Status) Set DNS record parsing status. valid values are: <li>enable: takes effect;</li><li>disable: disabled.</li> note: status is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
- * @method string getCreatedOn() Obtain Creation time.<br>note: createdon is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
- * @method void setCreatedOn(string $CreatedOn) Set Creation time.<br>note: createdon is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
- * @method string getModifiedOn() Obtain Modification time.<br>note: modifiedon is for output parameter only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
- * @method void setModifiedOn(string $ModifiedOn) Set Modification time.<br>note: modifiedon is for output parameter only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+ * @method string getType() Obtain DNS record type. Valid values:
+<li>A: Point the domain name to a public IPv4 address, for example 8.8.8.8;</li>
+<li>AAAA: point the domain name to a public IPv6 address;</li>
+<li>MX: for email servers. When multiple MX records exist, lower priority means higher preference;</li>
+<li>CNAME: Point the domain to another domain, which then resolves the final IP;</li>
+<li>TXT: Identifies and describes a domain name, commonly used for domain name verification and SPF records (anti-spam);</li>
+<li>NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. NS records cannot be added for the root domain;</li>
+<li>CAA: specify the CA that can issue certificates for this site;</li>
+<li>SRV: identifies that a server used a service, commonly seen in directory management of Microsoft systems.</li>
+ * @method void setType(string $Type) Set DNS record type. Valid values:
+<li>A: Point the domain name to a public IPv4 address, for example 8.8.8.8;</li>
+<li>AAAA: point the domain name to a public IPv6 address;</li>
+<li>MX: for email servers. When multiple MX records exist, lower priority means higher preference;</li>
+<li>CNAME: Point the domain to another domain, which then resolves the final IP;</li>
+<li>TXT: Identifies and describes a domain name, commonly used for domain name verification and SPF records (anti-spam);</li>
+<li>NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. NS records cannot be added for the root domain;</li>
+<li>CAA: specify the CA that can issue certificates for this site;</li>
+<li>SRV: identifies that a server used a service, commonly seen in directory management of Microsoft systems.</li>
+ * @method string getLocation() Obtain DNS record resolution route. If not specified, it defaults to Default, which means the default resolution route and represents that it takes effect in all regions.<br>Route configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.<br>For values, see [Resolution routes and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
+ * @method void setLocation(string $Location) Set DNS record resolution route. If not specified, it defaults to Default, which means the default resolution route and represents that it takes effect in all regions.<br>Route configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.<br>For values, see [Resolution routes and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
+ * @method string getContent() Obtain DNS record content. Fill in the corresponding content based on the Type value.
+ * @method void setContent(string $Content) Set DNS record content. Fill in the corresponding content based on the Type value.
+ * @method integer getTTL() Obtain Cache time. Value range: 60–86400. A smaller value means the modification record takes effect faster in each region. Unit: seconds.
+ * @method void setTTL(integer $TTL) Set Cache time. Value range: 60–86400. A smaller value means the modification record takes effect faster in each region. Unit: seconds.
+ * @method integer getWeight() Obtain DNS record weight. Value range: -1 to 100. -1 means no weight is assigned, and 0 indicates no parsing. Weight configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.
+ * @method void setWeight(integer $Weight) Set DNS record weight. Value range: -1 to 100. -1 means no weight is assigned, and 0 indicates no parsing. Weight configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.
+ * @method integer getPriority() Obtain MX record priority. Value range: 0–50. A smaller value indicates a higher priority.
+ * @method void setPriority(integer $Priority) Set MX record priority. Value range: 0–50. A smaller value indicates a higher priority.
+ * @method string getStatus() Obtain DNS record resolution status. Valid values: <li>enable: effective;</li><li>disable: disabled.</li>Note: Status is for output only. It cannot be used as an input parameter in ModifyDnsRecords and will be ignored if provided.
+ * @method void setStatus(string $Status) Set DNS record resolution status. Valid values: <li>enable: effective;</li><li>disable: disabled.</li>Note: Status is for output only. It cannot be used as an input parameter in ModifyDnsRecords and will be ignored if provided.
+ * @method string getCreatedOn() Obtain Creation time.<br>Note: CreatedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
+ * @method void setCreatedOn(string $CreatedOn) Set Creation time.<br>Note: CreatedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
+ * @method string getModifiedOn() Obtain Last modified.<br>Note: ModifiedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
+ * @method void setModifiedOn(string $ModifiedOn) Set Last modified.<br>Note: ModifiedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
  */
 class DnsRecord extends AbstractModel
 {
     /**
-     * @var string Zone id.<br>note: zoneid is for output parameter use only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+     * @var string Site ID.<br>Note: ZoneId is for output usage only. It cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
      */
     public $ZoneId;
 
     /**
-     * @var string DNS record id.
+     * @var string DNS record ID.
      */
     public $RecordId;
 
@@ -79,79 +79,79 @@ class DnsRecord extends AbstractModel
     public $Name;
 
     /**
-     * @var string DNS record type. valid values are:.
-<Li>A: point the domain to a public network ipv4 address, such as 8.8.8.8;</li>.
-<Li>AAAA: point the domain to a public network ipv6 address;</li>.
-<Li>MX: used for email servers. when there are multiple mx records, the lower the priority, the higher the precedence;</li>.
-<Li>CNAME: point the domain to another domain name, which will resolve to the final ip address;</li>.
-<Li>TXT: identify and describe the domain, commonly used for domain verification and spf records (anti-spam);</li>.
-<Li>NS: if you need to delegate the resolution of a subdomain to another dns service provider, you need to add an ns record. ns records cannot be added to the root domain name;</li>.
-<Li>CAA: specifies the ca that can issue certificates for this site;</li>.
-<Li>SRV: indicates that a server is using a service, commonly seen in microsoft system directory management.</li>.
+     * @var string DNS record type. Valid values:
+<li>A: Point the domain name to a public IPv4 address, for example 8.8.8.8;</li>
+<li>AAAA: point the domain name to a public IPv6 address;</li>
+<li>MX: for email servers. When multiple MX records exist, lower priority means higher preference;</li>
+<li>CNAME: Point the domain to another domain, which then resolves the final IP;</li>
+<li>TXT: Identifies and describes a domain name, commonly used for domain name verification and SPF records (anti-spam);</li>
+<li>NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. NS records cannot be added for the root domain;</li>
+<li>CAA: specify the CA that can issue certificates for this site;</li>
+<li>SRV: identifies that a server used a service, commonly seen in directory management of Microsoft systems.</li>
      */
     public $Type;
 
     /**
-     * @var string DNS record resolution route, if not specified, defaults to default, indicating the default resolution route, effective in all regions.<br>resolution route configuration only applies when type (dns record type) is a, aaaa, or cname.<br>for valid values, refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
+     * @var string DNS record resolution route. If not specified, it defaults to Default, which means the default resolution route and represents that it takes effect in all regions.<br>Route configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.<br>For values, see [Resolution routes and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
      */
     public $Location;
 
     /**
-     * @var string DNS record content. fill in the corresponding content based on the type value.
+     * @var string DNS record content. Fill in the corresponding content based on the Type value.
      */
     public $Content;
 
     /**
-     * @var integer Cache time. value range: 60–86400. the smaller the value, the faster the record modification will take effect globally. unit: seconds.
+     * @var integer Cache time. Value range: 60–86400. A smaller value means the modification record takes effect faster in each region. Unit: seconds.
      */
     public $TTL;
 
     /**
-     * @var integer DNS record weight. value range: -1–100. a value of -1 means no weight is assigned, and 0 means no parsing. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.
+     * @var integer DNS record weight. Value range: -1 to 100. -1 means no weight is assigned, and 0 indicates no parsing. Weight configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.
      */
     public $Weight;
 
     /**
-     * @var integer MX record priority. value range: 0–50. the smaller the value, the higher the priority.
+     * @var integer MX record priority. Value range: 0–50. A smaller value indicates a higher priority.
      */
     public $Priority;
 
     /**
-     * @var string DNS record parsing status. valid values are: <li>enable: takes effect;</li><li>disable: disabled.</li> note: status is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+     * @var string DNS record resolution status. Valid values: <li>enable: effective;</li><li>disable: disabled.</li>Note: Status is for output only. It cannot be used as an input parameter in ModifyDnsRecords and will be ignored if provided.
      */
     public $Status;
 
     /**
-     * @var string Creation time.<br>note: createdon is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+     * @var string Creation time.<br>Note: CreatedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
      */
     public $CreatedOn;
 
     /**
-     * @var string Modification time.<br>note: modifiedon is for output parameter only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+     * @var string Last modified.<br>Note: ModifiedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
      */
     public $ModifiedOn;
 
     /**
-     * @param string $ZoneId Zone id.<br>note: zoneid is for output parameter use only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
-     * @param string $RecordId DNS record id.
+     * @param string $ZoneId Site ID.<br>Note: ZoneId is for output usage only. It cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
+     * @param string $RecordId DNS record ID.
      * @param string $Name DNS record name.
-     * @param string $Type DNS record type. valid values are:.
-<Li>A: point the domain to a public network ipv4 address, such as 8.8.8.8;</li>.
-<Li>AAAA: point the domain to a public network ipv6 address;</li>.
-<Li>MX: used for email servers. when there are multiple mx records, the lower the priority, the higher the precedence;</li>.
-<Li>CNAME: point the domain to another domain name, which will resolve to the final ip address;</li>.
-<Li>TXT: identify and describe the domain, commonly used for domain verification and spf records (anti-spam);</li>.
-<Li>NS: if you need to delegate the resolution of a subdomain to another dns service provider, you need to add an ns record. ns records cannot be added to the root domain name;</li>.
-<Li>CAA: specifies the ca that can issue certificates for this site;</li>.
-<Li>SRV: indicates that a server is using a service, commonly seen in microsoft system directory management.</li>.
-     * @param string $Location DNS record resolution route, if not specified, defaults to default, indicating the default resolution route, effective in all regions.<br>resolution route configuration only applies when type (dns record type) is a, aaaa, or cname.<br>for valid values, refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
-     * @param string $Content DNS record content. fill in the corresponding content based on the type value.
-     * @param integer $TTL Cache time. value range: 60–86400. the smaller the value, the faster the record modification will take effect globally. unit: seconds.
-     * @param integer $Weight DNS record weight. value range: -1–100. a value of -1 means no weight is assigned, and 0 means no parsing. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.
-     * @param integer $Priority MX record priority. value range: 0–50. the smaller the value, the higher the priority.
-     * @param string $Status DNS record parsing status. valid values are: <li>enable: takes effect;</li><li>disable: disabled.</li> note: status is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
-     * @param string $CreatedOn Creation time.<br>note: createdon is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
-     * @param string $ModifiedOn Modification time.<br>note: modifiedon is for output parameter only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+     * @param string $Type DNS record type. Valid values:
+<li>A: Point the domain name to a public IPv4 address, for example 8.8.8.8;</li>
+<li>AAAA: point the domain name to a public IPv6 address;</li>
+<li>MX: for email servers. When multiple MX records exist, lower priority means higher preference;</li>
+<li>CNAME: Point the domain to another domain, which then resolves the final IP;</li>
+<li>TXT: Identifies and describes a domain name, commonly used for domain name verification and SPF records (anti-spam);</li>
+<li>NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. NS records cannot be added for the root domain;</li>
+<li>CAA: specify the CA that can issue certificates for this site;</li>
+<li>SRV: identifies that a server used a service, commonly seen in directory management of Microsoft systems.</li>
+     * @param string $Location DNS record resolution route. If not specified, it defaults to Default, which means the default resolution route and represents that it takes effect in all regions.<br>Route configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.<br>For values, see [Resolution routes and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
+     * @param string $Content DNS record content. Fill in the corresponding content based on the Type value.
+     * @param integer $TTL Cache time. Value range: 60–86400. A smaller value means the modification record takes effect faster in each region. Unit: seconds.
+     * @param integer $Weight DNS record weight. Value range: -1 to 100. -1 means no weight is assigned, and 0 indicates no parsing. Weight configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.
+     * @param integer $Priority MX record priority. Value range: 0–50. A smaller value indicates a higher priority.
+     * @param string $Status DNS record resolution status. Valid values: <li>enable: effective;</li><li>disable: disabled.</li>Note: Status is for output only. It cannot be used as an input parameter in ModifyDnsRecords and will be ignored if provided.
+     * @param string $CreatedOn Creation time.<br>Note: CreatedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
+     * @param string $ModifiedOn Last modified.<br>Note: ModifiedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
      */
     function __construct()
     {

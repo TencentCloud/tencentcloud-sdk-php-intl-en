@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method array getClientAttesters() Obtain Specifies the authentication option list.
- * @method void setClientAttesters(array $ClientAttesters) Set Specifies the authentication option list.
+ * @method array getClientAttesters() Obtain Authentication option list.
+ * @method void setClientAttesters(array $ClientAttesters) Set Authentication option list.
  */
 class ModifySecurityClientAttesterRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifySecurityClientAttesterRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array Specifies the authentication option list.
+     * @var array Authentication option list.
      */
     public $ClientAttesters;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param array $ClientAttesters Specifies the authentication option list.
+     * @param array $ClientAttesters Authentication option list.
      */
     function __construct()
     {

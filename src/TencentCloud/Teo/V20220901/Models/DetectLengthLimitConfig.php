@@ -18,20 +18,20 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Length limit detection configuration.
+ * Length limit for detection
  *
- * @method array getDetectLengthLimitRules() Obtain List of rules that detect length limits.
- * @method void setDetectLengthLimitRules(array $DetectLengthLimitRules) Set List of rules that detect length limits.
+ * @method array getDetectLengthLimitRules() Obtain Rule list for detection length limit.
+ * @method void setDetectLengthLimitRules(array $DetectLengthLimitRules) Set Rule list for detection length limit.
  */
 class DetectLengthLimitConfig extends AbstractModel
 {
     /**
-     * @var array List of rules that detect length limits.
+     * @var array Rule list for detection length limit.
      */
     public $DetectLengthLimitRules;
 
     /**
-     * @param array $DetectLengthLimitRules List of rules that detect length limits.
+     * @param array $DetectLengthLimitRules Rule list for detection length limit.
      */
     function __construct()
     {

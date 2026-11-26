@@ -25,19 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFunctionId() Obtain Function ID.
  * @method void setFunctionId(string $FunctionId) Set Function ID.
  * @method string getOperation() Obtain Operation type. Valid values:
-<li>bind: bind component;</li>
-<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action.</li>
+<li>bind: Bind a component;</li>
+<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action;</li>
 <li>unbind: Unbind a component;</li>
-<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed in bound list. If an empty list is passed in, clear all bindings.</li>
+<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed-in bound list. If an empty list is passed in, all bindings are cleared.</li>
 
  * @method void setOperation(string $Operation) Set Operation type. Valid values:
-<li>bind: bind component;</li>
-<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action.</li>
+<li>bind: Bind a component;</li>
+<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action;</li>
 <li>unbind: Unbind a component;</li>
-<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed in bound list. If an empty list is passed in, clear all bindings.</li>
+<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed-in bound list. If an empty list is passed in, all bindings are cleared.</li>
 
- * @method array getFunctionComponentBindings() Obtain Bound list of function components to operate. When Operation is rebind and an empty list is input, it means to clear ALL bindings.
- * @method void setFunctionComponentBindings(array $FunctionComponentBindings) Set Bound list of function components to operate. When Operation is rebind and an empty list is input, it means to clear ALL bindings.
+ * @method array getFunctionComponentBindings() Obtain List of bound function components to manipulate. If Operation is rebind and an empty list is imported, it means clearing all bindings.
+ * @method void setFunctionComponentBindings(array $FunctionComponentBindings) Set List of bound function components to manipulate. If Operation is rebind and an empty list is imported, it means clearing all bindings.
  */
 class ModifyFunctionComponentBindingsRequest extends AbstractModel
 {
@@ -53,16 +53,16 @@ class ModifyFunctionComponentBindingsRequest extends AbstractModel
 
     /**
      * @var string Operation type. Valid values:
-<li>bind: bind component;</li>
-<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action.</li>
+<li>bind: Bind a component;</li>
+<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action;</li>
 <li>unbind: Unbind a component;</li>
-<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed in bound list. If an empty list is passed in, clear all bindings.</li>
+<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed-in bound list. If an empty list is passed in, all bindings are cleared.</li>
 
      */
     public $Operation;
 
     /**
-     * @var array Bound list of function components to operate. When Operation is rebind and an empty list is input, it means to clear ALL bindings.
+     * @var array List of bound function components to manipulate. If Operation is rebind and an empty list is imported, it means clearing all bindings.
      */
     public $FunctionComponentBindings;
 
@@ -70,12 +70,12 @@ class ModifyFunctionComponentBindingsRequest extends AbstractModel
      * @param string $ZoneId Zone ID.
      * @param string $FunctionId Function ID.
      * @param string $Operation Operation type. Valid values:
-<li>bind: bind component;</li>
-<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action.</li>
+<li>bind: Bind a component;</li>
+<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action;</li>
 <li>unbind: Unbind a component;</li>
-<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed in bound list. If an empty list is passed in, clear all bindings.</li>
+<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed-in bound list. If an empty list is passed in, all bindings are cleared.</li>
 
-     * @param array $FunctionComponentBindings Bound list of function components to operate. When Operation is rebind and an empty list is input, it means to clear ALL bindings.
+     * @param array $FunctionComponentBindings List of bound function components to manipulate. If Operation is rebind and an empty list is imported, it means clearing all bindings.
      */
     function __construct()
     {

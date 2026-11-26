@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Log information for log analysis
  *
- * @method integer getTimestamp() Obtain Log generation time point, using unix millisecond-level timestamp.
- * @method void setTimestamp(integer $Timestamp) Set Log generation time point, using unix millisecond-level timestamp.
- * @method string getLogJson() Obtain Specific contents of the log, using JSON String Format.
- * @method void setLogJson(string $LogJson) Set Specific contents of the log, using JSON String Format.
+ * @method integer getTimestamp() Obtain Time point when the log is generated, using a unix millisecond-level timestamp.
+ * @method void setTimestamp(integer $Timestamp) Set Time point when the log is generated, using a unix millisecond-level timestamp.
+ * @method string getLogJson() Obtain Specific contents of the log in JSON String Format.
+ * @method void setLogJson(string $LogJson) Set Specific contents of the log in JSON String Format.
  */
 class LogItem extends AbstractModel
 {
     /**
-     * @var integer Log generation time point, using unix millisecond-level timestamp.
+     * @var integer Time point when the log is generated, using a unix millisecond-level timestamp.
      */
     public $Timestamp;
 
     /**
-     * @var string Specific contents of the log, using JSON String Format.
+     * @var string Specific contents of the log in JSON String Format.
      */
     public $LogJson;
 
     /**
-     * @param integer $Timestamp Log generation time point, using unix millisecond-level timestamp.
-     * @param string $LogJson Specific contents of the log, using JSON String Format.
+     * @param integer $Timestamp Time point when the log is generated, using a unix millisecond-level timestamp.
+     * @param string $LogJson Specific contents of the log in JSON String Format.
      */
     function __construct()
     {

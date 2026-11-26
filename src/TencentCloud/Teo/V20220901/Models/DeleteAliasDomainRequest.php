@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAliasDomain request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method array getAliasNames() Obtain The alias domain name to be deleted. If it is left empty, the delete operation is not performed.
- * @method void setAliasNames(array $AliasNames) Set The alias domain name to be deleted. If it is left empty, the delete operation is not performed.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method array getAliasNames() Obtain Alias domain name pending deletion. If it is empty, no deletion operation is performed.
+ * @method void setAliasNames(array $AliasNames) Set Alias domain name pending deletion. If it is empty, no deletion operation is performed.
  */
 class DeleteAliasDomainRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var array The alias domain name to be deleted. If it is left empty, the delete operation is not performed.
+     * @var array Alias domain name pending deletion. If it is empty, no deletion operation is performed.
      */
     public $AliasNames;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param array $AliasNames The alias domain name to be deleted. If it is left empty, the delete operation is not performed.
+     * @param string $ZoneId Zone ID.
+     * @param array $AliasNames Alias domain name pending deletion. If it is empty, no deletion operation is performed.
      */
     function __construct()
     {

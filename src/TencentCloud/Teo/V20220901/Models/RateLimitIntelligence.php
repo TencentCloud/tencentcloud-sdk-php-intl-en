@@ -18,52 +18,52 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Client filtering
+ * Intelligent client filtering
  *
- * @method string getSwitch() Obtain Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method string getAction() Obtain Action to be executed. Values:
-<li>`monitor`: Observe</li>
-<li>`alg`: Challenge</li>
- * @method void setAction(string $Action) Set Action to be executed. Values:
-<li>`monitor`: Observe</li>
-<li>`alg`: Challenge</li>
- * @method integer getRuleId() Obtain The rule ID, which is only used as a response parameter.
- * @method void setRuleId(integer $RuleId) Set The rule ID, which is only used as a response parameter.
+ * @method string getSwitch() Obtain Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method string getAction() Obtain Execution action. Valid values:
+<li>monitor: observation;</li>
+<li>alg: Challenge.</li>
+ * @method void setAction(string $Action) Set Execution action. Valid values:
+<li>monitor: observation;</li>
+<li>alg: Challenge.</li>
+ * @method integer getRuleId() Obtain Rule id, output only.
+ * @method void setRuleId(integer $RuleId) Set Rule id, output only.
  */
 class RateLimitIntelligence extends AbstractModel
 {
     /**
-     * @var string Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var string Action to be executed. Values:
-<li>`monitor`: Observe</li>
-<li>`alg`: Challenge</li>
+     * @var string Execution action. Valid values:
+<li>monitor: observation;</li>
+<li>alg: Challenge.</li>
      */
     public $Action;
 
     /**
-     * @var integer The rule ID, which is only used as a response parameter.
+     * @var integer Rule id, output only.
      */
     public $RuleId;
 
     /**
-     * @param string $Switch Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param string $Action Action to be executed. Values:
-<li>`monitor`: Observe</li>
-<li>`alg`: Challenge</li>
-     * @param integer $RuleId The rule ID, which is only used as a response parameter.
+     * @param string $Switch Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param string $Action Execution action. Valid values:
+<li>monitor: observation;</li>
+<li>alg: Challenge.</li>
+     * @param integer $RuleId Rule id, output only.
      */
     function __construct()
     {

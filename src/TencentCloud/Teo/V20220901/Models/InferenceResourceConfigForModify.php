@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameter modification for inference service resource configuration.
  *
- * @method string getScalingMode() Obtain Scaling way. Valid values: <li>Auto: Automatically adjust instance count based on request volume;</li><li>Manual: Fixed number of resource instances via manual setting.</li>
- * @method void setScalingMode(string $ScalingMode) Set Scaling way. Valid values: <li>Auto: Automatically adjust instance count based on request volume;</li><li>Manual: Fixed number of resource instances via manual setting.</li>
- * @method InferenceAutoScalingConfig getAutoScalingConfig() Obtain Inference service auto scaling configuration. Required when ScalingMode is Auto.
- * @method void setAutoScalingConfig(InferenceAutoScalingConfig $AutoScalingConfig) Set Inference service auto scaling configuration. Required when ScalingMode is Auto.
- * @method InferenceManualInstanceConfig getManualInstanceConfig() Obtain Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
- * @method void setManualInstanceConfig(InferenceManualInstanceConfig $ManualInstanceConfig) Set Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
- * @method integer getConcurrency() Obtain Concurrency of a single instance. Default value is 1.
- * @method void setConcurrency(integer $Concurrency) Set Concurrency of a single instance. Default value is 1.
+ * @method string getScalingMode() Obtain <p>Scaling method. Valid values: <li>Auto: automatically adjust the number of instances based on request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
+ * @method void setScalingMode(string $ScalingMode) Set <p>Scaling method. Valid values: <li>Auto: automatically adjust the number of instances based on request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
+ * @method InferenceAutoScalingConfig getAutoScalingConfig() Obtain <p>Automatic scaling configuration for the inference service. Required when ScalingMode is Auto.</p>
+ * @method void setAutoScalingConfig(InferenceAutoScalingConfig $AutoScalingConfig) Set <p>Automatic scaling configuration for the inference service. Required when ScalingMode is Auto.</p>
+ * @method InferenceManualInstanceConfig getManualInstanceConfig() Obtain <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
+ * @method void setManualInstanceConfig(InferenceManualInstanceConfig $ManualInstanceConfig) Set <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
+ * @method integer getConcurrency() Obtain <p>Concurrency of a single instance. Default value: 1.</p>
+ * @method void setConcurrency(integer $Concurrency) Set <p>Concurrency of a single instance. Default value: 1.</p>
+ * @method InferenceHardwareConfigForModify getHardwareConfig() Obtain <p>Hardware resource configuration of the inference service.</p>
+ * @method void setHardwareConfig(InferenceHardwareConfigForModify $HardwareConfig) Set <p>Hardware resource configuration of the inference service.</p>
  */
 class InferenceResourceConfigForModify extends AbstractModel
 {
     /**
-     * @var string Scaling way. Valid values: <li>Auto: Automatically adjust instance count based on request volume;</li><li>Manual: Fixed number of resource instances via manual setting.</li>
+     * @var string <p>Scaling method. Valid values: <li>Auto: automatically adjust the number of instances based on request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
      */
     public $ScalingMode;
 
     /**
-     * @var InferenceAutoScalingConfig Inference service auto scaling configuration. Required when ScalingMode is Auto.
+     * @var InferenceAutoScalingConfig <p>Automatic scaling configuration for the inference service. Required when ScalingMode is Auto.</p>
      */
     public $AutoScalingConfig;
 
     /**
-     * @var InferenceManualInstanceConfig Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
+     * @var InferenceManualInstanceConfig <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
      */
     public $ManualInstanceConfig;
 
     /**
-     * @var integer Concurrency of a single instance. Default value is 1.
+     * @var integer <p>Concurrency of a single instance. Default value: 1.</p>
      */
     public $Concurrency;
 
     /**
-     * @param string $ScalingMode Scaling way. Valid values: <li>Auto: Automatically adjust instance count based on request volume;</li><li>Manual: Fixed number of resource instances via manual setting.</li>
-     * @param InferenceAutoScalingConfig $AutoScalingConfig Inference service auto scaling configuration. Required when ScalingMode is Auto.
-     * @param InferenceManualInstanceConfig $ManualInstanceConfig Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
-     * @param integer $Concurrency Concurrency of a single instance. Default value is 1.
+     * @var InferenceHardwareConfigForModify <p>Hardware resource configuration of the inference service.</p>
+     */
+    public $HardwareConfig;
+
+    /**
+     * @param string $ScalingMode <p>Scaling method. Valid values: <li>Auto: automatically adjust the number of instances based on request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
+     * @param InferenceAutoScalingConfig $AutoScalingConfig <p>Automatic scaling configuration for the inference service. Required when ScalingMode is Auto.</p>
+     * @param InferenceManualInstanceConfig $ManualInstanceConfig <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
+     * @param integer $Concurrency <p>Concurrency of a single instance. Default value: 1.</p>
+     * @param InferenceHardwareConfigForModify $HardwareConfig <p>Hardware resource configuration of the inference service.</p>
      */
     function __construct()
     {
@@ -86,6 +94,11 @@ class InferenceResourceConfigForModify extends AbstractModel
 
         if (array_key_exists("Concurrency",$param) and $param["Concurrency"] !== null) {
             $this->Concurrency = $param["Concurrency"];
+        }
+
+        if (array_key_exists("HardwareConfig",$param) and $param["HardwareConfig"] !== null) {
+            $this->HardwareConfig = new InferenceHardwareConfigForModify();
+            $this->HardwareConfig->deserialize($param["HardwareConfig"]);
         }
     }
 }

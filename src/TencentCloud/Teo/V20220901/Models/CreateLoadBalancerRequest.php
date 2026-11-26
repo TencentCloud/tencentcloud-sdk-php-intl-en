@@ -20,86 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLoadBalancer request structure.
  *
- * @method string getZoneId() Obtain Zone ID.
- * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getName() Obtain LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).
- * @method void setName(string $Name) Set LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).
- * @method string getType() Obtain LoadBalancer type. Valid values:
-<li>HTTP: HTTP-specific LoadBalancer. It supports adding HTTP-specific and general origin server groups. It can only be referenced by site acceleration services (such as domain name service and rule engine).</li>
-<li>GENERAL: general LoadBalancer. It only supports adding general origin server groups. It can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxy.</li>
- * @method void setType(string $Type) Set LoadBalancer type. Valid values:
-<li>HTTP: HTTP-specific LoadBalancer. It supports adding HTTP-specific and general origin server groups. It can only be referenced by site acceleration services (such as domain name service and rule engine).</li>
-<li>GENERAL: general LoadBalancer. It only supports adding general origin server groups. It can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxy.</li>
- * @method array getOriginGroups() Obtain List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1).
- * @method void setOriginGroups(array $OriginGroups) Set List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1).
- * @method HealthChecker getHealthChecker() Obtain Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). If left empty, health check is disabled by default.
- * @method void setHealthChecker(HealthChecker $HealthChecker) Set Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). If left empty, health check is disabled by default.
- * @method string getSteeringPolicy() Obtain Traffic scheduling policy among origin server groups. Valid values:
-<li>Priority: Perform failover according to priority.</li>The default value is Priority.
- * @method void setSteeringPolicy(string $SteeringPolicy) Set Traffic scheduling policy among origin server groups. Valid values:
-<li>Priority: Perform failover according to priority.</li>The default value is Priority.
- * @method string getFailoverPolicy() Obtain Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
-<li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
-<li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The default value is OtherRecordInOriginGroup.
- * @method void setFailoverPolicy(string $FailoverPolicy) Set Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
-<li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
-<li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The default value is OtherRecordInOriginGroup.
+ * @method string getZoneId() Obtain <p>Site ID.</p>
+ * @method void setZoneId(string $ZoneId) Set <p>Site ID.</p>
+ * @method string getName() Obtain <p>Instance name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).</p>
+ * @method void setName(string $Name) Set <p>Instance name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).</p>
+ * @method string getType() Obtain <p>Instance type. Valid values:</p><li>HTTP_V2: HTTP dedicated (V2). Supports adding HTTP dedicated and general origin server groups. Site acceleration services reference only (such as domain name service and rule engine). This instance type supports selecting the region to initiate probes, which can significantly reduce probe request volume but has lower sensitivity to origin server health awareness.</li><li>HTTP: HTTP dedicated (V1). Supports adding HTTP dedicated and general origin server groups. Site acceleration services reference only (such as domain name service and rule engine). This instance type does not support selecting the region to initiate probes. The probe request volume is large but has higher sensitivity to origin server health awareness.</li><li>GENERAL: General type. Supports adding general origin server groups only. Can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxies. This instance type does not support selecting the region to initiate probes. The probe request volume is large but has higher sensitivity to origin server health awareness.</li>
+ * @method void setType(string $Type) Set <p>Instance type. Valid values:</p><li>HTTP_V2: HTTP dedicated (V2). Supports adding HTTP dedicated and general origin server groups. Site acceleration services reference only (such as domain name service and rule engine). This instance type supports selecting the region to initiate probes, which can significantly reduce probe request volume but has lower sensitivity to origin server health awareness.</li><li>HTTP: HTTP dedicated (V1). Supports adding HTTP dedicated and general origin server groups. Site acceleration services reference only (such as domain name service and rule engine). This instance type does not support selecting the region to initiate probes. The probe request volume is large but has higher sensitivity to origin server health awareness.</li><li>GENERAL: General type. Supports adding general origin server groups only. Can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxies. This instance type does not support selecting the region to initiate probes. The probe request volume is large but has higher sensitivity to origin server health awareness.</li>
+ * @method array getOriginGroups() Obtain <p>List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in <a href="https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1">Quickly Create Load Balancers</a>.</p>
+ * @method void setOriginGroups(array $OriginGroups) Set <p>List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in <a href="https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1">Quickly Create Load Balancers</a>.</p>
+ * @method HealthChecker getHealthChecker() Obtain <p>Health check policy. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1">Health Check Policies</a>. If left empty, health check is disabled by default.</p>
+ * @method void setHealthChecker(HealthChecker $HealthChecker) Set <p>Health check policy. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1">Health Check Policies</a>. If left empty, health check is disabled by default.</p>
+ * @method string getSteeringPolicy() Obtain <p>Traffic scheduling policy between origin server groups. Valid values:</p><li>Pritory: Perform failover according to priority.</li>Default value: Pritory.
+ * @method void setSteeringPolicy(string $SteeringPolicy) Set <p>Traffic scheduling policy between origin server groups. Valid values:</p><li>Pritory: Perform failover according to priority.</li>Default value: Pritory.
+ * @method string getFailoverPolicy() Obtain <p>Request retry policy when access to an origin server fails. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1">Introduction to Request Retry Strategy</a>. Valid values:</p><li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li><li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>The default value is OtherRecordInOriginGroup.
+ * @method void setFailoverPolicy(string $FailoverPolicy) Set <p>Request retry policy when access to an origin server fails. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1">Introduction to Request Retry Strategy</a>. Valid values:</p><li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li><li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>The default value is OtherRecordInOriginGroup.
  */
 class CreateLoadBalancerRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID.
+     * @var string <p>Site ID.</p>
      */
     public $ZoneId;
 
     /**
-     * @var string LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).
+     * @var string <p>Instance name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).</p>
      */
     public $Name;
 
     /**
-     * @var string LoadBalancer type. Valid values:
-<li>HTTP: HTTP-specific LoadBalancer. It supports adding HTTP-specific and general origin server groups. It can only be referenced by site acceleration services (such as domain name service and rule engine).</li>
-<li>GENERAL: general LoadBalancer. It only supports adding general origin server groups. It can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxy.</li>
+     * @var string <p>Instance type. Valid values:</p><li>HTTP_V2: HTTP dedicated (V2). Supports adding HTTP dedicated and general origin server groups. Site acceleration services reference only (such as domain name service and rule engine). This instance type supports selecting the region to initiate probes, which can significantly reduce probe request volume but has lower sensitivity to origin server health awareness.</li><li>HTTP: HTTP dedicated (V1). Supports adding HTTP dedicated and general origin server groups. Site acceleration services reference only (such as domain name service and rule engine). This instance type does not support selecting the region to initiate probes. The probe request volume is large but has higher sensitivity to origin server health awareness.</li><li>GENERAL: General type. Supports adding general origin server groups only. Can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxies. This instance type does not support selecting the region to initiate probes. The probe request volume is large but has higher sensitivity to origin server health awareness.</li>
      */
     public $Type;
 
     /**
-     * @var array List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1).
+     * @var array <p>List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in <a href="https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1">Quickly Create Load Balancers</a>.</p>
      */
     public $OriginGroups;
 
     /**
-     * @var HealthChecker Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). If left empty, health check is disabled by default.
+     * @var HealthChecker <p>Health check policy. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1">Health Check Policies</a>. If left empty, health check is disabled by default.</p>
      */
     public $HealthChecker;
 
     /**
-     * @var string Traffic scheduling policy among origin server groups. Valid values:
-<li>Priority: Perform failover according to priority.</li>The default value is Priority.
+     * @var string <p>Traffic scheduling policy between origin server groups. Valid values:</p><li>Pritory: Perform failover according to priority.</li>Default value: Pritory.
      */
     public $SteeringPolicy;
 
     /**
-     * @var string Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
-<li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
-<li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The default value is OtherRecordInOriginGroup.
+     * @var string <p>Request retry policy when access to an origin server fails. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1">Introduction to Request Retry Strategy</a>. Valid values:</p><li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li><li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>The default value is OtherRecordInOriginGroup.
      */
     public $FailoverPolicy;
 
     /**
-     * @param string $ZoneId Zone ID.
-     * @param string $Name LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).
-     * @param string $Type LoadBalancer type. Valid values:
-<li>HTTP: HTTP-specific LoadBalancer. It supports adding HTTP-specific and general origin server groups. It can only be referenced by site acceleration services (such as domain name service and rule engine).</li>
-<li>GENERAL: general LoadBalancer. It only supports adding general origin server groups. It can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxy.</li>
-     * @param array $OriginGroups List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1).
-     * @param HealthChecker $HealthChecker Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). If left empty, health check is disabled by default.
-     * @param string $SteeringPolicy Traffic scheduling policy among origin server groups. Valid values:
-<li>Priority: Perform failover according to priority.</li>The default value is Priority.
-     * @param string $FailoverPolicy Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
-<li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
-<li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The default value is OtherRecordInOriginGroup.
+     * @param string $ZoneId <p>Site ID.</p>
+     * @param string $Name <p>Instance name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).</p>
+     * @param string $Type <p>Instance type. Valid values:</p><li>HTTP_V2: HTTP dedicated (V2). Supports adding HTTP dedicated and general origin server groups. Site acceleration services reference only (such as domain name service and rule engine). This instance type supports selecting the region to initiate probes, which can significantly reduce probe request volume but has lower sensitivity to origin server health awareness.</li><li>HTTP: HTTP dedicated (V1). Supports adding HTTP dedicated and general origin server groups. Site acceleration services reference only (such as domain name service and rule engine). This instance type does not support selecting the region to initiate probes. The probe request volume is large but has higher sensitivity to origin server health awareness.</li><li>GENERAL: General type. Supports adding general origin server groups only. Can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxies. This instance type does not support selecting the region to initiate probes. The probe request volume is large but has higher sensitivity to origin server health awareness.</li>
+     * @param array $OriginGroups <p>List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in <a href="https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1">Quickly Create Load Balancers</a>.</p>
+     * @param HealthChecker $HealthChecker <p>Health check policy. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1">Health Check Policies</a>. If left empty, health check is disabled by default.</p>
+     * @param string $SteeringPolicy <p>Traffic scheduling policy between origin server groups. Valid values:</p><li>Pritory: Perform failover according to priority.</li>Default value: Pritory.
+     * @param string $FailoverPolicy <p>Request retry policy when access to an origin server fails. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1">Introduction to Request Retry Strategy</a>. Valid values:</p><li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li><li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>The default value is OtherRecordInOriginGroup.
      */
     function __construct()
     {

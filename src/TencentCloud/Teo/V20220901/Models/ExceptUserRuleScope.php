@@ -18,72 +18,72 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The scope to which the exception rule applies
+ * Effective scope of the exception rule.
  *
- * @method string getType() Obtain Exception mode. Values:
-<li>`complete`: Skip the exception rule for full requests.</li>
-<li>`partial`: Skip the exception rule for partial requests.</li>
- * @method void setType(string $Type) Set Exception mode. Values:
-<li>`complete`: Skip the exception rule for full requests.</li>
-<li>`partial`: Skip the exception rule for partial requests.</li>
- * @method array getModules() Obtain Effective module. the field value can be:.
-<li>`waf`: tencent cloud-managed rules</li>.
-<Li>`Rate`: rate limit</li>.
-<li>`acl`: custom rule</li>.
-<Li>`Cc`: cc attack defense</li>.
-<Li>`Bot`: bot protection</li>.
- * @method void setModules(array $Modules) Set Effective module. the field value can be:.
-<li>`waf`: tencent cloud-managed rules</li>.
-<Li>`Rate`: rate limit</li>.
-<li>`acl`: custom rule</li>.
-<Li>`Cc`: cc attack defense</li>.
-<Li>`Bot`: bot protection</li>.
- * @method array getPartialModules() Obtain Skip exception rule details for some rule ids. if null, use the last set configuration by default.
- * @method void setPartialModules(array $PartialModules) Set Skip exception rule details for some rule ids. if null, use the last set configuration by default.
- * @method array getSkipConditions() Obtain Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
- * @method void setSkipConditions(array $SkipConditions) Set Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
+ * @method string getType() Obtain Exception rule type. Among them, complete mode represents exceptions for full data, while partial mode represents selecting specified modules and specified fields for exceptions. The field values include:
+<li>complete: skip entirely mode;</li>
+<li>partial: Partially skip mode.</li>
+ * @method void setType(string $Type) Set Exception rule type. Among them, complete mode represents exceptions for full data, while partial mode represents selecting specified modules and specified fields for exceptions. The field values include:
+<li>complete: skip entirely mode;</li>
+<li>partial: Partially skip mode.</li>
+ * @method array getModules() Obtain Effective module. Valid values:
+<li>waf: managed rules;</li>
+<li>rate: rate limit;</li>
+<li>acl: custom rule;</li>
+<li>cc: CC attack defense;</li>
+<li>bot: bot protection.</li>
+ * @method void setModules(array $Modules) Set Effective module. Valid values:
+<li>waf: managed rules;</li>
+<li>rate: rate limit;</li>
+<li>acl: custom rule;</li>
+<li>cc: CC attack defense;</li>
+<li>bot: bot protection.</li>
+ * @method array getPartialModules() Obtain Skip the exception rule details of some rule IDs. If it is null, use the last set configuration by default.
+ * @method void setPartialModules(array $PartialModules) Set Skip the exception rule details of some rule IDs. If it is null, use the last set configuration by default.
+ * @method array getSkipConditions() Obtain Exception rule details for skipping specific fields during scan. If null, use the last set configuration by default.
+ * @method void setSkipConditions(array $SkipConditions) Set Exception rule details for skipping specific fields during scan. If null, use the last set configuration by default.
  */
 class ExceptUserRuleScope extends AbstractModel
 {
     /**
-     * @var string Exception mode. Values:
-<li>`complete`: Skip the exception rule for full requests.</li>
-<li>`partial`: Skip the exception rule for partial requests.</li>
+     * @var string Exception rule type. Among them, complete mode represents exceptions for full data, while partial mode represents selecting specified modules and specified fields for exceptions. The field values include:
+<li>complete: skip entirely mode;</li>
+<li>partial: Partially skip mode.</li>
      */
     public $Type;
 
     /**
-     * @var array Effective module. the field value can be:.
-<li>`waf`: tencent cloud-managed rules</li>.
-<Li>`Rate`: rate limit</li>.
-<li>`acl`: custom rule</li>.
-<Li>`Cc`: cc attack defense</li>.
-<Li>`Bot`: bot protection</li>.
+     * @var array Effective module. Valid values:
+<li>waf: managed rules;</li>
+<li>rate: rate limit;</li>
+<li>acl: custom rule;</li>
+<li>cc: CC attack defense;</li>
+<li>bot: bot protection.</li>
      */
     public $Modules;
 
     /**
-     * @var array Skip exception rule details for some rule ids. if null, use the last set configuration by default.
+     * @var array Skip the exception rule details of some rule IDs. If it is null, use the last set configuration by default.
      */
     public $PartialModules;
 
     /**
-     * @var array Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
+     * @var array Exception rule details for skipping specific fields during scan. If null, use the last set configuration by default.
      */
     public $SkipConditions;
 
     /**
-     * @param string $Type Exception mode. Values:
-<li>`complete`: Skip the exception rule for full requests.</li>
-<li>`partial`: Skip the exception rule for partial requests.</li>
-     * @param array $Modules Effective module. the field value can be:.
-<li>`waf`: tencent cloud-managed rules</li>.
-<Li>`Rate`: rate limit</li>.
-<li>`acl`: custom rule</li>.
-<Li>`Cc`: cc attack defense</li>.
-<Li>`Bot`: bot protection</li>.
-     * @param array $PartialModules Skip exception rule details for some rule ids. if null, use the last set configuration by default.
-     * @param array $SkipConditions Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
+     * @param string $Type Exception rule type. Among them, complete mode represents exceptions for full data, while partial mode represents selecting specified modules and specified fields for exceptions. The field values include:
+<li>complete: skip entirely mode;</li>
+<li>partial: Partially skip mode.</li>
+     * @param array $Modules Effective module. Valid values:
+<li>waf: managed rules;</li>
+<li>rate: rate limit;</li>
+<li>acl: custom rule;</li>
+<li>cc: CC attack defense;</li>
+<li>bot: bot protection.</li>
+     * @param array $PartialModules Skip the exception rule details of some rule IDs. If it is null, use the last set configuration by default.
+     * @param array $SkipConditions Exception rule details for skipping specific fields during scan. If null, use the last set configuration by default.
      */
     function __construct()
     {

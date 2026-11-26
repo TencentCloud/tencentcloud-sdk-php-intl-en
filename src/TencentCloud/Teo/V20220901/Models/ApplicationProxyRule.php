@@ -35,32 +35,32 @@ Note: Up to 20 ports can be input for each rule.
 <li>A port range, such as 81-82, indicating two ports 81 and 82.</li>
 Note: Up to 20 ports can be input for each rule.
  * @method string getOriginType() Obtain Origin server type. Valid values:
-<li>custom: manually added;</li>
-<li>loadbalancer: cloud load balancer;</li>
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
 <li>origins: origin server group.</li>
  * @method void setOriginType(string $OriginType) Set Origin server type. Valid values:
-<li>custom: manually added;</li>
-<li>loadbalancer: cloud load balancer;</li>
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
 <li>origins: origin server group.</li>
  * @method array getOriginValue() Obtain Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
  * @method void setOriginValue(array $OriginValue) Set Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
  * @method string getRuleId() Obtain Rule ID.
  * @method void setRuleId(string $RuleId) Set Rule ID.
  * @method string getStatus() Obtain Status. Valid values:
-<li>online: enabled;</li>
-<li>offline: disabled;</li>
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
 <li>progress: deploying;</li>
 <li>stopping: disabling;</li>
 <li>fail: deployment or disabling failed.</li>
  * @method void setStatus(string $Status) Set Status. Valid values:
-<li>online: enabled;</li>
-<li>offline: disabled;</li>
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
 <li>progress: deploying;</li>
 <li>stopping: disabling;</li>
 <li>fail: deployment or disabling failed.</li>
@@ -88,8 +88,8 @@ Note: Up to 20 ports can be input for each rule.
  * @method void setOriginPort(string $OriginPort) Set Origin server port. Supported formats:
 <li>A single port, such as 80.</li>
 <li>A port range, such as 81-82, indicating two ports 81 and 82.</li>
- * @method string getRuleTag() Obtain Tag of the rule.
- * @method void setRuleTag(string $RuleTag) Set Tag of the rule.
+ * @method string getRuleTag() Obtain Rule tag.
+ * @method void setRuleTag(string $RuleTag) Set Rule tag.
  */
 class ApplicationProxyRule extends AbstractModel
 {
@@ -110,8 +110,8 @@ Note: Up to 20 ports can be input for each rule.
 
     /**
      * @var string Origin server type. Valid values:
-<li>custom: manually added;</li>
-<li>loadbalancer: cloud load balancer;</li>
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
 <li>origins: origin server group.</li>
      */
     public $OriginType;
@@ -119,7 +119,7 @@ Note: Up to 20 ports can be input for each rule.
     /**
      * @var array Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      */
     public $OriginValue;
@@ -131,8 +131,8 @@ Note: Up to 20 ports can be input for each rule.
 
     /**
      * @var string Status. Valid values:
-<li>online: enabled;</li>
-<li>offline: disabled;</li>
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
 <li>progress: deploying;</li>
 <li>stopping: disabling;</li>
 <li>fail: deployment or disabling failed.</li>
@@ -168,7 +168,7 @@ Note: Up to 20 ports can be input for each rule.
     public $OriginPort;
 
     /**
-     * @var string Tag of the rule.
+     * @var string Rule tag.
      */
     public $RuleTag;
 
@@ -181,17 +181,17 @@ Note: Up to 20 ports can be input for each rule.
 <li>A port range, such as 81-82, indicating two ports 81 and 82.</li>
 Note: Up to 20 ports can be input for each rule.
      * @param string $OriginType Origin server type. Valid values:
-<li>custom: manually added;</li>
-<li>loadbalancer: cloud load balancer;</li>
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
 <li>origins: origin server group.</li>
      * @param array $OriginValue Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      * @param string $RuleId Rule ID.
      * @param string $Status Status. Valid values:
-<li>online: enabled;</li>
-<li>offline: disabled;</li>
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
 <li>progress: deploying;</li>
 <li>stopping: disabling;</li>
 <li>fail: deployment or disabling failed.</li>
@@ -207,7 +207,7 @@ Note: Up to 20 ports can be input for each rule.
      * @param string $OriginPort Origin server port. Supported formats:
 <li>A single port, such as 80.</li>
 <li>A port range, such as 81-82, indicating two ports 81 and 82.</li>
-     * @param string $RuleTag Tag of the rule.
+     * @param string $RuleTag Rule tag.
      */
     function __construct()
     {

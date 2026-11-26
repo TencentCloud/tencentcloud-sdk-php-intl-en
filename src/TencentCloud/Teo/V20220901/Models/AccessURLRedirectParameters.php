@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Access URL redirect configuration parameters.
+ * Access URL redirection configuration parameters.
  *
  * @method integer getStatusCode() Obtain <p>Status code, value is one of 301, 302, 303, 307, 308.</p>
  * @method void setStatusCode(integer $StatusCode) Set <p>Status code, value is one of 301, 302, 303, 307, 308.</p>
@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setURLPath(URLPath $URLPath) Set <p>Target path.</p>
  * @method AccessURLRedirectQueryString getQueryString() Obtain <p>Query string.</p>
  * @method void setQueryString(AccessURLRedirectQueryString $QueryString) Set <p>Query string.</p>
+ * @method AccessURLRedirectPort getPort() Obtain <p>Target port configuration.</p><p>If this parameter is not specified, it is processed in FollowProtocol mode, meaning the redirect address does not explicitly specify a port. The target protocol uses the default port: 80 for HTTP and 443 for HTTPS.</p>
+ * @method void setPort(AccessURLRedirectPort $Port) Set <p>Target port configuration.</p><p>If this parameter is not specified, it is processed in FollowProtocol mode, meaning the redirect address does not explicitly specify a port. The target protocol uses the default port: 80 for HTTP and 443 for HTTPS.</p>
  */
 class AccessURLRedirectParameters extends AbstractModel
 {
@@ -59,11 +61,17 @@ class AccessURLRedirectParameters extends AbstractModel
     public $QueryString;
 
     /**
+     * @var AccessURLRedirectPort <p>Target port configuration.</p><p>If this parameter is not specified, it is processed in FollowProtocol mode, meaning the redirect address does not explicitly specify a port. The target protocol uses the default port: 80 for HTTP and 443 for HTTPS.</p>
+     */
+    public $Port;
+
+    /**
      * @param integer $StatusCode <p>Status code, value is one of 301, 302, 303, 307, 308.</p>
      * @param string $Protocol <p>Target request protocol.</p><p>Enumeration values:</p><ul><li>http: The target request protocol is HTTP.</li><li>https: The target request protocol is HTTPS.</li><li>follow: Follow request.</li></ul>
      * @param HostName $HostName <p>Target HostName.</p>
      * @param URLPath $URLPath <p>Target path.</p>
      * @param AccessURLRedirectQueryString $QueryString <p>Query string.</p>
+     * @param AccessURLRedirectPort $Port <p>Target port configuration.</p><p>If this parameter is not specified, it is processed in FollowProtocol mode, meaning the redirect address does not explicitly specify a port. The target protocol uses the default port: 80 for HTTP and 443 for HTTPS.</p>
      */
     function __construct()
     {
@@ -99,6 +107,11 @@ class AccessURLRedirectParameters extends AbstractModel
         if (array_key_exists("QueryString",$param) and $param["QueryString"] !== null) {
             $this->QueryString = new AccessURLRedirectQueryString();
             $this->QueryString->deserialize($param["QueryString"]);
+        }
+
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = new AccessURLRedirectPort();
+            $this->Port->deserialize($param["Port"]);
         }
     }
 }

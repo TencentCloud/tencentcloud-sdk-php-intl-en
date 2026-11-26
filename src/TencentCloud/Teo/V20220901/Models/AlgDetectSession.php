@@ -18,84 +18,84 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Validate Cookie.
+ * Cookie verification and session tracking.
  *
- * @method string getName() Obtain Method to validate Cookie.
- * @method void setName(string $Name) Set Method to validate Cookie.
- * @method string getDetectMode() Obtain The validation mode. Values:
-<li>`detect`: Validate only</li>
-<li>`update_detect` (default): Update Cookie and validate</li>
- * @method void setDetectMode(string $DetectMode) Set The validation mode. Values:
-<li>`detect`: Validate only</li>
-<li>`update_detect` (default): Update Cookie and validate</li>
- * @method string getSessionAnalyzeSwitch() Obtain Whether to enable Cookie-based session check. The default value is `off`. Values:
-<li>`off`: Disable</li>
-<li>`on`: Enable</li>
- * @method void setSessionAnalyzeSwitch(string $SessionAnalyzeSwitch) Set Whether to enable Cookie-based session check. The default value is `off`. Values:
-<li>`off`: Disable</li>
-<li>`on`: Enable</li>
- * @method integer getInvalidStatTime() Obtain The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
- * @method void setInvalidStatTime(integer $InvalidStatTime) Set The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
- * @method integer getInvalidThreshold() Obtain The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
- * @method void setInvalidThreshold(integer $InvalidThreshold) Set The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
- * @method array getAlgDetectResults() Obtain Cookie validation results.
- * @method void setAlgDetectResults(array $AlgDetectResults) Set Cookie validation results.
- * @method array getSessionBehaviors() Obtain Cookie-based session check results.
- * @method void setSessionBehaviors(array $SessionBehaviors) Set Cookie-based session check results.
+ * @method string getName() Obtain Operation name.
+ * @method void setName(string $Name) Set Operation name.
+ * @method string getDetectMode() Obtain Verification method. Default value: update_detect. Valid values:
+<li>detect: verify;</li>
+<li>update_detect: refresh the Cookie and validate it.</li>
+ * @method void setDetectMode(string $DetectMode) Set Verification method. Default value: update_detect. Valid values:
+<li>detect: verify;</li>
+<li>update_detect: refresh the Cookie and validate it.</li>
+ * @method string getSessionAnalyzeSwitch() Obtain Switch for session rate and periodic feature verification. Default value: off. Valid values:
+<li>off: Disable;</li>
+<li>`on`: Enable.</li>
+ * @method void setSessionAnalyzeSwitch(string $SessionAnalyzeSwitch) Set Switch for session rate and periodic feature verification. Default value: off. Valid values:
+<li>off: Disable;</li>
+<li>`on`: Enable.</li>
+ * @method integer getInvalidStatTime() Obtain Statistical cycle for the check result indicating no Cookie is carried or the Cookie has expired. Unit: seconds. Default: 10. Value range: 5–3600.
+ * @method void setInvalidStatTime(integer $InvalidStatTime) Set Statistical cycle for the check result indicating no Cookie is carried or the Cookie has expired. Unit: seconds. Default: 10. Value range: 5–3600.
+ * @method integer getInvalidThreshold() Obtain Trigger threshold for the check result indicating no Cookie is carried or the Cookie has expired. Unit: count. Default: 300. Value range: 1–100000000.
+ * @method void setInvalidThreshold(integer $InvalidThreshold) Set Trigger threshold for the check result indicating no Cookie is carried or the Cookie has expired. Unit: count. Default: 300. Value range: 1–100000000.
+ * @method array getAlgDetectResults() Obtain Cookie verification result.
+ * @method void setAlgDetectResults(array $AlgDetectResults) Set Cookie verification result.
+ * @method array getSessionBehaviors() Obtain Session rate and periodic feature verification result.
+ * @method void setSessionBehaviors(array $SessionBehaviors) Set Session rate and periodic feature verification result.
  */
 class AlgDetectSession extends AbstractModel
 {
     /**
-     * @var string Method to validate Cookie.
+     * @var string Operation name.
      */
     public $Name;
 
     /**
-     * @var string The validation mode. Values:
-<li>`detect`: Validate only</li>
-<li>`update_detect` (default): Update Cookie and validate</li>
+     * @var string Verification method. Default value: update_detect. Valid values:
+<li>detect: verify;</li>
+<li>update_detect: refresh the Cookie and validate it.</li>
      */
     public $DetectMode;
 
     /**
-     * @var string Whether to enable Cookie-based session check. The default value is `off`. Values:
-<li>`off`: Disable</li>
-<li>`on`: Enable</li>
+     * @var string Switch for session rate and periodic feature verification. Default value: off. Valid values:
+<li>off: Disable;</li>
+<li>`on`: Enable.</li>
      */
     public $SessionAnalyzeSwitch;
 
     /**
-     * @var integer The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
+     * @var integer Statistical cycle for the check result indicating no Cookie is carried or the Cookie has expired. Unit: seconds. Default: 10. Value range: 5–3600.
      */
     public $InvalidStatTime;
 
     /**
-     * @var integer The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
+     * @var integer Trigger threshold for the check result indicating no Cookie is carried or the Cookie has expired. Unit: count. Default: 300. Value range: 1–100000000.
      */
     public $InvalidThreshold;
 
     /**
-     * @var array Cookie validation results.
+     * @var array Cookie verification result.
      */
     public $AlgDetectResults;
 
     /**
-     * @var array Cookie-based session check results.
+     * @var array Session rate and periodic feature verification result.
      */
     public $SessionBehaviors;
 
     /**
-     * @param string $Name Method to validate Cookie.
-     * @param string $DetectMode The validation mode. Values:
-<li>`detect`: Validate only</li>
-<li>`update_detect` (default): Update Cookie and validate</li>
-     * @param string $SessionAnalyzeSwitch Whether to enable Cookie-based session check. The default value is `off`. Values:
-<li>`off`: Disable</li>
-<li>`on`: Enable</li>
-     * @param integer $InvalidStatTime The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
-     * @param integer $InvalidThreshold The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
-     * @param array $AlgDetectResults Cookie validation results.
-     * @param array $SessionBehaviors Cookie-based session check results.
+     * @param string $Name Operation name.
+     * @param string $DetectMode Verification method. Default value: update_detect. Valid values:
+<li>detect: verify;</li>
+<li>update_detect: refresh the Cookie and validate it.</li>
+     * @param string $SessionAnalyzeSwitch Switch for session rate and periodic feature verification. Default value: off. Valid values:
+<li>off: Disable;</li>
+<li>`on`: Enable.</li>
+     * @param integer $InvalidStatTime Statistical cycle for the check result indicating no Cookie is carried or the Cookie has expired. Unit: seconds. Default: 10. Value range: 5–3600.
+     * @param integer $InvalidThreshold Trigger threshold for the check result indicating no Cookie is carried or the Cookie has expired. Unit: count. Default: 300. Value range: 1–100000000.
+     * @param array $AlgDetectResults Cookie verification result.
+     * @param array $SessionBehaviors Session rate and periodic feature verification result.
      */
     function __construct()
     {

@@ -25,23 +25,23 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFunctionRuleConditions() Obtain Rule condition list. There is an OR relationship between items in the list.
  * @method void setFunctionRuleConditions(array $FunctionRuleConditions) Set Rule condition list. There is an OR relationship between items in the list.
  * @method string getTriggerType() Obtain Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
+<li> direct: directly specify the execution function;</li>
+<li> weight: select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
 
  * @method void setTriggerType(string $TriggerType) Set Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
+<li> direct: directly specify the execution function;</li>
+<li> weight: select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
 
- * @method string getFunctionId() Obtain Specifies the function ID to be executed. valid only when TriggerType is direct.
- * @method void setFunctionId(string $FunctionId) Set Specifies the function ID to be executed. valid only when TriggerType is direct.
- * @method string getFunctionName() Obtain Specifies the name of the function executed.
- * @method void setFunctionName(string $FunctionName) Set Specifies the name of the function executed.
+ * @method string getFunctionId() Obtain Specify the function ID to be executed. Valid when TriggerType is direct.
+ * @method void setFunctionId(string $FunctionId) Set Specify the function ID to be executed. Valid when TriggerType is direct.
+ * @method string getFunctionName() Obtain Name of the function to execute.
+ * @method void setFunctionName(string $FunctionName) Set Name of the function to execute.
  * @method array getRegionMappingSelections() Obtain Function selection configuration based on client IP country/region.
  * @method void setRegionMappingSelections(array $RegionMappingSelections) Set Function selection configuration based on client IP country/region.
- * @method array getWeightedSelections() Obtain Describes the function selection configuration based on weight.
- * @method void setWeightedSelections(array $WeightedSelections) Set Describes the function selection configuration based on weight.
+ * @method array getWeightedSelections() Obtain Function selection configuration based on weight.
+ * @method void setWeightedSelections(array $WeightedSelections) Set Function selection configuration based on weight.
  * @method integer getPriority() Obtain Priority of a trigger rule for a function. The larger the value, the higher the priority.
  * @method void setPriority(integer $Priority) Set Priority of a trigger rule for a function. The larger the value, the higher the priority.
  * @method string getRemark() Obtain Rule description.
@@ -65,20 +65,20 @@ class FunctionRule extends AbstractModel
 
     /**
      * @var string Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
+<li> direct: directly specify the execution function;</li>
+<li> weight: select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
 
      */
     public $TriggerType;
 
     /**
-     * @var string Specifies the function ID to be executed. valid only when TriggerType is direct.
+     * @var string Specify the function ID to be executed. Valid when TriggerType is direct.
      */
     public $FunctionId;
 
     /**
-     * @var string Specifies the name of the function executed.
+     * @var string Name of the function to execute.
      */
     public $FunctionName;
 
@@ -88,7 +88,7 @@ class FunctionRule extends AbstractModel
     public $RegionMappingSelections;
 
     /**
-     * @var array Describes the function selection configuration based on weight.
+     * @var array Function selection configuration based on weight.
      */
     public $WeightedSelections;
 
@@ -116,14 +116,14 @@ class FunctionRule extends AbstractModel
      * @param string $RuleId Rule ID.
      * @param array $FunctionRuleConditions Rule condition list. There is an OR relationship between items in the list.
      * @param string $TriggerType Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
+<li> direct: directly specify the execution function;</li>
+<li> weight: select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
 
-     * @param string $FunctionId Specifies the function ID to be executed. valid only when TriggerType is direct.
-     * @param string $FunctionName Specifies the name of the function executed.
+     * @param string $FunctionId Specify the function ID to be executed. Valid when TriggerType is direct.
+     * @param string $FunctionName Name of the function to execute.
      * @param array $RegionMappingSelections Function selection configuration based on client IP country/region.
-     * @param array $WeightedSelections Describes the function selection configuration based on weight.
+     * @param array $WeightedSelections Function selection configuration based on weight.
      * @param integer $Priority Priority of a trigger rule for a function. The larger the value, the higher the priority.
      * @param string $Remark Rule description.
      * @param string $CreateTime Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.

@@ -26,18 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set CLB instance ID.
  * @method string getName() Obtain LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-). The original configuration applies if this field is not specified.
  * @method void setName(string $Name) Set LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-). The original configuration applies if this field is not specified.
- * @method array getOriginGroups() Obtain List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
- * @method void setOriginGroups(array $OriginGroups) Set List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
- * @method HealthChecker getHealthChecker() Obtain Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
- * @method void setHealthChecker(HealthChecker $HealthChecker) Set Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
+ * @method array getOriginGroups() Obtain List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
+ * @method void setOriginGroups(array $OriginGroups) Set List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
+ * @method HealthChecker getHealthChecker() Obtain Health check policy. For details, refer to [Health Check Policies](https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
+ * @method void setHealthChecker(HealthChecker $HealthChecker) Set Health check policy. For details, refer to [Health Check Policies](https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
  * @method string getSteeringPolicy() Obtain Traffic scheduling policy among origin server groups. Valid values:
 <li>Priority: Perform failover according to priority.</li> The original configuration applies if this field is not specified.
  * @method void setSteeringPolicy(string $SteeringPolicy) Set Traffic scheduling policy among origin server groups. Valid values:
 <li>Priority: Perform failover according to priority.</li> The original configuration applies if this field is not specified.
- * @method string getFailoverPolicy() Obtain Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
+ * @method string getFailoverPolicy() Obtain Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
 <li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
 <li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The original configuration applies if not specified.
- * @method void setFailoverPolicy(string $FailoverPolicy) Set Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
+ * @method void setFailoverPolicy(string $FailoverPolicy) Set Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
 <li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
 <li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The original configuration applies if not specified.
  */
@@ -59,12 +59,12 @@ class ModifyLoadBalancerRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var array List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
+     * @var array List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
      */
     public $OriginGroups;
 
     /**
-     * @var HealthChecker Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
+     * @var HealthChecker Health check policy. For details, refer to [Health Check Policies](https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
      */
     public $HealthChecker;
 
@@ -75,7 +75,7 @@ class ModifyLoadBalancerRequest extends AbstractModel
     public $SteeringPolicy;
 
     /**
-     * @var string Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
+     * @var string Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
 <li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
 <li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The original configuration applies if not specified.
      */
@@ -85,11 +85,11 @@ class ModifyLoadBalancerRequest extends AbstractModel
      * @param string $ZoneId Zone ID.
      * @param string $InstanceId CLB instance ID.
      * @param string $Name LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-). The original configuration applies if this field is not specified.
-     * @param array $OriginGroups List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
-     * @param HealthChecker $HealthChecker Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
+     * @param array $OriginGroups List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
+     * @param HealthChecker $HealthChecker Health check policy. For details, refer to [Health Check Policies](https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
      * @param string $SteeringPolicy Traffic scheduling policy among origin server groups. Valid values:
 <li>Priority: Perform failover according to priority.</li> The original configuration applies if this field is not specified.
-     * @param string $FailoverPolicy Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
+     * @param string $FailoverPolicy Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
 <li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
 <li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The original configuration applies if not specified.
      */

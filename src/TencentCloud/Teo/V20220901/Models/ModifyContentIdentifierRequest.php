@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyContentIdentifier request structure.
  *
- * @method string getContentId() Obtain Content identifier id.
- * @method void setContentId(string $ContentId) Set Content identifier id.
- * @method string getDescription() Obtain Content identifier description. length limit: 20 characters.
- * @method void setDescription(string $Description) Set Content identifier description. length limit: 20 characters.
+ * @method string getContentId() Obtain Content identifier ID.
+ * @method void setContentId(string $ContentId) Set Content identifier ID.
+ * @method string getDescription() Obtain Content identifier description, up to 20 characters.
+ * @method void setDescription(string $Description) Set Content identifier description, up to 20 characters.
  */
 class ModifyContentIdentifierRequest extends AbstractModel
 {
     /**
-     * @var string Content identifier id.
+     * @var string Content identifier ID.
      */
     public $ContentId;
 
     /**
-     * @var string Content identifier description. length limit: 20 characters.
+     * @var string Content identifier description, up to 20 characters.
      */
     public $Description;
 
     /**
-     * @param string $ContentId Content identifier id.
-     * @param string $Description Content identifier description. length limit: 20 characters.
+     * @param string $ContentId Content identifier ID.
+     * @param string $Description Content identifier description, up to 20 characters.
      */
     function __construct()
     {

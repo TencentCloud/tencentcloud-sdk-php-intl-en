@@ -20,66 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMultiPathGatewayLine request structure.
  *
- * @method string getZoneId() Obtain Specifies the site ID.
- * @method void setZoneId(string $ZoneId) Set Specifies the site ID.
- * @method string getGatewayId() Obtain Multi-Channel security gateway ID.
- * @method void setGatewayId(string $GatewayId) Set Multi-Channel security gateway ID.
- * @method string getLineType() Obtain Line type. valid values:
-<li>direct: direct connection line, cannot be modified or deleted.</li>
- <li>proxy: EdgeOne layer-4 proxy line, supports modifying instance ID and rule ID, but cannot be deleted.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
- * @method void setLineType(string $LineType) Set Line type. valid values:
-<li>direct: direct connection line, cannot be modified or deleted.</li>
- <li>proxy: EdgeOne layer-4 proxy line, supports modifying instance ID and rule ID, but cannot be deleted.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
- * @method string getLineAddress() Obtain Line address format: ip:port.
- * @method void setLineAddress(string $LineAddress) Set Line address format: ip:port.
- * @method string getProxyId() Obtain The layer-4 proxy instance ID is required when the LineType value is proxy (EdgeOne layer-4 proxy) and can be obtained via the api [DescribeL4proxy](https://intl.cloud.tencent.com/document/api/1552/103413?from_cn_redirect=1).
- * @method void setProxyId(string $ProxyId) Set The layer-4 proxy instance ID is required when the LineType value is proxy (EdgeOne layer-4 proxy) and can be obtained via the api [DescribeL4proxy](https://intl.cloud.tencent.com/document/api/1552/103413?from_cn_redirect=1).
- * @method string getRuleId() Obtain Forwarding rule ID, this field is required when the line type LineType value is proxy (EdgeOne layer-4 proxy). you can obtain it from the api [DescribeL4ProxyRules](https://intl.cloud.tencent.com/document/api/1552/103412?from_cn_redirect=1).
- * @method void setRuleId(string $RuleId) Set Forwarding rule ID, this field is required when the line type LineType value is proxy (EdgeOne layer-4 proxy). you can obtain it from the api [DescribeL4ProxyRules](https://intl.cloud.tencent.com/document/api/1552/103412?from_cn_redirect=1).
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method string getGatewayId() Obtain Multi-channel security gateway ID.
+ * @method void setGatewayId(string $GatewayId) Set Multi-channel security gateway ID.
+ * @method string getLineType() Obtain Line type. Valid values:
+<li>direct: direct connection line, modification and deletion are not supported.</li> <li>proxy: EdgeOne Layer 4 proxy line, supports modifying instance ID and rule ID, deletion is not supported.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
+ * @method void setLineType(string $LineType) Set Line type. Valid values:
+<li>direct: direct connection line, modification and deletion are not supported.</li> <li>proxy: EdgeOne Layer 4 proxy line, supports modifying instance ID and rule ID, deletion is not supported.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
+ * @method string getLineAddress() Obtain Line address in the format of ip:port.
+ * @method void setLineAddress(string $LineAddress) Set Line address in the format of ip:port.
+ * @method string getProxyId() Obtain Layer 4 proxy instance ID. It is required when the line type `LineType` value is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4Proxy](https://www.tencentcloud.com/document/api/1552/103413?from_cn_redirect=1) API.
+ * @method void setProxyId(string $ProxyId) Set Layer 4 proxy instance ID. It is required when the line type `LineType` value is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4Proxy](https://www.tencentcloud.com/document/api/1552/103413?from_cn_redirect=1) API.
+ * @method string getRuleId() Obtain Forwarding rule ID. Required when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4ProxyRules](https://www.tencentcloud.com/document/api/1552/103412?from_cn_redirect=1) API.
+ * @method void setRuleId(string $RuleId) Set Forwarding rule ID. Required when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4ProxyRules](https://www.tencentcloud.com/document/api/1552/103412?from_cn_redirect=1) API.
  */
 class CreateMultiPathGatewayLineRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the site ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var string Multi-Channel security gateway ID.
+     * @var string Multi-channel security gateway ID.
      */
     public $GatewayId;
 
     /**
-     * @var string Line type. valid values:
-<li>direct: direct connection line, cannot be modified or deleted.</li>
- <li>proxy: EdgeOne layer-4 proxy line, supports modifying instance ID and rule ID, but cannot be deleted.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
+     * @var string Line type. Valid values:
+<li>direct: direct connection line, modification and deletion are not supported.</li> <li>proxy: EdgeOne Layer 4 proxy line, supports modifying instance ID and rule ID, deletion is not supported.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
      */
     public $LineType;
 
     /**
-     * @var string Line address format: ip:port.
+     * @var string Line address in the format of ip:port.
      */
     public $LineAddress;
 
     /**
-     * @var string The layer-4 proxy instance ID is required when the LineType value is proxy (EdgeOne layer-4 proxy) and can be obtained via the api [DescribeL4proxy](https://intl.cloud.tencent.com/document/api/1552/103413?from_cn_redirect=1).
+     * @var string Layer 4 proxy instance ID. It is required when the line type `LineType` value is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4Proxy](https://www.tencentcloud.com/document/api/1552/103413?from_cn_redirect=1) API.
      */
     public $ProxyId;
 
     /**
-     * @var string Forwarding rule ID, this field is required when the line type LineType value is proxy (EdgeOne layer-4 proxy). you can obtain it from the api [DescribeL4ProxyRules](https://intl.cloud.tencent.com/document/api/1552/103412?from_cn_redirect=1).
+     * @var string Forwarding rule ID. Required when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4ProxyRules](https://www.tencentcloud.com/document/api/1552/103412?from_cn_redirect=1) API.
      */
     public $RuleId;
 
     /**
-     * @param string $ZoneId Specifies the site ID.
-     * @param string $GatewayId Multi-Channel security gateway ID.
-     * @param string $LineType Line type. valid values:
-<li>direct: direct connection line, cannot be modified or deleted.</li>
- <li>proxy: EdgeOne layer-4 proxy line, supports modifying instance ID and rule ID, but cannot be deleted.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
-     * @param string $LineAddress Line address format: ip:port.
-     * @param string $ProxyId The layer-4 proxy instance ID is required when the LineType value is proxy (EdgeOne layer-4 proxy) and can be obtained via the api [DescribeL4proxy](https://intl.cloud.tencent.com/document/api/1552/103413?from_cn_redirect=1).
-     * @param string $RuleId Forwarding rule ID, this field is required when the line type LineType value is proxy (EdgeOne layer-4 proxy). you can obtain it from the api [DescribeL4ProxyRules](https://intl.cloud.tencent.com/document/api/1552/103412?from_cn_redirect=1).
+     * @param string $ZoneId Site ID.
+     * @param string $GatewayId Multi-channel security gateway ID.
+     * @param string $LineType Line type. Valid values:
+<li>direct: direct connection line, modification and deletion are not supported.</li> <li>proxy: EdgeOne Layer 4 proxy line, supports modifying instance ID and rule ID, deletion is not supported.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
+     * @param string $LineAddress Line address in the format of ip:port.
+     * @param string $ProxyId Layer 4 proxy instance ID. It is required when the line type `LineType` value is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4Proxy](https://www.tencentcloud.com/document/api/1552/103413?from_cn_redirect=1) API.
+     * @param string $RuleId Forwarding rule ID. Required when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4ProxyRules](https://www.tencentcloud.com/document/api/1552/103412?from_cn_redirect=1) API.
      */
     function __construct()
     {

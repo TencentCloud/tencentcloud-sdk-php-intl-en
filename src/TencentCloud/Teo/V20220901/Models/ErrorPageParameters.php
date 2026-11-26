@@ -18,20 +18,20 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom error page configuration parameters.
+ * Configuration parameters for the custom error page.
  *
- * @method array getErrorPageParams() Obtain Custom error page configuration list.
- * @method void setErrorPageParams(array $ErrorPageParams) Set Custom error page configuration list.
+ * @method array getErrorPageParams() Obtain List of custom error page configurations.
+ * @method void setErrorPageParams(array $ErrorPageParams) Set List of custom error page configurations.
  */
 class ErrorPageParameters extends AbstractModel
 {
     /**
-     * @var array Custom error page configuration list.
+     * @var array List of custom error page configurations.
      */
     public $ErrorPageParams;
 
     /**
-     * @param array $ErrorPageParams Custom error page configuration list.
+     * @param array $ErrorPageParams List of custom error page configurations.
      */
     function __construct()
     {

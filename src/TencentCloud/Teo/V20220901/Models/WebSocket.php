@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * WebSocket configuration
  *
- * @method string getSwitch() Obtain Whether to enable WebSocket connection timeout. Values:
-<li>`on`: The field "Timeout" can be configured.</li>
-<li>`off`: The field "Timeout" is fixed to 15 seconds.</li>
- * @method void setSwitch(string $Switch) Set Whether to enable WebSocket connection timeout. Values:
-<li>`on`: The field "Timeout" can be configured.</li>
-<li>`off`: The field "Timeout" is fixed to 15 seconds.</li>
- * @method integer getTimeout() Obtain The timeout period in seconds. Maximum value: 120.
- * @method void setTimeout(integer $Timeout) Set The timeout period in seconds. Maximum value: 120.
+ * @method string getSwitch() Obtain WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout;</li>
+<li>off: The platform still supports WebSocket connections, using the system default 15 seconds as the timeout period.</li>
+ * @method void setSwitch(string $Switch) Set WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout;</li>
+<li>off: The platform still supports WebSocket connections, using the system default 15 seconds as the timeout period.</li>
+ * @method integer getTimeout() Obtain Timeout period in seconds. Maximum timeout time: 120 seconds.
+ * @method void setTimeout(integer $Timeout) Set Timeout period in seconds. Maximum timeout time: 120 seconds.
  */
 class WebSocket extends AbstractModel
 {
     /**
-     * @var string Whether to enable WebSocket connection timeout. Values:
-<li>`on`: The field "Timeout" can be configured.</li>
-<li>`off`: The field "Timeout" is fixed to 15 seconds.</li>
+     * @var string WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout;</li>
+<li>off: The platform still supports WebSocket connections, using the system default 15 seconds as the timeout period.</li>
      */
     public $Switch;
 
     /**
-     * @var integer The timeout period in seconds. Maximum value: 120.
+     * @var integer Timeout period in seconds. Maximum timeout time: 120 seconds.
      */
     public $Timeout;
 
     /**
-     * @param string $Switch Whether to enable WebSocket connection timeout. Values:
-<li>`on`: The field "Timeout" can be configured.</li>
-<li>`off`: The field "Timeout" is fixed to 15 seconds.</li>
-     * @param integer $Timeout The timeout period in seconds. Maximum value: 120.
+     * @param string $Switch WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout;</li>
+<li>off: The platform still supports WebSocket connections, using the system default 15 seconds as the timeout period.</li>
+     * @param integer $Timeout Timeout period in seconds. Maximum timeout time: 120 seconds.
      */
     function __construct()
     {

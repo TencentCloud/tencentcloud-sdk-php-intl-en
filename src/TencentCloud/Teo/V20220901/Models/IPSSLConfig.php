@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IP SSL information
  *
- * @method string getAssociatedDomain() Obtain Domain name associated with IP SSL. If the Status value is unbound, this field is empty.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setAssociatedDomain(string $AssociatedDomain) Set Domain name associated with IP SSL. If the Status value is unbound, this field is empty.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method string getStatus() Obtain Association status. Values as follows:
-<li>bound: The IP SSL configuration is bound</li>
-<li>Binding: IP SSL configuration binding in progress</li>
-<li>unbinding: IP SSL configuration is being unbound</li>
-<li>unbound: IP SSL configuration not bound to</li>
- * @method void setStatus(string $Status) Set Association status. Values as follows:
-<li>bound: The IP SSL configuration is bound</li>
-<li>Binding: IP SSL configuration binding in progress</li>
-<li>unbinding: IP SSL configuration is being unbound</li>
-<li>unbound: IP SSL configuration not bound to</li>
+ * @method string getZoneId() Obtain <p>ID of the site associated with the IP SSL domain name. If the Status value is unbound, this field is empty.</p>
+ * @method void setZoneId(string $ZoneId) Set <p>ID of the site associated with the IP SSL domain name. If the Status value is unbound, this field is empty.</p>
+ * @method string getAssociatedDomain() Obtain <p>The domain name associated with the IP SSL. If the Status value is unbound, this field is empty.</p>
+ * @method void setAssociatedDomain(string $AssociatedDomain) Set <p>The domain name associated with the IP SSL. If the Status value is unbound, this field is empty.</p>
+ * @method string getStatus() Obtain <p>Association status. Values as follows:</p><li>bound: IP SSL configuration bound</li><li>binding: IP SSL configuration binding</li><li>unbinding: IP SSL configuration unbinding</li><li>unbound: IP SSL configuration not bound</li>
+ * @method void setStatus(string $Status) Set <p>Association status. Values as follows:</p><li>bound: IP SSL configuration bound</li><li>binding: IP SSL configuration binding</li><li>unbinding: IP SSL configuration unbinding</li><li>unbound: IP SSL configuration not bound</li>
  */
 class IPSSLConfig extends AbstractModel
 {
     /**
-     * @var string Domain name associated with IP SSL. If the Status value is unbound, this field is empty.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var string <p>ID of the site associated with the IP SSL domain name. If the Status value is unbound, this field is empty.</p>
+     */
+    public $ZoneId;
+
+    /**
+     * @var string <p>The domain name associated with the IP SSL. If the Status value is unbound, this field is empty.</p>
      */
     public $AssociatedDomain;
 
     /**
-     * @var string Association status. Values as follows:
-<li>bound: The IP SSL configuration is bound</li>
-<li>Binding: IP SSL configuration binding in progress</li>
-<li>unbinding: IP SSL configuration is being unbound</li>
-<li>unbound: IP SSL configuration not bound to</li>
+     * @var string <p>Association status. Values as follows:</p><li>bound: IP SSL configuration bound</li><li>binding: IP SSL configuration binding</li><li>unbinding: IP SSL configuration unbinding</li><li>unbound: IP SSL configuration not bound</li>
      */
     public $Status;
 
     /**
-     * @param string $AssociatedDomain Domain name associated with IP SSL. If the Status value is unbound, this field is empty.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param string $Status Association status. Values as follows:
-<li>bound: The IP SSL configuration is bound</li>
-<li>Binding: IP SSL configuration binding in progress</li>
-<li>unbinding: IP SSL configuration is being unbound</li>
-<li>unbound: IP SSL configuration not bound to</li>
+     * @param string $ZoneId <p>ID of the site associated with the IP SSL domain name. If the Status value is unbound, this field is empty.</p>
+     * @param string $AssociatedDomain <p>The domain name associated with the IP SSL. If the Status value is unbound, this field is empty.</p>
+     * @param string $Status <p>Association status. Values as follows:</p><li>bound: IP SSL configuration bound</li><li>binding: IP SSL configuration binding</li><li>unbinding: IP SSL configuration unbinding</li><li>unbound: IP SSL configuration not bound</li>
      */
     function __construct()
     {
@@ -74,6 +62,10 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
         if (array_key_exists("AssociatedDomain",$param) and $param["AssociatedDomain"] !== null) {
             $this->AssociatedDomain = $param["AssociatedDomain"];
         }

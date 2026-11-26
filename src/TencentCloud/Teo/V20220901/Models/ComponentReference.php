@@ -18,80 +18,80 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance information referenced by the component, used to show the binding relationship between the component and resources such as edge functions. When an edge function needs to access a component (for example KV namespace), a reference relationship is created. This struct can be used to view the instance detail of the referenced resource and its associated site information.
+ * Instance information referenced by the component, used to show the binding relationship between the component and resources such as edge functions. When an edge function needs to access a component (such as a KV namespace), a reference relationship is created. This struct allows you to view the specific instance details and associated site information.
  *
- * @method string getReferenceType() Obtain Refer to the instance type. Valid values:
-<li>edge-function: Edge function.</li>
- * @method void setReferenceType(string $ReferenceType) Set Refer to the instance type. Valid values:
-<li>edge-function: Edge function.</li>
- * @method string getReferenceId() Obtain Referenced instance ID. According to the value of ReferenceType, return the corresponding instance ID.
-<li>When ReferenceType is edge-function: Return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
+ * @method string getReferenceType() Obtain Instance type to refer. Valid values:
+<li>edge-function: edge function.</li>
+ * @method void setReferenceType(string $ReferenceType) Set Instance type to refer. Valid values:
+<li>edge-function: edge function.</li>
+ * @method string getReferenceId() Obtain ID of the referenced instance. Based on the value of ReferenceType, return the corresponding instance ID:
+<li>When ReferenceType is edge-function: return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
 
- * @method void setReferenceId(string $ReferenceId) Set Referenced instance ID. According to the value of ReferenceType, return the corresponding instance ID.
-<li>When ReferenceType is edge-function: Return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
+ * @method void setReferenceId(string $ReferenceId) Set ID of the referenced instance. Based on the value of ReferenceType, return the corresponding instance ID:
+<li>When ReferenceType is edge-function: return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
 
- * @method string getReferenceName() Obtain Referenced instance name. According to the value of ReferenceType, return the corresponding instance name.
-<li>When ReferenceType is edge-function: Returns the edge function name.</li>
+ * @method string getReferenceName() Obtain Name of the referenced instance. Based on the value of ReferenceType, the corresponding instance name is returned:
+<li>When ReferenceType is edge-function: return the edge function name.</li>
 
- * @method void setReferenceName(string $ReferenceName) Set Referenced instance name. According to the value of ReferenceType, return the corresponding instance name.
-<li>When ReferenceType is edge-function: Returns the edge function name.</li>
+ * @method void setReferenceName(string $ReferenceName) Set Name of the referenced instance. Based on the value of ReferenceType, the corresponding instance name is returned:
+<li>When ReferenceType is edge-function: return the edge function name.</li>
 
- * @method string getZoneId() Obtain Site ID. Site identifier of the instance ownership that refers to the namespace.
- * @method void setZoneId(string $ZoneId) Set Site ID. Site identifier of the instance ownership that refers to the namespace.
- * @method string getZoneName() Obtain Site name. Refer to the site name of the instance ownership in namespace.
- * @method void setZoneName(string $ZoneName) Set Site name. Refer to the site name of the instance ownership in namespace.
- * @method string getAliasZoneName() Obtain Refer to the site alias of the namespace instance. If the site alias is not set, return an empty string.
- * @method void setAliasZoneName(string $AliasZoneName) Set Refer to the site alias of the namespace instance. If the site alias is not set, return an empty string.
+ * @method string getZoneId() Obtain Zone ID. Site identifier of the instance that references the namespace.
+ * @method void setZoneId(string $ZoneId) Set Zone ID. Site identifier of the instance that references the namespace.
+ * @method string getZoneName() Obtain Site name. The name of the site to which the instances in this namespace belong.
+ * @method void setZoneName(string $ZoneName) Set Site name. The name of the site to which the instances in this namespace belong.
+ * @method string getAliasZoneName() Obtain Alias of the site that the instance in the namespace belongs to. If no site alias is set, an empty string is returned.
+ * @method void setAliasZoneName(string $AliasZoneName) Set Alias of the site that the instance in the namespace belongs to. If no site alias is set, an empty string is returned.
  */
 class ComponentReference extends AbstractModel
 {
     /**
-     * @var string Refer to the instance type. Valid values:
-<li>edge-function: Edge function.</li>
+     * @var string Instance type to refer. Valid values:
+<li>edge-function: edge function.</li>
      */
     public $ReferenceType;
 
     /**
-     * @var string Referenced instance ID. According to the value of ReferenceType, return the corresponding instance ID.
-<li>When ReferenceType is edge-function: Return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
+     * @var string ID of the referenced instance. Based on the value of ReferenceType, return the corresponding instance ID:
+<li>When ReferenceType is edge-function: return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
 
      */
     public $ReferenceId;
 
     /**
-     * @var string Referenced instance name. According to the value of ReferenceType, return the corresponding instance name.
-<li>When ReferenceType is edge-function: Returns the edge function name.</li>
+     * @var string Name of the referenced instance. Based on the value of ReferenceType, the corresponding instance name is returned:
+<li>When ReferenceType is edge-function: return the edge function name.</li>
 
      */
     public $ReferenceName;
 
     /**
-     * @var string Site ID. Site identifier of the instance ownership that refers to the namespace.
+     * @var string Zone ID. Site identifier of the instance that references the namespace.
      */
     public $ZoneId;
 
     /**
-     * @var string Site name. Refer to the site name of the instance ownership in namespace.
+     * @var string Site name. The name of the site to which the instances in this namespace belong.
      */
     public $ZoneName;
 
     /**
-     * @var string Refer to the site alias of the namespace instance. If the site alias is not set, return an empty string.
+     * @var string Alias of the site that the instance in the namespace belongs to. If no site alias is set, an empty string is returned.
      */
     public $AliasZoneName;
 
     /**
-     * @param string $ReferenceType Refer to the instance type. Valid values:
-<li>edge-function: Edge function.</li>
-     * @param string $ReferenceId Referenced instance ID. According to the value of ReferenceType, return the corresponding instance ID.
-<li>When ReferenceType is edge-function: Return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
+     * @param string $ReferenceType Instance type to refer. Valid values:
+<li>edge-function: edge function.</li>
+     * @param string $ReferenceId ID of the referenced instance. Based on the value of ReferenceType, return the corresponding instance ID:
+<li>When ReferenceType is edge-function: return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
 
-     * @param string $ReferenceName Referenced instance name. According to the value of ReferenceType, return the corresponding instance name.
-<li>When ReferenceType is edge-function: Returns the edge function name.</li>
+     * @param string $ReferenceName Name of the referenced instance. Based on the value of ReferenceType, the corresponding instance name is returned:
+<li>When ReferenceType is edge-function: return the edge function name.</li>
 
-     * @param string $ZoneId Site ID. Site identifier of the instance ownership that refers to the namespace.
-     * @param string $ZoneName Site name. Refer to the site name of the instance ownership in namespace.
-     * @param string $AliasZoneName Refer to the site alias of the namespace instance. If the site alias is not set, return an empty string.
+     * @param string $ZoneId Zone ID. Site identifier of the instance that references the namespace.
+     * @param string $ZoneName Site name. The name of the site to which the instances in this namespace belong.
+     * @param string $AliasZoneName Alias of the site that the instance in the namespace belongs to. If no site alias is set, an empty string is returned.
      */
     function __construct()
     {

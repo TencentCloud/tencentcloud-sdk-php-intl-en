@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of an edge function.
  *
- * @method string getFunctionId() Obtain Function ID.
- * @method void setFunctionId(string $FunctionId) Set Function ID.
- * @method string getZoneId() Obtain Zone ID.
- * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getName() Obtain Function name.
- * @method void setName(string $Name) Set Function name.
- * @method string getRemark() Obtain Function description.
- * @method void setRemark(string $Remark) Set Function description.
- * @method string getContent() Obtain Function content.
- * @method void setContent(string $Content) Set Function content.
- * @method string getDomain() Obtain Default domain name of a function.
- * @method void setDomain(string $Domain) Set Default domain name of a function.
- * @method string getCreateTime() Obtain Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
- * @method void setCreateTime(string $CreateTime) Set Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
- * @method string getUpdateTime() Obtain Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
- * @method void setUpdateTime(string $UpdateTime) Set Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+ * @method string getFunctionId() Obtain <p>Function ID.</p>
+ * @method void setFunctionId(string $FunctionId) Set <p>Function ID.</p>
+ * @method string getZoneId() Obtain <p>Site ID.</p>
+ * @method void setZoneId(string $ZoneId) Set <p>Site ID.</p>
+ * @method string getName() Obtain <p>Function name.</p>
+ * @method void setName(string $Name) Set <p>Function name.</p>
+ * @method string getRemark() Obtain <p>Function description.</p>
+ * @method void setRemark(string $Remark) Set <p>Function description.</p>
+ * @method string getContent() Obtain <p>Function content.</p>
+ * @method void setContent(string $Content) Set <p>Function content.</p>
+ * @method string getDomain() Obtain <p>Default domain name of a function.</p>
+ * @method void setDomain(string $Domain) Set <p>Default domain name of a function.</p>
+ * @method array getDomainComplianceRestrictions() Obtain <p>List of regional access restrictions on the default domain name of edge functions due to compliance issues.</p>
+ * @method void setDomainComplianceRestrictions(array $DomainComplianceRestrictions) Set <p>List of regional access restrictions on the default domain name of edge functions due to compliance issues.</p>
+ * @method string getCreateTime() Obtain <p>Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
+ * @method string getUpdateTime() Obtain <p>Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
  */
 class FunctionInfo extends AbstractModel
 {
     /**
-     * @var string Function ID.
+     * @var string <p>Function ID.</p>
      */
     public $FunctionId;
 
     /**
-     * @var string Zone ID.
+     * @var string <p>Site ID.</p>
      */
     public $ZoneId;
 
     /**
-     * @var string Function name.
+     * @var string <p>Function name.</p>
      */
     public $Name;
 
     /**
-     * @var string Function description.
+     * @var string <p>Function description.</p>
      */
     public $Remark;
 
     /**
-     * @var string Function content.
+     * @var string <p>Function content.</p>
      */
     public $Content;
 
     /**
-     * @var string Default domain name of a function.
+     * @var string <p>Default domain name of a function.</p>
      */
     public $Domain;
 
     /**
-     * @var string Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+     * @var array <p>List of regional access restrictions on the default domain name of edge functions due to compliance issues.</p>
+     */
+    public $DomainComplianceRestrictions;
+
+    /**
+     * @var string <p>Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+     * @var string <p>Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $FunctionId Function ID.
-     * @param string $ZoneId Zone ID.
-     * @param string $Name Function name.
-     * @param string $Remark Function description.
-     * @param string $Content Function content.
-     * @param string $Domain Default domain name of a function.
-     * @param string $CreateTime Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
-     * @param string $UpdateTime Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+     * @param string $FunctionId <p>Function ID.</p>
+     * @param string $ZoneId <p>Site ID.</p>
+     * @param string $Name <p>Function name.</p>
+     * @param string $Remark <p>Function description.</p>
+     * @param string $Content <p>Function content.</p>
+     * @param string $Domain <p>Default domain name of a function.</p>
+     * @param array $DomainComplianceRestrictions <p>List of regional access restrictions on the default domain name of edge functions due to compliance issues.</p>
+     * @param string $CreateTime <p>Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
+     * @param string $UpdateTime <p>Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
      */
     function __construct()
     {
@@ -124,6 +132,15 @@ class FunctionInfo extends AbstractModel
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("DomainComplianceRestrictions",$param) and $param["DomainComplianceRestrictions"] !== null) {
+            $this->DomainComplianceRestrictions = [];
+            foreach ($param["DomainComplianceRestrictions"] as $key => $value){
+                $obj = new ComplianceRestriction();
+                $obj->deserialize($value);
+                array_push($this->DomainComplianceRestrictions, $obj);
+            }
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

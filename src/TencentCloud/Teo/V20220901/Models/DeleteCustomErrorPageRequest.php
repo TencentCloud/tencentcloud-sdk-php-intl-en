@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getPageId() Obtain Custom page ID.
- * @method void setPageId(string $PageId) Set Custom page ID.
+ * @method string getPageId() Obtain page ID
+ * @method void setPageId(string $PageId) Set page ID
  */
 class DeleteCustomErrorPageRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteCustomErrorPageRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Custom page ID.
+     * @var string page ID
      */
     public $PageId;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $PageId Custom page ID.
+     * @param string $PageId page ID
      */
     function __construct()
     {

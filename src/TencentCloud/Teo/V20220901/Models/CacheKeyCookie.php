@@ -18,64 +18,60 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom Cache Key Cookie configuration parameters
+ * Configuration parameters for custom Cache Key Cookie.
  *
- * @method string getSwitch() Obtain Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method void setSwitch(string $Switch) Set Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method string getAction() Obtain Cache action. values:.
-<Li>`Full`: retain all</li>.
-<Li> `ignore`: ignore all;</li>.
-<Li> `includecustom`: retain specified parameters;</li>.
-<Li> `excludecustom`: ignore specified parameters.</li> **note**: when `switch` is on, this field is required. when `switch` is off, this field is not required and will not take effect if filled.
- * @method void setAction(string $Action) Set Cache action. values:.
-<Li>`Full`: retain all</li>.
-<Li> `ignore`: ignore all;</li>.
-<Li> `includecustom`: retain specified parameters;</li>.
-<Li> `excludecustom`: ignore specified parameters.</li> **note**: when `switch` is on, this field is required. when `switch` is off, this field is not required and will not take effect if filled.
- * @method array getValues() Obtain Custom cache key cookie name list.<br>note: this field is required when action is includecustom or excludecustom; when action is full or ignore, this field is not required and will not take effect if filled.
- * @method void setValues(array $Values) Set Custom cache key cookie name list.<br>note: this field is required when action is includecustom or excludecustom; when action is full or ignore, this field is not required and will not take effect if filled.
+ * @method string getSwitch() Obtain Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method string getAction() Obtain Cache action, with values:
+<li>full: retain all;</li>
+<li> ignore: ignore all;</li>
+<li> includeCustom: retain specified parameters;</li>
+<li>excludeCustom: ignore specified parameter.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field. If specified, it does not take effect.
+ * @method void setAction(string $Action) Set Cache action, with values:
+<li>full: retain all;</li>
+<li> ignore: ignore all;</li>
+<li> includeCustom: retain specified parameters;</li>
+<li>excludeCustom: ignore specified parameter.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field. If specified, it does not take effect.
+ * @method array getValues() Obtain List of custom Cache Key Cookie names.<br>Note: This field is required when Action is includeCustom or excludeCustom. It is not required when Action is full or ignore, and will not take effect if specified.
+ * @method void setValues(array $Values) Set List of custom Cache Key Cookie names.<br>Note: This field is required when Action is includeCustom or excludeCustom. It is not required when Action is full or ignore, and will not take effect if specified.
  */
 class CacheKeyCookie extends AbstractModel
 {
     /**
-     * @var string Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @var string Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var string Cache action. values:.
-<Li>`Full`: retain all</li>.
-<Li> `ignore`: ignore all;</li>.
-<Li> `includecustom`: retain specified parameters;</li>.
-<Li> `excludecustom`: ignore specified parameters.</li> **note**: when `switch` is on, this field is required. when `switch` is off, this field is not required and will not take effect if filled.
+     * @var string Cache action, with values:
+<li>full: retain all;</li>
+<li> ignore: ignore all;</li>
+<li> includeCustom: retain specified parameters;</li>
+<li>excludeCustom: ignore specified parameter.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field. If specified, it does not take effect.
      */
     public $Action;
 
     /**
-     * @var array Custom cache key cookie name list.<br>note: this field is required when action is includecustom or excludecustom; when action is full or ignore, this field is not required and will not take effect if filled.
+     * @var array List of custom Cache Key Cookie names.<br>Note: This field is required when Action is includeCustom or excludeCustom. It is not required when Action is full or ignore, and will not take effect if specified.
      */
     public $Values;
 
     /**
-     * @param string $Switch Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-     * @param string $Action Cache action. values:.
-<Li>`Full`: retain all</li>.
-<Li> `ignore`: ignore all;</li>.
-<Li> `includecustom`: retain specified parameters;</li>.
-<Li> `excludecustom`: ignore specified parameters.</li> **note**: when `switch` is on, this field is required. when `switch` is off, this field is not required and will not take effect if filled.
-     * @param array $Values Custom cache key cookie name list.<br>note: this field is required when action is includecustom or excludecustom; when action is full or ignore, this field is not required and will not take effect if filled.
+     * @param string $Switch Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param string $Action Cache action, with values:
+<li>full: retain all;</li>
+<li> ignore: ignore all;</li>
+<li> includeCustom: retain specified parameters;</li>
+<li>excludeCustom: ignore specified parameter.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field. If specified, it does not take effect.
+     * @param array $Values List of custom Cache Key Cookie names.<br>Note: This field is required when Action is includeCustom or excludeCustom. It is not required when Action is full or ignore, and will not take effect if specified.
      */
     function __construct()
     {

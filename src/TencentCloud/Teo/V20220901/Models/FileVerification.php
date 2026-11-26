@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information required for HTTP access verification file when applying for a free certificate in CNAME mode integration to verify ownership of a site or domain name.
+ * Information required for HTTP access verification file when verifying ownership or applying for a free certificate for a domain name in CNAME mode site integration.
  *
- * @method string getPath() Obtain EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
- * @method void setPath(string $Path) Set EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
- * @method string getContent() Obtain Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
- * @method void setContent(string $Content) Set Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
+ * @method string getPath() Obtain The EdgeOne backend server will get the file verification information via http://{Host}{URL Path} (for example, http://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL Path part you need to create, and Host is the current accelerated domain.
+ * @method void setPath(string $Path) Set The EdgeOne backend server will get the file verification information via http://{Host}{URL Path} (for example, http://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL Path part you need to create, and Host is the current accelerated domain.
+ * @method string getContent() Obtain Verify the content of the file. You need to fill in the content of this field into the txt file returned by the Path field.
+ * @method void setContent(string $Content) Set Verify the content of the file. You need to fill in the content of this field into the txt file returned by the Path field.
  */
 class FileVerification extends AbstractModel
 {
     /**
-     * @var string EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
+     * @var string The EdgeOne backend server will get the file verification information via http://{Host}{URL Path} (for example, http://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL Path part you need to create, and Host is the current accelerated domain.
      */
     public $Path;
 
     /**
-     * @var string Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
+     * @var string Verify the content of the file. You need to fill in the content of this field into the txt file returned by the Path field.
      */
     public $Content;
 
     /**
-     * @param string $Path EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
-     * @param string $Content Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
+     * @param string $Path The EdgeOne backend server will get the file verification information via http://{Host}{URL Path} (for example, http://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL Path part you need to create, and Host is the current accelerated domain.
+     * @param string $Content Verify the content of the file. You need to fill in the content of this field into the txt file returned by the Path field.
      */
     function __construct()
     {

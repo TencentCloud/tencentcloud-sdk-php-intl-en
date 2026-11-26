@@ -18,84 +18,84 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * NS access type site parameter description.
+ * NS access type site parameter details.
  *
- * @method string getCnameSpeedUp() Obtain Specifies whether CNAME acceleration is enabled. valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
- * @method void setCnameSpeedUp(string $CnameSpeedUp) Set Specifies whether CNAME acceleration is enabled. valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
- * @method integer getIsFake() Obtain Existence of a site with the same name. valid values:.
-<Li>0: no site with the same name exists.</li>.
-<Li>Specifies the name already exists.</li>.
- * @method void setIsFake(integer $IsFake) Set Existence of a site with the same name. valid values:.
-<Li>0: no site with the same name exists.</li>.
-<Li>Specifies the name already exists.</li>.
- * @method OwnershipVerification getOwnershipVerification() Obtain Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
- * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
- * @method array getOriginalNameServers() Obtain Lists the NS servers currently in use by the selected site detected by EdgeOne.
- * @method void setOriginalNameServers(array $OriginalNameServers) Set Lists the NS servers currently in use by the selected site detected by EdgeOne.
- * @method array getNameServers() Obtain Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect.
- * @method void setNameServers(array $NameServers) Set Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect.
- * @method VanityNameServers getVanityNameServers() Obtain Specifies the user-customized NS server domain name information. if enabled, the NS needs to be pointed to this address in the registered vendor of the domains.
- * @method void setVanityNameServers(VanityNameServers $VanityNameServers) Set Specifies the user-customized NS server domain name information. if enabled, the NS needs to be pointed to this address in the registered vendor of the domains.
- * @method array getVanityNameServersIps() Obtain Describes the IP address information of the user-customized NS server.
- * @method void setVanityNameServersIps(array $VanityNameServersIps) Set Describes the IP address information of the user-customized NS server.
+ * @method string getCnameSpeedUp() Obtain Whether CNAME acceleration is enabled. Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
+ * @method void setCnameSpeedUp(string $CnameSpeedUp) Set Whether CNAME acceleration is enabled. Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
+ * @method integer getIsFake() Obtain Existence of a site with the same name. Valid values:
+<li> 0: No site with the same name exists;</li>
+<li> 1: A site with the same name already exists.</li>
+ * @method void setIsFake(integer $IsFake) Set Existence of a site with the same name. Valid values:
+<li> 0: No site with the same name exists;</li>
+<li> 1: A site with the same name already exists.</li>
+ * @method OwnershipVerification getOwnershipVerification() Obtain Ownership verification information. For sites with NS access type, switching the current NS server to the NS server designated by Tencent Cloud EdgeOne is deemed as passing ownership verification. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+ * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set Ownership verification information. For sites with NS access type, switching the current NS server to the NS server designated by Tencent Cloud EdgeOne is deemed as passing ownership verification. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+ * @method array getOriginalNameServers() Obtain List of NS servers currently in use by the site detected by EdgeOne.
+ * @method void setOriginalNameServers(array $OriginalNameServers) Set List of NS servers currently in use by the site detected by EdgeOne.
+ * @method array getNameServers() Obtain List of NS servers assigned by Tencent Cloud EdgeOne. Point the NS server of the current site to this address for the site to take effect.
+ * @method void setNameServers(array $NameServers) Set List of NS servers assigned by Tencent Cloud EdgeOne. Point the NS server of the current site to this address for the site to take effect.
+ * @method VanityNameServers getVanityNameServers() Obtain User-customized NS server domain info. If the custom NS service is enabled, the NS need to be pointed to this address at the domain name registered vendor.
+ * @method void setVanityNameServers(VanityNameServers $VanityNameServers) Set User-customized NS server domain info. If the custom NS service is enabled, the NS need to be pointed to this address at the domain name registered vendor.
+ * @method array getVanityNameServersIps() Obtain IP address information corresponding to the user-customized NS server.
+ * @method void setVanityNameServersIps(array $VanityNameServersIps) Set IP address information corresponding to the user-customized NS server.
  */
 class NSDetail extends AbstractModel
 {
     /**
-     * @var string Specifies whether CNAME acceleration is enabled. valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
+     * @var string Whether CNAME acceleration is enabled. Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
      */
     public $CnameSpeedUp;
 
     /**
-     * @var integer Existence of a site with the same name. valid values:.
-<Li>0: no site with the same name exists.</li>.
-<Li>Specifies the name already exists.</li>.
+     * @var integer Existence of a site with the same name. Valid values:
+<li> 0: No site with the same name exists;</li>
+<li> 1: A site with the same name already exists.</li>
      */
     public $IsFake;
 
     /**
-     * @var OwnershipVerification Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+     * @var OwnershipVerification Ownership verification information. For sites with NS access type, switching the current NS server to the NS server designated by Tencent Cloud EdgeOne is deemed as passing ownership verification. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
      */
     public $OwnershipVerification;
 
     /**
-     * @var array Lists the NS servers currently in use by the selected site detected by EdgeOne.
+     * @var array List of NS servers currently in use by the site detected by EdgeOne.
      */
     public $OriginalNameServers;
 
     /**
-     * @var array Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect.
+     * @var array List of NS servers assigned by Tencent Cloud EdgeOne. Point the NS server of the current site to this address for the site to take effect.
      */
     public $NameServers;
 
     /**
-     * @var VanityNameServers Specifies the user-customized NS server domain name information. if enabled, the NS needs to be pointed to this address in the registered vendor of the domains.
+     * @var VanityNameServers User-customized NS server domain info. If the custom NS service is enabled, the NS need to be pointed to this address at the domain name registered vendor.
      */
     public $VanityNameServers;
 
     /**
-     * @var array Describes the IP address information of the user-customized NS server.
+     * @var array IP address information corresponding to the user-customized NS server.
      */
     public $VanityNameServersIps;
 
     /**
-     * @param string $CnameSpeedUp Specifies whether CNAME acceleration is enabled. valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
-     * @param integer $IsFake Existence of a site with the same name. valid values:.
-<Li>0: no site with the same name exists.</li>.
-<Li>Specifies the name already exists.</li>.
-     * @param OwnershipVerification $OwnershipVerification Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
-     * @param array $OriginalNameServers Lists the NS servers currently in use by the selected site detected by EdgeOne.
-     * @param array $NameServers Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect.
-     * @param VanityNameServers $VanityNameServers Specifies the user-customized NS server domain name information. if enabled, the NS needs to be pointed to this address in the registered vendor of the domains.
-     * @param array $VanityNameServersIps Describes the IP address information of the user-customized NS server.
+     * @param string $CnameSpeedUp Whether CNAME acceleration is enabled. Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
+     * @param integer $IsFake Existence of a site with the same name. Valid values:
+<li> 0: No site with the same name exists;</li>
+<li> 1: A site with the same name already exists.</li>
+     * @param OwnershipVerification $OwnershipVerification Ownership verification information. For sites with NS access type, switching the current NS server to the NS server designated by Tencent Cloud EdgeOne is deemed as passing ownership verification. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+     * @param array $OriginalNameServers List of NS servers currently in use by the site detected by EdgeOne.
+     * @param array $NameServers List of NS servers assigned by Tencent Cloud EdgeOne. Point the NS server of the current site to this address for the site to take effect.
+     * @param VanityNameServers $VanityNameServers User-customized NS server domain info. If the custom NS service is enabled, the NS need to be pointed to this address at the domain name registered vendor.
+     * @param array $VanityNameServersIps IP address information corresponding to the user-customized NS server.
      */
     function __construct()
     {

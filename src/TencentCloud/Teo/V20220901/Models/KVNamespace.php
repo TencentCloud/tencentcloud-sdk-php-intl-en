@@ -18,68 +18,68 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * KV namespace information, including namespace basic attribute, capacity utilization and reference relationship. KV namespace is a container for edge function to store key-value pair data. It supports read-write operation in edge function through binding method.
+ * KV namespace information, including the basic attributes, storage capacity utilization, and reference relationships of the namespace. A KV namespace is a container for edge functions to store key-value pair data, which can be read and written in edge functions through binding.
  *
- * @method string getNamespace() Obtain Namespace name. Has uniqueness in the same site.
- * @method void setNamespace(string $Namespace) Set Namespace name. Has uniqueness in the same site.
- * @method string getRemark() Obtain Namespace description. Remark information filled in upon creation, used for explaining the purpose or business meaning of the namespace. Supports a maximum of 256 characters.
- * @method void setRemark(string $Remark) Set Namespace description. Remark information filled in upon creation, used for explaining the purpose or business meaning of the namespace. Supports a maximum of 256 characters.
- * @method integer getCapacity() Obtain Available capacity of KV storage space in bytes. It indicates the maximum capacity limit of storable data in namespace, defaulting to 1 GB.
- * @method void setCapacity(integer $Capacity) Set Available capacity of KV storage space in bytes. It indicates the maximum capacity limit of storable data in namespace, defaulting to 1 GB.
- * @method integer getCapacityUsed() Obtain KV storage space used capacity in bytes (Byte). It indicates the currently used storage space size of the namespace.
- * @method void setCapacityUsed(integer $CapacityUsed) Set KV storage space used capacity in bytes (Byte). It indicates the currently used storage space size of the namespace.
- * @method array getReferences() Obtain List of referenced instances in the namespace. Shows which edge function instances reference the current namespace and the site information referenced. Returns an empty array if not referenced.
- * @method void setReferences(array $References) Set List of referenced instances in the namespace. Shows which edge function instances reference the current namespace and the site information referenced. Returns an empty array if not referenced.
- * @method string getCreatedOn() Obtain The creation time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
- * @method void setCreatedOn(string $CreatedOn) Set The creation time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
- * @method string getModifiedOn() Obtain The last modification time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
- * @method void setModifiedOn(string $ModifiedOn) Set The last modification time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+ * @method string getNamespace() Obtain Namespace name. It is unique within the same site.
+ * @method void setNamespace(string $Namespace) Set Namespace name. It is unique within the same site.
+ * @method string getRemark() Obtain Namespace description. Remark information filled in upon creation, used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
+ * @method void setRemark(string $Remark) Set Namespace description. Remark information filled in upon creation, used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
+ * @method integer getCapacity() Obtain Available capacity of the KV storage space, in bytes. It indicates the maximum capacity limit of storable data in the namespace, which defaults to 1 GB.
+ * @method void setCapacity(integer $Capacity) Set Available capacity of the KV storage space, in bytes. It indicates the maximum capacity limit of storable data in the namespace, which defaults to 1 GB.
+ * @method integer getCapacityUsed() Obtain Used KV storage capacity in bytes. It indicates the currently used storage space size of the namespace.
+ * @method void setCapacityUsed(integer $CapacityUsed) Set Used KV storage capacity in bytes. It indicates the currently used storage space size of the namespace.
+ * @method array getReferences() Obtain List of instances that reference the namespace. Shows which edge function instances currently reference the namespace, as well as the site information of the references. If not referenced, return an empty array.
+ * @method void setReferences(array $References) Set List of instances that reference the namespace. Shows which edge function instances currently reference the namespace, as well as the site information of the references. If not referenced, return an empty array.
+ * @method string getCreatedOn() Obtain Namespace creation time in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (UTC time).
+ * @method void setCreatedOn(string $CreatedOn) Set Namespace creation time in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (UTC time).
+ * @method string getModifiedOn() Obtain Last modification time of the namespace, following the ISO 8601 standard, format: YYYY-MM-DDThh:mm:ssZ (UTC time).
+ * @method void setModifiedOn(string $ModifiedOn) Set Last modification time of the namespace, following the ISO 8601 standard, format: YYYY-MM-DDThh:mm:ssZ (UTC time).
  */
 class KVNamespace extends AbstractModel
 {
     /**
-     * @var string Namespace name. Has uniqueness in the same site.
+     * @var string Namespace name. It is unique within the same site.
      */
     public $Namespace;
 
     /**
-     * @var string Namespace description. Remark information filled in upon creation, used for explaining the purpose or business meaning of the namespace. Supports a maximum of 256 characters.
+     * @var string Namespace description. Remark information filled in upon creation, used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
      */
     public $Remark;
 
     /**
-     * @var integer Available capacity of KV storage space in bytes. It indicates the maximum capacity limit of storable data in namespace, defaulting to 1 GB.
+     * @var integer Available capacity of the KV storage space, in bytes. It indicates the maximum capacity limit of storable data in the namespace, which defaults to 1 GB.
      */
     public $Capacity;
 
     /**
-     * @var integer KV storage space used capacity in bytes (Byte). It indicates the currently used storage space size of the namespace.
+     * @var integer Used KV storage capacity in bytes. It indicates the currently used storage space size of the namespace.
      */
     public $CapacityUsed;
 
     /**
-     * @var array List of referenced instances in the namespace. Shows which edge function instances reference the current namespace and the site information referenced. Returns an empty array if not referenced.
+     * @var array List of instances that reference the namespace. Shows which edge function instances currently reference the namespace, as well as the site information of the references. If not referenced, return an empty array.
      */
     public $References;
 
     /**
-     * @var string The creation time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+     * @var string Namespace creation time in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (UTC time).
      */
     public $CreatedOn;
 
     /**
-     * @var string The last modification time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+     * @var string Last modification time of the namespace, following the ISO 8601 standard, format: YYYY-MM-DDThh:mm:ssZ (UTC time).
      */
     public $ModifiedOn;
 
     /**
-     * @param string $Namespace Namespace name. Has uniqueness in the same site.
-     * @param string $Remark Namespace description. Remark information filled in upon creation, used for explaining the purpose or business meaning of the namespace. Supports a maximum of 256 characters.
-     * @param integer $Capacity Available capacity of KV storage space in bytes. It indicates the maximum capacity limit of storable data in namespace, defaulting to 1 GB.
-     * @param integer $CapacityUsed KV storage space used capacity in bytes (Byte). It indicates the currently used storage space size of the namespace.
-     * @param array $References List of referenced instances in the namespace. Shows which edge function instances reference the current namespace and the site information referenced. Returns an empty array if not referenced.
-     * @param string $CreatedOn The creation time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
-     * @param string $ModifiedOn The last modification time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+     * @param string $Namespace Namespace name. It is unique within the same site.
+     * @param string $Remark Namespace description. Remark information filled in upon creation, used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
+     * @param integer $Capacity Available capacity of the KV storage space, in bytes. It indicates the maximum capacity limit of storable data in the namespace, which defaults to 1 GB.
+     * @param integer $CapacityUsed Used KV storage capacity in bytes. It indicates the currently used storage space size of the namespace.
+     * @param array $References List of instances that reference the namespace. Shows which edge function instances currently reference the namespace, as well as the site information of the references. If not referenced, return an empty array.
+     * @param string $CreatedOn Namespace creation time in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (UTC time).
+     * @param string $ModifiedOn Last modification time of the namespace, following the ISO 8601 standard, format: YYYY-MM-DDThh:mm:ssZ (UTC time).
      */
     function __construct()
     {

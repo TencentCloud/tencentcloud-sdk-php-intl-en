@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set Zone ID.
  * @method string getFunctionId() Obtain Function ID.
  * @method void setFunctionId(string $FunctionId) Set Function ID.
- * @method array getReplicaNames() Obtain Copy name of the deleted function. Input in the form of a list is supported.
- * @method void setReplicaNames(array $ReplicaNames) Set Copy name of the deleted function. Input in the form of a list is supported.
+ * @method array getReplicaNames() Obtain Copy names of functions to be deleted. Input is supported in the form of a list.
+ * @method void setReplicaNames(array $ReplicaNames) Set Copy names of functions to be deleted. Input is supported in the form of a list.
  */
 class DeleteFunctionReplicaRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DeleteFunctionReplicaRequest extends AbstractModel
     public $FunctionId;
 
     /**
-     * @var array Copy name of the deleted function. Input in the form of a list is supported.
+     * @var array Copy names of functions to be deleted. Input is supported in the form of a list.
      */
     public $ReplicaNames;
 
     /**
      * @param string $ZoneId Zone ID.
      * @param string $FunctionId Function ID.
-     * @param array $ReplicaNames Copy name of the deleted function. Input in the form of a list is supported.
+     * @param array $ReplicaNames Copy names of functions to be deleted. Input is supported in the form of a list.
      */
     function __construct()
     {

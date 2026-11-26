@@ -18,32 +18,32 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The settings of the rate limiting template
+ * Current detailed configuration of the template
  *
- * @method string getMode() Obtain Template level name. valid values:.
-<Li>Sup_loose: specifies super loose.</li>.
-<Li>`Loose`: loose</li>.
-<Li>`Emergency`: emergency</li>.
-<li>`normal`: moderate</li>.
-<li>strict</li>.
-<li>`close`: off, precise rate limiting effective.</li>.
- * @method void setMode(string $Mode) Set Template level name. valid values:.
-<Li>Sup_loose: specifies super loose.</li>.
-<Li>`Loose`: loose</li>.
-<Li>`Emergency`: emergency</li>.
-<li>`normal`: moderate</li>.
-<li>strict</li>.
-<li>`close`: off, precise rate limiting effective.</li>.
+ * @method string getMode() Obtain Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+ * @method void setMode(string $Mode) Set Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
  * @method integer getID() Obtain Unique ID.
  * @method void setID(integer $ID) Set Unique ID.
- * @method string getAction() Obtain Template action. valid values:.
-<li>alg: JavaScript challenge;</li>.
-<li>`monitor`: observe</li>.
- * @method void setAction(string $Action) Set Template action. valid values:.
-<li>alg: JavaScript challenge;</li>.
-<li>`monitor`: observe</li>.
- * @method integer getPunishTime() Obtain Penalty time, value range 0-2 days, unit second.
- * @method void setPunishTime(integer $PunishTime) Set Penalty time, value range 0-2 days, unit second.
+ * @method string getAction() Obtain Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+ * @method void setAction(string $Action) Set Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+ * @method integer getPunishTime() Obtain Penalty duration, in seconds. Value range: 0-2 days.
+ * @method void setPunishTime(integer $PunishTime) Set Penalty duration, in seconds. Value range: 0-2 days.
  * @method integer getThreshold() Obtain Statistical threshold, in times. Value range: 0-4294967294.
  * @method void setThreshold(integer $Threshold) Set Statistical threshold, in times. Value range: 0-4294967294.
  * @method integer getPeriod() Obtain Statistical cycle. Value range: 0-120 seconds.
@@ -52,13 +52,13 @@ use TencentCloud\Common\AbstractModel;
 class RateLimitTemplateDetail extends AbstractModel
 {
     /**
-     * @var string Template level name. valid values:.
-<Li>Sup_loose: specifies super loose.</li>.
-<Li>`Loose`: loose</li>.
-<Li>`Emergency`: emergency</li>.
-<li>`normal`: moderate</li>.
-<li>strict</li>.
-<li>`close`: off, precise rate limiting effective.</li>.
+     * @var string Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
      */
     public $Mode;
 
@@ -68,14 +68,14 @@ class RateLimitTemplateDetail extends AbstractModel
     public $ID;
 
     /**
-     * @var string Template action. valid values:.
-<li>alg: JavaScript challenge;</li>.
-<li>`monitor`: observe</li>.
+     * @var string Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
      */
     public $Action;
 
     /**
-     * @var integer Penalty time, value range 0-2 days, unit second.
+     * @var integer Penalty duration, in seconds. Value range: 0-2 days.
      */
     public $PunishTime;
 
@@ -90,18 +90,18 @@ class RateLimitTemplateDetail extends AbstractModel
     public $Period;
 
     /**
-     * @param string $Mode Template level name. valid values:.
-<Li>Sup_loose: specifies super loose.</li>.
-<Li>`Loose`: loose</li>.
-<Li>`Emergency`: emergency</li>.
-<li>`normal`: moderate</li>.
-<li>strict</li>.
-<li>`close`: off, precise rate limiting effective.</li>.
+     * @param string $Mode Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
      * @param integer $ID Unique ID.
-     * @param string $Action Template action. valid values:.
-<li>alg: JavaScript challenge;</li>.
-<li>`monitor`: observe</li>.
-     * @param integer $PunishTime Penalty time, value range 0-2 days, unit second.
+     * @param string $Action Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+     * @param integer $PunishTime Penalty duration, in seconds. Value range: 0-2 days.
      * @param integer $Threshold Statistical threshold, in times. Value range: 0-4294967294.
      * @param integer $Period Statistical cycle. Value range: 0-120 seconds.
      */

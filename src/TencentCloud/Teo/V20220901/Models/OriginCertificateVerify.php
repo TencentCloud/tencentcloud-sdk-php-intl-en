@@ -18,34 +18,34 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Specifies the mode of HTTPS origin certificate verification.
+ * Mode of HTTPS origin certificate verification.
  *
- * @method string getVerificationMode() Obtain Origin certificate verification mode. valid values: <li>disable: disable origin certificate verification.</li> <li>custom_ca: use designated trusted ca certificate for verification.</li>.
- * @method void setVerificationMode(string $VerificationMode) Set Origin certificate verification mode. valid values: <li>disable: disable origin certificate verification.</li> <li>custom_ca: use designated trusted ca certificate for verification.</li>.
- * @method array getCustomCACerts() Obtain Specifies the trusted CA certificate list. the origin certificate must be issued by this CA to pass verification. note: this parameter is required only when VerificationMode is custom_CA. input this parameter to specify the trusted CA certificate information.
-OriginCertificateVerify specifies CertId of the corresponding certificate as an input parameter in ModifyHostsCertificate. only need to go to the SSL certificate service list (https://console.cloud.tencent.com/SSL) to check CertId.	
+ * @method string getVerificationMode() Obtain Origin certificate verification mode. Valid values: <li>disable: Disable origin certificate verification.</li><li>custom_ca: Use a specified trusted CA certificate for verification.</li>
+ * @method void setVerificationMode(string $VerificationMode) Set Origin certificate verification mode. Valid values: <li>disable: Disable origin certificate verification.</li><li>custom_ca: Use a specified trusted CA certificate for verification.</li>
+ * @method array getCustomCACerts() Obtain Specify the trusted CA certificate list. The origin certificate must be issued by this CA to pass verification. Note: This parameter is required only when VerificationMode is custom_ca. Specify the trusted CA certificate information.
+When OriginCertificateVerify is used as an input parameter in ModifyHostsCertificate, just pass in the CertId of the corresponding certificate. You can go to the [SSL certificate list](https://console.cloud.tencent.com/ssl) to check the CertId.	
 
- * @method void setCustomCACerts(array $CustomCACerts) Set Specifies the trusted CA certificate list. the origin certificate must be issued by this CA to pass verification. note: this parameter is required only when VerificationMode is custom_CA. input this parameter to specify the trusted CA certificate information.
-OriginCertificateVerify specifies CertId of the corresponding certificate as an input parameter in ModifyHostsCertificate. only need to go to the SSL certificate service list (https://console.cloud.tencent.com/SSL) to check CertId.	
+ * @method void setCustomCACerts(array $CustomCACerts) Set Specify the trusted CA certificate list. The origin certificate must be issued by this CA to pass verification. Note: This parameter is required only when VerificationMode is custom_ca. Specify the trusted CA certificate information.
+When OriginCertificateVerify is used as an input parameter in ModifyHostsCertificate, just pass in the CertId of the corresponding certificate. You can go to the [SSL certificate list](https://console.cloud.tencent.com/ssl) to check the CertId.	
  */
 class OriginCertificateVerify extends AbstractModel
 {
     /**
-     * @var string Origin certificate verification mode. valid values: <li>disable: disable origin certificate verification.</li> <li>custom_ca: use designated trusted ca certificate for verification.</li>.
+     * @var string Origin certificate verification mode. Valid values: <li>disable: Disable origin certificate verification.</li><li>custom_ca: Use a specified trusted CA certificate for verification.</li>
      */
     public $VerificationMode;
 
     /**
-     * @var array Specifies the trusted CA certificate list. the origin certificate must be issued by this CA to pass verification. note: this parameter is required only when VerificationMode is custom_CA. input this parameter to specify the trusted CA certificate information.
-OriginCertificateVerify specifies CertId of the corresponding certificate as an input parameter in ModifyHostsCertificate. only need to go to the SSL certificate service list (https://console.cloud.tencent.com/SSL) to check CertId.	
+     * @var array Specify the trusted CA certificate list. The origin certificate must be issued by this CA to pass verification. Note: This parameter is required only when VerificationMode is custom_ca. Specify the trusted CA certificate information.
+When OriginCertificateVerify is used as an input parameter in ModifyHostsCertificate, just pass in the CertId of the corresponding certificate. You can go to the [SSL certificate list](https://console.cloud.tencent.com/ssl) to check the CertId.	
 
      */
     public $CustomCACerts;
 
     /**
-     * @param string $VerificationMode Origin certificate verification mode. valid values: <li>disable: disable origin certificate verification.</li> <li>custom_ca: use designated trusted ca certificate for verification.</li>.
-     * @param array $CustomCACerts Specifies the trusted CA certificate list. the origin certificate must be issued by this CA to pass verification. note: this parameter is required only when VerificationMode is custom_CA. input this parameter to specify the trusted CA certificate information.
-OriginCertificateVerify specifies CertId of the corresponding certificate as an input parameter in ModifyHostsCertificate. only need to go to the SSL certificate service list (https://console.cloud.tencent.com/SSL) to check CertId.	
+     * @param string $VerificationMode Origin certificate verification mode. Valid values: <li>disable: Disable origin certificate verification.</li><li>custom_ca: Use a specified trusted CA certificate for verification.</li>
+     * @param array $CustomCACerts Specify the trusted CA certificate list. The origin certificate must be issued by this CA to pass verification. Note: This parameter is required only when VerificationMode is custom_ca. Specify the trusted CA certificate information.
+When OriginCertificateVerify is used as an input parameter in ModifyHostsCertificate, just pass in the CertId of the corresponding certificate. You can go to the [SSL certificate list](https://console.cloud.tencent.com/ssl) to check the CertId.	
      */
     function __construct()
     {

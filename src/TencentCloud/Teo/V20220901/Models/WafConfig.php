@@ -18,88 +18,88 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * WAF configuration.
+ * Waf configuration.
  *
- * @method string getSwitch() Obtain Whether to enable WAF configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>The configuration can be modified even when it is disabled.
- * @method void setSwitch(string $Switch) Set Whether to enable WAF configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>The configuration can be modified even when it is disabled.
- * @method string getLevel() Obtain The protection level. Values:
-<li>`loose`: Loose</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`stricter`: Super strict</li>
-<li>`custom`: Custom</li>
- * @method void setLevel(string $Level) Set The protection level. Values:
-<li>`loose`: Loose</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`stricter`: Super strict</li>
-<li>`custom`: Custom</li>
- * @method string getMode() Obtain The WAF global mode. Values:
-<li>`block`: Block globally</li>
-<li>`observe`: Observe globally</li>
- * @method void setMode(string $Mode) Set The WAF global mode. Values:
-<li>`block`: Block globally</li>
-<li>`observe`: Observe globally</li>
- * @method WafRule getWafRule() Obtain The settings of the managed rule. If it is null, the settings that were last configured will be used.
- * @method void setWafRule(WafRule $WafRule) Set The settings of the managed rule. If it is null, the settings that were last configured will be used.
- * @method AiRule getAiRule() Obtain The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
- * @method void setAiRule(AiRule $AiRule) Set The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
+ * @method string getSwitch() Obtain WafConfig switch. Valid values:
+<li>on: Enable;</li>
+<li> off: disabled.</li>The switch only affects whether the configuration takes effect. Even if it is off, the configuration content can still be modified normally.
+ * @method void setSwitch(string $Switch) Set WafConfig switch. Valid values:
+<li>on: Enable;</li>
+<li> off: disabled.</li>The switch only affects whether the configuration takes effect. Even if it is off, the configuration content can still be modified normally.
+ * @method string getLevel() Obtain Protection level set last time. Valid values:
+<li> loose: loose;</li>
+<li> normal: Normal;</li>
+<li> strict: strict;</li>
+<li>stricter: ultra-strict;</li>
+<li> custom: Custom.</li>
+ * @method void setLevel(string $Level) Set Protection level set last time. Valid values:
+<li> loose: loose;</li>
+<li> normal: Normal;</li>
+<li> strict: strict;</li>
+<li>stricter: ultra-strict;</li>
+<li> custom: Custom.</li>
+ * @method string getMode() Obtain Global WAF mode. Valid values:
+<li> block: block (global blocking, but you can configure rules to observe);</li>
+<li> observe: observation (regardless of the detailed rule configuration, it is always observation).</li>
+ * @method void setMode(string $Mode) Set Global WAF mode. Valid values:
+<li> block: block (global blocking, but you can configure rules to observe);</li>
+<li> observe: observation (regardless of the detailed rule configuration, it is always observation).</li>
+ * @method WafRule getWafRule() Obtain Detailed configuration of the managed rule. If null, use the last set configuration by default.
+ * @method void setWafRule(WafRule $WafRule) Set Detailed configuration of the managed rule. If null, use the last set configuration by default.
+ * @method AiRule getAiRule() Obtain Protection configuration of the AI rule engine. If it is null, use the last set configuration by default.
+ * @method void setAiRule(AiRule $AiRule) Set Protection configuration of the AI rule engine. If it is null, use the last set configuration by default.
  */
 class WafConfig extends AbstractModel
 {
     /**
-     * @var string Whether to enable WAF configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>The configuration can be modified even when it is disabled.
+     * @var string WafConfig switch. Valid values:
+<li>on: Enable;</li>
+<li> off: disabled.</li>The switch only affects whether the configuration takes effect. Even if it is off, the configuration content can still be modified normally.
      */
     public $Switch;
 
     /**
-     * @var string The protection level. Values:
-<li>`loose`: Loose</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`stricter`: Super strict</li>
-<li>`custom`: Custom</li>
+     * @var string Protection level set last time. Valid values:
+<li> loose: loose;</li>
+<li> normal: Normal;</li>
+<li> strict: strict;</li>
+<li>stricter: ultra-strict;</li>
+<li> custom: Custom.</li>
      */
     public $Level;
 
     /**
-     * @var string The WAF global mode. Values:
-<li>`block`: Block globally</li>
-<li>`observe`: Observe globally</li>
+     * @var string Global WAF mode. Valid values:
+<li> block: block (global blocking, but you can configure rules to observe);</li>
+<li> observe: observation (regardless of the detailed rule configuration, it is always observation).</li>
      */
     public $Mode;
 
     /**
-     * @var WafRule The settings of the managed rule. If it is null, the settings that were last configured will be used.
+     * @var WafRule Detailed configuration of the managed rule. If null, use the last set configuration by default.
      */
     public $WafRule;
 
     /**
-     * @var AiRule The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
+     * @var AiRule Protection configuration of the AI rule engine. If it is null, use the last set configuration by default.
      */
     public $AiRule;
 
     /**
-     * @param string $Switch Whether to enable WAF configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>The configuration can be modified even when it is disabled.
-     * @param string $Level The protection level. Values:
-<li>`loose`: Loose</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`stricter`: Super strict</li>
-<li>`custom`: Custom</li>
-     * @param string $Mode The WAF global mode. Values:
-<li>`block`: Block globally</li>
-<li>`observe`: Observe globally</li>
-     * @param WafRule $WafRule The settings of the managed rule. If it is null, the settings that were last configured will be used.
-     * @param AiRule $AiRule The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
+     * @param string $Switch WafConfig switch. Valid values:
+<li>on: Enable;</li>
+<li> off: disabled.</li>The switch only affects whether the configuration takes effect. Even if it is off, the configuration content can still be modified normally.
+     * @param string $Level Protection level set last time. Valid values:
+<li> loose: loose;</li>
+<li> normal: Normal;</li>
+<li> strict: strict;</li>
+<li>stricter: ultra-strict;</li>
+<li> custom: Custom.</li>
+     * @param string $Mode Global WAF mode. Valid values:
+<li> block: block (global blocking, but you can configure rules to observe);</li>
+<li> observe: observation (regardless of the detailed rule configuration, it is always observation).</li>
+     * @param WafRule $WafRule Detailed configuration of the managed rule. If null, use the last set configuration by default.
+     * @param AiRule $AiRule Protection configuration of the AI rule engine. If it is null, use the last set configuration by default.
      */
     function __construct()
     {

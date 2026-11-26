@@ -18,179 +18,171 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Billable resource
+ * Billing resource
  *
- * @method string getId() Obtain The resource ID.
- * @method void setId(string $Id) Set The resource ID.
- * @method integer getPayMode() Obtain Billing mode
-`0`: Pay-as-you-go
- * @method void setPayMode(integer $PayMode) Set Billing mode
-`0`: Pay-as-you-go
- * @method string getCreateTime() Obtain The creation time.
- * @method void setCreateTime(string $CreateTime) Set The creation time.
- * @method string getEnableTime() Obtain The effective time.
- * @method void setEnableTime(string $EnableTime) Set The effective time.
- * @method string getExpireTime() Obtain The expiration time.
- * @method void setExpireTime(string $ExpireTime) Set The expiration time.
- * @method string getStatus() Obtain The plan status. Values:
-<li>`normal`: Normal</li>
-<li>`isolated`: Isolated</li>
-<li>`destroyed`: Terminated</li>
- * @method void setStatus(string $Status) Set The plan status. Values:
-<li>`normal`: Normal</li>
-<li>`isolated`: Isolated</li>
-<li>`destroyed`: Terminated</li>
- * @method array getSv() Obtain Pricing query parameter
- * @method void setSv(array $Sv) Set Pricing query parameter
- * @method integer getAutoRenewFlag() Obtain Whether to enable auto-renewal. Values:
-<li>`0`: Default status.</li>
-<li>`1`: Enable auto-renewal.</li>
-<li>`2`: Disable auto-renewal.</li>
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Whether to enable auto-renewal. Values:
-<li>`0`: Default status.</li>
-<li>`1`: Enable auto-renewal.</li>
-<li>`2`: Disable auto-renewal.</li>
- * @method string getPlanId() Obtain ID of the resource associated with the plan.
- * @method void setPlanId(string $PlanId) Set ID of the resource associated with the plan.
- * @method string getArea() Obtain Region. valid values:.
-<Li>Mainland: within the chinese mainland;</li>.
-<li>overseas: outside the chinese mainland.</li>.
-<Li>Global: global.</li>.
- * @method void setArea(string $Area) Set Region. valid values:.
-<Li>Mainland: within the chinese mainland;</li>.
-<li>overseas: outside the chinese mainland.</li>.
-<Li>Global: global.</li>.
- * @method string getGroup() Obtain The resource type. Values:
-<li>`plan`: Plan resources</li>
-<li>`pay-as-you-go`: Pay-as-you-go resources </li>
-<li>`value-added`: Value-added resources </li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGroup(string $Group) Set The resource type. Values:
-<li>`plan`: Plan resources</li>
-<li>`pay-as-you-go`: Pay-as-you-go resources </li>
-<li>`value-added`: Value-added resources </li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getZoneNumber() Obtain The sites that are associated with the current resources.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneNumber(integer $ZoneNumber) Set The sites that are associated with the current resources.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getType() Obtain Resource tag type. Valid values:
+ * @method string getId() Obtain Resource ID.
+ * @method void setId(string $Id) Set Resource ID.
+ * @method integer getPayMode() Obtain Payment mode. Valid values:
+<li>0: postpaid.</li>
+ * @method void setPayMode(integer $PayMode) Set Payment mode. Valid values:
+<li>0: postpaid.</li>
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method string getEnableTime() Obtain Effective time.
+ * @method void setEnableTime(string $EnableTime) Set Effective time.
+ * @method string getExpireTime() Obtain Expiration time.
+ * @method void setExpireTime(string $ExpireTime) Set Expiration time.
+ * @method string getStatus() Obtain Package status. Valid values:
+<li>normal: Normal;</li>
+<li>isolated: Isolated;</li>
+<li>destroyed: Terminated.</li>
+ * @method void setStatus(string $Status) Set Package status. Valid values:
+<li>normal: Normal;</li>
+<li>isolated: Isolated;</li>
+<li>destroyed: Terminated.</li>
+ * @method array getSv() Obtain Price inquiry parameters.
+ * @method void setSv(array $Sv) Set Price inquiry parameters.
+ * @method integer getAutoRenewFlag() Obtain Whether it is automatically renewed. Valid values:
+<li>0: default state</li>
+<li>`1`: auto-renewal;</li>
+<li>`2`: no auto-renewal.</li>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Whether it is automatically renewed. Valid values:
+<li>0: default state</li>
+<li>`1`: auto-renewal;</li>
+<li>`2`: no auto-renewal.</li>
+ * @method string getPlanId() Obtain ID of the associated resource in the package.
+ * @method void setPlanId(string $PlanId) Set ID of the associated resource in the package.
+ * @method string getArea() Obtain Region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: outside the Chinese mainland.</li>
+<li>global: global.</li>
+ * @method void setArea(string $Area) Set Region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: outside the Chinese mainland.</li>
+<li>global: global.</li>
+ * @method string getGroup() Obtain Resource type. Valid values:
+<li>plan: package type;</li>
+<li>pay-as-you-go: postpaid mode.</li>
+<li>value-added: value-added service type.</li>
+ * @method void setGroup(string $Group) Set Resource type. Valid values:
+<li>plan: package type;</li>
+<li>pay-as-you-go: postpaid mode.</li>
+<li>value-added: value-added service type.</li>
+ * @method integer getZoneNumber() Obtain Number of sites bound to the current resource.
+ * @method void setZoneNumber(integer $ZoneNumber) Set Number of sites bound to the current resource.
+ * @method string getType() Obtain Resource tag type, with values:
 <li>vodeo: vodeo resource.</li>
- * @method void setType(string $Type) Set Resource tag type. Valid values:
+ * @method void setType(string $Type) Set Resource tag type, with values:
 <li>vodeo: vodeo resource.</li>
  */
 class Resource extends AbstractModel
 {
     /**
-     * @var string The resource ID.
+     * @var string Resource ID.
      */
     public $Id;
 
     /**
-     * @var integer Billing mode
-`0`: Pay-as-you-go
+     * @var integer Payment mode. Valid values:
+<li>0: postpaid.</li>
      */
     public $PayMode;
 
     /**
-     * @var string The creation time.
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string The effective time.
+     * @var string Effective time.
      */
     public $EnableTime;
 
     /**
-     * @var string The expiration time.
+     * @var string Expiration time.
      */
     public $ExpireTime;
 
     /**
-     * @var string The plan status. Values:
-<li>`normal`: Normal</li>
-<li>`isolated`: Isolated</li>
-<li>`destroyed`: Terminated</li>
+     * @var string Package status. Valid values:
+<li>normal: Normal;</li>
+<li>isolated: Isolated;</li>
+<li>destroyed: Terminated.</li>
      */
     public $Status;
 
     /**
-     * @var array Pricing query parameter
+     * @var array Price inquiry parameters.
      */
     public $Sv;
 
     /**
-     * @var integer Whether to enable auto-renewal. Values:
-<li>`0`: Default status.</li>
-<li>`1`: Enable auto-renewal.</li>
-<li>`2`: Disable auto-renewal.</li>
+     * @var integer Whether it is automatically renewed. Valid values:
+<li>0: default state</li>
+<li>`1`: auto-renewal;</li>
+<li>`2`: no auto-renewal.</li>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var string ID of the resource associated with the plan.
+     * @var string ID of the associated resource in the package.
      */
     public $PlanId;
 
     /**
-     * @var string Region. valid values:.
-<Li>Mainland: within the chinese mainland;</li>.
-<li>overseas: outside the chinese mainland.</li>.
-<Li>Global: global.</li>.
+     * @var string Region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: outside the Chinese mainland.</li>
+<li>global: global.</li>
      */
     public $Area;
 
     /**
-     * @var string The resource type. Values:
-<li>`plan`: Plan resources</li>
-<li>`pay-as-you-go`: Pay-as-you-go resources </li>
-<li>`value-added`: Value-added resources </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Resource type. Valid values:
+<li>plan: package type;</li>
+<li>pay-as-you-go: postpaid mode.</li>
+<li>value-added: value-added service type.</li>
      */
     public $Group;
 
     /**
-     * @var integer The sites that are associated with the current resources.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of sites bound to the current resource.
      */
     public $ZoneNumber;
 
     /**
-     * @var string Resource tag type. Valid values:
+     * @var string Resource tag type, with values:
 <li>vodeo: vodeo resource.</li>
      */
     public $Type;
 
     /**
-     * @param string $Id The resource ID.
-     * @param integer $PayMode Billing mode
-`0`: Pay-as-you-go
-     * @param string $CreateTime The creation time.
-     * @param string $EnableTime The effective time.
-     * @param string $ExpireTime The expiration time.
-     * @param string $Status The plan status. Values:
-<li>`normal`: Normal</li>
-<li>`isolated`: Isolated</li>
-<li>`destroyed`: Terminated</li>
-     * @param array $Sv Pricing query parameter
-     * @param integer $AutoRenewFlag Whether to enable auto-renewal. Values:
-<li>`0`: Default status.</li>
-<li>`1`: Enable auto-renewal.</li>
-<li>`2`: Disable auto-renewal.</li>
-     * @param string $PlanId ID of the resource associated with the plan.
-     * @param string $Area Region. valid values:.
-<Li>Mainland: within the chinese mainland;</li>.
-<li>overseas: outside the chinese mainland.</li>.
-<Li>Global: global.</li>.
-     * @param string $Group The resource type. Values:
-<li>`plan`: Plan resources</li>
-<li>`pay-as-you-go`: Pay-as-you-go resources </li>
-<li>`value-added`: Value-added resources </li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ZoneNumber The sites that are associated with the current resources.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Type Resource tag type. Valid values:
+     * @param string $Id Resource ID.
+     * @param integer $PayMode Payment mode. Valid values:
+<li>0: postpaid.</li>
+     * @param string $CreateTime Creation time.
+     * @param string $EnableTime Effective time.
+     * @param string $ExpireTime Expiration time.
+     * @param string $Status Package status. Valid values:
+<li>normal: Normal;</li>
+<li>isolated: Isolated;</li>
+<li>destroyed: Terminated.</li>
+     * @param array $Sv Price inquiry parameters.
+     * @param integer $AutoRenewFlag Whether it is automatically renewed. Valid values:
+<li>0: default state</li>
+<li>`1`: auto-renewal;</li>
+<li>`2`: no auto-renewal.</li>
+     * @param string $PlanId ID of the associated resource in the package.
+     * @param string $Area Region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: outside the Chinese mainland.</li>
+<li>global: global.</li>
+     * @param string $Group Resource type. Valid values:
+<li>plan: package type;</li>
+<li>pay-as-you-go: postpaid mode.</li>
+<li>value-added: value-added service type.</li>
+     * @param integer $ZoneNumber Number of sites bound to the current resource.
+     * @param string $Type Resource tag type, with values:
 <li>vodeo: vodeo resource.</li>
      */
     function __construct()

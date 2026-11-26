@@ -18,20 +18,20 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CNAME configuration status for domain integration.
+ * CNAME configuration status of the integration domain
  *
  * @method string getRecordName() Obtain Domain name.
  * @method void setRecordName(string $RecordName) Set Domain name.
- * @method string getCname() Obtain EdgeOne is assigned to the CNAME of the domain name.
- * @method void setCname(string $Cname) Set EdgeOne is assigned to the CNAME of the domain name.
- * @method string getStatus() Obtain CNAME configuration status verification result. valid values:.
-<li>active: indicates that the domain name is correctly configured to the designated CNAME assigned by EdgeOne.</li>.
-<li>moved: indicates the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>.
-<li>invalid: indicates the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which can cause service exception. change it to the CNAME provided by EdgeOne for this domain. you can get the CNAME provided by EdgeOne for this domain from the CNAME field in this struct.</li>.
- * @method void setStatus(string $Status) Set CNAME configuration status verification result. valid values:.
-<li>active: indicates that the domain name is correctly configured to the designated CNAME assigned by EdgeOne.</li>.
-<li>moved: indicates the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>.
-<li>invalid: indicates the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which can cause service exception. change it to the CNAME provided by EdgeOne for this domain. you can get the CNAME provided by EdgeOne for this domain from the CNAME field in this struct.</li>.
+ * @method string getCname() Obtain CNAME assigned to the domain name integrated with EdgeOne.
+ * @method void setCname(string $Cname) Set CNAME assigned to the domain name integrated with EdgeOne.
+ * @method string getStatus() Obtain CNAME configuration status check results. Valid values:
+<li>active: means the domain name is correctly configured to the designated CNAME assigned by EdgeOne;</li>
+<li>moved: indicates that the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>
+<li>invalid: indicates that the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which will cause service exception. Change it to the designated CNAME provided by EdgeOne for this access domain. You can get the CNAME provided by EdgeOne for this access domain from the Cname field of this struct.</li>
+ * @method void setStatus(string $Status) Set CNAME configuration status check results. Valid values:
+<li>active: means the domain name is correctly configured to the designated CNAME assigned by EdgeOne;</li>
+<li>moved: indicates that the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>
+<li>invalid: indicates that the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which will cause service exception. Change it to the designated CNAME provided by EdgeOne for this access domain. You can get the CNAME provided by EdgeOne for this access domain from the Cname field of this struct.</li>
  */
 class CnameStatus extends AbstractModel
 {
@@ -41,25 +41,25 @@ class CnameStatus extends AbstractModel
     public $RecordName;
 
     /**
-     * @var string EdgeOne is assigned to the CNAME of the domain name.
+     * @var string CNAME assigned to the domain name integrated with EdgeOne.
      */
     public $Cname;
 
     /**
-     * @var string CNAME configuration status verification result. valid values:.
-<li>active: indicates that the domain name is correctly configured to the designated CNAME assigned by EdgeOne.</li>.
-<li>moved: indicates the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>.
-<li>invalid: indicates the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which can cause service exception. change it to the CNAME provided by EdgeOne for this domain. you can get the CNAME provided by EdgeOne for this domain from the CNAME field in this struct.</li>.
+     * @var string CNAME configuration status check results. Valid values:
+<li>active: means the domain name is correctly configured to the designated CNAME assigned by EdgeOne;</li>
+<li>moved: indicates that the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>
+<li>invalid: indicates that the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which will cause service exception. Change it to the designated CNAME provided by EdgeOne for this access domain. You can get the CNAME provided by EdgeOne for this access domain from the Cname field of this struct.</li>
      */
     public $Status;
 
     /**
      * @param string $RecordName Domain name.
-     * @param string $Cname EdgeOne is assigned to the CNAME of the domain name.
-     * @param string $Status CNAME configuration status verification result. valid values:.
-<li>active: indicates that the domain name is correctly configured to the designated CNAME assigned by EdgeOne.</li>.
-<li>moved: indicates the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>.
-<li>invalid: indicates the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which can cause service exception. change it to the CNAME provided by EdgeOne for this domain. you can get the CNAME provided by EdgeOne for this domain from the CNAME field in this struct.</li>.
+     * @param string $Cname CNAME assigned to the domain name integrated with EdgeOne.
+     * @param string $Status CNAME configuration status check results. Valid values:
+<li>active: means the domain name is correctly configured to the designated CNAME assigned by EdgeOne;</li>
+<li>moved: indicates that the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>
+<li>invalid: indicates that the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which will cause service exception. Change it to the designated CNAME provided by EdgeOne for this access domain. You can get the CNAME provided by EdgeOne for this access domain from the Cname field of this struct.</li>
      */
     function __construct()
     {

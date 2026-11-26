@@ -18,68 +18,52 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Currently effective origin ACLs.
+ * Currently effective origin-pull IP range.
  *
- * @method Addresses getEntireAddresses() Obtain IP range details.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setEntireAddresses(Addresses $EntireAddresses) Set IP range details.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method string getVersion() Obtain Version number.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setVersion(string $Version) Set Version number.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method string getActiveTime() Obtain Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setActiveTime(string $ActiveTime) Set Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method string getIsPlaned() Obtain This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
-- true: specifies that the version is effective and the update to the latest version is confirmed.
-- false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setIsPlaned(string $IsPlaned) Set This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
-- true: specifies that the version is effective and the update to the latest version is confirmed.
-- false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method Addresses getEntireAddresses() Obtain Origin-pull IP range details.
+ * @method void setEntireAddresses(Addresses $EntireAddresses) Set Origin-pull IP range details.
+ * @method string getVersion() Obtain Version.
+ * @method void setVersion(string $Version) Set Version.
+ * @method string getActiveTime() Obtain Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
+ * @method void setActiveTime(string $ActiveTime) Set Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
+ * @method string getIsPlaned() Obtain This parameter is used to record whether "I have updated to the latest origin-pull IP range" is confirmed before the current version takes effect. Valid values:
+<li>true: When the version takes effect, the confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: When the version takes effect, the confirmation of updating to the latest origin-pull IP is not completed, and the origin-pull IP range is forcibly updated to the latest version by the backend.</li>Note: When this parameter returns false, confirm in time whether your origin server firewall configuration has been updated to the latest origin-pull IP range to avoid origin-pull failure.
+ * @method void setIsPlaned(string $IsPlaned) Set This parameter is used to record whether "I have updated to the latest origin-pull IP range" is confirmed before the current version takes effect. Valid values:
+<li>true: When the version takes effect, the confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: When the version takes effect, the confirmation of updating to the latest origin-pull IP is not completed, and the origin-pull IP range is forcibly updated to the latest version by the backend.</li>Note: When this parameter returns false, confirm in time whether your origin server firewall configuration has been updated to the latest origin-pull IP range to avoid origin-pull failure.
  */
 class CurrentOriginACL extends AbstractModel
 {
     /**
-     * @var Addresses IP range details.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var Addresses Origin-pull IP range details.
      */
     public $EntireAddresses;
 
     /**
-     * @var string Version number.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var string Version.
      */
     public $Version;
 
     /**
-     * @var string Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var string Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
      */
     public $ActiveTime;
 
     /**
-     * @var string This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
-- true: specifies that the version is effective and the update to the latest version is confirmed.
-- false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var string This parameter is used to record whether "I have updated to the latest origin-pull IP range" is confirmed before the current version takes effect. Valid values:
+<li>true: When the version takes effect, the confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: When the version takes effect, the confirmation of updating to the latest origin-pull IP is not completed, and the origin-pull IP range is forcibly updated to the latest version by the backend.</li>Note: When this parameter returns false, confirm in time whether your origin server firewall configuration has been updated to the latest origin-pull IP range to avoid origin-pull failure.
      */
     public $IsPlaned;
 
     /**
-     * @param Addresses $EntireAddresses IP range details.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param string $Version Version number.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param string $ActiveTime Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param string $IsPlaned This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
-- true: specifies that the version is effective and the update to the latest version is confirmed.
-- false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param Addresses $EntireAddresses Origin-pull IP range details.
+     * @param string $Version Version.
+     * @param string $ActiveTime Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
+     * @param string $IsPlaned This parameter is used to record whether "I have updated to the latest origin-pull IP range" is confirmed before the current version takes effect. Valid values:
+<li>true: When the version takes effect, the confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: When the version takes effect, the confirmation of updating to the latest origin-pull IP is not completed, and the origin-pull IP range is forcibly updated to the latest version by the backend.</li>Note: When this parameter returns false, confirm in time whether your origin server firewall configuration has been updated to the latest origin-pull IP range to avoid origin-pull failure.
      */
     function __construct()
     {

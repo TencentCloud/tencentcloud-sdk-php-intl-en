@@ -18,16 +18,16 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Specifies the weight policy configuration.
+ * Weight strategy configuration.
  *
  * @method string getFunctionId() Obtain Function ID.
  * @method void setFunctionId(string $FunctionId) Set Function ID.
- * @method integer getWeight() Obtain Specifies the selected weight. value ranges from 0 to 100. the sum of all weights needs to be 100.
-Specifies the calculation method for the select probability.
-weight/100. for example, setting two functions A and B, among them A has A weight of 30, then B must be 70, finally the probability of selecting A is 30%, and the probability of selecting B is 70%.
- * @method void setWeight(integer $Weight) Set Specifies the selected weight. value ranges from 0 to 100. the sum of all weights needs to be 100.
-Specifies the calculation method for the select probability.
-weight/100. for example, setting two functions A and B, among them A has A weight of 30, then B must be 70, finally the probability of selecting A is 30%, and the probability of selecting B is 70%.
+ * @method integer getWeight() Obtain Select a weight. Value range: 0-100. The sum of all weights must be 100.
+Probability calculation method when selected:
+weight/100. For example, if two functions A and B are set, and the weight of A is 30, then the weight of B must be 70. Finally, the probability of selecting A is 30%, and the probability of selecting B is 70%.
+ * @method void setWeight(integer $Weight) Set Select a weight. Value range: 0-100. The sum of all weights must be 100.
+Probability calculation method when selected:
+weight/100. For example, if two functions A and B are set, and the weight of A is 30, then the weight of B must be 70. Finally, the probability of selecting A is 30%, and the probability of selecting B is 70%.
  */
 class FunctionWeightedSelection extends AbstractModel
 {
@@ -37,17 +37,17 @@ class FunctionWeightedSelection extends AbstractModel
     public $FunctionId;
 
     /**
-     * @var integer Specifies the selected weight. value ranges from 0 to 100. the sum of all weights needs to be 100.
-Specifies the calculation method for the select probability.
-weight/100. for example, setting two functions A and B, among them A has A weight of 30, then B must be 70, finally the probability of selecting A is 30%, and the probability of selecting B is 70%.
+     * @var integer Select a weight. Value range: 0-100. The sum of all weights must be 100.
+Probability calculation method when selected:
+weight/100. For example, if two functions A and B are set, and the weight of A is 30, then the weight of B must be 70. Finally, the probability of selecting A is 30%, and the probability of selecting B is 70%.
      */
     public $Weight;
 
     /**
      * @param string $FunctionId Function ID.
-     * @param integer $Weight Specifies the selected weight. value ranges from 0 to 100. the sum of all weights needs to be 100.
-Specifies the calculation method for the select probability.
-weight/100. for example, setting two functions A and B, among them A has A weight of 30, then B must be 70, finally the probability of selecting A is 30%, and the probability of selecting B is 70%.
+     * @param integer $Weight Select a weight. Value range: 0-100. The sum of all weights must be 100.
+Probability calculation method when selected:
+weight/100. For example, if two functions A and B are set, and the weight of A is 30, then the weight of B must be 70. Finally, the probability of selecting A is 30%, and the probability of selecting B is 70%.
      */
     function __construct()
     {

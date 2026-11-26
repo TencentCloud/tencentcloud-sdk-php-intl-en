@@ -20,90 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateJustInTimeTranscodeTemplate request structure.
  *
- * @method string getZoneId() Obtain Specifies the site ID.
- * @method void setZoneId(string $ZoneId) Set Specifies the site ID.
- * @method string getTemplateName() Obtain Name of the just in time transcoding template, length limited to 64 characters.
- * @method void setTemplateName(string $TemplateName) Set Name of the just in time transcoding template, length limited to 64 characters.
- * @method string getComment() Obtain Template description, with a length limit of 256 characters. empty by default.
- * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters. empty by default.
- * @method string getVideoStreamSwitch() Obtain Enable video stream. valid values:.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method string getTemplateName() Obtain Just in time transcoding template name. Length limit: 64 characters.
+ * @method void setTemplateName(string $TemplateName) Set Just in time transcoding template name. Length limit: 64 characters.
+ * @method string getComment() Obtain Template description information. The length cannot exceed 256 characters. Empty by default.
+ * @method void setComment(string $Comment) Set Template description information. The length cannot exceed 256 characters. Empty by default.
+ * @method string getVideoStreamSwitch() Obtain Video stream switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
- * @method void setVideoStreamSwitch(string $VideoStreamSwitch) Set Enable video stream. valid values:.
+<li>off: Disable.</li>Default value: on.
+ * @method void setVideoStreamSwitch(string $VideoStreamSwitch) Set Video stream switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
- * @method string getAudioStreamSwitch() Obtain Enable audio stream switch. valid values:.
+<li>off: Disable.</li>Default value: on.
+ * @method string getAudioStreamSwitch() Obtain Enable audio stream switch. Value:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
- * @method void setAudioStreamSwitch(string $AudioStreamSwitch) Set Enable audio stream switch. valid values:.
+<li>off: Disable.</li>Default value: on.
+ * @method void setAudioStreamSwitch(string $AudioStreamSwitch) Set Enable audio stream switch. Value:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
- * @method VideoTemplateInfo getVideoTemplate() Obtain Video stream configuration parameters. this field is required when VideoStreamSwitch is on.
- * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) Set Video stream configuration parameters. this field is required when VideoStreamSwitch is on.
- * @method AudioTemplateInfo getAudioTemplate() Obtain Audio stream configuration parameters. this field is required when AudioStreamSwitch is on.
- * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) Set Audio stream configuration parameters. this field is required when AudioStreamSwitch is on.
+<li>off: Disable.</li>Default value: on.
+ * @method VideoTemplateInfo getVideoTemplate() Obtain Video stream configuration parameters. This field is required when VideoStreamSwitch is on.
+ * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) Set Video stream configuration parameters. This field is required when VideoStreamSwitch is on.
+ * @method AudioTemplateInfo getAudioTemplate() Obtain Audio stream configuration parameters. This field is required when AudioStreamSwitch is on.
+ * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) Set Audio stream configuration parameters. This field is required when AudioStreamSwitch is on.
  */
 class CreateJustInTimeTranscodeTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the site ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var string Name of the just in time transcoding template, length limited to 64 characters.
+     * @var string Just in time transcoding template name. Length limit: 64 characters.
      */
     public $TemplateName;
 
     /**
-     * @var string Template description, with a length limit of 256 characters. empty by default.
+     * @var string Template description information. The length cannot exceed 256 characters. Empty by default.
      */
     public $Comment;
 
     /**
-     * @var string Enable video stream. valid values:.
+     * @var string Video stream switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
+<li>off: Disable.</li>Default value: on.
      */
     public $VideoStreamSwitch;
 
     /**
-     * @var string Enable audio stream switch. valid values:.
+     * @var string Enable audio stream switch. Value:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
+<li>off: Disable.</li>Default value: on.
      */
     public $AudioStreamSwitch;
 
     /**
-     * @var VideoTemplateInfo Video stream configuration parameters. this field is required when VideoStreamSwitch is on.
+     * @var VideoTemplateInfo Video stream configuration parameters. This field is required when VideoStreamSwitch is on.
      */
     public $VideoTemplate;
 
     /**
-     * @var AudioTemplateInfo Audio stream configuration parameters. this field is required when AudioStreamSwitch is on.
+     * @var AudioTemplateInfo Audio stream configuration parameters. This field is required when AudioStreamSwitch is on.
      */
     public $AudioTemplate;
 
     /**
-     * @param string $ZoneId Specifies the site ID.
-     * @param string $TemplateName Name of the just in time transcoding template, length limited to 64 characters.
-     * @param string $Comment Template description, with a length limit of 256 characters. empty by default.
-     * @param string $VideoStreamSwitch Enable video stream. valid values:.
+     * @param string $ZoneId Site ID.
+     * @param string $TemplateName Just in time transcoding template name. Length limit: 64 characters.
+     * @param string $Comment Template description information. The length cannot exceed 256 characters. Empty by default.
+     * @param string $VideoStreamSwitch Video stream switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
-     * @param string $AudioStreamSwitch Enable audio stream switch. valid values:.
+<li>off: Disable.</li>Default value: on.
+     * @param string $AudioStreamSwitch Enable audio stream switch. Value:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
-     * @param VideoTemplateInfo $VideoTemplate Video stream configuration parameters. this field is required when VideoStreamSwitch is on.
-     * @param AudioTemplateInfo $AudioTemplate Audio stream configuration parameters. this field is required when AudioStreamSwitch is on.
+<li>off: Disable.</li>Default value: on.
+     * @param VideoTemplateInfo $VideoTemplate Video stream configuration parameters. This field is required when VideoStreamSwitch is on.
+     * @param AudioTemplateInfo $AudioTemplate Audio stream configuration parameters. This field is required when AudioStreamSwitch is on.
      */
     function __construct()
     {

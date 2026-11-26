@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSharedCNAME request structure.
  *
- * @method string getZoneId() Obtain ID of the site to which the shared CNAME belongs.	
- * @method void setZoneId(string $ZoneId) Set ID of the site to which the shared CNAME belongs.	
- * @method string getSharedCNAMEPrefix() Obtain Shared CNAME prefix. Enter a valid domain name prefix, such as "test-api" and "test-api.com". A maximum of 50 characters are allowed. 
+ * @method string getZoneId() Obtain ID of the site associated with the shared CNAME.	
+ * @method void setZoneId(string $ZoneId) Set ID of the site associated with the shared CNAME.	
+ * @method string getSharedCNAMEPrefix() Obtain Share the CNAME prefix. Enter a valid domain name prefix, for example, "test-api" or "test-api.com", limited to 50 characters.
 
-Complete format of the shared CNAME: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'. 
+The full format of a shared CNAME is: `<custom prefix>+<12-bit random string in zoneid>+share.dnse[0-5].com`.
 
-For example, if the prefix is example.com, EdgeOne will create the shared CNAME: example.com.sai2ig51kaa5.share.dnse2.com.
- * @method void setSharedCNAMEPrefix(string $SharedCNAMEPrefix) Set Shared CNAME prefix. Enter a valid domain name prefix, such as "test-api" and "test-api.com". A maximum of 50 characters are allowed. 
+For example, if the prefix input is example.com, EdgeOne will create a shared CNAME for you: example.com.sai2ig51kaa5.share.dnse2.com.
+ * @method void setSharedCNAMEPrefix(string $SharedCNAMEPrefix) Set Share the CNAME prefix. Enter a valid domain name prefix, for example, "test-api" or "test-api.com", limited to 50 characters.
 
-Complete format of the shared CNAME: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'. 
+The full format of a shared CNAME is: `<custom prefix>+<12-bit random string in zoneid>+share.dnse[0-5].com`.
 
-For example, if the prefix is example.com, EdgeOne will create the shared CNAME: example.com.sai2ig51kaa5.share.dnse2.com.
- * @method string getDescription() Obtain Description. It supports 1-50 characters.
- * @method void setDescription(string $Description) Set Description. It supports 1-50 characters.
+For example, if the prefix input is example.com, EdgeOne will create a shared CNAME for you: example.com.sai2ig51kaa5.share.dnse2.com.
+ * @method string getDescription() Obtain Description. Enter 1-50 characters.
+ * @method void setDescription(string $Description) Set Description. Enter 1-50 characters.
  */
 class CreateSharedCNAMERequest extends AbstractModel
 {
     /**
-     * @var string ID of the site to which the shared CNAME belongs.	
+     * @var string ID of the site associated with the shared CNAME.	
      */
     public $ZoneId;
 
     /**
-     * @var string Shared CNAME prefix. Enter a valid domain name prefix, such as "test-api" and "test-api.com". A maximum of 50 characters are allowed. 
+     * @var string Share the CNAME prefix. Enter a valid domain name prefix, for example, "test-api" or "test-api.com", limited to 50 characters.
 
-Complete format of the shared CNAME: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'. 
+The full format of a shared CNAME is: `<custom prefix>+<12-bit random string in zoneid>+share.dnse[0-5].com`.
 
-For example, if the prefix is example.com, EdgeOne will create the shared CNAME: example.com.sai2ig51kaa5.share.dnse2.com.
+For example, if the prefix input is example.com, EdgeOne will create a shared CNAME for you: example.com.sai2ig51kaa5.share.dnse2.com.
      */
     public $SharedCNAMEPrefix;
 
     /**
-     * @var string Description. It supports 1-50 characters.
+     * @var string Description. Enter 1-50 characters.
      */
     public $Description;
 
     /**
-     * @param string $ZoneId ID of the site to which the shared CNAME belongs.	
-     * @param string $SharedCNAMEPrefix Shared CNAME prefix. Enter a valid domain name prefix, such as "test-api" and "test-api.com". A maximum of 50 characters are allowed. 
+     * @param string $ZoneId ID of the site associated with the shared CNAME.	
+     * @param string $SharedCNAMEPrefix Share the CNAME prefix. Enter a valid domain name prefix, for example, "test-api" or "test-api.com", limited to 50 characters.
 
-Complete format of the shared CNAME: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'. 
+The full format of a shared CNAME is: `<custom prefix>+<12-bit random string in zoneid>+share.dnse[0-5].com`.
 
-For example, if the prefix is example.com, EdgeOne will create the shared CNAME: example.com.sai2ig51kaa5.share.dnse2.com.
-     * @param string $Description Description. It supports 1-50 characters.
+For example, if the prefix input is example.com, EdgeOne will create a shared CNAME for you: example.com.sai2ig51kaa5.share.dnse2.com.
+     * @param string $Description Description. Enter 1-50 characters.
      */
     function __construct()
     {

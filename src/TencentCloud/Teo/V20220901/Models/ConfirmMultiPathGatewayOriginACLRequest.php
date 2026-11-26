@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set Zone ID.
  * @method string getGatewayId() Obtain Gateway ID.
  * @method void setGatewayId(string $GatewayId) Set Gateway ID.
- * @method integer getOriginACLVersion() Obtain Describes the version number of the origin server IP.
- * @method void setOriginACLVersion(integer $OriginACLVersion) Set Describes the version number of the origin server IP.
+ * @method integer getOriginACLVersion() Obtain Origin-pull IP version number.
+ * @method void setOriginACLVersion(integer $OriginACLVersion) Set Origin-pull IP version number.
  */
 class ConfirmMultiPathGatewayOriginACLRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ConfirmMultiPathGatewayOriginACLRequest extends AbstractModel
     public $GatewayId;
 
     /**
-     * @var integer Describes the version number of the origin server IP.
+     * @var integer Origin-pull IP version number.
      */
     public $OriginACLVersion;
 
     /**
      * @param string $ZoneId Zone ID.
      * @param string $GatewayId Gateway ID.
-     * @param integer $OriginACLVersion Describes the version number of the origin server IP.
+     * @param integer $OriginACLVersion Origin-pull IP version number.
      */
     function __construct()
     {

@@ -18,48 +18,48 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameter of the action for the HTTP request/response header of a rule engine condition.
+ * Action parameter for HTTP request/response header operations in rule engine conditions.
  *
- * @method string getAction() Obtain Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-<li>`add`: Add the HTTP header.</li>
-<li>`set`: Rewrite the HTTP header.</li>
-<li>`del`: Delete the HTTP header.</li>
- * @method void setAction(string $Action) Set Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-<li>`add`: Add the HTTP header.</li>
-<li>`set`: Rewrite the HTTP header.</li>
-<li>`del`: Delete the HTTP header.</li>
- * @method string getName() Obtain Parameter name
- * @method void setName(string $Name) Set Parameter name
- * @method array getValues() Obtain Parameter value
- * @method void setValues(array $Values) Set Parameter value
+ * @method string getAction() Obtain For feature parameter names and completion specifications, call the API to query the rule engine's parameter settings (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1). Currently, only three values are supported:
+<li> add: Add an HTTP header;</li>
+<li> set: rewrite HTTP header;</li>
+<li> del: delete an HTTP header.</li>
+ * @method void setAction(string $Action) Set For feature parameter names and completion specifications, call the API to query the rule engine's parameter settings (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1). Currently, only three values are supported:
+<li> add: Add an HTTP header;</li>
+<li> set: rewrite HTTP header;</li>
+<li> del: delete an HTTP header.</li>
+ * @method string getName() Obtain Parameter name.
+ * @method void setName(string $Name) Set Parameter name.
+ * @method array getValues() Obtain Parameter value.
+ * @method void setValues(array $Values) Set Parameter value.
  */
 class RuleRewriteActionParams extends AbstractModel
 {
     /**
-     * @var string Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-<li>`add`: Add the HTTP header.</li>
-<li>`set`: Rewrite the HTTP header.</li>
-<li>`del`: Delete the HTTP header.</li>
+     * @var string For feature parameter names and completion specifications, call the API to query the rule engine's parameter settings (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1). Currently, only three values are supported:
+<li> add: Add an HTTP header;</li>
+<li> set: rewrite HTTP header;</li>
+<li> del: delete an HTTP header.</li>
      */
     public $Action;
 
     /**
-     * @var string Parameter name
+     * @var string Parameter name.
      */
     public $Name;
 
     /**
-     * @var array Parameter value
+     * @var array Parameter value.
      */
     public $Values;
 
     /**
-     * @param string $Action Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-<li>`add`: Add the HTTP header.</li>
-<li>`set`: Rewrite the HTTP header.</li>
-<li>`del`: Delete the HTTP header.</li>
-     * @param string $Name Parameter name
-     * @param array $Values Parameter value
+     * @param string $Action For feature parameter names and completion specifications, call the API to query the rule engine's parameter settings (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1). Currently, only three values are supported:
+<li> add: Add an HTTP header;</li>
+<li> set: rewrite HTTP header;</li>
+<li> del: delete an HTTP header.</li>
+     * @param string $Name Parameter name.
+     * @param array $Values Parameter value.
      */
     function __construct()
     {

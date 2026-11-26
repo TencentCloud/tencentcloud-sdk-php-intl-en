@@ -18,20 +18,20 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Describes the domain names bound to the policy template.
+ * Domain name info bound to the policy template
  *
  * @method string getDomain() Obtain Domain name.
  * @method void setDomain(string $Domain) Set Domain name.
- * @method string getZoneId() Obtain Zone ID to which the domain belongs.
- * @method void setZoneId(string $ZoneId) Set Zone ID to which the domain belongs.
- * @method string getStatus() Obtain Binding status. valid values:. 
-<li>`process`: binding in progress</li>
-<li>`online`: binding succeeded.</li>
-<Li>`fail`: binding failed.</li>
- * @method void setStatus(string $Status) Set Binding status. valid values:. 
-<li>`process`: binding in progress</li>
-<li>`online`: binding succeeded.</li>
-<Li>`fail`: binding failed.</li>
+ * @method string getZoneId() Obtain Site ID of the domain name.
+ * @method void setZoneId(string $ZoneId) Set Site ID of the domain name.
+ * @method string getStatus() Obtain Binding status. Valid values: 
+<li>process: binding;</li>
+<li>online: binding succeeded;</li>
+<li>fail: Binding failed.</li>
+ * @method void setStatus(string $Status) Set Binding status. Valid values: 
+<li>process: binding;</li>
+<li>online: binding succeeded;</li>
+<li>fail: Binding failed.</li>
  */
 class BindDomainInfo extends AbstractModel
 {
@@ -41,25 +41,25 @@ class BindDomainInfo extends AbstractModel
     public $Domain;
 
     /**
-     * @var string Zone ID to which the domain belongs.
+     * @var string Site ID of the domain name.
      */
     public $ZoneId;
 
     /**
-     * @var string Binding status. valid values:. 
-<li>`process`: binding in progress</li>
-<li>`online`: binding succeeded.</li>
-<Li>`fail`: binding failed.</li>
+     * @var string Binding status. Valid values: 
+<li>process: binding;</li>
+<li>online: binding succeeded;</li>
+<li>fail: Binding failed.</li>
      */
     public $Status;
 
     /**
      * @param string $Domain Domain name.
-     * @param string $ZoneId Zone ID to which the domain belongs.
-     * @param string $Status Binding status. valid values:. 
-<li>`process`: binding in progress</li>
-<li>`online`: binding succeeded.</li>
-<Li>`fail`: binding failed.</li>
+     * @param string $ZoneId Site ID of the domain name.
+     * @param string $Status Binding status. Valid values: 
+<li>process: binding;</li>
+<li>online: binding succeeded;</li>
+<li>fail: Binding failed.</li>
      */
     function __construct()
     {

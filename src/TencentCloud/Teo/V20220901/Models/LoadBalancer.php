@@ -20,130 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * LoadBalancer information.
  *
- * @method string getInstanceId() Obtain LoadBalancer ID.
- * @method void setInstanceId(string $InstanceId) Set LoadBalancer ID.
- * @method string getName() Obtain LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).	
- * @method void setName(string $Name) Set LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).	
- * @method string getType() Obtain LoadBalancer type. Valid values:
-<li>HTTP: HTTP-specific LoadBalancer. It supports adding HTTP-specific and general origin server groups. It can only be referenced by site acceleration services (such as domain name service and rule engine).</li>
-<li>GENERAL: general LoadBalancer. It only supports adding general origin server groups. It can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxy.</li>
- * @method void setType(string $Type) Set LoadBalancer type. Valid values:
-<li>HTTP: HTTP-specific LoadBalancer. It supports adding HTTP-specific and general origin server groups. It can only be referenced by site acceleration services (such as domain name service and rule engine).</li>
-<li>GENERAL: general LoadBalancer. It only supports adding general origin server groups. It can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxy.</li>
- * @method HealthChecker getHealthChecker() Obtain Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1).
- * @method void setHealthChecker(HealthChecker $HealthChecker) Set Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1).
- * @method string getSteeringPolicy() Obtain Traffic scheduling policy among origin server groups. Valid values:
-<li>Priority: Perform failover according to priority.</li>
- * @method void setSteeringPolicy(string $SteeringPolicy) Set Traffic scheduling policy among origin server groups. Valid values:
-<li>Priority: Perform failover according to priority.</li>
- * @method string getFailoverPolicy() Obtain Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
-<li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
-<li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
- * @method void setFailoverPolicy(string $FailoverPolicy) Set Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
-<li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
-<li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
- * @method array getOriginGroupHealthStatus() Obtain Origin server group health status.
- * @method void setOriginGroupHealthStatus(array $OriginGroupHealthStatus) Set Origin server group health status.
- * @method string getStatus() Obtain LoadBalancer status. Valid values:
-<li>Pending: deploying.</li>
-<li>Deleting: deleting.</li>
-<li>Running: effective.</li>
- * @method void setStatus(string $Status) Set LoadBalancer status. Valid values:
-<li>Pending: deploying.</li>
-<li>Deleting: deleting.</li>
-<li>Running: effective.</li>
- * @method array getL4UsedList() Obtain Specifies the list of l4 proxy instances bound to the load balancing instance.
- * @method void setL4UsedList(array $L4UsedList) Set Specifies the list of l4 proxy instances bound to the load balancing instance.
- * @method array getL7UsedList() Obtain List of Layer-7 domain names bound to a LoadBalancer.
- * @method void setL7UsedList(array $L7UsedList) Set List of Layer-7 domain names bound to a LoadBalancer.
- * @method array getReferences() Obtain Specifies the list of instances referenced by cloud load balancer.
- * @method void setReferences(array $References) Set Specifies the list of instances referenced by cloud load balancer.
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method string getName() Obtain <p>Instance name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).</p>
+ * @method void setName(string $Name) Set <p>Instance name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).</p>
+ * @method string getType() Obtain <p>Instance type. Valid values:</p><li>HTTP_V2: HTTP dedicated (V2). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type supports selecting the region to trigger probes, which can significantly reduce probe request volume but has lower sensitivity to origin health awareness.</li><li>HTTP: HTTP dedicated (V1). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li><li>GENERAL: General type. Supports adding general origin groups only. It can be referenced by site acceleration services (for example, domain name service and rule engine) and Layer-4 proxies. This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li>
+ * @method void setType(string $Type) Set <p>Instance type. Valid values:</p><li>HTTP_V2: HTTP dedicated (V2). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type supports selecting the region to trigger probes, which can significantly reduce probe request volume but has lower sensitivity to origin health awareness.</li><li>HTTP: HTTP dedicated (V1). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li><li>GENERAL: General type. Supports adding general origin groups only. It can be referenced by site acceleration services (for example, domain name service and rule engine) and Layer-4 proxies. This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li>
+ * @method HealthChecker getHealthChecker() Obtain <p>Health check policy. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1">Health Check Policies</a>.</p>
+ * @method void setHealthChecker(HealthChecker $HealthChecker) Set <p>Health check policy. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1">Health Check Policies</a>.</p>
+ * @method string getSteeringPolicy() Obtain <p>Traffic scheduling policy among origin server groups. Valid values:</p><li>Pritory: Perform failover according to priority.</li>
+ * @method void setSteeringPolicy(string $SteeringPolicy) Set <p>Traffic scheduling policy among origin server groups. Valid values:</p><li>Pritory: Perform failover according to priority.</li>
+ * @method string getFailoverPolicy() Obtain <p>Request retry policy when access to an origin server fails. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1">Introduction to Request Retry Strategy</a>. Valid values:</p><li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group;</li><li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
+ * @method void setFailoverPolicy(string $FailoverPolicy) Set <p>Request retry policy when access to an origin server fails. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1">Introduction to Request Retry Strategy</a>. Valid values:</p><li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group;</li><li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
+ * @method array getOriginGroupHealthStatus() Obtain <p>Origin server group health status.</p>
+ * @method void setOriginGroupHealthStatus(array $OriginGroupHealthStatus) Set <p>Origin server group health status.</p>
+ * @method string getStatus() Obtain <p>Load balancing status. Valid values:</p><li>Pending: deploying;</li><li>Deleting: deleting;</li><li>Running: effective.</li>
+ * @method void setStatus(string $Status) Set <p>Load balancing status. Valid values:</p><li>Pending: deploying;</li><li>Deleting: deleting;</li><li>Running: effective.</li>
+ * @method array getL4UsedList() Obtain <p>List of L4 proxy instances bound to the load balancing instance.</p>
+ * @method void setL4UsedList(array $L4UsedList) Set <p>List of L4 proxy instances bound to the load balancing instance.</p>
+ * @method array getL7UsedList() Obtain <p>List of Layer-7 domain names bound to the load balancing instance.</p>
+ * @method void setL7UsedList(array $L7UsedList) Set <p>List of Layer-7 domain names bound to the load balancing instance.</p>
+ * @method array getReferences() Obtain <p>List of referenced instances of the load balancer.</p>
+ * @method void setReferences(array $References) Set <p>List of referenced instances of the load balancer.</p>
  */
 class LoadBalancer extends AbstractModel
 {
     /**
-     * @var string LoadBalancer ID.
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).	
+     * @var string <p>Instance name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).</p>
      */
     public $Name;
 
     /**
-     * @var string LoadBalancer type. Valid values:
-<li>HTTP: HTTP-specific LoadBalancer. It supports adding HTTP-specific and general origin server groups. It can only be referenced by site acceleration services (such as domain name service and rule engine).</li>
-<li>GENERAL: general LoadBalancer. It only supports adding general origin server groups. It can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxy.</li>
+     * @var string <p>Instance type. Valid values:</p><li>HTTP_V2: HTTP dedicated (V2). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type supports selecting the region to trigger probes, which can significantly reduce probe request volume but has lower sensitivity to origin health awareness.</li><li>HTTP: HTTP dedicated (V1). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li><li>GENERAL: General type. Supports adding general origin groups only. It can be referenced by site acceleration services (for example, domain name service and rule engine) and Layer-4 proxies. This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li>
      */
     public $Type;
 
     /**
-     * @var HealthChecker Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1).
+     * @var HealthChecker <p>Health check policy. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1">Health Check Policies</a>.</p>
      */
     public $HealthChecker;
 
     /**
-     * @var string Traffic scheduling policy among origin server groups. Valid values:
-<li>Priority: Perform failover according to priority.</li>
+     * @var string <p>Traffic scheduling policy among origin server groups. Valid values:</p><li>Pritory: Perform failover according to priority.</li>
      */
     public $SteeringPolicy;
 
     /**
-     * @var string Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
-<li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
-<li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
+     * @var string <p>Request retry policy when access to an origin server fails. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1">Introduction to Request Retry Strategy</a>. Valid values:</p><li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group;</li><li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
      */
     public $FailoverPolicy;
 
     /**
-     * @var array Origin server group health status.
+     * @var array <p>Origin server group health status.</p>
      */
     public $OriginGroupHealthStatus;
 
     /**
-     * @var string LoadBalancer status. Valid values:
-<li>Pending: deploying.</li>
-<li>Deleting: deleting.</li>
-<li>Running: effective.</li>
+     * @var string <p>Load balancing status. Valid values:</p><li>Pending: deploying;</li><li>Deleting: deleting;</li><li>Running: effective.</li>
      */
     public $Status;
 
     /**
-     * @var array Specifies the list of l4 proxy instances bound to the load balancing instance.
+     * @var array <p>List of L4 proxy instances bound to the load balancing instance.</p>
      */
     public $L4UsedList;
 
     /**
-     * @var array List of Layer-7 domain names bound to a LoadBalancer.
+     * @var array <p>List of Layer-7 domain names bound to the load balancing instance.</p>
      */
     public $L7UsedList;
 
     /**
-     * @var array Specifies the list of instances referenced by cloud load balancer.
+     * @var array <p>List of referenced instances of the load balancer.</p>
      */
     public $References;
 
     /**
-     * @param string $InstanceId LoadBalancer ID.
-     * @param string $Name LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).	
-     * @param string $Type LoadBalancer type. Valid values:
-<li>HTTP: HTTP-specific LoadBalancer. It supports adding HTTP-specific and general origin server groups. It can only be referenced by site acceleration services (such as domain name service and rule engine).</li>
-<li>GENERAL: general LoadBalancer. It only supports adding general origin server groups. It can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxy.</li>
-     * @param HealthChecker $HealthChecker Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1).
-     * @param string $SteeringPolicy Traffic scheduling policy among origin server groups. Valid values:
-<li>Priority: Perform failover according to priority.</li>
-     * @param string $FailoverPolicy Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
-<li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
-<li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
-     * @param array $OriginGroupHealthStatus Origin server group health status.
-     * @param string $Status LoadBalancer status. Valid values:
-<li>Pending: deploying.</li>
-<li>Deleting: deleting.</li>
-<li>Running: effective.</li>
-     * @param array $L4UsedList Specifies the list of l4 proxy instances bound to the load balancing instance.
-     * @param array $L7UsedList List of Layer-7 domain names bound to a LoadBalancer.
-     * @param array $References Specifies the list of instances referenced by cloud load balancer.
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param string $Name <p>Instance name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).</p>
+     * @param string $Type <p>Instance type. Valid values:</p><li>HTTP_V2: HTTP dedicated (V2). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type supports selecting the region to trigger probes, which can significantly reduce probe request volume but has lower sensitivity to origin health awareness.</li><li>HTTP: HTTP dedicated (V1). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li><li>GENERAL: General type. Supports adding general origin groups only. It can be referenced by site acceleration services (for example, domain name service and rule engine) and Layer-4 proxies. This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li>
+     * @param HealthChecker $HealthChecker <p>Health check policy. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1">Health Check Policies</a>.</p>
+     * @param string $SteeringPolicy <p>Traffic scheduling policy among origin server groups. Valid values:</p><li>Pritory: Perform failover according to priority.</li>
+     * @param string $FailoverPolicy <p>Request retry policy when access to an origin server fails. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1">Introduction to Request Retry Strategy</a>. Valid values:</p><li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group;</li><li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
+     * @param array $OriginGroupHealthStatus <p>Origin server group health status.</p>
+     * @param string $Status <p>Load balancing status. Valid values:</p><li>Pending: deploying;</li><li>Deleting: deleting;</li><li>Running: effective.</li>
+     * @param array $L4UsedList <p>List of L4 proxy instances bound to the load balancing instance.</p>
+     * @param array $L7UsedList <p>List of Layer-7 domain names bound to the load balancing instance.</p>
+     * @param array $References <p>List of referenced instances of the load balancer.</p>
      */
     function __construct()
     {

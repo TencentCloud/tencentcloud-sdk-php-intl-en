@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Custom configuration operation parameter.
  *
- * @method array getCustomActions() Obtain <p>Custom configuration list that needs to be configured.</p>
- * @method void setCustomActions(array $CustomActions) Set <p>Custom configuration list that needs to be configured.</p>
+ * @method array getCustomActions() Obtain <p>List of custom configurations that need to be configured.</p>
+ * @method void setCustomActions(array $CustomActions) Set <p>List of custom configurations that need to be configured.</p>
  */
 class CustomActionParameters extends AbstractModel
 {
     /**
-     * @var array <p>Custom configuration list that needs to be configured.</p>
+     * @var array <p>List of custom configurations that need to be configured.</p>
      */
     public $CustomActions;
 
     /**
-     * @param array $CustomActions <p>Custom configuration list that needs to be configured.</p>
+     * @param array $CustomActions <p>List of custom configurations that need to be configured.</p>
      */
     function __construct()
     {

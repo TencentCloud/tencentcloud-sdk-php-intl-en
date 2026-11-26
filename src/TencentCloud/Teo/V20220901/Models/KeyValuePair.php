@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * KV key-value pair data, including key name, key-value, and expiration time information.
+ * KV key-value pair data, including key name, key value, and expiration time info.
  *
- * @method string getKey() Obtain Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
- * @method void setKey(string $Key) Set Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
- * @method string getValue() Obtain Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters.
- * @method void setValue(string $Value) Set Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters.
- * @method string getExpiration() Obtain Expiration time, following ISO 8601 standard, format YYYY-MM-DDThh:mm:ssZ (UTC time). If it is an empty string in the output, it means the key-value pair will never expire.
- * @method void setExpiration(string $Expiration) Set Expiration time, following ISO 8601 standard, format YYYY-MM-DDThh:mm:ssZ (UTC time). If it is an empty string in the output, it means the key-value pair will never expire.
+ * @method string getKey() Obtain Key name. Each key name cannot be empty, with a length of 1-512 characters. Valid UTF-8 characters are supported.
+ * @method void setKey(string $Key) Set Key name. Each key name cannot be empty, with a length of 1-512 characters. Valid UTF-8 characters are supported.
+ * @method string getValue() Obtain Key-value. It cannot be empty as an input parameter and supports up to 1 MB. As an output parameter, if the key does not exist, an empty string is returned.
+ * @method void setValue(string $Value) Set Key-value. It cannot be empty as an input parameter and supports up to 1 MB. As an output parameter, if the key does not exist, an empty string is returned.
+ * @method string getExpiration() Obtain Expiration time, following the ISO 8601 standard, formatted as YYYY-MM-DDThh:mm:ssZ (UTC time). In output, an empty string means the key-value pair never expires.
+ * @method void setExpiration(string $Expiration) Set Expiration time, following the ISO 8601 standard, formatted as YYYY-MM-DDThh:mm:ssZ (UTC time). In output, an empty string means the key-value pair never expires.
  */
 class KeyValuePair extends AbstractModel
 {
     /**
-     * @var string Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
+     * @var string Key name. Each key name cannot be empty, with a length of 1-512 characters. Valid UTF-8 characters are supported.
      */
     public $Key;
 
     /**
-     * @var string Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters.
+     * @var string Key-value. It cannot be empty as an input parameter and supports up to 1 MB. As an output parameter, if the key does not exist, an empty string is returned.
      */
     public $Value;
 
     /**
-     * @var string Expiration time, following ISO 8601 standard, format YYYY-MM-DDThh:mm:ssZ (UTC time). If it is an empty string in the output, it means the key-value pair will never expire.
+     * @var string Expiration time, following the ISO 8601 standard, formatted as YYYY-MM-DDThh:mm:ssZ (UTC time). In output, an empty string means the key-value pair never expires.
      */
     public $Expiration;
 
     /**
-     * @param string $Key Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
-     * @param string $Value Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters.
-     * @param string $Expiration Expiration time, following ISO 8601 standard, format YYYY-MM-DDThh:mm:ssZ (UTC time). If it is an empty string in the output, it means the key-value pair will never expire.
+     * @param string $Key Key name. Each key name cannot be empty, with a length of 1-512 characters. Valid UTF-8 characters are supported.
+     * @param string $Value Key-value. It cannot be empty as an input parameter and supports up to 1 MB. As an output parameter, if the key does not exist, an empty string is returned.
+     * @param string $Expiration Expiration time, following the ISO 8601 standard, formatted as YYYY-MM-DDThh:mm:ssZ (UTC time). In output, an empty string means the key-value pair never expires.
      */
     function __construct()
     {

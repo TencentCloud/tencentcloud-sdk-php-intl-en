@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteZone request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
  */
 class DeleteZoneRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @param string $ZoneId The site ID.
+     * @param string $ZoneId Zone ID.
      */
     function __construct()
     {

@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IP range group
  *
- * @method integer getGroupId() Obtain <p>IP group Id. Enter 0 when created.</p>
- * @method void setGroupId(integer $GroupId) Set <p>IP group Id. Enter 0 when created.</p>
+ * @method integer getGroupId() Obtain <p>IP group Id. Enter 0 upon creation.</p>
+ * @method void setGroupId(integer $GroupId) Set <p>IP group Id. Enter 0 upon creation.</p>
  * @method string getName() Obtain <p>IP group name.</p>
  * @method void setName(string $Name) Set <p>IP group name.</p>
- * @method array getContent() Obtain <p>IP group content supports only IP and IP range.</p>
- * @method void setContent(array $Content) Set <p>IP group content supports only IP and IP range.</p>
- * @method integer getIPTotalCount() Obtain <p>Number of IPs or IP ranges that are effective in the IP group. Valid as an output parameter. Not required as an input parameter.</p>
- * @method void setIPTotalCount(integer $IPTotalCount) Set <p>Number of IPs or IP ranges that are effective in the IP group. Valid as an output parameter. Not required as an input parameter.</p>
- * @method array getIPExpireInfo() Obtain <p>Scheduled expiration information for IP.<br>As an input parameter, it is used to specify a scheduled expiration time for a given IP address or IP range.<br>As an output parameter, it contains the following two categories of information:</p><li>Current scheduled expiration information that has not expired: expiration configuration not triggered.</li><li>Scheduled expiration information that has expired within a week: expiration configuration that has been triggered.</li>
- * @method void setIPExpireInfo(array $IPExpireInfo) Set <p>Scheduled expiration information for IP.<br>As an input parameter, it is used to specify a scheduled expiration time for a given IP address or IP range.<br>As an output parameter, it contains the following two categories of information:</p><li>Current scheduled expiration information that has not expired: expiration configuration not triggered.</li><li>Scheduled expiration information that has expired within a week: expiration configuration that has been triggered.</li>
- * @method integer getRefCount() Obtain <p>The number of IP groups referenced.</p>
- * @method void setRefCount(integer $RefCount) Set <p>The number of IP groups referenced.</p>
+ * @method array getContent() Obtain <p>IP group content. Only IP and IP range are supported.</p>
+ * @method void setContent(array $Content) Set <p>IP group content. Only IP and IP range are supported.</p>
+ * @method integer getIPTotalCount() Obtain <p>Number of IPs or IP ranges currently effective in the IP group. Valid as an output parameter. As an input parameter, no need to specify this field.</p>
+ * @method void setIPTotalCount(integer $IPTotalCount) Set <p>Number of IPs or IP ranges currently effective in the IP group. Valid as an output parameter. As an input parameter, no need to specify this field.</p>
+ * @method array getIPExpireInfo() Obtain <p>IP scheduled expiration info.<br>As an input parameter, it is used to specify a scheduled expiration time for an IP address or IP range.<br>As an output parameter, it includes the following two categories of info:</p><li>Current scheduled expiration info that has not expired: expiration configuration that has not been triggered.</li><li>Scheduled expiration info that has expired within a week: expiration configuration that has been triggered.</li>
+ * @method void setIPExpireInfo(array $IPExpireInfo) Set <p>IP scheduled expiration info.<br>As an input parameter, it is used to specify a scheduled expiration time for an IP address or IP range.<br>As an output parameter, it includes the following two categories of info:</p><li>Current scheduled expiration info that has not expired: expiration configuration that has not been triggered.</li><li>Scheduled expiration info that has expired within a week: expiration configuration that has been triggered.</li>
+ * @method integer getRefCount() Obtain <p>The number of times the IP group is referenced.</p>
+ * @method void setRefCount(integer $RefCount) Set <p>The number of times the IP group is referenced.</p>
  */
 class IPGroup extends AbstractModel
 {
     /**
-     * @var integer <p>IP group Id. Enter 0 when created.</p>
+     * @var integer <p>IP group Id. Enter 0 upon creation.</p>
      */
     public $GroupId;
 
@@ -46,32 +46,32 @@ class IPGroup extends AbstractModel
     public $Name;
 
     /**
-     * @var array <p>IP group content supports only IP and IP range.</p>
+     * @var array <p>IP group content. Only IP and IP range are supported.</p>
      */
     public $Content;
 
     /**
-     * @var integer <p>Number of IPs or IP ranges that are effective in the IP group. Valid as an output parameter. Not required as an input parameter.</p>
+     * @var integer <p>Number of IPs or IP ranges currently effective in the IP group. Valid as an output parameter. As an input parameter, no need to specify this field.</p>
      */
     public $IPTotalCount;
 
     /**
-     * @var array <p>Scheduled expiration information for IP.<br>As an input parameter, it is used to specify a scheduled expiration time for a given IP address or IP range.<br>As an output parameter, it contains the following two categories of information:</p><li>Current scheduled expiration information that has not expired: expiration configuration not triggered.</li><li>Scheduled expiration information that has expired within a week: expiration configuration that has been triggered.</li>
+     * @var array <p>IP scheduled expiration info.<br>As an input parameter, it is used to specify a scheduled expiration time for an IP address or IP range.<br>As an output parameter, it includes the following two categories of info:</p><li>Current scheduled expiration info that has not expired: expiration configuration that has not been triggered.</li><li>Scheduled expiration info that has expired within a week: expiration configuration that has been triggered.</li>
      */
     public $IPExpireInfo;
 
     /**
-     * @var integer <p>The number of IP groups referenced.</p>
+     * @var integer <p>The number of times the IP group is referenced.</p>
      */
     public $RefCount;
 
     /**
-     * @param integer $GroupId <p>IP group Id. Enter 0 when created.</p>
+     * @param integer $GroupId <p>IP group Id. Enter 0 upon creation.</p>
      * @param string $Name <p>IP group name.</p>
-     * @param array $Content <p>IP group content supports only IP and IP range.</p>
-     * @param integer $IPTotalCount <p>Number of IPs or IP ranges that are effective in the IP group. Valid as an output parameter. Not required as an input parameter.</p>
-     * @param array $IPExpireInfo <p>Scheduled expiration information for IP.<br>As an input parameter, it is used to specify a scheduled expiration time for a given IP address or IP range.<br>As an output parameter, it contains the following two categories of information:</p><li>Current scheduled expiration information that has not expired: expiration configuration not triggered.</li><li>Scheduled expiration information that has expired within a week: expiration configuration that has been triggered.</li>
-     * @param integer $RefCount <p>The number of IP groups referenced.</p>
+     * @param array $Content <p>IP group content. Only IP and IP range are supported.</p>
+     * @param integer $IPTotalCount <p>Number of IPs or IP ranges currently effective in the IP group. Valid as an output parameter. As an input parameter, no need to specify this field.</p>
+     * @param array $IPExpireInfo <p>IP scheduled expiration info.<br>As an input parameter, it is used to specify a scheduled expiration time for an IP address or IP range.<br>As an output parameter, it includes the following two categories of info:</p><li>Current scheduled expiration info that has not expired: expiration configuration that has not been triggered.</li><li>Scheduled expiration info that has expired within a week: expiration configuration that has been triggered.</li>
+     * @param integer $RefCount <p>The number of times the IP group is referenced.</p>
      */
     function __construct()
     {

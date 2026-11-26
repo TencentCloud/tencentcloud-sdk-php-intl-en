@@ -18,40 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Bot intelligence rules
+ * Intelligent analysis rule
  *
- * @method string getSwitch() Obtain Switch. valid values:.
+ * @method string getSwitch() Obtain Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
- * @method void setSwitch(string $Switch) Set Switch. valid values:.
+ * @method void setSwitch(string $Switch) Set Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
- * @method array getIntelligenceRuleItems() Obtain Specifies the rule detail.
- * @method void setIntelligenceRuleItems(array $IntelligenceRuleItems) Set Specifies the rule detail.
+ * @method array getIntelligenceRuleItems() Obtain Rule details.
+ * @method void setIntelligenceRuleItems(array $IntelligenceRuleItems) Set Rule details.
  */
 class IntelligenceRule extends AbstractModel
 {
     /**
-     * @var string Switch. valid values:.
+     * @var string Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var array Specifies the rule detail.
+     * @var array Rule details.
      */
     public $IntelligenceRuleItems;
 
     /**
-     * @param string $Switch Switch. valid values:.
+     * @param string $Switch Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-     * @param array $IntelligenceRuleItems Specifies the rule detail.
+     * @param array $IntelligenceRuleItems Rule details.
      */
     function __construct()
     {

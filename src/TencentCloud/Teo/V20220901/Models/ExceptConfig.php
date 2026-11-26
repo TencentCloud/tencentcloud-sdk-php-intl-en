@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Exception rules, which are used to bypass specific rules
+ * Exception rule for configuring rules that need to skip specific scenarios
  *
- * @method string getSwitch() Obtain Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method array getExceptUserRules() Obtain The settings of the exception rule. if it is null, the settings that were last configured will be used.
- * @method void setExceptUserRules(array $ExceptUserRules) Set The settings of the exception rule. if it is null, the settings that were last configured will be used.
+ * @method string getSwitch() Obtain Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method array getExceptUserRules() Obtain Exception rule details. If null, use the last set configuration by default.
+ * @method void setExceptUserRules(array $ExceptUserRules) Set Exception rule details. If null, use the last set configuration by default.
  */
 class ExceptConfig extends AbstractModel
 {
     /**
-     * @var string Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var array The settings of the exception rule. if it is null, the settings that were last configured will be used.
+     * @var array Exception rule details. If null, use the last set configuration by default.
      */
     public $ExceptUserRules;
 
     /**
-     * @param string $Switch Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param array $ExceptUserRules The settings of the exception rule. if it is null, the settings that were last configured will be used.
+     * @param string $Switch Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param array $ExceptUserRules Exception rule details. If null, use the last set configuration by default.
      */
     function __construct()
     {

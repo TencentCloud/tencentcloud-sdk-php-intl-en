@@ -18,76 +18,76 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Multi-Channel security gateway line information.
+ * Line information of the multi-channel security gateway
  *
- * @method string getLineId() Obtain line ID. where line-0 and line-1 are system-reserved IDs. valid values:
-<Li>line-0: direct connection line. Adding, editing, and deletion are not supported.</li>
-<Li>line-1: EdgeOne layer-4 proxy line. Supports modifying instances and rules, but deletion is not supported.</li>
-<li>line-2 and above: EdgeOne layer-4 proxy lines or custom lines, supports modifying, deleting instances and rules.</li>
- * @method void setLineId(string $LineId) Set line ID. where line-0 and line-1 are system-reserved IDs. valid values:
-<Li>line-0: direct connection line. Adding, editing, and deletion are not supported.</li>
-<Li>line-1: EdgeOne layer-4 proxy line. Supports modifying instances and rules, but deletion is not supported.</li>
-<li>line-2 and above: EdgeOne layer-4 proxy lines or custom lines, supports modifying, deleting instances and rules.</li>
- * @method string getLineType() Obtain Line type. valid values:
-<Li>direct: Direct connection line. Editing and deletion are not supported. .</li>
-<li>proxy: EdgeOne layer-4 proxy line, supports editing and modifying instances and rules, but deletion is not supported;</li>
-<Li>custom: Custom line, supports editing and deletion.</li>
- * @method void setLineType(string $LineType) Set Line type. valid values:
-<Li>direct: Direct connection line. Editing and deletion are not supported. .</li>
-<li>proxy: EdgeOne layer-4 proxy line, supports editing and modifying instances and rules, but deletion is not supported;</li>
-<Li>custom: Custom line, supports editing and deletion.</li>
- * @method string getLineAddress() Obtain Line address in the format host:port.
- * @method void setLineAddress(string $LineAddress) Set Line address in the format host:port.
- * @method string getProxyId() Obtain Layer-4 proxy instance ID,returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
- * @method void setProxyId(string $ProxyId) Set Layer-4 proxy instance ID,returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
- * @method string getRuleId() Obtain Forwarding rule ID. returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
- * @method void setRuleId(string $RuleId) Set Forwarding rule ID. returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
+ * @method string getLineId() Obtain Line ID. Among them, line-0 and line-1 are built-in line IDs. Valid values:
+<li> line-0: direct-access line. Additions, edits, and deletion are not supported;</li>
+<li> line-1: EdgeOne Layer 4 proxy line. Supports modifying instances and rules. Deletion is not supported;</li>
+<li> line-2 and above: EdgeOne Layer 4 proxy lines or custom lines, supports modifying and deletion of instances and rules.</li>
+ * @method void setLineId(string $LineId) Set Line ID. Among them, line-0 and line-1 are built-in line IDs. Valid values:
+<li> line-0: direct-access line. Additions, edits, and deletion are not supported;</li>
+<li> line-1: EdgeOne Layer 4 proxy line. Supports modifying instances and rules. Deletion is not supported;</li>
+<li> line-2 and above: EdgeOne Layer 4 proxy lines or custom lines, supports modifying and deletion of instances and rules.</li>
+ * @method string getLineType() Obtain Line type. Valid values:
+<li>direct: direct-access line, editing is not supported, and deletion is not supported;</li>
+<li>proxy: EdgeOne Layer 4 proxy route. Supports editing and modifying instances and rules. Deletion is not supported;</li>
+<li>custom: Custom lines, support editing and deletion.</li>
+ * @method void setLineType(string $LineType) Set Line type. Valid values:
+<li>direct: direct-access line, editing is not supported, and deletion is not supported;</li>
+<li>proxy: EdgeOne Layer 4 proxy route. Supports editing and modifying instances and rules. Deletion is not supported;</li>
+<li>custom: Custom lines, support editing and deletion.</li>
+ * @method string getLineAddress() Obtain Line address in the format of host:port.
+ * @method void setLineAddress(string $LineAddress) Set Line address in the format of host:port.
+ * @method string getProxyId() Obtain Layer 4 proxy instance ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
+ * @method void setProxyId(string $ProxyId) Set Layer 4 proxy instance ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
+ * @method string getRuleId() Obtain Forwarding rule ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
+ * @method void setRuleId(string $RuleId) Set Forwarding rule ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
  */
 class MultiPathGatewayLine extends AbstractModel
 {
     /**
-     * @var string line ID. where line-0 and line-1 are system-reserved IDs. valid values:
-<Li>line-0: direct connection line. Adding, editing, and deletion are not supported.</li>
-<Li>line-1: EdgeOne layer-4 proxy line. Supports modifying instances and rules, but deletion is not supported.</li>
-<li>line-2 and above: EdgeOne layer-4 proxy lines or custom lines, supports modifying, deleting instances and rules.</li>
+     * @var string Line ID. Among them, line-0 and line-1 are built-in line IDs. Valid values:
+<li> line-0: direct-access line. Additions, edits, and deletion are not supported;</li>
+<li> line-1: EdgeOne Layer 4 proxy line. Supports modifying instances and rules. Deletion is not supported;</li>
+<li> line-2 and above: EdgeOne Layer 4 proxy lines or custom lines, supports modifying and deletion of instances and rules.</li>
      */
     public $LineId;
 
     /**
-     * @var string Line type. valid values:
-<Li>direct: Direct connection line. Editing and deletion are not supported. .</li>
-<li>proxy: EdgeOne layer-4 proxy line, supports editing and modifying instances and rules, but deletion is not supported;</li>
-<Li>custom: Custom line, supports editing and deletion.</li>
+     * @var string Line type. Valid values:
+<li>direct: direct-access line, editing is not supported, and deletion is not supported;</li>
+<li>proxy: EdgeOne Layer 4 proxy route. Supports editing and modifying instances and rules. Deletion is not supported;</li>
+<li>custom: Custom lines, support editing and deletion.</li>
      */
     public $LineType;
 
     /**
-     * @var string Line address in the format host:port.
+     * @var string Line address in the format of host:port.
      */
     public $LineAddress;
 
     /**
-     * @var string Layer-4 proxy instance ID,returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
+     * @var string Layer 4 proxy instance ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
      */
     public $ProxyId;
 
     /**
-     * @var string Forwarding rule ID. returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
+     * @var string Forwarding rule ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
      */
     public $RuleId;
 
     /**
-     * @param string $LineId line ID. where line-0 and line-1 are system-reserved IDs. valid values:
-<Li>line-0: direct connection line. Adding, editing, and deletion are not supported.</li>
-<Li>line-1: EdgeOne layer-4 proxy line. Supports modifying instances and rules, but deletion is not supported.</li>
-<li>line-2 and above: EdgeOne layer-4 proxy lines or custom lines, supports modifying, deleting instances and rules.</li>
-     * @param string $LineType Line type. valid values:
-<Li>direct: Direct connection line. Editing and deletion are not supported. .</li>
-<li>proxy: EdgeOne layer-4 proxy line, supports editing and modifying instances and rules, but deletion is not supported;</li>
-<Li>custom: Custom line, supports editing and deletion.</li>
-     * @param string $LineAddress Line address in the format host:port.
-     * @param string $ProxyId Layer-4 proxy instance ID,returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
-     * @param string $RuleId Forwarding rule ID. returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
+     * @param string $LineId Line ID. Among them, line-0 and line-1 are built-in line IDs. Valid values:
+<li> line-0: direct-access line. Additions, edits, and deletion are not supported;</li>
+<li> line-1: EdgeOne Layer 4 proxy line. Supports modifying instances and rules. Deletion is not supported;</li>
+<li> line-2 and above: EdgeOne Layer 4 proxy lines or custom lines, supports modifying and deletion of instances and rules.</li>
+     * @param string $LineType Line type. Valid values:
+<li>direct: direct-access line, editing is not supported, and deletion is not supported;</li>
+<li>proxy: EdgeOne Layer 4 proxy route. Supports editing and modifying instances and rules. Deletion is not supported;</li>
+<li>custom: Custom lines, support editing and deletion.</li>
+     * @param string $LineAddress Line address in the format of host:port.
+     * @param string $ProxyId Layer 4 proxy instance ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
+     * @param string $RuleId Forwarding rule ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
      */
     function __construct()
     {

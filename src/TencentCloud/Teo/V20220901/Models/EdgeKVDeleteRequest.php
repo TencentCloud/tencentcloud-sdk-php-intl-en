@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set Zone ID.
  * @method string getNamespace() Obtain Namespace name.
  * @method void setNamespace(string $Namespace) Set Namespace name.
- * @method array getKeys() Obtain Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, supporting valid UTF-8 characters. To delete one key, input an array containing one element.
- * @method void setKeys(array $Keys) Set Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, supporting valid UTF-8 characters. To delete one key, input an array containing one element.
+ * @method array getKeys() Obtain Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long, supporting valid UTF-8 characters. To delete a single key, input an array containing one element.
+ * @method void setKeys(array $Keys) Set Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long, supporting valid UTF-8 characters. To delete a single key, input an array containing one element.
  */
 class EdgeKVDeleteRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class EdgeKVDeleteRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var array Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, supporting valid UTF-8 characters. To delete one key, input an array containing one element.
+     * @var array Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long, supporting valid UTF-8 characters. To delete a single key, input an array containing one element.
      */
     public $Keys;
 
     /**
      * @param string $ZoneId Zone ID.
      * @param string $Namespace Namespace name.
-     * @param array $Keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, supporting valid UTF-8 characters. To delete one key, input an array containing one element.
+     * @param array $Keys Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long, supporting valid UTF-8 characters. To delete a single key, input an array containing one element.
      */
     function __construct()
     {

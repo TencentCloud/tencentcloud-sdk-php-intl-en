@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Host Header Rewrite configuration parameters.
+ * Host Header rewrite configuration parameters.
  *
- * @method string getAction() Obtain Action to be executed. values:.
-<Li>FollowOrigin: follow origin server domain name;</li>.
-<Li>`Custom`: custom</li>.
- * @method void setAction(string $Action) Set Action to be executed. values:.
-<Li>FollowOrigin: follow origin server domain name;</li>.
-<Li>`Custom`: custom</li>.
- * @method string getServerName() Obtain Host header rewrite requires a complete domain name.<br>note: this field is required when switch is on; when switch is off, this field is not required and any value will be ignored.
- * @method void setServerName(string $ServerName) Set Host header rewrite requires a complete domain name.<br>note: this field is required when switch is on; when switch is off, this field is not required and any value will be ignored.
+ * @method string getAction() Obtain Execution action. Valid values:
+<li>`followOrigin`: Follow source site domain;</li>
+<li>custom: Custom.</li>
+ * @method void setAction(string $Action) Set Execution action. Valid values:
+<li>`followOrigin`: Follow source site domain;</li>
+<li>custom: Custom.</li>
+ * @method string getServerName() Obtain Host Header rewrite requires a complete domain name.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field, and if specified, it does not take effect.
+ * @method void setServerName(string $ServerName) Set Host Header rewrite requires a complete domain name.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field, and if specified, it does not take effect.
  */
 class HostHeaderParameters extends AbstractModel
 {
     /**
-     * @var string Action to be executed. values:.
-<Li>FollowOrigin: follow origin server domain name;</li>.
-<Li>`Custom`: custom</li>.
+     * @var string Execution action. Valid values:
+<li>`followOrigin`: Follow source site domain;</li>
+<li>custom: Custom.</li>
      */
     public $Action;
 
     /**
-     * @var string Host header rewrite requires a complete domain name.<br>note: this field is required when switch is on; when switch is off, this field is not required and any value will be ignored.
+     * @var string Host Header rewrite requires a complete domain name.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field, and if specified, it does not take effect.
      */
     public $ServerName;
 
     /**
-     * @param string $Action Action to be executed. values:.
-<Li>FollowOrigin: follow origin server domain name;</li>.
-<Li>`Custom`: custom</li>.
-     * @param string $ServerName Host header rewrite requires a complete domain name.<br>note: this field is required when switch is on; when switch is off, this field is not required and any value will be ignored.
+     * @param string $Action Execution action. Valid values:
+<li>`followOrigin`: Follow source site domain;</li>
+<li>custom: Custom.</li>
+     * @param string $ServerName Host Header rewrite requires a complete domain name.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field, and if specified, it does not take effect.
      */
     function __construct()
     {

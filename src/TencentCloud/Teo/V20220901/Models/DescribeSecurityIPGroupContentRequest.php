@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method integer getGroupId() Obtain Specifies the IP group ID.
- * @method void setGroupId(integer $GroupId) Set Specifies the IP group ID.
- * @method integer getLimit() Obtain Paginated query limit. default value: 2000, maximum value: 100000.
- * @method void setLimit(integer $Limit) Set Paginated query limit. default value: 2000, maximum value: 100000.
+ * @method integer getGroupId() Obtain IP group ID.
+ * @method void setGroupId(integer $GroupId) Set IP group ID.
+ * @method integer getLimit() Obtain Paginated query limit. Default value: 2000. Maximum value: 100000.
+ * @method void setLimit(integer $Limit) Set Paginated query limit. Default value: 2000. Maximum value: 100000.
  * @method integer getOffset() Obtain The offset of paginated query. Default value: 0.
  * @method void setOffset(integer $Offset) Set The offset of paginated query. Default value: 0.
  */
@@ -37,12 +37,12 @@ class DescribeSecurityIPGroupContentRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer Specifies the IP group ID.
+     * @var integer IP group ID.
      */
     public $GroupId;
 
     /**
-     * @var integer Paginated query limit. default value: 2000, maximum value: 100000.
+     * @var integer Paginated query limit. Default value: 2000. Maximum value: 100000.
      */
     public $Limit;
 
@@ -53,8 +53,8 @@ class DescribeSecurityIPGroupContentRequest extends AbstractModel
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param integer $GroupId Specifies the IP group ID.
-     * @param integer $Limit Paginated query limit. default value: 2000, maximum value: 100000.
+     * @param integer $GroupId IP group ID.
+     * @param integer $Limit Paginated query limit. Default value: 2000. Maximum value: 100000.
      * @param integer $Offset The offset of paginated query. Default value: 0.
      */
     function __construct()

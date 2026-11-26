@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IP location information query
  *
- * @method string getIP() Obtain IP address, IPV4 or IPV6.
- * @method void setIP(string $IP) Set IP address, IPV4 or IPV6.
+ * @method string getIP() Obtain IP, IPV4, or IPV6.
+ * @method void setIP(string $IP) Set IP, IPV4, or IPV6.
  * @method string getIsEdgeOneIP() Obtain Whether the IP belongs to an EdgeOne node. Valid values:
-<li>yes: This IP belongs to an EdgeOne node;</li>
-<li>no: This IP does not belong to an EdgeOne node.</li>
+<li>yes: The IP belongs to an EdgeOne node;</li>
+<li>no: The IP not within EdgeOne nodes.</li>
  * @method void setIsEdgeOneIP(string $IsEdgeOneIP) Set Whether the IP belongs to an EdgeOne node. Valid values:
-<li>yes: This IP belongs to an EdgeOne node;</li>
-<li>no: This IP does not belong to an EdgeOne node.</li>
+<li>yes: The IP belongs to an EdgeOne node;</li>
+<li>no: The IP not within EdgeOne nodes.</li>
  */
 class IPRegionInfo extends AbstractModel
 {
     /**
-     * @var string IP address, IPV4 or IPV6.
+     * @var string IP, IPV4, or IPV6.
      */
     public $IP;
 
     /**
      * @var string Whether the IP belongs to an EdgeOne node. Valid values:
-<li>yes: This IP belongs to an EdgeOne node;</li>
-<li>no: This IP does not belong to an EdgeOne node.</li>
+<li>yes: The IP belongs to an EdgeOne node;</li>
+<li>no: The IP not within EdgeOne nodes.</li>
      */
     public $IsEdgeOneIP;
 
     /**
-     * @param string $IP IP address, IPV4 or IPV6.
+     * @param string $IP IP, IPV4, or IPV6.
      * @param string $IsEdgeOneIP Whether the IP belongs to an EdgeOne node. Valid values:
-<li>yes: This IP belongs to an EdgeOne node;</li>
-<li>no: This IP does not belong to an EdgeOne node.</li>
+<li>yes: The IP belongs to an EdgeOne node;</li>
+<li>no: The IP not within EdgeOne nodes.</li>
      */
     function __construct()
     {

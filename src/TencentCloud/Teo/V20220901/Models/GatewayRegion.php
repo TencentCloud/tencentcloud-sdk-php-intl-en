@@ -18,14 +18,14 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Multi-Channel security gateway available region.
+ * Available regions of the multi-channel security gateway
  *
  * @method string getRegionId() Obtain Region ID.
  * @method void setRegionId(string $RegionId) Set Region ID.
  * @method string getCNName() Obtain Chinese region name.
  * @method void setCNName(string $CNName) Set Chinese region name.
- * @method string getENName() Obtain English name of the region.
- * @method void setENName(string $ENName) Set English name of the region.
+ * @method string getENName() Obtain English region name.
+ * @method void setENName(string $ENName) Set English region name.
  */
 class GatewayRegion extends AbstractModel
 {
@@ -40,14 +40,14 @@ class GatewayRegion extends AbstractModel
     public $CNName;
 
     /**
-     * @var string English name of the region.
+     * @var string English region name.
      */
     public $ENName;
 
     /**
      * @param string $RegionId Region ID.
      * @param string $CNName Chinese region name.
-     * @param string $ENName English name of the region.
+     * @param string $ENName English region name.
      */
     function __construct()
     {

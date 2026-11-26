@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IdentifyZone request structure.
  *
- * @method string getZoneName() Obtain The site name.
- * @method void setZoneName(string $ZoneName) Set The site name.
- * @method string getDomain() Obtain A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+ * @method string getZoneName() Obtain Site name.
+ * @method void setZoneName(string $ZoneName) Set Site name.
+ * @method string getDomain() Obtain Subdomain under the site. If verifying a subdomain under the Verification Site, pass this value; otherwise empty.
 
- * @method void setDomain(string $Domain) Set A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+ * @method void setDomain(string $Domain) Set Subdomain under the site. If verifying a subdomain under the Verification Site, pass this value; otherwise empty.
  */
 class IdentifyZoneRequest extends AbstractModel
 {
     /**
-     * @var string The site name.
+     * @var string Site name.
      */
     public $ZoneName;
 
     /**
-     * @var string A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+     * @var string Subdomain under the site. If verifying a subdomain under the Verification Site, pass this value; otherwise empty.
 
      */
     public $Domain;
 
     /**
-     * @param string $ZoneName The site name.
-     * @param string $Domain A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+     * @param string $ZoneName Site name.
+     * @param string $Domain Subdomain under the site. If verifying a subdomain under the Verification Site, pass this value; otherwise empty.
      */
     function __construct()
     {

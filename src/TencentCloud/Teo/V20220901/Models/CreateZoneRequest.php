@@ -20,128 +20,128 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateZone request structure.
  *
- * @method string getType() Obtain Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
-<li>partial: CNAME access;</li>.
-<li>full: NS access;</li>.
-<li>noDomainAccess: access with no domain name.</li>.
-<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
-<li>ai: edge reasoning integration.</li>.
- * @method void setType(string $Type) Set Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
-<li>partial: CNAME access;</li>.
-<li>full: NS access;</li>.
-<li>noDomainAccess: access with no domain name.</li>.
-<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
-<li>ai: edge reasoning integration.</li>.
- * @method string getZoneName() Obtain Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
- * @method void setZoneName(string $ZoneName) Set Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
- * @method string getArea() Obtain The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
-<li>`global`: Global AZs</li>
-<li>`mainland`: AZs in the Chinese mainland</li>
-<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
- * @method void setArea(string $Area) Set The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
-<li>`global`: Global AZs</li>
-<li>`mainland`: AZs in the Chinese mainland</li>
-<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
- * @method string getPlanId() Obtain Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
-Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+ * @method string getType() Obtain Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod managed access. To use this access mode, your domain name should have been hosted on DNSPod;</li>
+<li>ai: Edge reasoning integration.</li>
+ * @method void setType(string $Type) Set Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod managed access. To use this access mode, your domain name should have been hosted on DNSPod;</li>
+<li>ai: Edge reasoning integration.</li>
+ * @method string getZoneName() Obtain Site name. For CNAME/NS access, pass in the second-level domain (example.com) as the site name. For domainless access, leave this value empty.
+ * @method void setZoneName(string $ZoneName) Set Site name. For CNAME/NS access, pass in the second-level domain (example.com) as the site name. For domainless access, leave this value empty.
+ * @method string getArea() Obtain Acceleration region of the layer-7 domain name when Type is partial/full. The following are the values for this parameter. If left empty, the default value is overseas. When Type is noDomainAccess, retain this value as empty:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
+ * @method void setArea(string $Area) Set Acceleration region of the layer-7 domain name when Type is partial/full. The following are the values for this parameter. If left empty, the default value is overseas. When Type is noDomainAccess, retain this value as empty:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
+ * @method string getPlanId() Obtain ID of the target bundle to bind. If your account already has a bundle, you can fill in this parameter to bind the site to it directly. If you currently have no bindable bundle, you can purchase one through [CreatePlan](https://www.tencentcloud.com/document/product/1552/105771?from_cn_redirect=1).
+Note: If this parameter is not specified, a site in the "init" state will be created. The site is inactive and will not be displayed in the console. You can access [BindZoneToPlan](https://www.tencentcloud.com/document/product/1552/83042?from_cn_redirect=1) to bind a package and activate the site. After activation, the site can provide services properly.
 
 
- * @method void setPlanId(string $PlanId) Set Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
-Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+ * @method void setPlanId(string $PlanId) Set ID of the target bundle to bind. If your account already has a bundle, you can fill in this parameter to bind the site to it directly. If you currently have no bindable bundle, you can purchase one through [CreatePlan](https://www.tencentcloud.com/document/product/1552/105771?from_cn_redirect=1).
+Note: If this parameter is not specified, a site in the "init" state will be created. The site is inactive and will not be displayed in the console. You can access [BindZoneToPlan](https://www.tencentcloud.com/document/product/1552/83042?from_cn_redirect=1) to bind a package and activate the site. After activation, the site can provide services properly.
 
 
- * @method string getAliasZoneName() Obtain Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
- * @method void setAliasZoneName(string $AliasZoneName) Set Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
- * @method array getTags() Obtain Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
- * @method void setTags(array $Tags) Set Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
- * @method boolean getAllowDuplicates() Obtain Whether to allow duplicate sites. Values:
-<li>`true`: Duplicate sites are allowed.</li>
-<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
- * @method void setAllowDuplicates(boolean $AllowDuplicates) Set Whether to allow duplicate sites. Values:
-<li>`true`: Duplicate sites are allowed.</li>
-<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
- * @method boolean getJumpStart() Obtain Whether to skip scanning the existing DNS records of the site. Default value: false.
- * @method void setJumpStart(boolean $JumpStart) Set Whether to skip scanning the existing DNS records of the site. Default value: false.
+ * @method string getAliasZoneName() Obtain Identical site identifier. Only numbers, English letters, ".", "-", and "_" are allowed, up to 200 characters. For details, see [Identical Site Identifier](https://www.tencentcloud.com/document/product/1552/70202?from_cn_redirect=1). If this usage scenario does not apply, just leave this field empty.
+ * @method void setAliasZoneName(string $AliasZoneName) Set Identical site identifier. Only numbers, English letters, ".", "-", and "_" are allowed, up to 200 characters. For details, see [Identical Site Identifier](https://www.tencentcloud.com/document/product/1552/70202?from_cn_redirect=1). If this usage scenario does not apply, just leave this field empty.
+ * @method array getTags() Obtain Tag. This parameter is used for authority control and cost allocation of the site. You need to go to the [tag console](https://console.cloud.tencent.com/tag/taglist) to create the corresponding tag before you can input the corresponding tag key and tag value here.
+ * @method void setTags(array $Tags) Set Tag. This parameter is used for authority control and cost allocation of the site. You need to go to the [tag console](https://console.cloud.tencent.com/tag/taglist) to create the corresponding tag before you can input the corresponding tag key and tag value here.
+ * @method boolean getAllowDuplicates() Obtain Whether repeated access is allowed.
+<li> true: Allow repeated access;</li>
+<li> false: Duplicate integration is not allowed.</li>If this field is not specified, the default value 'false' will be used.
+ * @method void setAllowDuplicates(boolean $AllowDuplicates) Set Whether repeated access is allowed.
+<li> true: Allow repeated access;</li>
+<li> false: Duplicate integration is not allowed.</li>If this field is not specified, the default value 'false' will be used.
+ * @method boolean getJumpStart() Obtain Whether to skip scanning existing DNS records of the site. Default value: false.
+ * @method void setJumpStart(boolean $JumpStart) Set Whether to skip scanning existing DNS records of the site. Default value: false.
  */
 class CreateZoneRequest extends AbstractModel
 {
     /**
-     * @var string Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
-<li>partial: CNAME access;</li>.
-<li>full: NS access;</li>.
-<li>noDomainAccess: access with no domain name.</li>.
-<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
-<li>ai: edge reasoning integration.</li>.
+     * @var string Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod managed access. To use this access mode, your domain name should have been hosted on DNSPod;</li>
+<li>ai: Edge reasoning integration.</li>
      */
     public $Type;
 
     /**
-     * @var string Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
+     * @var string Site name. For CNAME/NS access, pass in the second-level domain (example.com) as the site name. For domainless access, leave this value empty.
      */
     public $ZoneName;
 
     /**
-     * @var string The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
-<li>`global`: Global AZs</li>
-<li>`mainland`: AZs in the Chinese mainland</li>
-<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+     * @var string Acceleration region of the layer-7 domain name when Type is partial/full. The following are the values for this parameter. If left empty, the default value is overseas. When Type is noDomainAccess, retain this value as empty:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
      */
     public $Area;
 
     /**
-     * @var string Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
-Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+     * @var string ID of the target bundle to bind. If your account already has a bundle, you can fill in this parameter to bind the site to it directly. If you currently have no bindable bundle, you can purchase one through [CreatePlan](https://www.tencentcloud.com/document/product/1552/105771?from_cn_redirect=1).
+Note: If this parameter is not specified, a site in the "init" state will be created. The site is inactive and will not be displayed in the console. You can access [BindZoneToPlan](https://www.tencentcloud.com/document/product/1552/83042?from_cn_redirect=1) to bind a package and activate the site. After activation, the site can provide services properly.
 
 
      */
     public $PlanId;
 
     /**
-     * @var string Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
+     * @var string Identical site identifier. Only numbers, English letters, ".", "-", and "_" are allowed, up to 200 characters. For details, see [Identical Site Identifier](https://www.tencentcloud.com/document/product/1552/70202?from_cn_redirect=1). If this usage scenario does not apply, just leave this field empty.
      */
     public $AliasZoneName;
 
     /**
-     * @var array Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
+     * @var array Tag. This parameter is used for authority control and cost allocation of the site. You need to go to the [tag console](https://console.cloud.tencent.com/tag/taglist) to create the corresponding tag before you can input the corresponding tag key and tag value here.
      */
     public $Tags;
 
     /**
-     * @var boolean Whether to allow duplicate sites. Values:
-<li>`true`: Duplicate sites are allowed.</li>
-<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+     * @var boolean Whether repeated access is allowed.
+<li> true: Allow repeated access;</li>
+<li> false: Duplicate integration is not allowed.</li>If this field is not specified, the default value 'false' will be used.
      * @deprecated
      */
     public $AllowDuplicates;
 
     /**
-     * @var boolean Whether to skip scanning the existing DNS records of the site. Default value: false.
+     * @var boolean Whether to skip scanning existing DNS records of the site. Default value: false.
      * @deprecated
      */
     public $JumpStart;
 
     /**
-     * @param string $Type Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
-<li>partial: CNAME access;</li>.
-<li>full: NS access;</li>.
-<li>noDomainAccess: access with no domain name.</li>.
-<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
-<li>ai: edge reasoning integration.</li>.
-     * @param string $ZoneName Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
-     * @param string $Area The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
-<li>`global`: Global AZs</li>
-<li>`mainland`: AZs in the Chinese mainland</li>
-<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
-     * @param string $PlanId Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
-Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+     * @param string $Type Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod managed access. To use this access mode, your domain name should have been hosted on DNSPod;</li>
+<li>ai: Edge reasoning integration.</li>
+     * @param string $ZoneName Site name. For CNAME/NS access, pass in the second-level domain (example.com) as the site name. For domainless access, leave this value empty.
+     * @param string $Area Acceleration region of the layer-7 domain name when Type is partial/full. The following are the values for this parameter. If left empty, the default value is overseas. When Type is noDomainAccess, retain this value as empty:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
+     * @param string $PlanId ID of the target bundle to bind. If your account already has a bundle, you can fill in this parameter to bind the site to it directly. If you currently have no bindable bundle, you can purchase one through [CreatePlan](https://www.tencentcloud.com/document/product/1552/105771?from_cn_redirect=1).
+Note: If this parameter is not specified, a site in the "init" state will be created. The site is inactive and will not be displayed in the console. You can access [BindZoneToPlan](https://www.tencentcloud.com/document/product/1552/83042?from_cn_redirect=1) to bind a package and activate the site. After activation, the site can provide services properly.
 
 
-     * @param string $AliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
-     * @param array $Tags Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
-     * @param boolean $AllowDuplicates Whether to allow duplicate sites. Values:
-<li>`true`: Duplicate sites are allowed.</li>
-<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
-     * @param boolean $JumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
+     * @param string $AliasZoneName Identical site identifier. Only numbers, English letters, ".", "-", and "_" are allowed, up to 200 characters. For details, see [Identical Site Identifier](https://www.tencentcloud.com/document/product/1552/70202?from_cn_redirect=1). If this usage scenario does not apply, just leave this field empty.
+     * @param array $Tags Tag. This parameter is used for authority control and cost allocation of the site. You need to go to the [tag console](https://console.cloud.tencent.com/tag/taglist) to create the corresponding tag before you can input the corresponding tag key and tag value here.
+     * @param boolean $AllowDuplicates Whether repeated access is allowed.
+<li> true: Allow repeated access;</li>
+<li> false: Duplicate integration is not allowed.</li>If this field is not specified, the default value 'false' will be used.
+     * @param boolean $JumpStart Whether to skip scanning existing DNS records of the site. Default value: false.
      */
     function __construct()
     {

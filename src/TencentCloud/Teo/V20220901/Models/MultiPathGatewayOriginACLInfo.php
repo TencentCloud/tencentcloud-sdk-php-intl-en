@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Multi-Channel gateway example instance binding relationship with origin IP ranges and origin IP range details.
+ * Binding relationship between a multi-channel gateway example instance and the origin-pull IP range, as well as the origin-pull IP range details.
  *
- * @method MultiPathGatewayCurrentOriginACL getMultiPathGatewayCurrentOriginACL() Obtain Describes the currently effective IP range for origin servers.
- * @method void setMultiPathGatewayCurrentOriginACL(MultiPathGatewayCurrentOriginACL $MultiPathGatewayCurrentOriginACL) Set Describes the currently effective IP range for origin servers.
- * @method MultiPathGatewayNextOriginACL getMultiPathGatewayNextOriginACL() Obtain When the origin IP range is updated, this field will be returned with the next version's effective origin IP range, including a comparison with the current origin IP range. this field is empty if not updated.
- * @method void setMultiPathGatewayNextOriginACL(MultiPathGatewayNextOriginACL $MultiPathGatewayNextOriginACL) Set When the origin IP range is updated, this field will be returned with the next version's effective origin IP range, including a comparison with the current origin IP range. this field is empty if not updated.
+ * @method MultiPathGatewayCurrentOriginACL getMultiPathGatewayCurrentOriginACL() Obtain Currently effective origin-pull IP range.
+ * @method void setMultiPathGatewayCurrentOriginACL(MultiPathGatewayCurrentOriginACL $MultiPathGatewayCurrentOriginACL) Set Currently effective origin-pull IP range.
+ * @method MultiPathGatewayNextOriginACL getMultiPathGatewayNextOriginACL() Obtain When the origin-pull IP range is updated, this field will return the origin-pull IP range that will take effect in the next version, including a contrast with the current origin-pull IP range. If there is no update, this field is empty.
+ * @method void setMultiPathGatewayNextOriginACL(MultiPathGatewayNextOriginACL $MultiPathGatewayNextOriginACL) Set When the origin-pull IP range is updated, this field will return the origin-pull IP range that will take effect in the next version, including a contrast with the current origin-pull IP range. If there is no update, this field is empty.
  */
 class MultiPathGatewayOriginACLInfo extends AbstractModel
 {
     /**
-     * @var MultiPathGatewayCurrentOriginACL Describes the currently effective IP range for origin servers.
+     * @var MultiPathGatewayCurrentOriginACL Currently effective origin-pull IP range.
      */
     public $MultiPathGatewayCurrentOriginACL;
 
     /**
-     * @var MultiPathGatewayNextOriginACL When the origin IP range is updated, this field will be returned with the next version's effective origin IP range, including a comparison with the current origin IP range. this field is empty if not updated.
+     * @var MultiPathGatewayNextOriginACL When the origin-pull IP range is updated, this field will return the origin-pull IP range that will take effect in the next version, including a contrast with the current origin-pull IP range. If there is no update, this field is empty.
      */
     public $MultiPathGatewayNextOriginACL;
 
     /**
-     * @param MultiPathGatewayCurrentOriginACL $MultiPathGatewayCurrentOriginACL Describes the currently effective IP range for origin servers.
-     * @param MultiPathGatewayNextOriginACL $MultiPathGatewayNextOriginACL When the origin IP range is updated, this field will be returned with the next version's effective origin IP range, including a comparison with the current origin IP range. this field is empty if not updated.
+     * @param MultiPathGatewayCurrentOriginACL $MultiPathGatewayCurrentOriginACL Currently effective origin-pull IP range.
+     * @param MultiPathGatewayNextOriginACL $MultiPathGatewayNextOriginACL When the origin-pull IP range is updated, this field will return the origin-pull IP range that will take effect in the next version, including a contrast with the current origin-pull IP range. If there is no update, this field is empty.
      */
     function __construct()
     {

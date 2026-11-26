@@ -18,20 +18,20 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content identifier configuration parameters
+ * Content identification configuration parameter.
  *
- * @method string getContentIdentifier() Obtain Content identifier id.
- * @method void setContentIdentifier(string $ContentIdentifier) Set Content identifier id.
+ * @method string getContentIdentifier() Obtain Content identifier ID
+ * @method void setContentIdentifier(string $ContentIdentifier) Set Content identifier ID
  */
 class SetContentIdentifierParameters extends AbstractModel
 {
     /**
-     * @var string Content identifier id.
+     * @var string Content identifier ID
      */
     public $ContentIdentifier;
 
     /**
-     * @param string $ContentIdentifier Content identifier id.
+     * @param string $ContentIdentifier Content identifier ID
      */
     function __construct()
     {

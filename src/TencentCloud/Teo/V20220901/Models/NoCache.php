@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * No-cache configuration
+ * No cache configuration
  *
- * @method string getSwitch() Obtain Whether to enable no-cache configuration. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable no-cache configuration. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+ * @method string getSwitch() Obtain No cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set No cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
  */
 class NoCache extends AbstractModel
 {
     /**
-     * @var string Whether to enable no-cache configuration. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string No cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable no-cache configuration. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @param string $Switch No cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     function __construct()
     {

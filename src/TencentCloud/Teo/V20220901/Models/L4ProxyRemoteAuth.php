@@ -20,27 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * L4 remote authentication information.
  *
- * @method string getSwitch() Obtain Whether to enable L4 remote authentication. Valid values:
+ * @method string getSwitch() Obtain L4 remote authentication switch. Valid values:
 <li>on: Enable;</li>
 <li>off: Disable.</li>
- * @method void setSwitch(string $Switch) Set Whether to enable L4 remote authentication. Valid values:
+ * @method void setSwitch(string $Switch) Set L4 remote authentication switch. Valid values:
 <li>on: Enable;</li>
 <li>off: Disable.</li>
  * @method string getAddress() Obtain Remote authentication service address, in the format of domain/ip:port, such as example.auth.com:8888.
 
  * @method void setAddress(string $Address) Set Remote authentication service address, in the format of domain/ip:port, such as example.auth.com:8888.
 
- * @method string getServerFaultyBehavior() Obtain Default origin-pull behavior based on L4 forwarding rules after the remote authentication service is disabled. Valid values:
+ * @method string getServerFaultyBehavior() Obtain Default origin-pull behavior based on L4 forwarding rules after remote authentication service inaccessibility. Valid values:
 <li>reject: Block and deny access;</li>
 <li>allow: Allow access.</li>
- * @method void setServerFaultyBehavior(string $ServerFaultyBehavior) Set Default origin-pull behavior based on L4 forwarding rules after the remote authentication service is disabled. Valid values:
+ * @method void setServerFaultyBehavior(string $ServerFaultyBehavior) Set Default origin-pull behavior based on L4 forwarding rules after remote authentication service inaccessibility. Valid values:
 <li>reject: Block and deny access;</li>
 <li>allow: Allow access.</li>
  */
 class L4ProxyRemoteAuth extends AbstractModel
 {
     /**
-     * @var string Whether to enable L4 remote authentication. Valid values:
+     * @var string L4 remote authentication switch. Valid values:
 <li>on: Enable;</li>
 <li>off: Disable.</li>
      */
@@ -53,19 +53,19 @@ class L4ProxyRemoteAuth extends AbstractModel
     public $Address;
 
     /**
-     * @var string Default origin-pull behavior based on L4 forwarding rules after the remote authentication service is disabled. Valid values:
+     * @var string Default origin-pull behavior based on L4 forwarding rules after remote authentication service inaccessibility. Valid values:
 <li>reject: Block and deny access;</li>
 <li>allow: Allow access.</li>
      */
     public $ServerFaultyBehavior;
 
     /**
-     * @param string $Switch Whether to enable L4 remote authentication. Valid values:
+     * @param string $Switch L4 remote authentication switch. Valid values:
 <li>on: Enable;</li>
 <li>off: Disable.</li>
      * @param string $Address Remote authentication service address, in the format of domain/ip:port, such as example.auth.com:8888.
 
-     * @param string $ServerFaultyBehavior Default origin-pull behavior based on L4 forwarding rules after the remote authentication service is disabled. Valid values:
+     * @param string $ServerFaultyBehavior Default origin-pull behavior based on L4 forwarding rules after remote authentication service inaccessibility. Valid values:
 <li>reject: Block and deny access;</li>
 <li>allow: Allow access.</li>
      */

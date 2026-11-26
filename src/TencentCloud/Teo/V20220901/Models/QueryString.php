@@ -18,52 +18,52 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Request parameter contained in `CacheKey`
+ * CacheKey contains the request parameter
  *
- * @method string getSwitch() Obtain Whether to use `QueryString` as part of `CacheKey`. Values:
-<li>`on`: Yes</li>
-<li>`off`: No</li>
- * @method void setSwitch(string $Switch) Set Whether to use `QueryString` as part of `CacheKey`. Values:
-<li>`on`: Yes</li>
-<li>`off`: No</li>
- * @method string getAction() Obtain CacheKey usage via QueryString, valid values:.
-<li>includeCustom: use partial url parameter;</li>.
-<li>excludeCustom: exclude partial url parameters.</li>.
- * @method void setAction(string $Action) Set CacheKey usage via QueryString, valid values:.
-<li>includeCustom: use partial url parameter;</li>.
-<li>excludeCustom: exclude partial url parameters.</li>.
- * @method array getValue() Obtain Specifies the url parameter array for usage/exclusion.
- * @method void setValue(array $Value) Set Specifies the url parameter array for usage/exclusion.
+ * @method string getSwitch() Obtain Whether CacheKey consists of QueryString. Valid values:
+<li>on: yes;</li>
+<li>off: No.</li>
+ * @method void setSwitch(string $Switch) Set Whether CacheKey consists of QueryString. Valid values:
+<li>on: yes;</li>
+<li>off: No.</li>
+ * @method string getAction() Obtain CacheKey uses QueryString. Valid values:
+<li>includeCustom: use partial url parameters;</li>
+<li>excludeCustom: Exclude some url parameters.</li>
+ * @method void setAction(string $Action) Set CacheKey uses QueryString. Valid values:
+<li>includeCustom: use partial url parameters;</li>
+<li>excludeCustom: Exclude some url parameters.</li>
+ * @method array getValue() Obtain url parameter array for usage or exclusion.
+ * @method void setValue(array $Value) Set url parameter array for usage or exclusion.
  */
 class QueryString extends AbstractModel
 {
     /**
-     * @var string Whether to use `QueryString` as part of `CacheKey`. Values:
-<li>`on`: Yes</li>
-<li>`off`: No</li>
+     * @var string Whether CacheKey consists of QueryString. Valid values:
+<li>on: yes;</li>
+<li>off: No.</li>
      */
     public $Switch;
 
     /**
-     * @var string CacheKey usage via QueryString, valid values:.
-<li>includeCustom: use partial url parameter;</li>.
-<li>excludeCustom: exclude partial url parameters.</li>.
+     * @var string CacheKey uses QueryString. Valid values:
+<li>includeCustom: use partial url parameters;</li>
+<li>excludeCustom: Exclude some url parameters.</li>
      */
     public $Action;
 
     /**
-     * @var array Specifies the url parameter array for usage/exclusion.
+     * @var array url parameter array for usage or exclusion.
      */
     public $Value;
 
     /**
-     * @param string $Switch Whether to use `QueryString` as part of `CacheKey`. Values:
-<li>`on`: Yes</li>
-<li>`off`: No</li>
-     * @param string $Action CacheKey usage via QueryString, valid values:.
-<li>includeCustom: use partial url parameter;</li>.
-<li>excludeCustom: exclude partial url parameters.</li>.
-     * @param array $Value Specifies the url parameter array for usage/exclusion.
+     * @param string $Switch Whether CacheKey consists of QueryString. Valid values:
+<li>on: yes;</li>
+<li>off: No.</li>
+     * @param string $Action CacheKey uses QueryString. Valid values:
+<li>includeCustom: use partial url parameters;</li>
+<li>excludeCustom: Exclude some url parameters.</li>
+     * @param array $Value url parameter array for usage or exclusion.
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ConfirmOriginACLUpdate request structure.
  *
- * @method string getZoneId() Obtain Specifies the site ID.
- * @method void setZoneId(string $ZoneId) Set Specifies the site ID.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
  */
 class ConfirmOriginACLUpdateRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the site ID.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @param string $ZoneId Specifies the site ID.
+     * @param string $ZoneId Zone ID.
      */
     function __construct()
     {

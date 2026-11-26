@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain <p>Site ID.</p>
  * @method void setZoneId(string $ZoneId) Set <p>Site ID.</p>
- * @method integer getGroupId() Obtain <p>IP group ID.</p>
- * @method void setGroupId(integer $GroupId) Set <p>IP group ID.</p>
- * @method integer getOffset() Obtain <p>Paging offset.</p><p>Default value: 0.</p>
- * @method void setOffset(integer $Offset) Set <p>Paging offset.</p><p>Default value: 0.</p>
- * @method integer getLimit() Obtain <p>Paging query to refer to the number of entries of IP group configuration.</p><p>Value ranges from 1 to 200.</p><p>Default value: 20.</p>
- * @method void setLimit(integer $Limit) Set <p>Paging query to refer to the number of entries of IP group configuration.</p><p>Value ranges from 1 to 200.</p><p>Default value: 20.</p>
+ * @method integer getGroupId() Obtain <p>ID of the IP group.</p>
+ * @method void setGroupId(integer $GroupId) Set <p>ID of the IP group.</p>
+ * @method integer getOffset() Obtain <p>Paging offset.</p><p>Default value: 0</p>
+ * @method void setOffset(integer $Offset) Set <p>Paging offset.</p><p>Default value: 0</p>
+ * @method integer getLimit() Obtain <p>Number of entries for paging query of IP group configuration.</p><p>Value range: [1, 200]</p><p>Default value: 20</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of entries for paging query of IP group configuration.</p><p>Value range: [1, 200]</p><p>Default value: 20</p>
  */
 class DescribeIPGroupReferencesRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class DescribeIPGroupReferencesRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer <p>IP group ID.</p>
+     * @var integer <p>ID of the IP group.</p>
      */
     public $GroupId;
 
     /**
-     * @var integer <p>Paging offset.</p><p>Default value: 0.</p>
+     * @var integer <p>Paging offset.</p><p>Default value: 0</p>
      */
     public $Offset;
 
     /**
-     * @var integer <p>Paging query to refer to the number of entries of IP group configuration.</p><p>Value ranges from 1 to 200.</p><p>Default value: 20.</p>
+     * @var integer <p>Number of entries for paging query of IP group configuration.</p><p>Value range: [1, 200]</p><p>Default value: 20</p>
      */
     public $Limit;
 
     /**
      * @param string $ZoneId <p>Site ID.</p>
-     * @param integer $GroupId <p>IP group ID.</p>
-     * @param integer $Offset <p>Paging offset.</p><p>Default value: 0.</p>
-     * @param integer $Limit <p>Paging query to refer to the number of entries of IP group configuration.</p><p>Value ranges from 1 to 200.</p><p>Default value: 20.</p>
+     * @param integer $GroupId <p>ID of the IP group.</p>
+     * @param integer $Offset <p>Paging offset.</p><p>Default value: 0</p>
+     * @param integer $Limit <p>Number of entries for paging query of IP group configuration.</p><p>Value range: [1, 200]</p><p>Default value: 20</p>
      */
     function __construct()
     {

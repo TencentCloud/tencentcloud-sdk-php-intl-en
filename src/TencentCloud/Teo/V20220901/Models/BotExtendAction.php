@@ -18,56 +18,56 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Bot extended actions
+ * Bot extension handling method, a composite of multiple disposal actions.
  *
- * @method string getAction() Obtain Action. Valid values: 
-<li>`monitor`: Observe;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
- * @method void setAction(string $Action) Set Action. Valid values: 
-<li>`monitor`: Observe;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
- * @method integer getPercent() Obtain The probability for triggering the action. value range: 0-100.
- * @method void setPercent(integer $Percent) Set The probability for triggering the action. value range: 0-100.
+ * @method string getAction() Obtain Disposal actions. Valid values:
+<li>monitor: observation;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: random, allocate handling actions and proportions according to ExtendActions;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
+ * @method void setAction(string $Action) Set Disposal actions. Valid values:
+<li>monitor: observation;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: random, allocate handling actions and proportions according to ExtendActions;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
+ * @method integer getPercent() Obtain Probability for triggering the handling method. Value range: 0-100.
+ * @method void setPercent(integer $Percent) Set Probability for triggering the handling method. Value range: 0-100.
  */
 class BotExtendAction extends AbstractModel
 {
     /**
-     * @var string Action. Valid values: 
-<li>`monitor`: Observe;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
+     * @var string Disposal actions. Valid values:
+<li>monitor: observation;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: random, allocate handling actions and proportions according to ExtendActions;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
      */
     public $Action;
 
     /**
-     * @var integer The probability for triggering the action. value range: 0-100.
+     * @var integer Probability for triggering the handling method. Value range: 0-100.
      */
     public $Percent;
 
     /**
-     * @param string $Action Action. Valid values: 
-<li>`monitor`: Observe;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
-     * @param integer $Percent The probability for triggering the action. value range: 0-100.
+     * @param string $Action Disposal actions. Valid values:
+<li>monitor: observation;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: random, allocate handling actions and proportions according to ExtendActions;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
+     * @param integer $Percent Probability for triggering the handling method. Value range: 0-100.
      */
     function __construct()
     {

@@ -22,34 +22,34 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvId() Obtain Environment ID.
  * @method void setEnvId(string $EnvId) Set Environment ID.
- * @method string getEnvType() Obtain Environment type. Valid values: 
-<li>production: Production environment.</li><li> staging: Test environment. </li>
- * @method void setEnvType(string $EnvType) Set Environment type. Valid values: 
-<li>production: Production environment.</li><li> staging: Test environment. </li>
- * @method string getStatus() Obtain Environment status. Valid values: 
-<li>creating: Being created.</li>
-<li>running: The environment is stable, with version changes allowed.</li>
-<li>version_deploying: The version is currently being deployed, with no more changes allowed. </li>
- * @method void setStatus(string $Status) Set Environment status. Valid values: 
-<li>creating: Being created.</li>
-<li>running: The environment is stable, with version changes allowed.</li>
-<li>version_deploying: The version is currently being deployed, with no more changes allowed. </li>
- * @method array getScope() Obtain Effective scope of the configuration in the current environment. Valid values: 
-<li>ALL: It takes effect on the entire network when EnvType is set to production.</li>
-<li>It returns the IP address of the test node for host binding during testing when EnvType is set to staging. </li>
- * @method void setScope(array $Scope) Set Effective scope of the configuration in the current environment. Valid values: 
-<li>ALL: It takes effect on the entire network when EnvType is set to production.</li>
-<li>It returns the IP address of the test node for host binding during testing when EnvType is set to staging. </li>
- * @method array getCurrentConfigGroupVersionInfos() Obtain For the effective versions of each configuration group in the current environment, there are two possible scenarios based on the value of Status: 
-<li>When Status is set to version_deploying, the returned value of this field represents the previously effective version. In other words, during the deployment of the new version, the effective version is the one that was in effect before any changes were made.</li>
-<li>When Status is set to running, the value returned by this field is the currently effective version. </li>
- * @method void setCurrentConfigGroupVersionInfos(array $CurrentConfigGroupVersionInfos) Set For the effective versions of each configuration group in the current environment, there are two possible scenarios based on the value of Status: 
-<li>When Status is set to version_deploying, the returned value of this field represents the previously effective version. In other words, during the deployment of the new version, the effective version is the one that was in effect before any changes were made.</li>
-<li>When Status is set to running, the value returned by this field is the currently effective version. </li>
- * @method string getCreateTime() Obtain Creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
- * @method void setCreateTime(string $CreateTime) Set Creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
- * @method string getUpdateTime() Obtain Update time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
- * @method void setUpdateTime(string $UpdateTime) Set Update time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+ * @method string getEnvType() Obtain Environment type. Valid values:
+<li>production: production environment;</li><li>staging: testing environment.</li>
+ * @method void setEnvType(string $EnvType) Set Environment type. Valid values:
+<li>production: production environment;</li><li>staging: testing environment.</li>
+ * @method string getStatus() Obtain Environment status. Valid values:
+<li>creating: under creation;</li>
+<li>running: running steadily. Version change can be performed;</li>
+<li>version_deploying: Version deployment in progress, cannot proceed with new changes.</li>
+ * @method void setStatus(string $Status) Set Environment status. Valid values:
+<li>creating: under creation;</li>
+<li>running: running steadily. Version change can be performed;</li>
+<li>version_deploying: Version deployment in progress, cannot proceed with new changes.</li>
+ * @method array getScope() Obtain Configuration effective range in the current environment:
+<li>When the value of EnvType is production, the value of this parameter is ["ALL"], which means it takes effect globally;</li>
+<li>When the value of EnvType is staging, the test node IP will be returned, which can be used to bind a host for testing.</li>
+ * @method void setScope(array $Scope) Set Configuration effective range in the current environment:
+<li>When the value of EnvType is production, the value of this parameter is ["ALL"], which means it takes effect globally;</li>
+<li>When the value of EnvType is staging, the test node IP will be returned, which can be used to bind a host for testing.</li>
+ * @method array getCurrentConfigGroupVersionInfos() Obtain Versions that actually take effect for each configuration group in the current environment. According to the value of Status, there are the following two scenarios:
+<li>When the value of Status is version_deploying, the value returned by this field is the version effective before the change action is executed. That is, during the new version deployment, the version actually effective is the version prior to the execution of the change action;</li>
+<li>When the value of Status is running, the returned value of this field is the currently effective version.</li>
+ * @method void setCurrentConfigGroupVersionInfos(array $CurrentConfigGroupVersionInfos) Set Versions that actually take effect for each configuration group in the current environment. According to the value of Status, there are the following two scenarios:
+<li>When the value of Status is version_deploying, the value returned by this field is the version effective before the change action is executed. That is, during the new version deployment, the version actually effective is the version prior to the execution of the change action;</li>
+<li>When the value of Status is running, the returned value of this field is the currently effective version.</li>
+ * @method string getCreateTime() Obtain Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+ * @method void setCreateTime(string $CreateTime) Set Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+ * @method string getUpdateTime() Obtain Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+ * @method void setUpdateTime(string $UpdateTime) Set Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
  */
 class EnvInfo extends AbstractModel
 {
@@ -59,59 +59,59 @@ class EnvInfo extends AbstractModel
     public $EnvId;
 
     /**
-     * @var string Environment type. Valid values: 
-<li>production: Production environment.</li><li> staging: Test environment. </li>
+     * @var string Environment type. Valid values:
+<li>production: production environment;</li><li>staging: testing environment.</li>
      */
     public $EnvType;
 
     /**
-     * @var string Environment status. Valid values: 
-<li>creating: Being created.</li>
-<li>running: The environment is stable, with version changes allowed.</li>
-<li>version_deploying: The version is currently being deployed, with no more changes allowed. </li>
+     * @var string Environment status. Valid values:
+<li>creating: under creation;</li>
+<li>running: running steadily. Version change can be performed;</li>
+<li>version_deploying: Version deployment in progress, cannot proceed with new changes.</li>
      */
     public $Status;
 
     /**
-     * @var array Effective scope of the configuration in the current environment. Valid values: 
-<li>ALL: It takes effect on the entire network when EnvType is set to production.</li>
-<li>It returns the IP address of the test node for host binding during testing when EnvType is set to staging. </li>
+     * @var array Configuration effective range in the current environment:
+<li>When the value of EnvType is production, the value of this parameter is ["ALL"], which means it takes effect globally;</li>
+<li>When the value of EnvType is staging, the test node IP will be returned, which can be used to bind a host for testing.</li>
      */
     public $Scope;
 
     /**
-     * @var array For the effective versions of each configuration group in the current environment, there are two possible scenarios based on the value of Status: 
-<li>When Status is set to version_deploying, the returned value of this field represents the previously effective version. In other words, during the deployment of the new version, the effective version is the one that was in effect before any changes were made.</li>
-<li>When Status is set to running, the value returned by this field is the currently effective version. </li>
+     * @var array Versions that actually take effect for each configuration group in the current environment. According to the value of Status, there are the following two scenarios:
+<li>When the value of Status is version_deploying, the value returned by this field is the version effective before the change action is executed. That is, during the new version deployment, the version actually effective is the version prior to the execution of the change action;</li>
+<li>When the value of Status is running, the returned value of this field is the currently effective version.</li>
      */
     public $CurrentConfigGroupVersionInfos;
 
     /**
-     * @var string Creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+     * @var string Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
     public $CreateTime;
 
     /**
-     * @var string Update time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+     * @var string Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
     public $UpdateTime;
 
     /**
      * @param string $EnvId Environment ID.
-     * @param string $EnvType Environment type. Valid values: 
-<li>production: Production environment.</li><li> staging: Test environment. </li>
-     * @param string $Status Environment status. Valid values: 
-<li>creating: Being created.</li>
-<li>running: The environment is stable, with version changes allowed.</li>
-<li>version_deploying: The version is currently being deployed, with no more changes allowed. </li>
-     * @param array $Scope Effective scope of the configuration in the current environment. Valid values: 
-<li>ALL: It takes effect on the entire network when EnvType is set to production.</li>
-<li>It returns the IP address of the test node for host binding during testing when EnvType is set to staging. </li>
-     * @param array $CurrentConfigGroupVersionInfos For the effective versions of each configuration group in the current environment, there are two possible scenarios based on the value of Status: 
-<li>When Status is set to version_deploying, the returned value of this field represents the previously effective version. In other words, during the deployment of the new version, the effective version is the one that was in effect before any changes were made.</li>
-<li>When Status is set to running, the value returned by this field is the currently effective version. </li>
-     * @param string $CreateTime Creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
-     * @param string $UpdateTime Update time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+     * @param string $EnvType Environment type. Valid values:
+<li>production: production environment;</li><li>staging: testing environment.</li>
+     * @param string $Status Environment status. Valid values:
+<li>creating: under creation;</li>
+<li>running: running steadily. Version change can be performed;</li>
+<li>version_deploying: Version deployment in progress, cannot proceed with new changes.</li>
+     * @param array $Scope Configuration effective range in the current environment:
+<li>When the value of EnvType is production, the value of this parameter is ["ALL"], which means it takes effect globally;</li>
+<li>When the value of EnvType is staging, the test node IP will be returned, which can be used to bind a host for testing.</li>
+     * @param array $CurrentConfigGroupVersionInfos Versions that actually take effect for each configuration group in the current environment. According to the value of Status, there are the following two scenarios:
+<li>When the value of Status is version_deploying, the value returned by this field is the version effective before the change action is executed. That is, during the new version deployment, the version actually effective is the version prior to the execution of the change action;</li>
+<li>When the value of Status is running, the returned value of this field is the currently effective version.</li>
+     * @param string $CreateTime Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+     * @param string $UpdateTime Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Common action parameter of a rule engine condition
+ * Rule engine condition normal action parameter
  *
- * @method string getName() Obtain The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
- * @method void setName(string $Name) Set The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
- * @method array getValues() Obtain The parameter value.
- * @method void setValues(array $Values) Set The parameter value.
+ * @method string getName() Obtain Parameter name. For completion specifications, call the API to [query the parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
+ * @method void setName(string $Name) Set Parameter name. For completion specifications, call the API to [query the parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
+ * @method array getValues() Obtain Parameter value.
+ * @method void setValues(array $Values) Set Parameter value.
  */
 class RuleNormalActionParams extends AbstractModel
 {
     /**
-     * @var string The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+     * @var string Parameter name. For completion specifications, call the API to [query the parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
      */
     public $Name;
 
     /**
-     * @var array The parameter value.
+     * @var array Parameter value.
      */
     public $Values;
 
     /**
-     * @param string $Name The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-     * @param array $Values The parameter value.
+     * @param string $Name Parameter name. For completion specifications, call the API to [query the parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
+     * @param array $Values Parameter value.
      */
     function __construct()
     {

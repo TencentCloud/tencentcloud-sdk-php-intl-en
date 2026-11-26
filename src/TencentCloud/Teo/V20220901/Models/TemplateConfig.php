@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Security template settings
+ * Security template configuration
  *
- * @method string getTemplateId() Obtain The template ID.
- * @method void setTemplateId(string $TemplateId) Set The template ID.
- * @method string getTemplateName() Obtain The template name.
- * @method void setTemplateName(string $TemplateName) Set The template name.
+ * @method string getTemplateId() Obtain Template ID.
+ * @method void setTemplateId(string $TemplateId) Set Template ID.
+ * @method string getTemplateName() Obtain Template Name
+ * @method void setTemplateName(string $TemplateName) Set Template Name
  */
 class TemplateConfig extends AbstractModel
 {
     /**
-     * @var string The template ID.
+     * @var string Template ID.
      */
     public $TemplateId;
 
     /**
-     * @var string The template name.
+     * @var string Template Name
      */
     public $TemplateName;
 
     /**
-     * @param string $TemplateId The template ID.
-     * @param string $TemplateName The template name.
+     * @param string $TemplateId Template ID.
+     * @param string $TemplateName Template Name
      */
     function __construct()
     {

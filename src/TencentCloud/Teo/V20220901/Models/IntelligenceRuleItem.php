@@ -18,64 +18,64 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Bot intelligence rule items
+ * Bot intelligent analysis rule detail
  *
- * @method string getLabel() Obtain The tag to categorize bots. Values:
-<li>`evil_bot`: Malicious bot</li>
-<li>`suspect_bot`: Suspected bot</li>
-<li>`good_bot`: Good bot</li>
-<li>`normal`: Normal request</li>
- * @method void setLabel(string $Label) Set The tag to categorize bots. Values:
-<li>`evil_bot`: Malicious bot</li>
-<li>`suspect_bot`: Suspected bot</li>
-<li>`good_bot`: Good bot</li>
-<li>`normal`: Normal request</li>
- * @method string getAction() Obtain The action taken on bots. Values
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`monitor`: Observe</li>
- * @method void setAction(string $Action) Set The action taken on bots. Values
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`monitor`: Observe</li>
+ * @method string getLabel() Obtain Intelligent analysis tag. Valid values:
+<li>evil_bot: malicious bot;</li>
+<li>suspect_bot: suspected bot;</li>
+<li>good_bot: good bot;</li>
+<li>normal: Normal request.</li>
+ * @method void setLabel(string $Label) Set Intelligent analysis tag. Valid values:
+<li>evil_bot: malicious bot;</li>
+<li>suspect_bot: suspected bot;</li>
+<li>good_bot: good bot;</li>
+<li>normal: Normal request.</li>
+ * @method string getAction() Obtain Trigger the handling method corresponding to the Intelligent Analysis tag. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>captcha: digit verification code;</li>
+<li>monitor: observation.</li>
+ * @method void setAction(string $Action) Set Trigger the handling method corresponding to the Intelligent Analysis tag. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>captcha: digit verification code;</li>
+<li>monitor: observation.</li>
  */
 class IntelligenceRuleItem extends AbstractModel
 {
     /**
-     * @var string The tag to categorize bots. Values:
-<li>`evil_bot`: Malicious bot</li>
-<li>`suspect_bot`: Suspected bot</li>
-<li>`good_bot`: Good bot</li>
-<li>`normal`: Normal request</li>
+     * @var string Intelligent analysis tag. Valid values:
+<li>evil_bot: malicious bot;</li>
+<li>suspect_bot: suspected bot;</li>
+<li>good_bot: good bot;</li>
+<li>normal: Normal request.</li>
      */
     public $Label;
 
     /**
-     * @var string The action taken on bots. Values
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`monitor`: Observe</li>
+     * @var string Trigger the handling method corresponding to the Intelligent Analysis tag. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>captcha: digit verification code;</li>
+<li>monitor: observation.</li>
      */
     public $Action;
 
     /**
-     * @param string $Label The tag to categorize bots. Values:
-<li>`evil_bot`: Malicious bot</li>
-<li>`suspect_bot`: Suspected bot</li>
-<li>`good_bot`: Good bot</li>
-<li>`normal`: Normal request</li>
-     * @param string $Action The action taken on bots. Values
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`monitor`: Observe</li>
+     * @param string $Label Intelligent analysis tag. Valid values:
+<li>evil_bot: malicious bot;</li>
+<li>suspect_bot: suspected bot;</li>
+<li>good_bot: good bot;</li>
+<li>normal: Normal request.</li>
+     * @param string $Action Trigger the handling method corresponding to the Intelligent Analysis tag. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>captcha: digit verification code;</li>
+<li>monitor: observation.</li>
      */
     function __construct()
     {

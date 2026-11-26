@@ -18,100 +18,100 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Web security configuration.
+ * Web security configuration
  *
- * @method WafConfig getWafConfig() Obtain Managed rule. if the parameter is null or not filled, use the last set configuration by default.
- * @method void setWafConfig(WafConfig $WafConfig) Set Managed rule. if the parameter is null or not filled, use the last set configuration by default.
- * @method RateLimitConfig getRateLimitConfig() Obtain Rate limiting. if the parameter is null or not filled, the configuration last set will be used by default.
- * @method void setRateLimitConfig(RateLimitConfig $RateLimitConfig) Set Rate limiting. if the parameter is null or not filled, the configuration last set will be used by default.
- * @method AclConfig getAclConfig() Obtain Custom rule. specifies if the parameter is null or not filled, use the last set configuration by default.
- * @method void setAclConfig(AclConfig $AclConfig) Set Custom rule. specifies if the parameter is null or not filled, use the last set configuration by default.
- * @method BotConfig getBotConfig() Obtain Bot configuration. if the parameter is null or not filled, use the last set configuration by default.
- * @method void setBotConfig(BotConfig $BotConfig) Set Bot configuration. if the parameter is null or not filled, use the last set configuration by default.
- * @method SwitchConfig getSwitchConfig() Obtain Switch setting of the 7-layer protection. if the parameter is null or not filled, use the last set configuration by default.
- * @method void setSwitchConfig(SwitchConfig $SwitchConfig) Set Switch setting of the 7-layer protection. if the parameter is null or not filled, use the last set configuration by default.
- * @method IpTableConfig getIpTableConfig() Obtain Basic access control. if the parameter is null or not filled, use the last set configuration by default.
- * @method void setIpTableConfig(IpTableConfig $IpTableConfig) Set Basic access control. if the parameter is null or not filled, use the last set configuration by default.
- * @method ExceptConfig getExceptConfig() Obtain Exception rule configuration. if the parameter is null or not filled, use the last set configuration by default.
- * @method void setExceptConfig(ExceptConfig $ExceptConfig) Set Exception rule configuration. if the parameter is null or not filled, use the last set configuration by default.
- * @method DropPageConfig getDropPageConfig() Obtain Custom block page settings. if the parameter is null or not filled, use the last set configuration by default.
- * @method void setDropPageConfig(DropPageConfig $DropPageConfig) Set Custom block page settings. if the parameter is null or not filled, use the last set configuration by default.
- * @method TemplateConfig getTemplateConfig() Obtain Template configuration. specifies parameter usage for output only.
- * @method void setTemplateConfig(TemplateConfig $TemplateConfig) Set Template configuration. specifies parameter usage for output only.
- * @method SlowPostConfig getSlowPostConfig() Obtain Slow attack configuration. if the parameter is null or not filled, use the last set configuration by default.
- * @method void setSlowPostConfig(SlowPostConfig $SlowPostConfig) Set Slow attack configuration. if the parameter is null or not filled, use the last set configuration by default.
- * @method DetectLengthLimitConfig getDetectLengthLimitConfig() Obtain Detect length limit configuration. for output usage only.
- * @method void setDetectLengthLimitConfig(DetectLengthLimitConfig $DetectLengthLimitConfig) Set Detect length limit configuration. for output usage only.
+ * @method WafConfig getWafConfig() Obtain Managed rule. If the parameter is null or not filled, use the last set configuration by default.
+ * @method void setWafConfig(WafConfig $WafConfig) Set Managed rule. If the parameter is null or not filled, use the last set configuration by default.
+ * @method RateLimitConfig getRateLimitConfig() Obtain Rate limit. If the parameter is null or not filled, use the last set configuration by default.
+ * @method void setRateLimitConfig(RateLimitConfig $RateLimitConfig) Set Rate limit. If the parameter is null or not filled, use the last set configuration by default.
+ * @method AclConfig getAclConfig() Obtain Custom rule. If the parameter is null or not filled, use the last set configuration by default.
+ * @method void setAclConfig(AclConfig $AclConfig) Set Custom rule. If the parameter is null or not filled, use the last set configuration by default.
+ * @method BotConfig getBotConfig() Obtain Bot configuration. If the parameter is null or not filled, use the last set configuration by default.
+ * @method void setBotConfig(BotConfig $BotConfig) Set Bot configuration. If the parameter is null or not filled, use the last set configuration by default.
+ * @method SwitchConfig getSwitchConfig() Obtain Switch setting of the 7-layer protection. If the parameter is null or not filled, use the last set configuration by default.
+ * @method void setSwitchConfig(SwitchConfig $SwitchConfig) Set Switch setting of the 7-layer protection. If the parameter is null or not filled, use the last set configuration by default.
+ * @method IpTableConfig getIpTableConfig() Obtain Basic access control. If the parameter is null or not filled, use the last set configuration by default.
+ * @method void setIpTableConfig(IpTableConfig $IpTableConfig) Set Basic access control. If the parameter is null or not filled, use the last set configuration by default.
+ * @method ExceptConfig getExceptConfig() Obtain Exception rule configuration. If the parameter is null or not filled, use the last set configuration by default.
+ * @method void setExceptConfig(ExceptConfig $ExceptConfig) Set Exception rule configuration. If the parameter is null or not filled, use the last set configuration by default.
+ * @method DropPageConfig getDropPageConfig() Obtain Custom block page settings. If the parameter is null or not filled, the last set configuration is used by default.
+ * @method void setDropPageConfig(DropPageConfig $DropPageConfig) Set Custom block page settings. If the parameter is null or not filled, the last set configuration is used by default.
+ * @method TemplateConfig getTemplateConfig() Obtain Template configuration. This parameter is output-only.
+ * @method void setTemplateConfig(TemplateConfig $TemplateConfig) Set Template configuration. This parameter is output-only.
+ * @method SlowPostConfig getSlowPostConfig() Obtain Slow attack configuration. If the parameter is null or not filled, use the last set configuration by default.
+ * @method void setSlowPostConfig(SlowPostConfig $SlowPostConfig) Set Slow attack configuration. If the parameter is null or not filled, use the last set configuration by default.
+ * @method DetectLengthLimitConfig getDetectLengthLimitConfig() Obtain Detection length limit configuration. For output usage only.
+ * @method void setDetectLengthLimitConfig(DetectLengthLimitConfig $DetectLengthLimitConfig) Set Detection length limit configuration. For output usage only.
  */
 class SecurityConfig extends AbstractModel
 {
     /**
-     * @var WafConfig Managed rule. if the parameter is null or not filled, use the last set configuration by default.
+     * @var WafConfig Managed rule. If the parameter is null or not filled, use the last set configuration by default.
      */
     public $WafConfig;
 
     /**
-     * @var RateLimitConfig Rate limiting. if the parameter is null or not filled, the configuration last set will be used by default.
+     * @var RateLimitConfig Rate limit. If the parameter is null or not filled, use the last set configuration by default.
      */
     public $RateLimitConfig;
 
     /**
-     * @var AclConfig Custom rule. specifies if the parameter is null or not filled, use the last set configuration by default.
+     * @var AclConfig Custom rule. If the parameter is null or not filled, use the last set configuration by default.
      */
     public $AclConfig;
 
     /**
-     * @var BotConfig Bot configuration. if the parameter is null or not filled, use the last set configuration by default.
+     * @var BotConfig Bot configuration. If the parameter is null or not filled, use the last set configuration by default.
      */
     public $BotConfig;
 
     /**
-     * @var SwitchConfig Switch setting of the 7-layer protection. if the parameter is null or not filled, use the last set configuration by default.
+     * @var SwitchConfig Switch setting of the 7-layer protection. If the parameter is null or not filled, use the last set configuration by default.
      */
     public $SwitchConfig;
 
     /**
-     * @var IpTableConfig Basic access control. if the parameter is null or not filled, use the last set configuration by default.
+     * @var IpTableConfig Basic access control. If the parameter is null or not filled, use the last set configuration by default.
      */
     public $IpTableConfig;
 
     /**
-     * @var ExceptConfig Exception rule configuration. if the parameter is null or not filled, use the last set configuration by default.
+     * @var ExceptConfig Exception rule configuration. If the parameter is null or not filled, use the last set configuration by default.
      */
     public $ExceptConfig;
 
     /**
-     * @var DropPageConfig Custom block page settings. if the parameter is null or not filled, use the last set configuration by default.
+     * @var DropPageConfig Custom block page settings. If the parameter is null or not filled, the last set configuration is used by default.
      */
     public $DropPageConfig;
 
     /**
-     * @var TemplateConfig Template configuration. specifies parameter usage for output only.
+     * @var TemplateConfig Template configuration. This parameter is output-only.
      */
     public $TemplateConfig;
 
     /**
-     * @var SlowPostConfig Slow attack configuration. if the parameter is null or not filled, use the last set configuration by default.
+     * @var SlowPostConfig Slow attack configuration. If the parameter is null or not filled, use the last set configuration by default.
      */
     public $SlowPostConfig;
 
     /**
-     * @var DetectLengthLimitConfig Detect length limit configuration. for output usage only.
+     * @var DetectLengthLimitConfig Detection length limit configuration. For output usage only.
      */
     public $DetectLengthLimitConfig;
 
     /**
-     * @param WafConfig $WafConfig Managed rule. if the parameter is null or not filled, use the last set configuration by default.
-     * @param RateLimitConfig $RateLimitConfig Rate limiting. if the parameter is null or not filled, the configuration last set will be used by default.
-     * @param AclConfig $AclConfig Custom rule. specifies if the parameter is null or not filled, use the last set configuration by default.
-     * @param BotConfig $BotConfig Bot configuration. if the parameter is null or not filled, use the last set configuration by default.
-     * @param SwitchConfig $SwitchConfig Switch setting of the 7-layer protection. if the parameter is null or not filled, use the last set configuration by default.
-     * @param IpTableConfig $IpTableConfig Basic access control. if the parameter is null or not filled, use the last set configuration by default.
-     * @param ExceptConfig $ExceptConfig Exception rule configuration. if the parameter is null or not filled, use the last set configuration by default.
-     * @param DropPageConfig $DropPageConfig Custom block page settings. if the parameter is null or not filled, use the last set configuration by default.
-     * @param TemplateConfig $TemplateConfig Template configuration. specifies parameter usage for output only.
-     * @param SlowPostConfig $SlowPostConfig Slow attack configuration. if the parameter is null or not filled, use the last set configuration by default.
-     * @param DetectLengthLimitConfig $DetectLengthLimitConfig Detect length limit configuration. for output usage only.
+     * @param WafConfig $WafConfig Managed rule. If the parameter is null or not filled, use the last set configuration by default.
+     * @param RateLimitConfig $RateLimitConfig Rate limit. If the parameter is null or not filled, use the last set configuration by default.
+     * @param AclConfig $AclConfig Custom rule. If the parameter is null or not filled, use the last set configuration by default.
+     * @param BotConfig $BotConfig Bot configuration. If the parameter is null or not filled, use the last set configuration by default.
+     * @param SwitchConfig $SwitchConfig Switch setting of the 7-layer protection. If the parameter is null or not filled, use the last set configuration by default.
+     * @param IpTableConfig $IpTableConfig Basic access control. If the parameter is null or not filled, use the last set configuration by default.
+     * @param ExceptConfig $ExceptConfig Exception rule configuration. If the parameter is null or not filled, use the last set configuration by default.
+     * @param DropPageConfig $DropPageConfig Custom block page settings. If the parameter is null or not filled, the last set configuration is used by default.
+     * @param TemplateConfig $TemplateConfig Template configuration. This parameter is output-only.
+     * @param SlowPostConfig $SlowPostConfig Slow attack configuration. If the parameter is null or not filled, use the last set configuration by default.
+     * @param DetectLengthLimitConfig $DetectLengthLimitConfig Detection length limit configuration. For output usage only.
      */
     function __construct()
     {

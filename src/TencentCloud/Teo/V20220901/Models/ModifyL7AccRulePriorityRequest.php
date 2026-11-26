@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method array getRuleIds() Obtain The complete rule ID list under the site ID can be obtained by [Querying the seven-layer acceleration rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and will be executed from the front to the back.
- * @method void setRuleIds(array $RuleIds) Set The complete rule ID list under the site ID can be obtained by [Querying the seven-layer acceleration rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and will be executed from the front to the back.
+ * @method array getRuleIds() Obtain Complete rule ID list under the site ID. The rule ID list can be obtained through [Query Layer-7 Acceleration Rules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and rules will be executed in sequence from front to back.
+ * @method void setRuleIds(array $RuleIds) Set Complete rule ID list under the site ID. The rule ID list can be obtained through [Query Layer-7 Acceleration Rules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and rules will be executed in sequence from front to back.
  */
 class ModifyL7AccRulePriorityRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyL7AccRulePriorityRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array The complete rule ID list under the site ID can be obtained by [Querying the seven-layer acceleration rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and will be executed from the front to the back.
+     * @var array Complete rule ID list under the site ID. The rule ID list can be obtained through [Query Layer-7 Acceleration Rules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and rules will be executed in sequence from front to back.
      */
     public $RuleIds;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param array $RuleIds The complete rule ID list under the site ID can be obtained by [Querying the seven-layer acceleration rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and will be executed from the front to the back.
+     * @param array $RuleIds Complete rule ID list under the site ID. The rule ID list can be obtained through [Query Layer-7 Acceleration Rules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and rules will be executed in sequence from front to back.
      */
     function __construct()
     {

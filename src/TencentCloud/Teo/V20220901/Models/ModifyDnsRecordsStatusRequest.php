@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDnsRecordsStatus request structure.
  *
- * @method string getZoneId() Obtain Zone id.
- * @method void setZoneId(string $ZoneId) Set Zone id.
- * @method array getRecordsToEnable() Obtain List of dns record ids to be enabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
- * @method void setRecordsToEnable(array $RecordsToEnable) Set List of dns record ids to be enabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
- * @method array getRecordsToDisable() Obtain List of dns record ids to be disabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
- * @method void setRecordsToDisable(array $RecordsToDisable) Set List of dns record ids to be disabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method array getRecordsToEnable() Obtain List of DNS record IDs to be enabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in RecordsToEnable and RecordsToDisable at the same time.
+ * @method void setRecordsToEnable(array $RecordsToEnable) Set List of DNS record IDs to be enabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in RecordsToEnable and RecordsToDisable at the same time.
+ * @method array getRecordsToDisable() Obtain List of DNS record IDs to be disabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in both RecordsToEnable and RecordsToDisable at the same time.
+ * @method void setRecordsToDisable(array $RecordsToDisable) Set List of DNS record IDs to be disabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in both RecordsToEnable and RecordsToDisable at the same time.
  */
 class ModifyDnsRecordsStatusRequest extends AbstractModel
 {
     /**
-     * @var string Zone id.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var array List of dns record ids to be enabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
+     * @var array List of DNS record IDs to be enabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in RecordsToEnable and RecordsToDisable at the same time.
      */
     public $RecordsToEnable;
 
     /**
-     * @var array List of dns record ids to be disabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
+     * @var array List of DNS record IDs to be disabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in both RecordsToEnable and RecordsToDisable at the same time.
      */
     public $RecordsToDisable;
 
     /**
-     * @param string $ZoneId Zone id.
-     * @param array $RecordsToEnable List of dns record ids to be enabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
-     * @param array $RecordsToDisable List of dns record ids to be disabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
+     * @param string $ZoneId Zone ID.
+     * @param array $RecordsToEnable List of DNS record IDs to be enabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in RecordsToEnable and RecordsToDisable at the same time.
+     * @param array $RecordsToDisable List of DNS record IDs to be disabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in both RecordsToEnable and RecordsToDisable at the same time.
      */
     function __construct()
     {

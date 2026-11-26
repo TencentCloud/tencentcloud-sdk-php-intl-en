@@ -18,20 +18,20 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of rule engine conditions in `AND` relationship
+ * Rule engine condition AND relationship condition list
  *
- * @method array getConditions() Obtain Rule engine condition. This condition will be considered met if all items in the array are met.
- * @method void setConditions(array $Conditions) Set Rule engine condition. This condition will be considered met if all items in the array are met.
+ * @method array getConditions() Obtain Condition of a rule engine. This condition is considered met if all items in the array are met.
+ * @method void setConditions(array $Conditions) Set Condition of a rule engine. This condition is considered met if all items in the array are met.
  */
 class RuleAndConditions extends AbstractModel
 {
     /**
-     * @var array Rule engine condition. This condition will be considered met if all items in the array are met.
+     * @var array Condition of a rule engine. This condition is considered met if all items in the array are met.
      */
     public $Conditions;
 
     /**
-     * @param array $Conditions Rule engine condition. This condition will be considered met if all items in the array are met.
+     * @param array $Conditions Condition of a rule engine. This condition is considered met if all items in the array are met.
      */
     function __construct()
     {

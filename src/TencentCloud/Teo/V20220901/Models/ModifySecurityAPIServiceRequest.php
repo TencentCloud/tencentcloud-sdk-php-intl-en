@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySecurityAPIService request structure.
  *
- * @method string getZoneId() Obtain Zone ID.		
- * @method void setZoneId(string $ZoneId) Set Zone ID.		
+ * @method string getZoneId() Obtain Zone ID.	
+ * @method void setZoneId(string $ZoneId) Set Zone ID.	
  * @method array getAPIServices() Obtain API service list.
  * @method void setAPIServices(array $APIServices) Set API service list.
  */
 class ModifySecurityAPIServiceRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID.		
+     * @var string Zone ID.	
      */
     public $ZoneId;
 
@@ -38,7 +38,7 @@ class ModifySecurityAPIServiceRequest extends AbstractModel
     public $APIServices;
 
     /**
-     * @param string $ZoneId Zone ID.		
+     * @param string $ZoneId Zone ID.	
      * @param array $APIServices API service list.
      */
     function __construct()

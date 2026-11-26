@@ -18,96 +18,96 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of the alias domain name
+ * Alias domain information.
  *
- * @method string getAliasName() Obtain The alias domain name.
- * @method void setAliasName(string $AliasName) Set The alias domain name.
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getTargetName() Obtain The target domain name.
- * @method void setTargetName(string $TargetName) Set The target domain name.
- * @method string getStatus() Obtain Status of the alias domain name. Values:
-<li>`active`: Activated</li>
-<li>`pending`: Deploying</li>
-<li>`conflict`: Reclaimed</li>
-<li>`stop`: Stopped</li>
- * @method void setStatus(string $Status) Set Status of the alias domain name. Values:
-<li>`active`: Activated</li>
-<li>`pending`: Deploying</li>
-<li>`conflict`: Reclaimed</li>
-<li>`stop`: Stopped</li>
- * @method integer getForbidMode() Obtain The blocking mode. Values:
-<li>`0`: Not blocked</li>
-<li>`11`: Blocked due to regulatory compliance</li>
-<li>`14`: Blocked due to ICP filing not obtained</li>
- * @method void setForbidMode(integer $ForbidMode) Set The blocking mode. Values:
-<li>`0`: Not blocked</li>
-<li>`11`: Blocked due to regulatory compliance</li>
-<li>`14`: Blocked due to ICP filing not obtained</li>
- * @method string getCreatedOn() Obtain Creation time of the alias domain name.
- * @method void setCreatedOn(string $CreatedOn) Set Creation time of the alias domain name.
- * @method string getModifiedOn() Obtain Modification time of the alias domain name.
- * @method void setModifiedOn(string $ModifiedOn) Set Modification time of the alias domain name.
+ * @method string getAliasName() Obtain Alias domain name.
+ * @method void setAliasName(string $AliasName) Set Alias domain name.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method string getTargetName() Obtain Target domain name.
+ * @method void setTargetName(string $TargetName) Set Target domain name.
+ * @method string getStatus() Obtain Status of the alias domain name. Valid values:
+<li> active: effective; </li>
+<li> pending: deploying.</li>
+<li> conflict: Retrieved. </li>
+<li> stop: deactivated;</li>
+ * @method void setStatus(string $Status) Set Status of the alias domain name. Valid values:
+<li> active: effective; </li>
+<li> pending: deploying.</li>
+<li> conflict: Retrieved. </li>
+<li> stop: deactivated;</li>
+ * @method integer getForbidMode() Obtain Blocking mode. Valid values:
+<li>`0`: not blocked;</li>
+<li> 11: Block due to regulatory compliance;</li>
+<li> 14: Banned for non-filing.</li>
+ * @method void setForbidMode(integer $ForbidMode) Set Blocking mode. Valid values:
+<li>`0`: not blocked;</li>
+<li> 11: Block due to regulatory compliance;</li>
+<li> 14: Banned for non-filing.</li>
+ * @method string getCreatedOn() Obtain Alias domain creation time.
+ * @method void setCreatedOn(string $CreatedOn) Set Alias domain creation time.
+ * @method string getModifiedOn() Obtain Alias domain name modification time.
+ * @method void setModifiedOn(string $ModifiedOn) Set Alias domain name modification time.
  */
 class AliasDomain extends AbstractModel
 {
     /**
-     * @var string The alias domain name.
+     * @var string Alias domain name.
      */
     public $AliasName;
 
     /**
-     * @var string The site ID.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var string The target domain name.
+     * @var string Target domain name.
      */
     public $TargetName;
 
     /**
-     * @var string Status of the alias domain name. Values:
-<li>`active`: Activated</li>
-<li>`pending`: Deploying</li>
-<li>`conflict`: Reclaimed</li>
-<li>`stop`: Stopped</li>
+     * @var string Status of the alias domain name. Valid values:
+<li> active: effective; </li>
+<li> pending: deploying.</li>
+<li> conflict: Retrieved. </li>
+<li> stop: deactivated;</li>
      */
     public $Status;
 
     /**
-     * @var integer The blocking mode. Values:
-<li>`0`: Not blocked</li>
-<li>`11`: Blocked due to regulatory compliance</li>
-<li>`14`: Blocked due to ICP filing not obtained</li>
+     * @var integer Blocking mode. Valid values:
+<li>`0`: not blocked;</li>
+<li> 11: Block due to regulatory compliance;</li>
+<li> 14: Banned for non-filing.</li>
      */
     public $ForbidMode;
 
     /**
-     * @var string Creation time of the alias domain name.
+     * @var string Alias domain creation time.
      */
     public $CreatedOn;
 
     /**
-     * @var string Modification time of the alias domain name.
+     * @var string Alias domain name modification time.
      */
     public $ModifiedOn;
 
     /**
-     * @param string $AliasName The alias domain name.
-     * @param string $ZoneId The site ID.
-     * @param string $TargetName The target domain name.
-     * @param string $Status Status of the alias domain name. Values:
-<li>`active`: Activated</li>
-<li>`pending`: Deploying</li>
-<li>`conflict`: Reclaimed</li>
-<li>`stop`: Stopped</li>
-     * @param integer $ForbidMode The blocking mode. Values:
-<li>`0`: Not blocked</li>
-<li>`11`: Blocked due to regulatory compliance</li>
-<li>`14`: Blocked due to ICP filing not obtained</li>
-     * @param string $CreatedOn Creation time of the alias domain name.
-     * @param string $ModifiedOn Modification time of the alias domain name.
+     * @param string $AliasName Alias domain name.
+     * @param string $ZoneId Zone ID.
+     * @param string $TargetName Target domain name.
+     * @param string $Status Status of the alias domain name. Valid values:
+<li> active: effective; </li>
+<li> pending: deploying.</li>
+<li> conflict: Retrieved. </li>
+<li> stop: deactivated;</li>
+     * @param integer $ForbidMode Blocking mode. Valid values:
+<li>`0`: not blocked;</li>
+<li> 11: Block due to regulatory compliance;</li>
+<li> 14: Banned for non-filing.</li>
+     * @param string $CreatedOn Alias domain creation time.
+     * @param string $ModifiedOn Alias domain name modification time.
      */
     function __construct()
     {

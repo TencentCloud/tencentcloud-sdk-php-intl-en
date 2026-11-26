@@ -20,40 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Real-time log delivery task.
  *
- * @method string getTaskId() Obtain <p>Real-time log delivery task ID.</p>
- * @method void setTaskId(string $TaskId) Set <p>Real-time log delivery task ID.</p>
+ * @method string getTaskId() Obtain <p>ID of the real-time log delivery task.</p>
+ * @method void setTaskId(string $TaskId) Set <p>ID of the real-time log delivery task.</p>
  * @method string getTaskName() Obtain <p>Name of the real-time log delivery task.</p>
  * @method void setTaskName(string $TaskName) Set <p>Name of the real-time log delivery task.</p>
- * @method string getDeliveryStatus() Obtain <p>Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li></p>
- * @method void setDeliveryStatus(string $DeliveryStatus) Set <p>Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li></p>
- * @method string getTaskType() Obtain <p>Type of a real-time log shipping task. Valid values: <ul><li>cls: push to Tencent Cloud CLS;</li> <li>custom_endpoint: push to a custom HTTP(S) address;</li> <li>s3: push to an S3-compatible (compatible with the SigV4 authentication algorithm) object storage address;</li><li>aws_s3: push to an AWS S3 bucket address;</li><li>log_analysis: push to EdgeOne log analytics.</li></ul></p>
- * @method void setTaskType(string $TaskType) Set <p>Type of a real-time log shipping task. Valid values: <ul><li>cls: push to Tencent Cloud CLS;</li> <li>custom_endpoint: push to a custom HTTP(S) address;</li> <li>s3: push to an S3-compatible (compatible with the SigV4 authentication algorithm) object storage address;</li><li>aws_s3: push to an AWS S3 bucket address;</li><li>log_analysis: push to EdgeOne log analytics.</li></ul></p>
- * @method array getEntityList() Obtain <p>List of entities corresponding to the real-time log delivery task (Layer 7 domain or L4 proxy instance). Example values: <li>Layer 7 domain: domain.example.com;</li> <li>L4 proxy instance: sid-2s69eb5wcms7.</li></p>
- * @method void setEntityList(array $EntityList) Set <p>List of entities corresponding to the real-time log delivery task (Layer 7 domain or L4 proxy instance). Example values: <li>Layer 7 domain: domain.example.com;</li> <li>L4 proxy instance: sid-2s69eb5wcms7.</li></p>
- * @method string getLogType() Obtain <p>Data delivery type. Valid values: <li>l7-access-logs: L7 access log</li><li>application: four-layer proxy logs</li> <li>function: edge function logs</li> <li>web-attack: managed rule log</li> <li>domain: site acceleration log</li> <li>web-rateLiming: rate limit and CC attack defense log</li><li>web-rule: custom rule log</li> <li>web-bot: Bot Management Log.</li></p>
- * @method void setLogType(string $LogType) Set <p>Data delivery type. Valid values: <li>l7-access-logs: L7 access log</li><li>application: four-layer proxy logs</li> <li>function: edge function logs</li> <li>web-attack: managed rule log</li> <li>domain: site acceleration log</li> <li>web-rateLiming: rate limit and CC attack defense log</li><li>web-rule: custom rule log</li> <li>web-bot: Bot Management Log.</li></p>
- * @method string getArea() Obtain <p>Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></p>
- * @method void setArea(string $Area) Set <p>Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></p>
- * @method array getFields() Obtain <p>List of predefined fields for delivery.</p>
- * @method void setFields(array $Fields) Set <p>List of predefined fields for delivery.</p>
- * @method array getCustomFields() Obtain <p>Custom fields for delivery.</p>
- * @method void setCustomFields(array $CustomFields) Set <p>Custom fields for delivery.</p>
- * @method array getCustomExpressionFields() Obtain <p>List of custom expression fields for shipping.</p>
- * @method void setCustomExpressionFields(array $CustomExpressionFields) Set <p>List of custom expression fields for shipping.</p>
- * @method array getDeliveryConditions() Obtain <p>Filter criteria of log shipping.</p>
- * @method void setDeliveryConditions(array $DeliveryConditions) Set <p>Filter criteria of log shipping.</p>
+ * @method string getDeliveryStatus() Obtain <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled;</li><li>`deleted`: abnormally deleted. Check whether the destination Tencent Cloud CLS log set or log topic has been deleted.</li></ul>
+ * @method void setDeliveryStatus(string $DeliveryStatus) Set <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled;</li><li>`deleted`: abnormally deleted. Check whether the destination Tencent Cloud CLS log set or log topic has been deleted.</li></ul>
+ * @method string getTaskType() Obtain <p>Type of the real-time log delivery task. Valid values:</p><ul><li>`cls`: deliver to Tencent Cloud CLS;</li><li>`custom_endpoint`: deliver to a custom HTTP(S) endpoint;</li><li>`s3`: deliver to an S3-compatible (SigV4 authentication algorithm compatible) object storage endpoint;</li><li>`aws_s3`: deliver to an AWS S3 bucket;</li><li>`log_analysis`: deliver to EdgeOne Log Analysis.</li></ul>
+ * @method void setTaskType(string $TaskType) Set <p>Type of the real-time log delivery task. Valid values:</p><ul><li>`cls`: deliver to Tencent Cloud CLS;</li><li>`custom_endpoint`: deliver to a custom HTTP(S) endpoint;</li><li>`s3`: deliver to an S3-compatible (SigV4 authentication algorithm compatible) object storage endpoint;</li><li>`aws_s3`: deliver to an AWS S3 bucket;</li><li>`log_analysis`: deliver to EdgeOne Log Analysis.</li></ul>
+ * @method array getEntityList() Obtain <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>
+ * @method void setEntityList(array $EntityList) Set <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>
+ * @method string getLogType() Obtain <p>Data delivery type. Valid values:</p><ul><li>`l7-access-logs`: Layer 7 access logs;</li><li>`application`: Layer 4 proxy logs;</li><li>`function`: Edge Function execution logs;</li><li>`web-attack`: managed rule logs;</li><li>`domain`: site acceleration logs;</li><li>`web-rateLiming`: rate limiting and CC attack defense logs;</li><li>`web-rule`: custom rule logs;</li><li>`web-bot`: Bot management logs.</li></ul>
+ * @method void setLogType(string $LogType) Set <p>Data delivery type. Valid values:</p><ul><li>`l7-access-logs`: Layer 7 access logs;</li><li>`application`: Layer 4 proxy logs;</li><li>`function`: Edge Function execution logs;</li><li>`web-attack`: managed rule logs;</li><li>`domain`: site acceleration logs;</li><li>`web-rateLiming`: rate limiting and CC attack defense logs;</li><li>`web-rule`: custom rule logs;</li><li>`web-bot`: Bot management logs.</li></ul>
+ * @method string getArea() Obtain <p>Data delivery area. Valid values:</p><ul><li>`mainland`: Chinese mainland;</li><li>`overseas`: Global (excluding the Chinese mainland).</li></ul>
+ * @method void setArea(string $Area) Set <p>Data delivery area. Valid values:</p><ul><li>`mainland`: Chinese mainland;</li><li>`overseas`: Global (excluding the Chinese mainland).</li></ul>
+ * @method array getFields() Obtain <p>List of preset fields to deliver.</p>
+ * @method void setFields(array $Fields) Set <p>List of preset fields to deliver.</p>
+ * @method array getCustomFields() Obtain <p>List of custom fields to deliver.</p>
+ * @method void setCustomFields(array $CustomFields) Set <p>List of custom fields to deliver.</p>
+ * @method array getCustomExpressionFields() Obtain <p>List of custom expression fields to deliver.</p>
+ * @method void setCustomExpressionFields(array $CustomExpressionFields) Set <p>List of custom expression fields to deliver.</p>
+ * @method array getDeliveryConditions() Obtain <p>Filter conditions for log delivery.</p>
+ * @method void setDeliveryConditions(array $DeliveryConditions) Set <p>Filter conditions for log delivery.</p>
  * @method integer getSample() Obtain <p>Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%.</p>
  * @method void setSample(integer $Sample) Set <p>Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%.</p>
- * @method LogFormat getLogFormat() Obtain <p>Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:</p><li>When TaskType is custom_endpoint, the default format is an array of JSON objects, where each JSON object represents a log entry;</li><li>When TaskType is s3, the default format is JSON Lines.</li>
- * @method void setLogFormat(LogFormat $LogFormat) Set <p>Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:</p><li>When TaskType is custom_endpoint, the default format is an array of JSON objects, where each JSON object represents a log entry;</li><li>When TaskType is s3, the default format is JSON Lines.</li>
- * @method CLSTopic getCLS() Obtain <p>Configuration information of the CLS.</p>
- * @method void setCLS(CLSTopic $CLS) Set <p>Configuration information of the CLS.</p>
- * @method CustomEndpoint getCustomEndpoint() Obtain <p>Configuration information of the custom HTTP service.</p>
- * @method void setCustomEndpoint(CustomEndpoint $CustomEndpoint) Set <p>Configuration information of the custom HTTP service.</p>
- * @method S3 getS3() Obtain <p>Configuration message of S3-compatible (compatible with SigV4 authentication algorithm) object storage.</p>
- * @method void setS3(S3 $S3) Set <p>Configuration message of S3-compatible (compatible with SigV4 authentication algorithm) object storage.</p>
- * @method AWSS3 getAWSS3() Obtain <p>Configuration information of the AWS S3 object storage. It uses IAM role authorization, eliminating the need for persistent keys, and is applicable only to AWS native S3.</p>
- * @method void setAWSS3(AWSS3 $AWSS3) Set <p>Configuration information of the AWS S3 object storage. It uses IAM role authorization, eliminating the need for persistent keys, and is applicable only to AWS native S3.</p>
+ * @method LogFormat getLogFormat() Obtain <p>Output format for log delivery. A null value indicates the default format. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines.</li></ul>
+ * @method void setLogFormat(LogFormat $LogFormat) Set <p>Output format for log delivery. A null value indicates the default format. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines.</li></ul>
+ * @method CLSTopic getCLS() Obtain <p>Configuration of CLS.</p>
+ * @method void setCLS(CLSTopic $CLS) Set <p>Configuration of CLS.</p>
+ * @method CustomEndpoint getCustomEndpoint() Obtain <p>Configuration of the custom HTTP service.</p>
+ * @method void setCustomEndpoint(CustomEndpoint $CustomEndpoint) Set <p>Configuration of the custom HTTP service.</p>
+ * @method S3 getS3() Obtain <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage.</p>
+ * @method void setS3(S3 $S3) Set <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage.</p>
+ * @method AWSS3 getAWSS3() Obtain <p>Configuration of the AWS S3 object storage. It uses IAM role authorization, requires no long-term key, and applies only to AWS native S3.</p>
+ * @method void setAWSS3(AWSS3 $AWSS3) Set <p>Configuration of the AWS S3 object storage. It uses IAM role authorization, requires no long-term key, and applies only to AWS native S3.</p>
  * @method string getCreateTime() Obtain <p>Creation time.</p>
  * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
  * @method string getUpdateTime() Obtain <p>Update time.</p>
@@ -62,7 +62,7 @@ use TencentCloud\Common\AbstractModel;
 class RealtimeLogDeliveryTask extends AbstractModel
 {
     /**
-     * @var string <p>Real-time log delivery task ID.</p>
+     * @var string <p>ID of the real-time log delivery task.</p>
      */
     public $TaskId;
 
@@ -72,47 +72,47 @@ class RealtimeLogDeliveryTask extends AbstractModel
     public $TaskName;
 
     /**
-     * @var string <p>Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li></p>
+     * @var string <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled;</li><li>`deleted`: abnormally deleted. Check whether the destination Tencent Cloud CLS log set or log topic has been deleted.</li></ul>
      */
     public $DeliveryStatus;
 
     /**
-     * @var string <p>Type of a real-time log shipping task. Valid values: <ul><li>cls: push to Tencent Cloud CLS;</li> <li>custom_endpoint: push to a custom HTTP(S) address;</li> <li>s3: push to an S3-compatible (compatible with the SigV4 authentication algorithm) object storage address;</li><li>aws_s3: push to an AWS S3 bucket address;</li><li>log_analysis: push to EdgeOne log analytics.</li></ul></p>
+     * @var string <p>Type of the real-time log delivery task. Valid values:</p><ul><li>`cls`: deliver to Tencent Cloud CLS;</li><li>`custom_endpoint`: deliver to a custom HTTP(S) endpoint;</li><li>`s3`: deliver to an S3-compatible (SigV4 authentication algorithm compatible) object storage endpoint;</li><li>`aws_s3`: deliver to an AWS S3 bucket;</li><li>`log_analysis`: deliver to EdgeOne Log Analysis.</li></ul>
      */
     public $TaskType;
 
     /**
-     * @var array <p>List of entities corresponding to the real-time log delivery task (Layer 7 domain or L4 proxy instance). Example values: <li>Layer 7 domain: domain.example.com;</li> <li>L4 proxy instance: sid-2s69eb5wcms7.</li></p>
+     * @var array <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>
      */
     public $EntityList;
 
     /**
-     * @var string <p>Data delivery type. Valid values: <li>l7-access-logs: L7 access log</li><li>application: four-layer proxy logs</li> <li>function: edge function logs</li> <li>web-attack: managed rule log</li> <li>domain: site acceleration log</li> <li>web-rateLiming: rate limit and CC attack defense log</li><li>web-rule: custom rule log</li> <li>web-bot: Bot Management Log.</li></p>
+     * @var string <p>Data delivery type. Valid values:</p><ul><li>`l7-access-logs`: Layer 7 access logs;</li><li>`application`: Layer 4 proxy logs;</li><li>`function`: Edge Function execution logs;</li><li>`web-attack`: managed rule logs;</li><li>`domain`: site acceleration logs;</li><li>`web-rateLiming`: rate limiting and CC attack defense logs;</li><li>`web-rule`: custom rule logs;</li><li>`web-bot`: Bot management logs.</li></ul>
      */
     public $LogType;
 
     /**
-     * @var string <p>Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></p>
+     * @var string <p>Data delivery area. Valid values:</p><ul><li>`mainland`: Chinese mainland;</li><li>`overseas`: Global (excluding the Chinese mainland).</li></ul>
      */
     public $Area;
 
     /**
-     * @var array <p>List of predefined fields for delivery.</p>
+     * @var array <p>List of preset fields to deliver.</p>
      */
     public $Fields;
 
     /**
-     * @var array <p>Custom fields for delivery.</p>
+     * @var array <p>List of custom fields to deliver.</p>
      */
     public $CustomFields;
 
     /**
-     * @var array <p>List of custom expression fields for shipping.</p>
+     * @var array <p>List of custom expression fields to deliver.</p>
      */
     public $CustomExpressionFields;
 
     /**
-     * @var array <p>Filter criteria of log shipping.</p>
+     * @var array <p>Filter conditions for log delivery.</p>
      */
     public $DeliveryConditions;
 
@@ -122,27 +122,27 @@ class RealtimeLogDeliveryTask extends AbstractModel
     public $Sample;
 
     /**
-     * @var LogFormat <p>Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:</p><li>When TaskType is custom_endpoint, the default format is an array of JSON objects, where each JSON object represents a log entry;</li><li>When TaskType is s3, the default format is JSON Lines.</li>
+     * @var LogFormat <p>Output format for log delivery. A null value indicates the default format. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines.</li></ul>
      */
     public $LogFormat;
 
     /**
-     * @var CLSTopic <p>Configuration information of the CLS.</p>
+     * @var CLSTopic <p>Configuration of CLS.</p>
      */
     public $CLS;
 
     /**
-     * @var CustomEndpoint <p>Configuration information of the custom HTTP service.</p>
+     * @var CustomEndpoint <p>Configuration of the custom HTTP service.</p>
      */
     public $CustomEndpoint;
 
     /**
-     * @var S3 <p>Configuration message of S3-compatible (compatible with SigV4 authentication algorithm) object storage.</p>
+     * @var S3 <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage.</p>
      */
     public $S3;
 
     /**
-     * @var AWSS3 <p>Configuration information of the AWS S3 object storage. It uses IAM role authorization, eliminating the need for persistent keys, and is applicable only to AWS native S3.</p>
+     * @var AWSS3 <p>Configuration of the AWS S3 object storage. It uses IAM role authorization, requires no long-term key, and applies only to AWS native S3.</p>
      */
     public $AWSS3;
 
@@ -157,23 +157,23 @@ class RealtimeLogDeliveryTask extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @param string $TaskId <p>Real-time log delivery task ID.</p>
+     * @param string $TaskId <p>ID of the real-time log delivery task.</p>
      * @param string $TaskName <p>Name of the real-time log delivery task.</p>
-     * @param string $DeliveryStatus <p>Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li></p>
-     * @param string $TaskType <p>Type of a real-time log shipping task. Valid values: <ul><li>cls: push to Tencent Cloud CLS;</li> <li>custom_endpoint: push to a custom HTTP(S) address;</li> <li>s3: push to an S3-compatible (compatible with the SigV4 authentication algorithm) object storage address;</li><li>aws_s3: push to an AWS S3 bucket address;</li><li>log_analysis: push to EdgeOne log analytics.</li></ul></p>
-     * @param array $EntityList <p>List of entities corresponding to the real-time log delivery task (Layer 7 domain or L4 proxy instance). Example values: <li>Layer 7 domain: domain.example.com;</li> <li>L4 proxy instance: sid-2s69eb5wcms7.</li></p>
-     * @param string $LogType <p>Data delivery type. Valid values: <li>l7-access-logs: L7 access log</li><li>application: four-layer proxy logs</li> <li>function: edge function logs</li> <li>web-attack: managed rule log</li> <li>domain: site acceleration log</li> <li>web-rateLiming: rate limit and CC attack defense log</li><li>web-rule: custom rule log</li> <li>web-bot: Bot Management Log.</li></p>
-     * @param string $Area <p>Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></p>
-     * @param array $Fields <p>List of predefined fields for delivery.</p>
-     * @param array $CustomFields <p>Custom fields for delivery.</p>
-     * @param array $CustomExpressionFields <p>List of custom expression fields for shipping.</p>
-     * @param array $DeliveryConditions <p>Filter criteria of log shipping.</p>
+     * @param string $DeliveryStatus <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled;</li><li>`deleted`: abnormally deleted. Check whether the destination Tencent Cloud CLS log set or log topic has been deleted.</li></ul>
+     * @param string $TaskType <p>Type of the real-time log delivery task. Valid values:</p><ul><li>`cls`: deliver to Tencent Cloud CLS;</li><li>`custom_endpoint`: deliver to a custom HTTP(S) endpoint;</li><li>`s3`: deliver to an S3-compatible (SigV4 authentication algorithm compatible) object storage endpoint;</li><li>`aws_s3`: deliver to an AWS S3 bucket;</li><li>`log_analysis`: deliver to EdgeOne Log Analysis.</li></ul>
+     * @param array $EntityList <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>
+     * @param string $LogType <p>Data delivery type. Valid values:</p><ul><li>`l7-access-logs`: Layer 7 access logs;</li><li>`application`: Layer 4 proxy logs;</li><li>`function`: Edge Function execution logs;</li><li>`web-attack`: managed rule logs;</li><li>`domain`: site acceleration logs;</li><li>`web-rateLiming`: rate limiting and CC attack defense logs;</li><li>`web-rule`: custom rule logs;</li><li>`web-bot`: Bot management logs.</li></ul>
+     * @param string $Area <p>Data delivery area. Valid values:</p><ul><li>`mainland`: Chinese mainland;</li><li>`overseas`: Global (excluding the Chinese mainland).</li></ul>
+     * @param array $Fields <p>List of preset fields to deliver.</p>
+     * @param array $CustomFields <p>List of custom fields to deliver.</p>
+     * @param array $CustomExpressionFields <p>List of custom expression fields to deliver.</p>
+     * @param array $DeliveryConditions <p>Filter conditions for log delivery.</p>
      * @param integer $Sample <p>Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%.</p>
-     * @param LogFormat $LogFormat <p>Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:</p><li>When TaskType is custom_endpoint, the default format is an array of JSON objects, where each JSON object represents a log entry;</li><li>When TaskType is s3, the default format is JSON Lines.</li>
-     * @param CLSTopic $CLS <p>Configuration information of the CLS.</p>
-     * @param CustomEndpoint $CustomEndpoint <p>Configuration information of the custom HTTP service.</p>
-     * @param S3 $S3 <p>Configuration message of S3-compatible (compatible with SigV4 authentication algorithm) object storage.</p>
-     * @param AWSS3 $AWSS3 <p>Configuration information of the AWS S3 object storage. It uses IAM role authorization, eliminating the need for persistent keys, and is applicable only to AWS native S3.</p>
+     * @param LogFormat $LogFormat <p>Output format for log delivery. A null value indicates the default format. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines.</li></ul>
+     * @param CLSTopic $CLS <p>Configuration of CLS.</p>
+     * @param CustomEndpoint $CustomEndpoint <p>Configuration of the custom HTTP service.</p>
+     * @param S3 $S3 <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage.</p>
+     * @param AWSS3 $AWSS3 <p>Configuration of the AWS S3 object storage. It uses IAM role authorization, requires no long-term key, and applies only to AWS native S3.</p>
      * @param string $CreateTime <p>Creation time.</p>
      * @param string $UpdateTime <p>Update time.</p>
      */

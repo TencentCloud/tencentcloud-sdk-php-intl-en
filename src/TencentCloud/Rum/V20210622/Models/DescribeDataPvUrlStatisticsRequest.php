@@ -62,18 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBrowser(string $Browser) Set Browser
  * @method string getEnv() Obtain Environment
  * @method void setEnv(string $Env) Set Environment
- * @method integer getGroupByType() Obtain group by parameter value enumeration: 1:1m
-   2:5m  3:30m 
-   4:1h
- 5:1d
- * @method void setGroupByType(integer $GroupByType) Set group by parameter value enumeration: 1:1m
-   2:5m  3:30m 
-   4:1h
- 5:1d
- * @method integer getIsNewData() Obtain 1: Query Intelligent Research
-0: Use old logic, already offline, do not use
- * @method void setIsNewData(integer $IsNewData) Set 1: Query Intelligent Research
-0: Use old logic, already offline, do not use
+ * @method integer getGroupByType() Obtain Time aggregation interval. Valid values: 1 (1 minute), 2 (5 minutes), 3 (30 minutes), 4 (1 hour), and 5 (1 day).
+ * @method void setGroupByType(integer $GroupByType) Set Time aggregation interval. Valid values: 1 (1 minute), 2 (5 minutes), 3 (30 minutes), 4 (1 hour), and 5 (1 day).
+ * @method integer getIsNewData() Obtain Set to 1 to query the new data source. The legacy query mode (0) has been retired.
+ * @method void setIsNewData(integer $IsNewData) Set Set to 1 to query the new data source. The legacy query mode (0) has been retired.
  */
 class DescribeDataPvUrlStatisticsRequest extends AbstractModel
 {
@@ -183,16 +175,12 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
     public $Env;
 
     /**
-     * @var integer group by parameter value enumeration: 1:1m
-   2:5m  3:30m 
-   4:1h
- 5:1d
+     * @var integer Time aggregation interval. Valid values: 1 (1 minute), 2 (5 minutes), 3 (30 minutes), 4 (1 hour), and 5 (1 day).
      */
     public $GroupByType;
 
     /**
-     * @var integer 1: Query Intelligent Research
-0: Use old logic, already offline, do not use
+     * @var integer Set to 1 to query the new data source. The legacy query mode (0) has been retired.
      */
     public $IsNewData;
 
@@ -218,12 +206,8 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
      * @param string $Os OS
      * @param string $Browser Browser
      * @param string $Env Environment
-     * @param integer $GroupByType group by parameter value enumeration: 1:1m
-   2:5m  3:30m 
-   4:1h
- 5:1d
-     * @param integer $IsNewData 1: Query Intelligent Research
-0: Use old logic, already offline, do not use
+     * @param integer $GroupByType Time aggregation interval. Valid values: 1 (1 minute), 2 (5 minutes), 3 (30 minutes), 4 (1 hour), and 5 (1 day).
+     * @param integer $IsNewData Set to 1 to query the new data source. The legacy query mode (0) has been retired.
      */
     function __construct()
     {

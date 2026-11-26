@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeContentQuota request structure.
  *
- * @method string getZoneId() Obtain ID of the site.
- * @method void setZoneId(string $ZoneId) Set ID of the site.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
  */
 class DescribeContentQuotaRequest extends AbstractModel
 {
     /**
-     * @var string ID of the site.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @param string $ZoneId ID of the site.
+     * @param string $ZoneId Zone ID.
      */
     function __construct()
     {

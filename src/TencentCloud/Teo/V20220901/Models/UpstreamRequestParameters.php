@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Origin-pull request parameters configuration.
+ * Origin-pull request configuration parameters.
  *
- * @method UpstreamRequestQueryString getQueryString() Obtain Query string configuration. Optional configuration, leave blank for no configuration.
- * @method void setQueryString(UpstreamRequestQueryString $QueryString) Set Query string configuration. Optional configuration, leave blank for no configuration.
- * @method UpstreamRequestCookie getCookie() Obtain Cookie configuration. Optional configuration. Leave it blank for no configuration.
- * @method void setCookie(UpstreamRequestCookie $Cookie) Set Cookie configuration. Optional configuration. Leave it blank for no configuration.
+ * @method UpstreamRequestQueryString getQueryString() Obtain String configuration query. This is an optional configuration. No configuration is applied if this parameter is left empty.
+ * @method void setQueryString(UpstreamRequestQueryString $QueryString) Set String configuration query. This is an optional configuration. No configuration is applied if this parameter is left empty.
+ * @method UpstreamRequestCookie getCookie() Obtain Cookie configuration. This is an optional configuration item. Leaving it blank means no configuration.
+ * @method void setCookie(UpstreamRequestCookie $Cookie) Set Cookie configuration. This is an optional configuration item. Leaving it blank means no configuration.
  */
 class UpstreamRequestParameters extends AbstractModel
 {
     /**
-     * @var UpstreamRequestQueryString Query string configuration. Optional configuration, leave blank for no configuration.
+     * @var UpstreamRequestQueryString String configuration query. This is an optional configuration. No configuration is applied if this parameter is left empty.
      */
     public $QueryString;
 
     /**
-     * @var UpstreamRequestCookie Cookie configuration. Optional configuration. Leave it blank for no configuration.
+     * @var UpstreamRequestCookie Cookie configuration. This is an optional configuration item. Leaving it blank means no configuration.
      */
     public $Cookie;
 
     /**
-     * @param UpstreamRequestQueryString $QueryString Query string configuration. Optional configuration, leave blank for no configuration.
-     * @param UpstreamRequestCookie $Cookie Cookie configuration. Optional configuration. Leave it blank for no configuration.
+     * @param UpstreamRequestQueryString $QueryString String configuration query. This is an optional configuration. No configuration is applied if this parameter is left empty.
+     * @param UpstreamRequestCookie $Cookie Cookie configuration. This is an optional configuration item. Leaving it blank means no configuration.
      */
     function __construct()
     {

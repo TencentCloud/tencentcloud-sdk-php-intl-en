@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rule engine nested rule
+ * Nested rule of the rule engine
  *
- * @method array getRules() Obtain Nested rule settings
- * @method void setRules(array $Rules) Set Nested rule settings
- * @method array getTags() Obtain Tag of the rule.
- * @method void setTags(array $Tags) Set Tag of the rule.
+ * @method array getRules() Obtain Nested rule information.
+ * @method void setRules(array $Rules) Set Nested rule information.
+ * @method array getTags() Obtain Rule tag.
+ * @method void setTags(array $Tags) Set Rule tag.
  */
 class SubRuleItem extends AbstractModel
 {
     /**
-     * @var array Nested rule settings
+     * @var array Nested rule information.
      */
     public $Rules;
 
     /**
-     * @var array Tag of the rule.
+     * @var array Rule tag.
      */
     public $Tags;
 
     /**
-     * @param array $Rules Nested rule settings
-     * @param array $Tags Tag of the rule.
+     * @param array $Rules Nested rule information.
+     * @param array $Tags Rule tag.
      */
     function __construct()
     {

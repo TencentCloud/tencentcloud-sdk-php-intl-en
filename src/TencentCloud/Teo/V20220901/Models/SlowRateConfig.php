@@ -18,44 +18,44 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The configuration to detect slow attacks
+ * Basic configuration of slow attack.
  *
- * @method string getSwitch() Obtain Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method integer getInterval() Obtain The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
- * @method void setInterval(integer $Interval) Set The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
- * @method integer getThreshold() Obtain Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
- * @method void setThreshold(integer $Threshold) Set Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
+ * @method string getSwitch() Obtain Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method integer getInterval() Obtain Statistics interval in seconds. After the first packet transfer is complete, the data transmission axis is split by this parameter, and slow attacks are calculated separately for each shard.
+ * @method void setInterval(integer $Interval) Set Statistics interval in seconds. After the first packet transfer is complete, the data transmission axis is split by this parameter, and slow attacks are calculated separately for each shard.
+ * @method integer getThreshold() Obtain Rate threshold applied for statistics, in bps. If the transmission rate in this shard does not reach this parameter value, it is determined as a slow attack and the handling method for slow attacks is applied.
+ * @method void setThreshold(integer $Threshold) Set Rate threshold applied for statistics, in bps. If the transmission rate in this shard does not reach this parameter value, it is determined as a slow attack and the handling method for slow attacks is applied.
  */
 class SlowRateConfig extends AbstractModel
 {
     /**
-     * @var string Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var integer The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
+     * @var integer Statistics interval in seconds. After the first packet transfer is complete, the data transmission axis is split by this parameter, and slow attacks are calculated separately for each shard.
      */
     public $Interval;
 
     /**
-     * @var integer Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
+     * @var integer Rate threshold applied for statistics, in bps. If the transmission rate in this shard does not reach this parameter value, it is determined as a slow attack and the handling method for slow attacks is applied.
      */
     public $Threshold;
 
     /**
-     * @param string $Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param integer $Interval The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
-     * @param integer $Threshold Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
+     * @param string $Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param integer $Interval Statistics interval in seconds. After the first packet transfer is complete, the data transmission axis is split by this parameter, and slow attacks are calculated separately for each shard.
+     * @param integer $Threshold Rate threshold applied for statistics, in bps. If the transmission rate in this shard does not reach this parameter value, it is determined as a slow attack and the handling method for slow attacks is applied.
      */
     function __construct()
     {

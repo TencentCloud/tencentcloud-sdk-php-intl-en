@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDnsRecords request structure.
  *
- * @method string getZoneId() Obtain Zone id.
- * @method void setZoneId(string $ZoneId) Set Zone id.
- * @method array getRecordIds() Obtain List of dns record ids to be deleted, upper limit: 1000.
- * @method void setRecordIds(array $RecordIds) Set List of dns record ids to be deleted, upper limit: 1000.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method array getRecordIds() Obtain List of DNS record IDs to be deleted. Upper limit: 1000.
+ * @method void setRecordIds(array $RecordIds) Set List of DNS record IDs to be deleted. Upper limit: 1000.
  */
 class DeleteDnsRecordsRequest extends AbstractModel
 {
     /**
-     * @var string Zone id.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var array List of dns record ids to be deleted, upper limit: 1000.
+     * @var array List of DNS record IDs to be deleted. Upper limit: 1000.
      */
     public $RecordIds;
 
     /**
-     * @param string $ZoneId Zone id.
-     * @param array $RecordIds List of dns record ids to be deleted, upper limit: 1000.
+     * @param string $ZoneId Zone ID.
+     * @param array $RecordIds List of DNS record IDs to be deleted. Upper limit: 1000.
      */
     function __construct()
     {

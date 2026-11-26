@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Custom configuration
  *
- * @method string getActionId() Obtain <p>ID of the custom configuration item.</p><p>You can obtain it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
- * @method void setActionId(string $ActionId) Set <p>ID of the custom configuration item.</p><p>You can obtain it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
- * @method array getParameters() Obtain <p>Parameter values of each parameter field under this custom configuration.</p><p>You can obtain them through the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActionsForRuleEngine.</p>
- * @method void setParameters(array $Parameters) Set <p>Parameter values of each parameter field under this custom configuration.</p><p>You can obtain them through the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActionsForRuleEngine.</p>
+ * @method string getActionId() Obtain <p>Configuration item ID for custom configuration.</p><p>You can get it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+ * @method void setActionId(string $ActionId) Set <p>Configuration item ID for custom configuration.</p><p>You can get it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+ * @method array getParameters() Obtain <p>Values of each parameter field under this custom configuration item.</p><p>You can obtain them through the CustomActionSet[].Parameters field in the return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+ * @method void setParameters(array $Parameters) Set <p>Values of each parameter field under this custom configuration item.</p><p>You can obtain them through the CustomActionSet[].Parameters field in the return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
  */
 class CustomAction extends AbstractModel
 {
     /**
-     * @var string <p>ID of the custom configuration item.</p><p>You can obtain it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+     * @var string <p>Configuration item ID for custom configuration.</p><p>You can get it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
      */
     public $ActionId;
 
     /**
-     * @var array <p>Parameter values of each parameter field under this custom configuration.</p><p>You can obtain them through the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActionsForRuleEngine.</p>
+     * @var array <p>Values of each parameter field under this custom configuration item.</p><p>You can obtain them through the CustomActionSet[].Parameters field in the return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
      */
     public $Parameters;
 
     /**
-     * @param string $ActionId <p>ID of the custom configuration item.</p><p>You can obtain it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
-     * @param array $Parameters <p>Parameter values of each parameter field under this custom configuration.</p><p>You can obtain them through the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActionsForRuleEngine.</p>
+     * @param string $ActionId <p>Configuration item ID for custom configuration.</p><p>You can get it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+     * @param array $Parameters <p>Values of each parameter field under this custom configuration item.</p><p>You can obtain them through the CustomActionSet[].Parameters field in the return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
      */
     function __construct()
     {

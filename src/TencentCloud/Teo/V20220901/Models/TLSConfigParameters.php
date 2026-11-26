@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SSL/TLS Security configuration parameters.
+ * SSL/TLS security configuration parameter.
  *
- * @method array getVersion() Obtain TLS version. at least one must be specified. if multiple versions are specified, they must be consecutive, e.g., enable tls1, 1.1, 1.2, and 1.3. it is not allowed to enable only 1 and 1.2 while disabling 1.1. valid values: <li>`tlsv1`: tlsv1 version;</li><li>`tlsv1.1`: tlsv1.1 version;</li><li>`tlsv1.2`: tlsv1.2 version;</li><li>`tlsv1.3`: tlsv1.3 version.</li>.
- * @method void setVersion(array $Version) Set TLS version. at least one must be specified. if multiple versions are specified, they must be consecutive, e.g., enable tls1, 1.1, 1.2, and 1.3. it is not allowed to enable only 1 and 1.2 while disabling 1.1. valid values: <li>`tlsv1`: tlsv1 version;</li><li>`tlsv1.1`: tlsv1.1 version;</li><li>`tlsv1.2`: tlsv1.2 version;</li><li>`tlsv1.3`: tlsv1.3 version.</li>.
- * @method string getCipherSuite() Obtain Cipher suite. for detailed information, please refer to [tls versions and cipher suites description](https://intl.cloud.tencent.com/document/product/1552/86545?from_cn_redirect=1). valid values: <li>`loose-v2023`: loose-v2023 cipher suite;</li><li>`general-v2023`: general-v2023 cipher suite;</li><li>`strict-v2023`: strict-v2023 cipher suite.</li>.
- * @method void setCipherSuite(string $CipherSuite) Set Cipher suite. for detailed information, please refer to [tls versions and cipher suites description](https://intl.cloud.tencent.com/document/product/1552/86545?from_cn_redirect=1). valid values: <li>`loose-v2023`: loose-v2023 cipher suite;</li><li>`general-v2023`: general-v2023 cipher suite;</li><li>`strict-v2023`: strict-v2023 cipher suite.</li>.
+ * @method array getVersion() Obtain TLS version. At least one is required. If multiple versions are specified, they need to be consecutive version numbers. For example, if you enable TLS 1, 1.1, 1.2, and 1.3, you cannot only enable 1 and 1.2 while disabling 1.1. Valid values: <li>TLSv1: TLSv1 version</li><li>TLSv1.1: TLSv1.1 version</li><li>TLSv1.2: TLSv1.2 version</li><li>TLSv1.3: TLSv1.3 version.</li>
+ * @method void setVersion(array $Version) Set TLS version. At least one is required. If multiple versions are specified, they need to be consecutive version numbers. For example, if you enable TLS 1, 1.1, 1.2, and 1.3, you cannot only enable 1 and 1.2 while disabling 1.1. Valid values: <li>TLSv1: TLSv1 version</li><li>TLSv1.1: TLSv1.1 version</li><li>TLSv1.2: TLSv1.2 version</li><li>TLSv1.3: TLSv1.3 version.</li>
+ * @method string getCipherSuite() Obtain Cipher suite. For details, see [TLS version and cipher suite description](https://www.tencentcloud.com/document/product/1552/86545?from_cn_redirect=1). Valid values: <li>loose-v2023: loose-v2023 cipher suite;</li><li>general-v2023: general-v2023 cipher suite;</li><li>strict-v2023: strict-v2023 cipher suite.</li>
+ * @method void setCipherSuite(string $CipherSuite) Set Cipher suite. For details, see [TLS version and cipher suite description](https://www.tencentcloud.com/document/product/1552/86545?from_cn_redirect=1). Valid values: <li>loose-v2023: loose-v2023 cipher suite;</li><li>general-v2023: general-v2023 cipher suite;</li><li>strict-v2023: strict-v2023 cipher suite.</li>
  */
 class TLSConfigParameters extends AbstractModel
 {
     /**
-     * @var array TLS version. at least one must be specified. if multiple versions are specified, they must be consecutive, e.g., enable tls1, 1.1, 1.2, and 1.3. it is not allowed to enable only 1 and 1.2 while disabling 1.1. valid values: <li>`tlsv1`: tlsv1 version;</li><li>`tlsv1.1`: tlsv1.1 version;</li><li>`tlsv1.2`: tlsv1.2 version;</li><li>`tlsv1.3`: tlsv1.3 version.</li>.
+     * @var array TLS version. At least one is required. If multiple versions are specified, they need to be consecutive version numbers. For example, if you enable TLS 1, 1.1, 1.2, and 1.3, you cannot only enable 1 and 1.2 while disabling 1.1. Valid values: <li>TLSv1: TLSv1 version</li><li>TLSv1.1: TLSv1.1 version</li><li>TLSv1.2: TLSv1.2 version</li><li>TLSv1.3: TLSv1.3 version.</li>
      */
     public $Version;
 
     /**
-     * @var string Cipher suite. for detailed information, please refer to [tls versions and cipher suites description](https://intl.cloud.tencent.com/document/product/1552/86545?from_cn_redirect=1). valid values: <li>`loose-v2023`: loose-v2023 cipher suite;</li><li>`general-v2023`: general-v2023 cipher suite;</li><li>`strict-v2023`: strict-v2023 cipher suite.</li>.
+     * @var string Cipher suite. For details, see [TLS version and cipher suite description](https://www.tencentcloud.com/document/product/1552/86545?from_cn_redirect=1). Valid values: <li>loose-v2023: loose-v2023 cipher suite;</li><li>general-v2023: general-v2023 cipher suite;</li><li>strict-v2023: strict-v2023 cipher suite.</li>
      */
     public $CipherSuite;
 
     /**
-     * @param array $Version TLS version. at least one must be specified. if multiple versions are specified, they must be consecutive, e.g., enable tls1, 1.1, 1.2, and 1.3. it is not allowed to enable only 1 and 1.2 while disabling 1.1. valid values: <li>`tlsv1`: tlsv1 version;</li><li>`tlsv1.1`: tlsv1.1 version;</li><li>`tlsv1.2`: tlsv1.2 version;</li><li>`tlsv1.3`: tlsv1.3 version.</li>.
-     * @param string $CipherSuite Cipher suite. for detailed information, please refer to [tls versions and cipher suites description](https://intl.cloud.tencent.com/document/product/1552/86545?from_cn_redirect=1). valid values: <li>`loose-v2023`: loose-v2023 cipher suite;</li><li>`general-v2023`: general-v2023 cipher suite;</li><li>`strict-v2023`: strict-v2023 cipher suite.</li>.
+     * @param array $Version TLS version. At least one is required. If multiple versions are specified, they need to be consecutive version numbers. For example, if you enable TLS 1, 1.1, 1.2, and 1.3, you cannot only enable 1 and 1.2 while disabling 1.1. Valid values: <li>TLSv1: TLSv1 version</li><li>TLSv1.1: TLSv1.1 version</li><li>TLSv1.2: TLSv1.2 version</li><li>TLSv1.3: TLSv1.3 version.</li>
+     * @param string $CipherSuite Cipher suite. For details, see [TLS version and cipher suite description](https://www.tencentcloud.com/document/product/1552/86545?from_cn_redirect=1). Valid values: <li>loose-v2023: loose-v2023 cipher suite;</li><li>general-v2023: general-v2023 cipher suite;</li><li>strict-v2023: strict-v2023 cipher suite.</li>
      */
     function __construct()
     {

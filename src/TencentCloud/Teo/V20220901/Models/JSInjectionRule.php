@@ -22,19 +22,19 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRuleId() Obtain Rule ID.
  * @method void setRuleId(string $RuleId) Set Rule ID.
- * @method string getName() Obtain Rule name
- * @method void setName(string $Name) Set Rule name
- * @method integer getPriority() Obtain Rule priority. a smaller value indicates higher priority execution. value range: 0-100. default value is 0.
- * @method void setPriority(integer $Priority) Set Rule priority. a smaller value indicates higher priority execution. value range: 0-100. default value is 0.
- * @method string getCondition() Obtain Specifies the match condition content, which must comply with the expression grammar. please refer to the product document for detailed requirements.
- * @method void setCondition(string $Condition) Set Specifies the match condition content, which must comply with the expression grammar. please refer to the product document for detailed requirements.
- * @method string getInjectJS() Obtain JavaScript injection option. default value: run-attestations. valid values:.
-<li>no-injection: specifies not to inject JavaScript.</li>.
-<li>inject-sdk-only: injects sdks for all currently supported authentication methods. currently supported: TC-RCE and TC-CAPTCHA. note: to execute authentication detection, configure challenge rules.</li>.
+ * @method string getName() Obtain Rule name.
+ * @method void setName(string $Name) Set Rule name.
+ * @method integer getPriority() Obtain Rule priority. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.
+ * @method void setPriority(integer $Priority) Set Rule priority. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.
+ * @method string getCondition() Obtain Match condition content. It must comply with the expression syntax. For detailed specifications, see the product document.
+ * @method void setCondition(string $Condition) Set Match condition content. It must comply with the expression syntax. For detailed specifications, see the product document.
+ * @method string getInjectJS() Obtain JavaScript injection options. Default value: run-attestations. Valid values:
+<li> no-injection: Do not inject JavaScript;</li>
+<li> inject-sdk-only: Inject the SDKs of all currently supported authentication methods, including TC-RCE and TC-CAPTCHA. Note: To execute authentication detection, configure challenge rules.</li>
 
- * @method void setInjectJS(string $InjectJS) Set JavaScript injection option. default value: run-attestations. valid values:.
-<li>no-injection: specifies not to inject JavaScript.</li>.
-<li>inject-sdk-only: injects sdks for all currently supported authentication methods. currently supported: TC-RCE and TC-CAPTCHA. note: to execute authentication detection, configure challenge rules.</li>.
+ * @method void setInjectJS(string $InjectJS) Set JavaScript injection options. Default value: run-attestations. Valid values:
+<li> no-injection: Do not inject JavaScript;</li>
+<li> inject-sdk-only: Inject the SDKs of all currently supported authentication methods, including TC-RCE and TC-CAPTCHA. Note: To execute authentication detection, configure challenge rules.</li>
  */
 class JSInjectionRule extends AbstractModel
 {
@@ -44,36 +44,36 @@ class JSInjectionRule extends AbstractModel
     public $RuleId;
 
     /**
-     * @var string Rule name
+     * @var string Rule name.
      */
     public $Name;
 
     /**
-     * @var integer Rule priority. a smaller value indicates higher priority execution. value range: 0-100. default value is 0.
+     * @var integer Rule priority. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.
      */
     public $Priority;
 
     /**
-     * @var string Specifies the match condition content, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+     * @var string Match condition content. It must comply with the expression syntax. For detailed specifications, see the product document.
      */
     public $Condition;
 
     /**
-     * @var string JavaScript injection option. default value: run-attestations. valid values:.
-<li>no-injection: specifies not to inject JavaScript.</li>.
-<li>inject-sdk-only: injects sdks for all currently supported authentication methods. currently supported: TC-RCE and TC-CAPTCHA. note: to execute authentication detection, configure challenge rules.</li>.
+     * @var string JavaScript injection options. Default value: run-attestations. Valid values:
+<li> no-injection: Do not inject JavaScript;</li>
+<li> inject-sdk-only: Inject the SDKs of all currently supported authentication methods, including TC-RCE and TC-CAPTCHA. Note: To execute authentication detection, configure challenge rules.</li>
 
      */
     public $InjectJS;
 
     /**
      * @param string $RuleId Rule ID.
-     * @param string $Name Rule name
-     * @param integer $Priority Rule priority. a smaller value indicates higher priority execution. value range: 0-100. default value is 0.
-     * @param string $Condition Specifies the match condition content, which must comply with the expression grammar. please refer to the product document for detailed requirements.
-     * @param string $InjectJS JavaScript injection option. default value: run-attestations. valid values:.
-<li>no-injection: specifies not to inject JavaScript.</li>.
-<li>inject-sdk-only: injects sdks for all currently supported authentication methods. currently supported: TC-RCE and TC-CAPTCHA. note: to execute authentication detection, configure challenge rules.</li>.
+     * @param string $Name Rule name.
+     * @param integer $Priority Rule priority. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.
+     * @param string $Condition Match condition content. It must comply with the expression syntax. For detailed specifications, see the product document.
+     * @param string $InjectJS JavaScript injection options. Default value: run-attestations. Valid values:
+<li> no-injection: Do not inject JavaScript;</li>
+<li> inject-sdk-only: Inject the SDKs of all currently supported authentication methods, including TC-RCE and TC-CAPTCHA. Note: To execute authentication detection, configure challenge rules.</li>
      */
     function __construct()
     {

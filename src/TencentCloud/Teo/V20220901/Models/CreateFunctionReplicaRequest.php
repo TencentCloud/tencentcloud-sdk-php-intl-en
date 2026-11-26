@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set Zone ID.
  * @method string getFunctionId() Obtain Function ID.
  * @method void setFunctionId(string $FunctionId) Set Function ID.
- * @method string getReplicaName() Obtain Edge function copy name. Limit to enter 1-50 characters. Allowed characters are a-z, 0-9, and -. The - cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names under the same FunctionId must be unique.
- * @method void setReplicaName(string $ReplicaName) Set Edge function copy name. Limit to enter 1-50 characters. Allowed characters are a-z, 0-9, and -. The - cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names under the same FunctionId must be unique.
- * @method string getContent() Obtain Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
- * @method void setContent(string $Content) Set Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
- * @method string getRemark() Obtain Edge function replica description. Supports up to 50 characters.
- * @method void setRemark(string $Remark) Set Edge function replica description. Supports up to 50 characters.
+ * @method string getReplicaName() Obtain Edge function copy name. Limited to 1-50 characters. Allowed characters are a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names must be unique under the same FunctionId.
+ * @method void setReplicaName(string $ReplicaName) Set Edge function copy name. Limited to 1-50 characters. Allowed characters are a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names must be unique under the same FunctionId.
+ * @method string getContent() Obtain Content of the edge function copy. It currently only supports JavaScript code, with a maximum size of 5 MB.
+ * @method void setContent(string $Content) Set Content of the edge function copy. It currently only supports JavaScript code, with a maximum size of 5 MB.
+ * @method string getRemark() Obtain Edge function replica description, which can contain up to 50 characters.
+ * @method void setRemark(string $Remark) Set Edge function replica description, which can contain up to 50 characters.
  */
 class CreateFunctionReplicaRequest extends AbstractModel
 {
@@ -44,26 +44,26 @@ class CreateFunctionReplicaRequest extends AbstractModel
     public $FunctionId;
 
     /**
-     * @var string Edge function copy name. Limit to enter 1-50 characters. Allowed characters are a-z, 0-9, and -. The - cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names under the same FunctionId must be unique.
+     * @var string Edge function copy name. Limited to 1-50 characters. Allowed characters are a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names must be unique under the same FunctionId.
      */
     public $ReplicaName;
 
     /**
-     * @var string Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
+     * @var string Content of the edge function copy. It currently only supports JavaScript code, with a maximum size of 5 MB.
      */
     public $Content;
 
     /**
-     * @var string Edge function replica description. Supports up to 50 characters.
+     * @var string Edge function replica description, which can contain up to 50 characters.
      */
     public $Remark;
 
     /**
      * @param string $ZoneId Zone ID.
      * @param string $FunctionId Function ID.
-     * @param string $ReplicaName Edge function copy name. Limit to enter 1-50 characters. Allowed characters are a-z, 0-9, and -. The - cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names under the same FunctionId must be unique.
-     * @param string $Content Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
-     * @param string $Remark Edge function replica description. Supports up to 50 characters.
+     * @param string $ReplicaName Edge function copy name. Limited to 1-50 characters. Allowed characters are a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names must be unique under the same FunctionId.
+     * @param string $Content Content of the edge function copy. It currently only supports JavaScript code, with a maximum size of 5 MB.
+     * @param string $Remark Edge function replica description, which can contain up to 50 characters.
      */
     function __construct()
     {

@@ -18,44 +18,40 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Origin-pull redirection parameters configuration
+ * Parameter configuration for origin-pull follow redirect.
  *
- * @method string getSwitch() Obtain Whether to enable origin-pull to follow the redirection configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method void setSwitch(string $Switch) Set Whether to enable origin-pull to follow the redirection configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
- * @method integer getMaxTimes() Obtain The maximum number of redirects. value range: 1-5.
-Note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
- * @method void setMaxTimes(integer $MaxTimes) Set The maximum number of redirects. value range: 1-5.
-Note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+ * @method string getSwitch() Obtain Configuration switch for origin-pull follow redirect. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Configuration switch for origin-pull follow redirect. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method integer getMaxTimes() Obtain Maximum number of redirects. Value range: 1-5.
+Note: This field is required when Switch is on. When Switch is off, no need to specify this field. If specified, it does not take effect.
+ * @method void setMaxTimes(integer $MaxTimes) Set Maximum number of redirects. Value range: 1-5.
+Note: This field is required when Switch is on. When Switch is off, no need to specify this field. If specified, it does not take effect.
  */
 class UpstreamFollowRedirectParameters extends AbstractModel
 {
     /**
-     * @var string Whether to enable origin-pull to follow the redirection configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * @var string Configuration switch for origin-pull follow redirect. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var integer The maximum number of redirects. value range: 1-5.
-Note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+     * @var integer Maximum number of redirects. Value range: 1-5.
+Note: This field is required when Switch is on. When Switch is off, no need to specify this field. If specified, it does not take effect.
      */
     public $MaxTimes;
 
     /**
-     * @param string $Switch Whether to enable origin-pull to follow the redirection configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-     * @param integer $MaxTimes The maximum number of redirects. value range: 1-5.
-Note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+     * @param string $Switch Configuration switch for origin-pull follow redirect. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param integer $MaxTimes Maximum number of redirects. Value range: 1-5.
+Note: This field is required when Switch is on. When Switch is off, no need to specify this field. If specified, it does not take effect.
      */
     function __construct()
     {

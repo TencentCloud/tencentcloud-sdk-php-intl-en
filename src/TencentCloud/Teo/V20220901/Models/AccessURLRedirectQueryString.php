@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Access URL redirect configuration parameters.
+ * Access URL redirection configuration parameters.
  *
- * @method string getAction() Obtain Action to be executed. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all</li>.
- * @method void setAction(string $Action) Set Action to be executed. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all</li>.
+ * @method string getAction() Obtain Execution action. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all.</li>
+ * @method void setAction(string $Action) Set Execution action. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all.</li>
  */
 class AccessURLRedirectQueryString extends AbstractModel
 {
     /**
-     * @var string Action to be executed. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all</li>.
+     * @var string Execution action. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all.</li>
      */
     public $Action;
 
     /**
-     * @param string $Action Action to be executed. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all</li>.
+     * @param string $Action Execution action. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all.</li>
      */
     function __construct()
     {

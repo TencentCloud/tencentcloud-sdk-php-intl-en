@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cloud application concurrency packs.
  *
-
+ * @method string getConcurrentId() Obtain <p>Concurrency pack ID</p>
+ * @method void setConcurrentId(string $ConcurrentId) Set <p>Concurrency pack ID</p>
  */
 class ApplicationConcurrentPackage extends AbstractModel
 {
-
+    /**
+     * @var string <p>Concurrency pack ID</p>
+     */
+    public $ConcurrentId;
 
     /**
-
+     * @param string $ConcurrentId <p>Concurrency pack ID</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class ApplicationConcurrentPackage extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("ConcurrentId",$param) and $param["ConcurrentId"] !== null) {
+            $this->ConcurrentId = $param["ConcurrentId"];
+        }
     }
 }

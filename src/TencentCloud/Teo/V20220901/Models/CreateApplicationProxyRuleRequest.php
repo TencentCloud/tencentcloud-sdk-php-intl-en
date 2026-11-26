@@ -20,105 +20,120 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApplicationProxyRule request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getProxyId() Obtain The proxy ID.
- * @method void setProxyId(string $ProxyId) Set The proxy ID.
- * @method string getProto() Obtain The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>
- * @method void setProto(string $Proto) Set The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>
- * @method array getPort() Obtain The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
- * @method void setPort(array $Port) Set The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
- * @method string getOriginType() Obtain Origin server type. Valid values:<li>custom: Manually added;</li>
-<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
- * @method void setOriginType(string $OriginType) Set Origin server type. Valid values:<li>custom: Manually added;</li>
-<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
- * @method array getOriginValue() Obtain Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
- * @method void setOriginValue(array $OriginValue) Set Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
- * @method string getForwardClientIp() Obtain Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>Default value: OFF.
- * @method void setForwardClientIp(string $ForwardClientIp) Set Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>Default value: OFF.
- * @method boolean getSessionPersist() Obtain Whether to enable session persistence. Values:
-<li>`true`: Enable.</li>
-<li>`false`: Disable.</li>Default value: false.
- * @method void setSessionPersist(boolean $SessionPersist) Set Whether to enable session persistence. Values:
-<li>`true`: Enable.</li>
-<li>`false`: Disable.</li>Default value: false.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method string getProxyId() Obtain Proxy ID.
+ * @method void setProxyId(string $ProxyId) Set Proxy ID.
+ * @method string getProto() Obtain Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>
+ * @method void setProto(string $Proto) Set Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>
+ * @method array getPort() Obtain Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
+ * @method void setPort(array $Port) Set Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
+ * @method string getOriginType() Obtain Origin server type. Valid values:
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
+<li>origins: origin server group.</li>
+ * @method void setOriginType(string $OriginType) Set Origin server type. Valid values:
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
+<li>origins: origin server group.</li>
+ * @method array getOriginValue() Obtain Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+ * @method void setOriginValue(array $OriginValue) Set Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+ * @method string getForwardClientIp() Obtain Passing the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Default value: OFF.
+ * @method void setForwardClientIp(string $ForwardClientIp) Set Passing the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Default value: OFF.
+ * @method boolean getSessionPersist() Obtain Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>Default value: false.
+ * @method void setSessionPersist(boolean $SessionPersist) Set Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>Default value: false.
  * @method integer getSessionPersistTime() Obtain Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
  * @method void setSessionPersistTime(integer $SessionPersistTime) Set Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
- * @method string getOriginPort() Obtain The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
- * @method void setOriginPort(string $OriginPort) Set The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
- * @method string getRuleTag() Obtain Rule tag. This parameter is left empty by default.
- * @method void setRuleTag(string $RuleTag) Set Rule tag. This parameter is left empty by default.
+ * @method string getOriginPort() Obtain Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
+ * @method void setOriginPort(string $OriginPort) Set Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
+ * @method string getRuleTag() Obtain Rule tag. The default value is an empty string.
+ * @method void setRuleTag(string $RuleTag) Set Rule tag. The default value is an empty string.
  */
 class CreateApplicationProxyRuleRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var string The proxy ID.
+     * @var string Proxy ID.
      */
     public $ProxyId;
 
     /**
-     * @var string The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>
+     * @var string Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>
      */
     public $Proto;
 
     /**
-     * @var array The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
+     * @var array Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
      */
     public $Port;
 
     /**
-     * @var string Origin server type. Valid values:<li>custom: Manually added;</li>
-<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
+     * @var string Origin server type. Valid values:
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
+<li>origins: origin server group.</li>
      */
     public $OriginType;
 
     /**
-     * @var array Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+     * @var array Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      */
     public $OriginValue;
 
     /**
-     * @var string Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>Default value: OFF.
+     * @var string Passing the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Default value: OFF.
      */
     public $ForwardClientIp;
 
     /**
-     * @var boolean Whether to enable session persistence. Values:
-<li>`true`: Enable.</li>
-<li>`false`: Disable.</li>Default value: false.
+     * @var boolean Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>Default value: false.
      */
     public $SessionPersist;
 
@@ -128,42 +143,47 @@ class CreateApplicationProxyRuleRequest extends AbstractModel
     public $SessionPersistTime;
 
     /**
-     * @var string The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
+     * @var string Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
      */
     public $OriginPort;
 
     /**
-     * @var string Rule tag. This parameter is left empty by default.
+     * @var string Rule tag. The default value is an empty string.
      */
     public $RuleTag;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $ProxyId The proxy ID.
-     * @param string $Proto The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>
-     * @param array $Port The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
-     * @param string $OriginType Origin server type. Valid values:<li>custom: Manually added;</li>
-<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
-     * @param array $OriginValue Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
-     * @param string $ForwardClientIp Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>Default value: OFF.
-     * @param boolean $SessionPersist Whether to enable session persistence. Values:
-<li>`true`: Enable.</li>
-<li>`false`: Disable.</li>Default value: false.
+     * @param string $ZoneId Site ID.
+     * @param string $ProxyId Proxy ID.
+     * @param string $Proto Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>
+     * @param array $Port Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
+     * @param string $OriginType Origin server type. Valid values:
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
+<li>origins: origin server group.</li>
+     * @param array $OriginValue Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+     * @param string $ForwardClientIp Passing the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Default value: OFF.
+     * @param boolean $SessionPersist Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>Default value: false.
      * @param integer $SessionPersistTime Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
-     * @param string $OriginPort The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
-     * @param string $RuleTag Rule tag. This parameter is left empty by default.
+     * @param string $OriginPort Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
+     * @param string $RuleTag Rule tag. The default value is an empty string.
      */
     function __construct()
     {

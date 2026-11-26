@@ -20,72 +20,72 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSharedCNAME request structure.
  *
- * @method string getZoneId() Obtain Shared CNAME associated site ID.
- * @method void setZoneId(string $ZoneId) Set Shared CNAME associated site ID.
+ * @method string getZoneId() Obtain Zone ID associated with the shared CNAME.
+ * @method void setZoneId(string $ZoneId) Set Zone ID associated with the shared CNAME.
  * @method array getFilters() Obtain Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>shared-cname<br>   Filter by [<strong>shared CNAME</strong>].<br>   Type: String<br>   Required: No</li>
-<li>type<br>   Filter by [<strong>shared CNAME type</strong>].<br>   type: String<br>   Required: No</li>
-<li>Description<br>   Filter by [<strong>description</strong>].<br>   Type: String<br>   Required: No</li>
+<li>shared-cname<br>        Filter by [<strong>shared CNAME</strong>].<br>        Type: String<br>        Required: No</li>
+<li>type<br>        Filter by [<strong>shared canme type</strong>].<br>        Type: String<br>        Required: No</li>
+<li>description<br> Filter by <strong>description</strong>.<br> Type: String<br> Required: No</li>
  * @method void setFilters(array $Filters) Set Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>shared-cname<br>   Filter by [<strong>shared CNAME</strong>].<br>   Type: String<br>   Required: No</li>
-<li>type<br>   Filter by [<strong>shared CNAME type</strong>].<br>   type: String<br>   Required: No</li>
-<li>Description<br>   Filter by [<strong>description</strong>].<br>   Type: String<br>   Required: No</li>
+<li>shared-cname<br>        Filter by [<strong>shared CNAME</strong>].<br>        Type: String<br>        Required: No</li>
+<li>type<br>        Filter by [<strong>shared canme type</strong>].<br>        Type: String<br>        Required: No</li>
+<li>description<br> Filter by <strong>description</strong>.<br> Type: String<br> Required: No</li>
  * @method string getDirection() Obtain List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: Sort in descending order.</li>The default value is `asc`.
+<li>desc: descending order.</li>Default value: asc.
  * @method void setDirection(string $Direction) Set List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: Sort in descending order.</li>The default value is `asc`.
+<li>desc: descending order.</li>Default value: asc.
  * @method string getMatch() Obtain Match mode. Valid values:
-<li>all: Returns the shared CNAME that matches all query conditions.</li>
-<li>any: Returns the shared CNAME that matches any query condition.</li> Default value is all.
+<li>all: return the shared CNAME that matches all query conditions;</li>
+<li>any: return the shared CNAME that matches any query condition.</li>The default value is all.
  * @method void setMatch(string $Match) Set Match mode. Valid values:
-<li>all: Returns the shared CNAME that matches all query conditions.</li>
-<li>any: Returns the shared CNAME that matches any query condition.</li> Default value is all.
+<li>all: return the shared CNAME that matches all query conditions;</li>
+<li>any: return the shared CNAME that matches any query condition.</li>The default value is all.
  * @method string getOrder() Obtain Sorting basis. Valid values:
-<li>create-time: Creation time;</li>
-<li>shared-cname: Shared CNAME.</li> Default sorting order is based on the shared-cname attribute.
+<li>create-time: creation time;</li>
+<li>shared-cname: Shared CNAME.</li>Sorted by the shared-cname attribute by default.
  * @method void setOrder(string $Order) Set Sorting basis. Valid values:
-<li>create-time: Creation time;</li>
-<li>shared-cname: Shared CNAME.</li> Default sorting order is based on the shared-cname attribute.
+<li>create-time: creation time;</li>
+<li>shared-cname: Shared CNAME.</li>Sorted by the shared-cname attribute by default.
  * @method integer getOffset() Obtain Offset of paginated query. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset of paginated query. Default value: 0.
- * @method integer getLimit() Obtain Number limit of paginated query. Default value: 20. Upper limit: 200.
- * @method void setLimit(integer $Limit) Set Number limit of paginated query. Default value: 20. Upper limit: 200.
+ * @method integer getLimit() Obtain Number limit of paginated query. Default value: 20. Maximum value: 200.
+ * @method void setLimit(integer $Limit) Set Number limit of paginated query. Default value: 20. Maximum value: 200.
  */
 class DescribeSharedCNAMERequest extends AbstractModel
 {
     /**
-     * @var string Shared CNAME associated site ID.
+     * @var string Zone ID associated with the shared CNAME.
      */
     public $ZoneId;
 
     /**
      * @var array Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>shared-cname<br>   Filter by [<strong>shared CNAME</strong>].<br>   Type: String<br>   Required: No</li>
-<li>type<br>   Filter by [<strong>shared CNAME type</strong>].<br>   type: String<br>   Required: No</li>
-<li>Description<br>   Filter by [<strong>description</strong>].<br>   Type: String<br>   Required: No</li>
+<li>shared-cname<br>        Filter by [<strong>shared CNAME</strong>].<br>        Type: String<br>        Required: No</li>
+<li>type<br>        Filter by [<strong>shared canme type</strong>].<br>        Type: String<br>        Required: No</li>
+<li>description<br> Filter by <strong>description</strong>.<br> Type: String<br> Required: No</li>
      */
     public $Filters;
 
     /**
      * @var string List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: Sort in descending order.</li>The default value is `asc`.
+<li>desc: descending order.</li>Default value: asc.
      */
     public $Direction;
 
     /**
      * @var string Match mode. Valid values:
-<li>all: Returns the shared CNAME that matches all query conditions.</li>
-<li>any: Returns the shared CNAME that matches any query condition.</li> Default value is all.
+<li>all: return the shared CNAME that matches all query conditions;</li>
+<li>any: return the shared CNAME that matches any query condition.</li>The default value is all.
      */
     public $Match;
 
     /**
      * @var string Sorting basis. Valid values:
-<li>create-time: Creation time;</li>
-<li>shared-cname: Shared CNAME.</li> Default sorting order is based on the shared-cname attribute.
+<li>create-time: creation time;</li>
+<li>shared-cname: Shared CNAME.</li>Sorted by the shared-cname attribute by default.
      */
     public $Order;
 
@@ -95,27 +95,27 @@ class DescribeSharedCNAMERequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number limit of paginated query. Default value: 20. Upper limit: 200.
+     * @var integer Number limit of paginated query. Default value: 20. Maximum value: 200.
      */
     public $Limit;
 
     /**
-     * @param string $ZoneId Shared CNAME associated site ID.
+     * @param string $ZoneId Zone ID associated with the shared CNAME.
      * @param array $Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>shared-cname<br>   Filter by [<strong>shared CNAME</strong>].<br>   Type: String<br>   Required: No</li>
-<li>type<br>   Filter by [<strong>shared CNAME type</strong>].<br>   type: String<br>   Required: No</li>
-<li>Description<br>   Filter by [<strong>description</strong>].<br>   Type: String<br>   Required: No</li>
+<li>shared-cname<br>        Filter by [<strong>shared CNAME</strong>].<br>        Type: String<br>        Required: No</li>
+<li>type<br>        Filter by [<strong>shared canme type</strong>].<br>        Type: String<br>        Required: No</li>
+<li>description<br> Filter by <strong>description</strong>.<br> Type: String<br> Required: No</li>
      * @param string $Direction List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: Sort in descending order.</li>The default value is `asc`.
+<li>desc: descending order.</li>Default value: asc.
      * @param string $Match Match mode. Valid values:
-<li>all: Returns the shared CNAME that matches all query conditions.</li>
-<li>any: Returns the shared CNAME that matches any query condition.</li> Default value is all.
+<li>all: return the shared CNAME that matches all query conditions;</li>
+<li>any: return the shared CNAME that matches any query condition.</li>The default value is all.
      * @param string $Order Sorting basis. Valid values:
-<li>create-time: Creation time;</li>
-<li>shared-cname: Shared CNAME.</li> Default sorting order is based on the shared-cname attribute.
+<li>create-time: creation time;</li>
+<li>shared-cname: Shared CNAME.</li>Sorted by the shared-cname attribute by default.
      * @param integer $Offset Offset of paginated query. Default value: 0.
-     * @param integer $Limit Number limit of paginated query. Default value: 20. Upper limit: 200.
+     * @param integer $Limit Number limit of paginated query. Default value: 20. Maximum value: 200.
      */
     function __construct()
     {

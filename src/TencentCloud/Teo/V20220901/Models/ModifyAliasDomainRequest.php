@@ -20,62 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAliasDomain request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getAliasName() Obtain The alias domain name.
- * @method void setAliasName(string $AliasName) Set The alias domain name.
- * @method string getTargetName() Obtain The target domain name.
- * @method void setTargetName(string $TargetName) Set The target domain name.
- * @method string getCertType() Obtain Certificate configuration. Values:
-<li>`none`: Off</li>
-<li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>The original configuration will apply if this field is not specified.
- * @method void setCertType(string $CertType) Set Certificate configuration. Values:
-<li>`none`: Off</li>
-<li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>The original configuration will apply if this field is not specified.
- * @method array getCertId() Obtain The certificate ID. This field is required when `CertType=hosting`.
- * @method void setCertId(array $CertId) Set The certificate ID. This field is required when `CertType=hosting`.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method string getAliasName() Obtain Alias domain name.
+ * @method void setAliasName(string $AliasName) Set Alias domain name.
+ * @method string getTargetName() Obtain Target domain name.
+ * @method void setTargetName(string $TargetName) Set Target domain name.
+ * @method string getCertType() Obtain Certificate configuration. Valid values:
+<li> none: without configuring;</li>
+<li> hosting: managed SSL certificate;</li>
+<li> apply: apply for a free certificate.</li>Maintain the original configuration if not specified.
+ * @method void setCertType(string $CertType) Set Certificate configuration. Valid values:
+<li> none: without configuring;</li>
+<li> hosting: managed SSL certificate;</li>
+<li> apply: apply for a free certificate.</li>Maintain the original configuration if not specified.
+ * @method array getCertId() Obtain When CertType is hosting, fill in the certificate ID accordingly.
+ * @method void setCertId(array $CertId) Set When CertType is hosting, fill in the certificate ID accordingly.
  */
 class ModifyAliasDomainRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var string The alias domain name.
+     * @var string Alias domain name.
      */
     public $AliasName;
 
     /**
-     * @var string The target domain name.
+     * @var string Target domain name.
      */
     public $TargetName;
 
     /**
-     * @var string Certificate configuration. Values:
-<li>`none`: Off</li>
-<li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>The original configuration will apply if this field is not specified.
+     * @var string Certificate configuration. Valid values:
+<li> none: without configuring;</li>
+<li> hosting: managed SSL certificate;</li>
+<li> apply: apply for a free certificate.</li>Maintain the original configuration if not specified.
      */
     public $CertType;
 
     /**
-     * @var array The certificate ID. This field is required when `CertType=hosting`.
+     * @var array When CertType is hosting, fill in the certificate ID accordingly.
      */
     public $CertId;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $AliasName The alias domain name.
-     * @param string $TargetName The target domain name.
-     * @param string $CertType Certificate configuration. Values:
-<li>`none`: Off</li>
-<li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>The original configuration will apply if this field is not specified.
-     * @param array $CertId The certificate ID. This field is required when `CertType=hosting`.
+     * @param string $ZoneId Zone ID.
+     * @param string $AliasName Alias domain name.
+     * @param string $TargetName Target domain name.
+     * @param string $CertType Certificate configuration. Valid values:
+<li> none: without configuring;</li>
+<li> hosting: managed SSL certificate;</li>
+<li> apply: apply for a free certificate.</li>Maintain the original configuration if not specified.
+     * @param array $CertId When CertType is hosting, fill in the certificate ID accordingly.
      */
     function __construct()
     {

@@ -18,44 +18,44 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Differences between the newest and existing intermediate IPs
+ * Difference between the latest IP whitelist list and the current IP whitelist list
  *
- * @method IPWhitelist getLatestIPWhitelist() Obtain The latest intermediate IPs.
- * @method void setLatestIPWhitelist(IPWhitelist $LatestIPWhitelist) Set The latest intermediate IPs.
- * @method IPWhitelist getAddedIPWhitelist() Obtain The intermediate IPs added to the existing list.
- * @method void setAddedIPWhitelist(IPWhitelist $AddedIPWhitelist) Set The intermediate IPs added to the existing list.
- * @method IPWhitelist getRemovedIPWhitelist() Obtain The intermediate IPs removed from the existing list.
- * @method void setRemovedIPWhitelist(IPWhitelist $RemovedIPWhitelist) Set The intermediate IPs removed from the existing list.
- * @method IPWhitelist getNoChangeIPWhitelist() Obtain The intermediate IPs that remain unchanged.
- * @method void setNoChangeIPWhitelist(IPWhitelist $NoChangeIPWhitelist) Set The intermediate IPs that remain unchanged.
+ * @method IPWhitelist getLatestIPWhitelist() Obtain Latest IP whitelist list.
+ * @method void setLatestIPWhitelist(IPWhitelist $LatestIPWhitelist) Set Latest IP whitelist list.
+ * @method IPWhitelist getAddedIPWhitelist() Obtain Newly added part of the latest IP whitelist list compared with the current IP whitelist list.
+ * @method void setAddedIPWhitelist(IPWhitelist $AddedIPWhitelist) Set Newly added part of the latest IP whitelist list compared with the current IP whitelist list.
+ * @method IPWhitelist getRemovedIPWhitelist() Obtain The latest IP whitelist list has partially deleted entries compared with the current IP whitelist list.
+ * @method void setRemovedIPWhitelist(IPWhitelist $RemovedIPWhitelist) Set The latest IP whitelist list has partially deleted entries compared with the current IP whitelist list.
+ * @method IPWhitelist getNoChangeIPWhitelist() Obtain Unchanged part of the latest IP allowlist compared with the current IP allowlist.
+ * @method void setNoChangeIPWhitelist(IPWhitelist $NoChangeIPWhitelist) Set Unchanged part of the latest IP allowlist compared with the current IP allowlist.
  */
 class DiffIPWhitelist extends AbstractModel
 {
     /**
-     * @var IPWhitelist The latest intermediate IPs.
+     * @var IPWhitelist Latest IP whitelist list.
      */
     public $LatestIPWhitelist;
 
     /**
-     * @var IPWhitelist The intermediate IPs added to the existing list.
+     * @var IPWhitelist Newly added part of the latest IP whitelist list compared with the current IP whitelist list.
      */
     public $AddedIPWhitelist;
 
     /**
-     * @var IPWhitelist The intermediate IPs removed from the existing list.
+     * @var IPWhitelist The latest IP whitelist list has partially deleted entries compared with the current IP whitelist list.
      */
     public $RemovedIPWhitelist;
 
     /**
-     * @var IPWhitelist The intermediate IPs that remain unchanged.
+     * @var IPWhitelist Unchanged part of the latest IP allowlist compared with the current IP allowlist.
      */
     public $NoChangeIPWhitelist;
 
     /**
-     * @param IPWhitelist $LatestIPWhitelist The latest intermediate IPs.
-     * @param IPWhitelist $AddedIPWhitelist The intermediate IPs added to the existing list.
-     * @param IPWhitelist $RemovedIPWhitelist The intermediate IPs removed from the existing list.
-     * @param IPWhitelist $NoChangeIPWhitelist The intermediate IPs that remain unchanged.
+     * @param IPWhitelist $LatestIPWhitelist Latest IP whitelist list.
+     * @param IPWhitelist $AddedIPWhitelist Newly added part of the latest IP whitelist list compared with the current IP whitelist list.
+     * @param IPWhitelist $RemovedIPWhitelist The latest IP whitelist list has partially deleted entries compared with the current IP whitelist list.
+     * @param IPWhitelist $NoChangeIPWhitelist Unchanged part of the latest IP allowlist compared with the current IP allowlist.
      */
     function __construct()
     {

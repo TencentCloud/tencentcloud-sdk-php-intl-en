@@ -18,68 +18,60 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Shared CNAME detail
+ * Shared CNAME details
  *
- * @method string getType() Obtain Shared CNAME type: Value ranges from...to...
-<li>custom: User-created custom shared CNAME</li>
-<li>ip-ssl: Shared CNAME of IP SSL type</li>
- * @method void setType(string $Type) Set Shared CNAME type: Value ranges from...to...
-<li>custom: User-created custom shared CNAME</li>
-<li>ip-ssl: Shared CNAME of IP SSL type</li>
- * @method string getSharedCNAME() Obtain Shared CNAME name.
- * @method void setSharedCNAME(string $SharedCNAME) Set Shared CNAME name.
- * @method string getDescription() Obtain Description.
- * @method void setDescription(string $Description) Set Description.
- * @method IPSSLConfig getIPSSLConfig() Obtain When type is ip-ssl, show the associated IP SSL configuration message of the shared CNAME.
- * @method void setIPSSLConfig(IPSSLConfig $IPSSLConfig) Set When type is ip-ssl, show the associated IP SSL configuration message of the shared CNAME.
- * @method integer getBindDomainCount() Obtain Number of acceleration domain names bound to the shared CNAME.
- * @method void setBindDomainCount(integer $BindDomainCount) Set Number of acceleration domain names bound to the shared CNAME.
- * @method array getAccelerationDomains() Obtain List of acceleration domain names added to the shared CNAME. When the number of domains exceeds 100, only return the first 100 acceleration domain names.
- * @method void setAccelerationDomains(array $AccelerationDomains) Set List of acceleration domain names added to the shared CNAME. When the number of domains exceeds 100, only return the first 100 acceleration domain names.
+ * @method string getType() Obtain <p>Shared CNAME type: value range as follows:</p><li>custom: user-created custom shared CNAME</li><li>ip-ssl: IP SSL shared CNAME</li><li>zero-rating: zero-rating shared CNAME</li><li>preset: pre-configured resource shared CNAME</li>
+ * @method void setType(string $Type) Set <p>Shared CNAME type: value range as follows:</p><li>custom: user-created custom shared CNAME</li><li>ip-ssl: IP SSL shared CNAME</li><li>zero-rating: zero-rating shared CNAME</li><li>preset: pre-configured resource shared CNAME</li>
+ * @method string getSharedCNAME() Obtain <p>Shared CNAME name.</p>
+ * @method void setSharedCNAME(string $SharedCNAME) Set <p>Shared CNAME name.</p>
+ * @method string getDescription() Obtain <p>Description.</p>
+ * @method void setDescription(string $Description) Set <p>Description.</p>
+ * @method IPSSLConfig getIPSSLConfig() Obtain <p>When type is ip-ssl, show the IP SSL configuration message associated with the shared CNAME.</p>
+ * @method void setIPSSLConfig(IPSSLConfig $IPSSLConfig) Set <p>When type is ip-ssl, show the IP SSL configuration message associated with the shared CNAME.</p>
+ * @method integer getBindDomainCount() Obtain <p>Number of acceleration domain names bound to the shared CNAME.</p>
+ * @method void setBindDomainCount(integer $BindDomainCount) Set <p>Number of acceleration domain names bound to the shared CNAME.</p>
+ * @method array getAccelerationDomains() Obtain <p>List of acceleration domain names added to the shared CNAME. When the number of added domains exceeds 100, only return the first 100 acceleration domain names.</p>
+ * @method void setAccelerationDomains(array $AccelerationDomains) Set <p>List of acceleration domain names added to the shared CNAME. When the number of added domains exceeds 100, only return the first 100 acceleration domain names.</p>
  */
 class SharedCNAMEInfo extends AbstractModel
 {
     /**
-     * @var string Shared CNAME type: Value ranges from...to...
-<li>custom: User-created custom shared CNAME</li>
-<li>ip-ssl: Shared CNAME of IP SSL type</li>
+     * @var string <p>Shared CNAME type: value range as follows:</p><li>custom: user-created custom shared CNAME</li><li>ip-ssl: IP SSL shared CNAME</li><li>zero-rating: zero-rating shared CNAME</li><li>preset: pre-configured resource shared CNAME</li>
      */
     public $Type;
 
     /**
-     * @var string Shared CNAME name.
+     * @var string <p>Shared CNAME name.</p>
      */
     public $SharedCNAME;
 
     /**
-     * @var string Description.
+     * @var string <p>Description.</p>
      */
     public $Description;
 
     /**
-     * @var IPSSLConfig When type is ip-ssl, show the associated IP SSL configuration message of the shared CNAME.
+     * @var IPSSLConfig <p>When type is ip-ssl, show the IP SSL configuration message associated with the shared CNAME.</p>
      */
     public $IPSSLConfig;
 
     /**
-     * @var integer Number of acceleration domain names bound to the shared CNAME.
+     * @var integer <p>Number of acceleration domain names bound to the shared CNAME.</p>
      */
     public $BindDomainCount;
 
     /**
-     * @var array List of acceleration domain names added to the shared CNAME. When the number of domains exceeds 100, only return the first 100 acceleration domain names.
+     * @var array <p>List of acceleration domain names added to the shared CNAME. When the number of added domains exceeds 100, only return the first 100 acceleration domain names.</p>
      */
     public $AccelerationDomains;
 
     /**
-     * @param string $Type Shared CNAME type: Value ranges from...to...
-<li>custom: User-created custom shared CNAME</li>
-<li>ip-ssl: Shared CNAME of IP SSL type</li>
-     * @param string $SharedCNAME Shared CNAME name.
-     * @param string $Description Description.
-     * @param IPSSLConfig $IPSSLConfig When type is ip-ssl, show the associated IP SSL configuration message of the shared CNAME.
-     * @param integer $BindDomainCount Number of acceleration domain names bound to the shared CNAME.
-     * @param array $AccelerationDomains List of acceleration domain names added to the shared CNAME. When the number of domains exceeds 100, only return the first 100 acceleration domain names.
+     * @param string $Type <p>Shared CNAME type: value range as follows:</p><li>custom: user-created custom shared CNAME</li><li>ip-ssl: IP SSL shared CNAME</li><li>zero-rating: zero-rating shared CNAME</li><li>preset: pre-configured resource shared CNAME</li>
+     * @param string $SharedCNAME <p>Shared CNAME name.</p>
+     * @param string $Description <p>Description.</p>
+     * @param IPSSLConfig $IPSSLConfig <p>When type is ip-ssl, show the IP SSL configuration message associated with the shared CNAME.</p>
+     * @param integer $BindDomainCount <p>Number of acceleration domain names bound to the shared CNAME.</p>
+     * @param array $AccelerationDomains <p>List of acceleration domain names added to the shared CNAME. When the number of added domains exceeds 100, only return the first 100 acceleration domain names.</p>
      */
     function __construct()
     {

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OperateInferenceService request structure.
  *
- * @method string getZoneId() Obtain Zone ID.
- * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getServiceId() Obtain ID of the inference service.
- * @method void setServiceId(string $ServiceId) Set ID of the inference service.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method string getServiceId() Obtain Inference service ID.
+ * @method void setServiceId(string $ServiceId) Set Inference service ID.
  * @method string getOperation() Obtain Operation type, including the following: <li>Stop: stop;</li><li>Resume: start up;</li><li>Delete: delete.</li>
  * @method void setOperation(string $Operation) Set Operation type, including the following: <li>Stop: stop;</li><li>Resume: start up;</li><li>Delete: delete.</li>
  */
 class OperateInferenceServiceRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var string ID of the inference service.
+     * @var string Inference service ID.
      */
     public $ServiceId;
 
@@ -45,8 +45,8 @@ class OperateInferenceServiceRequest extends AbstractModel
     public $Operation;
 
     /**
-     * @param string $ZoneId Zone ID.
-     * @param string $ServiceId ID of the inference service.
+     * @param string $ZoneId Site ID.
+     * @param string $ServiceId Inference service ID.
      * @param string $Operation Operation type, including the following: <li>Stop: stop;</li><li>Resume: start up;</li><li>Delete: delete.</li>
      */
     function __construct()

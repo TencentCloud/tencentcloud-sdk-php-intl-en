@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rule engine manipulates custom configuration.
+ * Operate the custom configuration of the rule engine.
  *
  * @method string getActionId() Obtain <p>Unique ID of the custom configuration.</p>
  * @method void setActionId(string $ActionId) Set <p>Unique ID of the custom configuration.</p>
@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set <p>Custom configuration description.</p>
  * @method array getParameters() Obtain <p>Custom configuration parameter definition list.</p>
  * @method void setParameters(array $Parameters) Set <p>Custom configuration parameter definition list.</p>
- * @method array getSupportedConditions() Obtain <p>Match conditions supported by custom configuration.</p><p>For supported match conditions, refer to the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
- * @method void setSupportedConditions(array $SupportedConditions) Set <p>Match conditions supported by custom configuration.</p><p>For supported match conditions, refer to the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
+ * @method array getSupportedConditions() Obtain <p>Custom configuration supported match conditions.</p><p>For supported match conditions, see the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
+ * @method void setSupportedConditions(array $SupportedConditions) Set <p>Custom configuration supported match conditions.</p><p>For supported match conditions, see the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
  */
 class RuleEngineCustomAction extends AbstractModel
 {
@@ -54,7 +54,7 @@ class RuleEngineCustomAction extends AbstractModel
     public $Parameters;
 
     /**
-     * @var array <p>Match conditions supported by custom configuration.</p><p>For supported match conditions, refer to the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
+     * @var array <p>Custom configuration supported match conditions.</p><p>For supported match conditions, see the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
      */
     public $SupportedConditions;
 
@@ -63,7 +63,7 @@ class RuleEngineCustomAction extends AbstractModel
      * @param string $Name <p>Custom configuration name.</p>
      * @param string $Description <p>Custom configuration description.</p>
      * @param array $Parameters <p>Custom configuration parameter definition list.</p>
-     * @param array $SupportedConditions <p>Match conditions supported by custom configuration.</p><p>For supported match conditions, refer to the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
+     * @param array $SupportedConditions <p>Custom configuration supported match conditions.</p><p>For supported match conditions, see the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
      */
     function __construct()
     {

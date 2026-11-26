@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The Top-ranked data
+ * TopN Entry data
  *
- * @method string getKey() Obtain The query dimension value.
- * @method void setKey(string $Key) Set The query dimension value.
- * @method array getValue() Obtain The details.
- * @method void setValue(array $Value) Set The details.
+ * @method string getKey() Obtain top query dimension value.
+ * @method void setKey(string $Key) Set top query dimension value.
+ * @method array getValue() Obtain Query specific data.
+ * @method void setValue(array $Value) Set Query specific data.
  */
 class TopEntry extends AbstractModel
 {
     /**
-     * @var string The query dimension value.
+     * @var string top query dimension value.
      */
     public $Key;
 
     /**
-     * @var array The details.
+     * @var array Query specific data.
      */
     public $Value;
 
     /**
-     * @param string $Key The query dimension value.
-     * @param array $Value The details.
+     * @param string $Key top query dimension value.
+     * @param array $Value Query specific data.
      */
     function __construct()
     {

@@ -23,25 +23,10 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Rum\V20210622\Models as Models;
 
 /**
- * @method Models\CreateLogExportResponse CreateLogExport(Models\CreateLogExportRequest $req) API domain name: `rum.tencentcloudapi.com`.
-
-This API is used to create a log download task.
-
-Default API request rate limit: 20 requests/sec.
- * @method Models\CreateOfflineLogConfigResponse CreateOfflineLogConfig(Models\CreateOfflineLogConfigRequest $req) This API is used to create an offline log listener to report offline logs of particular users.
- * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) This API is used to create a RUM application which belongs to a specific team.
  * @method Models\CreateReleaseFileResponse CreateReleaseFile(Models\CreateReleaseFileRequest $req) This API is used to create a file record for the specified project.
  * @method Models\CreateStarProjectResponse CreateStarProject(Models\CreateStarProjectRequest $req) This API is used to add a starred project.
- * @method Models\CreateTawInstanceResponse CreateTawInstance(Models\CreateTawInstanceRequest $req) This API is used to create a RUM business system.
  * @method Models\CreateWhitelistResponse CreateWhitelist(Models\CreateWhitelistRequest $req) This API is used to create an allowlist.
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) This API is used to delete an instance. The deleted instance cannot be recovered.
- * @method Models\DeleteLogExportResponse DeleteLogExport(Models\DeleteLogExportRequest $req) API domain name: `rum.tencentcloudapi.com`.
-
-This API is used to delete a log download task.
-
-Default API request rate limit: 20 requests/sec.
- * @method Models\DeleteOfflineLogConfigResponse DeleteOfflineLogConfig(Models\DeleteOfflineLogConfigRequest $req) This API is used to delete an offline RUM log listener. Then, offline logs of particular users will not be reported.
- * @method Models\DeleteOfflineLogRecordResponse DeleteOfflineLogRecord(Models\DeleteOfflineLogRecordRequest $req) This API is used to delete an offline log record.
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) This API is used to delete the specified RUM project.
  * @method Models\DeleteReleaseFileResponse DeleteReleaseFile(Models\DeleteReleaseFileRequest $req) This API is used to delete the specified sourcemap file.
  * @method Models\DeleteStarProjectResponse DeleteStarProject(Models\DeleteStarProjectRequest $req) This API is used to delete a starred project for the specified user.
@@ -61,7 +46,6 @@ Default API request rate limit: 20 requests/sec.
  * @method Models\DescribeDataLogUrlStatisticsV2Response DescribeDataLogUrlStatisticsV2(Models\DescribeDataLogUrlStatisticsV2Request $req) This API is used to obtain LogUrlStatistics information.
  * @method Models\DescribeDataPerformancePageResponse DescribeDataPerformancePage(Models\DescribeDataPerformancePageRequest $req) This API is used to get the PerformancePage information.
  * @method Models\DescribeDataPerformancePageV2Response DescribeDataPerformancePageV2(Models\DescribeDataPerformancePageV2Request $req) This API is used to obtain PerformancePage information.
- * @method Models\DescribeDataPerformanceProjectResponse DescribeDataPerformanceProject(Models\DescribeDataPerformanceProjectRequest $req) This API is used to get the PerformanceProject information.
  * @method Models\DescribeDataPvUrlInfoResponse DescribeDataPvUrlInfo(Models\DescribeDataPvUrlInfoRequest $req) This API is used to get the PvUrlInfo information.
  * @method Models\DescribeDataPvUrlStatisticsResponse DescribeDataPvUrlStatistics(Models\DescribeDataPvUrlStatisticsRequest $req) This API is used to get the DescribeDataPvUrlStatistics information.
  * @method Models\DescribeDataPvUrlStatisticsV2Response DescribeDataPvUrlStatisticsV2(Models\DescribeDataPvUrlStatisticsV2Request $req) This API is used to obtain DescribeDataPvUrlStatistics information.
@@ -80,15 +64,6 @@ It includes the Web Vitals metric for the page loading performance.
  * @method Models\DescribeDataWebVitalsPageV2Response DescribeDataWebVitalsPageV2(Models\DescribeDataWebVitalsPageV2Request $req) This API is used to obtain DescribeDataWebVitalsPage information, which is the core user activity information.
 Web Vitals for page loading performance are key performance metrics.
  * @method Models\DescribeErrorResponse DescribeError(Models\DescribeErrorRequest $req) This API is used to get the homepage error information.
- * @method Models\DescribeLogExportsResponse DescribeLogExports(Models\DescribeLogExportsRequest $req) API domain name: `rum.tencentcloudapi.com`.
-
-This API is used to get the list of log download tasks.
-
-Default API request rate limit: 20 requests/sec.
- * @method Models\DescribeLogListResponse DescribeLogList(Models\DescribeLogListRequest $req) This API is used to get the log list. It has been deprecated. Use `DescribeRumLogList` instead.
- * @method Models\DescribeOfflineLogConfigsResponse DescribeOfflineLogConfigs(Models\DescribeOfflineLogConfigsRequest $req) This API is used to get the configuration of the set offline log listener and return the unique user ID.
- * @method Models\DescribeOfflineLogRecordsResponse DescribeOfflineLogRecords(Models\DescribeOfflineLogRecordsRequest $req) This API is used to get all (up to 100) offline log records.
- * @method Models\DescribeOfflineLogsResponse DescribeOfflineLogs(Models\DescribeOfflineLogsRequest $req) This API is used to get the specified offline log.
  * @method Models\DescribeProjectLimitsResponse DescribeProjectLimits(Models\DescribeProjectLimitsRequest $req) This API is used to get the sampling information of an application’s reporting APIs.
  * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) This API is used to get the list of projects (under teams created by an instance).
  * @method Models\DescribePvListResponse DescribePvList(Models\DescribePvListRequest $req) This API is used to get the list of PVs under a project.

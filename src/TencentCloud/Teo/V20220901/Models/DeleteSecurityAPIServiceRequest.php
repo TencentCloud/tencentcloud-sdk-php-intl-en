@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSecurityAPIService request structure.
  *
- * @method string getZoneId() Obtain Zone ID.		
- * @method void setZoneId(string $ZoneId) Set Zone ID.		
- * @method array getAPIServiceIds() Obtain API service ID list.
- * @method void setAPIServiceIds(array $APIServiceIds) Set API service ID list.
+ * @method string getZoneId() Obtain Zone ID.	
+ * @method void setZoneId(string $ZoneId) Set Zone ID.	
+ * @method array getAPIServiceIds() Obtain List of API service IDs.
+ * @method void setAPIServiceIds(array $APIServiceIds) Set List of API service IDs.
  */
 class DeleteSecurityAPIServiceRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID.		
+     * @var string Zone ID.	
      */
     public $ZoneId;
 
     /**
-     * @var array API service ID list.
+     * @var array List of API service IDs.
      */
     public $APIServiceIds;
 
     /**
-     * @param string $ZoneId Zone ID.		
-     * @param array $APIServiceIds API service ID list.
+     * @param string $ZoneId Zone ID.	
+     * @param array $APIServiceIds List of API service IDs.
      */
     function __construct()
     {

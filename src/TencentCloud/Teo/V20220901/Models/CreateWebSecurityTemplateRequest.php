@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateWebSecurityTemplate request structure.
  *
- * @method string getZoneId() Obtain Zone ID. Explicitly identifies the zone to which the policy template belongs for access control purposes.
- * @method void setZoneId(string $ZoneId) Set Zone ID. Explicitly identifies the zone to which the policy template belongs for access control purposes.
- * @method string getTemplateName() Obtain Policy template name. Composed of Chinese characters, letters, digits, and underscores. Cannot begin with an underscore and must be less than or equal to 32 characters.
- * @method void setTemplateName(string $TemplateName) Set Policy template name. Composed of Chinese characters, letters, digits, and underscores. Cannot begin with an underscore and must be less than or equal to 32 characters.
- * @method SecurityPolicy getSecurityPolicy() Obtain Web security policy template configuration. Generates default config if empty. Supported: Exception rules, custom rules, rate limiting rules, managed rules. Not supported: Bot management rules (under development).
- * @method void setSecurityPolicy(SecurityPolicy $SecurityPolicy) Set Web security policy template configuration. Generates default config if empty. Supported: Exception rules, custom rules, rate limiting rules, managed rules. Not supported: Bot management rules (under development).
+ * @method string getZoneId() Obtain Site ID. This parameter clarifies the site to which the policy template belongs in terms of access permission.
+ * @method void setZoneId(string $ZoneId) Set Site ID. This parameter clarifies the site to which the policy template belongs in terms of access permission.
+ * @method string getTemplateName() Obtain Policy template name. It consists of Chinese characters, letters, digits, and underscores. It cannot begin with an underscore and cannot exceed 32 characters in length.
+ * @method void setTemplateName(string $TemplateName) Set Policy template name. It consists of Chinese characters, letters, digits, and underscores. It cannot begin with an underscore and cannot exceed 32 characters in length.
+ * @method SecurityPolicy getSecurityPolicy() Obtain Configuration file content of the security policy template. If the field is empty, a default configuration is generated. Currently supports exception rules, custom rules, rate limiting rules, and managed rule configuration in the Web protection module. Configure the security policy through expression syntax. Bot management rule configuration is not currently supported and is under development.
+ * @method void setSecurityPolicy(SecurityPolicy $SecurityPolicy) Set Configuration file content of the security policy template. If the field is empty, a default configuration is generated. Currently supports exception rules, custom rules, rate limiting rules, and managed rule configuration in the Web protection module. Configure the security policy through expression syntax. Bot management rule configuration is not currently supported and is under development.
  */
 class CreateWebSecurityTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID. Explicitly identifies the zone to which the policy template belongs for access control purposes.
+     * @var string Site ID. This parameter clarifies the site to which the policy template belongs in terms of access permission.
      */
     public $ZoneId;
 
     /**
-     * @var string Policy template name. Composed of Chinese characters, letters, digits, and underscores. Cannot begin with an underscore and must be less than or equal to 32 characters.
+     * @var string Policy template name. It consists of Chinese characters, letters, digits, and underscores. It cannot begin with an underscore and cannot exceed 32 characters in length.
      */
     public $TemplateName;
 
     /**
-     * @var SecurityPolicy Web security policy template configuration. Generates default config if empty. Supported: Exception rules, custom rules, rate limiting rules, managed rules. Not supported: Bot management rules (under development).
+     * @var SecurityPolicy Configuration file content of the security policy template. If the field is empty, a default configuration is generated. Currently supports exception rules, custom rules, rate limiting rules, and managed rule configuration in the Web protection module. Configure the security policy through expression syntax. Bot management rule configuration is not currently supported and is under development.
      */
     public $SecurityPolicy;
 
     /**
-     * @param string $ZoneId Zone ID. Explicitly identifies the zone to which the policy template belongs for access control purposes.
-     * @param string $TemplateName Policy template name. Composed of Chinese characters, letters, digits, and underscores. Cannot begin with an underscore and must be less than or equal to 32 characters.
-     * @param SecurityPolicy $SecurityPolicy Web security policy template configuration. Generates default config if empty. Supported: Exception rules, custom rules, rate limiting rules, managed rules. Not supported: Bot management rules (under development).
+     * @param string $ZoneId Site ID. This parameter clarifies the site to which the policy template belongs in terms of access permission.
+     * @param string $TemplateName Policy template name. It consists of Chinese characters, letters, digits, and underscores. It cannot begin with an underscore and cannot exceed 32 characters in length.
+     * @param SecurityPolicy $SecurityPolicy Configuration file content of the security policy template. If the field is empty, a default configuration is generated. Currently supports exception rules, custom rules, rate limiting rules, and managed rule configuration in the Web protection module. Configure the security policy through expression syntax. Bot management rule configuration is not currently supported and is under development.
      */
     function __construct()
     {

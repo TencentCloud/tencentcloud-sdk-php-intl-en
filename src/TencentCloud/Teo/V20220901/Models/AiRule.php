@@ -18,32 +18,32 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI rule engine
+ * AI rule engine protection
  *
- * @method string getMode() Obtain The status of the AI rule engine. Values:
-<li>`smart_status_close`: Disabled</li>
-<li>`smart_status_open`: Block</li>
-<li>`smart_status_observe`: Observe</li>
- * @method void setMode(string $Mode) Set The status of the AI rule engine. Values:
-<li>`smart_status_close`: Disabled</li>
-<li>`smart_status_open`: Block</li>
-<li>`smart_status_observe`: Observe</li>
+ * @method string getMode() Obtain AI rule engine status. Valid values:
+<li> smart_status_close: off;</li>
+<li> smart_status_open: block;</li>
+<li> smart_status_observe: observation and disposition.</li>
+ * @method void setMode(string $Mode) Set AI rule engine status. Valid values:
+<li> smart_status_close: off;</li>
+<li> smart_status_open: block;</li>
+<li> smart_status_observe: observation and disposition.</li>
  */
 class AiRule extends AbstractModel
 {
     /**
-     * @var string The status of the AI rule engine. Values:
-<li>`smart_status_close`: Disabled</li>
-<li>`smart_status_open`: Block</li>
-<li>`smart_status_observe`: Observe</li>
+     * @var string AI rule engine status. Valid values:
+<li> smart_status_close: off;</li>
+<li> smart_status_open: block;</li>
+<li> smart_status_observe: observation and disposition.</li>
      */
     public $Mode;
 
     /**
-     * @param string $Mode The status of the AI rule engine. Values:
-<li>`smart_status_close`: Disabled</li>
-<li>`smart_status_open`: Block</li>
-<li>`smart_status_observe`: Observe</li>
+     * @param string $Mode AI rule engine status. Valid values:
+<li> smart_status_close: off;</li>
+<li> smart_status_open: block;</li>
+<li> smart_status_observe: observation and disposition.</li>
      */
     function __construct()
     {

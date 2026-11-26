@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeZoneCustomVariables request structure.
  *
- * @method string getZoneId() Obtain <p>Site ID.</p>
- * @method void setZoneId(string $ZoneId) Set <p>Site ID.</p>
+ * @method string getZoneId() Obtain <p>Zone ID.</p>
+ * @method void setZoneId(string $ZoneId) Set <p>Zone ID.</p>
  */
 class DescribeZoneCustomVariablesRequest extends AbstractModel
 {
     /**
-     * @var string <p>Site ID.</p>
+     * @var string <p>Zone ID.</p>
      */
     public $ZoneId;
 
     /**
-     * @param string $ZoneId <p>Site ID.</p>
+     * @param string $ZoneId <p>Zone ID.</p>
      */
     function __construct()
     {

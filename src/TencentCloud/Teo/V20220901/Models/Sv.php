@@ -18,84 +18,72 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Pricing query parameter
+ * Quotation Parameters
  *
- * @method string getKey() Obtain The parameter key.
- * @method void setKey(string $Key) Set The parameter key.
- * @method string getValue() Obtain The parameter value.
- * @method void setValue(string $Value) Set The parameter value.
- * @method string getPack() Obtain Quota for a resource. Values:
-<li>`zone`: Quota for sites</li>
-<li>`custom-rule`: Quota for custom rules</li>
-<li>`rate-limiting-rule`: Quota for rate limiting rules</li>
-<li>`l4-proxy-instance`: Quota for L4 proxy instances </li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPack(string $Pack) Set Quota for a resource. Values:
-<li>`zone`: Quota for sites</li>
-<li>`custom-rule`: Quota for custom rules</li>
-<li>`rate-limiting-rule`: Quota for rate limiting rules</li>
-<li>`l4-proxy-instance`: Quota for L4 proxy instances </li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain ID of the L4 proxy instance.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set ID of the L4 proxy instance.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProtectionSpecs() Obtain The protection specification.
-Values: <li> `cm_30G`: 30 Gbps base protection bandwidth in **Chinese mainland** service area</li><li> `cm_60G`: 60 Gbps base protection bandwidth in **Chinese mainland** service area</li><li> `cm_100G`: 100 Gbps base protection bandwidth in **Chinese mainland** service area</li><li> `anycast_300G`: 300 Gbps Anycast-based protection in **Global (MLC)** service area</li><li> `anycast_unlimited`: Unlimited Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> `cm_30G_anycast_300G`: 30 Gbps base protection bandwidth in **Chinese mainland** service area and 300 Gbps Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> `cm_30G_anycast_unlimited`: 30 Gbps base protection bandwidth in **Chinese mainland** service area and unlimited Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> cm_60G_anycast_300G`: 60 Gbps base protection bandwidth in **Chinese mainland** service area and 300 Gbps Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> cm_60G_anycast_unlimited`: 60 Gbps base protection bandwidth in **Chinese mainland** service area and unlimited Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> `cm_100G_anycast_300G`: 100 Gbps base protection bandwidth in **Chinese mainland** service area and 300 Gbps Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> cm_100G_anycast_unlimited`: 100 Gbps base protection bandwidth in **Chinese mainland** service area and unlimited Anycast-based protection bandwidth in **Global (MLC)** service area </li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProtectionSpecs(string $ProtectionSpecs) Set The protection specification.
-Values: <li> `cm_30G`: 30 Gbps base protection bandwidth in **Chinese mainland** service area</li><li> `cm_60G`: 60 Gbps base protection bandwidth in **Chinese mainland** service area</li><li> `cm_100G`: 100 Gbps base protection bandwidth in **Chinese mainland** service area</li><li> `anycast_300G`: 300 Gbps Anycast-based protection in **Global (MLC)** service area</li><li> `anycast_unlimited`: Unlimited Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> `cm_30G_anycast_300G`: 30 Gbps base protection bandwidth in **Chinese mainland** service area and 300 Gbps Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> `cm_30G_anycast_unlimited`: 30 Gbps base protection bandwidth in **Chinese mainland** service area and unlimited Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> cm_60G_anycast_300G`: 60 Gbps base protection bandwidth in **Chinese mainland** service area and 300 Gbps Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> cm_60G_anycast_unlimited`: 60 Gbps base protection bandwidth in **Chinese mainland** service area and unlimited Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> `cm_100G_anycast_300G`: 100 Gbps base protection bandwidth in **Chinese mainland** service area and 300 Gbps Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> cm_100G_anycast_unlimited`: 100 Gbps base protection bandwidth in **Chinese mainland** service area and unlimited Anycast-based protection bandwidth in **Global (MLC)** service area </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getKey() Obtain Price inquiry parameter key.
+ * @method void setKey(string $Key) Set Price inquiry parameter key.
+ * @method string getValue() Obtain Quotation parameter value.
+ * @method void setValue(string $Value) Set Quotation parameter value.
+ * @method string getPack() Obtain Quota for inquiry parameter mapping. Valid values:
+<li>zone: sites;</li>
+<li>custom-rule: number of custom rules;</li>
+<li>rate-limiting-rule: rate limiting rule;</li>
+<li>l4-proxy-instance: number of L4 proxy instances.</li>
+ * @method void setPack(string $Pack) Set Quota for inquiry parameter mapping. Valid values:
+<li>zone: sites;</li>
+<li>custom-rule: number of custom rules;</li>
+<li>rate-limiting-rule: rate limiting rule;</li>
+<li>l4-proxy-instance: number of L4 proxy instances.</li>
+ * @method string getInstanceId() Obtain L4 proxy instance Id mapped to the price inquiry parameter.
+ * @method void setInstanceId(string $InstanceId) Set L4 proxy instance Id mapped to the price inquiry parameter.
+ * @method string getProtectionSpecs() Obtain Inquiry parameter corresponding to the protection level.
+Valid values: <li> cm_30G: 30 Gbps baseline protection for the Chinese mainland acceleration area;</li><li> cm_60G: 60 Gbps baseline protection for the Chinese mainland acceleration area;</li><li> cm_100G: 100 Gbps baseline protection for the Chinese mainland acceleration area;</li><li> anycast_300G: 300 Gbps anycast joint protection for the global acceleration region (outside Chinese mainland);</li><li> anycast_unlimited: unlimited anycast full protection for the global acceleration region (outside Chinese mainland);</li><li> cm_30G_anycast_300G: 30 Gbps baseline protection for the Chinese mainland acceleration area, 300 Gbps anycast joint protection for the global acceleration region (outside Chinese mainland);</li><li> cm_30G_anycast_unlimited: 30 Gbps baseline protection for the Chinese mainland acceleration area, unlimited anycast full protection for the global acceleration region (outside Chinese mainland);</li><li> cm_60G_anycast_300G: 60 Gbps baseline protection for the Chinese mainland acceleration area, 300 Gbps anycast joint protection for the global acceleration region (outside Chinese mainland);</li><li> cm_60G_anycast_unlimited: 60 Gbps baseline protection for the Chinese mainland acceleration area, unlimited anycast full protection for the global acceleration region (outside Chinese mainland);</li><li> cm_100G_anycast_300G: 100 Gbps baseline protection for the Chinese mainland acceleration area, 300 Gbps anycast joint protection for the global acceleration region (outside Chinese mainland);</li><li> cm_100G_anycast_unlimited: 100 Gbps baseline protection for the Chinese mainland acceleration area, unlimited anycast full protection for the global acceleration region (outside Chinese mainland).</li>
+ * @method void setProtectionSpecs(string $ProtectionSpecs) Set Inquiry parameter corresponding to the protection level.
+Valid values: <li> cm_30G: 30 Gbps baseline protection for the Chinese mainland acceleration area;</li><li> cm_60G: 60 Gbps baseline protection for the Chinese mainland acceleration area;</li><li> cm_100G: 100 Gbps baseline protection for the Chinese mainland acceleration area;</li><li> anycast_300G: 300 Gbps anycast joint protection for the global acceleration region (outside Chinese mainland);</li><li> anycast_unlimited: unlimited anycast full protection for the global acceleration region (outside Chinese mainland);</li><li> cm_30G_anycast_300G: 30 Gbps baseline protection for the Chinese mainland acceleration area, 300 Gbps anycast joint protection for the global acceleration region (outside Chinese mainland);</li><li> cm_30G_anycast_unlimited: 30 Gbps baseline protection for the Chinese mainland acceleration area, unlimited anycast full protection for the global acceleration region (outside Chinese mainland);</li><li> cm_60G_anycast_300G: 60 Gbps baseline protection for the Chinese mainland acceleration area, 300 Gbps anycast joint protection for the global acceleration region (outside Chinese mainland);</li><li> cm_60G_anycast_unlimited: 60 Gbps baseline protection for the Chinese mainland acceleration area, unlimited anycast full protection for the global acceleration region (outside Chinese mainland);</li><li> cm_100G_anycast_300G: 100 Gbps baseline protection for the Chinese mainland acceleration area, 300 Gbps anycast joint protection for the global acceleration region (outside Chinese mainland);</li><li> cm_100G_anycast_unlimited: 100 Gbps baseline protection for the Chinese mainland acceleration area, unlimited anycast full protection for the global acceleration region (outside Chinese mainland).</li>
  */
 class Sv extends AbstractModel
 {
     /**
-     * @var string The parameter key.
+     * @var string Price inquiry parameter key.
      */
     public $Key;
 
     /**
-     * @var string The parameter value.
+     * @var string Quotation parameter value.
      */
     public $Value;
 
     /**
-     * @var string Quota for a resource. Values:
-<li>`zone`: Quota for sites</li>
-<li>`custom-rule`: Quota for custom rules</li>
-<li>`rate-limiting-rule`: Quota for rate limiting rules</li>
-<li>`l4-proxy-instance`: Quota for L4 proxy instances </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Quota for inquiry parameter mapping. Valid values:
+<li>zone: sites;</li>
+<li>custom-rule: number of custom rules;</li>
+<li>rate-limiting-rule: rate limiting rule;</li>
+<li>l4-proxy-instance: number of L4 proxy instances.</li>
      */
     public $Pack;
 
     /**
-     * @var string ID of the L4 proxy instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string L4 proxy instance Id mapped to the price inquiry parameter.
      */
     public $InstanceId;
 
     /**
-     * @var string The protection specification.
-Values: <li> `cm_30G`: 30 Gbps base protection bandwidth in **Chinese mainland** service area</li><li> `cm_60G`: 60 Gbps base protection bandwidth in **Chinese mainland** service area</li><li> `cm_100G`: 100 Gbps base protection bandwidth in **Chinese mainland** service area</li><li> `anycast_300G`: 300 Gbps Anycast-based protection in **Global (MLC)** service area</li><li> `anycast_unlimited`: Unlimited Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> `cm_30G_anycast_300G`: 30 Gbps base protection bandwidth in **Chinese mainland** service area and 300 Gbps Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> `cm_30G_anycast_unlimited`: 30 Gbps base protection bandwidth in **Chinese mainland** service area and unlimited Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> cm_60G_anycast_300G`: 60 Gbps base protection bandwidth in **Chinese mainland** service area and 300 Gbps Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> cm_60G_anycast_unlimited`: 60 Gbps base protection bandwidth in **Chinese mainland** service area and unlimited Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> `cm_100G_anycast_300G`: 100 Gbps base protection bandwidth in **Chinese mainland** service area and 300 Gbps Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> cm_100G_anycast_unlimited`: 100 Gbps base protection bandwidth in **Chinese mainland** service area and unlimited Anycast-based protection bandwidth in **Global (MLC)** service area </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Inquiry parameter corresponding to the protection level.
+Valid values: <li> cm_30G: 30 Gbps baseline protection for the Chinese mainland acceleration area;</li><li> cm_60G: 60 Gbps baseline protection for the Chinese mainland acceleration area;</li><li> cm_100G: 100 Gbps baseline protection for the Chinese mainland acceleration area;</li><li> anycast_300G: 300 Gbps anycast joint protection for the global acceleration region (outside Chinese mainland);</li><li> anycast_unlimited: unlimited anycast full protection for the global acceleration region (outside Chinese mainland);</li><li> cm_30G_anycast_300G: 30 Gbps baseline protection for the Chinese mainland acceleration area, 300 Gbps anycast joint protection for the global acceleration region (outside Chinese mainland);</li><li> cm_30G_anycast_unlimited: 30 Gbps baseline protection for the Chinese mainland acceleration area, unlimited anycast full protection for the global acceleration region (outside Chinese mainland);</li><li> cm_60G_anycast_300G: 60 Gbps baseline protection for the Chinese mainland acceleration area, 300 Gbps anycast joint protection for the global acceleration region (outside Chinese mainland);</li><li> cm_60G_anycast_unlimited: 60 Gbps baseline protection for the Chinese mainland acceleration area, unlimited anycast full protection for the global acceleration region (outside Chinese mainland);</li><li> cm_100G_anycast_300G: 100 Gbps baseline protection for the Chinese mainland acceleration area, 300 Gbps anycast joint protection for the global acceleration region (outside Chinese mainland);</li><li> cm_100G_anycast_unlimited: 100 Gbps baseline protection for the Chinese mainland acceleration area, unlimited anycast full protection for the global acceleration region (outside Chinese mainland).</li>
      */
     public $ProtectionSpecs;
 
     /**
-     * @param string $Key The parameter key.
-     * @param string $Value The parameter value.
-     * @param string $Pack Quota for a resource. Values:
-<li>`zone`: Quota for sites</li>
-<li>`custom-rule`: Quota for custom rules</li>
-<li>`rate-limiting-rule`: Quota for rate limiting rules</li>
-<li>`l4-proxy-instance`: Quota for L4 proxy instances </li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId ID of the L4 proxy instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProtectionSpecs The protection specification.
-Values: <li> `cm_30G`: 30 Gbps base protection bandwidth in **Chinese mainland** service area</li><li> `cm_60G`: 60 Gbps base protection bandwidth in **Chinese mainland** service area</li><li> `cm_100G`: 100 Gbps base protection bandwidth in **Chinese mainland** service area</li><li> `anycast_300G`: 300 Gbps Anycast-based protection in **Global (MLC)** service area</li><li> `anycast_unlimited`: Unlimited Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> `cm_30G_anycast_300G`: 30 Gbps base protection bandwidth in **Chinese mainland** service area and 300 Gbps Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> `cm_30G_anycast_unlimited`: 30 Gbps base protection bandwidth in **Chinese mainland** service area and unlimited Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> cm_60G_anycast_300G`: 60 Gbps base protection bandwidth in **Chinese mainland** service area and 300 Gbps Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> cm_60G_anycast_unlimited`: 60 Gbps base protection bandwidth in **Chinese mainland** service area and unlimited Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> `cm_100G_anycast_300G`: 100 Gbps base protection bandwidth in **Chinese mainland** service area and 300 Gbps Anycast-based protection bandwidth in **Global (MLC)** service area</li><li> cm_100G_anycast_unlimited`: 100 Gbps base protection bandwidth in **Chinese mainland** service area and unlimited Anycast-based protection bandwidth in **Global (MLC)** service area </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Key Price inquiry parameter key.
+     * @param string $Value Quotation parameter value.
+     * @param string $Pack Quota for inquiry parameter mapping. Valid values:
+<li>zone: sites;</li>
+<li>custom-rule: number of custom rules;</li>
+<li>rate-limiting-rule: rate limiting rule;</li>
+<li>l4-proxy-instance: number of L4 proxy instances.</li>
+     * @param string $InstanceId L4 proxy instance Id mapped to the price inquiry parameter.
+     * @param string $ProtectionSpecs Inquiry parameter corresponding to the protection level.
+Valid values: <li> cm_30G: 30 Gbps baseline protection for the Chinese mainland acceleration area;</li><li> cm_60G: 60 Gbps baseline protection for the Chinese mainland acceleration area;</li><li> cm_100G: 100 Gbps baseline protection for the Chinese mainland acceleration area;</li><li> anycast_300G: 300 Gbps anycast joint protection for the global acceleration region (outside Chinese mainland);</li><li> anycast_unlimited: unlimited anycast full protection for the global acceleration region (outside Chinese mainland);</li><li> cm_30G_anycast_300G: 30 Gbps baseline protection for the Chinese mainland acceleration area, 300 Gbps anycast joint protection for the global acceleration region (outside Chinese mainland);</li><li> cm_30G_anycast_unlimited: 30 Gbps baseline protection for the Chinese mainland acceleration area, unlimited anycast full protection for the global acceleration region (outside Chinese mainland);</li><li> cm_60G_anycast_300G: 60 Gbps baseline protection for the Chinese mainland acceleration area, 300 Gbps anycast joint protection for the global acceleration region (outside Chinese mainland);</li><li> cm_60G_anycast_unlimited: 60 Gbps baseline protection for the Chinese mainland acceleration area, unlimited anycast full protection for the global acceleration region (outside Chinese mainland);</li><li> cm_100G_anycast_300G: 100 Gbps baseline protection for the Chinese mainland acceleration area, 300 Gbps anycast joint protection for the global acceleration region (outside Chinese mainland);</li><li> cm_100G_anycast_unlimited: 100 Gbps baseline protection for the Chinese mainland acceleration area, unlimited anycast full protection for the global acceleration region (outside Chinese mainland).</li>
      */
     function __construct()
     {

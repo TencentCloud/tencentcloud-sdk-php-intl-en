@@ -21,24 +21,24 @@ use TencentCloud\Common\AbstractModel;
  * Just-in-time media processing configuration.
  *
  * @method string getSwitch() Obtain Just-in-time media processing configuration switch. Valid values:
-<li>on: Enable.</li>
+<li>`on`: Enable;</li>
 <li>off: Disable.</li>
  * @method void setSwitch(string $Switch) Set Just-in-time media processing configuration switch. Valid values:
-<li>on: Enable.</li>
+<li>`on`: Enable;</li>
 <li>off: Disable.</li>
  */
 class JITVideoProcess extends AbstractModel
 {
     /**
      * @var string Just-in-time media processing configuration switch. Valid values:
-<li>on: Enable.</li>
+<li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
     public $Switch;
 
     /**
      * @param string $Switch Just-in-time media processing configuration switch. Valid values:
-<li>on: Enable.</li>
+<li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
     function __construct()

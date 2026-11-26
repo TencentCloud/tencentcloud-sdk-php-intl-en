@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAccelerationDomainStatuses request structure.
  *
- * @method string getZoneId() Obtain ID of the site related with the accelerated domain name.
- * @method void setZoneId(string $ZoneId) Set ID of the site related with the accelerated domain name.
- * @method array getDomainNames() Obtain List of accelerated domain names to be modified.
- * @method void setDomainNames(array $DomainNames) Set List of accelerated domain names to be modified.
- * @method string getStatus() Obtain Status of the accelerated domain name. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
- * @method void setStatus(string $Status) Set Status of the accelerated domain name. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
- * @method boolean getForce() Obtain Whether to force suspension when the domain name has associated resources (such as alias domain names and traffic scheduling policies). Values:
-<li>`true`: Suspend the domain name and all associated resources.</li>
-<li>`true`: Do not suspend the domain name and all associated resources.</li>Default value: `false`.
- * @method void setForce(boolean $Force) Set Whether to force suspension when the domain name has associated resources (such as alias domain names and traffic scheduling policies). Values:
-<li>`true`: Suspend the domain name and all associated resources.</li>
-<li>`true`: Do not suspend the domain name and all associated resources.</li>Default value: `false`.
+ * @method string getZoneId() Obtain Zone ID of the acceleration domain name.
+ * @method void setZoneId(string $ZoneId) Set Zone ID of the acceleration domain name.
+ * @method array getDomainNames() Obtain List of acceleration domain names for which to modify the execution status.
+ * @method void setDomainNames(array $DomainNames) Set List of acceleration domain names for which to modify the execution status.
+ * @method string getStatus() Obtain Acceleration domain name status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
+ * @method void setStatus(string $Status) Set Acceleration domain name status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
+ * @method boolean getForce() Obtain Whether to force suspension. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force suspension of that domain name. Valid values:
+<li> true: disable that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, it cannot be disabled.</li>If not specified, the default value is false.
+ * @method void setForce(boolean $Force) Set Whether to force suspension. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force suspension of that domain name. Valid values:
+<li> true: disable that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, it cannot be disabled.</li>If not specified, the default value is false.
  */
 class ModifyAccelerationDomainStatusesRequest extends AbstractModel
 {
     /**
-     * @var string ID of the site related with the accelerated domain name.
+     * @var string Zone ID of the acceleration domain name.
      */
     public $ZoneId;
 
     /**
-     * @var array List of accelerated domain names to be modified.
+     * @var array List of acceleration domain names for which to modify the execution status.
      */
     public $DomainNames;
 
     /**
-     * @var string Status of the accelerated domain name. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
+     * @var string Acceleration domain name status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
      */
     public $Status;
 
     /**
-     * @var boolean Whether to force suspension when the domain name has associated resources (such as alias domain names and traffic scheduling policies). Values:
-<li>`true`: Suspend the domain name and all associated resources.</li>
-<li>`true`: Do not suspend the domain name and all associated resources.</li>Default value: `false`.
+     * @var boolean Whether to force suspension. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force suspension of that domain name. Valid values:
+<li> true: disable that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, it cannot be disabled.</li>If not specified, the default value is false.
      */
     public $Force;
 
     /**
-     * @param string $ZoneId ID of the site related with the accelerated domain name.
-     * @param array $DomainNames List of accelerated domain names to be modified.
-     * @param string $Status Status of the accelerated domain name. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-     * @param boolean $Force Whether to force suspension when the domain name has associated resources (such as alias domain names and traffic scheduling policies). Values:
-<li>`true`: Suspend the domain name and all associated resources.</li>
-<li>`true`: Do not suspend the domain name and all associated resources.</li>Default value: `false`.
+     * @param string $ZoneId Zone ID of the acceleration domain name.
+     * @param array $DomainNames List of acceleration domain names for which to modify the execution status.
+     * @param string $Status Acceleration domain name status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
+     * @param boolean $Force Whether to force suspension. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force suspension of that domain name. Valid values:
+<li> true: disable that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, it cannot be disabled.</li>If not specified, the default value is false.
      */
     function __construct()
     {

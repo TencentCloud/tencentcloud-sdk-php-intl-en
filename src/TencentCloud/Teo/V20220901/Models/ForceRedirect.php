@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Forced HTTPS redirect configuration for access protocols.
  *
- * @method string getSwitch() Obtain Whether to enable force HTTPS redirect. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable force HTTPS redirect. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method integer getRedirectStatusCode() Obtain Redirection status code. valid values:.
-<Li>`301`: 301 redirect</li>.
-<Li>`302`: 302 redirect</li>.
- * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Redirection status code. valid values:.
-<Li>`301`: 301 redirect</li>.
-<Li>`302`: 302 redirect</li>.
+ * @method string getSwitch() Obtain Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method integer getRedirectStatusCode() Obtain Redirection status code. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
+ * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Redirection status code. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
  */
 class ForceRedirect extends AbstractModel
 {
     /**
-     * @var string Whether to enable force HTTPS redirect. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var integer Redirection status code. valid values:.
-<Li>`301`: 301 redirect</li>.
-<Li>`302`: 302 redirect</li>.
+     * @var integer Redirection status code. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
      */
     public $RedirectStatusCode;
 
     /**
-     * @param string $Switch Whether to enable force HTTPS redirect. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param integer $RedirectStatusCode Redirection status code. valid values:.
-<Li>`301`: 301 redirect</li>.
-<Li>`302`: 302 redirect</li>.
+     * @param string $Switch Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param integer $RedirectStatusCode Redirection status code. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
      */
     function __construct()
     {

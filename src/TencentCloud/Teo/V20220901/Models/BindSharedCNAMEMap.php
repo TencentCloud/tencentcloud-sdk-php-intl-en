@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Bindings between a shared CNAME and connected domain names
+ * Binding relationship between the shared CNAME and domain name.
  *
- * @method string getSharedCNAME() Obtain The shared CNAME to be bound with or unbound from.
- * @method void setSharedCNAME(string $SharedCNAME) Set The shared CNAME to be bound with or unbound from.
- * @method array getDomainNames() Obtain Acceleration domains (up to 20).
- * @method void setDomainNames(array $DomainNames) Set Acceleration domains (up to 20).
+ * @method string getSharedCNAME() Obtain Shared CNAME to bind or unbind.
+ * @method void setSharedCNAME(string $SharedCNAME) Set Shared CNAME to bind or unbind.
+ * @method array getDomainNames() Obtain Acceleration domain names. You can pass multiple ones, up to 20.
+ * @method void setDomainNames(array $DomainNames) Set Acceleration domain names. You can pass multiple ones, up to 20.
  */
 class BindSharedCNAMEMap extends AbstractModel
 {
     /**
-     * @var string The shared CNAME to be bound with or unbound from.
+     * @var string Shared CNAME to bind or unbind.
      */
     public $SharedCNAME;
 
     /**
-     * @var array Acceleration domains (up to 20).
+     * @var array Acceleration domain names. You can pass multiple ones, up to 20.
      */
     public $DomainNames;
 
     /**
-     * @param string $SharedCNAME The shared CNAME to be bound with or unbound from.
-     * @param array $DomainNames Acceleration domains (up to 20).
+     * @param string $SharedCNAME Shared CNAME to bind or unbind.
+     * @param array $DomainNames Acceleration domain names. You can pass multiple ones, up to 20.
      */
     function __construct()
     {

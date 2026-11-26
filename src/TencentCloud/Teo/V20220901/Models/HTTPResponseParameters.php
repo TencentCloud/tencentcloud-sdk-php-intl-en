@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTP response configuration parameters.
  *
- * @method integer getStatusCode() Obtain Response status code. supports 2xx, 4xx, 5xx, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
- * @method void setStatusCode(integer $StatusCode) Set Response status code. supports 2xx, 4xx, 5xx, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
- * @method string getResponsePage() Obtain Response page id.
- * @method void setResponsePage(string $ResponsePage) Set Response page id.
+ * @method integer getStatusCode() Obtain status code. Supports 2XX, 4XX, 5XX, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
+ * @method void setStatusCode(integer $StatusCode) Set status code. Supports 2XX, 4XX, 5XX, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
+ * @method string getResponsePage() Obtain page ID.
+ * @method void setResponsePage(string $ResponsePage) Set page ID.
  */
 class HTTPResponseParameters extends AbstractModel
 {
     /**
-     * @var integer Response status code. supports 2xx, 4xx, 5xx, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
+     * @var integer status code. Supports 2XX, 4XX, 5XX, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
      */
     public $StatusCode;
 
     /**
-     * @var string Response page id.
+     * @var string page ID.
      */
     public $ResponsePage;
 
     /**
-     * @param integer $StatusCode Response status code. supports 2xx, 4xx, 5xx, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
-     * @param string $ResponsePage Response page id.
+     * @param integer $StatusCode status code. Supports 2XX, 4XX, 5XX, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
+     * @param string $ResponsePage page ID.
      */
     function __construct()
     {

@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getGatewayId() Obtain Specifies the gateway ID.
- * @method void setGatewayId(string $GatewayId) Set Specifies the gateway ID.
- * @method string getGatewayName() Obtain Gateway name, up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
- * @method void setGatewayName(string $GatewayName) Set Gateway name, up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
- * @method string getGatewayIP() Obtain Gateway address, if GatewayType value is private (private gateway), you can fill in and modify it. When using this address, please ensure it has been entered into the Tencent cloud multi-channel security acceleration gateway system. if not entered, you need to submit a ticket or contact the architect to enter the gateway IP address into the Tencent cloud multi-channel security acceleration gateway system in advance before making API calls.
- * @method void setGatewayIP(string $GatewayIP) Set Gateway address, if GatewayType value is private (private gateway), you can fill in and modify it. When using this address, please ensure it has been entered into the Tencent cloud multi-channel security acceleration gateway system. if not entered, you need to submit a ticket or contact the architect to enter the gateway IP address into the Tencent cloud multi-channel security acceleration gateway system in advance before making API calls.
- * @method integer getGatewayPort() Obtain Gateway port, range 1-65535 (excluding 8888), supports modifying GatewayType with a value of private gateway.
- * @method void setGatewayPort(integer $GatewayPort) Set Gateway port, range 1-65535 (excluding 8888), supports modifying GatewayType with a value of private gateway.
+ * @method string getGatewayId() Obtain Gateway ID.
+ * @method void setGatewayId(string $GatewayId) Set Gateway ID.
+ * @method string getGatewayName() Obtain Gateway name, up to 16 characters. Usable characters: a-z, A-Z, 0-9, -, _.
+ * @method void setGatewayName(string $GatewayName) Set Gateway name, up to 16 characters. Usable characters: a-z, A-Z, 0-9, -, _.
+ * @method string getGatewayIP() Obtain Gateway address. When GatewayType is private, you can fill in and modify this address. Before using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not, enter the gateway IP address into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
+ * @method void setGatewayIP(string $GatewayIP) Set Gateway address. When GatewayType is private, you can fill in and modify this address. Before using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not, enter the gateway IP address into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
+ * @method integer getGatewayPort() Obtain Gateway port. Value range: 1–65535 (excluding 8888). Modification is supported only for private gateways with a GatewayType value of private.
+ * @method void setGatewayPort(integer $GatewayPort) Set Gateway port. Value range: 1–65535 (excluding 8888). Modification is supported only for private gateways with a GatewayType value of private.
  */
 class ModifyMultiPathGatewayRequest extends AbstractModel
 {
@@ -39,31 +39,31 @@ class ModifyMultiPathGatewayRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Specifies the gateway ID.
+     * @var string Gateway ID.
      */
     public $GatewayId;
 
     /**
-     * @var string Gateway name, up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
+     * @var string Gateway name, up to 16 characters. Usable characters: a-z, A-Z, 0-9, -, _.
      */
     public $GatewayName;
 
     /**
-     * @var string Gateway address, if GatewayType value is private (private gateway), you can fill in and modify it. When using this address, please ensure it has been entered into the Tencent cloud multi-channel security acceleration gateway system. if not entered, you need to submit a ticket or contact the architect to enter the gateway IP address into the Tencent cloud multi-channel security acceleration gateway system in advance before making API calls.
+     * @var string Gateway address. When GatewayType is private, you can fill in and modify this address. Before using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not, enter the gateway IP address into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
      */
     public $GatewayIP;
 
     /**
-     * @var integer Gateway port, range 1-65535 (excluding 8888), supports modifying GatewayType with a value of private gateway.
+     * @var integer Gateway port. Value range: 1–65535 (excluding 8888). Modification is supported only for private gateways with a GatewayType value of private.
      */
     public $GatewayPort;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $GatewayId Specifies the gateway ID.
-     * @param string $GatewayName Gateway name, up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
-     * @param string $GatewayIP Gateway address, if GatewayType value is private (private gateway), you can fill in and modify it. When using this address, please ensure it has been entered into the Tencent cloud multi-channel security acceleration gateway system. if not entered, you need to submit a ticket or contact the architect to enter the gateway IP address into the Tencent cloud multi-channel security acceleration gateway system in advance before making API calls.
-     * @param integer $GatewayPort Gateway port, range 1-65535 (excluding 8888), supports modifying GatewayType with a value of private gateway.
+     * @param string $GatewayId Gateway ID.
+     * @param string $GatewayName Gateway name, up to 16 characters. Usable characters: a-z, A-Z, 0-9, -, _.
+     * @param string $GatewayIP Gateway address. When GatewayType is private, you can fill in and modify this address. Before using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not, enter the gateway IP address into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
+     * @param integer $GatewayPort Gateway port. Value range: 1–65535 (excluding 8888). Modification is supported only for private gateways with a GatewayType value of private.
      */
     function __construct()
     {

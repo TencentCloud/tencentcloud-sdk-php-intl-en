@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Browser Cache TTL configuration parameters
+ * Browser cache TTL config.
  *
- * @method string getFollowOrigin() Obtain Specifies whether to follow the origin server cache-control configuration, with the following values:.
-<Li>`On`: follow the origin server and ignore the field cachetime;</li>.
-<Li>`Off`: do not follow the origin server and apply the field cachetime.</li>.
- * @method void setFollowOrigin(string $FollowOrigin) Set Specifies whether to follow the origin server cache-control configuration, with the following values:.
-<Li>`On`: follow the origin server and ignore the field cachetime;</li>.
-<Li>`Off`: do not follow the origin server and apply the field cachetime.</li>.
- * @method integer getCacheTime() Obtain Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: when followorigin is off, it means not following the origin server and using cachetime to set the cache time; otherwise, this field will not take effect.
- * @method void setCacheTime(integer $CacheTime) Set Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: when followorigin is off, it means not following the origin server and using cachetime to set the cache time; otherwise, this field will not take effect.
+ * @method string getFollowOrigin() Obtain Follow the origin server Cache-Control switch. Valid values:
+<li>on: follow the origin site and ignore the CacheTime setting;</li>
+<li>off: Do not follow the origin site. Use the CacheTime time setting.</li>
+ * @method void setFollowOrigin(string $FollowOrigin) Set Follow the origin server Cache-Control switch. Valid values:
+<li>on: follow the origin site and ignore the CacheTime setting;</li>
+<li>off: Do not follow the origin site. Use the CacheTime time setting.</li>
+ * @method integer getCacheTime() Obtain Custom cache time value in seconds. Value range: 0–315360000.<br>Note: When FollowOrigin is off, it means not to follow the origin site and use CacheTime to set the cache time. Otherwise, this field is ineffective.
+ * @method void setCacheTime(integer $CacheTime) Set Custom cache time value in seconds. Value range: 0–315360000.<br>Note: When FollowOrigin is off, it means not to follow the origin site and use CacheTime to set the cache time. Otherwise, this field is ineffective.
  */
 class MaxAgeParameters extends AbstractModel
 {
     /**
-     * @var string Specifies whether to follow the origin server cache-control configuration, with the following values:.
-<Li>`On`: follow the origin server and ignore the field cachetime;</li>.
-<Li>`Off`: do not follow the origin server and apply the field cachetime.</li>.
+     * @var string Follow the origin server Cache-Control switch. Valid values:
+<li>on: follow the origin site and ignore the CacheTime setting;</li>
+<li>off: Do not follow the origin site. Use the CacheTime time setting.</li>
      */
     public $FollowOrigin;
 
     /**
-     * @var integer Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: when followorigin is off, it means not following the origin server and using cachetime to set the cache time; otherwise, this field will not take effect.
+     * @var integer Custom cache time value in seconds. Value range: 0–315360000.<br>Note: When FollowOrigin is off, it means not to follow the origin site and use CacheTime to set the cache time. Otherwise, this field is ineffective.
      */
     public $CacheTime;
 
     /**
-     * @param string $FollowOrigin Specifies whether to follow the origin server cache-control configuration, with the following values:.
-<Li>`On`: follow the origin server and ignore the field cachetime;</li>.
-<Li>`Off`: do not follow the origin server and apply the field cachetime.</li>.
-     * @param integer $CacheTime Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: when followorigin is off, it means not following the origin server and using cachetime to set the cache time; otherwise, this field will not take effect.
+     * @param string $FollowOrigin Follow the origin server Cache-Control switch. Valid values:
+<li>on: follow the origin site and ignore the CacheTime setting;</li>
+<li>off: Do not follow the origin site. Use the CacheTime time setting.</li>
+     * @param integer $CacheTime Custom cache time value in seconds. Value range: 0–315360000.<br>Note: When FollowOrigin is off, it means not to follow the origin site and use CacheTime to set the cache time. Otherwise, this field is ineffective.
      */
     function __construct()
     {

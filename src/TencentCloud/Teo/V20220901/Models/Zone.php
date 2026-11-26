@@ -20,318 +20,306 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Site detail.
  *
- * @method string getZoneId() Obtain Site ID.
- * @method void setZoneId(string $ZoneId) Set Site ID.
- * @method string getZoneName() Obtain The site name.
- * @method void setZoneName(string $ZoneName) Set The site name.
- * @method string getAliasZoneName() Obtain Identical site identifier. specifies a composite of numbers, english letters, ".", "-", and "_" with a character limit of 200.
- * @method void setAliasZoneName(string $AliasZoneName) Set Identical site identifier. specifies a composite of numbers, english letters, ".", "-", and "_" with a character limit of 200.
- * @method string getArea() Obtain Site acceleration region. valid values:.
-<Li>Global: global availability zone.</li>.
-<Li>Mainland: chinese mainland availability zone.</li>.
-<li>overseas: global availability zone (excluding the chinese mainland).</li>.
- * @method void setArea(string $Area) Set Site acceleration region. valid values:.
-<Li>Global: global availability zone.</li>.
-<Li>Mainland: chinese mainland availability zone.</li>.
-<li>overseas: global availability zone (excluding the chinese mainland).</li>.
- * @method string getType() Obtain Site access type. valid values:.
-<li>full: NS access type;</li>.
-<li>partial: CNAME access type;</li>.
-<li>noDomainAccess: domainless access type.</li>.
-<li>dnsPodAccess: DNSPod managed type. this type requires your domain name to be hosted on tencent cloud DNSPod.</li>.
-<li> pages: pages data type;</li>.
-<li>ai: edge reasoning access type.</li>.
- * @method void setType(string $Type) Set Site access type. valid values:.
-<li>full: NS access type;</li>.
-<li>partial: CNAME access type;</li>.
-<li>noDomainAccess: domainless access type.</li>.
-<li>dnsPodAccess: DNSPod managed type. this type requires your domain name to be hosted on tencent cloud DNSPod.</li>.
-<li> pages: pages data type;</li>.
-<li>ai: edge reasoning access type.</li>.
- * @method array getTags() Obtain Specifies the Tag associated with the site.
- * @method void setTags(array $Tags) Set Specifies the Tag associated with the site.
- * @method array getResources() Obtain The list of billable resources.
- * @method void setResources(array $Resources) Set The list of billable resources.
- * @method NSDetail getNSDetail() Obtain NS site detail. returned only when Type = full.
- * @method void setNSDetail(NSDetail $NSDetail) Set NS site detail. returned only when Type = full.
- * @method CNAMEDetail getCNAMEDetail() Obtain CNAME site detail. returned only when Type = partial.
- * @method void setCNAMEDetail(CNAMEDetail $CNAMEDetail) Set CNAME site detail. returned only when Type = partial.
- * @method DNSPodDetail getDNSPodDetail() Obtain DNSPod managed Type site detail. returned only when Type = dnsPodAccess.
- * @method void setDNSPodDetail(DNSPodDetail $DNSPodDetail) Set DNSPod managed Type site detail. returned only when Type = dnsPodAccess.
- * @method string getCreatedOn() Obtain The creation time of the site.
- * @method void setCreatedOn(string $CreatedOn) Set The creation time of the site.
- * @method string getModifiedOn() Obtain The modification date of the site.
- * @method void setModifiedOn(string $ModifiedOn) Set The modification date of the site.
- * @method string getStatus() Obtain The site status. Values:
-u200c<li>`active`: The name server is switched to EdgeOne.</li>
-u200c<li>`pending`: The name server is not switched.</li>
-u200c<li>`moved`: The name server is changed to other service providers.</li>
-u200c<li>`deactivated`: The site is blocked.</li>
-<li>`initializing`: The site is not bound with any plan. </li>
- * @method void setStatus(string $Status) Set The site status. Values:
-u200c<li>`active`: The name server is switched to EdgeOne.</li>
-u200c<li>`pending`: The name server is not switched.</li>
-u200c<li>`moved`: The name server is changed to other service providers.</li>
-u200c<li>`deactivated`: The site is blocked.</li>
-<li>`initializing`: The site is not bound with any plan. </li>
- * @method string getCnameStatus() Obtain CNAME record access status. Values:
-<li>`finished`: The site is verified.</li>
-<li>`pending`: The site is being verified.</li>
- * @method void setCnameStatus(string $CnameStatus) Set CNAME record access status. Values:
-<li>`finished`: The site is verified.</li>
-<li>`pending`: The site is being verified.</li>
- * @method string getActiveStatus() Obtain Status of the proxy. Values:
-<li>`active`: Enabled</li>
-<li>`inactive`: Not activated</li>
-<li>`paused`: Disabled</li>
- * @method void setActiveStatus(string $ActiveStatus) Set Status of the proxy. Values:
-<li>`active`: Enabled</li>
-<li>`inactive`: Not activated</li>
-<li>`paused`: Disabled</li>
- * @method string getLockStatus() Obtain Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
- * @method void setLockStatus(string $LockStatus) Set Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
- * @method boolean getPaused() Obtain Whether the site is disabled.
- * @method void setPaused(boolean $Paused) Set Whether the site is disabled.
- * @method integer getIsFake() Obtain Specifies whether it is a fake site (this field is a historic reserved field and is no longer maintained, refer to the website type for the corresponding field). valid values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method string getZoneName() Obtain Site name.
+ * @method void setZoneName(string $ZoneName) Set Site name.
+ * @method string getAliasZoneName() Obtain Identical site identifier. It can contain digits, letters, ".", "-", and "_", up to 200 characters.
+ * @method void setAliasZoneName(string $AliasZoneName) Set Identical site identifier. It can contain digits, letters, ".", "-", and "_", up to 200 characters.
+ * @method string getArea() Obtain Site acceleration region. Valid values:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
+ * @method void setArea(string $Area) Set Site acceleration region. Valid values:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
+ * @method string getType() Obtain Site access type. Valid values:
+<li>full: NS access type;</li>
+<li>partial: CNAME access type;</li>
+<li>noDomainAccess: domainless access type.</li>
+<li>dnsPodAccess: DNSPod managed type. This type requires your domain name to be hosted on Tencent Cloud DNSPod;</li>
+<li> pages: Pages type;</li>
+<li> ai: Edge reasoning access type.</li>
+ * @method void setType(string $Type) Set Site access type. Valid values:
+<li>full: NS access type;</li>
+<li>partial: CNAME access type;</li>
+<li>noDomainAccess: domainless access type.</li>
+<li>dnsPodAccess: DNSPod managed type. This type requires your domain name to be hosted on Tencent Cloud DNSPod;</li>
+<li> pages: Pages type;</li>
+<li> ai: Edge reasoning access type.</li>
+ * @method array getTags() Obtain Tag associated with the site.
+ * @method void setTags(array $Tags) Set Tag associated with the site.
+ * @method array getResources() Obtain List of billable resources.
+ * @method void setResources(array $Resources) Set List of billable resources.
+ * @method NSDetail getNSDetail() Obtain Site detail of the NS type. This value is returned only when Type is full.
+ * @method void setNSDetail(NSDetail $NSDetail) Set Site detail of the NS type. This value is returned only when Type is full.
+ * @method CNAMEDetail getCNAMEDetail() Obtain Site detail of CNAME type. This value is returned only when Type is partial.
+ * @method void setCNAMEDetail(CNAMEDetail $CNAMEDetail) Set Site detail of CNAME type. This value is returned only when Type is partial.
+ * @method DNSPodDetail getDNSPodDetail() Obtain DNSPod managed type site detail. This return value is only available when Type = dnsPodAccess.
+ * @method void setDNSPodDetail(DNSPodDetail $DNSPodDetail) Set DNSPod managed type site detail. This return value is only available when Type = dnsPodAccess.
+ * @method string getCreatedOn() Obtain Site creation time.
+ * @method void setCreatedOn(string $CreatedOn) Set Site creation time.
+ * @method string getModifiedOn() Obtain Site modification time.
+ * @method void setModifiedOn(string $ModifiedOn) Set Site modification time.
+ * @method string getStatus() Obtain Site status. Valid values:
+<li> active: NS switched; </li>
+<li>pending: NS not switched.</li>
+<li> moved: The NS has been moved away;</li>
+<li>`deactivated`: The name server is blocked.</li>
+<li> initializing: Package to be bound. </li>
+ * @method void setStatus(string $Status) Set Site status. Valid values:
+<li> active: NS switched; </li>
+<li>pending: NS not switched.</li>
+<li> moved: The NS has been moved away;</li>
+<li>`deactivated`: The name server is blocked.</li>
+<li> initializing: Package to be bound. </li>
+ * @method string getCnameStatus() Obtain CNAME access status. Valid values:
+<li> finished: site verified;</li>
+<li> pending: verifying site.</li>
+ * @method void setCnameStatus(string $CnameStatus) Set CNAME access status. Valid values:
+<li> finished: site verified;</li>
+<li> pending: verifying site.</li>
+ * @method string getActiveStatus() Obtain Display status. Valid values:
+<li> active: enabled;</li>
+<li> inactive: Not effective;</li>
+<li> paused: disabled.</li>
+ * @method void setActiveStatus(string $ActiveStatus) Set Display status. Valid values:
+<li> active: enabled;</li>
+<li> inactive: Not effective;</li>
+<li> paused: disabled.</li>
+ * @method string getLockStatus() Obtain Lock status. Valid values: <li> enable: normal. Modifications are allowed;</li><li> disable: locked. Modifications are not allowed;</li><li> plan_migrate: package migrating. Modifications are not allowed.</li>
+ * @method void setLockStatus(string $LockStatus) Set Lock status. Valid values: <li> enable: normal. Modifications are allowed;</li><li> disable: locked. Modifications are not allowed;</li><li> plan_migrate: package migrating. Modifications are not allowed.</li>
+ * @method boolean getPaused() Obtain Whether to close the site.
+ * @method void setPaused(boolean $Paused) Set Whether to close the site.
+ * @method integer getIsFake() Obtain Whether it is a fake site (this field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field). Valid values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
- * @method void setIsFake(integer $IsFake) Set Specifies whether it is a fake site (this field is a historic reserved field and is no longer maintained, refer to the website type for the corresponding field). valid values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+ * @method void setIsFake(integer $IsFake) Set Whether it is a fake site (this field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field). Valid values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
- * @method string getCnameSpeedUp() Obtain Whether to enable CNAME acceleration (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field). valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
- * @method void setCnameSpeedUp(string $CnameSpeedUp) Set Whether to enable CNAME acceleration (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field). valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
- * @method OwnershipVerification getOwnershipVerification() Obtain Ownership verification information. (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set Ownership verification information. (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method array getOriginalNameServers() Obtain Lists the currently used NS of the site. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field based on the website type.).
- * @method void setOriginalNameServers(array $OriginalNameServers) Set Lists the currently used NS of the site. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field based on the website type.).
- * @method array getNameServers() Obtain Lists of NS assigned by tencent cloud. (this field is a historic reserved field and no longer maintained. refer to the website type for the corresponding field.).
- * @method void setNameServers(array $NameServers) Set Lists of NS assigned by tencent cloud. (this field is a historic reserved field and no longer maintained. refer to the website type for the corresponding field.).
- * @method VanityNameServers getVanityNameServers() Obtain Specifies user-customized NS information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setVanityNameServers(VanityNameServers $VanityNameServers) Set Specifies user-customized NS information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method array getVanityNameServersIps() Obtain User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setVanityNameServersIps(array $VanityNameServersIps) Set User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method array getWorkModeInfos() Obtain Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
- * @method void setWorkModeInfos(array $WorkModeInfos) Set Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
+ * @method string getCnameSpeedUp() Obtain Whether CNAME acceleration is enabled (this is a historic reserved field and no longer maintained. For the corresponding field, see the website type). Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
+ * @method void setCnameSpeedUp(string $CnameSpeedUp) Set Whether CNAME acceleration is enabled (this is a historic reserved field and no longer maintained. For the corresponding field, see the website type). Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
+ * @method OwnershipVerification getOwnershipVerification() Obtain Ownership verification information. (This field is a historic reserved field and is no longer maintained. For the corresponding field, see the website type.)
+ * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set Ownership verification information. (This field is a historic reserved field and is no longer maintained. For the corresponding field, see the website type.)
+ * @method array getOriginalNameServers() Obtain List of NS currently used by the site. (This field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field for reference.)
+ * @method void setOriginalNameServers(array $OriginalNameServers) Set List of NS currently used by the site. (This field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field for reference.)
+ * @method array getNameServers() Obtain List of NS assigned by Tencent Cloud. (This field is a reserved field for history and no longer maintained. For reference, see the corresponding field based on the website type.)
+ * @method void setNameServers(array $NameServers) Set List of NS assigned by Tencent Cloud. (This field is a reserved field for history and no longer maintained. For reference, see the corresponding field based on the website type.)
+ * @method VanityNameServers getVanityNameServers() Obtain User-customized NS information. (This is a reserved field for history and is no longer maintained. Refer to the corresponding field based on the website type.)
+ * @method void setVanityNameServers(VanityNameServers $VanityNameServers) Set User-customized NS information. (This is a reserved field for history and is no longer maintained. Refer to the corresponding field based on the website type.)
+ * @method array getVanityNameServersIps() Obtain User-customized NS IP information. (This is a reserved field for historical purposes and is no longer maintained. Refer to the corresponding field based on the website type.)
+ * @method void setVanityNameServersIps(array $VanityNameServersIps) Set User-customized NS IP information. (This is a reserved field for historical purposes and is no longer maintained. Refer to the corresponding field based on the website type.)
+ * @method array getWorkModeInfos() Obtain Version management configuration group working mode. Each configuration module of a site can enable "version management mode" or "immediate effect mode" by configuration group dimension. For details, see [Version Management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
+ * @method void setWorkModeInfos(array $WorkModeInfos) Set Version management configuration group working mode. Each configuration module of a site can enable "version management mode" or "immediate effect mode" by configuration group dimension. For details, see [Version Management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
  */
 class Zone extends AbstractModel
 {
     /**
-     * @var string Site ID.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var string The site name.
+     * @var string Site name.
      */
     public $ZoneName;
 
     /**
-     * @var string Identical site identifier. specifies a composite of numbers, english letters, ".", "-", and "_" with a character limit of 200.
+     * @var string Identical site identifier. It can contain digits, letters, ".", "-", and "_", up to 200 characters.
      */
     public $AliasZoneName;
 
     /**
-     * @var string Site acceleration region. valid values:.
-<Li>Global: global availability zone.</li>.
-<Li>Mainland: chinese mainland availability zone.</li>.
-<li>overseas: global availability zone (excluding the chinese mainland).</li>.
+     * @var string Site acceleration region. Valid values:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
      */
     public $Area;
 
     /**
-     * @var string Site access type. valid values:.
-<li>full: NS access type;</li>.
-<li>partial: CNAME access type;</li>.
-<li>noDomainAccess: domainless access type.</li>.
-<li>dnsPodAccess: DNSPod managed type. this type requires your domain name to be hosted on tencent cloud DNSPod.</li>.
-<li> pages: pages data type;</li>.
-<li>ai: edge reasoning access type.</li>.
+     * @var string Site access type. Valid values:
+<li>full: NS access type;</li>
+<li>partial: CNAME access type;</li>
+<li>noDomainAccess: domainless access type.</li>
+<li>dnsPodAccess: DNSPod managed type. This type requires your domain name to be hosted on Tencent Cloud DNSPod;</li>
+<li> pages: Pages type;</li>
+<li> ai: Edge reasoning access type.</li>
      */
     public $Type;
 
     /**
-     * @var array Specifies the Tag associated with the site.
+     * @var array Tag associated with the site.
      */
     public $Tags;
 
     /**
-     * @var array The list of billable resources.
+     * @var array List of billable resources.
      */
     public $Resources;
 
     /**
-     * @var NSDetail NS site detail. returned only when Type = full.
+     * @var NSDetail Site detail of the NS type. This value is returned only when Type is full.
      */
     public $NSDetail;
 
     /**
-     * @var CNAMEDetail CNAME site detail. returned only when Type = partial.
+     * @var CNAMEDetail Site detail of CNAME type. This value is returned only when Type is partial.
      */
     public $CNAMEDetail;
 
     /**
-     * @var DNSPodDetail DNSPod managed Type site detail. returned only when Type = dnsPodAccess.
+     * @var DNSPodDetail DNSPod managed type site detail. This return value is only available when Type = dnsPodAccess.
      */
     public $DNSPodDetail;
 
     /**
-     * @var string The creation time of the site.
+     * @var string Site creation time.
      */
     public $CreatedOn;
 
     /**
-     * @var string The modification date of the site.
+     * @var string Site modification time.
      */
     public $ModifiedOn;
 
     /**
-     * @var string The site status. Values:
-u200c<li>`active`: The name server is switched to EdgeOne.</li>
-u200c<li>`pending`: The name server is not switched.</li>
-u200c<li>`moved`: The name server is changed to other service providers.</li>
-u200c<li>`deactivated`: The site is blocked.</li>
-<li>`initializing`: The site is not bound with any plan. </li>
+     * @var string Site status. Valid values:
+<li> active: NS switched; </li>
+<li>pending: NS not switched.</li>
+<li> moved: The NS has been moved away;</li>
+<li>`deactivated`: The name server is blocked.</li>
+<li> initializing: Package to be bound. </li>
      */
     public $Status;
 
     /**
-     * @var string CNAME record access status. Values:
-<li>`finished`: The site is verified.</li>
-<li>`pending`: The site is being verified.</li>
+     * @var string CNAME access status. Valid values:
+<li> finished: site verified;</li>
+<li> pending: verifying site.</li>
      */
     public $CnameStatus;
 
     /**
-     * @var string Status of the proxy. Values:
-<li>`active`: Enabled</li>
-<li>`inactive`: Not activated</li>
-<li>`paused`: Disabled</li>
+     * @var string Display status. Valid values:
+<li> active: enabled;</li>
+<li> inactive: Not effective;</li>
+<li> paused: disabled.</li>
      */
     public $ActiveStatus;
 
     /**
-     * @var string Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
+     * @var string Lock status. Valid values: <li> enable: normal. Modifications are allowed;</li><li> disable: locked. Modifications are not allowed;</li><li> plan_migrate: package migrating. Modifications are not allowed.</li>
      */
     public $LockStatus;
 
     /**
-     * @var boolean Whether the site is disabled.
+     * @var boolean Whether to close the site.
      */
     public $Paused;
 
     /**
-     * @var integer Specifies whether it is a fake site (this field is a historic reserved field and is no longer maintained, refer to the website type for the corresponding field). valid values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * @var integer Whether it is a fake site (this field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field). Valid values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
      */
     public $IsFake;
 
     /**
-     * @var string Whether to enable CNAME acceleration (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field). valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
+     * @var string Whether CNAME acceleration is enabled (this is a historic reserved field and no longer maintained. For the corresponding field, see the website type). Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
      */
     public $CnameSpeedUp;
 
     /**
-     * @var OwnershipVerification Ownership verification information. (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var OwnershipVerification Ownership verification information. (This field is a historic reserved field and is no longer maintained. For the corresponding field, see the website type.)
      */
     public $OwnershipVerification;
 
     /**
-     * @var array Lists the currently used NS of the site. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field based on the website type.).
+     * @var array List of NS currently used by the site. (This field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field for reference.)
      */
     public $OriginalNameServers;
 
     /**
-     * @var array Lists of NS assigned by tencent cloud. (this field is a historic reserved field and no longer maintained. refer to the website type for the corresponding field.).
+     * @var array List of NS assigned by Tencent Cloud. (This field is a reserved field for history and no longer maintained. For reference, see the corresponding field based on the website type.)
      */
     public $NameServers;
 
     /**
-     * @var VanityNameServers Specifies user-customized NS information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var VanityNameServers User-customized NS information. (This is a reserved field for history and is no longer maintained. Refer to the corresponding field based on the website type.)
      */
     public $VanityNameServers;
 
     /**
-     * @var array User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var array User-customized NS IP information. (This is a reserved field for historical purposes and is no longer maintained. Refer to the corresponding field based on the website type.)
      */
     public $VanityNameServersIps;
 
     /**
-     * @var array Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
+     * @var array Version management configuration group working mode. Each configuration module of a site can enable "version management mode" or "immediate effect mode" by configuration group dimension. For details, see [Version Management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
      */
     public $WorkModeInfos;
 
     /**
-     * @param string $ZoneId Site ID.
-     * @param string $ZoneName The site name.
-     * @param string $AliasZoneName Identical site identifier. specifies a composite of numbers, english letters, ".", "-", and "_" with a character limit of 200.
-     * @param string $Area Site acceleration region. valid values:.
-<Li>Global: global availability zone.</li>.
-<Li>Mainland: chinese mainland availability zone.</li>.
-<li>overseas: global availability zone (excluding the chinese mainland).</li>.
-     * @param string $Type Site access type. valid values:.
-<li>full: NS access type;</li>.
-<li>partial: CNAME access type;</li>.
-<li>noDomainAccess: domainless access type.</li>.
-<li>dnsPodAccess: DNSPod managed type. this type requires your domain name to be hosted on tencent cloud DNSPod.</li>.
-<li> pages: pages data type;</li>.
-<li>ai: edge reasoning access type.</li>.
-     * @param array $Tags Specifies the Tag associated with the site.
-     * @param array $Resources The list of billable resources.
-     * @param NSDetail $NSDetail NS site detail. returned only when Type = full.
-     * @param CNAMEDetail $CNAMEDetail CNAME site detail. returned only when Type = partial.
-     * @param DNSPodDetail $DNSPodDetail DNSPod managed Type site detail. returned only when Type = dnsPodAccess.
-     * @param string $CreatedOn The creation time of the site.
-     * @param string $ModifiedOn The modification date of the site.
-     * @param string $Status The site status. Values:
-u200c<li>`active`: The name server is switched to EdgeOne.</li>
-u200c<li>`pending`: The name server is not switched.</li>
-u200c<li>`moved`: The name server is changed to other service providers.</li>
-u200c<li>`deactivated`: The site is blocked.</li>
-<li>`initializing`: The site is not bound with any plan. </li>
-     * @param string $CnameStatus CNAME record access status. Values:
-<li>`finished`: The site is verified.</li>
-<li>`pending`: The site is being verified.</li>
-     * @param string $ActiveStatus Status of the proxy. Values:
-<li>`active`: Enabled</li>
-<li>`inactive`: Not activated</li>
-<li>`paused`: Disabled</li>
-     * @param string $LockStatus Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
-     * @param boolean $Paused Whether the site is disabled.
-     * @param integer $IsFake Specifies whether it is a fake site (this field is a historic reserved field and is no longer maintained, refer to the website type for the corresponding field). valid values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * @param string $ZoneId Zone ID.
+     * @param string $ZoneName Site name.
+     * @param string $AliasZoneName Identical site identifier. It can contain digits, letters, ".", "-", and "_", up to 200 characters.
+     * @param string $Area Site acceleration region. Valid values:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
+     * @param string $Type Site access type. Valid values:
+<li>full: NS access type;</li>
+<li>partial: CNAME access type;</li>
+<li>noDomainAccess: domainless access type.</li>
+<li>dnsPodAccess: DNSPod managed type. This type requires your domain name to be hosted on Tencent Cloud DNSPod;</li>
+<li> pages: Pages type;</li>
+<li> ai: Edge reasoning access type.</li>
+     * @param array $Tags Tag associated with the site.
+     * @param array $Resources List of billable resources.
+     * @param NSDetail $NSDetail Site detail of the NS type. This value is returned only when Type is full.
+     * @param CNAMEDetail $CNAMEDetail Site detail of CNAME type. This value is returned only when Type is partial.
+     * @param DNSPodDetail $DNSPodDetail DNSPod managed type site detail. This return value is only available when Type = dnsPodAccess.
+     * @param string $CreatedOn Site creation time.
+     * @param string $ModifiedOn Site modification time.
+     * @param string $Status Site status. Valid values:
+<li> active: NS switched; </li>
+<li>pending: NS not switched.</li>
+<li> moved: The NS has been moved away;</li>
+<li>`deactivated`: The name server is blocked.</li>
+<li> initializing: Package to be bound. </li>
+     * @param string $CnameStatus CNAME access status. Valid values:
+<li> finished: site verified;</li>
+<li> pending: verifying site.</li>
+     * @param string $ActiveStatus Display status. Valid values:
+<li> active: enabled;</li>
+<li> inactive: Not effective;</li>
+<li> paused: disabled.</li>
+     * @param string $LockStatus Lock status. Valid values: <li> enable: normal. Modifications are allowed;</li><li> disable: locked. Modifications are not allowed;</li><li> plan_migrate: package migrating. Modifications are not allowed.</li>
+     * @param boolean $Paused Whether to close the site.
+     * @param integer $IsFake Whether it is a fake site (this field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field). Valid values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
-     * @param string $CnameSpeedUp Whether to enable CNAME acceleration (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field). valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
-     * @param OwnershipVerification $OwnershipVerification Ownership verification information. (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param array $OriginalNameServers Lists the currently used NS of the site. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field based on the website type.).
-     * @param array $NameServers Lists of NS assigned by tencent cloud. (this field is a historic reserved field and no longer maintained. refer to the website type for the corresponding field.).
-     * @param VanityNameServers $VanityNameServers Specifies user-customized NS information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param array $VanityNameServersIps User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param array $WorkModeInfos Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
+     * @param string $CnameSpeedUp Whether CNAME acceleration is enabled (this is a historic reserved field and no longer maintained. For the corresponding field, see the website type). Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
+     * @param OwnershipVerification $OwnershipVerification Ownership verification information. (This field is a historic reserved field and is no longer maintained. For the corresponding field, see the website type.)
+     * @param array $OriginalNameServers List of NS currently used by the site. (This field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field for reference.)
+     * @param array $NameServers List of NS assigned by Tencent Cloud. (This field is a reserved field for history and no longer maintained. For reference, see the corresponding field based on the website type.)
+     * @param VanityNameServers $VanityNameServers User-customized NS information. (This is a reserved field for history and is no longer maintained. Refer to the corresponding field based on the website type.)
+     * @param array $VanityNameServersIps User-customized NS IP information. (This is a reserved field for historical purposes and is no longer maintained. Refer to the corresponding field based on the website type.)
+     * @param array $WorkModeInfos Version management configuration group working mode. Each configuration module of a site can enable "version management mode" or "immediate effect mode" by configuration group dimension. For details, see [Version Management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
      */
     function __construct()
     {

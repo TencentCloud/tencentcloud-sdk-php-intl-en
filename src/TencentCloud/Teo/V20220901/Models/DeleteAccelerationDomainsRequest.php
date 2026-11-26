@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAccelerationDomains request structure.
  *
- * @method string getZoneId() Obtain ID of the site related with the accelerated domain name.
- * @method void setZoneId(string $ZoneId) Set ID of the site related with the accelerated domain name.
- * @method array getDomainNames() Obtain List of accelerated domain names to be deleted.
- * @method void setDomainNames(array $DomainNames) Set List of accelerated domain names to be deleted.
- * @method boolean getForce() Obtain Whether to forcibly delete a domain name if it is associated with resources (such as alias domain names and traffic scheduling policies). 
-<li>`true`: Delete the domain name and all associated resources.</li>
-<li>`false`: Do not delete the domain name and all associated resources.</li>If it’s not specified, the default value `false` is used.
- * @method void setForce(boolean $Force) Set Whether to forcibly delete a domain name if it is associated with resources (such as alias domain names and traffic scheduling policies). 
-<li>`true`: Delete the domain name and all associated resources.</li>
-<li>`false`: Do not delete the domain name and all associated resources.</li>If it’s not specified, the default value `false` is used.
+ * @method string getZoneId() Obtain Zone ID of the acceleration domain name.
+ * @method void setZoneId(string $ZoneId) Set Zone ID of the acceleration domain name.
+ * @method array getDomainNames() Obtain List of acceleration domain name IDs that need to be deleted.
+ * @method void setDomainNames(array $DomainNames) Set List of acceleration domain name IDs that need to be deleted.
+ * @method boolean getForce() Obtain Whether to force delete. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force delete that domain name. Valid values:
+<li> true: delete that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, deletion is not allowed.</li>If not specified, the default value is false.
+ * @method void setForce(boolean $Force) Set Whether to force delete. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force delete that domain name. Valid values:
+<li> true: delete that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, deletion is not allowed.</li>If not specified, the default value is false.
  */
 class DeleteAccelerationDomainsRequest extends AbstractModel
 {
     /**
-     * @var string ID of the site related with the accelerated domain name.
+     * @var string Zone ID of the acceleration domain name.
      */
     public $ZoneId;
 
     /**
-     * @var array List of accelerated domain names to be deleted.
+     * @var array List of acceleration domain name IDs that need to be deleted.
      */
     public $DomainNames;
 
     /**
-     * @var boolean Whether to forcibly delete a domain name if it is associated with resources (such as alias domain names and traffic scheduling policies). 
-<li>`true`: Delete the domain name and all associated resources.</li>
-<li>`false`: Do not delete the domain name and all associated resources.</li>If it’s not specified, the default value `false` is used.
+     * @var boolean Whether to force delete. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force delete that domain name. Valid values:
+<li> true: delete that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, deletion is not allowed.</li>If not specified, the default value is false.
      */
     public $Force;
 
     /**
-     * @param string $ZoneId ID of the site related with the accelerated domain name.
-     * @param array $DomainNames List of accelerated domain names to be deleted.
-     * @param boolean $Force Whether to forcibly delete a domain name if it is associated with resources (such as alias domain names and traffic scheduling policies). 
-<li>`true`: Delete the domain name and all associated resources.</li>
-<li>`false`: Do not delete the domain name and all associated resources.</li>If it’s not specified, the default value `false` is used.
+     * @param string $ZoneId Zone ID of the acceleration domain name.
+     * @param array $DomainNames List of acceleration domain name IDs that need to be deleted.
+     * @param boolean $Force Whether to force delete. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force delete that domain name. Valid values:
+<li> true: delete that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, deletion is not allowed.</li>If not specified, the default value is false.
      */
     function __construct()
     {

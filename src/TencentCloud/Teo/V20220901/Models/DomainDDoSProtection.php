@@ -18,16 +18,16 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Exclusive Anti-DDoS protection of the domain.
+ * Exclusive DDoS protection info of the domain.
  *
  * @method string getDomain() Obtain Domain name.
  * @method void setDomain(string $Domain) Set Domain name.
- * @method string getSwitch() Obtain Standalone DDoS switch of the domain. valid values:.
-<li>on: enabled;</li>.
-<li>off: closed.</li>.
- * @method void setSwitch(string $Switch) Set Standalone DDoS switch of the domain. valid values:.
-<li>on: enabled;</li>.
-<li>off: closed.</li>.
+ * @method string getSwitch() Obtain Standalone DDoS switch of the domain. Value:
+<li>`on`: enabled;</li>
+<li>off: closed.</li>
+ * @method void setSwitch(string $Switch) Set Standalone DDoS switch of the domain. Value:
+<li>`on`: enabled;</li>
+<li>off: closed.</li>
  */
 class DomainDDoSProtection extends AbstractModel
 {
@@ -37,17 +37,17 @@ class DomainDDoSProtection extends AbstractModel
     public $Domain;
 
     /**
-     * @var string Standalone DDoS switch of the domain. valid values:.
-<li>on: enabled;</li>.
-<li>off: closed.</li>.
+     * @var string Standalone DDoS switch of the domain. Value:
+<li>`on`: enabled;</li>
+<li>off: closed.</li>
      */
     public $Switch;
 
     /**
      * @param string $Domain Domain name.
-     * @param string $Switch Standalone DDoS switch of the domain. valid values:.
-<li>on: enabled;</li>.
-<li>off: closed.</li>.
+     * @param string $Switch Standalone DDoS switch of the domain. Value:
+<li>`on`: enabled;</li>
+<li>off: closed.</li>
      */
     function __construct()
     {

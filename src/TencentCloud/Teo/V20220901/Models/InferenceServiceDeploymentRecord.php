@@ -18,40 +18,40 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Service deployment history record for reasoning.
+ * Reasoning service deployment history.
  *
  * @method string getRecordId() Obtain Deployment record ID.
  * @method void setRecordId(string $RecordId) Set Deployment record ID.
- * @method string getOperation() Obtain Deployment operation type, value:
-<li>create: creation</li>
-<li>update: refresh;</li>
-<li>resume: enabled;</li>
-<li>stop: disable.</li>
- * @method void setOperation(string $Operation) Set Deployment operation type, value:
-<li>create: creation</li>
-<li>update: refresh;</li>
-<li>resume: enabled;</li>
-<li>stop: disable.</li>
+ * @method string getOperation() Obtain Deployment operation type. Valid values:
+<li>create: create;</li>
+<li>update: update;</li>
+<li>resume: enable;</li>
+<li>stop: Disable.</li>
+ * @method void setOperation(string $Operation) Set Deployment operation type. Valid values:
+<li>create: create;</li>
+<li>update: update;</li>
+<li>resume: enable;</li>
+<li>stop: Disable.</li>
  * @method string getStatus() Obtain Deployment state. Valid values:
-<li>processing: deployment in progress;</li>
-<li>succeeded: Deployment successful;</li>
+<li>processing: deploying;</li>
+<li>succeeded: Deployed successfully;</li>
 <li>failed: Deployment failed.</li>
  * @method void setStatus(string $Status) Set Deployment state. Valid values:
-<li>processing: deployment in progress;</li>
-<li>succeeded: Deployment successful;</li>
+<li>processing: deploying;</li>
+<li>succeeded: Deployed successfully;</li>
 <li>failed: Deployment failed.</li>
- * @method integer getDuration() Obtain Deployment duration, unit: second.
- * @method void setDuration(integer $Duration) Set Deployment duration, unit: second.
- * @method InferenceServiceConfig getInferenceServiceConfig() Obtain Configuration for this service deployment.
- * @method void setInferenceServiceConfig(InferenceServiceConfig $InferenceServiceConfig) Set Configuration for this service deployment.
+ * @method integer getDuration() Obtain Deployment duration. Unit: seconds.
+ * @method void setDuration(integer $Duration) Set Deployment duration. Unit: seconds.
+ * @method InferenceServiceConfig getInferenceServiceConfig() Obtain Configuration of this inference service deployment.
+ * @method void setInferenceServiceConfig(InferenceServiceConfig $InferenceServiceConfig) Set Configuration of this inference service deployment.
  * @method string getCreateTime() Obtain Deployment initiation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setCreateTime(string $CreateTime) Set Deployment initiation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getActiveStatus() Obtain Whether the deployment configuration is the effective configuration. Value:
-<li> active: effective configuration;</li>
-<li> inactive: earlier version or abnormal version configuration.</li>
- * @method void setActiveStatus(string $ActiveStatus) Set Whether the deployment configuration is the effective configuration. Value:
-<li> active: effective configuration;</li>
-<li> inactive: earlier version or abnormal version configuration.</li>
+ * @method string getActiveStatus() Obtain Whether the deployment configuration is currently effective. Value:
+<li> active: effective configuration currently in use;</li>
+<li> inactive: configuration of an earlier version or an abnormal version.</li>
+ * @method void setActiveStatus(string $ActiveStatus) Set Whether the deployment configuration is currently effective. Value:
+<li> active: effective configuration currently in use;</li>
+<li> inactive: configuration of an earlier version or an abnormal version.</li>
  */
 class InferenceServiceDeploymentRecord extends AbstractModel
 {
@@ -61,29 +61,29 @@ class InferenceServiceDeploymentRecord extends AbstractModel
     public $RecordId;
 
     /**
-     * @var string Deployment operation type, value:
-<li>create: creation</li>
-<li>update: refresh;</li>
-<li>resume: enabled;</li>
-<li>stop: disable.</li>
+     * @var string Deployment operation type. Valid values:
+<li>create: create;</li>
+<li>update: update;</li>
+<li>resume: enable;</li>
+<li>stop: Disable.</li>
      */
     public $Operation;
 
     /**
      * @var string Deployment state. Valid values:
-<li>processing: deployment in progress;</li>
-<li>succeeded: Deployment successful;</li>
+<li>processing: deploying;</li>
+<li>succeeded: Deployed successfully;</li>
 <li>failed: Deployment failed.</li>
      */
     public $Status;
 
     /**
-     * @var integer Deployment duration, unit: second.
+     * @var integer Deployment duration. Unit: seconds.
      */
     public $Duration;
 
     /**
-     * @var InferenceServiceConfig Configuration for this service deployment.
+     * @var InferenceServiceConfig Configuration of this inference service deployment.
      */
     public $InferenceServiceConfig;
 
@@ -93,29 +93,29 @@ class InferenceServiceDeploymentRecord extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string Whether the deployment configuration is the effective configuration. Value:
-<li> active: effective configuration;</li>
-<li> inactive: earlier version or abnormal version configuration.</li>
+     * @var string Whether the deployment configuration is currently effective. Value:
+<li> active: effective configuration currently in use;</li>
+<li> inactive: configuration of an earlier version or an abnormal version.</li>
      */
     public $ActiveStatus;
 
     /**
      * @param string $RecordId Deployment record ID.
-     * @param string $Operation Deployment operation type, value:
-<li>create: creation</li>
-<li>update: refresh;</li>
-<li>resume: enabled;</li>
-<li>stop: disable.</li>
+     * @param string $Operation Deployment operation type. Valid values:
+<li>create: create;</li>
+<li>update: update;</li>
+<li>resume: enable;</li>
+<li>stop: Disable.</li>
      * @param string $Status Deployment state. Valid values:
-<li>processing: deployment in progress;</li>
-<li>succeeded: Deployment successful;</li>
+<li>processing: deploying;</li>
+<li>succeeded: Deployed successfully;</li>
 <li>failed: Deployment failed.</li>
-     * @param integer $Duration Deployment duration, unit: second.
-     * @param InferenceServiceConfig $InferenceServiceConfig Configuration for this service deployment.
+     * @param integer $Duration Deployment duration. Unit: seconds.
+     * @param InferenceServiceConfig $InferenceServiceConfig Configuration of this inference service deployment.
      * @param string $CreateTime Deployment initiation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $ActiveStatus Whether the deployment configuration is the effective configuration. Value:
-<li> active: effective configuration;</li>
-<li> inactive: earlier version or abnormal version configuration.</li>
+     * @param string $ActiveStatus Whether the deployment configuration is currently effective. Value:
+<li> active: effective configuration currently in use;</li>
+<li> inactive: configuration of an earlier version or an abnormal version.</li>
      */
     function __construct()
     {

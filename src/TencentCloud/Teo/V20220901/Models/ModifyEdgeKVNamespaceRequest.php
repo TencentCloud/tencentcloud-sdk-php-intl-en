@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set Zone ID.
  * @method string getNamespace() Obtain Namespace name.
  * @method void setNamespace(string $Namespace) Set Namespace name.
- * @method string getRemark() Obtain Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
- * @method void setRemark(string $Remark) Set Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+ * @method string getRemark() Obtain Namespace description. Used to describe the purpose or business meaning of a namespace. Supports up to 256 characters.
+ * @method void setRemark(string $Remark) Set Namespace description. Used to describe the purpose or business meaning of a namespace. Supports up to 256 characters.
  */
 class ModifyEdgeKVNamespaceRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyEdgeKVNamespaceRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+     * @var string Namespace description. Used to describe the purpose or business meaning of a namespace. Supports up to 256 characters.
      */
     public $Remark;
 
     /**
      * @param string $ZoneId Zone ID.
      * @param string $Namespace Namespace name.
-     * @param string $Remark Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+     * @param string $Remark Namespace description. Used to describe the purpose or business meaning of a namespace. Supports up to 256 characters.
      */
     function __construct()
     {

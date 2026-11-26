@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityTemplateBindings request structure.
  *
- * @method string getZoneId() Obtain ID of the site to query
- * @method void setZoneId(string $ZoneId) Set ID of the site to query
- * @method array getTemplateId() Obtain ID of the policy template to query.
- * @method void setTemplateId(array $TemplateId) Set ID of the policy template to query.
+ * @method string getZoneId() Obtain Site ID to query.
+ * @method void setZoneId(string $ZoneId) Set Site ID to query.
+ * @method array getTemplateId() Obtain Template ID of the policy to query.
+ * @method void setTemplateId(array $TemplateId) Set Template ID of the policy to query.
  */
 class DescribeSecurityTemplateBindingsRequest extends AbstractModel
 {
     /**
-     * @var string ID of the site to query
+     * @var string Site ID to query.
      */
     public $ZoneId;
 
     /**
-     * @var array ID of the policy template to query.
+     * @var array Template ID of the policy to query.
      */
     public $TemplateId;
 
     /**
-     * @param string $ZoneId ID of the site to query
-     * @param array $TemplateId ID of the policy template to query.
+     * @param string $ZoneId Site ID to query.
+     * @param array $TemplateId Template ID of the policy to query.
      */
     function __construct()
     {

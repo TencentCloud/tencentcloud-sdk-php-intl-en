@@ -18,19 +18,19 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Service monitoring data record for reasoning.
+ * Reasoning service monitoring data records.
  *
- * @method string getServiceId() Obtain ID of the inference service.
- * @method void setServiceId(string $ServiceId) Set ID of the inference service.
+ * @method string getServiceId() Obtain Inference service ID.
+ * @method void setServiceId(string $ServiceId) Set Inference service ID.
  * @method string getMetricName() Obtain Metric name.
  * @method void setMetricName(string $MetricName) Set Metric name.
- * @method array getInferenceServiceMonitorItems() Obtain Detailed service monitoring data for reasoning.
- * @method void setInferenceServiceMonitorItems(array $InferenceServiceMonitorItems) Set Detailed service monitoring data for reasoning.
+ * @method array getInferenceServiceMonitorItems() Obtain Detailed reasoning service monitoring data.
+ * @method void setInferenceServiceMonitorItems(array $InferenceServiceMonitorItems) Set Detailed reasoning service monitoring data.
  */
 class InferenceServiceMonitorRecord extends AbstractModel
 {
     /**
-     * @var string ID of the inference service.
+     * @var string Inference service ID.
      */
     public $ServiceId;
 
@@ -40,14 +40,14 @@ class InferenceServiceMonitorRecord extends AbstractModel
     public $MetricName;
 
     /**
-     * @var array Detailed service monitoring data for reasoning.
+     * @var array Detailed reasoning service monitoring data.
      */
     public $InferenceServiceMonitorItems;
 
     /**
-     * @param string $ServiceId ID of the inference service.
+     * @param string $ServiceId Inference service ID.
      * @param string $MetricName Metric name.
-     * @param array $InferenceServiceMonitorItems Detailed service monitoring data for reasoning.
+     * @param array $InferenceServiceMonitorItems Detailed reasoning service monitoring data.
      */
     function __construct()
     {

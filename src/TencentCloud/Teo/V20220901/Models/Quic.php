@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QUIC configuration item
+ * Quic configuration item
  *
- * @method string getSwitch() Obtain Whether to enable QUIC. Valid values: 
+ * @method string getSwitch() Obtain Whether to enable Quic configuration. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
- * @method void setSwitch(string $Switch) Set Whether to enable QUIC. Valid values: 
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Whether to enable Quic configuration. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
  */
 class Quic extends AbstractModel
 {
     /**
-     * @var string Whether to enable QUIC. Valid values: 
+     * @var string Whether to enable Quic configuration. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable QUIC. Valid values: 
+     * @param string $Switch Whether to enable Quic configuration. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
      */
     function __construct()
     {

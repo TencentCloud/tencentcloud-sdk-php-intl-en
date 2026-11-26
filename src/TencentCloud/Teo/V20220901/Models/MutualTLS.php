@@ -18,31 +18,39 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HTTPS Mutual authentication.
+ * HTTPS mutual authentication.
  *
- * @method string getSwitch() Obtain Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
- * @method void setSwitch(string $Switch) Set Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
- * @method array getCertInfos() Obtain Mutual authentication certificate list.
+ * @method string getSwitch() Obtain Mutual authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Mutual authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method array getCertInfos() Obtain List of mutual authentication certificates.
 Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
- * @method void setCertInfos(array $CertInfos) Set Mutual authentication certificate list.
+ * @method void setCertInfos(array $CertInfos) Set List of mutual authentication certificates.
 Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
  */
 class MutualTLS extends AbstractModel
 {
     /**
-     * @var string Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
+     * @var string Mutual authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var array Mutual authentication certificate list.
+     * @var array List of mutual authentication certificates.
 Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
      */
     public $CertInfos;
 
     /**
-     * @param string $Switch Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
-     * @param array $CertInfos Mutual authentication certificate list.
+     * @param string $Switch Mutual authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param array $CertInfos List of mutual authentication certificates.
 Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
      */
     function __construct()

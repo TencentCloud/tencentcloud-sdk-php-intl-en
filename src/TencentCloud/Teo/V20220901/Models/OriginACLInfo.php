@@ -18,80 +18,76 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The binding relationship between L7 acceleration domains/layer-4 proxy instances and origin IP ranges contains both origin IP range details and a switchable origin IP range list.
+ * Binding relationship between the layer-7 acceleration domain name/layer-4 proxy instance and the origin IP range, including the origin IP range details and the list of switchable origin IP ranges.
  *
- * @method array getL7Hosts() Obtain The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
- * @method void setL7Hosts(array $L7Hosts) Set The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
- * @method array getL4ProxyIds() Obtain The list of L4 proxy instances that enable the origin ACLs. This field is empty when origin protection is not enabled.
- * @method void setL4ProxyIds(array $L4ProxyIds) Set The list of L4 proxy instances that enable the origin ACLs. This field is empty when origin protection is not enabled.
- * @method CurrentOriginACL getCurrentOriginACL() Obtain Currently effective origin ACLs. This field is empty when origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setCurrentOriginACL(CurrentOriginACL $CurrentOriginACL) Set Currently effective origin ACLs. This field is empty when origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method NextOriginACL getNextOriginACL() Obtain When the origin ACLs are updated, this field will be returned with the next version's origin IP range to take effect, including a comparison with the current origin IP range. This field is empty if not updated or origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setNextOriginACL(NextOriginACL $NextOriginACL) Set When the origin ACLs are updated, this field will be returned with the next version's origin IP range to take effect, including a comparison with the current origin IP range. This field is empty if not updated or origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method string getStatus() Obtain Origin protection status. Vaild values:
-- online: in effect;
-- offline: disabled;
-- updating: configuration deployment in progress.
- * @method void setStatus(string $Status) Set Origin protection status. Vaild values:
-- online: in effect;
-- offline: disabled;
-- updating: configuration deployment in progress.
- * @method string getOriginACLFamily() Obtain Origin protection back-to-origin ACL control domain.
- * @method void setOriginACLFamily(string $OriginACLFamily) Set Origin protection back-to-origin ACL control domain.
+ * @method string getL7EnableMode() Obtain <p>Origin protection mode for layer-7 acceleration domain names. Valid values: <li>all: automatic protection mode. All layer-7 acceleration domain names in the site are included in the origin protection list, including newly added layer-7 acceleration domain names;</li><li>specific: specified protection mode. Only bound layer-7 acceleration domain names are protected.</li></p>
+ * @method void setL7EnableMode(string $L7EnableMode) Set <p>Origin protection mode for layer-7 acceleration domain names. Valid values: <li>all: automatic protection mode. All layer-7 acceleration domain names in the site are included in the origin protection list, including newly added layer-7 acceleration domain names;</li><li>specific: specified protection mode. Only bound layer-7 acceleration domain names are protected.</li></p>
+ * @method array getL7Hosts() Obtain <p>List of layer-7 acceleration domain names that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
+ * @method void setL7Hosts(array $L7Hosts) Set <p>List of layer-7 acceleration domain names that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
+ * @method string getL4EnableMode() Obtain <p>Origin protection mode for layer-4 proxy instances. Valid values: <li>all: automatic protection mode. All layer-4 proxy instances in the site are included in the origin protection list, including newly added layer-4 proxy instances;</li><li>specific: specified protection mode. Only bound layer-4 proxy instances are protected.</li></p>
+ * @method void setL4EnableMode(string $L4EnableMode) Set <p>Origin protection mode for layer-4 proxy instances. Valid values: <li>all: automatic protection mode. All layer-4 proxy instances in the site are included in the origin protection list, including newly added layer-4 proxy instances;</li><li>specific: specified protection mode. Only bound layer-4 proxy instances are protected.</li></p>
+ * @method array getL4ProxyIds() Obtain <p>List of layer-4 proxy instances that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
+ * @method void setL4ProxyIds(array $L4ProxyIds) Set <p>List of layer-4 proxy instances that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
+ * @method CurrentOriginACL getCurrentOriginACL() Obtain <p>Currently effective origin IP range. Empty when origin protection is not enabled.</p>
+ * @method void setCurrentOriginACL(CurrentOriginACL $CurrentOriginACL) Set <p>Currently effective origin IP range. Empty when origin protection is not enabled.</p>
+ * @method NextOriginACL getNextOriginACL() Obtain <p>When the origin IP range is updated, this field returns the origin IP range that will take effect in the next version, including a comparison with the current origin IP range. Empty when there is no update or origin protection is not enabled.</p>
+ * @method void setNextOriginACL(NextOriginACL $NextOriginACL) Set <p>When the origin IP range is updated, this field returns the origin IP range that will take effect in the next version, including a comparison with the current origin IP range. Empty when there is no update or origin protection is not enabled.</p>
+ * @method string getStatus() Obtain <p>Origin protection status. Valid values:</p><li>online: Effective;</li><li>offline: Disabled;</li><li>updating: Configuration being deployed.</li>
+ * @method void setStatus(string $Status) Set <p>Origin protection status. Valid values:</p><li>online: Effective;</li><li>offline: Disabled;</li><li>updating: Configuration being deployed.</li>
+ * @method string getOriginACLFamily() Obtain <p>Origin protection origin-pull ACL control domain.</p>
+ * @method void setOriginACLFamily(string $OriginACLFamily) Set <p>Origin protection origin-pull ACL control domain.</p>
  */
 class OriginACLInfo extends AbstractModel
 {
     /**
-     * @var array The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
+     * @var string <p>Origin protection mode for layer-7 acceleration domain names. Valid values: <li>all: automatic protection mode. All layer-7 acceleration domain names in the site are included in the origin protection list, including newly added layer-7 acceleration domain names;</li><li>specific: specified protection mode. Only bound layer-7 acceleration domain names are protected.</li></p>
+     */
+    public $L7EnableMode;
+
+    /**
+     * @var array <p>List of layer-7 acceleration domain names that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
      */
     public $L7Hosts;
 
     /**
-     * @var array The list of L4 proxy instances that enable the origin ACLs. This field is empty when origin protection is not enabled.
+     * @var string <p>Origin protection mode for layer-4 proxy instances. Valid values: <li>all: automatic protection mode. All layer-4 proxy instances in the site are included in the origin protection list, including newly added layer-4 proxy instances;</li><li>specific: specified protection mode. Only bound layer-4 proxy instances are protected.</li></p>
+     */
+    public $L4EnableMode;
+
+    /**
+     * @var array <p>List of layer-4 proxy instances that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
      */
     public $L4ProxyIds;
 
     /**
-     * @var CurrentOriginACL Currently effective origin ACLs. This field is empty when origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var CurrentOriginACL <p>Currently effective origin IP range. Empty when origin protection is not enabled.</p>
      */
     public $CurrentOriginACL;
 
     /**
-     * @var NextOriginACL When the origin ACLs are updated, this field will be returned with the next version's origin IP range to take effect, including a comparison with the current origin IP range. This field is empty if not updated or origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var NextOriginACL <p>When the origin IP range is updated, this field returns the origin IP range that will take effect in the next version, including a comparison with the current origin IP range. Empty when there is no update or origin protection is not enabled.</p>
      */
     public $NextOriginACL;
 
     /**
-     * @var string Origin protection status. Vaild values:
-- online: in effect;
-- offline: disabled;
-- updating: configuration deployment in progress.
+     * @var string <p>Origin protection status. Valid values:</p><li>online: Effective;</li><li>offline: Disabled;</li><li>updating: Configuration being deployed.</li>
      */
     public $Status;
 
     /**
-     * @var string Origin protection back-to-origin ACL control domain.
+     * @var string <p>Origin protection origin-pull ACL control domain.</p>
      */
     public $OriginACLFamily;
 
     /**
-     * @param array $L7Hosts The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
-     * @param array $L4ProxyIds The list of L4 proxy instances that enable the origin ACLs. This field is empty when origin protection is not enabled.
-     * @param CurrentOriginACL $CurrentOriginACL Currently effective origin ACLs. This field is empty when origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param NextOriginACL $NextOriginACL When the origin ACLs are updated, this field will be returned with the next version's origin IP range to take effect, including a comparison with the current origin IP range. This field is empty if not updated or origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param string $Status Origin protection status. Vaild values:
-- online: in effect;
-- offline: disabled;
-- updating: configuration deployment in progress.
-     * @param string $OriginACLFamily Origin protection back-to-origin ACL control domain.
+     * @param string $L7EnableMode <p>Origin protection mode for layer-7 acceleration domain names. Valid values: <li>all: automatic protection mode. All layer-7 acceleration domain names in the site are included in the origin protection list, including newly added layer-7 acceleration domain names;</li><li>specific: specified protection mode. Only bound layer-7 acceleration domain names are protected.</li></p>
+     * @param array $L7Hosts <p>List of layer-7 acceleration domain names that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
+     * @param string $L4EnableMode <p>Origin protection mode for layer-4 proxy instances. Valid values: <li>all: automatic protection mode. All layer-4 proxy instances in the site are included in the origin protection list, including newly added layer-4 proxy instances;</li><li>specific: specified protection mode. Only bound layer-4 proxy instances are protected.</li></p>
+     * @param array $L4ProxyIds <p>List of layer-4 proxy instances that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
+     * @param CurrentOriginACL $CurrentOriginACL <p>Currently effective origin IP range. Empty when origin protection is not enabled.</p>
+     * @param NextOriginACL $NextOriginACL <p>When the origin IP range is updated, this field returns the origin IP range that will take effect in the next version, including a comparison with the current origin IP range. Empty when there is no update or origin protection is not enabled.</p>
+     * @param string $Status <p>Origin protection status. Valid values:</p><li>online: Effective;</li><li>offline: Disabled;</li><li>updating: Configuration being deployed.</li>
+     * @param string $OriginACLFamily <p>Origin protection origin-pull ACL control domain.</p>
      */
     function __construct()
     {
@@ -106,8 +102,16 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         if ($param === null) {
             return;
         }
+        if (array_key_exists("L7EnableMode",$param) and $param["L7EnableMode"] !== null) {
+            $this->L7EnableMode = $param["L7EnableMode"];
+        }
+
         if (array_key_exists("L7Hosts",$param) and $param["L7Hosts"] !== null) {
             $this->L7Hosts = $param["L7Hosts"];
+        }
+
+        if (array_key_exists("L4EnableMode",$param) and $param["L4EnableMode"] !== null) {
+            $this->L4EnableMode = $param["L4EnableMode"];
         }
 
         if (array_key_exists("L4ProxyIds",$param) and $param["L4ProxyIds"] !== null) {

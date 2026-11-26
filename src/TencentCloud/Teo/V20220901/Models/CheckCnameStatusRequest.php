@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckCnameStatus request structure.
  *
- * @method string getZoneId() Obtain Site ID.
- * @method void setZoneId(string $ZoneId) Set Site ID.
- * @method array getRecordNames() Obtain The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
- * @method void setRecordNames(array $RecordNames) Set The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method array getRecordNames() Obtain Domain name list that need to detect CNAME configuration state, which can be: <li>acceleration domain name;</li><li>alias domain name.</li>
+ * @method void setRecordNames(array $RecordNames) Set Domain name list that need to detect CNAME configuration state, which can be: <li>acceleration domain name;</li><li>alias domain name.</li>
  */
 class CheckCnameStatusRequest extends AbstractModel
 {
     /**
-     * @var string Site ID.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var array The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
+     * @var array Domain name list that need to detect CNAME configuration state, which can be: <li>acceleration domain name;</li><li>alias domain name.</li>
      */
     public $RecordNames;
 
     /**
-     * @param string $ZoneId Site ID.
-     * @param array $RecordNames The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
+     * @param string $ZoneId Zone ID.
+     * @param array $RecordNames Domain name list that need to detect CNAME configuration state, which can be: <li>acceleration domain name;</li><li>alias domain name.</li>
      */
     function __construct()
     {

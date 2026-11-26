@@ -20,58 +20,67 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Resource configuration of the inference service.
  *
- * @method string getScalingMode() Obtain Scaling way. Valid values: <li>Auto: Automatically adjust instance count according to request volume;</li><li>Manual: Manual setting of fixed number of resource instances.</li>
- * @method void setScalingMode(string $ScalingMode) Set Scaling way. Valid values: <li>Auto: Automatically adjust instance count according to request volume;</li><li>Manual: Manual setting of fixed number of resource instances.</li>
- * @method string getHardwareSpec() Obtain Hardware specifications.
- * @method void setHardwareSpec(string $HardwareSpec) Set Hardware specifications.
- * @method InferenceAutoScalingConfig getAutoScalingConfig() Obtain Inference service automatic scaling configuration. Required when ScalingMode is Auto.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setAutoScalingConfig(InferenceAutoScalingConfig $AutoScalingConfig) Set Inference service automatic scaling configuration. Required when ScalingMode is Auto.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method InferenceManualInstanceConfig getManualInstanceConfig() Obtain Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setManualInstanceConfig(InferenceManualInstanceConfig $ManualInstanceConfig) Set Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method integer getConcurrency() Obtain Single-instance concurrency. Default value is 1.
- * @method void setConcurrency(integer $Concurrency) Set Single-instance concurrency. Default value is 1.
+ * @method string getScalingMode() Obtain <p>Scaling method. Valid values: <li>Auto: automatically adjust instance count according to request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
+ * @method void setScalingMode(string $ScalingMode) Set <p>Scaling method. Valid values: <li>Auto: automatically adjust instance count according to request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
+ * @method string getHardwareSpec() Obtain <p>Hardware specification flag. Abandoned. For reference, use <code>HardwareSpecId</code>.</p>
+ * @method void setHardwareSpec(string $HardwareSpec) Set <p>Hardware specification flag. Abandoned. For reference, use <code>HardwareSpecId</code>.</p>
+ * @method string getHardwareSpecId() Obtain <p>Unique identification ID of the hardware specification. You can obtain the supported hardware specifications of the current site through the <code>DescribeInferenceHardwareSpecifications</code> API.</p><p>By default, the system configures the required resources for the inference service according to the hardware specification corresponding to the selected <code>HardwareSpecId</code>. If adjustments are needed, you can customize the hardware resource configuration through <code>HardwareConfig</code>.</p>
+ * @method void setHardwareSpecId(string $HardwareSpecId) Set <p>Unique identification ID of the hardware specification. You can obtain the supported hardware specifications of the current site through the <code>DescribeInferenceHardwareSpecifications</code> API.</p><p>By default, the system configures the required resources for the inference service according to the hardware specification corresponding to the selected <code>HardwareSpecId</code>. If adjustments are needed, you can customize the hardware resource configuration through <code>HardwareConfig</code>.</p>
+ * @method InferenceHardwareConfig getHardwareConfig() Obtain <p>Hardware configuration for the inference service.</p><p>As an input parameter, if unpadded, hardware resources are configured according to the default value of the selected <code>HardwareSpecId</code> specification; if padded, priority is given to the fill value for configuration.</p>
+ * @method void setHardwareConfig(InferenceHardwareConfig $HardwareConfig) Set <p>Hardware configuration for the inference service.</p><p>As an input parameter, if unpadded, hardware resources are configured according to the default value of the selected <code>HardwareSpecId</code> specification; if padded, priority is given to the fill value for configuration.</p>
+ * @method InferenceAutoScalingConfig getAutoScalingConfig() Obtain <p>Automatic scaling configuration of the inference service. Required when ScalingMode is Auto.</p>
+ * @method void setAutoScalingConfig(InferenceAutoScalingConfig $AutoScalingConfig) Set <p>Automatic scaling configuration of the inference service. Required when ScalingMode is Auto.</p>
+ * @method InferenceManualInstanceConfig getManualInstanceConfig() Obtain <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
+ * @method void setManualInstanceConfig(InferenceManualInstanceConfig $ManualInstanceConfig) Set <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
+ * @method integer getConcurrency() Obtain <p>Concurrency of a single instance. Default value: 1.</p>
+ * @method void setConcurrency(integer $Concurrency) Set <p>Concurrency of a single instance. Default value: 1.</p>
  */
 class InferenceResourceConfig extends AbstractModel
 {
     /**
-     * @var string Scaling way. Valid values: <li>Auto: Automatically adjust instance count according to request volume;</li><li>Manual: Manual setting of fixed number of resource instances.</li>
+     * @var string <p>Scaling method. Valid values: <li>Auto: automatically adjust instance count according to request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
      */
     public $ScalingMode;
 
     /**
-     * @var string Hardware specifications.
+     * @var string <p>Hardware specification flag. Abandoned. For reference, use <code>HardwareSpecId</code>.</p>
+     * @deprecated
      */
     public $HardwareSpec;
 
     /**
-     * @var InferenceAutoScalingConfig Inference service automatic scaling configuration. Required when ScalingMode is Auto.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var string <p>Unique identification ID of the hardware specification. You can obtain the supported hardware specifications of the current site through the <code>DescribeInferenceHardwareSpecifications</code> API.</p><p>By default, the system configures the required resources for the inference service according to the hardware specification corresponding to the selected <code>HardwareSpecId</code>. If adjustments are needed, you can customize the hardware resource configuration through <code>HardwareConfig</code>.</p>
+     */
+    public $HardwareSpecId;
+
+    /**
+     * @var InferenceHardwareConfig <p>Hardware configuration for the inference service.</p><p>As an input parameter, if unpadded, hardware resources are configured according to the default value of the selected <code>HardwareSpecId</code> specification; if padded, priority is given to the fill value for configuration.</p>
+     */
+    public $HardwareConfig;
+
+    /**
+     * @var InferenceAutoScalingConfig <p>Automatic scaling configuration of the inference service. Required when ScalingMode is Auto.</p>
      */
     public $AutoScalingConfig;
 
     /**
-     * @var InferenceManualInstanceConfig Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var InferenceManualInstanceConfig <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
      */
     public $ManualInstanceConfig;
 
     /**
-     * @var integer Single-instance concurrency. Default value is 1.
+     * @var integer <p>Concurrency of a single instance. Default value: 1.</p>
      */
     public $Concurrency;
 
     /**
-     * @param string $ScalingMode Scaling way. Valid values: <li>Auto: Automatically adjust instance count according to request volume;</li><li>Manual: Manual setting of fixed number of resource instances.</li>
-     * @param string $HardwareSpec Hardware specifications.
-     * @param InferenceAutoScalingConfig $AutoScalingConfig Inference service automatic scaling configuration. Required when ScalingMode is Auto.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param InferenceManualInstanceConfig $ManualInstanceConfig Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param integer $Concurrency Single-instance concurrency. Default value is 1.
+     * @param string $ScalingMode <p>Scaling method. Valid values: <li>Auto: automatically adjust instance count according to request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
+     * @param string $HardwareSpec <p>Hardware specification flag. Abandoned. For reference, use <code>HardwareSpecId</code>.</p>
+     * @param string $HardwareSpecId <p>Unique identification ID of the hardware specification. You can obtain the supported hardware specifications of the current site through the <code>DescribeInferenceHardwareSpecifications</code> API.</p><p>By default, the system configures the required resources for the inference service according to the hardware specification corresponding to the selected <code>HardwareSpecId</code>. If adjustments are needed, you can customize the hardware resource configuration through <code>HardwareConfig</code>.</p>
+     * @param InferenceHardwareConfig $HardwareConfig <p>Hardware configuration for the inference service.</p><p>As an input parameter, if unpadded, hardware resources are configured according to the default value of the selected <code>HardwareSpecId</code> specification; if padded, priority is given to the fill value for configuration.</p>
+     * @param InferenceAutoScalingConfig $AutoScalingConfig <p>Automatic scaling configuration of the inference service. Required when ScalingMode is Auto.</p>
+     * @param InferenceManualInstanceConfig $ManualInstanceConfig <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
+     * @param integer $Concurrency <p>Concurrency of a single instance. Default value: 1.</p>
      */
     function __construct()
     {
@@ -92,6 +101,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 
         if (array_key_exists("HardwareSpec",$param) and $param["HardwareSpec"] !== null) {
             $this->HardwareSpec = $param["HardwareSpec"];
+        }
+
+        if (array_key_exists("HardwareSpecId",$param) and $param["HardwareSpecId"] !== null) {
+            $this->HardwareSpecId = $param["HardwareSpecId"];
+        }
+
+        if (array_key_exists("HardwareConfig",$param) and $param["HardwareConfig"] !== null) {
+            $this->HardwareConfig = new InferenceHardwareConfig();
+            $this->HardwareConfig->deserialize($param["HardwareConfig"]);
         }
 
         if (array_key_exists("AutoScalingConfig",$param) and $param["AutoScalingConfig"] !== null) {

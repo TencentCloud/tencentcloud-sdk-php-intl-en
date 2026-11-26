@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Edge reasoning scheduled scaling action configuration for description of a specific scheduled scaling action.
+ * Scheduled scaling action configuration for edge reasoning, for description of a specific scheduled scaling action.
  *
- * @method string getCronExpression() Obtain Cron expression for description of scheduled scaling trigger time. Use 5-field standard cron format: minute hour date month week. No support for second and year fields.
- * @method void setCronExpression(string $CronExpression) Set Cron expression for description of scheduled scaling trigger time. Use 5-field standard cron format: minute hour date month week. No support for second and year fields.
- * @method integer getMinInstanceCount() Obtain After hitting the scheduled scaling action, the minimum number of instances to which the inference service can be adjusted. If multiple scheduled scaling actions hit at the same time within the identical evaluation window, use the maximum MinInstanceCount.
- * @method void setMinInstanceCount(integer $MinInstanceCount) Set After hitting the scheduled scaling action, the minimum number of instances to which the inference service can be adjusted. If multiple scheduled scaling actions hit at the same time within the identical evaluation window, use the maximum MinInstanceCount.
+ * @method string getCronExpression() Obtain Cron expression for description of the trigger time of a scheduled scaling action. It uses the standard 5-field cron format: minute hour date month week. The second and year fields are not supported.
+ * @method void setCronExpression(string $CronExpression) Set Cron expression for description of the trigger time of a scheduled scaling action. It uses the standard 5-field cron format: minute hour date month week. The second and year fields are not supported.
+ * @method integer getMinInstanceCount() Obtain Minimum number of instances required for the inference service after this scheduled scaling action is hit. If multiple scheduled scaling actions are hit at the same time within the same estimation window, use the maximum MinInstanceCount.
+ * @method void setMinInstanceCount(integer $MinInstanceCount) Set Minimum number of instances required for the inference service after this scheduled scaling action is hit. If multiple scheduled scaling actions are hit at the same time within the same estimation window, use the maximum MinInstanceCount.
  */
 class InferenceScheduledScalingAction extends AbstractModel
 {
     /**
-     * @var string Cron expression for description of scheduled scaling trigger time. Use 5-field standard cron format: minute hour date month week. No support for second and year fields.
+     * @var string Cron expression for description of the trigger time of a scheduled scaling action. It uses the standard 5-field cron format: minute hour date month week. The second and year fields are not supported.
      */
     public $CronExpression;
 
     /**
-     * @var integer After hitting the scheduled scaling action, the minimum number of instances to which the inference service can be adjusted. If multiple scheduled scaling actions hit at the same time within the identical evaluation window, use the maximum MinInstanceCount.
+     * @var integer Minimum number of instances required for the inference service after this scheduled scaling action is hit. If multiple scheduled scaling actions are hit at the same time within the same estimation window, use the maximum MinInstanceCount.
      */
     public $MinInstanceCount;
 
     /**
-     * @param string $CronExpression Cron expression for description of scheduled scaling trigger time. Use 5-field standard cron format: minute hour date month week. No support for second and year fields.
-     * @param integer $MinInstanceCount After hitting the scheduled scaling action, the minimum number of instances to which the inference service can be adjusted. If multiple scheduled scaling actions hit at the same time within the identical evaluation window, use the maximum MinInstanceCount.
+     * @param string $CronExpression Cron expression for description of the trigger time of a scheduled scaling action. It uses the standard 5-field cron format: minute hour date month week. The second and year fields are not supported.
+     * @param integer $MinInstanceCount Minimum number of instances required for the inference service after this scheduled scaling action is hit. If multiple scheduled scaling actions are hit at the same time within the same estimation window, use the maximum MinInstanceCount.
      */
     function __construct()
     {

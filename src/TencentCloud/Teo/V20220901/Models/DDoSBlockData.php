@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DDoS blocking details
+ * DDoS unblocking information
  *
- * @method integer getStartTime() Obtain The start time recorded in UNIX timestamp.
- * @method void setStartTime(integer $StartTime) Set The start time recorded in UNIX timestamp.
- * @method integer getEndTime() Obtain The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
- * @method void setEndTime(integer $EndTime) Set The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
- * @method string getBlockArea() Obtain The regions blocked.
- * @method void setBlockArea(string $BlockArea) Set The regions blocked.
+ * @method integer getStartTime() Obtain Start time in unix timestamp.
+ * @method void setStartTime(integer $StartTime) Set Start time in unix timestamp.
+ * @method integer getEndTime() Obtain Termination time in unix timestamp. 0 means the ban is still in effect.
+ * @method void setEndTime(integer $EndTime) Set Termination time in unix timestamp. 0 means the ban is still in effect.
+ * @method string getBlockArea() Obtain Block the affected area.
+ * @method void setBlockArea(string $BlockArea) Set Block the affected area.
  */
 class DDoSBlockData extends AbstractModel
 {
     /**
-     * @var integer The start time recorded in UNIX timestamp.
+     * @var integer Start time in unix timestamp.
      */
     public $StartTime;
 
     /**
-     * @var integer The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
+     * @var integer Termination time in unix timestamp. 0 means the ban is still in effect.
      */
     public $EndTime;
 
     /**
-     * @var string The regions blocked.
+     * @var string Block the affected area.
      */
     public $BlockArea;
 
     /**
-     * @param integer $StartTime The start time recorded in UNIX timestamp.
-     * @param integer $EndTime The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
-     * @param string $BlockArea The regions blocked.
+     * @param integer $StartTime Start time in unix timestamp.
+     * @param integer $EndTime Termination time in unix timestamp. 0 means the ban is still in effect.
+     * @param string $BlockArea Block the affected area.
      */
     function __construct()
     {

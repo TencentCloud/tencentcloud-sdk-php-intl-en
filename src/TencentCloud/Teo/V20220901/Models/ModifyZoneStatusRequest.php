@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyZoneStatus request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method boolean getPaused() Obtain The site status. Values:
-<li>`false`: Disabled</li>
-<li>`true`: Enabled</li>
- * @method void setPaused(boolean $Paused) Set The site status. Values:
-<li>`false`: Disabled</li>
-<li>`true`: Enabled</li>
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method boolean getPaused() Obtain Site status. Valid values:
+<li> false: enable site;</li>
+<li> true: Disable the site.</li>
+ * @method void setPaused(boolean $Paused) Set Site status. Valid values:
+<li> false: enable site;</li>
+<li> true: Disable the site.</li>
  */
 class ModifyZoneStatusRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var boolean The site status. Values:
-<li>`false`: Disabled</li>
-<li>`true`: Enabled</li>
+     * @var boolean Site status. Valid values:
+<li> false: enable site;</li>
+<li> true: Disable the site.</li>
      */
     public $Paused;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param boolean $Paused The site status. Values:
-<li>`false`: Disabled</li>
-<li>`true`: Enabled</li>
+     * @param string $ZoneId Zone ID.
+     * @param boolean $Paused Site status. Valid values:
+<li> false: enable site;</li>
+<li> true: Disable the site.</li>
      */
     function __construct()
     {

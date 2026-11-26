@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWebSecurityTemplates request structure.
  *
- * @method array getZoneIds() Obtain List of zone IDs. A maximum of 100 zones can be queried in a single request.
- * @method void setZoneIds(array $ZoneIds) Set List of zone IDs. A maximum of 100 zones can be queried in a single request.
+ * @method array getZoneIds() Obtain Site ID list. A single query can import up to 100 sites.
+ * @method void setZoneIds(array $ZoneIds) Set Site ID list. A single query can import up to 100 sites.
  */
 class DescribeWebSecurityTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array List of zone IDs. A maximum of 100 zones can be queried in a single request.
+     * @var array Site ID list. A single query can import up to 100 sites.
      */
     public $ZoneIds;
 
     /**
-     * @param array $ZoneIds List of zone IDs. A maximum of 100 zones can be queried in a single request.
+     * @param array $ZoneIds Site ID list. A single query can import up to 100 sites.
      */
     function __construct()
     {

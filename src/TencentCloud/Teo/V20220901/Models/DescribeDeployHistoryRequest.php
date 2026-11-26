@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set Zone ID.
  * @method string getEnvId() Obtain Environment ID.
  * @method void setEnvId(string $EnvId) Set Environment ID.
- * @method array getFilters() Obtain Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>record-id: Filter by release record ID. </li>
- * @method void setFilters(array $Filters) Set Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>record-id: Filter by release record ID. </li>
+ * @method array getFilters() Obtain Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>record-id: Filter by release record ID.</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>record-id: Filter by release record ID.</li>
  */
 class DescribeDeployHistoryRequest extends AbstractModel
 {
@@ -42,16 +42,16 @@ class DescribeDeployHistoryRequest extends AbstractModel
     public $EnvId;
 
     /**
-     * @var array Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>record-id: Filter by release record ID. </li>
+     * @var array Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>record-id: Filter by release record ID.</li>
      */
     public $Filters;
 
     /**
      * @param string $ZoneId Zone ID.
      * @param string $EnvId Environment ID.
-     * @param array $Filters Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>record-id: Filter by release record ID. </li>
+     * @param array $Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>record-id: Filter by release record ID.</li>
      */
     function __construct()
     {

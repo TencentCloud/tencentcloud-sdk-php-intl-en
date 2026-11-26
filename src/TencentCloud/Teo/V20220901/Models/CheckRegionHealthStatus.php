@@ -24,11 +24,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set Health check region, which is a two-letter code according to ISO-3166-1.
  * @method string getHealthy() Obtain Health status of origin servers in a single health check region. Valid values:
 <li>Healthy: healthy.</li>
-<li>Unhealthy: unhealthy.</li>
+<li>Unhealthy: unhealthy;</li>
 <li>Undetected: no data detected.</li>Note: If all origin servers in a single health check region are healthy, the status is healthy; otherwise, it is unhealthy.
  * @method void setHealthy(string $Healthy) Set Health status of origin servers in a single health check region. Valid values:
 <li>Healthy: healthy.</li>
-<li>Unhealthy: unhealthy.</li>
+<li>Unhealthy: unhealthy;</li>
 <li>Undetected: no data detected.</li>Note: If all origin servers in a single health check region are healthy, the status is healthy; otherwise, it is unhealthy.
  * @method array getOriginHealthStatus() Obtain Origin server health status.
  * @method void setOriginHealthStatus(array $OriginHealthStatus) Set Origin server health status.
@@ -43,7 +43,7 @@ class CheckRegionHealthStatus extends AbstractModel
     /**
      * @var string Health status of origin servers in a single health check region. Valid values:
 <li>Healthy: healthy.</li>
-<li>Unhealthy: unhealthy.</li>
+<li>Unhealthy: unhealthy;</li>
 <li>Undetected: no data detected.</li>Note: If all origin servers in a single health check region are healthy, the status is healthy; otherwise, it is unhealthy.
      */
     public $Healthy;
@@ -57,7 +57,7 @@ class CheckRegionHealthStatus extends AbstractModel
      * @param string $Region Health check region, which is a two-letter code according to ISO-3166-1.
      * @param string $Healthy Health status of origin servers in a single health check region. Valid values:
 <li>Healthy: healthy.</li>
-<li>Unhealthy: unhealthy.</li>
+<li>Unhealthy: unhealthy;</li>
 <li>Undetected: no data detected.</li>Note: If all origin servers in a single health check region are healthy, the status is healthy; otherwise, it is unhealthy.
      * @param array $OriginHealthStatus Origin server health status.
      */

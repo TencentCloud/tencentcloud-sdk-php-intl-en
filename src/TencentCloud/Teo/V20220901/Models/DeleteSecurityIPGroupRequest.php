@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSecurityIPGroup request structure.
  *
- * @method string getZoneId() Obtain Site ID.
- * @method void setZoneId(string $ZoneId) Set Site ID.
- * @method integer getGroupId() Obtain IP group ID.
- * @method void setGroupId(integer $GroupId) Set IP group ID.
+ * @method string getZoneId() Obtain Site Id.
+ * @method void setZoneId(string $ZoneId) Set Site Id.
+ * @method integer getGroupId() Obtain IP group Id.
+ * @method void setGroupId(integer $GroupId) Set IP group Id.
  */
 class DeleteSecurityIPGroupRequest extends AbstractModel
 {
     /**
-     * @var string Site ID.
+     * @var string Site Id.
      */
     public $ZoneId;
 
     /**
-     * @var integer IP group ID.
+     * @var integer IP group Id.
      */
     public $GroupId;
 
     /**
-     * @param string $ZoneId Site ID.
-     * @param integer $GroupId IP group ID.
+     * @param string $ZoneId Site Id.
+     * @param integer $GroupId IP group Id.
      */
     function __construct()
     {

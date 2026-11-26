@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGatewayId(string $GatewayId) Set Gateway ID.
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getGatewayStatus() Obtain Modifies the enabled/disabled status of the gateway. valid values: <li> offline: disabled;</li> <li> online: enabled.</li>.
- * @method void setGatewayStatus(string $GatewayStatus) Set Modifies the enabled/disabled status of the gateway. valid values: <li> offline: disabled;</li> <li> online: enabled.</li>.
+ * @method string getGatewayStatus() Obtain Modify the enabled/disabled status of the gateway. Valid values: <li> offline: disabled;</li><li> online: enabled.</li>
+ * @method void setGatewayStatus(string $GatewayStatus) Set Modify the enabled/disabled status of the gateway. Valid values: <li> offline: disabled;</li><li> online: enabled.</li>
  */
 class ModifyMultiPathGatewayStatusRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyMultiPathGatewayStatusRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Modifies the enabled/disabled status of the gateway. valid values: <li> offline: disabled;</li> <li> online: enabled.</li>.
+     * @var string Modify the enabled/disabled status of the gateway. Valid values: <li> offline: disabled;</li><li> online: enabled.</li>
      */
     public $GatewayStatus;
 
     /**
      * @param string $GatewayId Gateway ID.
      * @param string $ZoneId Zone ID.
-     * @param string $GatewayStatus Modifies the enabled/disabled status of the gateway. valid values: <li> offline: disabled;</li> <li> online: enabled.</li>.
+     * @param string $GatewayStatus Modify the enabled/disabled status of the gateway. Valid values: <li> offline: disabled;</li><li> online: enabled.</li>
      */
     function __construct()
     {

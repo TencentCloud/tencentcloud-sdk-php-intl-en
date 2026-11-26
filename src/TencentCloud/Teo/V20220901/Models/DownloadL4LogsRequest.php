@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DownloadL4Logs request structure.
  *
- * @method string getStartTime() Obtain The start time.
- * @method void setStartTime(string $StartTime) Set The start time.
- * @method string getEndTime() Obtain The end time.
- * @method void setEndTime(string $EndTime) Set The end time.
- * @method array getZoneIds() Obtain The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
- * @method void setZoneIds(array $ZoneIds) Set The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
- * @method array getProxyIds() Obtain List of L4 proxy instance IDs.
- * @method void setProxyIds(array $ProxyIds) Set List of L4 proxy instance IDs.
- * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 300.
- * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20. Maximum value: 300.
- * @method integer getOffset() Obtain The page offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set The page offset. Default value: 0.
+ * @method string getStartTime() Obtain Start time.
+ * @method void setStartTime(string $StartTime) Set Start time.
+ * @method string getEndTime() Obtain End time.
+ * @method void setEndTime(string $EndTime) Set End time.
+ * @method array getZoneIds() Obtain Site ID set. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+ * @method void setZoneIds(array $ZoneIds) Set Site ID set. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+ * @method array getProxyIds() Obtain Layer 4 instance ID collection.
+ * @method void setProxyIds(array $ProxyIds) Set Layer 4 instance ID collection.
+ * @method integer getLimit() Obtain Number limit of paginated query. Default value: 20. Maximum number of query entries: 300.
+ * @method void setLimit(integer $Limit) Set Number limit of paginated query. Default value: 20. Maximum number of query entries: 300.
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  */
 class DownloadL4LogsRequest extends AbstractModel
 {
     /**
-     * @var string The start time.
+     * @var string Start time.
      */
     public $StartTime;
 
     /**
-     * @var string The end time.
+     * @var string End time.
      */
     public $EndTime;
 
     /**
-     * @var array The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+     * @var array Site ID set. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
      */
     public $ZoneIds;
 
     /**
-     * @var array List of L4 proxy instance IDs.
+     * @var array Layer 4 instance ID collection.
      */
     public $ProxyIds;
 
     /**
-     * @var integer Limit on paginated queries. Default value: 20. Maximum value: 300.
+     * @var integer Number limit of paginated query. Default value: 20. Maximum number of query entries: 300.
      */
     public $Limit;
 
     /**
-     * @var integer The page offset. Default value: 0.
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @param string $StartTime The start time.
-     * @param string $EndTime The end time.
-     * @param array $ZoneIds The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
-     * @param array $ProxyIds List of L4 proxy instance IDs.
-     * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 300.
-     * @param integer $Offset The page offset. Default value: 0.
+     * @param string $StartTime Start time.
+     * @param string $EndTime End time.
+     * @param array $ZoneIds Site ID set. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+     * @param array $ProxyIds Layer 4 instance ID collection.
+     * @param integer $Limit Number limit of paginated query. Default value: 20. Maximum number of query entries: 300.
+     * @param integer $Offset Pagination offset. Default value: 0.
      */
     function __construct()
     {

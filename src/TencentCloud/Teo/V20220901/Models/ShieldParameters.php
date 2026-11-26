@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Origin server uninstallation config.
+ * Origin server uninstallation configuration parameters.
  *
  * @method string getShieldSpaceId() Obtain Origin server uninstallation space ID.
  * @method void setShieldSpaceId(string $ShieldSpaceId) Set Origin server uninstallation space ID.

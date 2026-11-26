@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Bindings of a security policy template
+ * Binding relationship of the security policy template.
  *
- * @method string getTemplateId() Obtain template ID
- * @method void setTemplateId(string $TemplateId) Set template ID
- * @method array getTemplateScope() Obtain Binding status of the template.
- * @method void setTemplateScope(array $TemplateScope) Set Binding status of the template.
+ * @method string getTemplateId() Obtain Template ID.
+ * @method void setTemplateId(string $TemplateId) Set Template ID.
+ * @method array getTemplateScope() Obtain Template binding status.
+ * @method void setTemplateScope(array $TemplateScope) Set Template binding status.
  */
 class SecurityTemplateBinding extends AbstractModel
 {
     /**
-     * @var string template ID
+     * @var string Template ID.
      */
     public $TemplateId;
 
     /**
-     * @var array Binding status of the template.
+     * @var array Template binding status.
      */
     public $TemplateScope;
 
     /**
-     * @param string $TemplateId template ID
-     * @param array $TemplateScope Binding status of the template.
+     * @param string $TemplateId Template ID.
+     * @param array $TemplateScope Template binding status.
      */
     function __construct()
     {

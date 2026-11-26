@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyZoneCustomVariables request structure.
  *
- * @method string getZoneId() Obtain <p>Site ID.</p>
- * @method void setZoneId(string $ZoneId) Set <p>Site ID.</p>
- * @method array getCustomVariables() Obtain <p>List of site-level custom variables. CustomVariable.Name must use user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after it.</p>
- * @method void setCustomVariables(array $CustomVariables) Set <p>List of site-level custom variables. CustomVariable.Name must use user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after it.</p>
- * @method array getCustomVariableOperations() Obtain <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule; additional entries are invalid.</p>
- * @method void setCustomVariableOperations(array $CustomVariableOperations) Set <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule; additional entries are invalid.</p>
+ * @method string getZoneId() Obtain <p>Zone ID.</p>
+ * @method void setZoneId(string $ZoneId) Set <p>Zone ID.</p>
+ * @method array getCustomVariables() Obtain <p>List of site-level custom variables. CustomVariable.Name requires the use of user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after the current variable.</p>
+ * @method void setCustomVariables(array $CustomVariables) Set <p>List of site-level custom variables. CustomVariable.Name requires the use of user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after the current variable.</p>
+ * @method array getCustomVariableOperations() Obtain <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule, and additional entries are invalid.</p>
+ * @method void setCustomVariableOperations(array $CustomVariableOperations) Set <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule, and additional entries are invalid.</p>
  */
 class ModifyZoneCustomVariablesRequest extends AbstractModel
 {
     /**
-     * @var string <p>Site ID.</p>
+     * @var string <p>Zone ID.</p>
      */
     public $ZoneId;
 
     /**
-     * @var array <p>List of site-level custom variables. CustomVariable.Name must use user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after it.</p>
+     * @var array <p>List of site-level custom variables. CustomVariable.Name requires the use of user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after the current variable.</p>
      */
     public $CustomVariables;
 
     /**
-     * @var array <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule; additional entries are invalid.</p>
+     * @var array <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule, and additional entries are invalid.</p>
      */
     public $CustomVariableOperations;
 
     /**
-     * @param string $ZoneId <p>Site ID.</p>
-     * @param array $CustomVariables <p>List of site-level custom variables. CustomVariable.Name must use user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after it.</p>
-     * @param array $CustomVariableOperations <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule; additional entries are invalid.</p>
+     * @param string $ZoneId <p>Zone ID.</p>
+     * @param array $CustomVariables <p>List of site-level custom variables. CustomVariable.Name requires the use of user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after the current variable.</p>
+     * @param array $CustomVariableOperations <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule, and additional entries are invalid.</p>
      */
     function __construct()
     {

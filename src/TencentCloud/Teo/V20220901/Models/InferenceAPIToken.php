@@ -18,14 +18,14 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Reasoning API Token information.
+ * Token information for the reasoning API.
  *
  * @method string getTokenId() Obtain Reasoning API Token ID.
  * @method void setTokenId(string $TokenId) Set Reasoning API Token ID.
- * @method string getName() Obtain Reasoning API Token name.
- * @method void setName(string $Name) Set Reasoning API Token name.
- * @method string getContent() Obtain Reasoning API Token content.
- * @method void setContent(string $Content) Set Reasoning API Token content.
+ * @method string getName() Obtain Name of the reasoning API Token.
+ * @method void setName(string $Name) Set Name of the reasoning API Token.
+ * @method string getContent() Obtain Content of the reasoning API Token.
+ * @method void setContent(string $Content) Set Content of the reasoning API Token.
  * @method string getCreateTime() Obtain Creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setCreateTime(string $CreateTime) Set Creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
  */
@@ -37,12 +37,12 @@ class InferenceAPIToken extends AbstractModel
     public $TokenId;
 
     /**
-     * @var string Reasoning API Token name.
+     * @var string Name of the reasoning API Token.
      */
     public $Name;
 
     /**
-     * @var string Reasoning API Token content.
+     * @var string Content of the reasoning API Token.
      */
     public $Content;
 
@@ -53,8 +53,8 @@ class InferenceAPIToken extends AbstractModel
 
     /**
      * @param string $TokenId Reasoning API Token ID.
-     * @param string $Name Reasoning API Token name.
-     * @param string $Content Reasoning API Token content.
+     * @param string $Name Name of the reasoning API Token.
+     * @param string $Content Content of the reasoning API Token.
      * @param string $CreateTime Creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()

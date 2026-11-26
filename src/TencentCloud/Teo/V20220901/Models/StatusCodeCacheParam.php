@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Status Code Cache TTL configuration internal structure.
+ * Internal structure of the status code cache TTL config.
  *
- * @method integer getStatusCode() Obtain Status code. valid values: 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
- * @method void setStatusCode(integer $StatusCode) Set Status code. valid values: 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
- * @method integer getCacheTime() Obtain Cache time value in seconds. value range: 0–31536000.
- * @method void setCacheTime(integer $CacheTime) Set Cache time value in seconds. value range: 0–31536000.
+ * @method integer getStatusCode() Obtain Status code. Value is one of 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
+ * @method void setStatusCode(integer $StatusCode) Set Status code. Value is one of 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
+ * @method integer getCacheTime() Obtain Cache time value, in seconds. Value range: 0–31536000.
+ * @method void setCacheTime(integer $CacheTime) Set Cache time value, in seconds. Value range: 0–31536000.
  */
 class StatusCodeCacheParam extends AbstractModel
 {
     /**
-     * @var integer Status code. valid values: 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
+     * @var integer Status code. Value is one of 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
      */
     public $StatusCode;
 
     /**
-     * @var integer Cache time value in seconds. value range: 0–31536000.
+     * @var integer Cache time value, in seconds. Value range: 0–31536000.
      */
     public $CacheTime;
 
     /**
-     * @param integer $StatusCode Status code. valid values: 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
-     * @param integer $CacheTime Cache time value in seconds. value range: 0–31536000.
+     * @param integer $StatusCode Status code. Value is one of 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
+     * @param integer $CacheTime Cache time value, in seconds. Value range: 0–31536000.
      */
     function __construct()
     {

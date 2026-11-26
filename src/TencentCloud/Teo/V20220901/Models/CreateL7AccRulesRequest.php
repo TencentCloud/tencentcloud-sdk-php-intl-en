@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateL7AccRules request structure.
  *
- * @method string getZoneId() Obtain Zone id.
- * @method void setZoneId(string $ZoneId) Set Zone id.
- * @method array getRules() Obtain The rule content.
- * @method void setRules(array $Rules) Set The rule content.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method array getRules() Obtain Rule content.
+ * @method void setRules(array $Rules) Set Rule content.
  */
 class CreateL7AccRulesRequest extends AbstractModel
 {
     /**
-     * @var string Zone id.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var array The rule content.
+     * @var array Rule content.
      */
     public $Rules;
 
     /**
-     * @param string $ZoneId Zone id.
-     * @param array $Rules The rule content.
+     * @param string $ZoneId Zone ID.
+     * @param array $Rules Rule content.
      */
     function __construct()
     {

@@ -18,17 +18,17 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Reasoning service deployment log information.
+ * Deployment log information for the reasoning service.
  *
- * @method string getLogMessage() Obtain Message content of log messages.
- * @method void setLogMessage(string $LogMessage) Set Message content of log messages.
+ * @method string getLogMessage() Obtain Log message content.
+ * @method void setLogMessage(string $LogMessage) Set Log message content.
  * @method string getTimestamp() Obtain Log generation time.
  * @method void setTimestamp(string $Timestamp) Set Log generation time.
  */
 class InferenceServiceDeploymentLogInfo extends AbstractModel
 {
     /**
-     * @var string Message content of log messages.
+     * @var string Log message content.
      */
     public $LogMessage;
 
@@ -38,7 +38,7 @@ class InferenceServiceDeploymentLogInfo extends AbstractModel
     public $Timestamp;
 
     /**
-     * @param string $LogMessage Message content of log messages.
+     * @param string $LogMessage Log message content.
      * @param string $Timestamp Log generation time.
      */
     function __construct()

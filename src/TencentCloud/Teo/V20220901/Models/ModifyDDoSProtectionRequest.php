@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method DDoSProtection getDDoSProtection() Obtain Specifies the exclusive Anti-DDoS configuration.
- * @method void setDDoSProtection(DDoSProtection $DDoSProtection) Set Specifies the exclusive Anti-DDoS configuration.
+ * @method DDoSProtection getDDoSProtection() Obtain Exclusive DDoS protection configuration.
+ * @method void setDDoSProtection(DDoSProtection $DDoSProtection) Set Exclusive DDoS protection configuration.
  */
 class ModifyDDoSProtectionRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyDDoSProtectionRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var DDoSProtection Specifies the exclusive Anti-DDoS configuration.
+     * @var DDoSProtection Exclusive DDoS protection configuration.
      */
     public $DDoSProtection;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param DDoSProtection $DDoSProtection Specifies the exclusive Anti-DDoS configuration.
+     * @param DDoSProtection $DDoSProtection Exclusive DDoS protection configuration.
      */
     function __construct()
     {

@@ -18,68 +18,68 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The site verification information
+ * Site verification info
  *
- * @method string getZoneName() Obtain The site name.
- * @method void setZoneName(string $ZoneName) Set The site name.
- * @method string getDomain() Obtain The subdomain name to be verified. to verify the ownership of a site, leave it blank.
- * @method void setDomain(string $Domain) Set The subdomain name to be verified. to verify the ownership of a site, leave it blank.
- * @method string getStatus() Obtain The verification status. Values:
-<li>`pending`: The verification is ongoing.</li>
-<li>`finished`: The verification completed.</li>
- * @method void setStatus(string $Status) Set The verification status. Values:
-<li>`pending`: The verification is ongoing.</li>
-<li>`finished`: The verification completed.</li>
- * @method AscriptionInfo getAscription() Obtain Details of the DNS record.
- * @method void setAscription(AscriptionInfo $Ascription) Set Details of the DNS record.
- * @method array getOriginalNameServers() Obtain Specifies the current NS record of the domain name.
- * @method void setOriginalNameServers(array $OriginalNameServers) Set Specifies the current NS record of the domain name.
- * @method FileAscriptionInfo getFileAscription() Obtain Details of the verification file.
- * @method void setFileAscription(FileAscriptionInfo $FileAscription) Set Details of the verification file.
+ * @method string getZoneName() Obtain Site name.
+ * @method void setZoneName(string $ZoneName) Set Site name.
+ * @method string getDomain() Obtain Verify a subdomain. This value is empty when verifying a site. A subdomain is verified for a specific subdomain.
+ * @method void setDomain(string $Domain) Set Verify a subdomain. This value is empty when verifying a site. A subdomain is verified for a specific subdomain.
+ * @method string getStatus() Obtain Verification status. Valid values:
+<li>pending: verifying.</li>
+<li> finished: verification complete.</li>
+ * @method void setStatus(string $Status) Set Verification status. Valid values:
+<li>pending: verifying.</li>
+<li> finished: verification complete.</li>
+ * @method AscriptionInfo getAscription() Obtain Site ownership verification: Dns verification information.
+ * @method void setAscription(AscriptionInfo $Ascription) Set Site ownership verification: Dns verification information.
+ * @method array getOriginalNameServers() Obtain Current NS record of the domain name.
+ * @method void setOriginalNameServers(array $OriginalNameServers) Set Current NS record of the domain name.
+ * @method FileAscriptionInfo getFileAscription() Obtain Site ownership verification: file verification information.
+ * @method void setFileAscription(FileAscriptionInfo $FileAscription) Set Site ownership verification: file verification information.
  */
 class Identification extends AbstractModel
 {
     /**
-     * @var string The site name.
+     * @var string Site name.
      */
     public $ZoneName;
 
     /**
-     * @var string The subdomain name to be verified. to verify the ownership of a site, leave it blank.
+     * @var string Verify a subdomain. This value is empty when verifying a site. A subdomain is verified for a specific subdomain.
      */
     public $Domain;
 
     /**
-     * @var string The verification status. Values:
-<li>`pending`: The verification is ongoing.</li>
-<li>`finished`: The verification completed.</li>
+     * @var string Verification status. Valid values:
+<li>pending: verifying.</li>
+<li> finished: verification complete.</li>
      */
     public $Status;
 
     /**
-     * @var AscriptionInfo Details of the DNS record.
+     * @var AscriptionInfo Site ownership verification: Dns verification information.
      */
     public $Ascription;
 
     /**
-     * @var array Specifies the current NS record of the domain name.
+     * @var array Current NS record of the domain name.
      */
     public $OriginalNameServers;
 
     /**
-     * @var FileAscriptionInfo Details of the verification file.
+     * @var FileAscriptionInfo Site ownership verification: file verification information.
      */
     public $FileAscription;
 
     /**
-     * @param string $ZoneName The site name.
-     * @param string $Domain The subdomain name to be verified. to verify the ownership of a site, leave it blank.
-     * @param string $Status The verification status. Values:
-<li>`pending`: The verification is ongoing.</li>
-<li>`finished`: The verification completed.</li>
-     * @param AscriptionInfo $Ascription Details of the DNS record.
-     * @param array $OriginalNameServers Specifies the current NS record of the domain name.
-     * @param FileAscriptionInfo $FileAscription Details of the verification file.
+     * @param string $ZoneName Site name.
+     * @param string $Domain Verify a subdomain. This value is empty when verifying a site. A subdomain is verified for a specific subdomain.
+     * @param string $Status Verification status. Valid values:
+<li>pending: verifying.</li>
+<li> finished: verification complete.</li>
+     * @param AscriptionInfo $Ascription Site ownership verification: Dns verification information.
+     * @param array $OriginalNameServers Current NS record of the domain name.
+     * @param FileAscriptionInfo $FileAscription Site ownership verification: file verification information.
      */
     function __construct()
     {

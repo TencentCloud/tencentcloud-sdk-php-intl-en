@@ -18,17 +18,17 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Inference service auto scaling configuration.
+ * Scaling configuration for automatic scaling of the inference service.
  *
- * @method integer getMinInstanceCount() Obtain <p>Minimum number of instances. When a scaling policy is configured and the policy is in the valid period, it will not take effect.</p>
- * @method void setMinInstanceCount(integer $MinInstanceCount) Set <p>Minimum number of instances. When a scaling policy is configured and the policy is in the valid period, it will not take effect.</p>
+ * @method integer getMinInstanceCount() Obtain <p>Minimum number of instances. It will not take effect when a scaling policy is configured and the policy is in its valid period.</p>
+ * @method void setMinInstanceCount(integer $MinInstanceCount) Set <p>Minimum number of instances. It will not take effect when a scaling policy is configured and the policy is in its valid period.</p>
  * @method array getScalingPolicies() Obtain <p>Auto Scaling policy list. Supports up to 5 policies.</p>
  * @method void setScalingPolicies(array $ScalingPolicies) Set <p>Auto Scaling policy list. Supports up to 5 policies.</p>
  */
 class InferenceAutoScalingConfig extends AbstractModel
 {
     /**
-     * @var integer <p>Minimum number of instances. When a scaling policy is configured and the policy is in the valid period, it will not take effect.</p>
+     * @var integer <p>Minimum number of instances. It will not take effect when a scaling policy is configured and the policy is in its valid period.</p>
      */
     public $MinInstanceCount;
 
@@ -38,7 +38,7 @@ class InferenceAutoScalingConfig extends AbstractModel
     public $ScalingPolicies;
 
     /**
-     * @param integer $MinInstanceCount <p>Minimum number of instances. When a scaling policy is configured and the policy is in the valid period, it will not take effect.</p>
+     * @param integer $MinInstanceCount <p>Minimum number of instances. It will not take effect when a scaling policy is configured and the policy is in its valid period.</p>
      * @param array $ScalingPolicies <p>Auto Scaling policy list. Supports up to 5 policies.</p>
      */
     function __construct()

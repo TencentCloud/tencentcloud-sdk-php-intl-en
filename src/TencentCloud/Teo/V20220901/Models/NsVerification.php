@@ -18,20 +18,20 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information required for switching DNS servers. It's applicable to sites connected via NSs.
+ * Information required for NS access and DNS server switchover.
  *
- * @method array getNameServers() Obtain The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
- * @method void setNameServers(array $NameServers) Set The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
+ * @method array getNameServers() Obtain DNS server address assigned to the user for NS access. Switch the domain's NameServer to this address.
+ * @method void setNameServers(array $NameServers) Set DNS server address assigned to the user for NS access. Switch the domain's NameServer to this address.
  */
 class NsVerification extends AbstractModel
 {
     /**
-     * @var array The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
+     * @var array DNS server address assigned to the user for NS access. Switch the domain's NameServer to this address.
      */
     public $NameServers;
 
     /**
-     * @param array $NameServers The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
+     * @param array $NameServers DNS server address assigned to the user for NS access. Switch the domain's NameServer to this address.
      */
     function __construct()
     {

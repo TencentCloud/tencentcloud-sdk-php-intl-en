@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInferenceAPITokens request structure.
  *
- * @method string getZoneId() Obtain <p>Site ID.</p>
- * @method void setZoneId(string $ZoneId) Set <p>Site ID.</p>
- * @method integer getOffset() Obtain <p>Paginated query offset. Default value: 0.</p>
- * @method void setOffset(integer $Offset) Set <p>Paginated query offset. Default value: 0.</p>
+ * @method string getZoneId() Obtain <p>Zone ID.</p>
+ * @method void setZoneId(string $ZoneId) Set <p>Zone ID.</p>
+ * @method integer getOffset() Obtain <p>The offset of paginated query. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>The offset of paginated query. Default value: 0.</p>
  * @method integer getLimit() Obtain <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
  * @method void setLimit(integer $Limit) Set <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
  */
 class DescribeInferenceAPITokensRequest extends AbstractModel
 {
     /**
-     * @var string <p>Site ID.</p>
+     * @var string <p>Zone ID.</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer <p>Paginated query offset. Default value: 0.</p>
+     * @var integer <p>The offset of paginated query. Default value: 0.</p>
      */
     public $Offset;
 
@@ -45,8 +45,8 @@ class DescribeInferenceAPITokensRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $ZoneId <p>Site ID.</p>
-     * @param integer $Offset <p>Paginated query offset. Default value: 0.</p>
+     * @param string $ZoneId <p>Zone ID.</p>
+     * @param integer $Offset <p>The offset of paginated query. Default value: 0.</p>
      * @param integer $Limit <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
      */
     function __construct()

@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeJustInTimeTranscodeTemplates request structure.
  *
- * @method string getZoneId() Obtain Specifies the site ID.
- * @method void setZoneId(string $ZoneId) Set Specifies the site ID.
- * @method array getFilters() Obtain Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
- * @method void setFilters(array $Filters) Set Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
- * @method string getSortBy() Obtain Sorting field. valid values: <li>createTime: template creation time.</li> default value: createTime.
- * @method void setSortBy(string $SortBy) Set Sorting field. valid values: <li>createTime: template creation time.</li> default value: createTime.
- * @method string getSortOrder() Obtain Sorting method. valid values: <li>`asc`: ascending order;</li><li>`desc`: descending order.</li> default value: `desc`.
- * @method void setSortOrder(string $SortOrder) Set Sorting method. valid values: <li>`asc`: ascending order;</li><li>`desc`: descending order.</li> default value: `desc`.
- * @method integer getOffset() Obtain Paging offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Paging offset. Default value: 0.
- * @method integer getLimit() Obtain Number of returned entries. default value: 20. maximum value: 1000.
- * @method void setLimit(integer $Limit) Set Number of returned entries. default value: 20. maximum value: 1000.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method array getFilters() Obtain Filter criteria. The maximum number of Filters is 20, and the maximum number of Filters.Values is 20. If this parameter is left empty, authorized just in time transcoding templates under the current ZoneId are returned by default. The detailed filter criteria are as follows: <li>template-name: filter by template name in bulk. For example: mytemplate;</li><li>template-type: filter by template type in bulk. For example: preset or custom.</li><li>template-id: filter by template ID in bulk. For example: C1LZ7982VgTpYhJ7M.</li>Empty by default.
+ * @method void setFilters(array $Filters) Set Filter criteria. The maximum number of Filters is 20, and the maximum number of Filters.Values is 20. If this parameter is left empty, authorized just in time transcoding templates under the current ZoneId are returned by default. The detailed filter criteria are as follows: <li>template-name: filter by template name in bulk. For example: mytemplate;</li><li>template-type: filter by template type in bulk. For example: preset or custom.</li><li>template-id: filter by template ID in bulk. For example: C1LZ7982VgTpYhJ7M.</li>Empty by default.
+ * @method string getSortBy() Obtain Sorting field. Valid values: <li>createTime: template creation time.</li> Default value: createTime.
+ * @method void setSortBy(string $SortBy) Set Sorting field. Valid values: <li>createTime: template creation time.</li> Default value: createTime.
+ * @method string getSortOrder() Obtain Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li> Default value: desc.
+ * @method void setSortOrder(string $SortOrder) Set Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li> Default value: desc.
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
+ * @method integer getLimit() Obtain Number of returned entries. Default value: 20. Maximum value: 1000.
+ * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 20. Maximum value: 1000.
  */
 class DescribeJustInTimeTranscodeTemplatesRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the site ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var array Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
+     * @var array Filter criteria. The maximum number of Filters is 20, and the maximum number of Filters.Values is 20. If this parameter is left empty, authorized just in time transcoding templates under the current ZoneId are returned by default. The detailed filter criteria are as follows: <li>template-name: filter by template name in bulk. For example: mytemplate;</li><li>template-type: filter by template type in bulk. For example: preset or custom.</li><li>template-id: filter by template ID in bulk. For example: C1LZ7982VgTpYhJ7M.</li>Empty by default.
      */
     public $Filters;
 
     /**
-     * @var string Sorting field. valid values: <li>createTime: template creation time.</li> default value: createTime.
+     * @var string Sorting field. Valid values: <li>createTime: template creation time.</li> Default value: createTime.
      */
     public $SortBy;
 
     /**
-     * @var string Sorting method. valid values: <li>`asc`: ascending order;</li><li>`desc`: descending order.</li> default value: `desc`.
+     * @var string Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li> Default value: desc.
      */
     public $SortOrder;
 
     /**
-     * @var integer Paging offset. Default value: 0.
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned entries. default value: 20. maximum value: 1000.
+     * @var integer Number of returned entries. Default value: 20. Maximum value: 1000.
      */
     public $Limit;
 
     /**
-     * @param string $ZoneId Specifies the site ID.
-     * @param array $Filters Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
-     * @param string $SortBy Sorting field. valid values: <li>createTime: template creation time.</li> default value: createTime.
-     * @param string $SortOrder Sorting method. valid values: <li>`asc`: ascending order;</li><li>`desc`: descending order.</li> default value: `desc`.
-     * @param integer $Offset Paging offset. Default value: 0.
-     * @param integer $Limit Number of returned entries. default value: 20. maximum value: 1000.
+     * @param string $ZoneId Site ID.
+     * @param array $Filters Filter criteria. The maximum number of Filters is 20, and the maximum number of Filters.Values is 20. If this parameter is left empty, authorized just in time transcoding templates under the current ZoneId are returned by default. The detailed filter criteria are as follows: <li>template-name: filter by template name in bulk. For example: mytemplate;</li><li>template-type: filter by template type in bulk. For example: preset or custom.</li><li>template-id: filter by template ID in bulk. For example: C1LZ7982VgTpYhJ7M.</li>Empty by default.
+     * @param string $SortBy Sorting field. Valid values: <li>createTime: template creation time.</li> Default value: createTime.
+     * @param string $SortOrder Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li> Default value: desc.
+     * @param integer $Offset Pagination offset. Default value: 0.
+     * @param integer $Limit Number of returned entries. Default value: 20. Maximum value: 1000.
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Custom Variable parameter settings.
  *
- * @method string getName() Obtain <p>Specify the custom variable name. A custom variable must be defined before it can be used in operations.</p>
- * @method void setName(string $Name) Set <p>Specify the custom variable name. A custom variable must be defined before it can be used in operations.</p>
- * @method string getValue() Obtain <p>Assign value to a Custom Variable. Supports the use of constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
- * @method void setValue(string $Value) Set <p>Assign value to a Custom Variable. Supports the use of constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
+ * @method string getName() Obtain <p>Custom Variable name. A Custom Variable must be defined before it can be used in operations.</p>
+ * @method void setName(string $Name) Set <p>Custom Variable name. A Custom Variable must be defined before it can be used in operations.</p>
+ * @method string getValue() Obtain <p>Assign values to custom variables. Supports using constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
+ * @method void setValue(string $Value) Set <p>Assign values to custom variables. Supports using constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
  */
 class SetParameters extends AbstractModel
 {
     /**
-     * @var string <p>Specify the custom variable name. A custom variable must be defined before it can be used in operations.</p>
+     * @var string <p>Custom Variable name. A Custom Variable must be defined before it can be used in operations.</p>
      */
     public $Name;
 
     /**
-     * @var string <p>Assign value to a Custom Variable. Supports the use of constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
+     * @var string <p>Assign values to custom variables. Supports using constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
      */
     public $Value;
 
     /**
-     * @param string $Name <p>Specify the custom variable name. A custom variable must be defined before it can be used in operations.</p>
-     * @param string $Value <p>Assign value to a Custom Variable. Supports the use of constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
+     * @param string $Name <p>Custom Variable name. A Custom Variable must be defined before it can be used in operations.</p>
+     * @param string $Value <p>Assign values to custom variables. Supports using constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
      */
     function __construct()
     {

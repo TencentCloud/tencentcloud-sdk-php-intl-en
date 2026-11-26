@@ -18,68 +18,68 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Active bot detection rule.
+ * Bot active feature detection rule.
  *
- * @method integer getRuleID() Obtain ID of the rule.
- * @method void setRuleID(integer $RuleID) Set ID of the rule.
- * @method string getRuleName() Obtain Name of the rule.
- * @method void setRuleName(string $RuleName) Set Name of the rule.
- * @method string getSwitch() Obtain Whether to enable the rule.
- * @method void setSwitch(string $Switch) Set Whether to enable the rule.
- * @method array getAlgConditions() Obtain Condition specified for the rule.
- * @method void setAlgConditions(array $AlgConditions) Set Condition specified for the rule.
- * @method AlgDetectSession getAlgDetectSession() Obtain Checksum of the Cookie and behavior analysis of the session.
- * @method void setAlgDetectSession(AlgDetectSession $AlgDetectSession) Set Checksum of the Cookie and behavior analysis of the session.
- * @method array getAlgDetectJS() Obtain Validate client behavior when the condition is satisfied.
- * @method void setAlgDetectJS(array $AlgDetectJS) Set Validate client behavior when the condition is satisfied.
- * @method string getUpdateTime() Obtain The update time, which is only used as an output parameter.
- * @method void setUpdateTime(string $UpdateTime) Set The update time, which is only used as an output parameter.
+ * @method integer getRuleID() Obtain Rule id.
+ * @method void setRuleID(integer $RuleID) Set Rule id.
+ * @method string getRuleName() Obtain Rule name.
+ * @method void setRuleName(string $RuleName) Set Rule name.
+ * @method string getSwitch() Obtain Rule switch.
+ * @method void setSwitch(string $Switch) Set Rule switch.
+ * @method array getAlgConditions() Obtain Custom rule.
+ * @method void setAlgConditions(array $AlgConditions) Set Custom rule.
+ * @method AlgDetectSession getAlgDetectSession() Obtain Cookie checksum and session behavior analysis.
+ * @method void setAlgDetectSession(AlgDetectSession $AlgDetectSession) Set Cookie checksum and session behavior analysis.
+ * @method array getAlgDetectJS() Obtain Client behavior validation.
+ * @method void setAlgDetectJS(array $AlgDetectJS) Set Client behavior validation.
+ * @method string getUpdateTime() Obtain Update time. For output usage only.
+ * @method void setUpdateTime(string $UpdateTime) Set Update time. For output usage only.
  */
 class AlgDetectRule extends AbstractModel
 {
     /**
-     * @var integer ID of the rule.
+     * @var integer Rule id.
      */
     public $RuleID;
 
     /**
-     * @var string Name of the rule.
+     * @var string Rule name.
      */
     public $RuleName;
 
     /**
-     * @var string Whether to enable the rule.
+     * @var string Rule switch.
      */
     public $Switch;
 
     /**
-     * @var array Condition specified for the rule.
+     * @var array Custom rule.
      */
     public $AlgConditions;
 
     /**
-     * @var AlgDetectSession Checksum of the Cookie and behavior analysis of the session.
+     * @var AlgDetectSession Cookie checksum and session behavior analysis.
      */
     public $AlgDetectSession;
 
     /**
-     * @var array Validate client behavior when the condition is satisfied.
+     * @var array Client behavior validation.
      */
     public $AlgDetectJS;
 
     /**
-     * @var string The update time, which is only used as an output parameter.
+     * @var string Update time. For output usage only.
      */
     public $UpdateTime;
 
     /**
-     * @param integer $RuleID ID of the rule.
-     * @param string $RuleName Name of the rule.
-     * @param string $Switch Whether to enable the rule.
-     * @param array $AlgConditions Condition specified for the rule.
-     * @param AlgDetectSession $AlgDetectSession Checksum of the Cookie and behavior analysis of the session.
-     * @param array $AlgDetectJS Validate client behavior when the condition is satisfied.
-     * @param string $UpdateTime The update time, which is only used as an output parameter.
+     * @param integer $RuleID Rule id.
+     * @param string $RuleName Rule name.
+     * @param string $Switch Rule switch.
+     * @param array $AlgConditions Custom rule.
+     * @param AlgDetectSession $AlgDetectSession Cookie checksum and session behavior analysis.
+     * @param array $AlgDetectJS Client behavior validation.
+     * @param string $UpdateTime Update time. For output usage only.
      */
     function __construct()
     {

@@ -18,36 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Domain names bound with the template. 
+ * Security template domain binding status
  *
- * @method string getZoneId() Obtain ID of the site.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setZoneId(string $ZoneId) Set ID of the site.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getEntityStatus() Obtain List of instance statuses
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setEntityStatus(array $EntityStatus) Set List of instance statuses
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method array getEntityStatus() Obtain Instance status list.
+ * @method void setEntityStatus(array $EntityStatus) Set Instance status list.
  */
 class TemplateScope extends AbstractModel
 {
     /**
-     * @var string ID of the site.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var array List of instance statuses
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Instance status list.
      */
     public $EntityStatus;
 
     /**
-     * @param string $ZoneId ID of the site.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $EntityStatus List of instance statuses
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $ZoneId Site ID.
+     * @param array $EntityStatus Instance status list.
      */
     function __construct()
     {

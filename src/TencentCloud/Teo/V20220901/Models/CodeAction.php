@@ -18,17 +18,17 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rule engine action with a status code
+ * Action with a status code for the rule engine
  *
- * @method string getAction() Obtain Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
- * @method void setAction(string $Action) Set Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
+ * @method string getAction() Obtain Feature name. For completion specifications, call the API to query the parameter settings of the rule engine (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
+ * @method void setAction(string $Action) Set Feature name. For completion specifications, call the API to query the parameter settings of the rule engine (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
  * @method array getParameters() Obtain Operation parameter.
  * @method void setParameters(array $Parameters) Set Operation parameter.
  */
 class CodeAction extends AbstractModel
 {
     /**
-     * @var string Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
+     * @var string Feature name. For completion specifications, call the API to query the parameter settings of the rule engine (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
      */
     public $Action;
 
@@ -38,7 +38,7 @@ class CodeAction extends AbstractModel
     public $Parameters;
 
     /**
-     * @param string $Action Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
+     * @param string $Action Feature name. For completion specifications, call the API to query the parameter settings of the rule engine (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
      * @param array $Parameters Operation parameter.
      */
     function __construct()

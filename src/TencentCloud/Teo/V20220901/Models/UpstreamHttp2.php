@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HTTP2 origin-pull configuration
+ * Http/2 origin-pull configuration
  *
- * @method string getSwitch() Obtain Whether to enable HTTP2 origin-pull. Valid values: 
+ * @method string getSwitch() Obtain http/2 origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
- * @method void setSwitch(string $Switch) Set Whether to enable HTTP2 origin-pull. Valid values: 
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set http/2 origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
  */
 class UpstreamHttp2 extends AbstractModel
 {
     /**
-     * @var string Whether to enable HTTP2 origin-pull. Valid values: 
+     * @var string http/2 origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable HTTP2 origin-pull. Valid values: 
+     * @param string $Switch http/2 origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
      */
     function __construct()
     {

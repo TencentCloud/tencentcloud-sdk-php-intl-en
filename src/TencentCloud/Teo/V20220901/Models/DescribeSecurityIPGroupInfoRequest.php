@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityIPGroupInfo request structure.
  *
- * @method string getZoneId() Obtain Site ID, used to specify the query scope.
- * @method void setZoneId(string $ZoneId) Set Site ID, used to specify the query scope.
- * @method integer getLimit() Obtain Maximum number of entries returned in a single response. Default value: 20. Maximum query entries: 1000.
- * @method void setLimit(integer $Limit) Set Maximum number of entries returned in a single response. Default value: 20. Maximum query entries: 1000.
- * @method integer getOffset() Obtain The starting entry offset for pagination queries. The default value is 0.
- * @method void setOffset(integer $Offset) Set The starting entry offset for pagination queries. The default value is 0.
+ * @method string getZoneId() Obtain Site ID, used to specify the scope of the queried site.
+ * @method void setZoneId(string $ZoneId) Set Site ID, used to specify the scope of the queried site.
+ * @method integer getLimit() Obtain Maximum number of entries returned in a single response. Default value: 20. Maximum number of query entries: 1000.
+ * @method void setLimit(integer $Limit) Set Maximum number of entries returned in a single response. Default value: 20. Maximum number of query entries: 1000.
+ * @method integer getOffset() Obtain Starting entry offset for pagination queries. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Starting entry offset for pagination queries. Default value: 0.
  */
 class DescribeSecurityIPGroupInfoRequest extends AbstractModel
 {
     /**
-     * @var string Site ID, used to specify the query scope.
+     * @var string Site ID, used to specify the scope of the queried site.
      */
     public $ZoneId;
 
     /**
-     * @var integer Maximum number of entries returned in a single response. Default value: 20. Maximum query entries: 1000.
+     * @var integer Maximum number of entries returned in a single response. Default value: 20. Maximum number of query entries: 1000.
      */
     public $Limit;
 
     /**
-     * @var integer The starting entry offset for pagination queries. The default value is 0.
+     * @var integer Starting entry offset for pagination queries. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @param string $ZoneId Site ID, used to specify the query scope.
-     * @param integer $Limit Maximum number of entries returned in a single response. Default value: 20. Maximum query entries: 1000.
-     * @param integer $Offset The starting entry offset for pagination queries. The default value is 0.
+     * @param string $ZoneId Site ID, used to specify the scope of the queried site.
+     * @param integer $Limit Maximum number of entries returned in a single response. Default value: 20. Maximum number of query entries: 1000.
+     * @param integer $Offset Starting entry offset for pagination queries. Default value: 0.
      */
     function __construct()
     {

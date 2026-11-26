@@ -20,127 +20,127 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApplicationProxyRule request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getProxyId() Obtain The proxy ID.
- * @method void setProxyId(string $ProxyId) Set The proxy ID.
- * @method string getRuleId() Obtain The rule ID.
- * @method void setRuleId(string $RuleId) Set The rule ID.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method string getProxyId() Obtain Proxy ID.
+ * @method void setProxyId(string $ProxyId) Set Proxy ID.
+ * @method string getRuleId() Obtain Rule ID.
+ * @method void setRuleId(string $RuleId) Set Rule ID.
  * @method string getOriginType() Obtain Origin server type. Valid values:
-<li>custom: Manually added;</li>
-<li>origins: Origin server group.</li>
+<li>`custom`: Manually added;</li>
+<li>origins: origin server group.</li>
  * @method void setOriginType(string $OriginType) Set Origin server type. Valid values:
-<li>custom: Manually added;</li>
-<li>origins: Origin server group.</li>
- * @method array getPort() Obtain The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
- * @method void setPort(array $Port) Set The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
- * @method string getProto() Obtain The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>The original configuration will apply if this field is not specified.
- * @method void setProto(string $Proto) Set The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>The original configuration will apply if this field is not specified.
- * @method array getOriginValue() Obtain Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+<li>`custom`: Manually added;</li>
+<li>origins: origin server group.</li>
+ * @method array getPort() Obtain Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
+ * @method void setPort(array $Port) Set Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
+ * @method string getProto() Obtain Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>Leave it blank to keep the original value.
+ * @method void setProto(string $Proto) Set Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>Leave it blank to keep the original value.
+ * @method array getOriginValue() Obtain Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
 
-The original configuration will apply if this field is not specified.
- * @method void setOriginValue(array $OriginValue) Set Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+If not specified, the original value is retained.
+ * @method void setOriginValue(array $OriginValue) Set Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
 
-The original configuration will apply if this field is not specified.
- * @method string getForwardClientIp() Obtain Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>If not specified, this field uses the default value OFF.
- * @method void setForwardClientIp(string $ForwardClientIp) Set Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>If not specified, this field uses the default value OFF.
- * @method boolean getSessionPersist() Obtain Whether to enable session persistence. Values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
- * @method void setSessionPersist(boolean $SessionPersist) Set Whether to enable session persistence. Values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
+If not specified, the original value is retained.
+ * @method string getForwardClientIp() Obtain Pass the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Leave it blank to keep the original value.
+ * @method void setForwardClientIp(string $ForwardClientIp) Set Pass the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Leave it blank to keep the original value.
+ * @method boolean getSessionPersist() Obtain Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>If not specified, false.
+ * @method void setSessionPersist(boolean $SessionPersist) Set Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>If not specified, false.
  * @method integer getSessionPersistTime() Obtain Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
  * @method void setSessionPersistTime(integer $SessionPersistTime) Set Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
- * @method string getOriginPort() Obtain The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
- * @method void setOriginPort(string $OriginPort) Set The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
- * @method string getRuleTag() Obtain Rule tag. The original configuration will apply if it is not specified.
- * @method void setRuleTag(string $RuleTag) Set Rule tag. The original configuration will apply if it is not specified.
+ * @method string getOriginPort() Obtain Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
+ * @method void setOriginPort(string $OriginPort) Set Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
+ * @method string getRuleTag() Obtain Rule tag. If not specified, the original value is retained.
+ * @method void setRuleTag(string $RuleTag) Set Rule tag. If not specified, the original value is retained.
  */
 class ModifyApplicationProxyRuleRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var string The proxy ID.
+     * @var string Proxy ID.
      */
     public $ProxyId;
 
     /**
-     * @var string The rule ID.
+     * @var string Rule ID.
      */
     public $RuleId;
 
     /**
      * @var string Origin server type. Valid values:
-<li>custom: Manually added;</li>
-<li>origins: Origin server group.</li>
+<li>`custom`: Manually added;</li>
+<li>origins: origin server group.</li>
      */
     public $OriginType;
 
     /**
-     * @var array The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
+     * @var array Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
      */
     public $Port;
 
     /**
-     * @var string The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>The original configuration will apply if this field is not specified.
+     * @var string Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>Leave it blank to keep the original value.
      */
     public $Proto;
 
     /**
-     * @var array Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+     * @var array Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
 
-The original configuration will apply if this field is not specified.
+If not specified, the original value is retained.
      */
     public $OriginValue;
 
     /**
-     * @var string Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>If not specified, this field uses the default value OFF.
+     * @var string Pass the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Leave it blank to keep the original value.
      */
     public $ForwardClientIp;
 
     /**
-     * @var boolean Whether to enable session persistence. Values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
+     * @var boolean Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>If not specified, false.
      */
     public $SessionPersist;
 
@@ -150,48 +150,48 @@ The original configuration will apply if this field is not specified.
     public $SessionPersistTime;
 
     /**
-     * @var string The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
+     * @var string Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
      */
     public $OriginPort;
 
     /**
-     * @var string Rule tag. The original configuration will apply if it is not specified.
+     * @var string Rule tag. If not specified, the original value is retained.
      */
     public $RuleTag;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $ProxyId The proxy ID.
-     * @param string $RuleId The rule ID.
+     * @param string $ZoneId Site ID.
+     * @param string $ProxyId Proxy ID.
+     * @param string $RuleId Rule ID.
      * @param string $OriginType Origin server type. Valid values:
-<li>custom: Manually added;</li>
-<li>origins: Origin server group.</li>
-     * @param array $Port The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
-     * @param string $Proto The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>The original configuration will apply if this field is not specified.
-     * @param array $OriginValue Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+<li>`custom`: Manually added;</li>
+<li>origins: origin server group.</li>
+     * @param array $Port Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
+     * @param string $Proto Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>Leave it blank to keep the original value.
+     * @param array $OriginValue Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
 
-The original configuration will apply if this field is not specified.
-     * @param string $ForwardClientIp Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>If not specified, this field uses the default value OFF.
-     * @param boolean $SessionPersist Whether to enable session persistence. Values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
+If not specified, the original value is retained.
+     * @param string $ForwardClientIp Pass the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Leave it blank to keep the original value.
+     * @param boolean $SessionPersist Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>If not specified, false.
      * @param integer $SessionPersistTime Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
-     * @param string $OriginPort The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
-     * @param string $RuleTag Rule tag. The original configuration will apply if it is not specified.
+     * @param string $OriginPort Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
+     * @param string $RuleTag Rule tag. If not specified, the original value is retained.
      */
     function __construct()
     {

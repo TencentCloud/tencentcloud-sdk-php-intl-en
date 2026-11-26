@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOriginProtection request structure.
  *
- * @method array getZoneIds() Obtain Set of site IDs to be queried. This is a required parameter.
- * @method void setZoneIds(array $ZoneIds) Set Set of site IDs to be queried. This is a required parameter.
- * @method array getFilters() Obtain Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`need-update`:<br>   Whether <strong>the intermediate IP update is needed for the site</strong>.<br>   Type: String<br>   Required: No<br>   Values:<br>   `true`: Update needed.<br>   `false`: Update not needed.<br></li>
-<li>`plan-support`:<br>   Whether <strong>origin protection is supported in the plan</strong>.<br>   Type: String<br>   Required: No<br>   Values:<br>   `true`: Origin protection supported.<br>   `false`: Origin protection not supported.<br></li>
- * @method void setFilters(array $Filters) Set Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`need-update`:<br>   Whether <strong>the intermediate IP update is needed for the site</strong>.<br>   Type: String<br>   Required: No<br>   Values:<br>   `true`: Update needed.<br>   `false`: Update not needed.<br></li>
-<li>`plan-support`:<br>   Whether <strong>origin protection is supported in the plan</strong>.<br>   Type: String<br>   Required: No<br>   Values:<br>   `true`: Origin protection supported.<br>   `false`: Origin protection not supported.<br></li>
- * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0.
- * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0.
- * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 1000.
- * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20. Maximum value: 1000.
+ * @method array getZoneIds() Obtain Site ID set to be queried. This parameter is required.
+ * @method void setZoneIds(array $ZoneIds) Set Site ID set to be queried. This parameter is required.
+ * @method array getFilters() Obtain Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>need-update<br>        Filter by <strong>whether the site needs to update the origin protection IP allowlist</strong>.<br>       Type: String<br>       Required: No<br>       Option:<br>       true: needs to be updated<br>       false: no update required<br></li>
+<li>plan-support<br>   Filter by [<strong>whether the site package supports origin protection</strong>].<br>   Type: String<br>   Required: No<br>   Options:<br>   true: supported<br>   false: not supported<br></li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>need-update<br>        Filter by <strong>whether the site needs to update the origin protection IP allowlist</strong>.<br>       Type: String<br>       Required: No<br>       Option:<br>       true: needs to be updated<br>       false: no update required<br></li>
+<li>plan-support<br>   Filter by [<strong>whether the site package supports origin protection</strong>].<br>   Type: String<br>   Required: No<br>   Options:<br>   true: supported<br>   false: not supported<br></li>
+ * @method integer getOffset() Obtain Paginated query offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Paginated query offset. Default value: 0.
+ * @method integer getLimit() Obtain The limit of paginated query. Default value: 20. Maximum value: 1,000.
+ * @method void setLimit(integer $Limit) Set The limit of paginated query. Default value: 20. Maximum value: 1,000.
  */
 class DescribeOriginProtectionRequest extends AbstractModel
 {
     /**
-     * @var array Set of site IDs to be queried. This is a required parameter.
+     * @var array Site ID set to be queried. This parameter is required.
      */
     public $ZoneIds;
 
     /**
-     * @var array Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`need-update`:<br>   Whether <strong>the intermediate IP update is needed for the site</strong>.<br>   Type: String<br>   Required: No<br>   Values:<br>   `true`: Update needed.<br>   `false`: Update not needed.<br></li>
-<li>`plan-support`:<br>   Whether <strong>origin protection is supported in the plan</strong>.<br>   Type: String<br>   Required: No<br>   Values:<br>   `true`: Origin protection supported.<br>   `false`: Origin protection not supported.<br></li>
+     * @var array Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>need-update<br>        Filter by <strong>whether the site needs to update the origin protection IP allowlist</strong>.<br>       Type: String<br>       Required: No<br>       Option:<br>       true: needs to be updated<br>       false: no update required<br></li>
+<li>plan-support<br>   Filter by [<strong>whether the site package supports origin protection</strong>].<br>   Type: String<br>   Required: No<br>   Options:<br>   true: supported<br>   false: not supported<br></li>
      */
     public $Filters;
 
     /**
-     * @var integer Offset for paginated queries. Default value: 0.
+     * @var integer Paginated query offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Limit on paginated queries. Default value: 20. Maximum value: 1000.
+     * @var integer The limit of paginated query. Default value: 20. Maximum value: 1,000.
      */
     public $Limit;
 
     /**
-     * @param array $ZoneIds Set of site IDs to be queried. This is a required parameter.
-     * @param array $Filters Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`need-update`:<br>   Whether <strong>the intermediate IP update is needed for the site</strong>.<br>   Type: String<br>   Required: No<br>   Values:<br>   `true`: Update needed.<br>   `false`: Update not needed.<br></li>
-<li>`plan-support`:<br>   Whether <strong>origin protection is supported in the plan</strong>.<br>   Type: String<br>   Required: No<br>   Values:<br>   `true`: Origin protection supported.<br>   `false`: Origin protection not supported.<br></li>
-     * @param integer $Offset Offset for paginated queries. Default value: 0.
-     * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+     * @param array $ZoneIds Site ID set to be queried. This parameter is required.
+     * @param array $Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>need-update<br>        Filter by <strong>whether the site needs to update the origin protection IP allowlist</strong>.<br>       Type: String<br>       Required: No<br>       Option:<br>       true: needs to be updated<br>       false: no update required<br></li>
+<li>plan-support<br>   Filter by [<strong>whether the site package supports origin protection</strong>].<br>   Type: String<br>   Required: No<br>   Options:<br>   true: supported<br>   false: not supported<br></li>
+     * @param integer $Offset Paginated query offset. Default value: 0.
+     * @param integer $Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
      */
     function __construct()
     {

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAliasDomainStatus request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method boolean getPaused() Obtain Status of the alias domain name. Values:
-<li>`false`: Enable the alias domain name.</li>
-<li>`true`: Disable the alias domain name.</li>
- * @method void setPaused(boolean $Paused) Set Status of the alias domain name. Values:
-<li>`false`: Enable the alias domain name.</li>
-<li>`true`: Disable the alias domain name.</li>
- * @method array getAliasNames() Obtain The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
- * @method void setAliasNames(array $AliasNames) Set The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method boolean getPaused() Obtain Alias domain name status. Valid values:
+<li> false: enable alias domain name;</li>
+<li> true: Disable the alias domain name.</li>
+ * @method void setPaused(boolean $Paused) Set Alias domain name status. Valid values:
+<li> false: enable alias domain name;</li>
+<li> true: Disable the alias domain name.</li>
+ * @method array getAliasNames() Obtain Alias domain name in pending modification status. If it is empty, the modification status operation will not be performed.
+ * @method void setAliasNames(array $AliasNames) Set Alias domain name in pending modification status. If it is empty, the modification status operation will not be performed.
  */
 class ModifyAliasDomainStatusRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var boolean Status of the alias domain name. Values:
-<li>`false`: Enable the alias domain name.</li>
-<li>`true`: Disable the alias domain name.</li>
+     * @var boolean Alias domain name status. Valid values:
+<li> false: enable alias domain name;</li>
+<li> true: Disable the alias domain name.</li>
      */
     public $Paused;
 
     /**
-     * @var array The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
+     * @var array Alias domain name in pending modification status. If it is empty, the modification status operation will not be performed.
      */
     public $AliasNames;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param boolean $Paused Status of the alias domain name. Values:
-<li>`false`: Enable the alias domain name.</li>
-<li>`true`: Disable the alias domain name.</li>
-     * @param array $AliasNames The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
+     * @param string $ZoneId Zone ID.
+     * @param boolean $Paused Alias domain name status. Valid values:
+<li> false: enable alias domain name;</li>
+<li> true: Disable the alias domain name.</li>
+     * @param array $AliasNames Alias domain name in pending modification status. If it is empty, the modification status operation will not be performed.
      */
     function __construct()
     {

@@ -18,36 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Tag configuration
+ * Tag configuration.
  *
- * @method string getTagKey() Obtain The tag key.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTagKey(string $TagKey) Set The tag key.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTagValue() Obtain The tag value.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTagValue(string $TagValue) Set The tag value.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTagKey() Obtain Tag key.
+ * @method void setTagKey(string $TagKey) Set Tag key.
+ * @method string getTagValue() Obtain Tag value.
+ * @method void setTagValue(string $TagValue) Set Tag value.
  */
 class Tag extends AbstractModel
 {
     /**
-     * @var string The tag key.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Tag key.
      */
     public $TagKey;
 
     /**
-     * @var string The tag value.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Tag value.
      */
     public $TagValue;
 
     /**
-     * @param string $TagKey The tag key.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TagValue The tag value.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TagKey Tag key.
+     * @param string $TagValue Tag value.
      */
     function __construct()
     {

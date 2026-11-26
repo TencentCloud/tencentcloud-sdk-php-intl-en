@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrefetchOriginLimit request structure.
  *
- * @method string getZoneId() Obtain Specifies the site ID.
- * @method void setZoneId(string $ZoneId) Set Specifies the site ID.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
  * @method integer getOffset() Obtain Offset of paginated query. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset of paginated query. Default value: 0.
- * @method integer getLimit() Obtain Specifies the paginated query limit. default value: 20. upper limit: 100.
- * @method void setLimit(integer $Limit) Set Specifies the paginated query limit. default value: 20. upper limit: 100.
- * @method array getFilters() Obtain Filter condition. specifies the maximum number of Filters.Values is 20. detailed filter criteria:.
-<Li>Domain-Name: specifies domain filtering. the domain-name format is like www.qq.com. fuzzy queries are not supported.</li>.
-<li>area: specifies the acceleration region to filter by limit. fuzzy queries are not supported. valid values:<br> Overseas: global availability zone (excludes chinese mainland);<br> MainlandChina: chinese mainland availability zone.</li>.
- * @method void setFilters(array $Filters) Set Filter condition. specifies the maximum number of Filters.Values is 20. detailed filter criteria:.
-<Li>Domain-Name: specifies domain filtering. the domain-name format is like www.qq.com. fuzzy queries are not supported.</li>.
-<li>area: specifies the acceleration region to filter by limit. fuzzy queries are not supported. valid values:<br> Overseas: global availability zone (excludes chinese mainland);<br> MainlandChina: chinese mainland availability zone.</li>.
+ * @method integer getLimit() Obtain Number limit of paginated query. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number limit of paginated query. Default value: 20. Maximum value: 100.
+ * @method array getFilters() Obtain Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>domain-name: Filter by domain name. The domain-name format is like www.qq.com. Fuzzy queries are not supported.</li>
+<li>area: Filter by restricted acceleration region. Fuzzy queries are not supported. Options:<br> Overseas: Global availability zone (excluding Chinese mainland);<br> MainlandChina: Chinese mainland availability zone.</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>domain-name: Filter by domain name. The domain-name format is like www.qq.com. Fuzzy queries are not supported.</li>
+<li>area: Filter by restricted acceleration region. Fuzzy queries are not supported. Options:<br> Overseas: Global availability zone (excluding Chinese mainland);<br> MainlandChina: Chinese mainland availability zone.</li>
  */
 class DescribePrefetchOriginLimitRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the site ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
@@ -46,24 +46,24 @@ class DescribePrefetchOriginLimitRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Specifies the paginated query limit. default value: 20. upper limit: 100.
+     * @var integer Number limit of paginated query. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @var array Filter condition. specifies the maximum number of Filters.Values is 20. detailed filter criteria:.
-<Li>Domain-Name: specifies domain filtering. the domain-name format is like www.qq.com. fuzzy queries are not supported.</li>.
-<li>area: specifies the acceleration region to filter by limit. fuzzy queries are not supported. valid values:<br> Overseas: global availability zone (excludes chinese mainland);<br> MainlandChina: chinese mainland availability zone.</li>.
+     * @var array Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>domain-name: Filter by domain name. The domain-name format is like www.qq.com. Fuzzy queries are not supported.</li>
+<li>area: Filter by restricted acceleration region. Fuzzy queries are not supported. Options:<br> Overseas: Global availability zone (excluding Chinese mainland);<br> MainlandChina: Chinese mainland availability zone.</li>
      */
     public $Filters;
 
     /**
-     * @param string $ZoneId Specifies the site ID.
+     * @param string $ZoneId Site ID.
      * @param integer $Offset Offset of paginated query. Default value: 0.
-     * @param integer $Limit Specifies the paginated query limit. default value: 20. upper limit: 100.
-     * @param array $Filters Filter condition. specifies the maximum number of Filters.Values is 20. detailed filter criteria:.
-<Li>Domain-Name: specifies domain filtering. the domain-name format is like www.qq.com. fuzzy queries are not supported.</li>.
-<li>area: specifies the acceleration region to filter by limit. fuzzy queries are not supported. valid values:<br> Overseas: global availability zone (excludes chinese mainland);<br> MainlandChina: chinese mainland availability zone.</li>.
+     * @param integer $Limit Number limit of paginated query. Default value: 20. Maximum value: 100.
+     * @param array $Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>domain-name: Filter by domain name. The domain-name format is like www.qq.com. Fuzzy queries are not supported.</li>
+<li>area: Filter by restricted acceleration region. Fuzzy queries are not supported. Options:<br> Overseas: Global availability zone (excluding Chinese mainland);<br> MainlandChina: Chinese mainland availability zone.</li>
      */
     function __construct()
     {

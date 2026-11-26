@@ -26,11 +26,11 @@ If this field is not specified, the default value '1' will be used.
  * @method void setPeriod(integer $Period) Set Prepaid plan duration, unit: month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
 
 If this field is not specified, the default value '1' will be used.
- * @method string getRenewFlag() Obtain The auto-renewal flag for prepaid plan has the following values:
+ * @method string getRenewFlag() Obtain Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
 If this field is not specified, the default value 'off' will be used. When auto-renewal is enabled, it defaults to renewing for one month.
- * @method void setRenewFlag(string $RenewFlag) Set The auto-renewal flag for prepaid plan has the following values:
+ * @method void setRenewFlag(string $RenewFlag) Set Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
 If this field is not specified, the default value 'off' will be used. When auto-renewal is enabled, it defaults to renewing for one month.
@@ -45,7 +45,7 @@ If this field is not specified, the default value '1' will be used.
     public $Period;
 
     /**
-     * @var string The auto-renewal flag for prepaid plan has the following values:
+     * @var string Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
 If this field is not specified, the default value 'off' will be used. When auto-renewal is enabled, it defaults to renewing for one month.
@@ -56,7 +56,7 @@ If this field is not specified, the default value 'off' will be used. When auto-
      * @param integer $Period Prepaid plan duration, unit: month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
 
 If this field is not specified, the default value '1' will be used.
-     * @param string $RenewFlag The auto-renewal flag for prepaid plan has the following values:
+     * @param string $RenewFlag Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
 If this field is not specified, the default value 'off' will be used. When auto-renewal is enabled, it defaults to renewing for one month.

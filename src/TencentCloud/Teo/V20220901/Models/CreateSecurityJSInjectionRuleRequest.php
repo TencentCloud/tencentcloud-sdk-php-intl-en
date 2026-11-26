@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSecurityJSInjectionRule request structure.
  *
- * @method string getZoneId() Obtain Zone ID.		
- * @method void setZoneId(string $ZoneId) Set Zone ID.		
- * @method array getJSInjectionRules() Obtain JavaScript injection rule list.
- * @method void setJSInjectionRules(array $JSInjectionRules) Set JavaScript injection rule list.
+ * @method string getZoneId() Obtain Zone ID.	
+ * @method void setZoneId(string $ZoneId) Set Zone ID.	
+ * @method array getJSInjectionRules() Obtain List of JavaScript injection rules.
+ * @method void setJSInjectionRules(array $JSInjectionRules) Set List of JavaScript injection rules.
  */
 class CreateSecurityJSInjectionRuleRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID.		
+     * @var string Zone ID.	
      */
     public $ZoneId;
 
     /**
-     * @var array JavaScript injection rule list.
+     * @var array List of JavaScript injection rules.
      */
     public $JSInjectionRules;
 
     /**
-     * @param string $ZoneId Zone ID.		
-     * @param array $JSInjectionRules JavaScript injection rule list.
+     * @param string $ZoneId Zone ID.	
+     * @param array $JSInjectionRules List of JavaScript injection rules.
      */
     function __construct()
     {

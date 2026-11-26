@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * N/A
+ * None
  *
- * @method string getSwitch() Obtain Whether to enable WAF. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable WAF. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method integer getPolicyId() Obtain ID of the policy
- * @method void setPolicyId(integer $PolicyId) Set ID of the policy
+ * @method string getSwitch() Obtain Waf switch. Value:
+<li>`on`: Enable;</li>
+<li> off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Waf switch. Value:
+<li>`on`: Enable;</li>
+<li> off: Disable.</li>
+ * @method integer getPolicyId() Obtain Policy ID.
+ * @method void setPolicyId(integer $PolicyId) Set Policy ID.
  */
 class Waf extends AbstractModel
 {
     /**
-     * @var string Whether to enable WAF. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Waf switch. Value:
+<li>`on`: Enable;</li>
+<li> off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var integer ID of the policy
+     * @var integer Policy ID.
      */
     public $PolicyId;
 
     /**
-     * @param string $Switch Whether to enable WAF. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param integer $PolicyId ID of the policy
+     * @param string $Switch Waf switch. Value:
+<li>`on`: Enable;</li>
+<li> off: Disable.</li>
+     * @param integer $PolicyId Policy ID.
      */
     function __construct()
     {

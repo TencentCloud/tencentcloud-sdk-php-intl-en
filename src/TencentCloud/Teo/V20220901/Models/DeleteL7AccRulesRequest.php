@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteL7AccRules request structure.
  *
- * @method string getZoneId() Obtain Zone id.
- * @method void setZoneId(string $ZoneId) Set Zone id.
- * @method array getRuleIds() Obtain List of rule ids to be deleted. you can obtain ruleid through describel7accrules.
- * @method void setRuleIds(array $RuleIds) Set List of rule ids to be deleted. you can obtain ruleid through describel7accrules.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method array getRuleIds() Obtain List of rule IDs to delete. You can get the rule ID through DescribeL7AccRules.
+ * @method void setRuleIds(array $RuleIds) Set List of rule IDs to delete. You can get the rule ID through DescribeL7AccRules.
  */
 class DeleteL7AccRulesRequest extends AbstractModel
 {
     /**
-     * @var string Zone id.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var array List of rule ids to be deleted. you can obtain ruleid through describel7accrules.
+     * @var array List of rule IDs to delete. You can get the rule ID through DescribeL7AccRules.
      */
     public $RuleIds;
 
     /**
-     * @param string $ZoneId Zone id.
-     * @param array $RuleIds List of rule ids to be deleted. you can obtain ruleid through describel7accrules.
+     * @param string $ZoneId Zone ID.
+     * @param array $RuleIds List of rule IDs to delete. You can get the rule ID through DescribeL7AccRules.
      */
     function __construct()
     {

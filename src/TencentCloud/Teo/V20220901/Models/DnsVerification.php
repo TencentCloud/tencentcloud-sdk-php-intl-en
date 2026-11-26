@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information required for DNS resolution verification when applying for a free certificate in CNAME mode integration to verify ownership of a site or domain name.
+ * Information required to verify ownership or domain name for site CNAME mode integration or free certificate application using DNS resolution.
  *
- * @method string getSubdomain() Obtain The host record.
- * @method void setSubdomain(string $Subdomain) Set The host record.
- * @method string getRecordType() Obtain The record type.
- * @method void setRecordType(string $RecordType) Set The record type.
- * @method string getRecordValue() Obtain The record value.
- * @method void setRecordValue(string $RecordValue) Set The record value.
+ * @method string getSubdomain() Obtain Host record.
+ * @method void setSubdomain(string $Subdomain) Set Host record.
+ * @method string getRecordType() Obtain Record type.
+ * @method void setRecordType(string $RecordType) Set Record type.
+ * @method string getRecordValue() Obtain Record value.
+ * @method void setRecordValue(string $RecordValue) Set Record value.
  */
 class DnsVerification extends AbstractModel
 {
     /**
-     * @var string The host record.
+     * @var string Host record.
      */
     public $Subdomain;
 
     /**
-     * @var string The record type.
+     * @var string Record type.
      */
     public $RecordType;
 
     /**
-     * @var string The record value.
+     * @var string Record value.
      */
     public $RecordValue;
 
     /**
-     * @param string $Subdomain The host record.
-     * @param string $RecordType The record type.
-     * @param string $RecordValue The record value.
+     * @param string $Subdomain Host record.
+     * @param string $RecordType Record type.
+     * @param string $RecordValue Record value.
      */
     function __construct()
     {

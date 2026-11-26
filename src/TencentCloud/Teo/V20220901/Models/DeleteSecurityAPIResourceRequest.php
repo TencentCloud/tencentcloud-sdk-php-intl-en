@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSecurityAPIResource request structure.
  *
- * @method string getZoneId() Obtain Zone ID.		
- * @method void setZoneId(string $ZoneId) Set Zone ID.		
- * @method array getAPIResourceIds() Obtain Specifies the ID list of API resources to be deleted.
- * @method void setAPIResourceIds(array $APIResourceIds) Set Specifies the ID list of API resources to be deleted.
+ * @method string getZoneId() Obtain Zone ID.	
+ * @method void setZoneId(string $ZoneId) Set Zone ID.	
+ * @method array getAPIResourceIds() Obtain List of API resource IDs to delete.
+ * @method void setAPIResourceIds(array $APIResourceIds) Set List of API resource IDs to delete.
  */
 class DeleteSecurityAPIResourceRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID.		
+     * @var string Zone ID.	
      */
     public $ZoneId;
 
     /**
-     * @var array Specifies the ID list of API resources to be deleted.
+     * @var array List of API resource IDs to delete.
      */
     public $APIResourceIds;
 
     /**
-     * @param string $ZoneId Zone ID.		
-     * @param array $APIResourceIds Specifies the ID list of API resources to be deleted.
+     * @param string $ZoneId Zone ID.	
+     * @param array $APIResourceIds List of API resource IDs to delete.
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Edge function component binding configuration is used to create a relationship between edge functions and components (such as KV namespace). Through bind configuration, function code can access bound resources at runtime via the specified variable name.
+ * Bind configuration of the edge function component, used to establish the relationship between edge functions and components (such as KV namespaces). With bind configuration, edge function code can access bound resources at runtime through the specified variable name.
  *
  * @method string getType() Obtain Bound component type. Valid values:
 <li>kv_namespace: KV namespace.</li>
@@ -26,20 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Bound component type. Valid values:
 <li>kv_namespace: KV namespace.</li>
 
- * @method string getVariableName() Obtain Variable name for binding. Limited to 1-50 characters. Allowed characters are letters, digits, and underscores. Digits cannot be at the beginning. Access the bound component via this variable name in the edge function code. Based on the Type value, the usage is as follows:
-<li>When Type is kv_namespace: In code, you can access the KV namespace through the variable name, for example, when setting it to "MY_KV", you can perform read-write operations via MY_KV.get("key").</li>
+ * @method string getVariableName() Obtain Variable name for binding. It can contain 1-50 characters, including letters, digits, and underscores. It cannot start with a digit. In edge function code, access the bound component through this variable name. Usage varies based on the value of Type as follows:
+<li>When Type is kv_namespace: In code, you can access the KV namespace through this variable name. For example, when setting it to "MY_KV", you can perform read-write operations through MY_KV.get("key").</li>
 
- * @method void setVariableName(string $VariableName) Set Variable name for binding. Limited to 1-50 characters. Allowed characters are letters, digits, and underscores. Digits cannot be at the beginning. Access the bound component via this variable name in the edge function code. Based on the Type value, the usage is as follows:
-<li>When Type is kv_namespace: In code, you can access the KV namespace through the variable name, for example, when setting it to "MY_KV", you can perform read-write operations via MY_KV.get("key").</li>
+ * @method void setVariableName(string $VariableName) Set Variable name for binding. It can contain 1-50 characters, including letters, digits, and underscores. It cannot start with a digit. In edge function code, access the bound component through this variable name. Usage varies based on the value of Type as follows:
+<li>When Type is kv_namespace: In code, you can access the KV namespace through this variable name. For example, when setting it to "MY_KV", you can perform read-write operations through MY_KV.get("key").</li>
 
- * @method KVNamespaceParameters getKVNamespaceParameters() Obtain KV namespace configuration parameter. Used for designated binding namespace details. Required when Type is kv_namespace.
-
-
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setKVNamespaceParameters(KVNamespaceParameters $KVNamespaceParameters) Set KV namespace configuration parameter. Used for designated binding namespace details. Required when Type is kv_namespace.
+ * @method KVNamespaceParameters getKVNamespaceParameters() Obtain KV namespace configuration parameter. Used to specify the bound KV namespace details. Required when Type is kv_namespace.
 
 
-Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setKVNamespaceParameters(KVNamespaceParameters $KVNamespaceParameters) Set KV namespace configuration parameter. Used to specify the bound KV namespace details. Required when Type is kv_namespace.
  */
 class FunctionComponentBinding extends AbstractModel
 {
@@ -51,17 +47,16 @@ class FunctionComponentBinding extends AbstractModel
     public $Type;
 
     /**
-     * @var string Variable name for binding. Limited to 1-50 characters. Allowed characters are letters, digits, and underscores. Digits cannot be at the beginning. Access the bound component via this variable name in the edge function code. Based on the Type value, the usage is as follows:
-<li>When Type is kv_namespace: In code, you can access the KV namespace through the variable name, for example, when setting it to "MY_KV", you can perform read-write operations via MY_KV.get("key").</li>
+     * @var string Variable name for binding. It can contain 1-50 characters, including letters, digits, and underscores. It cannot start with a digit. In edge function code, access the bound component through this variable name. Usage varies based on the value of Type as follows:
+<li>When Type is kv_namespace: In code, you can access the KV namespace through this variable name. For example, when setting it to "MY_KV", you can perform read-write operations through MY_KV.get("key").</li>
 
      */
     public $VariableName;
 
     /**
-     * @var KVNamespaceParameters KV namespace configuration parameter. Used for designated binding namespace details. Required when Type is kv_namespace.
+     * @var KVNamespaceParameters KV namespace configuration parameter. Used to specify the bound KV namespace details. Required when Type is kv_namespace.
 
 
-Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public $KVNamespaceParameters;
 
@@ -69,13 +64,10 @@ Note: This field may return null, which indicates a failure to obtain a valid va
      * @param string $Type Bound component type. Valid values:
 <li>kv_namespace: KV namespace.</li>
 
-     * @param string $VariableName Variable name for binding. Limited to 1-50 characters. Allowed characters are letters, digits, and underscores. Digits cannot be at the beginning. Access the bound component via this variable name in the edge function code. Based on the Type value, the usage is as follows:
-<li>When Type is kv_namespace: In code, you can access the KV namespace through the variable name, for example, when setting it to "MY_KV", you can perform read-write operations via MY_KV.get("key").</li>
+     * @param string $VariableName Variable name for binding. It can contain 1-50 characters, including letters, digits, and underscores. It cannot start with a digit. In edge function code, access the bound component through this variable name. Usage varies based on the value of Type as follows:
+<li>When Type is kv_namespace: In code, you can access the KV namespace through this variable name. For example, when setting it to "MY_KV", you can perform read-write operations through MY_KV.get("key").</li>
 
-     * @param KVNamespaceParameters $KVNamespaceParameters KV namespace configuration parameter. Used for designated binding namespace details. Required when Type is kv_namespace.
-
-
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param KVNamespaceParameters $KVNamespaceParameters KV namespace configuration parameter. Used to specify the bound KV namespace details. Required when Type is kv_namespace.
      */
     function __construct()
     {

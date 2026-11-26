@@ -18,48 +18,48 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Describes the currently effective IP range for origin servers.
+ * Currently effective origin-pull IP range.
  *
- * @method Addresses getEntireAddresses() Obtain Describes the IP range details for origin servers.
- * @method void setEntireAddresses(Addresses $EntireAddresses) Set Describes the IP range details for origin servers.
- * @method integer getVersion() Obtain Specifies the version number.
- * @method void setVersion(integer $Version) Set Specifies the version number.
- * @method string getIsPlaned() Obtain This parameter records whether "i have updated to the latest origin IP range" is completed before taking effect. valid values:.
-<li>true: confirms the update to the latest origin IP is completed.</li>.
-<li>false: indicates the update to the latest origin IP is not completed.</li>.
-Note: when false is returned for this parameter, please confirm in time whether your origin server firewall configuration has been updated to the latest IP range to avoid origin-pull failure.
- * @method void setIsPlaned(string $IsPlaned) Set This parameter records whether "i have updated to the latest origin IP range" is completed before taking effect. valid values:.
-<li>true: confirms the update to the latest origin IP is completed.</li>.
-<li>false: indicates the update to the latest origin IP is not completed.</li>.
-Note: when false is returned for this parameter, please confirm in time whether your origin server firewall configuration has been updated to the latest IP range to avoid origin-pull failure.
+ * @method Addresses getEntireAddresses() Obtain Origin-pull IP range details.
+ * @method void setEntireAddresses(Addresses $EntireAddresses) Set Origin-pull IP range details.
+ * @method integer getVersion() Obtain Version.
+ * @method void setVersion(integer $Version) Set Version.
+ * @method string getIsPlaned() Obtain This parameter is used to record whether the confirmation of "I have updated to the latest origin-pull IP range" is completed before the current version takes effect. Valid values:
+<li>true: The confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: The confirmation of updating to the latest origin-pull IP is not completed;</li>
+Note: When this parameter returns false, confirm in time whether your origin server firewall settings are updated to the latest origin-pull IP range to avoid origin-pull failure.
+ * @method void setIsPlaned(string $IsPlaned) Set This parameter is used to record whether the confirmation of "I have updated to the latest origin-pull IP range" is completed before the current version takes effect. Valid values:
+<li>true: The confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: The confirmation of updating to the latest origin-pull IP is not completed;</li>
+Note: When this parameter returns false, confirm in time whether your origin server firewall settings are updated to the latest origin-pull IP range to avoid origin-pull failure.
  */
 class MultiPathGatewayCurrentOriginACL extends AbstractModel
 {
     /**
-     * @var Addresses Describes the IP range details for origin servers.
+     * @var Addresses Origin-pull IP range details.
      */
     public $EntireAddresses;
 
     /**
-     * @var integer Specifies the version number.
+     * @var integer Version.
      */
     public $Version;
 
     /**
-     * @var string This parameter records whether "i have updated to the latest origin IP range" is completed before taking effect. valid values:.
-<li>true: confirms the update to the latest origin IP is completed.</li>.
-<li>false: indicates the update to the latest origin IP is not completed.</li>.
-Note: when false is returned for this parameter, please confirm in time whether your origin server firewall configuration has been updated to the latest IP range to avoid origin-pull failure.
+     * @var string This parameter is used to record whether the confirmation of "I have updated to the latest origin-pull IP range" is completed before the current version takes effect. Valid values:
+<li>true: The confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: The confirmation of updating to the latest origin-pull IP is not completed;</li>
+Note: When this parameter returns false, confirm in time whether your origin server firewall settings are updated to the latest origin-pull IP range to avoid origin-pull failure.
      */
     public $IsPlaned;
 
     /**
-     * @param Addresses $EntireAddresses Describes the IP range details for origin servers.
-     * @param integer $Version Specifies the version number.
-     * @param string $IsPlaned This parameter records whether "i have updated to the latest origin IP range" is completed before taking effect. valid values:.
-<li>true: confirms the update to the latest origin IP is completed.</li>.
-<li>false: indicates the update to the latest origin IP is not completed.</li>.
-Note: when false is returned for this parameter, please confirm in time whether your origin server firewall configuration has been updated to the latest IP range to avoid origin-pull failure.
+     * @param Addresses $EntireAddresses Origin-pull IP range details.
+     * @param integer $Version Version.
+     * @param string $IsPlaned This parameter is used to record whether the confirmation of "I have updated to the latest origin-pull IP range" is completed before the current version takes effect. Valid values:
+<li>true: The confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: The confirmation of updating to the latest origin-pull IP is not completed;</li>
+Note: When this parameter returns false, confirm in time whether your origin server firewall settings are updated to the latest origin-pull IP range to avoid origin-pull failure.
      */
     function __construct()
     {

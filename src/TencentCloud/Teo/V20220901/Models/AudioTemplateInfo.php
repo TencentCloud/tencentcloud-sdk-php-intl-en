@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio stream configuration parameters.
  *
- * @method string getCodec() Obtain Encoding format for audio streams. optional values:.
+ * @method string getCodec() Obtain Audio stream encoding format. Optional values:
 <li>libfdk_aac.</li>
- * @method void setCodec(string $Codec) Set Encoding format for audio streams. optional values:.
+ * @method void setCodec(string $Codec) Set Audio stream encoding format. Optional values:
 <li>libfdk_aac.</li>
- * @method integer getAudioChannel() Obtain Audio channel quantity. valid values: <li>2: dual-channel.</li> default value: 2.
- * @method void setAudioChannel(integer $AudioChannel) Set Audio channel quantity. valid values: <li>2: dual-channel.</li> default value: 2.
+ * @method integer getAudioChannel() Obtain Audio channel quantity. Available values: <li>2: dual-channel.</li>Default value: 2.
+ * @method void setAudioChannel(integer $AudioChannel) Set Audio channel quantity. Available values: <li>2: dual-channel.</li>Default value: 2.
  */
 class AudioTemplateInfo extends AbstractModel
 {
     /**
-     * @var string Encoding format for audio streams. optional values:.
+     * @var string Audio stream encoding format. Optional values:
 <li>libfdk_aac.</li>
      */
     public $Codec;
 
     /**
-     * @var integer Audio channel quantity. valid values: <li>2: dual-channel.</li> default value: 2.
+     * @var integer Audio channel quantity. Available values: <li>2: dual-channel.</li>Default value: 2.
      */
     public $AudioChannel;
 
     /**
-     * @param string $Codec Encoding format for audio streams. optional values:.
+     * @param string $Codec Audio stream encoding format. Optional values:
 <li>libfdk_aac.</li>
-     * @param integer $AudioChannel Audio channel quantity. valid values: <li>2: dual-channel.</li> default value: 2.
+     * @param integer $AudioChannel Audio channel quantity. Available values: <li>2: dual-channel.</li>Default value: 2.
      */
     function __construct()
     {

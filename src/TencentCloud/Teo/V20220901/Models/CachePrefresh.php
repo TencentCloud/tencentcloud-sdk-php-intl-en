@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cache prefresh
+ * Cache pre-refresh
  *
- * @method string getSwitch() Obtain Whether to enable cache prefresh. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable cache prefresh. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method integer getPercent() Obtain Cache pre-refresh percentage. value range: 1-99.
- * @method void setPercent(integer $Percent) Set Cache pre-refresh percentage. value range: 1-99.
+ * @method string getSwitch() Obtain Cache pre-refresh configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Cache pre-refresh configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method integer getPercent() Obtain Cache pre-refresh percentage. Value range: 1-99.
+ * @method void setPercent(integer $Percent) Set Cache pre-refresh percentage. Value range: 1-99.
  */
 class CachePrefresh extends AbstractModel
 {
     /**
-     * @var string Whether to enable cache prefresh. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Cache pre-refresh configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var integer Cache pre-refresh percentage. value range: 1-99.
+     * @var integer Cache pre-refresh percentage. Value range: 1-99.
      */
     public $Percent;
 
     /**
-     * @param string $Switch Whether to enable cache prefresh. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param integer $Percent Cache pre-refresh percentage. value range: 1-99.
+     * @param string $Switch Cache pre-refresh configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param integer $Percent Cache pre-refresh percentage. Value range: 1-99.
      */
     function __construct()
     {

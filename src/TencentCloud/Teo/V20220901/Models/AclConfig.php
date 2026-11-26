@@ -18,44 +18,44 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ACL configuration
+ * ACL configurations.
  *
- * @method string getSwitch() Obtain Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method array getAclUserRules() Obtain The custom rule.
- * @method void setAclUserRules(array $AclUserRules) Set The custom rule.
- * @method array getCustomizes() Obtain Managed custom rules.
- * @method void setCustomizes(array $Customizes) Set Managed custom rules.
+ * @method string getSwitch() Obtain Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+ * @method array getAclUserRules() Obtain User-defined rules.
+ * @method void setAclUserRules(array $AclUserRules) Set User-defined rules.
+ * @method array getCustomizes() Obtain Managed custom rule
+ * @method void setCustomizes(array $Customizes) Set Managed custom rule
  */
 class AclConfig extends AbstractModel
 {
     /**
-     * @var string Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var array The custom rule.
+     * @var array User-defined rules.
      */
     public $AclUserRules;
 
     /**
-     * @var array Managed custom rules.
+     * @var array Managed custom rule
      */
     public $Customizes;
 
     /**
-     * @param string $Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param array $AclUserRules The custom rule.
-     * @param array $Customizes Managed custom rules.
+     * @param string $Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param array $AclUserRules User-defined rules.
+     * @param array $Customizes Managed custom rule
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Site ID, used to specify the scope of the queried site.
  * @method void setZoneId(string $ZoneId) Set Site ID, used to specify the scope of the queried site.
- * @method array getGroupIds() Obtain Specifies the security ip group id. <li>when this parameter is provided, only the configuration of the specified security ip group id is queried;</li> <li>when this parameter is not provided, information of all security ip groups under the site is returned.</li>.
- * @method void setGroupIds(array $GroupIds) Set Specifies the security ip group id. <li>when this parameter is provided, only the configuration of the specified security ip group id is queried;</li> <li>when this parameter is not provided, information of all security ip groups under the site is returned.</li>.
+ * @method array getGroupIds() Obtain Specify security IP group ID. <li>When this parameter is provided, only the configuration of the security IP group with the specified ID is queried;</li> <li>When no parameter is passed, information of all security IP groups under the site is returned.</li>
+ * @method void setGroupIds(array $GroupIds) Set Specify security IP group ID. <li>When this parameter is provided, only the configuration of the security IP group with the specified ID is queried;</li> <li>When no parameter is passed, information of all security IP groups under the site is returned.</li>
  */
 class DescribeSecurityIPGroupRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeSecurityIPGroupRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array Specifies the security ip group id. <li>when this parameter is provided, only the configuration of the specified security ip group id is queried;</li> <li>when this parameter is not provided, information of all security ip groups under the site is returned.</li>.
+     * @var array Specify security IP group ID. <li>When this parameter is provided, only the configuration of the security IP group with the specified ID is queried;</li> <li>When no parameter is passed, information of all security IP groups under the site is returned.</li>
      */
     public $GroupIds;
 
     /**
      * @param string $ZoneId Site ID, used to specify the scope of the queried site.
-     * @param array $GroupIds Specifies the security ip group id. <li>when this parameter is provided, only the configuration of the specified security ip group id is queried;</li> <li>when this parameter is not provided, information of all security ip groups under the site is returned.</li>.
+     * @param array $GroupIds Specify security IP group ID. <li>When this parameter is provided, only the configuration of the security IP group with the specified ID is queried;</li> <li>When no parameter is passed, information of all security IP groups under the site is returned.</li>
      */
     function __construct()
     {

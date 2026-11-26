@@ -18,38 +18,38 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HTTPS server certificate configuration.
+ * https certificate configuration.
  *
  * @method string getCertId() Obtain Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
  * @method void setCertId(string $CertId) Set Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
- * @method string getAlias() Obtain Alias of the certificate.
- * @method void setAlias(string $Alias) Set Alias of the certificate.
- * @method string getType() Obtain Type of the certificate. Values:
-<li>`default`: Default certificate</li>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
- * @method void setType(string $Type) Set Type of the certificate. Values:
-<li>`default`: Default certificate</li>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
- * @method string getExpireTime() Obtain The certificate expiration time.
- * @method void setExpireTime(string $ExpireTime) Set The certificate expiration time.
- * @method string getDeployTime() Obtain Time when the certificate is deployed.
- * @method void setDeployTime(string $DeployTime) Set Time when the certificate is deployed.
+ * @method string getAlias() Obtain Certificate remark name.
+ * @method void setAlias(string $Alias) Set Certificate remark name.
+ * @method string getType() Obtain Certificate type. Valid values:
+<li>default: default certificate;</li>
+<li>upload: user upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
+ * @method void setType(string $Type) Set Certificate type. Valid values:
+<li>default: default certificate;</li>
+<li>upload: user upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
+ * @method string getExpireTime() Obtain Certificate expiration time.
+ * @method void setExpireTime(string $ExpireTime) Set Certificate expiration time.
+ * @method string getDeployTime() Obtain Deployment time of the certificate.
+ * @method void setDeployTime(string $DeployTime) Set Deployment time of the certificate.
  * @method string getSignAlgo() Obtain Signature algorithm.
  * @method void setSignAlgo(string $SignAlgo) Set Signature algorithm.
- * @method string getStatus() Obtain Status of the certificate. Values:
-u200c<li>`deployed`: The deployment has completed</li>
-u200c<li>`processing`: Deployment in progress</li>
-u200c<li>`applying`: Application in progress</li>
-u200c<li>`failed`: Application rejected</li>
-<li>`issued`: Binding failed.</li>
- * @method void setStatus(string $Status) Set Status of the certificate. Values:
-u200c<li>`deployed`: The deployment has completed</li>
-u200c<li>`processing`: Deployment in progress</li>
-u200c<li>`applying`: Application in progress</li>
-u200c<li>`failed`: Application rejected</li>
-<li>`issued`: Binding failed.</li>
+ * @method string getStatus() Obtain Certificate status. Valid values:
+<li>deployed: Deployed;</li>
+<li>processing: deploying;</li>
+<li>applying: application in progress.</li>
+<li>failed: Application failed;</li>
+<li>issued: failed to bind.</li>
+ * @method void setStatus(string $Status) Set Certificate status. Valid values:
+<li>deployed: Deployed;</li>
+<li>processing: deploying;</li>
+<li>applying: application in progress.</li>
+<li>failed: Application failed;</li>
+<li>issued: failed to bind.</li>
  */
 class CertificateInfo extends AbstractModel
 {
@@ -59,25 +59,25 @@ class CertificateInfo extends AbstractModel
     public $CertId;
 
     /**
-     * @var string Alias of the certificate.
+     * @var string Certificate remark name.
      */
     public $Alias;
 
     /**
-     * @var string Type of the certificate. Values:
-<li>`default`: Default certificate</li>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
+     * @var string Certificate type. Valid values:
+<li>default: default certificate;</li>
+<li>upload: user upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
      */
     public $Type;
 
     /**
-     * @var string The certificate expiration time.
+     * @var string Certificate expiration time.
      */
     public $ExpireTime;
 
     /**
-     * @var string Time when the certificate is deployed.
+     * @var string Deployment time of the certificate.
      */
     public $DeployTime;
 
@@ -87,31 +87,31 @@ class CertificateInfo extends AbstractModel
     public $SignAlgo;
 
     /**
-     * @var string Status of the certificate. Values:
-u200c<li>`deployed`: The deployment has completed</li>
-u200c<li>`processing`: Deployment in progress</li>
-u200c<li>`applying`: Application in progress</li>
-u200c<li>`failed`: Application rejected</li>
-<li>`issued`: Binding failed.</li>
+     * @var string Certificate status. Valid values:
+<li>deployed: Deployed;</li>
+<li>processing: deploying;</li>
+<li>applying: application in progress.</li>
+<li>failed: Application failed;</li>
+<li>issued: failed to bind.</li>
      */
     public $Status;
 
     /**
      * @param string $CertId Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
-     * @param string $Alias Alias of the certificate.
-     * @param string $Type Type of the certificate. Values:
-<li>`default`: Default certificate</li>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-     * @param string $ExpireTime The certificate expiration time.
-     * @param string $DeployTime Time when the certificate is deployed.
+     * @param string $Alias Certificate remark name.
+     * @param string $Type Certificate type. Valid values:
+<li>default: default certificate;</li>
+<li>upload: user upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
+     * @param string $ExpireTime Certificate expiration time.
+     * @param string $DeployTime Deployment time of the certificate.
      * @param string $SignAlgo Signature algorithm.
-     * @param string $Status Status of the certificate. Values:
-u200c<li>`deployed`: The deployment has completed</li>
-u200c<li>`processing`: Deployment in progress</li>
-u200c<li>`applying`: Application in progress</li>
-u200c<li>`failed`: Application rejected</li>
-<li>`issued`: Binding failed.</li>
+     * @param string $Status Certificate status. Valid values:
+<li>deployed: Deployed;</li>
+<li>processing: deploying;</li>
+<li>applying: application in progress.</li>
+<li>failed: Application failed;</li>
+<li>issued: failed to bind.</li>
      */
     function __construct()
     {

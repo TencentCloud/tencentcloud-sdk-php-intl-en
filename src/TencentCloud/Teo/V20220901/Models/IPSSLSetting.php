@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IP SSL configuration message
  *
- * @method string getOperation() Obtain Operation type, values as follows: <li>bind: bind</li> <li>unbind: unbind</li>
- * @method void setOperation(string $Operation) Set Operation type, values as follows: <li>bind: bind</li> <li>unbind: unbind</li>
+ * @method string getOperation() Obtain Operation type. Values are as follows: <li>bind: Bind</li> <li>unbind: Unbind</li>
+ * @method void setOperation(string $Operation) Set Operation type. Values are as follows: <li>bind: Bind</li> <li>unbind: Unbind</li>
  * @method string getAssociatedDomain() Obtain Domain name of the IP SSL that should be bound.
  * @method void setAssociatedDomain(string $AssociatedDomain) Set Domain name of the IP SSL that should be bound.
  */
 class IPSSLSetting extends AbstractModel
 {
     /**
-     * @var string Operation type, values as follows: <li>bind: bind</li> <li>unbind: unbind</li>
+     * @var string Operation type. Values are as follows: <li>bind: Bind</li> <li>unbind: Unbind</li>
      */
     public $Operation;
 
@@ -38,7 +38,7 @@ class IPSSLSetting extends AbstractModel
     public $AssociatedDomain;
 
     /**
-     * @param string $Operation Operation type, values as follows: <li>bind: bind</li> <li>unbind: unbind</li>
+     * @param string $Operation Operation type. Values are as follows: <li>bind: Bind</li> <li>unbind: Unbind</li>
      * @param string $AssociatedDomain Domain name of the IP SSL that should be bound.
      */
     function __construct()

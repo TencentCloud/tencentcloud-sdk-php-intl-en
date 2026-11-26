@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImportZoneConfig request structure.
  *
- * @method string getZoneId() Obtain <p>Site ID.</p>
- * @method void setZoneId(string $ZoneId) Set <p>Site ID.</p>
- * @method string getContent() Obtain <p>Configuration content to be imported. Use JSON format and encode by UTF-8. You can obtain the configuration content through the site configuration export interface (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine". Just pass in the corresponding fields. For specific details, see the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin configuration) exported by ExportZoneConfig are temporary not supported for import through this interface. If the Content contains the above configuration content, it will cause import failure.</p>
- * @method void setContent(string $Content) Set <p>Configuration content to be imported. Use JSON format and encode by UTF-8. You can obtain the configuration content through the site configuration export interface (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine". Just pass in the corresponding fields. For specific details, see the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin configuration) exported by ExportZoneConfig are temporary not supported for import through this interface. If the Content contains the above configuration content, it will cause import failure.</p>
+ * @method string getZoneId() Obtain <p>Zone ID.</p>
+ * @method void setZoneId(string $ZoneId) Set <p>Zone ID.</p>
+ * @method string getContent() Obtain <p>Configuration content to be imported. It must be in JSON format and encoded in UTF-8. You can obtain the configuration content through the site configuration export API (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine" by passing in the corresponding fields. For details, refer to the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin server configuration) exported by ExportZoneConfig are not currently supported for import through this interface. If Content contains the above configuration content, the import will fail.</p>
+ * @method void setContent(string $Content) Set <p>Configuration content to be imported. It must be in JSON format and encoded in UTF-8. You can obtain the configuration content through the site configuration export API (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine" by passing in the corresponding fields. For details, refer to the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin server configuration) exported by ExportZoneConfig are not currently supported for import through this interface. If Content contains the above configuration content, the import will fail.</p>
  */
 class ImportZoneConfigRequest extends AbstractModel
 {
     /**
-     * @var string <p>Site ID.</p>
+     * @var string <p>Zone ID.</p>
      */
     public $ZoneId;
 
     /**
-     * @var string <p>Configuration content to be imported. Use JSON format and encode by UTF-8. You can obtain the configuration content through the site configuration export interface (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine". Just pass in the corresponding fields. For specific details, see the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin configuration) exported by ExportZoneConfig are temporary not supported for import through this interface. If the Content contains the above configuration content, it will cause import failure.</p>
+     * @var string <p>Configuration content to be imported. It must be in JSON format and encoded in UTF-8. You can obtain the configuration content through the site configuration export API (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine" by passing in the corresponding fields. For details, refer to the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin server configuration) exported by ExportZoneConfig are not currently supported for import through this interface. If Content contains the above configuration content, the import will fail.</p>
      */
     public $Content;
 
     /**
-     * @param string $ZoneId <p>Site ID.</p>
-     * @param string $Content <p>Configuration content to be imported. Use JSON format and encode by UTF-8. You can obtain the configuration content through the site configuration export interface (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine". Just pass in the corresponding fields. For specific details, see the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin configuration) exported by ExportZoneConfig are temporary not supported for import through this interface. If the Content contains the above configuration content, it will cause import failure.</p>
+     * @param string $ZoneId <p>Zone ID.</p>
+     * @param string $Content <p>Configuration content to be imported. It must be in JSON format and encoded in UTF-8. You can obtain the configuration content through the site configuration export API (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine" by passing in the corresponding fields. For details, refer to the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin server configuration) exported by ExportZoneConfig are not currently supported for import through this interface. If Content contains the above configuration content, the import will fail.</p>
      */
     function __construct()
     {

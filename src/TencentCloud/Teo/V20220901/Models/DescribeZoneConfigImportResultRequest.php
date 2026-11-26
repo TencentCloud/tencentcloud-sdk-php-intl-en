@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getTaskId() Obtain It indicates the configuration import task ID for which the result needs to be queried. The import task ID is only retained for 7 days.
- * @method void setTaskId(string $TaskId) Set It indicates the configuration import task ID for which the result needs to be queried. The import task ID is only retained for 7 days.
+ * @method string getTaskId() Obtain It indicates the configuration import task ID for which the result needs to be queried. The import task ID only supports querying import tasks in the last 7 days.
+ * @method void setTaskId(string $TaskId) Set It indicates the configuration import task ID for which the result needs to be queried. The import task ID only supports querying import tasks in the last 7 days.
  */
 class DescribeZoneConfigImportResultRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeZoneConfigImportResultRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string It indicates the configuration import task ID for which the result needs to be queried. The import task ID is only retained for 7 days.
+     * @var string It indicates the configuration import task ID for which the result needs to be queried. The import task ID only supports querying import tasks in the last 7 days.
      */
     public $TaskId;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $TaskId It indicates the configuration import task ID for which the result needs to be queried. The import task ID is only retained for 7 days.
+     * @param string $TaskId It indicates the configuration import task ID for which the result needs to be queried. The import task ID only supports querying import tasks in the last 7 days.
      */
     function __construct()
     {

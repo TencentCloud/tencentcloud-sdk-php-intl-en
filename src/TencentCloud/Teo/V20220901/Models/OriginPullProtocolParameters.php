@@ -18,32 +18,32 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HTTPS origin-pull configuration parameters.
+ * Back-to-origin HTTPS configuration parameter.
  *
- * @method string getProtocol() Obtain Origin protocol configuration. valid values:.
-<li>http: specifies to use http protocol for origin.</li>.
-<li>https: use the https protocol for origin-pull.</li>.
-<Li>Follow: follow protocol.</li>.
- * @method void setProtocol(string $Protocol) Set Origin protocol configuration. valid values:.
-<li>http: specifies to use http protocol for origin.</li>.
-<li>https: use the https protocol for origin-pull.</li>.
-<Li>Follow: follow protocol.</li>.
+ * @method string getProtocol() Obtain Origin-pull protocol configuration, with values:
+<li>http: Use HTTP protocol for origin-pull;</li>
+<li>https: Use the HTTPS protocol for origin-pull;</li>
+<li>follow: follow protocol.</li>
+ * @method void setProtocol(string $Protocol) Set Origin-pull protocol configuration, with values:
+<li>http: Use HTTP protocol for origin-pull;</li>
+<li>https: Use the HTTPS protocol for origin-pull;</li>
+<li>follow: follow protocol.</li>
  */
 class OriginPullProtocolParameters extends AbstractModel
 {
     /**
-     * @var string Origin protocol configuration. valid values:.
-<li>http: specifies to use http protocol for origin.</li>.
-<li>https: use the https protocol for origin-pull.</li>.
-<Li>Follow: follow protocol.</li>.
+     * @var string Origin-pull protocol configuration, with values:
+<li>http: Use HTTP protocol for origin-pull;</li>
+<li>https: Use the HTTPS protocol for origin-pull;</li>
+<li>follow: follow protocol.</li>
      */
     public $Protocol;
 
     /**
-     * @param string $Protocol Origin protocol configuration. valid values:.
-<li>http: specifies to use http protocol for origin.</li>.
-<li>https: use the https protocol for origin-pull.</li>.
-<Li>Follow: follow protocol.</li>.
+     * @param string $Protocol Origin-pull protocol configuration, with values:
+<li>http: Use HTTP protocol for origin-pull;</li>
+<li>https: Use the HTTPS protocol for origin-pull;</li>
+<li>follow: follow protocol.</li>
      */
     function __construct()
     {

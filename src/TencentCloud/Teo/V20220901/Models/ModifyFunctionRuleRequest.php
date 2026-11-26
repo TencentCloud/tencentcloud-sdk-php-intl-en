@@ -20,90 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyFunctionRule request structure.
  *
- * @method string getZoneId() Obtain Zone ID.
- * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getRuleId() Obtain Rule ID. you can first use the DescribeFunctionRules API to get the RuleId that needs to be modified, then input the modified rule content. the original rule content will be overwritten.
- * @method void setRuleId(string $RuleId) Set Rule ID. you can first use the DescribeFunctionRules API to get the RuleId that needs to be modified, then input the modified rule content. the original rule content will be overwritten.
- * @method array getFunctionRuleConditions() Obtain Rule condition list. There is an OR relationship between different conditions of the same trigger rule. If this parameter is not input, the original configuration is maintained.
- * @method void setFunctionRuleConditions(array $FunctionRuleConditions) Set Rule condition list. There is an OR relationship between different conditions of the same trigger rule. If this parameter is not input, the original configuration is maintained.
- * @method string getTriggerType() Obtain Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
-Specifies the default value as direct when left blank.
- * @method void setTriggerType(string $TriggerType) Set Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
-Specifies the default value as direct when left blank.
- * @method string getFunctionId() Obtain Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
- * @method void setFunctionId(string $FunctionId) Set Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
- * @method array getRegionMappingSelections() Obtain Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
- * @method void setRegionMappingSelections(array $RegionMappingSelections) Set Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
- * @method array getWeightedSelections() Obtain Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
- * @method void setWeightedSelections(array $WeightedSelections) Set Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
- * @method string getRemark() Obtain Rule description, which can contain up to 60 characters. If this parameter is not input, the original configuration is maintained.
- * @method void setRemark(string $Remark) Set Rule description, which can contain up to 60 characters. If this parameter is not input, the original configuration is maintained.
+ * @method string getZoneId() Obtain <p>Zone ID.</p>
+ * @method void setZoneId(string $ZoneId) Set <p>Zone ID.</p>
+ * @method string getRuleId() Obtain <p>Rule ID. You can first use the DescribeFunctionRules API to get the RuleId of the rule that needs to be modified, then import the modified rule content. The original rule content will be overwritten.</p>
+ * @method void setRuleId(string $RuleId) Set <p>Rule ID. You can first use the DescribeFunctionRules API to get the RuleId of the rule that needs to be modified, then import the modified rule content. The original rule content will be overwritten.</p>
+ * @method array getFunctionRuleConditions() Obtain <p>Rule condition list. There is an OR relationship between different conditions of the same trigger rule. If not specified, the original configuration is maintained.</p>
+ * @method void setFunctionRuleConditions(array $FunctionRuleConditions) Set <p>Rule condition list. There is an OR relationship between different conditions of the same trigger rule. If not specified, the original configuration is maintained.</p>
+ * @method string getTriggerType() Obtain <p>Function selection configuration type:</p><li> direct: directly specify the execution function;</li><li> weight: select a function based on weight ratio;</li><li> region: select a function based on the client IP country/region.</li>Defaults to direct if not specified.
+ * @method void setTriggerType(string $TriggerType) Set <p>Function selection configuration type:</p><li> direct: directly specify the execution function;</li><li> weight: select a function based on weight ratio;</li><li> region: select a function based on the client IP country/region.</li>Defaults to direct if not specified.
+ * @method string getFunctionId() Obtain <p>Specify the function ID to be executed. This parameter is valid only when TriggerType is direct or left empty.</p>
+ * @method void setFunctionId(string $FunctionId) Set <p>Specify the function ID to be executed. This parameter is valid only when TriggerType is direct or left empty.</p>
+ * @method array getRegionMappingSelections() Obtain <p>Function selection configuration based on client IP country/region. This parameter is valid only when TriggerType is region, and RegionMappingSelections is required. RegionMappingSelections must contain one configuration with Regions as Default, and requires at least one other specific Region.</p>
+ * @method void setRegionMappingSelections(array $RegionMappingSelections) Set <p>Function selection configuration based on client IP country/region. This parameter is valid only when TriggerType is region, and RegionMappingSelections is required. RegionMappingSelections must contain one configuration with Regions as Default, and requires at least one other specific Region.</p>
+ * @method array getWeightedSelections() Obtain <p>Weight-based function selection configuration. This parameter is valid only when TriggerType is weight and WeightedSelections is required. The sum of all weights in WeightedSelections need to be 100.</p>
+ * @method void setWeightedSelections(array $WeightedSelections) Set <p>Weight-based function selection configuration. This parameter is valid only when TriggerType is weight and WeightedSelections is required. The sum of all weights in WeightedSelections need to be 100.</p>
+ * @method string getRemark() Obtain <p>Rule description, which can contain up to 60 characters. If this parameter is not input, the original configuration is maintained.</p>
+ * @method void setRemark(string $Remark) Set <p>Rule description, which can contain up to 60 characters. If this parameter is not input, the original configuration is maintained.</p>
  */
 class ModifyFunctionRuleRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID.
+     * @var string <p>Zone ID.</p>
      */
     public $ZoneId;
 
     /**
-     * @var string Rule ID. you can first use the DescribeFunctionRules API to get the RuleId that needs to be modified, then input the modified rule content. the original rule content will be overwritten.
+     * @var string <p>Rule ID. You can first use the DescribeFunctionRules API to get the RuleId of the rule that needs to be modified, then import the modified rule content. The original rule content will be overwritten.</p>
      */
     public $RuleId;
 
     /**
-     * @var array Rule condition list. There is an OR relationship between different conditions of the same trigger rule. If this parameter is not input, the original configuration is maintained.
+     * @var array <p>Rule condition list. There is an OR relationship between different conditions of the same trigger rule. If not specified, the original configuration is maintained.</p>
      */
     public $FunctionRuleConditions;
 
     /**
-     * @var string Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
-Specifies the default value as direct when left blank.
+     * @var string <p>Function selection configuration type:</p><li> direct: directly specify the execution function;</li><li> weight: select a function based on weight ratio;</li><li> region: select a function based on the client IP country/region.</li>Defaults to direct if not specified.
      */
     public $TriggerType;
 
     /**
-     * @var string Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
+     * @var string <p>Specify the function ID to be executed. This parameter is valid only when TriggerType is direct or left empty.</p>
      */
     public $FunctionId;
 
     /**
-     * @var array Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+     * @var array <p>Function selection configuration based on client IP country/region. This parameter is valid only when TriggerType is region, and RegionMappingSelections is required. RegionMappingSelections must contain one configuration with Regions as Default, and requires at least one other specific Region.</p>
      */
     public $RegionMappingSelections;
 
     /**
-     * @var array Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+     * @var array <p>Weight-based function selection configuration. This parameter is valid only when TriggerType is weight and WeightedSelections is required. The sum of all weights in WeightedSelections need to be 100.</p>
      */
     public $WeightedSelections;
 
     /**
-     * @var string Rule description, which can contain up to 60 characters. If this parameter is not input, the original configuration is maintained.
+     * @var string <p>Rule description, which can contain up to 60 characters. If this parameter is not input, the original configuration is maintained.</p>
      */
     public $Remark;
 
     /**
-     * @param string $ZoneId Zone ID.
-     * @param string $RuleId Rule ID. you can first use the DescribeFunctionRules API to get the RuleId that needs to be modified, then input the modified rule content. the original rule content will be overwritten.
-     * @param array $FunctionRuleConditions Rule condition list. There is an OR relationship between different conditions of the same trigger rule. If this parameter is not input, the original configuration is maintained.
-     * @param string $TriggerType Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
-Specifies the default value as direct when left blank.
-     * @param string $FunctionId Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
-     * @param array $RegionMappingSelections Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
-     * @param array $WeightedSelections Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
-     * @param string $Remark Rule description, which can contain up to 60 characters. If this parameter is not input, the original configuration is maintained.
+     * @param string $ZoneId <p>Zone ID.</p>
+     * @param string $RuleId <p>Rule ID. You can first use the DescribeFunctionRules API to get the RuleId of the rule that needs to be modified, then import the modified rule content. The original rule content will be overwritten.</p>
+     * @param array $FunctionRuleConditions <p>Rule condition list. There is an OR relationship between different conditions of the same trigger rule. If not specified, the original configuration is maintained.</p>
+     * @param string $TriggerType <p>Function selection configuration type:</p><li> direct: directly specify the execution function;</li><li> weight: select a function based on weight ratio;</li><li> region: select a function based on the client IP country/region.</li>Defaults to direct if not specified.
+     * @param string $FunctionId <p>Specify the function ID to be executed. This parameter is valid only when TriggerType is direct or left empty.</p>
+     * @param array $RegionMappingSelections <p>Function selection configuration based on client IP country/region. This parameter is valid only when TriggerType is region, and RegionMappingSelections is required. RegionMappingSelections must contain one configuration with Regions as Default, and requires at least one other specific Region.</p>
+     * @param array $WeightedSelections <p>Weight-based function selection configuration. This parameter is valid only when TriggerType is weight and WeightedSelections is required. The sum of all weights in WeightedSelections need to be 100.</p>
+     * @param string $Remark <p>Rule description, which can contain up to 60 characters. If this parameter is not input, the original configuration is maintained.</p>
      */
     function __construct()
     {

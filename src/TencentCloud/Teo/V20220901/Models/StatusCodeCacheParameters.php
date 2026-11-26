@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Status Code Cache TTL configuration parameters.
+ * Status code cache TTL configuration parameter.
  *
  * @method array getStatusCodeCacheParams() Obtain Status code cache TTL.
  * @method void setStatusCodeCacheParams(array $StatusCodeCacheParams) Set Status code cache TTL.

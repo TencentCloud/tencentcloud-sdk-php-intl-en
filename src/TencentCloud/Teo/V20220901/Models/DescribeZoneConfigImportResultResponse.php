@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeZoneConfigImportResult response structure.
  *
- * @method string getStatus() Obtain The status of this import task. Valid values: <li>success: It indicates the configuration was successfully imported;</li> <li>failure: It indicates the configuration import failed;</li> <li>doing: It indicates the configuration is being imported.</li>
- * @method void setStatus(string $Status) Set The status of this import task. Valid values: <li>success: It indicates the configuration was successfully imported;</li> <li>failure: It indicates the configuration import failed;</li> <li>doing: It indicates the configuration is being imported.</li>
+ * @method string getStatus() Obtain The import status of this import task. Valid values: <li>success: It indicates the configuration item was successfully imported;</li> <li>failure: It indicates the configuration item import failed;</li> <li>doing: It indicates the configuration item is being imported.</li>
+ * @method void setStatus(string $Status) Set The import status of this import task. Valid values: <li>success: It indicates the configuration item was successfully imported;</li> <li>failure: It indicates the configuration item import failed;</li> <li>doing: It indicates the configuration item is being imported.</li>
  * @method string getMessage() Obtain The status message of this import task. If the configuration item import fails, you can view the failure cause through this field.
  * @method void setMessage(string $Message) Set The status message of this import task. If the configuration item import fails, you can view the failure cause through this field.
  * @method string getContent() Obtain The configuration content of this import task.
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeZoneConfigImportResultResponse extends AbstractModel
 {
     /**
-     * @var string The status of this import task. Valid values: <li>success: It indicates the configuration was successfully imported;</li> <li>failure: It indicates the configuration import failed;</li> <li>doing: It indicates the configuration is being imported.</li>
+     * @var string The import status of this import task. Valid values: <li>success: It indicates the configuration item was successfully imported;</li> <li>failure: It indicates the configuration item import failed;</li> <li>doing: It indicates the configuration item is being imported.</li>
      */
     public $Status;
 
@@ -66,7 +66,7 @@ class DescribeZoneConfigImportResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status The status of this import task. Valid values: <li>success: It indicates the configuration was successfully imported;</li> <li>failure: It indicates the configuration import failed;</li> <li>doing: It indicates the configuration is being imported.</li>
+     * @param string $Status The import status of this import task. Valid values: <li>success: It indicates the configuration item was successfully imported;</li> <li>failure: It indicates the configuration item import failed;</li> <li>doing: It indicates the configuration item is being imported.</li>
      * @param string $Message The status message of this import task. If the configuration item import fails, you can view the failure cause through this field.
      * @param string $Content The configuration content of this import task.
      * @param string $ImportTime The start time of this import task.

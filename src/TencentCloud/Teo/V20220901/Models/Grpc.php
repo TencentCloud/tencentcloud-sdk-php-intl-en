@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Configuration of gRPC support
+ * Grpc configuration item
  *
- * @method string getSwitch() Obtain Whether to enable gRPC support. Valid values: 
+ * @method string getSwitch() Obtain Whether Grpc configuration is enabled. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
- * @method void setSwitch(string $Switch) Set Whether to enable gRPC support. Valid values: 
+<li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Whether Grpc configuration is enabled. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
  */
 class Grpc extends AbstractModel
 {
     /**
-     * @var string Whether to enable gRPC support. Valid values: 
+     * @var string Whether Grpc configuration is enabled. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable gRPC support. Valid values: 
+     * @param string $Switch Whether Grpc configuration is enabled. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
      */
     function __construct()
     {

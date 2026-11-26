@@ -18,34 +18,34 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Log analytics log download task.
+ * Log analysis log download task.
  *
  * @method string getTaskId() Obtain <p>Task ID.</p>
  * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
- * @method string getZoneId() Obtain <p>Site ID.</p>
- * @method void setZoneId(string $ZoneId) Set <p>Site ID.</p>
+ * @method string getZoneId() Obtain <p>Zone ID.</p>
+ * @method void setZoneId(string $ZoneId) Set <p>Zone ID.</p>
  * @method string getArea() Obtain <p>Data ownership region. Valid values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul></p>
  * @method void setArea(string $Area) Set <p>Data ownership region. Valid values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul></p>
- * @method string getStartTime() Obtain <p>Start time, example value: 2020-04-29T00:00:00Z.</p>
- * @method void setStartTime(string $StartTime) Set <p>Start time, example value: 2020-04-29T00:00:00Z.</p>
+ * @method string getStartTime() Obtain <p>Start time. Example value: 2020-04-29T00:00:00Z.</p>
+ * @method void setStartTime(string $StartTime) Set <p>Start time. Example value: 2020-04-29T00:00:00Z.</p>
  * @method string getEndTime() Obtain <p>End time. Example value: 2020-04-30T00:00:00Z.</p>
  * @method void setEndTime(string $EndTime) Set <p>End time. Example value: 2020-04-30T00:00:00Z.</p>
- * @method string getLogType() Obtain <p>Log type. Valid values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed rule log.</li></ul></p>
- * @method void setLogType(string $LogType) Set <p>Log type. Valid values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed rule log.</li></ul></p>
- * @method string getCondition() Obtain <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
- * @method void setCondition(string $Condition) Set <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
- * @method string getFormat() Obtain <p>File format, valid values:</p><ul><li>csv.</li></ul>
- * @method void setFormat(string $Format) Set <p>File format, valid values:</p><ul><li>csv.</li></ul>
- * @method string getSort() Obtain <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul></p>
- * @method void setSort(string $Sort) Set <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul></p>
- * @method string getStatus() Obtain <p>Task status, valid values: <ul><li>loading: being processed, waiting to generate download link;</li><li> failed: processing failure, current task cannot be downloaded;</li><li>completed: packaging completed, ready for download.</li></ul></p>
- * @method void setStatus(string $Status) Set <p>Task status, valid values: <ul><li>loading: being processed, waiting to generate download link;</li><li> failed: processing failure, current task cannot be downloaded;</li><li>completed: packaging completed, ready for download.</li></ul></p>
- * @method string getCreateTime() Obtain <p>Task creation time. After successful task creation, the retention period is 3 days.</p>
- * @method void setCreateTime(string $CreateTime) Set <p>Task creation time. After successful task creation, the retention period is 3 days.</p>
- * @method string getUrl() Obtain <p>Download link, only returned when Status = completed.</p>
- * @method void setUrl(string $Url) Set <p>Download link, only returned when Status = completed.</p>
- * @method string getExpireTime() Obtain <p>Task expiration time. After expiry, the download address will be unavailable. Please obtain a new download address through this API.</p>
- * @method void setExpireTime(string $ExpireTime) Set <p>Task expiration time. After expiry, the download address will be unavailable. Please obtain a new download address through this API.</p>
+ * @method string getLogType() Obtain <p>Log type. Valid values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul></p>
+ * @method void setLogType(string $LogType) Set <p>Log type. Valid values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul></p>
+ * @method string getCondition() Obtain <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
+ * @method void setCondition(string $Condition) Set <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
+ * @method string getFormat() Obtain <p>File format. Valid values:</p><ul><li>csv.</li></ul>
+ * @method void setFormat(string $Format) Set <p>File format. Valid values:</p><ul><li>csv.</li></ul>
+ * @method string getSort() Obtain <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul></p>
+ * @method void setSort(string $Sort) Set <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul></p>
+ * @method string getStatus() Obtain <p>Task status. Valid values: <ul><li>loading: processing, waiting to generate a download link;</li><li> failed: processing failure, the current task cannot be downloaded;</li><li>completed: packaged and ready for download.</li></ul></p>
+ * @method void setStatus(string $Status) Set <p>Task status. Valid values: <ul><li>loading: processing, waiting to generate a download link;</li><li> failed: processing failure, the current task cannot be downloaded;</li><li>completed: packaged and ready for download.</li></ul></p>
+ * @method string getCreateTime() Obtain <p>Task creation time. It will be retained for 3 days after successful task creation.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Task creation time. It will be retained for 3 days after successful task creation.</p>
+ * @method string getUrl() Obtain <p>Download URL. It is returned only when Status = completed.</p>
+ * @method void setUrl(string $Url) Set <p>Download URL. It is returned only when Status = completed.</p>
+ * @method string getExpireTime() Obtain <p>Task expiration time for download. The download address will be unavailable after expiry. Obtain a new download address through this API.</p>
+ * @method void setExpireTime(string $ExpireTime) Set <p>Task expiration time for download. The download address will be unavailable after expiry. Obtain a new download address through this API.</p>
  */
 class LogAnalysisDownloadTask extends AbstractModel
 {
@@ -55,7 +55,7 @@ class LogAnalysisDownloadTask extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string <p>Site ID.</p>
+     * @var string <p>Zone ID.</p>
      */
     public $ZoneId;
 
@@ -65,7 +65,7 @@ class LogAnalysisDownloadTask extends AbstractModel
     public $Area;
 
     /**
-     * @var string <p>Start time, example value: 2020-04-29T00:00:00Z.</p>
+     * @var string <p>Start time. Example value: 2020-04-29T00:00:00Z.</p>
      */
     public $StartTime;
 
@@ -75,59 +75,59 @@ class LogAnalysisDownloadTask extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string <p>Log type. Valid values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed rule log.</li></ul></p>
+     * @var string <p>Log type. Valid values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul></p>
      */
     public $LogType;
 
     /**
-     * @var string <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
+     * @var string <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
      */
     public $Condition;
 
     /**
-     * @var string <p>File format, valid values:</p><ul><li>csv.</li></ul>
+     * @var string <p>File format. Valid values:</p><ul><li>csv.</li></ul>
      */
     public $Format;
 
     /**
-     * @var string <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul></p>
+     * @var string <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul></p>
      */
     public $Sort;
 
     /**
-     * @var string <p>Task status, valid values: <ul><li>loading: being processed, waiting to generate download link;</li><li> failed: processing failure, current task cannot be downloaded;</li><li>completed: packaging completed, ready for download.</li></ul></p>
+     * @var string <p>Task status. Valid values: <ul><li>loading: processing, waiting to generate a download link;</li><li> failed: processing failure, the current task cannot be downloaded;</li><li>completed: packaged and ready for download.</li></ul></p>
      */
     public $Status;
 
     /**
-     * @var string <p>Task creation time. After successful task creation, the retention period is 3 days.</p>
+     * @var string <p>Task creation time. It will be retained for 3 days after successful task creation.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string <p>Download link, only returned when Status = completed.</p>
+     * @var string <p>Download URL. It is returned only when Status = completed.</p>
      */
     public $Url;
 
     /**
-     * @var string <p>Task expiration time. After expiry, the download address will be unavailable. Please obtain a new download address through this API.</p>
+     * @var string <p>Task expiration time for download. The download address will be unavailable after expiry. Obtain a new download address through this API.</p>
      */
     public $ExpireTime;
 
     /**
      * @param string $TaskId <p>Task ID.</p>
-     * @param string $ZoneId <p>Site ID.</p>
+     * @param string $ZoneId <p>Zone ID.</p>
      * @param string $Area <p>Data ownership region. Valid values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul></p>
-     * @param string $StartTime <p>Start time, example value: 2020-04-29T00:00:00Z.</p>
+     * @param string $StartTime <p>Start time. Example value: 2020-04-29T00:00:00Z.</p>
      * @param string $EndTime <p>End time. Example value: 2020-04-30T00:00:00Z.</p>
-     * @param string $LogType <p>Log type. Valid values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed rule log.</li></ul></p>
-     * @param string $Condition <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
-     * @param string $Format <p>File format, valid values:</p><ul><li>csv.</li></ul>
-     * @param string $Sort <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul></p>
-     * @param string $Status <p>Task status, valid values: <ul><li>loading: being processed, waiting to generate download link;</li><li> failed: processing failure, current task cannot be downloaded;</li><li>completed: packaging completed, ready for download.</li></ul></p>
-     * @param string $CreateTime <p>Task creation time. After successful task creation, the retention period is 3 days.</p>
-     * @param string $Url <p>Download link, only returned when Status = completed.</p>
-     * @param string $ExpireTime <p>Task expiration time. After expiry, the download address will be unavailable. Please obtain a new download address through this API.</p>
+     * @param string $LogType <p>Log type. Valid values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul></p>
+     * @param string $Condition <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
+     * @param string $Format <p>File format. Valid values:</p><ul><li>csv.</li></ul>
+     * @param string $Sort <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul></p>
+     * @param string $Status <p>Task status. Valid values: <ul><li>loading: processing, waiting to generate a download link;</li><li> failed: processing failure, the current task cannot be downloaded;</li><li>completed: packaged and ready for download.</li></ul></p>
+     * @param string $CreateTime <p>Task creation time. It will be retained for 3 days after successful task creation.</p>
+     * @param string $Url <p>Download URL. It is returned only when Status = completed.</p>
+     * @param string $ExpireTime <p>Task expiration time for download. The download address will be unavailable after expiry. Obtain a new download address through this API.</p>
      */
     function __construct()
     {

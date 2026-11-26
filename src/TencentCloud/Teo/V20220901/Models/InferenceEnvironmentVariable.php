@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Environment variable of the container runtime for reasoning.
+ * Environment variable of the reasoning container runtime.
  *
- * @method string getKey() Obtain Variable name  is limited to uppercase and lowercase letters, digits, and underscores, and must start with a letter or underscore. The length is limited to no more than 64 characters.
- * @method void setKey(string $Key) Set Variable name  is limited to uppercase and lowercase letters, digits, and underscores, and must start with a letter or underscore. The length is limited to no more than 64 characters.
- * @method string getValue() Obtain Variable value. Supports any visible characters such as letters, numbers, and symbols. Length limited to no more than 2048 characters.
- * @method void setValue(string $Value) Set Variable value. Supports any visible characters such as letters, numbers, and symbols. Length limited to no more than 2048 characters.
+ * @method string getKey() Obtain Variable name. Only letters, digits, and underscores are allowed, and it must start with a letter or underscore. Length limited to 64 characters.
+ * @method void setKey(string $Key) Set Variable name. Only letters, digits, and underscores are allowed, and it must start with a letter or underscore. Length limited to 64 characters.
+ * @method string getValue() Obtain Variable value. Supports any visible characters, such as letters, digits, and symbols. Length limit: no more than 2048 characters.
+ * @method void setValue(string $Value) Set Variable value. Supports any visible characters, such as letters, digits, and symbols. Length limit: no more than 2048 characters.
  */
 class InferenceEnvironmentVariable extends AbstractModel
 {
     /**
-     * @var string Variable name  is limited to uppercase and lowercase letters, digits, and underscores, and must start with a letter or underscore. The length is limited to no more than 64 characters.
+     * @var string Variable name. Only letters, digits, and underscores are allowed, and it must start with a letter or underscore. Length limited to 64 characters.
      */
     public $Key;
 
     /**
-     * @var string Variable value. Supports any visible characters such as letters, numbers, and symbols. Length limited to no more than 2048 characters.
+     * @var string Variable value. Supports any visible characters, such as letters, digits, and symbols. Length limit: no more than 2048 characters.
      */
     public $Value;
 
     /**
-     * @param string $Key Variable name  is limited to uppercase and lowercase letters, digits, and underscores, and must start with a letter or underscore. The length is limited to no more than 64 characters.
-     * @param string $Value Variable value. Supports any visible characters such as letters, numbers, and symbols. Length limited to no more than 2048 characters.
+     * @param string $Key Variable name. Only letters, digits, and underscores are allowed, and it must start with a letter or underscore. Length limited to 64 characters.
+     * @param string $Value Variable value. Supports any visible characters, such as letters, digits, and symbols. Length limit: no more than 2048 characters.
      */
     function __construct()
     {

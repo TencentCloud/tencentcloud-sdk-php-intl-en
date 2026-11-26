@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * API resource.
  *
- * @method string getId() Obtain Specifies the resource ID.
- * @method void setId(string $Id) Set Specifies the resource ID.
- * @method string getName() Obtain Specifies the resource name.
- * @method void setName(string $Name) Set Specifies the resource name.
- * @method array getAPIServiceIds() Obtain Specifies the API service ID list associated with the API resource.
- * @method void setAPIServiceIds(array $APIServiceIds) Set Specifies the API service ID list associated with the API resource.
- * @method string getPath() Obtain Specifies the resource path.
- * @method void setPath(string $Path) Set Specifies the resource path.
- * @method array getMethods() Obtain Request method list. valid values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
- * @method void setMethods(array $Methods) Set Request method list. valid values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
- * @method string getRequestConstraint() Obtain Specifies the specific content of the request content match rule, which must comply with the expression grammar. please refer to the product document for detailed requirements.
- * @method void setRequestConstraint(string $RequestConstraint) Set Specifies the specific content of the request content match rule, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+ * @method string getId() Obtain Resource ID.
+ * @method void setId(string $Id) Set Resource ID.
+ * @method string getName() Obtain Resource name.
+ * @method void setName(string $Name) Set Resource name.
+ * @method array getAPIServiceIds() Obtain List of API service IDs associated with the API resource.
+ * @method void setAPIServiceIds(array $APIServiceIds) Set List of API service IDs associated with the API resource.
+ * @method string getPath() Obtain Resource path.
+ * @method void setPath(string $Path) Set Resource path.
+ * @method array getMethods() Obtain Request method list. Supports the following values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
+ * @method void setMethods(array $Methods) Set Request method list. Supports the following values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
+ * @method string getRequestConstraint() Obtain Specific content of the request content matching rule. It must comply with the expression syntax. For detailed specifications, see the product document.
+ * @method void setRequestConstraint(string $RequestConstraint) Set Specific content of the request content matching rule. It must comply with the expression syntax. For detailed specifications, see the product document.
  */
 class APIResource extends AbstractModel
 {
     /**
-     * @var string Specifies the resource ID.
+     * @var string Resource ID.
      */
     public $Id;
 
     /**
-     * @var string Specifies the resource name.
+     * @var string Resource name.
      */
     public $Name;
 
     /**
-     * @var array Specifies the API service ID list associated with the API resource.
+     * @var array List of API service IDs associated with the API resource.
      */
     public $APIServiceIds;
 
     /**
-     * @var string Specifies the resource path.
+     * @var string Resource path.
      */
     public $Path;
 
     /**
-     * @var array Request method list. valid values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
+     * @var array Request method list. Supports the following values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
      */
     public $Methods;
 
     /**
-     * @var string Specifies the specific content of the request content match rule, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+     * @var string Specific content of the request content matching rule. It must comply with the expression syntax. For detailed specifications, see the product document.
      */
     public $RequestConstraint;
 
     /**
-     * @param string $Id Specifies the resource ID.
-     * @param string $Name Specifies the resource name.
-     * @param array $APIServiceIds Specifies the API service ID list associated with the API resource.
-     * @param string $Path Specifies the resource path.
-     * @param array $Methods Request method list. valid values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
-     * @param string $RequestConstraint Specifies the specific content of the request content match rule, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+     * @param string $Id Resource ID.
+     * @param string $Name Resource name.
+     * @param array $APIServiceIds List of API service IDs associated with the API resource.
+     * @param string $Path Resource path.
+     * @param array $Methods Request method list. Supports the following values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
+     * @param string $RequestConstraint Specific content of the request content matching rule. It must comply with the expression syntax. For detailed specifications, see the product document.
      */
     function __construct()
     {

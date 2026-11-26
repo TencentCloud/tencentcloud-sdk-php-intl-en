@@ -18,12 +18,12 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Failure reason
+ * Failure cause.
  *
  * @method string getReason() Obtain Failure reason.
  * @method void setReason(string $Reason) Set Failure reason.
- * @method array getTargets() Obtain List of resources failed to be processed. 
- * @method void setTargets(array $Targets) Set List of resources failed to be processed. 
+ * @method array getTargets() Obtain List of resources that failed processing.
+ * @method void setTargets(array $Targets) Set List of resources that failed processing.
  */
 class FailReason extends AbstractModel
 {
@@ -33,13 +33,13 @@ class FailReason extends AbstractModel
     public $Reason;
 
     /**
-     * @var array List of resources failed to be processed. 
+     * @var array List of resources that failed processing.
      */
     public $Targets;
 
     /**
      * @param string $Reason Failure reason.
-     * @param array $Targets List of resources failed to be processed. 
+     * @param array $Targets List of resources that failed processing.
      */
     function __construct()
     {

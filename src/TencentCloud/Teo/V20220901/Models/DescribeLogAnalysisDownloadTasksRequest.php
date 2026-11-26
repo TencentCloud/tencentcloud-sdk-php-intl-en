@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain <p>Site ID.</p>
  * @method void setZoneId(string $ZoneId) Set <p>Site ID.</p>
- * @method string getArea() Obtain <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul> Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
- * @method void setArea(string $Area) Set <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul> Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
- * @method string getLogType() Obtain <p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
- * @method void setLogType(string $LogType) Set <p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
- * @method array getFilters() Obtain <p>Filtering Conditions. The maximum number of Filters.Values is 20. Detailed filter criteria are as follows:<ul><li>task-id: Filter by log download task id. For optional Values, refer to the TaskId returned by the CreateLogAnalysisDownloadTask api.</li></ul></p><p>For reference: CreateLogAnalysisDownloadTask</p>
- * @method void setFilters(array $Filters) Set <p>Filtering Conditions. The maximum number of Filters.Values is 20. Detailed filter criteria are as follows:<ul><li>task-id: Filter by log download task id. For optional Values, refer to the TaskId returned by the CreateLogAnalysisDownloadTask api.</li></ul></p><p>For reference: CreateLogAnalysisDownloadTask</p>
- * @method integer getLimit() Obtain <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
- * @method void setLimit(integer $Limit) Set <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
- * @method integer getOffset() Obtain <p>Paginated query offset, defaults to 0.</p>
- * @method void setOffset(integer $Offset) Set <p>Paginated query offset, defaults to 0.</p>
+ * @method string getArea() Obtain <p>Data ownership region. Available values: <ul><li>mainland: within the Chinese mainland;</li> <li>overseas: global (excluding the Chinese mainland).</li></ul> Note: If the site service area is "global availability zone", to obtain all data, query the data of mainland and overseas separately.</p>
+ * @method void setArea(string $Area) Set <p>Data ownership region. Available values: <ul><li>mainland: within the Chinese mainland;</li> <li>overseas: global (excluding the Chinese mainland).</li></ul> Note: If the site service area is "global availability zone", to obtain all data, query the data of mainland and overseas separately.</p>
+ * @method string getLogType() Obtain <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
+ * @method void setLogType(string $LogType) Set <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
+ * @method array getFilters() Obtain <p>Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <ul><li>task-id: Filter by log download task id. For optional Values, see the TaskId returned by the CreateLogAnalysisDownloadTask API.</li></ul></p><p>Parameter value reference: CreateLogAnalysisDownloadTask</p>
+ * @method void setFilters(array $Filters) Set <p>Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <ul><li>task-id: Filter by log download task id. For optional Values, see the TaskId returned by the CreateLogAnalysisDownloadTask API.</li></ul></p><p>Parameter value reference: CreateLogAnalysisDownloadTask</p>
+ * @method integer getLimit() Obtain <p>Paginated query limit. Default value: 20. Maximum value: 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>Paginated query limit. Default value: 20. Maximum value: 100.</p>
+ * @method integer getOffset() Obtain <p>Paginated query offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Paginated query offset. Default value: 0.</p>
  */
 class DescribeLogAnalysisDownloadTasksRequest extends AbstractModel
 {
@@ -41,37 +41,37 @@ class DescribeLogAnalysisDownloadTasksRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul> Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
+     * @var string <p>Data ownership region. Available values: <ul><li>mainland: within the Chinese mainland;</li> <li>overseas: global (excluding the Chinese mainland).</li></ul> Note: If the site service area is "global availability zone", to obtain all data, query the data of mainland and overseas separately.</p>
      */
     public $Area;
 
     /**
-     * @var string <p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
+     * @var string <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
      */
     public $LogType;
 
     /**
-     * @var array <p>Filtering Conditions. The maximum number of Filters.Values is 20. Detailed filter criteria are as follows:<ul><li>task-id: Filter by log download task id. For optional Values, refer to the TaskId returned by the CreateLogAnalysisDownloadTask api.</li></ul></p><p>For reference: CreateLogAnalysisDownloadTask</p>
+     * @var array <p>Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <ul><li>task-id: Filter by log download task id. For optional Values, see the TaskId returned by the CreateLogAnalysisDownloadTask API.</li></ul></p><p>Parameter value reference: CreateLogAnalysisDownloadTask</p>
      */
     public $Filters;
 
     /**
-     * @var integer <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
+     * @var integer <p>Paginated query limit. Default value: 20. Maximum value: 100.</p>
      */
     public $Limit;
 
     /**
-     * @var integer <p>Paginated query offset, defaults to 0.</p>
+     * @var integer <p>Paginated query offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
      * @param string $ZoneId <p>Site ID.</p>
-     * @param string $Area <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul> Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
-     * @param string $LogType <p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
-     * @param array $Filters <p>Filtering Conditions. The maximum number of Filters.Values is 20. Detailed filter criteria are as follows:<ul><li>task-id: Filter by log download task id. For optional Values, refer to the TaskId returned by the CreateLogAnalysisDownloadTask api.</li></ul></p><p>For reference: CreateLogAnalysisDownloadTask</p>
-     * @param integer $Limit <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
-     * @param integer $Offset <p>Paginated query offset, defaults to 0.</p>
+     * @param string $Area <p>Data ownership region. Available values: <ul><li>mainland: within the Chinese mainland;</li> <li>overseas: global (excluding the Chinese mainland).</li></ul> Note: If the site service area is "global availability zone", to obtain all data, query the data of mainland and overseas separately.</p>
+     * @param string $LogType <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
+     * @param array $Filters <p>Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <ul><li>task-id: Filter by log download task id. For optional Values, see the TaskId returned by the CreateLogAnalysisDownloadTask API.</li></ul></p><p>Parameter value reference: CreateLogAnalysisDownloadTask</p>
+     * @param integer $Limit <p>Paginated query limit. Default value: 20. Maximum value: 100.</p>
+     * @param integer $Offset <p>Paginated query offset. Default value: 0.</p>
      */
     function __construct()
     {

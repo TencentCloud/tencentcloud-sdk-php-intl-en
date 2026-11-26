@@ -18,66 +18,66 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Single-link download speed limit configuration parameters
+ * Single connection download speed limit configuration parameter.
  *
- * @method string getMode() Obtain Download rate limit mode. valid values:.
-<Li>LimitUponDownload: rate limit throughout the download process;</li>.
-<Li>LimitAfterSpecificBytesDownloaded: rate limit after downloading specific bytes at full speed;</li>.
-<Li>LimitAfterSpecificSecondsDownloaded: start speed limit after downloading at full speed for a specific duration.</li>.
- * @method void setMode(string $Mode) Set Download rate limit mode. valid values:.
-<Li>LimitUponDownload: rate limit throughout the download process;</li>.
-<Li>LimitAfterSpecificBytesDownloaded: rate limit after downloading specific bytes at full speed;</li>.
-<Li>LimitAfterSpecificSecondsDownloaded: start speed limit after downloading at full speed for a specific duration.</li>.
- * @method string getMaxSpeed() Obtain The speed limit value specifies the size of the speed limit. fill in a value or variable with a unit. the currently supported unit is: KB/s.
- * @method void setMaxSpeed(string $MaxSpeed) Set The speed limit value specifies the size of the speed limit. fill in a value or variable with a unit. the currently supported unit is: KB/s.
- * @method string getStartAt() Obtain The speed limit start value can be download size or specified duration. fill in a value with unit or variable to specify download size or specified duration.
+ * @method string getMode() Obtain Download speed limit mode. Valid values:
+<li>LimitUponDownload: download speed limit for the entire process;</li>
+<li>LimitAfterSpecificBytesDownloaded: Start speed limit after downloading specific bytes at full speed;</li>
+<li>LimitAfterSpecificSecondsDownloaded: Start rate limiting after downloading at full speed for a specified time.</li>
+ * @method void setMode(string $Mode) Set Download speed limit mode. Valid values:
+<li>LimitUponDownload: download speed limit for the entire process;</li>
+<li>LimitAfterSpecificBytesDownloaded: Start speed limit after downloading specific bytes at full speed;</li>
+<li>LimitAfterSpecificSecondsDownloaded: Start rate limiting after downloading at full speed for a specified time.</li>
+ * @method string getMaxSpeed() Obtain Rate-limiting value. Specify the rate limit. Fill in a value with a unit or a variable. Currently supported unit: KB/s.
+ * @method void setMaxSpeed(string $MaxSpeed) Set Rate-limiting value. Specify the rate limit. Fill in a value with a unit or a variable. Currently supported unit: KB/s.
+ * @method string getStartAt() Obtain Speed limit start value, which can be the download size or specified duration. Fill in a value with a unit or a variable to specify the download size or duration.
 
--When the Mode value is LimitAfterSpecificBytesDownloaded, the valid values of the unit are: KB.
+-When Mode is LimitAfterSpecificBytesDownloaded, valid values of the unit are: KB;
 
--When the Mode value is LimitAfterSpecificSecondsDownloaded, the valid value of the unit is: s.
+-When Mode is LimitAfterSpecificSecondsDownloaded, valid values of the measurement unit: s.
 
- * @method void setStartAt(string $StartAt) Set The speed limit start value can be download size or specified duration. fill in a value with unit or variable to specify download size or specified duration.
+ * @method void setStartAt(string $StartAt) Set Speed limit start value, which can be the download size or specified duration. Fill in a value with a unit or a variable to specify the download size or duration.
 
--When the Mode value is LimitAfterSpecificBytesDownloaded, the valid values of the unit are: KB.
+-When Mode is LimitAfterSpecificBytesDownloaded, valid values of the unit are: KB;
 
--When the Mode value is LimitAfterSpecificSecondsDownloaded, the valid value of the unit is: s.
+-When Mode is LimitAfterSpecificSecondsDownloaded, valid values of the measurement unit: s.
  */
 class ResponseSpeedLimitParameters extends AbstractModel
 {
     /**
-     * @var string Download rate limit mode. valid values:.
-<Li>LimitUponDownload: rate limit throughout the download process;</li>.
-<Li>LimitAfterSpecificBytesDownloaded: rate limit after downloading specific bytes at full speed;</li>.
-<Li>LimitAfterSpecificSecondsDownloaded: start speed limit after downloading at full speed for a specific duration.</li>.
+     * @var string Download speed limit mode. Valid values:
+<li>LimitUponDownload: download speed limit for the entire process;</li>
+<li>LimitAfterSpecificBytesDownloaded: Start speed limit after downloading specific bytes at full speed;</li>
+<li>LimitAfterSpecificSecondsDownloaded: Start rate limiting after downloading at full speed for a specified time.</li>
      */
     public $Mode;
 
     /**
-     * @var string The speed limit value specifies the size of the speed limit. fill in a value or variable with a unit. the currently supported unit is: KB/s.
+     * @var string Rate-limiting value. Specify the rate limit. Fill in a value with a unit or a variable. Currently supported unit: KB/s.
      */
     public $MaxSpeed;
 
     /**
-     * @var string The speed limit start value can be download size or specified duration. fill in a value with unit or variable to specify download size or specified duration.
+     * @var string Speed limit start value, which can be the download size or specified duration. Fill in a value with a unit or a variable to specify the download size or duration.
 
--When the Mode value is LimitAfterSpecificBytesDownloaded, the valid values of the unit are: KB.
+-When Mode is LimitAfterSpecificBytesDownloaded, valid values of the unit are: KB;
 
--When the Mode value is LimitAfterSpecificSecondsDownloaded, the valid value of the unit is: s.
+-When Mode is LimitAfterSpecificSecondsDownloaded, valid values of the measurement unit: s.
 
      */
     public $StartAt;
 
     /**
-     * @param string $Mode Download rate limit mode. valid values:.
-<Li>LimitUponDownload: rate limit throughout the download process;</li>.
-<Li>LimitAfterSpecificBytesDownloaded: rate limit after downloading specific bytes at full speed;</li>.
-<Li>LimitAfterSpecificSecondsDownloaded: start speed limit after downloading at full speed for a specific duration.</li>.
-     * @param string $MaxSpeed The speed limit value specifies the size of the speed limit. fill in a value or variable with a unit. the currently supported unit is: KB/s.
-     * @param string $StartAt The speed limit start value can be download size or specified duration. fill in a value with unit or variable to specify download size or specified duration.
+     * @param string $Mode Download speed limit mode. Valid values:
+<li>LimitUponDownload: download speed limit for the entire process;</li>
+<li>LimitAfterSpecificBytesDownloaded: Start speed limit after downloading specific bytes at full speed;</li>
+<li>LimitAfterSpecificSecondsDownloaded: Start rate limiting after downloading at full speed for a specified time.</li>
+     * @param string $MaxSpeed Rate-limiting value. Specify the rate limit. Fill in a value with a unit or a variable. Currently supported unit: KB/s.
+     * @param string $StartAt Speed limit start value, which can be the download size or specified duration. Fill in a value with a unit or a variable to specify the download size or duration.
 
--When the Mode value is LimitAfterSpecificBytesDownloaded, the valid values of the unit are: KB.
+-When Mode is LimitAfterSpecificBytesDownloaded, valid values of the unit are: KB;
 
--When the Mode value is LimitAfterSpecificSecondsDownloaded, the valid value of the unit is: s.
+-When Mode is LimitAfterSpecificSecondsDownloaded, valid values of the measurement unit: s.
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CAPTCHA authentication instance information.
+ * Authenticate the instance information with a verification code.
  *
  * @method string getCaptchaAppId() Obtain CaptchaAppId information.
  * @method void setCaptchaAppId(string $CaptchaAppId) Set CaptchaAppId information.

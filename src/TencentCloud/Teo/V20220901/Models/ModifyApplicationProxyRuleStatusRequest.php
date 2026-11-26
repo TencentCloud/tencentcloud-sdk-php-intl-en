@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApplicationProxyRuleStatus request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getProxyId() Obtain The proxy ID.
- * @method void setProxyId(string $ProxyId) Set The proxy ID.
- * @method string getRuleId() Obtain The rule ID.
- * @method void setRuleId(string $RuleId) Set The rule ID.
- * @method string getStatus() Obtain The rule status. Values:
-<li>`offline`: Disabled</li>
-<li>`online`: Enabled</li>
- * @method void setStatus(string $Status) Set The rule status. Values:
-<li>`offline`: Disabled</li>
-<li>`online`: Enabled</li>
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method string getProxyId() Obtain Proxy ID.
+ * @method void setProxyId(string $ProxyId) Set Proxy ID.
+ * @method string getRuleId() Obtain Rule ID.
+ * @method void setRuleId(string $RuleId) Set Rule ID.
+ * @method string getStatus() Obtain Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li>
+ * @method void setStatus(string $Status) Set Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li>
  */
 class ModifyApplicationProxyRuleStatusRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var string The proxy ID.
+     * @var string Proxy ID.
      */
     public $ProxyId;
 
     /**
-     * @var string The rule ID.
+     * @var string Rule ID.
      */
     public $RuleId;
 
     /**
-     * @var string The rule status. Values:
-<li>`offline`: Disabled</li>
-<li>`online`: Enabled</li>
+     * @var string Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li>
      */
     public $Status;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $ProxyId The proxy ID.
-     * @param string $RuleId The rule ID.
-     * @param string $Status The rule status. Values:
-<li>`offline`: Disabled</li>
-<li>`online`: Enabled</li>
+     * @param string $ZoneId Site ID.
+     * @param string $ProxyId Proxy ID.
+     * @param string $RuleId Rule ID.
+     * @param string $Status Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li>
      */
     function __construct()
     {

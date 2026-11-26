@@ -18,356 +18,356 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rule engine operations.
+ * Rule engine operation.
  *
- * @method string getName() Obtain <p>Operation name. The name must correspond to the parameters structure. For example, if Name=Cache, then CacheParameters is required.<li>Cache: Node cache TTL;</li><li>CacheKey: Custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: Access URL redirection;</li><li>UpstreamURLRewrite: Origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token authentication;</li><li>MaxAge: Browser cache TTL;</li><li>StatusCodeCache: Status code cache TTL;</li><li>OfflineCache: Offline cache;</li><li>SmartRouting: Smart acceleration;</li><li>AdvancedOriginRouting: Advanced origin optimization;</li><li>RangeOriginPull: Range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin-pull;</li><li>HostHeader: Host header rewrite;</li><li>ForceRedirectHTTPS: Forced HTTPS redirect configuration;</li><li>OriginPullProtocol: Origin-pull HTTPS;</li><li>Compression: Intelligent compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Configuration for storing client IP address in the header;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: Maximum limit configuration for POST request upload file streaming transmission;</li><li>ClientIPCountry: Carrying regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: Upstream follow redirect parameter configuration;</li><li>UpstreamRequest: Origin-pull request parameters;</li><li>Shield: Origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: Modify origin server;</li><li>SiteFailover: Origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: Custom error page;</li><li>ModifyResponseHeader: Modify HTTP node response header;</li><li>ModifyRequestHeader: Modify HTTP node request header;</li><li>ResponseSpeedLimit: Single connection download speed limit;</li><li>SetContentIdentifier: Set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: Content compression configuration;</li><li>OriginAuthentication: Origin-pull authentication configuration;</li><li>CustomAction: Custom configuration.</li></p>
- * @method void setName(string $Name) Set <p>Operation name. The name must correspond to the parameters structure. For example, if Name=Cache, then CacheParameters is required.<li>Cache: Node cache TTL;</li><li>CacheKey: Custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: Access URL redirection;</li><li>UpstreamURLRewrite: Origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token authentication;</li><li>MaxAge: Browser cache TTL;</li><li>StatusCodeCache: Status code cache TTL;</li><li>OfflineCache: Offline cache;</li><li>SmartRouting: Smart acceleration;</li><li>AdvancedOriginRouting: Advanced origin optimization;</li><li>RangeOriginPull: Range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin-pull;</li><li>HostHeader: Host header rewrite;</li><li>ForceRedirectHTTPS: Forced HTTPS redirect configuration;</li><li>OriginPullProtocol: Origin-pull HTTPS;</li><li>Compression: Intelligent compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Configuration for storing client IP address in the header;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: Maximum limit configuration for POST request upload file streaming transmission;</li><li>ClientIPCountry: Carrying regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: Upstream follow redirect parameter configuration;</li><li>UpstreamRequest: Origin-pull request parameters;</li><li>Shield: Origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: Modify origin server;</li><li>SiteFailover: Origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: Custom error page;</li><li>ModifyResponseHeader: Modify HTTP node response header;</li><li>ModifyRequestHeader: Modify HTTP node request header;</li><li>ResponseSpeedLimit: Single connection download speed limit;</li><li>SetContentIdentifier: Set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: Content compression configuration;</li><li>OriginAuthentication: Origin-pull authentication configuration;</li><li>CustomAction: Custom configuration.</li></p>
- * @method CacheParameters getCacheParameters() Obtain <p>Node cache TTL configuration parameter. This parameter is required when the Name value is Cache.</p>
- * @method void setCacheParameters(CacheParameters $CacheParameters) Set <p>Node cache TTL configuration parameter. This parameter is required when the Name value is Cache.</p>
- * @method CacheKeyParameters getCacheKeyParameters() Obtain <p>Custom Cache Key configuration parameter. When Name value is CacheKey, this parameter is required.
- * @method void setCacheKeyParameters(CacheKeyParameters $CacheKeyParameters) Set <p>Custom Cache Key configuration parameter. When Name value is CacheKey, this parameter is required.
- * @method CachePrefreshParameters getCachePrefreshParameters() Obtain <p>Cache pre-refresh configuration parameter. This parameter is required when the Name value is CachePrefresh.</p>
- * @method void setCachePrefreshParameters(CachePrefreshParameters $CachePrefreshParameters) Set <p>Cache pre-refresh configuration parameter. This parameter is required when the Name value is CachePrefresh.</p>
- * @method AccessURLRedirectParameters getAccessURLRedirectParameters() Obtain <p>Access URL redirection configuration parameter. This parameter is required when the Name value is AccessURLRedirect.</p>
- * @method void setAccessURLRedirectParameters(AccessURLRedirectParameters $AccessURLRedirectParameters) Set <p>Access URL redirection configuration parameter. This parameter is required when the Name value is AccessURLRedirect.</p>
- * @method UpstreamURLRewriteParameters getUpstreamURLRewriteParameters() Obtain <p>Origin-pull URL rewrite configuration parameter. This parameter is required when the value of Name is UpstreamURLRewrite.</p>
- * @method void setUpstreamURLRewriteParameters(UpstreamURLRewriteParameters $UpstreamURLRewriteParameters) Set <p>Origin-pull URL rewrite configuration parameter. This parameter is required when the value of Name is UpstreamURLRewrite.</p>
- * @method QUICParameters getQUICParameters() Obtain <p>QUIC configuration parameter. This parameter is required when the Name value is QUIC.</p>
- * @method void setQUICParameters(QUICParameters $QUICParameters) Set <p>QUIC configuration parameter. This parameter is required when the Name value is QUIC.</p>
- * @method WebSocketParameters getWebSocketParameters() Obtain <p>WebSocket configuration parameter. This parameter is required when the Name value is WebSocket.</p>
- * @method void setWebSocketParameters(WebSocketParameters $WebSocketParameters) Set <p>WebSocket configuration parameter. This parameter is required when the Name value is WebSocket.</p>
- * @method AuthenticationParameters getAuthenticationParameters() Obtain <p>Token authentication configuration parameter. This parameter is required when the Name value is Authentication.</p>
- * @method void setAuthenticationParameters(AuthenticationParameters $AuthenticationParameters) Set <p>Token authentication configuration parameter. This parameter is required when the Name value is Authentication.</p>
- * @method MaxAgeParameters getMaxAgeParameters() Obtain <p>Browser cache TTL configuration parameter. This parameter is required when the value of Name is MaxAge.</p>
- * @method void setMaxAgeParameters(MaxAgeParameters $MaxAgeParameters) Set <p>Browser cache TTL configuration parameter. This parameter is required when the value of Name is MaxAge.</p>
- * @method StatusCodeCacheParameters getStatusCodeCacheParameters() Obtain <p>Status code cache TTL configuration parameter. This parameter is required when the Name value is StatusCodeCache.</p>
- * @method void setStatusCodeCacheParameters(StatusCodeCacheParameters $StatusCodeCacheParameters) Set <p>Status code cache TTL configuration parameter. This parameter is required when the Name value is StatusCodeCache.</p>
- * @method OfflineCacheParameters getOfflineCacheParameters() Obtain <p>Offline cache configuration parameter. This parameter is required when the Name value is OfflineCache.</p>
- * @method void setOfflineCacheParameters(OfflineCacheParameters $OfflineCacheParameters) Set <p>Offline cache configuration parameter. This parameter is required when the Name value is OfflineCache.</p>
- * @method SmartRoutingParameters getSmartRoutingParameters() Obtain <p>Smart acceleration configuration parameter. This parameter is required when the Name value is SmartRouting.</p>
- * @method void setSmartRoutingParameters(SmartRoutingParameters $SmartRoutingParameters) Set <p>Smart acceleration configuration parameter. This parameter is required when the Name value is SmartRouting.</p>
- * @method AdvancedOriginRoutingParameters getAdvancedOriginRoutingParameters() Obtain <p>Advanced origin optimization configuration parameter. This parameter is required when the Name value is AdvancedOriginRouting.</p>
- * @method void setAdvancedOriginRoutingParameters(AdvancedOriginRoutingParameters $AdvancedOriginRoutingParameters) Set <p>Advanced origin optimization configuration parameter. This parameter is required when the Name value is AdvancedOriginRouting.</p>
- * @method RangeOriginPullParameters getRangeOriginPullParameters() Obtain <p>Configuration parameter for range-based origin pull. This parameter is required when the value of Name is RangeOriginPull.</p>
- * @method void setRangeOriginPullParameters(RangeOriginPullParameters $RangeOriginPullParameters) Set <p>Configuration parameter for range-based origin pull. This parameter is required when the value of Name is RangeOriginPull.</p>
- * @method UpstreamHTTP2Parameters getUpstreamHTTP2Parameters() Obtain <p>HTTP2 origin configuration parameter. This parameter is required when the Name value is UpstreamHTTP2.</p>
- * @method void setUpstreamHTTP2Parameters(UpstreamHTTP2Parameters $UpstreamHTTP2Parameters) Set <p>HTTP2 origin configuration parameter. This parameter is required when the Name value is UpstreamHTTP2.</p>
- * @method HostHeaderParameters getHostHeaderParameters() Obtain <p>Host header rewrite configuration parameter. When the Name value is HostHeader, this parameter is required.</p>
- * @method void setHostHeaderParameters(HostHeaderParameters $HostHeaderParameters) Set <p>Host header rewrite configuration parameter. When the Name value is HostHeader, this parameter is required.</p>
- * @method ForceRedirectHTTPSParameters getForceRedirectHTTPSParameters() Obtain <p>Forced HTTPS redirect configuration for the access protocol. This parameter is required when the Name value is ForceRedirectHTTPS.</p>
- * @method void setForceRedirectHTTPSParameters(ForceRedirectHTTPSParameters $ForceRedirectHTTPSParameters) Set <p>Forced HTTPS redirect configuration for the access protocol. This parameter is required when the Name value is ForceRedirectHTTPS.</p>
- * @method OriginPullProtocolParameters getOriginPullProtocolParameters() Obtain <p>Origin HTTPS configuration parameter. This parameter is required when the Name value is OriginPullProtocol.</p>
- * @method void setOriginPullProtocolParameters(OriginPullProtocolParameters $OriginPullProtocolParameters) Set <p>Origin HTTPS configuration parameter. This parameter is required when the Name value is OriginPullProtocol.</p>
- * @method CompressionParameters getCompressionParameters() Obtain <p>Intelligent compression configuration. This parameter is required when the Name value is Compression.</p>
- * @method void setCompressionParameters(CompressionParameters $CompressionParameters) Set <p>Intelligent compression configuration. This parameter is required when the Name value is Compression.</p>
- * @method HSTSParameters getHSTSParameters() Obtain <p>HSTS configuration parameter. When the Name value is HSTS, this parameter is required.</p>
- * @method void setHSTSParameters(HSTSParameters $HSTSParameters) Set <p>HSTS configuration parameter. When the Name value is HSTS, this parameter is required.</p>
- * @method ClientIPHeaderParameters getClientIPHeaderParameters() Obtain <p>Configuration header information for storing client request IP. When the Name value is ClientIPHeader, this parameter is required.</p>
- * @method void setClientIPHeaderParameters(ClientIPHeaderParameters $ClientIPHeaderParameters) Set <p>Configuration header information for storing client request IP. When the Name value is ClientIPHeader, this parameter is required.</p>
- * @method OCSPStaplingParameters getOCSPStaplingParameters() Obtain <p>OCSP stapling configuration parameter. This parameter is required when Name value is OCSPStapling.</p>
- * @method void setOCSPStaplingParameters(OCSPStaplingParameters $OCSPStaplingParameters) Set <p>OCSP stapling configuration parameter. This parameter is required when Name value is OCSPStapling.</p>
- * @method HTTP2Parameters getHTTP2Parameters() Obtain <p>HTTP2 integration configuration parameter. This parameter is required when the Name value is HTTP2.</p>
- * @method void setHTTP2Parameters(HTTP2Parameters $HTTP2Parameters) Set <p>HTTP2 integration configuration parameter. This parameter is required when the Name value is HTTP2.</p>
- * @method PostMaxSizeParameters getPostMaxSizeParameters() Obtain <p>Maximum limit configuration for file streaming transmission in POST request upload. When the Name value is PostMaxSize, this parameter is required.</p>
- * @method void setPostMaxSizeParameters(PostMaxSizeParameters $PostMaxSizeParameters) Set <p>Maximum limit configuration for file streaming transmission in POST request upload. When the Name value is PostMaxSize, this parameter is required.</p>
- * @method ClientIPCountryParameters getClientIPCountryParameters() Obtain <p>Configuration parameter for carrying client IP regional information during origin pull. When the Name value is ClientIPCountry, this parameter is required.</p>
- * @method void setClientIPCountryParameters(ClientIPCountryParameters $ClientIPCountryParameters) Set <p>Configuration parameter for carrying client IP regional information during origin pull. When the Name value is ClientIPCountry, this parameter is required.</p>
- * @method UpstreamFollowRedirectParameters getUpstreamFollowRedirectParameters() Obtain <p>Origin-pull follow redirect parameter configuration. This parameter is required when the Name value is UpstreamFollowRedirect.</p>
- * @method void setUpstreamFollowRedirectParameters(UpstreamFollowRedirectParameters $UpstreamFollowRedirectParameters) Set <p>Origin-pull follow redirect parameter configuration. This parameter is required when the Name value is UpstreamFollowRedirect.</p>
- * @method UpstreamRequestParameters getUpstreamRequestParameters() Obtain <p>Origin-pull request parameter configuration parameter. This parameter is required when the Name value is UpstreamRequest.</p>
- * @method void setUpstreamRequestParameters(UpstreamRequestParameters $UpstreamRequestParameters) Set <p>Origin-pull request parameter configuration parameter. This parameter is required when the Name value is UpstreamRequest.</p>
- * @method ShieldParameters getShieldParameters() Obtain <p>Origin server uninstallation configuration parameter. This parameter is required when the Name value is Shield.</p>
- * @method void setShieldParameters(ShieldParameters $ShieldParameters) Set <p>Origin server uninstallation configuration parameter. This parameter is required when the Name value is Shield.</p>
- * @method TLSConfigParameters getTLSConfigParameters() Obtain <p>SSL/TLS security configuration parameter. This parameter is required when the Name value is TLSConfig.</p>
- * @method void setTLSConfigParameters(TLSConfigParameters $TLSConfigParameters) Set <p>SSL/TLS security configuration parameter. This parameter is required when the Name value is TLSConfig.</p>
- * @method ModifyOriginParameters getModifyOriginParameters() Obtain <p>Modify origin server configuration parameter. When the Name value is ModifyOrigin, this parameter is required.</p>
- * @method void setModifyOriginParameters(ModifyOriginParameters $ModifyOriginParameters) Set <p>Modify origin server configuration parameter. When the Name value is ModifyOrigin, this parameter is required.</p>
- * @method SiteFailoverParameters getSiteFailoverParameters() Obtain <p>Source site fault migration config. When the Name value is SiteFailover, this parameter is required.</p>
- * @method void setSiteFailoverParameters(SiteFailoverParameters $SiteFailoverParameters) Set <p>Source site fault migration config. When the Name value is SiteFailover, this parameter is required.</p>
- * @method HTTPUpstreamTimeoutParameters getHTTPUpstreamTimeoutParameters() Obtain <p>Layer 7 origin pull timeout configuration. This parameter is required when the Name value is HTTPUpstreamTimeout.</p>
- * @method void setHTTPUpstreamTimeoutParameters(HTTPUpstreamTimeoutParameters $HTTPUpstreamTimeoutParameters) Set <p>Layer 7 origin pull timeout configuration. This parameter is required when the Name value is HTTPUpstreamTimeout.</p>
- * @method HTTPResponseParameters getHttpResponseParameters() Obtain <p>HTTP response configuration parameter. This parameter is required when the Name value is HttpResponse.</p>
- * @method void setHttpResponseParameters(HTTPResponseParameters $HttpResponseParameters) Set <p>HTTP response configuration parameter. This parameter is required when the Name value is HttpResponse.</p>
- * @method ErrorPageParameters getErrorPageParameters() Obtain <p>Custom error page configuration parameter. This parameter is required when the value of Name is ErrorPage.</p>
- * @method void setErrorPageParameters(ErrorPageParameters $ErrorPageParameters) Set <p>Custom error page configuration parameter. This parameter is required when the value of Name is ErrorPage.</p>
- * @method ModifyResponseHeaderParameters getModifyResponseHeaderParameters() Obtain <p>Modify the HTTP node response header configuration parameter. This parameter is required when the Name value is ModifyResponseHeader.</p>
- * @method void setModifyResponseHeaderParameters(ModifyResponseHeaderParameters $ModifyResponseHeaderParameters) Set <p>Modify the HTTP node response header configuration parameter. This parameter is required when the Name value is ModifyResponseHeader.</p>
- * @method ModifyRequestHeaderParameters getModifyRequestHeaderParameters() Obtain <p>Modify the request header configuration parameter of the HTTP node. This parameter is required when the Name value is ModifyRequestHeader.</p>
- * @method void setModifyRequestHeaderParameters(ModifyRequestHeaderParameters $ModifyRequestHeaderParameters) Set <p>Modify the request header configuration parameter of the HTTP node. This parameter is required when the Name value is ModifyRequestHeader.</p>
- * @method ResponseSpeedLimitParameters getResponseSpeedLimitParameters() Obtain <p>Single connection download speed limit configuration parameter. This parameter is required when the Name value is ResponseSpeedLimit.</p>
- * @method void setResponseSpeedLimitParameters(ResponseSpeedLimitParameters $ResponseSpeedLimitParameters) Set <p>Single connection download speed limit configuration parameter. This parameter is required when the Name value is ResponseSpeedLimit.</p>
- * @method SetContentIdentifierParameters getSetContentIdentifierParameters() Obtain <p>Content identification configuration parameter. This parameter is required when the Name value is SetContentIdentifier.</p>
- * @method void setSetContentIdentifierParameters(SetContentIdentifierParameters $SetContentIdentifierParameters) Set <p>Content identification configuration parameter. This parameter is required when the Name value is SetContentIdentifier.</p>
- * @method VaryParameters getVaryParameters() Obtain <p>Vary feature configuration parameter. This parameter is required when the Name value is Vary.</p>
- * @method void setVaryParameters(VaryParameters $VaryParameters) Set <p>Vary feature configuration parameter. This parameter is required when the Name value is Vary.</p>
- * @method ContentCompressionParameters getContentCompressionParameters() Obtain <p>Content compression configuration parameter. When the Name value is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
- * @method void setContentCompressionParameters(ContentCompressionParameters $ContentCompressionParameters) Set <p>Content compression configuration parameter. When the Name value is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
- * @method OriginAuthenticationParameters getOriginAuthenticationParameters() Obtain <p>Origin authentication configuration parameter. This parameter is required when Name value is OriginAuthentication. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
- * @method void setOriginAuthenticationParameters(OriginAuthenticationParameters $OriginAuthenticationParameters) Set <p>Origin authentication configuration parameter. This parameter is required when Name value is OriginAuthentication. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
- * @method CustomActionParameters getCustomActionParameters() Obtain <p>Custom configuration operation parameter. This parameter is required when the Name value is CustomAction.</p><p>You can obtain the list of currently supported custom configuration items through the CustomActionSet returned value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
- * @method void setCustomActionParameters(CustomActionParameters $CustomActionParameters) Set <p>Custom configuration operation parameter. This parameter is required when the Name value is CustomAction.</p><p>You can obtain the list of currently supported custom configuration items through the CustomActionSet returned value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+ * @method string getName() Obtain <p>Operation Name. The Name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.<li>Cache: node Cache TTL;</li><li>CacheKey: custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: access URL redirection;</li><li>UpstreamURLRewrite: origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token Authentication;</li><li>MaxAge: browser Cache TTL;</li><li>StatusCodeCache: status code Cache TTL;</li><li>OfflineCache: offline Cache;</li><li>SmartRouting: smart acceleration;</li><li>AdvancedOriginRouting: advanced origin optimization;</li><li>RangeOriginPull: range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin pull;</li><li>HostHeader: Host Header rewrite;</li><li>ForceRedirectHTTPS: forced HTTPS redirect configuration for access protocol;</li><li>OriginPullProtocol: origin-pull HTTPS;</li><li>Compression: intelligent Compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Header information configuration for storing client request IP;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: maximum limit configuration for streaming transmission of POST request upload files;</li><li>ClientIPCountry: carry the regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: origin-pull follow redirect parameter configuration;</li><li>UpstreamRequest: origin-pull request parameters;</li><li>Shield: origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: modify origin server;</li><li>SiteFailover: origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer 7 origin pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: custom error page;</li><li>ModifyResponseHeader: modify HTTP node response Header;</li><li>ModifyRequestHeader: modify HTTP node request Header;</li><li>ResponseSpeedLimit: single connection download speed limit;</li><li>SetContentIdentifier: set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: content Compression configuration;</li><li>OriginAuthentication: origin-pull Authentication configuration;</li><li>CustomAction: custom configuration.</li></p>
+ * @method void setName(string $Name) Set <p>Operation Name. The Name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.<li>Cache: node Cache TTL;</li><li>CacheKey: custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: access URL redirection;</li><li>UpstreamURLRewrite: origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token Authentication;</li><li>MaxAge: browser Cache TTL;</li><li>StatusCodeCache: status code Cache TTL;</li><li>OfflineCache: offline Cache;</li><li>SmartRouting: smart acceleration;</li><li>AdvancedOriginRouting: advanced origin optimization;</li><li>RangeOriginPull: range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin pull;</li><li>HostHeader: Host Header rewrite;</li><li>ForceRedirectHTTPS: forced HTTPS redirect configuration for access protocol;</li><li>OriginPullProtocol: origin-pull HTTPS;</li><li>Compression: intelligent Compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Header information configuration for storing client request IP;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: maximum limit configuration for streaming transmission of POST request upload files;</li><li>ClientIPCountry: carry the regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: origin-pull follow redirect parameter configuration;</li><li>UpstreamRequest: origin-pull request parameters;</li><li>Shield: origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: modify origin server;</li><li>SiteFailover: origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer 7 origin pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: custom error page;</li><li>ModifyResponseHeader: modify HTTP node response Header;</li><li>ModifyRequestHeader: modify HTTP node request Header;</li><li>ResponseSpeedLimit: single connection download speed limit;</li><li>SetContentIdentifier: set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: content Compression configuration;</li><li>OriginAuthentication: origin-pull Authentication configuration;</li><li>CustomAction: custom configuration.</li></p>
+ * @method CacheParameters getCacheParameters() Obtain <p>Node cache TTL configuration parameter. This parameter is required when Name is Cache.</p>
+ * @method void setCacheParameters(CacheParameters $CacheParameters) Set <p>Node cache TTL configuration parameter. This parameter is required when Name is Cache.</p>
+ * @method CacheKeyParameters getCacheKeyParameters() Obtain <p>Custom Cache Key configuration parameter. When Name is CacheKey, this parameter is required.</p>
+ * @method void setCacheKeyParameters(CacheKeyParameters $CacheKeyParameters) Set <p>Custom Cache Key configuration parameter. When Name is CacheKey, this parameter is required.</p>
+ * @method CachePrefreshParameters getCachePrefreshParameters() Obtain <p>Cache pre-refresh configuration parameter. This parameter is required when Name value is CachePrefresh.</p>
+ * @method void setCachePrefreshParameters(CachePrefreshParameters $CachePrefreshParameters) Set <p>Cache pre-refresh configuration parameter. This parameter is required when Name value is CachePrefresh.</p>
+ * @method AccessURLRedirectParameters getAccessURLRedirectParameters() Obtain <p>Access URL redirection configuration parameter. This parameter is required when Name is AccessURLRedirect.</p>
+ * @method void setAccessURLRedirectParameters(AccessURLRedirectParameters $AccessURLRedirectParameters) Set <p>Access URL redirection configuration parameter. This parameter is required when Name is AccessURLRedirect.</p>
+ * @method UpstreamURLRewriteParameters getUpstreamURLRewriteParameters() Obtain <p>Origin-pull URL rewrite configuration parameter. This parameter is required if Name is UpstreamURLRewrite.</p>
+ * @method void setUpstreamURLRewriteParameters(UpstreamURLRewriteParameters $UpstreamURLRewriteParameters) Set <p>Origin-pull URL rewrite configuration parameter. This parameter is required if Name is UpstreamURLRewrite.</p>
+ * @method QUICParameters getQUICParameters() Obtain <p>QUIC configuration parameter. This parameter is required when the value of Name is QUIC.</p>
+ * @method void setQUICParameters(QUICParameters $QUICParameters) Set <p>QUIC configuration parameter. This parameter is required when the value of Name is QUIC.</p>
+ * @method WebSocketParameters getWebSocketParameters() Obtain <p>WebSocket configuration parameter. This parameter is required when Name is WebSocket.</p>
+ * @method void setWebSocketParameters(WebSocketParameters $WebSocketParameters) Set <p>WebSocket configuration parameter. This parameter is required when Name is WebSocket.</p>
+ * @method AuthenticationParameters getAuthenticationParameters() Obtain <p>Token authentication configuration parameter. When the value of Name is Authentication, this parameter is required.</p>
+ * @method void setAuthenticationParameters(AuthenticationParameters $AuthenticationParameters) Set <p>Token authentication configuration parameter. When the value of Name is Authentication, this parameter is required.</p>
+ * @method MaxAgeParameters getMaxAgeParameters() Obtain <p>Browser cache TTL configuration parameter. This parameter is required when Name is MaxAge.</p>
+ * @method void setMaxAgeParameters(MaxAgeParameters $MaxAgeParameters) Set <p>Browser cache TTL configuration parameter. This parameter is required when Name is MaxAge.</p>
+ * @method StatusCodeCacheParameters getStatusCodeCacheParameters() Obtain <p>Status code cache TTL configuration parameter. This parameter is required when Name is StatusCodeCache.</p>
+ * @method void setStatusCodeCacheParameters(StatusCodeCacheParameters $StatusCodeCacheParameters) Set <p>Status code cache TTL configuration parameter. This parameter is required when Name is StatusCodeCache.</p>
+ * @method OfflineCacheParameters getOfflineCacheParameters() Obtain <p>Offline cache configuration parameter. This parameter is required when Name value is OfflineCache.</p>
+ * @method void setOfflineCacheParameters(OfflineCacheParameters $OfflineCacheParameters) Set <p>Offline cache configuration parameter. This parameter is required when Name value is OfflineCache.</p>
+ * @method SmartRoutingParameters getSmartRoutingParameters() Obtain <p>Smart acceleration configuration parameter. This parameter is required when the value of Name is SmartRouting.</p>
+ * @method void setSmartRoutingParameters(SmartRoutingParameters $SmartRoutingParameters) Set <p>Smart acceleration configuration parameter. This parameter is required when the value of Name is SmartRouting.</p>
+ * @method AdvancedOriginRoutingParameters getAdvancedOriginRoutingParameters() Obtain <p>Advanced origin-pull optimization configuration parameters. When the value of Name is AdvancedOriginRouting, this parameter is required.</p>
+ * @method void setAdvancedOriginRoutingParameters(AdvancedOriginRoutingParameters $AdvancedOriginRoutingParameters) Set <p>Advanced origin-pull optimization configuration parameters. When the value of Name is AdvancedOriginRouting, this parameter is required.</p>
+ * @method RangeOriginPullParameters getRangeOriginPullParameters() Obtain <p>Range-based origin pull configuration parameter. This parameter is required when Name is RangeOriginPull.</p>
+ * @method void setRangeOriginPullParameters(RangeOriginPullParameters $RangeOriginPullParameters) Set <p>Range-based origin pull configuration parameter. This parameter is required when Name is RangeOriginPull.</p>
+ * @method UpstreamHTTP2Parameters getUpstreamHTTP2Parameters() Obtain <p>HTTP2 origin-pull configuration parameter. This parameter is required if Name is UpstreamHTTP2.</p>
+ * @method void setUpstreamHTTP2Parameters(UpstreamHTTP2Parameters $UpstreamHTTP2Parameters) Set <p>HTTP2 origin-pull configuration parameter. This parameter is required if Name is UpstreamHTTP2.</p>
+ * @method HostHeaderParameters getHostHeaderParameters() Obtain <p>Host Header rewrite configuration parameters. When the value of Name is HostHeader, this parameter is required.</p>
+ * @method void setHostHeaderParameters(HostHeaderParameters $HostHeaderParameters) Set <p>Host Header rewrite configuration parameters. When the value of Name is HostHeader, this parameter is required.</p>
+ * @method ForceRedirectHTTPSParameters getForceRedirectHTTPSParameters() Obtain <p>Access protocol forced HTTPS redirect configuration. This parameter is required when Name is ForceRedirectHTTPS.</p>
+ * @method void setForceRedirectHTTPSParameters(ForceRedirectHTTPSParameters $ForceRedirectHTTPSParameters) Set <p>Access protocol forced HTTPS redirect configuration. This parameter is required when Name is ForceRedirectHTTPS.</p>
+ * @method OriginPullProtocolParameters getOriginPullProtocolParameters() Obtain <p>Origin-pull HTTPS configuration parameter. This is required if Name is OriginPullProtocol.</p>
+ * @method void setOriginPullProtocolParameters(OriginPullProtocolParameters $OriginPullProtocolParameters) Set <p>Origin-pull HTTPS configuration parameter. This is required if Name is OriginPullProtocol.</p>
+ * @method CompressionParameters getCompressionParameters() Obtain <p>Intelligent compression configuration. This parameter is required when the value of Name is Compression.</p>
+ * @method void setCompressionParameters(CompressionParameters $CompressionParameters) Set <p>Intelligent compression configuration. This parameter is required when the value of Name is Compression.</p>
+ * @method HSTSParameters getHSTSParameters() Obtain <p>HSTS configuration parameter. This parameter is required when the value of Name is HSTS.</p>
+ * @method void setHSTSParameters(HSTSParameters $HSTSParameters) Set <p>HSTS configuration parameter. This parameter is required when the value of Name is HSTS.</p>
+ * @method ClientIPHeaderParameters getClientIPHeaderParameters() Obtain <p>Header information configuration for storing client request IPs. This parameter is required when Name is ClientIPHeader.</p>
+ * @method void setClientIPHeaderParameters(ClientIPHeaderParameters $ClientIPHeaderParameters) Set <p>Header information configuration for storing client request IPs. This parameter is required when Name is ClientIPHeader.</p>
+ * @method OCSPStaplingParameters getOCSPStaplingParameters() Obtain <p>OCSP stapling configuration parameter. This parameter is required when Name is OCSPStapling.</p>
+ * @method void setOCSPStaplingParameters(OCSPStaplingParameters $OCSPStaplingParameters) Set <p>OCSP stapling configuration parameter. This parameter is required when Name is OCSPStapling.</p>
+ * @method HTTP2Parameters getHTTP2Parameters() Obtain <p>HTTP2 integration configuration parameter. This parameter is required when Name is HTTP2.</p>
+ * @method void setHTTP2Parameters(HTTP2Parameters $HTTP2Parameters) Set <p>HTTP2 integration configuration parameter. This parameter is required when Name is HTTP2.</p>
+ * @method PostMaxSizeParameters getPostMaxSizeParameters() Obtain <p>POST request upload file streaming transmission maximum limit configuration. When the value of Name is PostMaxSize, this parameter is required.</p>
+ * @method void setPostMaxSizeParameters(PostMaxSizeParameters $PostMaxSizeParameters) Set <p>POST request upload file streaming transmission maximum limit configuration. When the value of Name is PostMaxSize, this parameter is required.</p>
+ * @method ClientIPCountryParameters getClientIPCountryParameters() Obtain <p>Configuration parameter for carrying the client IP region information during origin-pull. This parameter is required when the value of Name is ClientIPCountry.</p>
+ * @method void setClientIPCountryParameters(ClientIPCountryParameters $ClientIPCountryParameters) Set <p>Configuration parameter for carrying the client IP region information during origin-pull. This parameter is required when the value of Name is ClientIPCountry.</p>
+ * @method UpstreamFollowRedirectParameters getUpstreamFollowRedirectParameters() Obtain <p>Origin-pull follow redirect parameter configuration. When the value of Name is UpstreamFollowRedirect, this parameter is required.</p>
+ * @method void setUpstreamFollowRedirectParameters(UpstreamFollowRedirectParameters $UpstreamFollowRedirectParameters) Set <p>Origin-pull follow redirect parameter configuration. When the value of Name is UpstreamFollowRedirect, this parameter is required.</p>
+ * @method UpstreamRequestParameters getUpstreamRequestParameters() Obtain <p>Origin-pull request parameter configuration parameter. This parameter is required when Name is UpstreamRequest.</p>
+ * @method void setUpstreamRequestParameters(UpstreamRequestParameters $UpstreamRequestParameters) Set <p>Origin-pull request parameter configuration parameter. This parameter is required when Name is UpstreamRequest.</p>
+ * @method ShieldParameters getShieldParameters() Obtain <p>Origin server uninstallation configuration parameter. This parameter is required when the value of Name is Shield.</p>
+ * @method void setShieldParameters(ShieldParameters $ShieldParameters) Set <p>Origin server uninstallation configuration parameter. This parameter is required when the value of Name is Shield.</p>
+ * @method TLSConfigParameters getTLSConfigParameters() Obtain <p>SSL/TLS security configuration parameter. This parameter is required when Name is TLSConfig.</p>
+ * @method void setTLSConfigParameters(TLSConfigParameters $TLSConfigParameters) Set <p>SSL/TLS security configuration parameter. This parameter is required when Name is TLSConfig.</p>
+ * @method ModifyOriginParameters getModifyOriginParameters() Obtain <p>Modify origin configuration parameters. When the value of Name is ModifyOrigin, this parameter is required.</p>
+ * @method void setModifyOriginParameters(ModifyOriginParameters $ModifyOriginParameters) Set <p>Modify origin configuration parameters. When the value of Name is ModifyOrigin, this parameter is required.</p>
+ * @method SiteFailoverParameters getSiteFailoverParameters() Obtain <p>Origin server failover configuration parameter. This parameter is required when Name is SiteFailover.</p>
+ * @method void setSiteFailoverParameters(SiteFailoverParameters $SiteFailoverParameters) Set <p>Origin server failover configuration parameter. This parameter is required when Name is SiteFailover.</p>
+ * @method HTTPUpstreamTimeoutParameters getHTTPUpstreamTimeoutParameters() Obtain <p>Layer 7 origin pull timeout configuration. This parameter is required when Name is HTTPUpstreamTimeout.</p>
+ * @method void setHTTPUpstreamTimeoutParameters(HTTPUpstreamTimeoutParameters $HTTPUpstreamTimeoutParameters) Set <p>Layer 7 origin pull timeout configuration. This parameter is required when Name is HTTPUpstreamTimeout.</p>
+ * @method HTTPResponseParameters getHttpResponseParameters() Obtain <p>HTTP response configuration parameter. This parameter is required when Name is HttpResponse.</p>
+ * @method void setHttpResponseParameters(HTTPResponseParameters $HttpResponseParameters) Set <p>HTTP response configuration parameter. This parameter is required when Name is HttpResponse.</p>
+ * @method ErrorPageParameters getErrorPageParameters() Obtain <p>Custom error page configuration parameter. This parameter is required when Name is ErrorPage.</p>
+ * @method void setErrorPageParameters(ErrorPageParameters $ErrorPageParameters) Set <p>Custom error page configuration parameter. This parameter is required when Name is ErrorPage.</p>
+ * @method ModifyResponseHeaderParameters getModifyResponseHeaderParameters() Obtain <p>Modify HTTP node response header configuration parameters. This parameter is required when Name is ModifyResponseHeader.</p>
+ * @method void setModifyResponseHeaderParameters(ModifyResponseHeaderParameters $ModifyResponseHeaderParameters) Set <p>Modify HTTP node response header configuration parameters. This parameter is required when Name is ModifyResponseHeader.</p>
+ * @method ModifyRequestHeaderParameters getModifyRequestHeaderParameters() Obtain <p>Modify the HTTP node request header configuration parameter. This parameter is required if Name is ModifyRequestHeader.</p>
+ * @method void setModifyRequestHeaderParameters(ModifyRequestHeaderParameters $ModifyRequestHeaderParameters) Set <p>Modify the HTTP node request header configuration parameter. This parameter is required if Name is ModifyRequestHeader.</p>
+ * @method ResponseSpeedLimitParameters getResponseSpeedLimitParameters() Obtain <p>Single connection download speed limit configuration parameter. This parameter is required when Name is ResponseSpeedLimit.</p>
+ * @method void setResponseSpeedLimitParameters(ResponseSpeedLimitParameters $ResponseSpeedLimitParameters) Set <p>Single connection download speed limit configuration parameter. This parameter is required when Name is ResponseSpeedLimit.</p>
+ * @method SetContentIdentifierParameters getSetContentIdentifierParameters() Obtain <p>Content identification configuration parameter. This parameter is required when the value of Name is SetContentIdentifier.</p>
+ * @method void setSetContentIdentifierParameters(SetContentIdentifierParameters $SetContentIdentifierParameters) Set <p>Content identification configuration parameter. This parameter is required when the value of Name is SetContentIdentifier.</p>
+ * @method VaryParameters getVaryParameters() Obtain <p>Vary feature configuration parameter. When the value of Name is Vary, this parameter is required.</p>
+ * @method void setVaryParameters(VaryParameters $VaryParameters) Set <p>Vary feature configuration parameter. When the value of Name is Vary, this parameter is required.</p>
+ * @method ContentCompressionParameters getContentCompressionParameters() Obtain <p>Content compression configuration parameter. When the value of Name is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
+ * @method void setContentCompressionParameters(ContentCompressionParameters $ContentCompressionParameters) Set <p>Content compression configuration parameter. When the value of Name is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
+ * @method OriginAuthenticationParameters getOriginAuthenticationParameters() Obtain <p>Origin authentication configuration parameter. When the value of Name is OriginAuthentication, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
+ * @method void setOriginAuthenticationParameters(OriginAuthenticationParameters $OriginAuthenticationParameters) Set <p>Origin authentication configuration parameter. When the value of Name is OriginAuthentication, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
+ * @method CustomActionParameters getCustomActionParameters() Obtain <p>Custom configuration operation parameter. This parameter is required when the value of Name is CustomAction.</p><p>You can get the list of currently supported custom configuration items through the returned value CustomActionSet of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+ * @method void setCustomActionParameters(CustomActionParameters $CustomActionParameters) Set <p>Custom configuration operation parameter. This parameter is required when the value of Name is CustomAction.</p><p>You can get the list of currently supported custom configuration items through the returned value CustomActionSet of the DescribeAvailableCustomActionsForRuleEngine API.</p>
  */
 class RuleEngineAction extends AbstractModel
 {
     /**
-     * @var string <p>Operation name. The name must correspond to the parameters structure. For example, if Name=Cache, then CacheParameters is required.<li>Cache: Node cache TTL;</li><li>CacheKey: Custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: Access URL redirection;</li><li>UpstreamURLRewrite: Origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token authentication;</li><li>MaxAge: Browser cache TTL;</li><li>StatusCodeCache: Status code cache TTL;</li><li>OfflineCache: Offline cache;</li><li>SmartRouting: Smart acceleration;</li><li>AdvancedOriginRouting: Advanced origin optimization;</li><li>RangeOriginPull: Range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin-pull;</li><li>HostHeader: Host header rewrite;</li><li>ForceRedirectHTTPS: Forced HTTPS redirect configuration;</li><li>OriginPullProtocol: Origin-pull HTTPS;</li><li>Compression: Intelligent compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Configuration for storing client IP address in the header;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: Maximum limit configuration for POST request upload file streaming transmission;</li><li>ClientIPCountry: Carrying regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: Upstream follow redirect parameter configuration;</li><li>UpstreamRequest: Origin-pull request parameters;</li><li>Shield: Origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: Modify origin server;</li><li>SiteFailover: Origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: Custom error page;</li><li>ModifyResponseHeader: Modify HTTP node response header;</li><li>ModifyRequestHeader: Modify HTTP node request header;</li><li>ResponseSpeedLimit: Single connection download speed limit;</li><li>SetContentIdentifier: Set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: Content compression configuration;</li><li>OriginAuthentication: Origin-pull authentication configuration;</li><li>CustomAction: Custom configuration.</li></p>
+     * @var string <p>Operation Name. The Name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.<li>Cache: node Cache TTL;</li><li>CacheKey: custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: access URL redirection;</li><li>UpstreamURLRewrite: origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token Authentication;</li><li>MaxAge: browser Cache TTL;</li><li>StatusCodeCache: status code Cache TTL;</li><li>OfflineCache: offline Cache;</li><li>SmartRouting: smart acceleration;</li><li>AdvancedOriginRouting: advanced origin optimization;</li><li>RangeOriginPull: range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin pull;</li><li>HostHeader: Host Header rewrite;</li><li>ForceRedirectHTTPS: forced HTTPS redirect configuration for access protocol;</li><li>OriginPullProtocol: origin-pull HTTPS;</li><li>Compression: intelligent Compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Header information configuration for storing client request IP;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: maximum limit configuration for streaming transmission of POST request upload files;</li><li>ClientIPCountry: carry the regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: origin-pull follow redirect parameter configuration;</li><li>UpstreamRequest: origin-pull request parameters;</li><li>Shield: origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: modify origin server;</li><li>SiteFailover: origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer 7 origin pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: custom error page;</li><li>ModifyResponseHeader: modify HTTP node response Header;</li><li>ModifyRequestHeader: modify HTTP node request Header;</li><li>ResponseSpeedLimit: single connection download speed limit;</li><li>SetContentIdentifier: set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: content Compression configuration;</li><li>OriginAuthentication: origin-pull Authentication configuration;</li><li>CustomAction: custom configuration.</li></p>
      */
     public $Name;
 
     /**
-     * @var CacheParameters <p>Node cache TTL configuration parameter. This parameter is required when the Name value is Cache.</p>
+     * @var CacheParameters <p>Node cache TTL configuration parameter. This parameter is required when Name is Cache.</p>
      */
     public $CacheParameters;
 
     /**
-     * @var CacheKeyParameters <p>Custom Cache Key configuration parameter. When Name value is CacheKey, this parameter is required.
+     * @var CacheKeyParameters <p>Custom Cache Key configuration parameter. When Name is CacheKey, this parameter is required.</p>
      */
     public $CacheKeyParameters;
 
     /**
-     * @var CachePrefreshParameters <p>Cache pre-refresh configuration parameter. This parameter is required when the Name value is CachePrefresh.</p>
+     * @var CachePrefreshParameters <p>Cache pre-refresh configuration parameter. This parameter is required when Name value is CachePrefresh.</p>
      */
     public $CachePrefreshParameters;
 
     /**
-     * @var AccessURLRedirectParameters <p>Access URL redirection configuration parameter. This parameter is required when the Name value is AccessURLRedirect.</p>
+     * @var AccessURLRedirectParameters <p>Access URL redirection configuration parameter. This parameter is required when Name is AccessURLRedirect.</p>
      */
     public $AccessURLRedirectParameters;
 
     /**
-     * @var UpstreamURLRewriteParameters <p>Origin-pull URL rewrite configuration parameter. This parameter is required when the value of Name is UpstreamURLRewrite.</p>
+     * @var UpstreamURLRewriteParameters <p>Origin-pull URL rewrite configuration parameter. This parameter is required if Name is UpstreamURLRewrite.</p>
      */
     public $UpstreamURLRewriteParameters;
 
     /**
-     * @var QUICParameters <p>QUIC configuration parameter. This parameter is required when the Name value is QUIC.</p>
+     * @var QUICParameters <p>QUIC configuration parameter. This parameter is required when the value of Name is QUIC.</p>
      */
     public $QUICParameters;
 
     /**
-     * @var WebSocketParameters <p>WebSocket configuration parameter. This parameter is required when the Name value is WebSocket.</p>
+     * @var WebSocketParameters <p>WebSocket configuration parameter. This parameter is required when Name is WebSocket.</p>
      */
     public $WebSocketParameters;
 
     /**
-     * @var AuthenticationParameters <p>Token authentication configuration parameter. This parameter is required when the Name value is Authentication.</p>
+     * @var AuthenticationParameters <p>Token authentication configuration parameter. When the value of Name is Authentication, this parameter is required.</p>
      */
     public $AuthenticationParameters;
 
     /**
-     * @var MaxAgeParameters <p>Browser cache TTL configuration parameter. This parameter is required when the value of Name is MaxAge.</p>
+     * @var MaxAgeParameters <p>Browser cache TTL configuration parameter. This parameter is required when Name is MaxAge.</p>
      */
     public $MaxAgeParameters;
 
     /**
-     * @var StatusCodeCacheParameters <p>Status code cache TTL configuration parameter. This parameter is required when the Name value is StatusCodeCache.</p>
+     * @var StatusCodeCacheParameters <p>Status code cache TTL configuration parameter. This parameter is required when Name is StatusCodeCache.</p>
      */
     public $StatusCodeCacheParameters;
 
     /**
-     * @var OfflineCacheParameters <p>Offline cache configuration parameter. This parameter is required when the Name value is OfflineCache.</p>
+     * @var OfflineCacheParameters <p>Offline cache configuration parameter. This parameter is required when Name value is OfflineCache.</p>
      */
     public $OfflineCacheParameters;
 
     /**
-     * @var SmartRoutingParameters <p>Smart acceleration configuration parameter. This parameter is required when the Name value is SmartRouting.</p>
+     * @var SmartRoutingParameters <p>Smart acceleration configuration parameter. This parameter is required when the value of Name is SmartRouting.</p>
      */
     public $SmartRoutingParameters;
 
     /**
-     * @var AdvancedOriginRoutingParameters <p>Advanced origin optimization configuration parameter. This parameter is required when the Name value is AdvancedOriginRouting.</p>
+     * @var AdvancedOriginRoutingParameters <p>Advanced origin-pull optimization configuration parameters. When the value of Name is AdvancedOriginRouting, this parameter is required.</p>
      */
     public $AdvancedOriginRoutingParameters;
 
     /**
-     * @var RangeOriginPullParameters <p>Configuration parameter for range-based origin pull. This parameter is required when the value of Name is RangeOriginPull.</p>
+     * @var RangeOriginPullParameters <p>Range-based origin pull configuration parameter. This parameter is required when Name is RangeOriginPull.</p>
      */
     public $RangeOriginPullParameters;
 
     /**
-     * @var UpstreamHTTP2Parameters <p>HTTP2 origin configuration parameter. This parameter is required when the Name value is UpstreamHTTP2.</p>
+     * @var UpstreamHTTP2Parameters <p>HTTP2 origin-pull configuration parameter. This parameter is required if Name is UpstreamHTTP2.</p>
      */
     public $UpstreamHTTP2Parameters;
 
     /**
-     * @var HostHeaderParameters <p>Host header rewrite configuration parameter. When the Name value is HostHeader, this parameter is required.</p>
+     * @var HostHeaderParameters <p>Host Header rewrite configuration parameters. When the value of Name is HostHeader, this parameter is required.</p>
      */
     public $HostHeaderParameters;
 
     /**
-     * @var ForceRedirectHTTPSParameters <p>Forced HTTPS redirect configuration for the access protocol. This parameter is required when the Name value is ForceRedirectHTTPS.</p>
+     * @var ForceRedirectHTTPSParameters <p>Access protocol forced HTTPS redirect configuration. This parameter is required when Name is ForceRedirectHTTPS.</p>
      */
     public $ForceRedirectHTTPSParameters;
 
     /**
-     * @var OriginPullProtocolParameters <p>Origin HTTPS configuration parameter. This parameter is required when the Name value is OriginPullProtocol.</p>
+     * @var OriginPullProtocolParameters <p>Origin-pull HTTPS configuration parameter. This is required if Name is OriginPullProtocol.</p>
      */
     public $OriginPullProtocolParameters;
 
     /**
-     * @var CompressionParameters <p>Intelligent compression configuration. This parameter is required when the Name value is Compression.</p>
+     * @var CompressionParameters <p>Intelligent compression configuration. This parameter is required when the value of Name is Compression.</p>
      */
     public $CompressionParameters;
 
     /**
-     * @var HSTSParameters <p>HSTS configuration parameter. When the Name value is HSTS, this parameter is required.</p>
+     * @var HSTSParameters <p>HSTS configuration parameter. This parameter is required when the value of Name is HSTS.</p>
      */
     public $HSTSParameters;
 
     /**
-     * @var ClientIPHeaderParameters <p>Configuration header information for storing client request IP. When the Name value is ClientIPHeader, this parameter is required.</p>
+     * @var ClientIPHeaderParameters <p>Header information configuration for storing client request IPs. This parameter is required when Name is ClientIPHeader.</p>
      */
     public $ClientIPHeaderParameters;
 
     /**
-     * @var OCSPStaplingParameters <p>OCSP stapling configuration parameter. This parameter is required when Name value is OCSPStapling.</p>
+     * @var OCSPStaplingParameters <p>OCSP stapling configuration parameter. This parameter is required when Name is OCSPStapling.</p>
      */
     public $OCSPStaplingParameters;
 
     /**
-     * @var HTTP2Parameters <p>HTTP2 integration configuration parameter. This parameter is required when the Name value is HTTP2.</p>
+     * @var HTTP2Parameters <p>HTTP2 integration configuration parameter. This parameter is required when Name is HTTP2.</p>
      */
     public $HTTP2Parameters;
 
     /**
-     * @var PostMaxSizeParameters <p>Maximum limit configuration for file streaming transmission in POST request upload. When the Name value is PostMaxSize, this parameter is required.</p>
+     * @var PostMaxSizeParameters <p>POST request upload file streaming transmission maximum limit configuration. When the value of Name is PostMaxSize, this parameter is required.</p>
      */
     public $PostMaxSizeParameters;
 
     /**
-     * @var ClientIPCountryParameters <p>Configuration parameter for carrying client IP regional information during origin pull. When the Name value is ClientIPCountry, this parameter is required.</p>
+     * @var ClientIPCountryParameters <p>Configuration parameter for carrying the client IP region information during origin-pull. This parameter is required when the value of Name is ClientIPCountry.</p>
      */
     public $ClientIPCountryParameters;
 
     /**
-     * @var UpstreamFollowRedirectParameters <p>Origin-pull follow redirect parameter configuration. This parameter is required when the Name value is UpstreamFollowRedirect.</p>
+     * @var UpstreamFollowRedirectParameters <p>Origin-pull follow redirect parameter configuration. When the value of Name is UpstreamFollowRedirect, this parameter is required.</p>
      */
     public $UpstreamFollowRedirectParameters;
 
     /**
-     * @var UpstreamRequestParameters <p>Origin-pull request parameter configuration parameter. This parameter is required when the Name value is UpstreamRequest.</p>
+     * @var UpstreamRequestParameters <p>Origin-pull request parameter configuration parameter. This parameter is required when Name is UpstreamRequest.</p>
      */
     public $UpstreamRequestParameters;
 
     /**
-     * @var ShieldParameters <p>Origin server uninstallation configuration parameter. This parameter is required when the Name value is Shield.</p>
+     * @var ShieldParameters <p>Origin server uninstallation configuration parameter. This parameter is required when the value of Name is Shield.</p>
      */
     public $ShieldParameters;
 
     /**
-     * @var TLSConfigParameters <p>SSL/TLS security configuration parameter. This parameter is required when the Name value is TLSConfig.</p>
+     * @var TLSConfigParameters <p>SSL/TLS security configuration parameter. This parameter is required when Name is TLSConfig.</p>
      */
     public $TLSConfigParameters;
 
     /**
-     * @var ModifyOriginParameters <p>Modify origin server configuration parameter. When the Name value is ModifyOrigin, this parameter is required.</p>
+     * @var ModifyOriginParameters <p>Modify origin configuration parameters. When the value of Name is ModifyOrigin, this parameter is required.</p>
      */
     public $ModifyOriginParameters;
 
     /**
-     * @var SiteFailoverParameters <p>Source site fault migration config. When the Name value is SiteFailover, this parameter is required.</p>
+     * @var SiteFailoverParameters <p>Origin server failover configuration parameter. This parameter is required when Name is SiteFailover.</p>
      */
     public $SiteFailoverParameters;
 
     /**
-     * @var HTTPUpstreamTimeoutParameters <p>Layer 7 origin pull timeout configuration. This parameter is required when the Name value is HTTPUpstreamTimeout.</p>
+     * @var HTTPUpstreamTimeoutParameters <p>Layer 7 origin pull timeout configuration. This parameter is required when Name is HTTPUpstreamTimeout.</p>
      */
     public $HTTPUpstreamTimeoutParameters;
 
     /**
-     * @var HTTPResponseParameters <p>HTTP response configuration parameter. This parameter is required when the Name value is HttpResponse.</p>
+     * @var HTTPResponseParameters <p>HTTP response configuration parameter. This parameter is required when Name is HttpResponse.</p>
      */
     public $HttpResponseParameters;
 
     /**
-     * @var ErrorPageParameters <p>Custom error page configuration parameter. This parameter is required when the value of Name is ErrorPage.</p>
+     * @var ErrorPageParameters <p>Custom error page configuration parameter. This parameter is required when Name is ErrorPage.</p>
      */
     public $ErrorPageParameters;
 
     /**
-     * @var ModifyResponseHeaderParameters <p>Modify the HTTP node response header configuration parameter. This parameter is required when the Name value is ModifyResponseHeader.</p>
+     * @var ModifyResponseHeaderParameters <p>Modify HTTP node response header configuration parameters. This parameter is required when Name is ModifyResponseHeader.</p>
      */
     public $ModifyResponseHeaderParameters;
 
     /**
-     * @var ModifyRequestHeaderParameters <p>Modify the request header configuration parameter of the HTTP node. This parameter is required when the Name value is ModifyRequestHeader.</p>
+     * @var ModifyRequestHeaderParameters <p>Modify the HTTP node request header configuration parameter. This parameter is required if Name is ModifyRequestHeader.</p>
      */
     public $ModifyRequestHeaderParameters;
 
     /**
-     * @var ResponseSpeedLimitParameters <p>Single connection download speed limit configuration parameter. This parameter is required when the Name value is ResponseSpeedLimit.</p>
+     * @var ResponseSpeedLimitParameters <p>Single connection download speed limit configuration parameter. This parameter is required when Name is ResponseSpeedLimit.</p>
      */
     public $ResponseSpeedLimitParameters;
 
     /**
-     * @var SetContentIdentifierParameters <p>Content identification configuration parameter. This parameter is required when the Name value is SetContentIdentifier.</p>
+     * @var SetContentIdentifierParameters <p>Content identification configuration parameter. This parameter is required when the value of Name is SetContentIdentifier.</p>
      */
     public $SetContentIdentifierParameters;
 
     /**
-     * @var VaryParameters <p>Vary feature configuration parameter. This parameter is required when the Name value is Vary.</p>
+     * @var VaryParameters <p>Vary feature configuration parameter. When the value of Name is Vary, this parameter is required.</p>
      */
     public $VaryParameters;
 
     /**
-     * @var ContentCompressionParameters <p>Content compression configuration parameter. When the Name value is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
+     * @var ContentCompressionParameters <p>Content compression configuration parameter. When the value of Name is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
      */
     public $ContentCompressionParameters;
 
     /**
-     * @var OriginAuthenticationParameters <p>Origin authentication configuration parameter. This parameter is required when Name value is OriginAuthentication. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
+     * @var OriginAuthenticationParameters <p>Origin authentication configuration parameter. When the value of Name is OriginAuthentication, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
      */
     public $OriginAuthenticationParameters;
 
     /**
-     * @var CustomActionParameters <p>Custom configuration operation parameter. This parameter is required when the Name value is CustomAction.</p><p>You can obtain the list of currently supported custom configuration items through the CustomActionSet returned value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+     * @var CustomActionParameters <p>Custom configuration operation parameter. This parameter is required when the value of Name is CustomAction.</p><p>You can get the list of currently supported custom configuration items through the returned value CustomActionSet of the DescribeAvailableCustomActionsForRuleEngine API.</p>
      */
     public $CustomActionParameters;
 
     /**
-     * @param string $Name <p>Operation name. The name must correspond to the parameters structure. For example, if Name=Cache, then CacheParameters is required.<li>Cache: Node cache TTL;</li><li>CacheKey: Custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: Access URL redirection;</li><li>UpstreamURLRewrite: Origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token authentication;</li><li>MaxAge: Browser cache TTL;</li><li>StatusCodeCache: Status code cache TTL;</li><li>OfflineCache: Offline cache;</li><li>SmartRouting: Smart acceleration;</li><li>AdvancedOriginRouting: Advanced origin optimization;</li><li>RangeOriginPull: Range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin-pull;</li><li>HostHeader: Host header rewrite;</li><li>ForceRedirectHTTPS: Forced HTTPS redirect configuration;</li><li>OriginPullProtocol: Origin-pull HTTPS;</li><li>Compression: Intelligent compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Configuration for storing client IP address in the header;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: Maximum limit configuration for POST request upload file streaming transmission;</li><li>ClientIPCountry: Carrying regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: Upstream follow redirect parameter configuration;</li><li>UpstreamRequest: Origin-pull request parameters;</li><li>Shield: Origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: Modify origin server;</li><li>SiteFailover: Origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: Custom error page;</li><li>ModifyResponseHeader: Modify HTTP node response header;</li><li>ModifyRequestHeader: Modify HTTP node request header;</li><li>ResponseSpeedLimit: Single connection download speed limit;</li><li>SetContentIdentifier: Set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: Content compression configuration;</li><li>OriginAuthentication: Origin-pull authentication configuration;</li><li>CustomAction: Custom configuration.</li></p>
-     * @param CacheParameters $CacheParameters <p>Node cache TTL configuration parameter. This parameter is required when the Name value is Cache.</p>
-     * @param CacheKeyParameters $CacheKeyParameters <p>Custom Cache Key configuration parameter. When Name value is CacheKey, this parameter is required.
-     * @param CachePrefreshParameters $CachePrefreshParameters <p>Cache pre-refresh configuration parameter. This parameter is required when the Name value is CachePrefresh.</p>
-     * @param AccessURLRedirectParameters $AccessURLRedirectParameters <p>Access URL redirection configuration parameter. This parameter is required when the Name value is AccessURLRedirect.</p>
-     * @param UpstreamURLRewriteParameters $UpstreamURLRewriteParameters <p>Origin-pull URL rewrite configuration parameter. This parameter is required when the value of Name is UpstreamURLRewrite.</p>
-     * @param QUICParameters $QUICParameters <p>QUIC configuration parameter. This parameter is required when the Name value is QUIC.</p>
-     * @param WebSocketParameters $WebSocketParameters <p>WebSocket configuration parameter. This parameter is required when the Name value is WebSocket.</p>
-     * @param AuthenticationParameters $AuthenticationParameters <p>Token authentication configuration parameter. This parameter is required when the Name value is Authentication.</p>
-     * @param MaxAgeParameters $MaxAgeParameters <p>Browser cache TTL configuration parameter. This parameter is required when the value of Name is MaxAge.</p>
-     * @param StatusCodeCacheParameters $StatusCodeCacheParameters <p>Status code cache TTL configuration parameter. This parameter is required when the Name value is StatusCodeCache.</p>
-     * @param OfflineCacheParameters $OfflineCacheParameters <p>Offline cache configuration parameter. This parameter is required when the Name value is OfflineCache.</p>
-     * @param SmartRoutingParameters $SmartRoutingParameters <p>Smart acceleration configuration parameter. This parameter is required when the Name value is SmartRouting.</p>
-     * @param AdvancedOriginRoutingParameters $AdvancedOriginRoutingParameters <p>Advanced origin optimization configuration parameter. This parameter is required when the Name value is AdvancedOriginRouting.</p>
-     * @param RangeOriginPullParameters $RangeOriginPullParameters <p>Configuration parameter for range-based origin pull. This parameter is required when the value of Name is RangeOriginPull.</p>
-     * @param UpstreamHTTP2Parameters $UpstreamHTTP2Parameters <p>HTTP2 origin configuration parameter. This parameter is required when the Name value is UpstreamHTTP2.</p>
-     * @param HostHeaderParameters $HostHeaderParameters <p>Host header rewrite configuration parameter. When the Name value is HostHeader, this parameter is required.</p>
-     * @param ForceRedirectHTTPSParameters $ForceRedirectHTTPSParameters <p>Forced HTTPS redirect configuration for the access protocol. This parameter is required when the Name value is ForceRedirectHTTPS.</p>
-     * @param OriginPullProtocolParameters $OriginPullProtocolParameters <p>Origin HTTPS configuration parameter. This parameter is required when the Name value is OriginPullProtocol.</p>
-     * @param CompressionParameters $CompressionParameters <p>Intelligent compression configuration. This parameter is required when the Name value is Compression.</p>
-     * @param HSTSParameters $HSTSParameters <p>HSTS configuration parameter. When the Name value is HSTS, this parameter is required.</p>
-     * @param ClientIPHeaderParameters $ClientIPHeaderParameters <p>Configuration header information for storing client request IP. When the Name value is ClientIPHeader, this parameter is required.</p>
-     * @param OCSPStaplingParameters $OCSPStaplingParameters <p>OCSP stapling configuration parameter. This parameter is required when Name value is OCSPStapling.</p>
-     * @param HTTP2Parameters $HTTP2Parameters <p>HTTP2 integration configuration parameter. This parameter is required when the Name value is HTTP2.</p>
-     * @param PostMaxSizeParameters $PostMaxSizeParameters <p>Maximum limit configuration for file streaming transmission in POST request upload. When the Name value is PostMaxSize, this parameter is required.</p>
-     * @param ClientIPCountryParameters $ClientIPCountryParameters <p>Configuration parameter for carrying client IP regional information during origin pull. When the Name value is ClientIPCountry, this parameter is required.</p>
-     * @param UpstreamFollowRedirectParameters $UpstreamFollowRedirectParameters <p>Origin-pull follow redirect parameter configuration. This parameter is required when the Name value is UpstreamFollowRedirect.</p>
-     * @param UpstreamRequestParameters $UpstreamRequestParameters <p>Origin-pull request parameter configuration parameter. This parameter is required when the Name value is UpstreamRequest.</p>
-     * @param ShieldParameters $ShieldParameters <p>Origin server uninstallation configuration parameter. This parameter is required when the Name value is Shield.</p>
-     * @param TLSConfigParameters $TLSConfigParameters <p>SSL/TLS security configuration parameter. This parameter is required when the Name value is TLSConfig.</p>
-     * @param ModifyOriginParameters $ModifyOriginParameters <p>Modify origin server configuration parameter. When the Name value is ModifyOrigin, this parameter is required.</p>
-     * @param SiteFailoverParameters $SiteFailoverParameters <p>Source site fault migration config. When the Name value is SiteFailover, this parameter is required.</p>
-     * @param HTTPUpstreamTimeoutParameters $HTTPUpstreamTimeoutParameters <p>Layer 7 origin pull timeout configuration. This parameter is required when the Name value is HTTPUpstreamTimeout.</p>
-     * @param HTTPResponseParameters $HttpResponseParameters <p>HTTP response configuration parameter. This parameter is required when the Name value is HttpResponse.</p>
-     * @param ErrorPageParameters $ErrorPageParameters <p>Custom error page configuration parameter. This parameter is required when the value of Name is ErrorPage.</p>
-     * @param ModifyResponseHeaderParameters $ModifyResponseHeaderParameters <p>Modify the HTTP node response header configuration parameter. This parameter is required when the Name value is ModifyResponseHeader.</p>
-     * @param ModifyRequestHeaderParameters $ModifyRequestHeaderParameters <p>Modify the request header configuration parameter of the HTTP node. This parameter is required when the Name value is ModifyRequestHeader.</p>
-     * @param ResponseSpeedLimitParameters $ResponseSpeedLimitParameters <p>Single connection download speed limit configuration parameter. This parameter is required when the Name value is ResponseSpeedLimit.</p>
-     * @param SetContentIdentifierParameters $SetContentIdentifierParameters <p>Content identification configuration parameter. This parameter is required when the Name value is SetContentIdentifier.</p>
-     * @param VaryParameters $VaryParameters <p>Vary feature configuration parameter. This parameter is required when the Name value is Vary.</p>
-     * @param ContentCompressionParameters $ContentCompressionParameters <p>Content compression configuration parameter. When the Name value is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
-     * @param OriginAuthenticationParameters $OriginAuthenticationParameters <p>Origin authentication configuration parameter. This parameter is required when Name value is OriginAuthentication. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
-     * @param CustomActionParameters $CustomActionParameters <p>Custom configuration operation parameter. This parameter is required when the Name value is CustomAction.</p><p>You can obtain the list of currently supported custom configuration items through the CustomActionSet returned value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+     * @param string $Name <p>Operation Name. The Name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.<li>Cache: node Cache TTL;</li><li>CacheKey: custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: access URL redirection;</li><li>UpstreamURLRewrite: origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token Authentication;</li><li>MaxAge: browser Cache TTL;</li><li>StatusCodeCache: status code Cache TTL;</li><li>OfflineCache: offline Cache;</li><li>SmartRouting: smart acceleration;</li><li>AdvancedOriginRouting: advanced origin optimization;</li><li>RangeOriginPull: range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin pull;</li><li>HostHeader: Host Header rewrite;</li><li>ForceRedirectHTTPS: forced HTTPS redirect configuration for access protocol;</li><li>OriginPullProtocol: origin-pull HTTPS;</li><li>Compression: intelligent Compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Header information configuration for storing client request IP;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: maximum limit configuration for streaming transmission of POST request upload files;</li><li>ClientIPCountry: carry the regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: origin-pull follow redirect parameter configuration;</li><li>UpstreamRequest: origin-pull request parameters;</li><li>Shield: origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: modify origin server;</li><li>SiteFailover: origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer 7 origin pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: custom error page;</li><li>ModifyResponseHeader: modify HTTP node response Header;</li><li>ModifyRequestHeader: modify HTTP node request Header;</li><li>ResponseSpeedLimit: single connection download speed limit;</li><li>SetContentIdentifier: set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: content Compression configuration;</li><li>OriginAuthentication: origin-pull Authentication configuration;</li><li>CustomAction: custom configuration.</li></p>
+     * @param CacheParameters $CacheParameters <p>Node cache TTL configuration parameter. This parameter is required when Name is Cache.</p>
+     * @param CacheKeyParameters $CacheKeyParameters <p>Custom Cache Key configuration parameter. When Name is CacheKey, this parameter is required.</p>
+     * @param CachePrefreshParameters $CachePrefreshParameters <p>Cache pre-refresh configuration parameter. This parameter is required when Name value is CachePrefresh.</p>
+     * @param AccessURLRedirectParameters $AccessURLRedirectParameters <p>Access URL redirection configuration parameter. This parameter is required when Name is AccessURLRedirect.</p>
+     * @param UpstreamURLRewriteParameters $UpstreamURLRewriteParameters <p>Origin-pull URL rewrite configuration parameter. This parameter is required if Name is UpstreamURLRewrite.</p>
+     * @param QUICParameters $QUICParameters <p>QUIC configuration parameter. This parameter is required when the value of Name is QUIC.</p>
+     * @param WebSocketParameters $WebSocketParameters <p>WebSocket configuration parameter. This parameter is required when Name is WebSocket.</p>
+     * @param AuthenticationParameters $AuthenticationParameters <p>Token authentication configuration parameter. When the value of Name is Authentication, this parameter is required.</p>
+     * @param MaxAgeParameters $MaxAgeParameters <p>Browser cache TTL configuration parameter. This parameter is required when Name is MaxAge.</p>
+     * @param StatusCodeCacheParameters $StatusCodeCacheParameters <p>Status code cache TTL configuration parameter. This parameter is required when Name is StatusCodeCache.</p>
+     * @param OfflineCacheParameters $OfflineCacheParameters <p>Offline cache configuration parameter. This parameter is required when Name value is OfflineCache.</p>
+     * @param SmartRoutingParameters $SmartRoutingParameters <p>Smart acceleration configuration parameter. This parameter is required when the value of Name is SmartRouting.</p>
+     * @param AdvancedOriginRoutingParameters $AdvancedOriginRoutingParameters <p>Advanced origin-pull optimization configuration parameters. When the value of Name is AdvancedOriginRouting, this parameter is required.</p>
+     * @param RangeOriginPullParameters $RangeOriginPullParameters <p>Range-based origin pull configuration parameter. This parameter is required when Name is RangeOriginPull.</p>
+     * @param UpstreamHTTP2Parameters $UpstreamHTTP2Parameters <p>HTTP2 origin-pull configuration parameter. This parameter is required if Name is UpstreamHTTP2.</p>
+     * @param HostHeaderParameters $HostHeaderParameters <p>Host Header rewrite configuration parameters. When the value of Name is HostHeader, this parameter is required.</p>
+     * @param ForceRedirectHTTPSParameters $ForceRedirectHTTPSParameters <p>Access protocol forced HTTPS redirect configuration. This parameter is required when Name is ForceRedirectHTTPS.</p>
+     * @param OriginPullProtocolParameters $OriginPullProtocolParameters <p>Origin-pull HTTPS configuration parameter. This is required if Name is OriginPullProtocol.</p>
+     * @param CompressionParameters $CompressionParameters <p>Intelligent compression configuration. This parameter is required when the value of Name is Compression.</p>
+     * @param HSTSParameters $HSTSParameters <p>HSTS configuration parameter. This parameter is required when the value of Name is HSTS.</p>
+     * @param ClientIPHeaderParameters $ClientIPHeaderParameters <p>Header information configuration for storing client request IPs. This parameter is required when Name is ClientIPHeader.</p>
+     * @param OCSPStaplingParameters $OCSPStaplingParameters <p>OCSP stapling configuration parameter. This parameter is required when Name is OCSPStapling.</p>
+     * @param HTTP2Parameters $HTTP2Parameters <p>HTTP2 integration configuration parameter. This parameter is required when Name is HTTP2.</p>
+     * @param PostMaxSizeParameters $PostMaxSizeParameters <p>POST request upload file streaming transmission maximum limit configuration. When the value of Name is PostMaxSize, this parameter is required.</p>
+     * @param ClientIPCountryParameters $ClientIPCountryParameters <p>Configuration parameter for carrying the client IP region information during origin-pull. This parameter is required when the value of Name is ClientIPCountry.</p>
+     * @param UpstreamFollowRedirectParameters $UpstreamFollowRedirectParameters <p>Origin-pull follow redirect parameter configuration. When the value of Name is UpstreamFollowRedirect, this parameter is required.</p>
+     * @param UpstreamRequestParameters $UpstreamRequestParameters <p>Origin-pull request parameter configuration parameter. This parameter is required when Name is UpstreamRequest.</p>
+     * @param ShieldParameters $ShieldParameters <p>Origin server uninstallation configuration parameter. This parameter is required when the value of Name is Shield.</p>
+     * @param TLSConfigParameters $TLSConfigParameters <p>SSL/TLS security configuration parameter. This parameter is required when Name is TLSConfig.</p>
+     * @param ModifyOriginParameters $ModifyOriginParameters <p>Modify origin configuration parameters. When the value of Name is ModifyOrigin, this parameter is required.</p>
+     * @param SiteFailoverParameters $SiteFailoverParameters <p>Origin server failover configuration parameter. This parameter is required when Name is SiteFailover.</p>
+     * @param HTTPUpstreamTimeoutParameters $HTTPUpstreamTimeoutParameters <p>Layer 7 origin pull timeout configuration. This parameter is required when Name is HTTPUpstreamTimeout.</p>
+     * @param HTTPResponseParameters $HttpResponseParameters <p>HTTP response configuration parameter. This parameter is required when Name is HttpResponse.</p>
+     * @param ErrorPageParameters $ErrorPageParameters <p>Custom error page configuration parameter. This parameter is required when Name is ErrorPage.</p>
+     * @param ModifyResponseHeaderParameters $ModifyResponseHeaderParameters <p>Modify HTTP node response header configuration parameters. This parameter is required when Name is ModifyResponseHeader.</p>
+     * @param ModifyRequestHeaderParameters $ModifyRequestHeaderParameters <p>Modify the HTTP node request header configuration parameter. This parameter is required if Name is ModifyRequestHeader.</p>
+     * @param ResponseSpeedLimitParameters $ResponseSpeedLimitParameters <p>Single connection download speed limit configuration parameter. This parameter is required when Name is ResponseSpeedLimit.</p>
+     * @param SetContentIdentifierParameters $SetContentIdentifierParameters <p>Content identification configuration parameter. This parameter is required when the value of Name is SetContentIdentifier.</p>
+     * @param VaryParameters $VaryParameters <p>Vary feature configuration parameter. When the value of Name is Vary, this parameter is required.</p>
+     * @param ContentCompressionParameters $ContentCompressionParameters <p>Content compression configuration parameter. When the value of Name is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
+     * @param OriginAuthenticationParameters $OriginAuthenticationParameters <p>Origin authentication configuration parameter. When the value of Name is OriginAuthentication, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
+     * @param CustomActionParameters $CustomActionParameters <p>Custom configuration operation parameter. This parameter is required when the value of Name is CustomAction.</p><p>You can get the list of currently supported custom configuration items through the returned value CustomActionSet of the DescribeAvailableCustomActionsForRuleEngine API.</p>
      */
     function __construct()
     {
