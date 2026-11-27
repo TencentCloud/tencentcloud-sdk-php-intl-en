@@ -20,58 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DoDirectoryOperation request structure.
  *
- * @method string getFileSystemId() Obtain File system ID. currently, only Turbo series file systems support calling this api. general series file systems (including enhanced) do not support calling.
- * @method void setFileSystemId(string $FileSystemId) Set File system ID. currently, only Turbo series file systems support calling this api. general series file systems (including enhanced) do not support calling.
- * @method string getOpetationType() Obtain create a directory, equivalent to mkdir.
-check: confirm the existence of the directory, equivalent to stat.
-move: rename a file or directory, equivalent to mv.
- * @method void setOpetationType(string $OpetationType) Set create a directory, equivalent to mkdir.
-check: confirm the existence of the directory, equivalent to stat.
-move: rename a file or directory, equivalent to mv.
- * @method string getDirectoryPath() Obtain Absolute path of the directory. recursive creation is enabled by default (if the directory contains non-existent subdirectories, create the corresponding subdirectory first).
- * @method void setDirectoryPath(string $DirectoryPath) Set Absolute path of the directory. recursive creation is enabled by default (if the directory contains non-existent subdirectories, create the corresponding subdirectory first).
- * @method string getMode() Obtain Permission to create directory. if not specified, it defaults to 0755. if OperationType is check, this value is meaningless.
- * @method void setMode(string $Mode) Set Permission to create directory. if not specified, it defaults to 0755. if OperationType is check, this value is meaningless.
- * @method string getDestPath() Obtain The destination directory name for the mv operation. the path must start with /cfs/.
- * @method void setDestPath(string $DestPath) Set The destination directory name for the mv operation. the path must start with /cfs/.
+ * @method string getFileSystemId() Obtain <p>File system ID. Currently, only Turbo file systems support this API. General-purpose file systems (including enhanced ones) do not support this API.</p>
+ * @method void setFileSystemId(string $FileSystemId) Set <p>File system ID. Currently, only Turbo file systems support this API. General-purpose file systems (including enhanced ones) do not support this API.</p>
+ * @method string getOpetationType() Obtain <p>create: creates a directory, equivalent to mkdir.<br>check: checks whether a directory exists, equivalent to stat.<br>move: renames a file or directory, equivalent to mv.</p>
+ * @method void setOpetationType(string $OpetationType) Set <p>create: creates a directory, equivalent to mkdir.<br>check: checks whether a directory exists, equivalent to stat.<br>move: renames a file or directory, equivalent to mv.</p>
+ * @method string getDirectoryPath() Obtain <p>The system recursively creates all parent directories in the path by default. The path must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li><p>If the operation is create/check</p><ul><li>If the CFS root directory / is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/subdir/test1/test2</li></ul></li><li><p>If the operation is move</p><ul><li>If the CFS root directory / is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/subdir/test1/test2</li></ul></li></ul>
+ * @method void setDirectoryPath(string $DirectoryPath) Set <p>The system recursively creates all parent directories in the path by default. The path must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li><p>If the operation is create/check</p><ul><li>If the CFS root directory / is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/subdir/test1/test2</li></ul></li><li><p>If the operation is move</p><ul><li>If the CFS root directory / is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/subdir/test1/test2</li></ul></li></ul>
+ * @method string getMode() Obtain <p>Permission for creating the directory. If not specified, the default value is 0755. If OperationType is check, this value is meaningless.</p>
+ * @method void setMode(string $Mode) Set <p>Permission for creating the directory. If not specified, the default value is 0755. If OperationType is check, this value is meaningless.</p>
+ * @method string getDestPath() Obtain <p>Target directory path for the mv operation. It must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/test3/test4</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/subdir/test3/test4</li></ul>
+ * @method void setDestPath(string $DestPath) Set <p>Target directory path for the mv operation. It must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/test3/test4</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/subdir/test3/test4</li></ul>
  */
 class DoDirectoryOperationRequest extends AbstractModel
 {
     /**
-     * @var string File system ID. currently, only Turbo series file systems support calling this api. general series file systems (including enhanced) do not support calling.
+     * @var string <p>File system ID. Currently, only Turbo file systems support this API. General-purpose file systems (including enhanced ones) do not support this API.</p>
      */
     public $FileSystemId;
 
     /**
-     * @var string create a directory, equivalent to mkdir.
-check: confirm the existence of the directory, equivalent to stat.
-move: rename a file or directory, equivalent to mv.
+     * @var string <p>create: creates a directory, equivalent to mkdir.<br>check: checks whether a directory exists, equivalent to stat.<br>move: renames a file or directory, equivalent to mv.</p>
      */
     public $OpetationType;
 
     /**
-     * @var string Absolute path of the directory. recursive creation is enabled by default (if the directory contains non-existent subdirectories, create the corresponding subdirectory first).
+     * @var string <p>The system recursively creates all parent directories in the path by default. The path must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li><p>If the operation is create/check</p><ul><li>If the CFS root directory / is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/subdir/test1/test2</li></ul></li><li><p>If the operation is move</p><ul><li>If the CFS root directory / is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/subdir/test1/test2</li></ul></li></ul>
      */
     public $DirectoryPath;
 
     /**
-     * @var string Permission to create directory. if not specified, it defaults to 0755. if OperationType is check, this value is meaningless.
+     * @var string <p>Permission for creating the directory. If not specified, the default value is 0755. If OperationType is check, this value is meaningless.</p>
      */
     public $Mode;
 
     /**
-     * @var string The destination directory name for the mv operation. the path must start with /cfs/.
+     * @var string <p>Target directory path for the mv operation. It must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/test3/test4</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/subdir/test3/test4</li></ul>
      */
     public $DestPath;
 
     /**
-     * @param string $FileSystemId File system ID. currently, only Turbo series file systems support calling this api. general series file systems (including enhanced) do not support calling.
-     * @param string $OpetationType create a directory, equivalent to mkdir.
-check: confirm the existence of the directory, equivalent to stat.
-move: rename a file or directory, equivalent to mv.
-     * @param string $DirectoryPath Absolute path of the directory. recursive creation is enabled by default (if the directory contains non-existent subdirectories, create the corresponding subdirectory first).
-     * @param string $Mode Permission to create directory. if not specified, it defaults to 0755. if OperationType is check, this value is meaningless.
-     * @param string $DestPath The destination directory name for the mv operation. the path must start with /cfs/.
+     * @param string $FileSystemId <p>File system ID. Currently, only Turbo file systems support this API. General-purpose file systems (including enhanced ones) do not support this API.</p>
+     * @param string $OpetationType <p>create: creates a directory, equivalent to mkdir.<br>check: checks whether a directory exists, equivalent to stat.<br>move: renames a file or directory, equivalent to mv.</p>
+     * @param string $DirectoryPath <p>The system recursively creates all parent directories in the path by default. The path must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li><p>If the operation is create/check</p><ul><li>If the CFS root directory / is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/subdir/test1/test2</li></ul></li><li><p>If the operation is move</p><ul><li>If the CFS root directory / is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/subdir/test1/test2</li></ul></li></ul>
+     * @param string $Mode <p>Permission for creating the directory. If not specified, the default value is 0755. If OperationType is check, this value is meaningless.</p>
+     * @param string $DestPath <p>Target directory path for the mv operation. It must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/test3/test4</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/subdir/test3/test4</li></ul>
      */
     function __construct()
     {

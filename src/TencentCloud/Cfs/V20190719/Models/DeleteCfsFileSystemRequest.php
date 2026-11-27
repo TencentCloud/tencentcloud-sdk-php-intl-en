@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCfsFileSystem request structure.
  *
- * @method string getFileSystemId() Obtain File system ID, which can be obtained by [querying the file system interface](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). note: the DeleteMountTarget api must be called to remove the mount point of this file system before file system deletion, otherwise deletion will fail.
- * @method void setFileSystemId(string $FileSystemId) Set File system ID, which can be obtained by [querying the file system interface](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). note: the DeleteMountTarget api must be called to remove the mount point of this file system before file system deletion, otherwise deletion will fail.
+ * @method string getFileSystemId() Obtain File system ID, which can be obtained through the [API for querying file systems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). Note: Before deleting a file system, you need to call the DeleteMountTarget API to delete the mount target of the file system. Otherwise, the deletion will fail.
+ * @method void setFileSystemId(string $FileSystemId) Set File system ID, which can be obtained through the [API for querying file systems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). Note: Before deleting a file system, you need to call the DeleteMountTarget API to delete the mount target of the file system. Otherwise, the deletion will fail.
  */
 class DeleteCfsFileSystemRequest extends AbstractModel
 {
     /**
-     * @var string File system ID, which can be obtained by [querying the file system interface](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). note: the DeleteMountTarget api must be called to remove the mount point of this file system before file system deletion, otherwise deletion will fail.
+     * @var string File system ID, which can be obtained through the [API for querying file systems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). Note: Before deleting a file system, you need to call the DeleteMountTarget API to delete the mount target of the file system. Otherwise, the deletion will fail.
      */
     public $FileSystemId;
 
     /**
-     * @param string $FileSystemId File system ID, which can be obtained by [querying the file system interface](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). note: the DeleteMountTarget api must be called to remove the mount point of this file system before file system deletion, otherwise deletion will fail.
+     * @param string $FileSystemId File system ID, which can be obtained through the [API for querying file systems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). Note: Before deleting a file system, you need to call the DeleteMountTarget API to delete the mount target of the file system. Otherwise, the deletion will fail.
      */
     function __construct()
     {

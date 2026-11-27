@@ -20,114 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDataFlow request structure.
  *
- * @method string getFileSystemId() Obtain File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
- * @method void setFileSystemId(string $FileSystemId) Set File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
- * @method string getSourceStorageType() Obtain Source data type; includes S3_COS, S3_L5.
- * @method void setSourceStorageType(string $SourceStorageType) Set Source data type; includes S3_COS, S3_L5.
- * @method string getSourceStorageAddress() Obtain Source storage address.
- * @method void setSourceStorageAddress(string $SourceStorageAddress) Set Source storage address.
- * @method string getSourcePath() Obtain Source path.
- * @method void setSourcePath(string $SourcePath) Set Source path.
- * @method string getTargetPath() Obtain Target path in the file system.
- * @method void setTargetPath(string $TargetPath) Set Target path in the file system.
- * @method string getSecretId() Obtain Key ID.
- * @method void setSecretId(string $SecretId) Set Key ID.
- * @method string getSecretKey() Obtain key.
- * @method void setSecretKey(string $SecretKey) Set key.
- * @method string getDataFlowName() Obtain Data flow name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
- * @method void setDataFlowName(string $DataFlowName) Set Data flow name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
- * @method integer getAutoRefresh() Obtain 0: disable auto-update  1: enable auto-update.
- * @method void setAutoRefresh(integer $AutoRefresh) Set 0: disable auto-update  1: enable auto-update.
- * @method string getUserKafkaTopic() Obtain Topic Parameter used by KafkaConsumer during consumption
- * @method void setUserKafkaTopic(string $UserKafkaTopic) Set Topic Parameter used by KafkaConsumer during consumption
- * @method string getServerAddr() Obtain 	Service address example value: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095.
- * @method void setServerAddr(string $ServerAddr) Set 	Service address example value: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095.
- * @method string getUserName() Obtain Kafka consuming user name. example value: name.
- * @method void setUserName(string $UserName) Set Kafka consuming user name. example value: name.
- * @method string getPassword() Obtain Kafka consuming user password. default ${SecretId}#${SecretKey}.
- * @method void setPassword(string $Password) Set Kafka consuming user password. default ${SecretId}#${SecretKey}.
+ * @method string getFileSystemId() Obtain <p>File system ID, which can be obtained through the API for querying file systems <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
+ * @method void setFileSystemId(string $FileSystemId) Set <p>File system ID, which can be obtained through the API for querying file systems <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
+ * @method string getSourceStorageType() Obtain <p>Source data type. Valid values: S3_COS and S3_L5.</p>
+ * @method void setSourceStorageType(string $SourceStorageType) Set <p>Source data type. Valid values: S3_COS and S3_L5.</p>
+ * @method string getSourceStorageAddress() Obtain <p>Source storage address</p>
+ * @method void setSourceStorageAddress(string $SourceStorageAddress) Set <p>Source storage address</p>
+ * @method string getSourcePath() Obtain <p>Source path</p>
+ * @method void setSourcePath(string $SourcePath) Set <p>Source path</p>
+ * @method string getTargetPath() Obtain <p>Target path in the file system specified when setting data flow. It must start with /cfs/ and represents a logical path inside the file storage instance, not a local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/subdir/test1/test2.</li></ul>
+ * @method void setTargetPath(string $TargetPath) Set <p>Target path in the file system specified when setting data flow. It must start with /cfs/ and represents a logical path inside the file storage instance, not a local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/subdir/test1/test2.</li></ul>
+ * @method string getSecretId() Obtain <p>Secret ID</p>
+ * @method void setSecretId(string $SecretId) Set <p>Secret ID</p>
+ * @method string getSecretKey() Obtain <p>Secret key</p>
+ * @method void setSecretKey(string $SecretKey) Set <p>Secret key</p>
+ * @method string getDataFlowName() Obtain <p>Data flow name. It supports up to 64 characters, including Chinese characters, digits, underscores (_), and hyphens (-).</p>
+ * @method void setDataFlowName(string $DataFlowName) Set <p>Data flow name. It supports up to 64 characters, including Chinese characters, digits, underscores (_), and hyphens (-).</p>
+ * @method integer getAutoRefresh() Obtain <p>0: Automatic update disabled. 1: Automatic update enabled.</p>
+ * @method void setAutoRefresh(integer $AutoRefresh) Set <p>0: Automatic update disabled. 1: Automatic update enabled.</p>
+ * @method string getUserKafkaTopic() Obtain <p>Topic parameter used by KafkaConsumer for consumption</p>
+ * @method void setUserKafkaTopic(string $UserKafkaTopic) Set <p>Topic parameter used by KafkaConsumer for consumption</p>
+ * @method string getServerAddr() Obtain <p>Service address. Example: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
+ * @method void setServerAddr(string $ServerAddr) Set <p>Service address. Example: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
+ * @method string getUserName() Obtain <p>Kafka consumer username. Example: name</p>
+ * @method void setUserName(string $UserName) Set <p>Kafka consumer username. Example: name</p>
+ * @method string getPassword() Obtain <p>Kafka consumer password. Default value: ${SecretId}#${SecretKey}.</p>
+ * @method void setPassword(string $Password) Set <p>Kafka consumer password. Default value: ${SecretId}#${SecretKey}.</p>
  */
 class CreateDataFlowRequest extends AbstractModel
 {
     /**
-     * @var string File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+     * @var string <p>File system ID, which can be obtained through the API for querying file systems <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
      */
     public $FileSystemId;
 
     /**
-     * @var string Source data type; includes S3_COS, S3_L5.
+     * @var string <p>Source data type. Valid values: S3_COS and S3_L5.</p>
      */
     public $SourceStorageType;
 
     /**
-     * @var string Source storage address.
+     * @var string <p>Source storage address</p>
      */
     public $SourceStorageAddress;
 
     /**
-     * @var string Source path.
+     * @var string <p>Source path</p>
      */
     public $SourcePath;
 
     /**
-     * @var string Target path in the file system.
+     * @var string <p>Target path in the file system specified when setting data flow. It must start with /cfs/ and represents a logical path inside the file storage instance, not a local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/subdir/test1/test2.</li></ul>
      */
     public $TargetPath;
 
     /**
-     * @var string Key ID.
+     * @var string <p>Secret ID</p>
      */
     public $SecretId;
 
     /**
-     * @var string key.
+     * @var string <p>Secret key</p>
      */
     public $SecretKey;
 
     /**
-     * @var string Data flow name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+     * @var string <p>Data flow name. It supports up to 64 characters, including Chinese characters, digits, underscores (_), and hyphens (-).</p>
      */
     public $DataFlowName;
 
     /**
-     * @var integer 0: disable auto-update  1: enable auto-update.
+     * @var integer <p>0: Automatic update disabled. 1: Automatic update enabled.</p>
      */
     public $AutoRefresh;
 
     /**
-     * @var string Topic Parameter used by KafkaConsumer during consumption
+     * @var string <p>Topic parameter used by KafkaConsumer for consumption</p>
      */
     public $UserKafkaTopic;
 
     /**
-     * @var string 	Service address example value: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095.
+     * @var string <p>Service address. Example: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
      */
     public $ServerAddr;
 
     /**
-     * @var string Kafka consuming user name. example value: name.
+     * @var string <p>Kafka consumer username. Example: name</p>
      */
     public $UserName;
 
     /**
-     * @var string Kafka consuming user password. default ${SecretId}#${SecretKey}.
+     * @var string <p>Kafka consumer password. Default value: ${SecretId}#${SecretKey}.</p>
      */
     public $Password;
 
     /**
-     * @param string $FileSystemId File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
-     * @param string $SourceStorageType Source data type; includes S3_COS, S3_L5.
-     * @param string $SourceStorageAddress Source storage address.
-     * @param string $SourcePath Source path.
-     * @param string $TargetPath Target path in the file system.
-     * @param string $SecretId Key ID.
-     * @param string $SecretKey key.
-     * @param string $DataFlowName Data flow name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
-     * @param integer $AutoRefresh 0: disable auto-update  1: enable auto-update.
-     * @param string $UserKafkaTopic Topic Parameter used by KafkaConsumer during consumption
-     * @param string $ServerAddr 	Service address example value: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095.
-     * @param string $UserName Kafka consuming user name. example value: name.
-     * @param string $Password Kafka consuming user password. default ${SecretId}#${SecretKey}.
+     * @param string $FileSystemId <p>File system ID, which can be obtained through the API for querying file systems <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
+     * @param string $SourceStorageType <p>Source data type. Valid values: S3_COS and S3_L5.</p>
+     * @param string $SourceStorageAddress <p>Source storage address</p>
+     * @param string $SourcePath <p>Source path</p>
+     * @param string $TargetPath <p>Target path in the file system specified when setting data flow. It must start with /cfs/ and represents a logical path inside the file storage instance, not a local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/subdir/test1/test2.</li></ul>
+     * @param string $SecretId <p>Secret ID</p>
+     * @param string $SecretKey <p>Secret key</p>
+     * @param string $DataFlowName <p>Data flow name. It supports up to 64 characters, including Chinese characters, digits, underscores (_), and hyphens (-).</p>
+     * @param integer $AutoRefresh <p>0: Automatic update disabled. 1: Automatic update enabled.</p>
+     * @param string $UserKafkaTopic <p>Topic parameter used by KafkaConsumer for consumption</p>
+     * @param string $ServerAddr <p>Service address. Example: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
+     * @param string $UserName <p>Kafka consumer username. Example: name</p>
+     * @param string $Password <p>Kafka consumer password. Default value: ${SecretId}#${SecretKey}.</p>
      */
     function __construct()
     {

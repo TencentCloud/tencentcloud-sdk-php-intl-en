@@ -25,24 +25,31 @@ use TencentCloud\Cfs\V20190719\Models as Models;
 /**
  * @method Models\ApplyPathLifecyclePolicyResponse ApplyPathLifecyclePolicy(Models\ApplyPathLifecyclePolicyRequest $req) Configure the directory list associated with the lifecycle policy.
  * @method Models\BindAutoSnapshotPolicyResponse BindAutoSnapshotPolicy(Models\BindAutoSnapshotPolicyRequest $req) This API is used to bind one or multiple file systems to a snapshot policy. A file system can be bound to only one policy.
+ * @method Models\CreateAutoDeletePolicyResponse CreateAutoDeletePolicy(Models\CreateAutoDeletePolicyRequest $req) This API is used to create an automatic data deletion policy for a specified CFS file system.
  * @method Models\CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicy(Models\CreateAutoSnapshotPolicyRequest $req) This API is used to create a scheduled snapshot policy.
  * @method Models\CreateCfsFileSystemResponse CreateCfsFileSystem(Models\CreateCfsFileSystemRequest $req) This API is used to create a file system.
  * @method Models\CreateCfsPGroupResponse CreateCfsPGroup(Models\CreateCfsPGroupRequest $req) This API is used to create a permission group.
  * @method Models\CreateCfsRuleResponse CreateCfsRule(Models\CreateCfsRuleRequest $req) This API is used to create a permission group rule.
  * @method Models\CreateCfsSnapshotResponse CreateCfsSnapshot(Models\CreateCfsSnapshotRequest $req) This API is used to create a file system snapshot.
  * @method Models\CreateDataFlowResponse CreateDataFlow(Models\CreateDataFlowRequest $req) This API is used to create a data flow.
+ * @method Models\CreateDataRetrievalResponse CreateDataRetrieval(Models\CreateDataRetrievalRequest $req) This API is used to create data retrieval.
  * @method Models\CreateLifecycleDataTaskResponse CreateLifecycleDataTask(Models\CreateLifecycleDataTaskRequest $req) Support proactive settlement/preheat API.
  * @method Models\CreateLifecyclePolicyResponse CreateLifecyclePolicy(Models\CreateLifecyclePolicyRequest $req) This API is used to create a file storage lifecycle policy.
  * @method Models\CreateLifecyclePolicyDownloadTaskResponse CreateLifecyclePolicyDownloadTask(Models\CreateLifecyclePolicyDownloadTaskRequest $req) Download the file list in a lifecycle task.
  * @method Models\CreateMigrationTaskResponse CreateMigrationTask(Models\CreateMigrationTaskRequest $req) This API is used to create a migration task.
+ * @method Models\DeleteAutoDeletePolicyResponse DeleteAutoDeletePolicy(Models\DeleteAutoDeletePolicyRequest $req) This API is used to delete a specified automatic deletion policy.
  * @method Models\DeleteAutoSnapshotPolicyResponse DeleteAutoSnapshotPolicy(Models\DeleteAutoSnapshotPolicyRequest $req) This API is used to delete a scheduled snapshot policy.
  * @method Models\DeleteCfsFileSystemResponse DeleteCfsFileSystem(Models\DeleteCfsFileSystemRequest $req) This API is used to delete a file system.
  * @method Models\DeleteCfsPGroupResponse DeleteCfsPGroup(Models\DeleteCfsPGroupRequest $req) This API is used to delete a permission group. Only permission groups not bound to a file system can be deleted by this API.
  * @method Models\DeleteCfsRuleResponse DeleteCfsRule(Models\DeleteCfsRuleRequest $req) This API is used to delete a permission group rule.
  * @method Models\DeleteCfsSnapshotResponse DeleteCfsSnapshot(Models\DeleteCfsSnapshotRequest $req) This API is used to delete a file system snapshot.
  * @method Models\DeleteDataFlowResponse DeleteDataFlow(Models\DeleteDataFlowRequest $req) Delete a data flow.
+ * @method Models\DeleteDataRetrievalResponse DeleteDataRetrieval(Models\DeleteDataRetrievalRequest $req) This API is used to delete data retrieval.
+
+This API is used to delete a specified data retrieval configuration. Deletion is not allowed when associated tasks exist. After this API is called, if the corresponding data retrieval cannot be found through the DescribeDataRetrieval API, the deletion is successful.
  * @method Models\DeleteLifecyclePolicyResponse DeleteLifecyclePolicy(Models\DeleteLifecyclePolicyRequest $req) Delete a lifecycle management policy.
  * @method Models\DeleteMigrationTaskResponse DeleteMigrationTask(Models\DeleteMigrationTaskRequest $req) This API is used to delete migration tasks. Deletion is not supported for tasks in the status of Waiting, creating, running, canceling, or terminating.
+ * @method Models\DescribeAutoDeletePoliciesResponse DescribeAutoDeletePolicies(Models\DescribeAutoDeletePoliciesRequest $req) This API is used to query the list of automatic data deletion policies.
  * @method Models\DescribeAutoSnapshotPoliciesResponse DescribeAutoSnapshotPolicies(Models\DescribeAutoSnapshotPoliciesRequest $req) This API is used to query the list of scheduled snapshot policies of a file system.
  * @method Models\DescribeAvailableZoneInfoResponse DescribeAvailableZoneInfo(Models\DescribeAvailableZoneInfoRequest $req) This API is used to query the availability of a region.
  * @method Models\DescribeBucketListResponse DescribeBucketList(Models\DescribeBucketListRequest $req) To obtain the list of data source buckets.
@@ -61,6 +68,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
  * @method Models\DescribeMountTargetsResponse DescribeMountTargets(Models\DescribeMountTargetsRequest $req) This API is used to query the mount targets of a file system.
  * @method Models\DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogs(Models\DescribeSnapshotOperationLogsRequest $req) This API is used to query the operation logs of a snapshot.
  * @method Models\DoDirectoryOperationResponse DoDirectoryOperation(Models\DoDirectoryOperationRequest $req) File system directory operation API. Currently, only the Turbo series file system supports calling this API to perform directory operations. The Universal Series file system (including the enhanced version) does not support calling.
+ * @method Models\ModifyAutoDeletePolicyResponse ModifyAutoDeletePolicy(Models\ModifyAutoDeletePolicyRequest $req) This API is used to modify the name or cleanup path of an automatic deletion policy.
  * @method Models\ModifyDataFlowResponse ModifyDataFlow(Models\ModifyDataFlowRequest $req) Modify data flow parameters.
  * @method Models\ModifyFileSystemAutoScaleUpRuleResponse ModifyFileSystemAutoScaleUpRule(Models\ModifyFileSystemAutoScaleUpRuleRequest $req) This API is used to set the file system scaling policy. It supports only the turbo file system.
  * @method Models\ModifyLifecyclePolicyResponse ModifyLifecyclePolicy(Models\ModifyLifecyclePolicyRequest $req) Update a file storage lifecycle policy.

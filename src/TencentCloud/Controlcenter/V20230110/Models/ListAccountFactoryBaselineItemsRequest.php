@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListAccountFactoryBaselineItems request structure.
  *
- * @method integer getLimit() Obtain Maximum number of returned records. value ranges from 0 to 200.
- * @method void setLimit(integer $Limit) Set Maximum number of returned records. value ranges from 0 to 200.
- * @method integer getOffset() Obtain Offset. valid values are equal to or greater than 0.
- * @method void setOffset(integer $Offset) Set Offset. valid values are equal to or greater than 0.
+ * @method integer getLimit() Obtain Maximum number of returned records. Value range: 0-200.
+ * @method void setLimit(integer $Limit) Set Maximum number of returned records. Value range: 0-200.
+ * @method integer getOffset() Obtain Offset. Value range: greater than or equal to 0.
+ * @method void setOffset(integer $Offset) Set Offset. Value range: greater than or equal to 0.
  */
 class ListAccountFactoryBaselineItemsRequest extends AbstractModel
 {
     /**
-     * @var integer Maximum number of returned records. value ranges from 0 to 200.
+     * @var integer Maximum number of returned records. Value range: 0-200.
      */
     public $Limit;
 
     /**
-     * @var integer Offset. valid values are equal to or greater than 0.
+     * @var integer Offset. Value range: greater than or equal to 0.
      */
     public $Offset;
 
     /**
-     * @param integer $Limit Maximum number of returned records. value ranges from 0 to 200.
-     * @param integer $Offset Offset. valid values are equal to or greater than 0.
+     * @param integer $Limit Maximum number of returned records. Value range: 0-200.
+     * @param integer $Offset Offset. Value range: greater than or equal to 0.
      */
     function __construct()
     {

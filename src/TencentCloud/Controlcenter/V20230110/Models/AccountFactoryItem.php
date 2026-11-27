@@ -18,92 +18,92 @@ namespace TencentCloud\Controlcenter\V20230110\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Account factory baseline item.
+ * Account Factory baseline items.
  *
- * @method string getIdentifier() Obtain Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
- * @method void setIdentifier(string $Identifier) Set Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
- * @method string getName() Obtain Baseline item name. specifies a unique name for the feature item. supports a combination of english letters, numbers, chinese characters, and symbols @, &, _, [, ], -. valid values: 1-25 chinese or english characters.
- * @method void setName(string $Name) Set Baseline item name. specifies a unique name for the feature item. supports a combination of english letters, numbers, chinese characters, and symbols @, &, _, [, ], -. valid values: 1-25 chinese or english characters.
- * @method string getNameEn() Obtain Baseline item english name. specifies a unique name for the baseline item. supports a combination of english letters, digits, spaces, and symbols @, &, _, [], -. valid values: 1-64 english characters.
- * @method void setNameEn(string $NameEn) Set Baseline item english name. specifies a unique name for the baseline item. supports a combination of english letters, digits, spaces, and symbols @, &, _, [], -. valid values: 1-64 english characters.
- * @method integer getWeight() Obtain Baseline item weight. the smaller the value, the higher the weight. value range equal to or greater than 0.
- * @method void setWeight(integer $Weight) Set Baseline item weight. the smaller the value, the higher the weight. value range equal to or greater than 0.
- * @method integer getRequired() Obtain Specifies whether the baseline item is required (1: required; 0: optional).
- * @method void setRequired(integer $Required) Set Specifies whether the baseline item is required (1: required; 0: optional).
- * @method array getDependsOn() Obtain Baseline item dependency. value range of N depends on the count of other baseline items it relies on.
- * @method void setDependsOn(array $DependsOn) Set Baseline item dependency. value range of N depends on the count of other baseline items it relies on.
- * @method string getDescription() Obtain Baseline description, with a length of 2 to 256 english or chinese characters. it is empty by default.
- * @method void setDescription(string $Description) Set Baseline description, with a length of 2 to 256 english or chinese characters. it is empty by default.
- * @method string getDescriptionEn() Obtain Baseline item english description, with a length of 2 to 1024 english characters. it is empty by default.
- * @method void setDescriptionEn(string $DescriptionEn) Set Baseline item english description, with a length of 2 to 1024 english characters. it is empty by default.
- * @method string getClassify() Obtain Baseline classification. length: 2-32 english or chinese characters. values cannot be empty.
- * @method void setClassify(string $Classify) Set Baseline classification. length: 2-32 english or chinese characters. values cannot be empty.
- * @method string getClassifyEn() Obtain Baseline english classification, with a length of 2-64 english characters. cannot be empty.
- * @method void setClassifyEn(string $ClassifyEn) Set Baseline english classification, with a length of 2-64 english characters. cannot be empty.
+ * @method string getIdentifier() Obtain Unique ID of the Account Factory baseline item, which can contain only English letters, numbers, and symbols (@,._[]-:()+=), and must be 2 to 128 characters in length.
+ * @method void setIdentifier(string $Identifier) Set Unique ID of the Account Factory baseline item, which can contain only English letters, numbers, and symbols (@,._[]-:()+=), and must be 2 to 128 characters in length.
+ * @method string getName() Obtain Baseline item name, which is unique, supports only the combination of English letters, digits, and symbols (@&_[]-), and is 1 to 25 characters in length.
+ * @method void setName(string $Name) Set Baseline item name, which is unique, supports only the combination of English letters, digits, and symbols (@&_[]-), and is 1 to 25 characters in length.
+ * @method string getNameEn() Obtain Baseline item English name, which must be unique, can contain only English letters, numbers, spaces, and symbols (@&_[]-), and must be 1 to 64 characters in length.
+ * @method void setNameEn(string $NameEn) Set Baseline item English name, which must be unique, can contain only English letters, numbers, spaces, and symbols (@&_[]-), and must be 1 to 64 characters in length.
+ * @method integer getWeight() Obtain Baseline item weight. A smaller value indicates a higher priority. Value range: greater than or equal to 0.
+ * @method void setWeight(integer $Weight) Set Baseline item weight. A smaller value indicates a higher priority. Value range: greater than or equal to 0.
+ * @method integer getRequired() Obtain Whether the baseline item is required. Valid values: 1 (yes) and 0 (no).
+ * @method void setRequired(integer $Required) Set Whether the baseline item is required. Valid values: 1 (yes) and 0 (no).
+ * @method array getDependsOn() Obtain Baseline item dependencies. The value range of N depends on the number of other baseline items that the current baseline item depends on.
+ * @method void setDependsOn(array $DependsOn) Set Baseline item dependencies. The value range of N depends on the number of other baseline items that the current baseline item depends on.
+ * @method string getDescription() Obtain Baseline description, which is 2 to 256 English characters in length. The default value is empty.
+ * @method void setDescription(string $Description) Set Baseline description, which is 2 to 256 English characters in length. The default value is empty.
+ * @method string getDescriptionEn() Obtain Baseline item English description, which is 2 to 1024 English characters in length. The default value is empty.
+ * @method void setDescriptionEn(string $DescriptionEn) Set Baseline item English description, which is 2 to 1024 English characters in length. The default value is empty.
+ * @method string getClassify() Obtain Baseline category, which is 2 to 32 English characters in length and cannot be empty.
+ * @method void setClassify(string $Classify) Set Baseline category, which is 2 to 32 English characters in length and cannot be empty.
+ * @method string getClassifyEn() Obtain Baseline English category, which is 2 to 64 English characters in length and cannot be empty.
+ * @method void setClassifyEn(string $ClassifyEn) Set Baseline English category, which is 2 to 64 English characters in length and cannot be empty.
  */
 class AccountFactoryItem extends AbstractModel
 {
     /**
-     * @var string Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
+     * @var string Unique ID of the Account Factory baseline item, which can contain only English letters, numbers, and symbols (@,._[]-:()+=), and must be 2 to 128 characters in length.
      */
     public $Identifier;
 
     /**
-     * @var string Baseline item name. specifies a unique name for the feature item. supports a combination of english letters, numbers, chinese characters, and symbols @, &, _, [, ], -. valid values: 1-25 chinese or english characters.
+     * @var string Baseline item name, which is unique, supports only the combination of English letters, digits, and symbols (@&_[]-), and is 1 to 25 characters in length.
      */
     public $Name;
 
     /**
-     * @var string Baseline item english name. specifies a unique name for the baseline item. supports a combination of english letters, digits, spaces, and symbols @, &, _, [], -. valid values: 1-64 english characters.
+     * @var string Baseline item English name, which must be unique, can contain only English letters, numbers, spaces, and symbols (@&_[]-), and must be 1 to 64 characters in length.
      */
     public $NameEn;
 
     /**
-     * @var integer Baseline item weight. the smaller the value, the higher the weight. value range equal to or greater than 0.
+     * @var integer Baseline item weight. A smaller value indicates a higher priority. Value range: greater than or equal to 0.
      */
     public $Weight;
 
     /**
-     * @var integer Specifies whether the baseline item is required (1: required; 0: optional).
+     * @var integer Whether the baseline item is required. Valid values: 1 (yes) and 0 (no).
      */
     public $Required;
 
     /**
-     * @var array Baseline item dependency. value range of N depends on the count of other baseline items it relies on.
+     * @var array Baseline item dependencies. The value range of N depends on the number of other baseline items that the current baseline item depends on.
      */
     public $DependsOn;
 
     /**
-     * @var string Baseline description, with a length of 2 to 256 english or chinese characters. it is empty by default.
+     * @var string Baseline description, which is 2 to 256 English characters in length. The default value is empty.
      */
     public $Description;
 
     /**
-     * @var string Baseline item english description, with a length of 2 to 1024 english characters. it is empty by default.
+     * @var string Baseline item English description, which is 2 to 1024 English characters in length. The default value is empty.
      */
     public $DescriptionEn;
 
     /**
-     * @var string Baseline classification. length: 2-32 english or chinese characters. values cannot be empty.
+     * @var string Baseline category, which is 2 to 32 English characters in length and cannot be empty.
      */
     public $Classify;
 
     /**
-     * @var string Baseline english classification, with a length of 2-64 english characters. cannot be empty.
+     * @var string Baseline English category, which is 2 to 64 English characters in length and cannot be empty.
      */
     public $ClassifyEn;
 
     /**
-     * @param string $Identifier Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
-     * @param string $Name Baseline item name. specifies a unique name for the feature item. supports a combination of english letters, numbers, chinese characters, and symbols @, &, _, [, ], -. valid values: 1-25 chinese or english characters.
-     * @param string $NameEn Baseline item english name. specifies a unique name for the baseline item. supports a combination of english letters, digits, spaces, and symbols @, &, _, [], -. valid values: 1-64 english characters.
-     * @param integer $Weight Baseline item weight. the smaller the value, the higher the weight. value range equal to or greater than 0.
-     * @param integer $Required Specifies whether the baseline item is required (1: required; 0: optional).
-     * @param array $DependsOn Baseline item dependency. value range of N depends on the count of other baseline items it relies on.
-     * @param string $Description Baseline description, with a length of 2 to 256 english or chinese characters. it is empty by default.
-     * @param string $DescriptionEn Baseline item english description, with a length of 2 to 1024 english characters. it is empty by default.
-     * @param string $Classify Baseline classification. length: 2-32 english or chinese characters. values cannot be empty.
-     * @param string $ClassifyEn Baseline english classification, with a length of 2-64 english characters. cannot be empty.
+     * @param string $Identifier Unique ID of the Account Factory baseline item, which can contain only English letters, numbers, and symbols (@,._[]-:()+=), and must be 2 to 128 characters in length.
+     * @param string $Name Baseline item name, which is unique, supports only the combination of English letters, digits, and symbols (@&_[]-), and is 1 to 25 characters in length.
+     * @param string $NameEn Baseline item English name, which must be unique, can contain only English letters, numbers, spaces, and symbols (@&_[]-), and must be 1 to 64 characters in length.
+     * @param integer $Weight Baseline item weight. A smaller value indicates a higher priority. Value range: greater than or equal to 0.
+     * @param integer $Required Whether the baseline item is required. Valid values: 1 (yes) and 0 (no).
+     * @param array $DependsOn Baseline item dependencies. The value range of N depends on the number of other baseline items that the current baseline item depends on.
+     * @param string $Description Baseline description, which is 2 to 256 English characters in length. The default value is empty.
+     * @param string $DescriptionEn Baseline item English description, which is 2 to 1024 English characters in length. The default value is empty.
+     * @param string $Classify Baseline category, which is 2 to 32 English characters in length and cannot be empty.
+     * @param string $ClassifyEn Baseline English category, which is 2 to 64 English characters in length and cannot be empty.
      */
     function __construct()
     {

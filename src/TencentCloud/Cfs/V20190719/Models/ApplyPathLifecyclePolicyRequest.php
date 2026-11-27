@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyPathLifecyclePolicy request structure.
  *
- * @method string getLifecyclePolicyID() Obtain Lifecycle management policy ID.
- * @method void setLifecyclePolicyID(string $LifecyclePolicyID) Set Lifecycle management policy ID.
- * @method array getPaths() Obtain List of absolute paths for directories associated with the lifecycle management policy.
- * @method void setPaths(array $Paths) Set List of absolute paths for directories associated with the lifecycle management policy.
+ * @method string getLifecyclePolicyID() Obtain <p>Lifecycle management policy ID.</p>
+ * @method void setLifecyclePolicyID(string $LifecyclePolicyID) Set <p>Lifecycle management policy ID.</p>
+ * @method array getPaths() Obtain <p>List of directory paths associated with the lifecycle management policy. Each path must start with /cfs/, representing a logical path within the file storage instance, not a local mount point path.</p><p>Examples:</p><ul><li>If the CFS root directory / is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/subdir/test1/test2.</li></ul>
+ * @method void setPaths(array $Paths) Set <p>List of directory paths associated with the lifecycle management policy. Each path must start with /cfs/, representing a logical path within the file storage instance, not a local mount point path.</p><p>Examples:</p><ul><li>If the CFS root directory / is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/subdir/test1/test2.</li></ul>
  */
 class ApplyPathLifecyclePolicyRequest extends AbstractModel
 {
     /**
-     * @var string Lifecycle management policy ID.
+     * @var string <p>Lifecycle management policy ID.</p>
      */
     public $LifecyclePolicyID;
 
     /**
-     * @var array List of absolute paths for directories associated with the lifecycle management policy.
+     * @var array <p>List of directory paths associated with the lifecycle management policy. Each path must start with /cfs/, representing a logical path within the file storage instance, not a local mount point path.</p><p>Examples:</p><ul><li>If the CFS root directory / is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/subdir/test1/test2.</li></ul>
      */
     public $Paths;
 
     /**
-     * @param string $LifecyclePolicyID Lifecycle management policy ID.
-     * @param array $Paths List of absolute paths for directories associated with the lifecycle management policy.
+     * @param string $LifecyclePolicyID <p>Lifecycle management policy ID.</p>
+     * @param array $Paths <p>List of directory paths associated with the lifecycle management policy. Each path must start with /cfs/, representing a logical path within the file storage instance, not a local mount point path.</p><p>Examples:</p><ul><li>If the CFS root directory / is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/subdir/test1/test2.</li></ul>
      */
     function __construct()
     {

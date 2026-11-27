@@ -20,126 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Manage rule associated with the lifecycle management policy.
  *
- * @method string getStorageType() Obtain Storage type after data dump. among them: InfrequentAccess: infrequent medium storage; ColdStorage: cold storage.
- * @method void setStorageType(string $StorageType) Set Storage type after data dump. among them: InfrequentAccess: infrequent medium storage; ColdStorage: cold storage.
- * @method string getFileType() Obtain Data dump FILE type. among them, BIG_FILE: extra large FILE; STD_FILE: regular FILE; SMALL_FILE: SMALL FILE; ALL: ALL files.
- * @method void setFileType(string $FileType) Set Data dump FILE type. among them, BIG_FILE: extra large FILE; STD_FILE: regular FILE; SMALL_FILE: SMALL FILE; ALL: ALL files.
- * @method string getAction() Obtain Data dumping action. among them, Archive: settlement; Noarchive: no settlement.
- * @method void setAction(string $Action) Set Data dumping action. among them, Archive: settlement; Noarchive: no settlement.
- * @method string getInterval() Obtain Data dump trigger time. consists of "DEFAULT_ATIME_" and a number, in days. keep it empty when Action is Noarchive.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInterval(string $Interval) Set Data dump trigger time. consists of "DEFAULT_ATIME_" and a number, in days. keep it empty when Action is Noarchive.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFileMaxSize() Obtain Maximum specification for data dump files. the value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileMaxSize(string $FileMaxSize) Set Maximum specification for data dump files. the value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFileMinSize() Obtain Minimum specification of the dump file. its numeric value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileMinSize(string $FileMinSize) Set Minimum specification of the dump file. its numeric value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPolicyType() Obtain Policy type.
- * @method void setPolicyType(string $PolicyType) Set Policy type.
- * @method integer getExpireThreshold() Obtain Threshold range: 10-90.
- * @method void setExpireThreshold(integer $ExpireThreshold) Set Threshold range: 10-90.
- * @method integer getTargetThreshold() Obtain Threshold range: 10-90.
- * @method void setTargetThreshold(integer $TargetThreshold) Set Threshold range: 10-90.
- * @method boolean getIsOverwrite() Obtain When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time will not release hot data storage).
-
-Default false when empty.
- * @method void setIsOverwrite(boolean $IsOverwrite) Set When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time will not release hot data storage).
-
-Default false when empty.
+ * @method string getStorageType() Obtain <p>Storage type after data dumping. Valid values: InfrequentAccess: Infrequent Access storage. ColdStorage: Cold storage.</p>
+ * @method void setStorageType(string $StorageType) Set <p>Storage type after data dumping. Valid values: InfrequentAccess: Infrequent Access storage. ColdStorage: Cold storage.</p>
+ * @method string getFileType() Obtain <p>File type for data dumping. Valid values: BIG_FILE: Very large files. STD_FILE: Standard files. SMALL_FILE: Small files. ALL: All files.</p>
+ * @method void setFileType(string $FileType) Set <p>File type for data dumping. Valid values: BIG_FILE: Very large files. STD_FILE: Standard files. SMALL_FILE: Small files. ALL: All files.</p>
+ * @method string getAction() Obtain <p>Data dumping behavior. Valid values: Archive: Archive. Noarchive: Do not archive.</p>
+ * @method void setAction(string $Action) Set <p>Data dumping behavior. Valid values: Archive: Archive. Noarchive: Do not archive.</p>
+ * @method string getInterval() Obtain <p>Trigger time for data dumping. It consists of "DEFAULT_ATIME_" and a number, in the unit of days. Leave this parameter empty when Action is Noarchive.</p>
+ * @method void setInterval(string $Interval) Set <p>Trigger time for data dumping. It consists of "DEFAULT_ATIME_" and a number, in the unit of days. Leave this parameter empty when Action is Noarchive.</p>
+ * @method string getFileMaxSize() Obtain <p>Maximum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
+ * @method void setFileMaxSize(string $FileMaxSize) Set <p>Maximum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
+ * @method string getFileMinSize() Obtain <p>Minimum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
+ * @method void setFileMinSize(string $FileMinSize) Set <p>Minimum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
+ * @method string getPolicyType() Obtain <p>Policy type</p>
+ * @method void setPolicyType(string $PolicyType) Set <p>Policy type</p>
+ * @method integer getExpireThreshold() Obtain <p>Threshold range [10-90]</p>
+ * @method void setExpireThreshold(integer $ExpireThreshold) Set <p>Threshold range [10-90]</p>
+ * @method integer getTargetThreshold() Obtain <p>Threshold range [10-90]</p>
+ * @method void setTargetThreshold(integer $TargetThreshold) Set <p>Threshold range [10-90]</p>
+ * @method boolean getIsOverwrite() Obtain <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).</p><p>If this parameter is left empty, the default value is false.</p>
+ * @method void setIsOverwrite(boolean $IsOverwrite) Set <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).</p><p>If this parameter is left empty, the default value is false.</p>
+ * @method boolean getIsCreateRealTimeSync() Obtain <p>Whether to sync new files to S3 in near real time. true: Near real-time sync (within 30 seconds). false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage.</p>
+ * @method void setIsCreateRealTimeSync(boolean $IsCreateRealTimeSync) Set <p>Whether to sync new files to S3 in near real time. true: Near real-time sync (within 30 seconds). false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage.</p>
+ * @method boolean getIsModifyRealTimeSync() Obtain <p>Whether to sync modified files to S3 in near real time. true: Near real-time sync (within 30 seconds) / false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage. It is independent of IsOverwrite.</p>
+ * @method void setIsModifyRealTimeSync(boolean $IsModifyRealTimeSync) Set <p>Whether to sync modified files to S3 in near real time. true: Near real-time sync (within 30 seconds) / false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage. It is independent of IsOverwrite.</p>
+ * @method boolean getIsSyncDelete() Obtain <p>Whether to sync file deletion to S3. true: Sync deletion (within 30 seconds) / false: Do not sync deletion. The default value is false. If this parameter is set to true, versioning must be enabled for the destination COS Bucket. This parameter takes effect only when StorageType=ExternalStorage.</p>
+ * @method void setIsSyncDelete(boolean $IsSyncDelete) Set <p>Whether to sync file deletion to S3. true: Sync deletion (within 30 seconds) / false: Do not sync deletion. The default value is false. If this parameter is set to true, versioning must be enabled for the destination COS Bucket. This parameter takes effect only when StorageType=ExternalStorage.</p>
  */
 class LifecycleRule extends AbstractModel
 {
     /**
-     * @var string Storage type after data dump. among them: InfrequentAccess: infrequent medium storage; ColdStorage: cold storage.
+     * @var string <p>Storage type after data dumping. Valid values: InfrequentAccess: Infrequent Access storage. ColdStorage: Cold storage.</p>
      */
     public $StorageType;
 
     /**
-     * @var string Data dump FILE type. among them, BIG_FILE: extra large FILE; STD_FILE: regular FILE; SMALL_FILE: SMALL FILE; ALL: ALL files.
+     * @var string <p>File type for data dumping. Valid values: BIG_FILE: Very large files. STD_FILE: Standard files. SMALL_FILE: Small files. ALL: All files.</p>
      */
     public $FileType;
 
     /**
-     * @var string Data dumping action. among them, Archive: settlement; Noarchive: no settlement.
+     * @var string <p>Data dumping behavior. Valid values: Archive: Archive. Noarchive: Do not archive.</p>
      */
     public $Action;
 
     /**
-     * @var string Data dump trigger time. consists of "DEFAULT_ATIME_" and a number, in days. keep it empty when Action is Noarchive.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Trigger time for data dumping. It consists of "DEFAULT_ATIME_" and a number, in the unit of days. Leave this parameter empty when Action is Noarchive.</p>
      */
     public $Interval;
 
     /**
-     * @var string Maximum specification for data dump files. the value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Maximum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
      */
     public $FileMaxSize;
 
     /**
-     * @var string Minimum specification of the dump file. its numeric value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Minimum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
      */
     public $FileMinSize;
 
     /**
-     * @var string Policy type.
+     * @var string <p>Policy type</p>
      */
     public $PolicyType;
 
     /**
-     * @var integer Threshold range: 10-90.
+     * @var integer <p>Threshold range [10-90]</p>
      */
     public $ExpireThreshold;
 
     /**
-     * @var integer Threshold range: 10-90.
+     * @var integer <p>Threshold range [10-90]</p>
      */
     public $TargetThreshold;
 
     /**
-     * @var boolean When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time will not release hot data storage).
-
-Default false when empty.
+     * @var boolean <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).</p><p>If this parameter is left empty, the default value is false.</p>
      */
     public $IsOverwrite;
 
     /**
-     * @param string $StorageType Storage type after data dump. among them: InfrequentAccess: infrequent medium storage; ColdStorage: cold storage.
-     * @param string $FileType Data dump FILE type. among them, BIG_FILE: extra large FILE; STD_FILE: regular FILE; SMALL_FILE: SMALL FILE; ALL: ALL files.
-     * @param string $Action Data dumping action. among them, Archive: settlement; Noarchive: no settlement.
-     * @param string $Interval Data dump trigger time. consists of "DEFAULT_ATIME_" and a number, in days. keep it empty when Action is Noarchive.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FileMaxSize Maximum specification for data dump files. the value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FileMinSize Minimum specification of the dump file. its numeric value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PolicyType Policy type.
-     * @param integer $ExpireThreshold Threshold range: 10-90.
-     * @param integer $TargetThreshold Threshold range: 10-90.
-     * @param boolean $IsOverwrite When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
+     * @var boolean <p>Whether to sync new files to S3 in near real time. true: Near real-time sync (within 30 seconds). false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage.</p>
+     */
+    public $IsCreateRealTimeSync;
 
-Override.
+    /**
+     * @var boolean <p>Whether to sync modified files to S3 in near real time. true: Near real-time sync (within 30 seconds) / false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage. It is independent of IsOverwrite.</p>
+     */
+    public $IsModifyRealTimeSync;
 
-false: not overwrite (at the same time will not release hot data storage).
+    /**
+     * @var boolean <p>Whether to sync file deletion to S3. true: Sync deletion (within 30 seconds) / false: Do not sync deletion. The default value is false. If this parameter is set to true, versioning must be enabled for the destination COS Bucket. This parameter takes effect only when StorageType=ExternalStorage.</p>
+     */
+    public $IsSyncDelete;
 
-Default false when empty.
+    /**
+     * @param string $StorageType <p>Storage type after data dumping. Valid values: InfrequentAccess: Infrequent Access storage. ColdStorage: Cold storage.</p>
+     * @param string $FileType <p>File type for data dumping. Valid values: BIG_FILE: Very large files. STD_FILE: Standard files. SMALL_FILE: Small files. ALL: All files.</p>
+     * @param string $Action <p>Data dumping behavior. Valid values: Archive: Archive. Noarchive: Do not archive.</p>
+     * @param string $Interval <p>Trigger time for data dumping. It consists of "DEFAULT_ATIME_" and a number, in the unit of days. Leave this parameter empty when Action is Noarchive.</p>
+     * @param string $FileMaxSize <p>Maximum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
+     * @param string $FileMinSize <p>Minimum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
+     * @param string $PolicyType <p>Policy type</p>
+     * @param integer $ExpireThreshold <p>Threshold range [10-90]</p>
+     * @param integer $TargetThreshold <p>Threshold range [10-90]</p>
+     * @param boolean $IsOverwrite <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).</p><p>If this parameter is left empty, the default value is false.</p>
+     * @param boolean $IsCreateRealTimeSync <p>Whether to sync new files to S3 in near real time. true: Near real-time sync (within 30 seconds). false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage.</p>
+     * @param boolean $IsModifyRealTimeSync <p>Whether to sync modified files to S3 in near real time. true: Near real-time sync (within 30 seconds) / false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage. It is independent of IsOverwrite.</p>
+     * @param boolean $IsSyncDelete <p>Whether to sync file deletion to S3. true: Sync deletion (within 30 seconds) / false: Do not sync deletion. The default value is false. If this parameter is set to true, versioning must be enabled for the destination COS Bucket. This parameter takes effect only when StorageType=ExternalStorage.</p>
      */
     function __construct()
     {
@@ -192,6 +180,18 @@ Default false when empty.
 
         if (array_key_exists("IsOverwrite",$param) and $param["IsOverwrite"] !== null) {
             $this->IsOverwrite = $param["IsOverwrite"];
+        }
+
+        if (array_key_exists("IsCreateRealTimeSync",$param) and $param["IsCreateRealTimeSync"] !== null) {
+            $this->IsCreateRealTimeSync = $param["IsCreateRealTimeSync"];
+        }
+
+        if (array_key_exists("IsModifyRealTimeSync",$param) and $param["IsModifyRealTimeSync"] !== null) {
+            $this->IsModifyRealTimeSync = $param["IsModifyRealTimeSync"];
+        }
+
+        if (array_key_exists("IsSyncDelete",$param) and $param["IsSyncDelete"] !== null) {
+            $this->IsSyncDelete = $param["IsSyncDelete"];
         }
     }
 }

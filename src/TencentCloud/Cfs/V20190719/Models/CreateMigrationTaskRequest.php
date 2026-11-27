@@ -20,138 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMigrationTask request structure.
  *
- * @method string getTaskName() Obtain Migration task name
- * @method void setTaskName(string $TaskName) Set Migration task name
- * @method integer getMigrationType() Obtain Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
- * @method void setMigrationType(integer $MigrationType) Set Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
- * @method integer getMigrationMode() Obtain Migration mode. Default value: `0` (full migration).
- * @method void setMigrationMode(integer $MigrationMode) Set Migration mode. Default value: `0` (full migration).
- * @method string getSrcSecretId() Obtain SecretId of the data source account.
- * @method void setSrcSecretId(string $SrcSecretId) Set SecretId of the data source account.
- * @method string getSrcSecretKey() Obtain SecretKey of the data source account.
- * @method void setSrcSecretKey(string $SrcSecretKey) Set SecretKey of the data source account.
- * @method string getFileSystemId() Obtain File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
- * @method void setFileSystemId(string $FileSystemId) Set File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
- * @method string getFsPath() Obtain File system path
- * @method void setFsPath(string $FsPath) Set File system path
- * @method integer getCoverType() Obtain Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`.
- * @method void setCoverType(integer $CoverType) Set Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`.
- * @method string getSrcService() Obtain Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
- * @method void setSrcService(string $SrcService) Set Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
- * @method string getBucketName() Obtain Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
- * @method void setBucketName(string $BucketName) Set Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
- * @method string getBucketRegion() Obtain Data source bucket region
- * @method void setBucketRegion(string $BucketRegion) Set Data source bucket region
- * @method string getBucketAddress() Obtain Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
- * @method void setBucketAddress(string $BucketAddress) Set Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
- * @method string getListAddress() Obtain List address. This parameter is required if `MigrationType` is set to `1` (list).
- * @method void setListAddress(string $ListAddress) Set List address. This parameter is required if `MigrationType` is set to `1` (list).
- * @method string getFsName() Obtain Target file system name
- * @method void setFsName(string $FsName) Set Target file system name
- * @method string getBucketPath() Obtain Source bucket path, defaults to /.
- * @method void setBucketPath(string $BucketPath) Set Source bucket path, defaults to /.
- * @method integer getDirection() Obtain Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
- * @method void setDirection(integer $Direction) Set Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+ * @method string getTaskName() Obtain <p>Migration task name.</p>
+ * @method void setTaskName(string $TaskName) Set <p>Migration task name.</p>
+ * @method integer getMigrationType() Obtain <p>Migration mode flag. Default value: 0. 0: Bucket migration; 1: Inventory migration.</p>
+ * @method void setMigrationType(integer $MigrationType) Set <p>Migration mode flag. Default value: 0. 0: Bucket migration; 1: Inventory migration.</p>
+ * @method integer getMigrationMode() Obtain <p>Migration mode. Default value: 0. 0: Full migration.</p>
+ * @method void setMigrationMode(integer $MigrationMode) Set <p>Migration mode. Default value: 0. 0: Full migration.</p>
+ * @method string getSrcSecretId() Obtain <p>SecretId of the data source account.</p>
+ * @method void setSrcSecretId(string $SrcSecretId) Set <p>SecretId of the data source account.</p>
+ * @method string getSrcSecretKey() Obtain <p>SecretKey of the data source account.</p>
+ * @method void setSrcSecretKey(string $SrcSecretKey) Set <p>SecretKey of the data source account.</p>
+ * @method string getFileSystemId() Obtain <p>File system instance ID, which can be obtained through <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
+ * @method void setFileSystemId(string $FileSystemId) Set <p>File system instance ID, which can be obtained through <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
+ * @method string getFsPath() Obtain <p>Directory path in the file system. It does not involve the actual mounted subdirectory or root directory, and does not need to be prefixed with /cfs/.</p>
+ * @method void setFsPath(string $FsPath) Set <p>Directory path in the file system. It does not involve the actual mounted subdirectory or root directory, and does not need to be prefixed with /cfs/.</p>
+ * @method integer getCoverType() Obtain <p>Overwrite policy for files with the same name during migration. Default value: 0. 0: The file with the latest modification time takes precedence; 1: Full overwrite; 2: No overwrite.</p>
+ * @method void setCoverType(integer $CoverType) Set <p>Overwrite policy for files with the same name during migration. Default value: 0. 0: The file with the latest modification time takes precedence; 1: Full overwrite; 2: No overwrite.</p>
+ * @method string getSrcService() Obtain <p>Data source service provider.</p><p>Valid values:</p><ul><li>COS: Tencent Cloud COS</li><li>OSS: Alibaba Cloud OSS</li><li>OBS: Huawei Cloud OBS</li><li>BOS: Baidu Cloud BOS</li><li>TOS: Volcano Engine TOS</li></ul>
+ * @method void setSrcService(string $SrcService) Set <p>Data source service provider.</p><p>Valid values:</p><ul><li>COS: Tencent Cloud COS</li><li>OSS: Alibaba Cloud OSS</li><li>OBS: Huawei Cloud OBS</li><li>BOS: Baidu Cloud BOS</li><li>TOS: Volcano Engine TOS</li></ul>
+ * @method string getBucketName() Obtain <p>Name of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
+ * @method void setBucketName(string $BucketName) Set <p>Name of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
+ * @method string getBucketRegion() Obtain <p>Region of the data source bucket.</p>
+ * @method void setBucketRegion(string $BucketRegion) Set <p>Region of the data source bucket.</p>
+ * @method string getBucketAddress() Obtain <p>Address of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
+ * @method void setBucketAddress(string $BucketAddress) Set <p>Address of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
+ * @method string getListAddress() Obtain <p>Inventory address. Required when the migration mode is inventory migration.</p>
+ * @method void setListAddress(string $ListAddress) Set <p>Inventory address. Required when the migration mode is inventory migration.</p>
+ * @method string getFsName() Obtain <p>Name of the destination file system.</p>
+ * @method void setFsName(string $FsName) Set <p>Name of the destination file system.</p>
+ * @method string getBucketPath() Obtain <p>Source bucket path. Default value: /.</p>
+ * @method void setBucketPath(string $BucketPath) Set <p>Source bucket path. Default value: /.</p>
+ * @method integer getDirection() Obtain <p>Migration direction. 0: Migrate from object storage to file system. 1: Migrate from file system to object storage. Default value: 0.</p>
+ * @method void setDirection(integer $Direction) Set <p>Migration direction. 0: Migrate from object storage to file system. 1: Migrate from file system to object storage. Default value: 0.</p>
  */
 class CreateMigrationTaskRequest extends AbstractModel
 {
     /**
-     * @var string Migration task name
+     * @var string <p>Migration task name.</p>
      */
     public $TaskName;
 
     /**
-     * @var integer Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
+     * @var integer <p>Migration mode flag. Default value: 0. 0: Bucket migration; 1: Inventory migration.</p>
      */
     public $MigrationType;
 
     /**
-     * @var integer Migration mode. Default value: `0` (full migration).
+     * @var integer <p>Migration mode. Default value: 0. 0: Full migration.</p>
      */
     public $MigrationMode;
 
     /**
-     * @var string SecretId of the data source account.
+     * @var string <p>SecretId of the data source account.</p>
      */
     public $SrcSecretId;
 
     /**
-     * @var string SecretKey of the data source account.
+     * @var string <p>SecretKey of the data source account.</p>
      */
     public $SrcSecretKey;
 
     /**
-     * @var string File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+     * @var string <p>File system instance ID, which can be obtained through <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
      */
     public $FileSystemId;
 
     /**
-     * @var string File system path
+     * @var string <p>Directory path in the file system. It does not involve the actual mounted subdirectory or root directory, and does not need to be prefixed with /cfs/.</p>
      */
     public $FsPath;
 
     /**
-     * @var integer Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`.
+     * @var integer <p>Overwrite policy for files with the same name during migration. Default value: 0. 0: The file with the latest modification time takes precedence; 1: Full overwrite; 2: No overwrite.</p>
      */
     public $CoverType;
 
     /**
-     * @var string Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
+     * @var string <p>Data source service provider.</p><p>Valid values:</p><ul><li>COS: Tencent Cloud COS</li><li>OSS: Alibaba Cloud OSS</li><li>OBS: Huawei Cloud OBS</li><li>BOS: Baidu Cloud BOS</li><li>TOS: Volcano Engine TOS</li></ul>
      */
     public $SrcService;
 
     /**
-     * @var string Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
+     * @var string <p>Name of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
      */
     public $BucketName;
 
     /**
-     * @var string Data source bucket region
+     * @var string <p>Region of the data source bucket.</p>
      */
     public $BucketRegion;
 
     /**
-     * @var string Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
+     * @var string <p>Address of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
      */
     public $BucketAddress;
 
     /**
-     * @var string List address. This parameter is required if `MigrationType` is set to `1` (list).
+     * @var string <p>Inventory address. Required when the migration mode is inventory migration.</p>
      */
     public $ListAddress;
 
     /**
-     * @var string Target file system name
+     * @var string <p>Name of the destination file system.</p>
      */
     public $FsName;
 
     /**
-     * @var string Source bucket path, defaults to /.
+     * @var string <p>Source bucket path. Default value: /.</p>
      */
     public $BucketPath;
 
     /**
-     * @var integer Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+     * @var integer <p>Migration direction. 0: Migrate from object storage to file system. 1: Migrate from file system to object storage. Default value: 0.</p>
      */
     public $Direction;
 
     /**
-     * @param string $TaskName Migration task name
-     * @param integer $MigrationType Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
-     * @param integer $MigrationMode Migration mode. Default value: `0` (full migration).
-     * @param string $SrcSecretId SecretId of the data source account.
-     * @param string $SrcSecretKey SecretKey of the data source account.
-     * @param string $FileSystemId File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
-     * @param string $FsPath File system path
-     * @param integer $CoverType Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`.
-     * @param string $SrcService Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
-     * @param string $BucketName Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
-     * @param string $BucketRegion Data source bucket region
-     * @param string $BucketAddress Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
-     * @param string $ListAddress List address. This parameter is required if `MigrationType` is set to `1` (list).
-     * @param string $FsName Target file system name
-     * @param string $BucketPath Source bucket path, defaults to /.
-     * @param integer $Direction Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+     * @param string $TaskName <p>Migration task name.</p>
+     * @param integer $MigrationType <p>Migration mode flag. Default value: 0. 0: Bucket migration; 1: Inventory migration.</p>
+     * @param integer $MigrationMode <p>Migration mode. Default value: 0. 0: Full migration.</p>
+     * @param string $SrcSecretId <p>SecretId of the data source account.</p>
+     * @param string $SrcSecretKey <p>SecretKey of the data source account.</p>
+     * @param string $FileSystemId <p>File system instance ID, which can be obtained through <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
+     * @param string $FsPath <p>Directory path in the file system. It does not involve the actual mounted subdirectory or root directory, and does not need to be prefixed with /cfs/.</p>
+     * @param integer $CoverType <p>Overwrite policy for files with the same name during migration. Default value: 0. 0: The file with the latest modification time takes precedence; 1: Full overwrite; 2: No overwrite.</p>
+     * @param string $SrcService <p>Data source service provider.</p><p>Valid values:</p><ul><li>COS: Tencent Cloud COS</li><li>OSS: Alibaba Cloud OSS</li><li>OBS: Huawei Cloud OBS</li><li>BOS: Baidu Cloud BOS</li><li>TOS: Volcano Engine TOS</li></ul>
+     * @param string $BucketName <p>Name of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
+     * @param string $BucketRegion <p>Region of the data source bucket.</p>
+     * @param string $BucketAddress <p>Address of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
+     * @param string $ListAddress <p>Inventory address. Required when the migration mode is inventory migration.</p>
+     * @param string $FsName <p>Name of the destination file system.</p>
+     * @param string $BucketPath <p>Source bucket path. Default value: /.</p>
+     * @param integer $Direction <p>Migration direction. 0: Migrate from object storage to file system. 1: Migrate from file system to object storage. Default value: 0.</p>
      */
     function __construct()
     {

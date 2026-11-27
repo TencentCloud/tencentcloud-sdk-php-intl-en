@@ -20,218 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Lifecycle task.
  *
- * @method string getTaskId() Obtain Task ID.
- * @method void setTaskId(string $TaskId) Set Task ID.
- * @method string getTaskStatus() Obtain Task status.
-init: pending.
-running: executing, finished: completed.
-failed: failure.
-Stopping: stopping, stopped: stopped.
- * @method void setTaskStatus(string $TaskStatus) Set Task status.
-init: pending.
-running: executing, finished: completed.
-failed: failure.
-Stopping: stopping, stopped: stopped.
- * @method string getCreationTime() Obtain Task creation time
- * @method void setCreationTime(string $CreationTime) Set Task creation time
- * @method string getFinishTime() Obtain Task end time.
- * @method void setFinishTime(string $FinishTime) Set Task end time.
- * @method integer getFileTotalCount() Obtain Total files.
- * @method void setFileTotalCount(integer $FileTotalCount) Set Total files.
- * @method integer getFileSuccessedCount() Obtain Number of successfully processed files.
- * @method void setFileSuccessedCount(integer $FileSuccessedCount) Set Number of successfully processed files.
- * @method integer getFileFailedCount() Obtain Number of failed files.
- * @method void setFileFailedCount(integer $FileFailedCount) Set Number of failed files.
- * @method integer getFileTotalSize() Obtain File capacity, in Byte.
-
-
- * @method void setFileTotalSize(integer $FileTotalSize) Set File capacity, in Byte.
-
-
- * @method integer getFileSuccessedSize() Obtain Processed file capacity, in Byte.
-
-
- * @method void setFileSuccessedSize(integer $FileSuccessedSize) Set Processed file capacity, in Byte.
-
-
- * @method integer getFileFailedSize() Obtain Capacity of processed failed files, in Byte.
-
- * @method void setFileFailedSize(integer $FileFailedSize) Set Capacity of processed failed files, in Byte.
-
- * @method string getFileTotalList() Obtain Total file list.
- * @method void setFileTotalList(string $FileTotalList) Set Total file list.
- * @method string getFileSuccessedList() Obtain List of successful files.
- * @method void setFileSuccessedList(string $FileSuccessedList) Set List of successful files.
- * @method string getFileFailedList() Obtain List of failed files.
- * @method void setFileFailedList(string $FileFailedList) Set List of failed files.
- * @method string getFileSystemId() Obtain FileSystemId
- * @method void setFileSystemId(string $FileSystemId) Set FileSystemId
- * @method string getTaskName() Obtain Task name.
- * @method void setTaskName(string $TaskName) Set Task name.
- * @method string getTaskPath() Obtain Task path.
- * @method void setTaskPath(string $TaskPath) Set Task path.
- * @method string getType() Obtain Task type, archive: indicates settlement task, restore: indicates pull task.
- * @method void setType(string $Type) Set Task type, archive: indicates settlement task, restore: indicates pull task.
- * @method string getDataFlowId() Obtain Data flow Id.
- * @method void setDataFlowId(string $DataFlowId) Set Data flow Id.
- * @method boolean getIsOverwrite() Obtain When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time, it does not release hot data storage).
-Default false when empty.
- * @method void setIsOverwrite(boolean $IsOverwrite) Set When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time, it does not release hot data storage).
-Default false when empty.
+ * @method string getTaskId() Obtain <p>Task ID.</p>
+ * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
+ * @method string getTaskStatus() Obtain <p>Task status.</p><p>Valid values:</p><ul><li>init: queuing</li><li>running: running</li><li>finished: completed</li><li>failed: failed</li><li>stopping: stopping</li><li>stopped: stopped</li></ul>
+ * @method void setTaskStatus(string $TaskStatus) Set <p>Task status.</p><p>Valid values:</p><ul><li>init: queuing</li><li>running: running</li><li>finished: completed</li><li>failed: failed</li><li>stopping: stopping</li><li>stopped: stopped</li></ul>
+ * @method string getCreationTime() Obtain <p>Task creation time</p>
+ * @method void setCreationTime(string $CreationTime) Set <p>Task creation time</p>
+ * @method string getFinishTime() Obtain <p>Task end time</p>
+ * @method void setFinishTime(string $FinishTime) Set <p>Task end time</p>
+ * @method integer getFileTotalCount() Obtain <p>Total number of files</p>
+ * @method void setFileTotalCount(integer $FileTotalCount) Set <p>Total number of files</p>
+ * @method integer getFileSuccessedCount() Obtain <p>Number of files processed successfully</p>
+ * @method void setFileSuccessedCount(integer $FileSuccessedCount) Set <p>Number of files processed successfully</p>
+ * @method integer getFileFailedCount() Obtain <p>Number of files that have failed</p>
+ * @method void setFileFailedCount(integer $FileFailedCount) Set <p>Number of files that have failed</p>
+ * @method integer getFileTotalSize() Obtain <p>File size, in bytes</p>
+ * @method void setFileTotalSize(integer $FileTotalSize) Set <p>File size, in bytes</p>
+ * @method integer getFileSuccessedSize() Obtain <p>Size of processed files, in bytes</p>
+ * @method void setFileSuccessedSize(integer $FileSuccessedSize) Set <p>Size of processed files, in bytes</p>
+ * @method integer getFileFailedSize() Obtain <p>Size of failed files, in bytes</p>
+ * @method void setFileFailedSize(integer $FileFailedSize) Set <p>Size of failed files, in bytes</p>
+ * @method string getFileTotalList() Obtain <p>Total file list.</p>
+ * @method void setFileTotalList(string $FileTotalList) Set <p>Total file list.</p>
+ * @method string getFileSuccessedList() Obtain <p>List of successful files.</p>
+ * @method void setFileSuccessedList(string $FileSuccessedList) Set <p>List of successful files.</p>
+ * @method string getFileFailedList() Obtain <p>List of failed files.</p>
+ * @method void setFileFailedList(string $FileFailedList) Set <p>List of failed files.</p>
+ * @method string getFileSystemId() Obtain <p>FileSystemId</p>
+ * @method void setFileSystemId(string $FileSystemId) Set <p>FileSystemId</p>
+ * @method string getTaskName() Obtain <p>Task name.</p>
+ * @method void setTaskName(string $TaskName) Set <p>Task name.</p>
+ * @method string getTaskPath() Obtain <p>Task path.</p>
+ * @method void setTaskPath(string $TaskPath) Set <p>Task path.</p>
+ * @method string getType() Obtain <p>Task type. archive: an archiving task. restore: a retrieval task.</p>
+ * @method void setType(string $Type) Set <p>Task type. archive: an archiving task. restore: a retrieval task.</p>
+ * @method string getDataFlowId() Obtain <p>Data flow Id.</p>
+ * @method void setDataFlowId(string $DataFlowId) Set <p>Data flow Id.</p>
+ * @method boolean getIsOverwrite() Obtain <p>Whether to overwrite files with the same name in CFS Turbo and external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).<br>If this parameter is left empty, the default value is false.</p>
+ * @method void setIsOverwrite(boolean $IsOverwrite) Set <p>Whether to overwrite files with the same name in CFS Turbo and external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).<br>If this parameter is left empty, the default value is false.</p>
+ * @method string getListPath() Obtain <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. This parameter and TaskPath are alternative. <br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+ * @method void setListPath(string $ListPath) Set <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. This parameter and TaskPath are alternative. <br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
  */
 class LifecycleDataTaskInfo extends AbstractModel
 {
     /**
-     * @var string Task ID.
+     * @var string <p>Task ID.</p>
      */
     public $TaskId;
 
     /**
-     * @var string Task status.
-init: pending.
-running: executing, finished: completed.
-failed: failure.
-Stopping: stopping, stopped: stopped.
+     * @var string <p>Task status.</p><p>Valid values:</p><ul><li>init: queuing</li><li>running: running</li><li>finished: completed</li><li>failed: failed</li><li>stopping: stopping</li><li>stopped: stopped</li></ul>
      */
     public $TaskStatus;
 
     /**
-     * @var string Task creation time
+     * @var string <p>Task creation time</p>
      */
     public $CreationTime;
 
     /**
-     * @var string Task end time.
+     * @var string <p>Task end time</p>
      */
     public $FinishTime;
 
     /**
-     * @var integer Total files.
+     * @var integer <p>Total number of files</p>
      */
     public $FileTotalCount;
 
     /**
-     * @var integer Number of successfully processed files.
+     * @var integer <p>Number of files processed successfully</p>
      */
     public $FileSuccessedCount;
 
     /**
-     * @var integer Number of failed files.
+     * @var integer <p>Number of files that have failed</p>
      */
     public $FileFailedCount;
 
     /**
-     * @var integer File capacity, in Byte.
-
-
+     * @var integer <p>File size, in bytes</p>
      */
     public $FileTotalSize;
 
     /**
-     * @var integer Processed file capacity, in Byte.
-
-
+     * @var integer <p>Size of processed files, in bytes</p>
      */
     public $FileSuccessedSize;
 
     /**
-     * @var integer Capacity of processed failed files, in Byte.
-
+     * @var integer <p>Size of failed files, in bytes</p>
      */
     public $FileFailedSize;
 
     /**
-     * @var string Total file list.
+     * @var string <p>Total file list.</p>
      */
     public $FileTotalList;
 
     /**
-     * @var string List of successful files.
+     * @var string <p>List of successful files.</p>
      */
     public $FileSuccessedList;
 
     /**
-     * @var string List of failed files.
+     * @var string <p>List of failed files.</p>
      */
     public $FileFailedList;
 
     /**
-     * @var string FileSystemId
+     * @var string <p>FileSystemId</p>
      */
     public $FileSystemId;
 
     /**
-     * @var string Task name.
+     * @var string <p>Task name.</p>
      */
     public $TaskName;
 
     /**
-     * @var string Task path.
+     * @var string <p>Task path.</p>
      */
     public $TaskPath;
 
     /**
-     * @var string Task type, archive: indicates settlement task, restore: indicates pull task.
+     * @var string <p>Task type. archive: an archiving task. restore: a retrieval task.</p>
      */
     public $Type;
 
     /**
-     * @var string Data flow Id.
+     * @var string <p>Data flow Id.</p>
      */
     public $DataFlowId;
 
     /**
-     * @var boolean When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time, it does not release hot data storage).
-Default false when empty.
+     * @var boolean <p>Whether to overwrite files with the same name in CFS Turbo and external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).<br>If this parameter is left empty, the default value is false.</p>
      */
     public $IsOverwrite;
 
     /**
-     * @param string $TaskId Task ID.
-     * @param string $TaskStatus Task status.
-init: pending.
-running: executing, finished: completed.
-failed: failure.
-Stopping: stopping, stopped: stopped.
-     * @param string $CreationTime Task creation time
-     * @param string $FinishTime Task end time.
-     * @param integer $FileTotalCount Total files.
-     * @param integer $FileSuccessedCount Number of successfully processed files.
-     * @param integer $FileFailedCount Number of failed files.
-     * @param integer $FileTotalSize File capacity, in Byte.
+     * @var string <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. This parameter and TaskPath are alternative. <br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+     */
+    public $ListPath;
 
-
-     * @param integer $FileSuccessedSize Processed file capacity, in Byte.
-
-
-     * @param integer $FileFailedSize Capacity of processed failed files, in Byte.
-
-     * @param string $FileTotalList Total file list.
-     * @param string $FileSuccessedList List of successful files.
-     * @param string $FileFailedList List of failed files.
-     * @param string $FileSystemId FileSystemId
-     * @param string $TaskName Task name.
-     * @param string $TaskPath Task path.
-     * @param string $Type Task type, archive: indicates settlement task, restore: indicates pull task.
-     * @param string $DataFlowId Data flow Id.
-     * @param boolean $IsOverwrite When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time, it does not release hot data storage).
-Default false when empty.
+    /**
+     * @param string $TaskId <p>Task ID.</p>
+     * @param string $TaskStatus <p>Task status.</p><p>Valid values:</p><ul><li>init: queuing</li><li>running: running</li><li>finished: completed</li><li>failed: failed</li><li>stopping: stopping</li><li>stopped: stopped</li></ul>
+     * @param string $CreationTime <p>Task creation time</p>
+     * @param string $FinishTime <p>Task end time</p>
+     * @param integer $FileTotalCount <p>Total number of files</p>
+     * @param integer $FileSuccessedCount <p>Number of files processed successfully</p>
+     * @param integer $FileFailedCount <p>Number of files that have failed</p>
+     * @param integer $FileTotalSize <p>File size, in bytes</p>
+     * @param integer $FileSuccessedSize <p>Size of processed files, in bytes</p>
+     * @param integer $FileFailedSize <p>Size of failed files, in bytes</p>
+     * @param string $FileTotalList <p>Total file list.</p>
+     * @param string $FileSuccessedList <p>List of successful files.</p>
+     * @param string $FileFailedList <p>List of failed files.</p>
+     * @param string $FileSystemId <p>FileSystemId</p>
+     * @param string $TaskName <p>Task name.</p>
+     * @param string $TaskPath <p>Task path.</p>
+     * @param string $Type <p>Task type. archive: an archiving task. restore: a retrieval task.</p>
+     * @param string $DataFlowId <p>Data flow Id.</p>
+     * @param boolean $IsOverwrite <p>Whether to overwrite files with the same name in CFS Turbo and external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).<br>If this parameter is left empty, the default value is false.</p>
+     * @param string $ListPath <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. This parameter and TaskPath are alternative. <br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
      */
     function __construct()
     {
@@ -320,6 +272,10 @@ Default false when empty.
 
         if (array_key_exists("IsOverwrite",$param) and $param["IsOverwrite"] !== null) {
             $this->IsOverwrite = $param["IsOverwrite"];
+        }
+
+        if (array_key_exists("ListPath",$param) and $param["ListPath"] !== null) {
+            $this->ListPath = $param["ListPath"];
         }
     }
 }

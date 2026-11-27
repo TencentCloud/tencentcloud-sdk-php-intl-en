@@ -20,58 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCfsFileSystems request structure.
  *
- * @method string getFileSystemId() Obtain File system ID
- * @method void setFileSystemId(string $FileSystemId) Set File system ID
- * @method string getVpcId() Obtain VPC ID
- * @method void setVpcId(string $VpcId) Set VPC ID
- * @method string getSubnetId() Obtain Subnet ID
- * @method void setSubnetId(string $SubnetId) Set Subnet ID
- * @method integer getOffset() Obtain Offset paging number. default 0.
- * @method void setOffset(integer $Offset) Set Offset paging number. default 0.
- * @method integer getLimit() Obtain Limit page size. default value 10.
- * @method void setLimit(integer $Limit) Set Limit page size. default value 10.
- * @method string getCreationToken() Obtain User-defined name
- * @method void setCreationToken(string $CreationToken) Set User-defined name
+ * @method string getFileSystemId() Obtain <p>File system ID.</p>
+ * @method void setFileSystemId(string $FileSystemId) Set <p>File system ID.</p>
+ * @method string getVpcId() Obtain <p>Virtual Private Cloud (VPC) ID.</p>
+ * @method void setVpcId(string $VpcId) Set <p>Virtual Private Cloud (VPC) ID.</p>
+ * @method string getSubnetId() Obtain <p>Subnet ID.</p>
+ * @method void setSubnetId(string $SubnetId) Set <p>Subnet ID.</p>
+ * @method integer getOffset() Obtain <p>Offset for pagination. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset for pagination. Default value: 0.</p>
+ * @method integer getLimit() Obtain <p>Limit for page size. Default value: 10.</p>
+ * @method void setLimit(integer $Limit) Set <p>Limit for page size. Default value: 10.</p>
+ * @method string getCreationToken() Obtain <p>User-defined name.</p>
+ * @method void setCreationToken(string $CreationToken) Set <p>User-defined name.</p>
+ * @method array getFilters() Obtain <p>Filter conditions.<br><br><li>Protocol - Array of String - optional - (Filter condition) Filters by protocol. (NFS | CIFS | TURBO) </li><br><br><li>StorageType - Array of String - optional - (Filter condition) Filters by storage type. (SD | HP | TB | TP | THP) </li><br><br><li>LifeCycleState - Array of String - optional - (Filter condition) Filters by lifecycle state. (creating | create_failed | available | deleting | delete_failed | upgrading | unserviced | expanding) </li><br><br><li>Zone - Array of String - optional - (Filter condition) Filters by AZ. (For example: ap-guangzhou-3) </li><br><br><li>IpAddress - Array of String - optional - (Filter condition) Filters by export point IP address. (For example: 10.0.0.3) </li><br><br><li>PGroupId - Array of String - optional - (Filter condition) Filters by permission group ID. (For example: pgroup-xxxxxrxt) </li><br><br><li>PGroupName - Array of String - optional - (Filter condition) Filters by permission group name. (For example: default permission group) </li><br><br><li>Scenario- Array of String - optional - (Filter condition) Filters by permission group name. (For example: AgentSandbox) </li></p>
+ * @method void setFilters(array $Filters) Set <p>Filter conditions.<br><br><li>Protocol - Array of String - optional - (Filter condition) Filters by protocol. (NFS | CIFS | TURBO) </li><br><br><li>StorageType - Array of String - optional - (Filter condition) Filters by storage type. (SD | HP | TB | TP | THP) </li><br><br><li>LifeCycleState - Array of String - optional - (Filter condition) Filters by lifecycle state. (creating | create_failed | available | deleting | delete_failed | upgrading | unserviced | expanding) </li><br><br><li>Zone - Array of String - optional - (Filter condition) Filters by AZ. (For example: ap-guangzhou-3) </li><br><br><li>IpAddress - Array of String - optional - (Filter condition) Filters by export point IP address. (For example: 10.0.0.3) </li><br><br><li>PGroupId - Array of String - optional - (Filter condition) Filters by permission group ID. (For example: pgroup-xxxxxrxt) </li><br><br><li>PGroupName - Array of String - optional - (Filter condition) Filters by permission group name. (For example: default permission group) </li><br><br><li>Scenario- Array of String - optional - (Filter condition) Filters by permission group name. (For example: AgentSandbox) </li></p>
+ * @method array getTags() Obtain <p>Tag.</p>
+ * @method void setTags(array $Tags) Set <p>Tag.</p>
  */
 class DescribeCfsFileSystemsRequest extends AbstractModel
 {
     /**
-     * @var string File system ID
+     * @var string <p>File system ID.</p>
      */
     public $FileSystemId;
 
     /**
-     * @var string VPC ID
+     * @var string <p>Virtual Private Cloud (VPC) ID.</p>
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID
+     * @var string <p>Subnet ID.</p>
      */
     public $SubnetId;
 
     /**
-     * @var integer Offset paging number. default 0.
+     * @var integer <p>Offset for pagination. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var integer Limit page size. default value 10.
+     * @var integer <p>Limit for page size. Default value: 10.</p>
      */
     public $Limit;
 
     /**
-     * @var string User-defined name
+     * @var string <p>User-defined name.</p>
      */
     public $CreationToken;
 
     /**
-     * @param string $FileSystemId File system ID
-     * @param string $VpcId VPC ID
-     * @param string $SubnetId Subnet ID
-     * @param integer $Offset Offset paging number. default 0.
-     * @param integer $Limit Limit page size. default value 10.
-     * @param string $CreationToken User-defined name
+     * @var array <p>Filter conditions.<br><br><li>Protocol - Array of String - optional - (Filter condition) Filters by protocol. (NFS | CIFS | TURBO) </li><br><br><li>StorageType - Array of String - optional - (Filter condition) Filters by storage type. (SD | HP | TB | TP | THP) </li><br><br><li>LifeCycleState - Array of String - optional - (Filter condition) Filters by lifecycle state. (creating | create_failed | available | deleting | delete_failed | upgrading | unserviced | expanding) </li><br><br><li>Zone - Array of String - optional - (Filter condition) Filters by AZ. (For example: ap-guangzhou-3) </li><br><br><li>IpAddress - Array of String - optional - (Filter condition) Filters by export point IP address. (For example: 10.0.0.3) </li><br><br><li>PGroupId - Array of String - optional - (Filter condition) Filters by permission group ID. (For example: pgroup-xxxxxrxt) </li><br><br><li>PGroupName - Array of String - optional - (Filter condition) Filters by permission group name. (For example: default permission group) </li><br><br><li>Scenario- Array of String - optional - (Filter condition) Filters by permission group name. (For example: AgentSandbox) </li></p>
+     */
+    public $Filters;
+
+    /**
+     * @var array <p>Tag.</p>
+     */
+    public $Tags;
+
+    /**
+     * @param string $FileSystemId <p>File system ID.</p>
+     * @param string $VpcId <p>Virtual Private Cloud (VPC) ID.</p>
+     * @param string $SubnetId <p>Subnet ID.</p>
+     * @param integer $Offset <p>Offset for pagination. Default value: 0.</p>
+     * @param integer $Limit <p>Limit for page size. Default value: 10.</p>
+     * @param string $CreationToken <p>User-defined name.</p>
+     * @param array $Filters <p>Filter conditions.<br><br><li>Protocol - Array of String - optional - (Filter condition) Filters by protocol. (NFS | CIFS | TURBO) </li><br><br><li>StorageType - Array of String - optional - (Filter condition) Filters by storage type. (SD | HP | TB | TP | THP) </li><br><br><li>LifeCycleState - Array of String - optional - (Filter condition) Filters by lifecycle state. (creating | create_failed | available | deleting | delete_failed | upgrading | unserviced | expanding) </li><br><br><li>Zone - Array of String - optional - (Filter condition) Filters by AZ. (For example: ap-guangzhou-3) </li><br><br><li>IpAddress - Array of String - optional - (Filter condition) Filters by export point IP address. (For example: 10.0.0.3) </li><br><br><li>PGroupId - Array of String - optional - (Filter condition) Filters by permission group ID. (For example: pgroup-xxxxxrxt) </li><br><br><li>PGroupName - Array of String - optional - (Filter condition) Filters by permission group name. (For example: default permission group) </li><br><br><li>Scenario- Array of String - optional - (Filter condition) Filters by permission group name. (For example: AgentSandbox) </li></p>
+     * @param array $Tags <p>Tag.</p>
      */
     function __construct()
     {
@@ -108,6 +124,24 @@ class DescribeCfsFileSystemsRequest extends AbstractModel
 
         if (array_key_exists("CreationToken",$param) and $param["CreationToken"] !== null) {
             $this->CreationToken = $param["CreationToken"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }
